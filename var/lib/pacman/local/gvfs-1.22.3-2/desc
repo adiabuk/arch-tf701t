@@ -1,0 +1,56 @@
+%NAME%
+gvfs
+
+%VERSION%
+1.22.3-2
+
+%DESC%
+Userspace virtual filesystem implemented as a pluggable module for gio
+
+%URL%
+http://www.gnome.org
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1425377496
+
+%INSTALLDATE%
+1428577736
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+5772288
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+
+%REPLACES%
+gvfs-obexftp
+
+%DEPENDS%
+avahi
+dconf
+fuse
+libarchive
+libcdio-paranoia
+libsoup
+udisks2
+libsecret
+libbluray
+
+%OPTDEPENDS%
+gvfs-afc: AFC (mobile devices) support
+gvfs-smb: SMB/CIFS (Windows client) support
+gvfs-gphoto2: gphoto2 (PTP camera/MTP media player) support
+gvfs-afp: Apple Filing Protocol (AFP) support
+gvfs-mtp: MTP device support
+gvfs-goa: gnome-online-accounts support
+gtk3: Recent files support
+

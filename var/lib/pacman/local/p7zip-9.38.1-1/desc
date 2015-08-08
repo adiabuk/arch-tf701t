@@ -1,0 +1,45 @@
+%NAME%
+p7zip
+
+%VERSION%
+9.38.1-1
+
+%DESC%
+Command-line version of the 7zip compressed file archiver
+
+%URL%
+http://p7zip.sourceforge.net/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1425876240
+
+%INSTALLDATE%
+1428382801
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+6802432
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+gcc-libs
+bash
+
+%OPTDEPENDS%
+wxgtk: GUI
+desktop-file-utils: desktop entries
+

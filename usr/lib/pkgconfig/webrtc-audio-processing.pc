@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: webrtc-audio-processing
+Description: WebRTC Audio Processing library
+Version: 0.1
+Libs: -L${libdir} -lwebrtc_audio_processing
+Cflags: -I${includedir}/webrtc_audio_processing

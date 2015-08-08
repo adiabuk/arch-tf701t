@@ -1,0 +1,36 @@
+%NAME%
+scrnsaverproto
+
+%VERSION%
+1.2.2-2
+
+%DESC%
+X11 Screen Saver extension wire protocol
+
+%URL%
+http://xorg.freedesktop.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1404394340
+
+%INSTALLDATE%
+1428352571
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu5@archlinuxarm.org>
+
+%SIZE%
+93184
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

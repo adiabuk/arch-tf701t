@@ -1,0 +1,29 @@
+[connection]
+id=Xal9BbI HET
+uuid=aa0be6e4-a962-4fd0-b8f8-739018ad853e
+type=wifi
+permissions=
+secondaries=
+timestamp=1428400501
+
+[wifi]
+mac-address-blacklist=
+mode=infrastructure
+seen-bssids=
+ssid=Xal9BbI HET
+
+[wifi-security]
+group=
+key-mgmt=wpa-psk
+pairwise=
+proto=
+psk=Olga2110
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+dns-search=
+ip6-privacy=0
+method=auto

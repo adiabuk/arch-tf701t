@@ -1,0 +1,12 @@
+[wifi_00904c112233_647a656e61_managed_psk]
+Name=dzena
+SSID=647a656e61
+Frequency=2452
+Favorite=true
+AutoConnect=true
+Modified=2015-04-07T16:26:04.884428Z
+Passphrase=qwertyuiop123
+IPv4.method=dhcp
+IPv6.method=auto
+IPv6.privacy=disabled
+IPv4.DHCP.LastAddress=192.168.1.144

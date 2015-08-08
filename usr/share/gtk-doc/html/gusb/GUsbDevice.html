@@ -1,0 +1,2041 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GUsb Reference Manual: GUsbDevice</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="GUsb Reference Manual">
+<link rel="up" href="libgusb.html" title="libgusb GObject library">
+<link rel="prev" href="gusb-gusb-source.html" title="gusb-source">
+<link rel="next" href="GUsbDeviceList.html" title="GUsbDeviceList">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GUsbDevice.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GUsbDevice.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#GUsbDevice.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#GUsbDevice.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="libgusb.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gusb-gusb-source.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="GUsbDeviceList.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GUsbDevice"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GUsbDevice.top_of_page"></a>GUsbDevice</span></h2>
+<p>GUsbDevice — GLib device integration for libusb</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GUsbDevice.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-error-quark" title="g_usb_device_error_quark ()">g_usb_device_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-platform-id" title="g_usb_device_get_platform_id ()">g_usb_device_get_platform_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="returnvalue">GUsbDevice</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-parent" title="g_usb_device_get_parent ()">g_usb_device_get_parent</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-children" title="g_usb_device_get_children ()">g_usb_device_get_children</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-bus" title="g_usb_device_get_bus ()">g_usb_device_get_bus</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-address" title="g_usb_device_get_address ()">g_usb_device_get_address</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-port-number" title="g_usb_device_get_port_number ()">g_usb_device_get_port_number</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-vid" title="g_usb_device_get_vid ()">g_usb_device_get_vid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-pid" title="g_usb_device_get_pid ()">g_usb_device_get_pid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-vid-as-str" title="g_usb_device_get_vid_as_str ()">g_usb_device_get_vid_as_str</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-pid-as-str" title="g_usb_device_get_pid_as_str ()">g_usb_device_get_pid_as_str</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-device-class" title="g_usb_device_get_device_class ()">g_usb_device_get_device_class</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-device-subclass" title="g_usb_device_get_device_subclass ()">g_usb_device_get_device_subclass</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-device-protocol" title="g_usb_device_get_device_protocol ()">g_usb_device_get_device_protocol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-manufacturer-index" title="g_usb_device_get_manufacturer_index ()">g_usb_device_get_manufacturer_index</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-product-index" title="g_usb_device_get_product_index ()">g_usb_device_get_product_index</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-serial-number-index" title="g_usb_device_get_serial_number_index ()">g_usb_device_get_serial_number_index</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-open" title="g_usb_device_open ()">g_usb_device_open</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-close" title="g_usb_device_close ()">g_usb_device_close</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-reset" title="g_usb_device_reset ()">g_usb_device_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-configuration" title="g_usb_device_get_configuration ()">g_usb_device_get_configuration</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-set-configuration" title="g_usb_device_set_configuration ()">g_usb_device_set_configuration</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-claim-interface" title="g_usb_device_claim_interface ()">g_usb_device_claim_interface</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-release-interface" title="g_usb_device_release_interface ()">g_usb_device_release_interface</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-get-string-descriptor" title="g_usb_device_get_string_descriptor ()">g_usb_device_get_string_descriptor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-control-transfer" title="g_usb_device_control_transfer ()">g_usb_device_control_transfer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-bulk-transfer" title="g_usb_device_bulk_transfer ()">g_usb_device_bulk_transfer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-interrupt-transfer" title="g_usb_device_interrupt_transfer ()">g_usb_device_interrupt_transfer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-control-transfer-async" title="g_usb_device_control_transfer_async ()">g_usb_device_control_transfer_async</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gssize"><span class="returnvalue">gssize</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-control-transfer-finish" title="g_usb_device_control_transfer_finish ()">g_usb_device_control_transfer_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-bulk-transfer-async" title="g_usb_device_bulk_transfer_async ()">g_usb_device_bulk_transfer_async</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gssize"><span class="returnvalue">gssize</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-bulk-transfer-finish" title="g_usb_device_bulk_transfer_finish ()">g_usb_device_bulk_transfer_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-interrupt-transfer-async" title="g_usb_device_interrupt_transfer_async ()">g_usb_device_interrupt_transfer_async</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gssize"><span class="returnvalue">gssize</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GUsbDevice.html#g-usb-device-interrupt-transfer-finish" title="g_usb_device_interrupt_transfer_finish ()">g_usb_device_interrupt_transfer_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GUsbDevice.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="GUsbContext.html" title="GUsbContext"><span class="type">GUsbContext</span></a> *</td>
+<td class="property_name"><a class="link" href="GUsbDevice.html#GUsbDevice--context" title="The “context” property">context</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="GUsbDevice.html#GUsbDevice--libusb-device" title="The “libusb-device” property">libusb-device</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="GUsbDevice.html#GUsbDevice--platform-id" title="The “platform-id” property">platform-id</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GUsbDevice.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GUsbDevice.html#G-USB-DEVICE-ERROR:CAPS" title="G_USB_DEVICE_ERROR">G_USB_DEVICE_ERROR</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GUsbDevice.html#GUsbDeviceDirection" title="enum GUsbDeviceDirection">GUsbDeviceDirection</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GUsbDevice.html#GUsbDeviceRequestType" title="enum GUsbDeviceRequestType">GUsbDeviceRequestType</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GUsbDevice.html#GUsbDeviceRecipient" title="enum GUsbDeviceRecipient">GUsbDeviceRecipient</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GUsbDevice.html#GUsbDeviceError" title="enum GUsbDeviceError">GUsbDeviceError</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GUsbDevice.html#GUsbDeviceClaimInterfaceFlags" title="enum GUsbDeviceClaimInterfaceFlags">GUsbDeviceClaimInterfaceFlags</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GUsbDevice.html#GUsbDevice-struct" title="struct GUsbDevice">GUsbDevice</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GUsbDevice.html#GUsbDeviceClass" title="struct GUsbDeviceClass">GUsbDeviceClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="GUsbDevice.html#GUsbDevicePrivate" title="GUsbDevicePrivate">GUsbDevicePrivate</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GUsbDevice.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">╰──</span> GUsbDevice
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUsbDevice.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GUsbDevice implements
+ <a href="https://developer.gnome.org/gio/unstable/GInitable.html">GInitable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GUsbDevice.description"></a><h2>Description</h2>
+<p>This object is a thin glib wrapper around a libusb_device</p>
+</div>
+<div class="refsect1">
+<a name="GUsbDevice.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="g-usb-device-error-quark"></a><h3>g_usb_device_error_quark ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+g_usb_device_error_quark (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.3.5.9.2.4"></a><h4>Returns</h4>
+<p> Our personal error quark.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-platform-id"></a><h3>g_usb_device_get_platform_id ()</h3>
+<pre class="programlisting">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+g_usb_device_get_platform_id (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the platform identifier for the device.
+On Linux, this is the full sysfs path of the device</p>
+<p>When the device is removed and then replugged, this value is not expected to
+be different.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.3.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.3.7"></a><h4>Returns</h4>
+<p> The platform ID, e.g. "usb:02:00:03:01"</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-parent"></a><h3>g_usb_device_get_parent ()</h3>
+<pre class="programlisting"><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="returnvalue">GUsbDevice</span></a> *
+g_usb_device_get_parent (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the device parent if one exists.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.4.6"></a><h4>Returns</h4>
+<p> <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
+<p><span class="annotation">[<a href="http://foldoc.org/transfer%20full"><span class="acronym">transfer full</span></a>]</span></p>
+</div>
+<p class="since">Since 0.2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-children"></a><h3>g_usb_device_get_children ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+g_usb_device_get_children (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the device children if any exist.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.5.6"></a><h4>Returns</h4>
+<p> an array of <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a>. </p>
+<p><span class="annotation">[<a href="http://foldoc.org/transfer%20full"><span class="acronym">transfer full</span></a>]</span></p>
+</div>
+<p class="since">Since 0.2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-bus"></a><h3>g_usb_device_get_bus ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+g_usb_device_get_bus (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the USB bus number for the device.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.6.6"></a><h4>Returns</h4>
+<p> The 8-bit bus number</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-address"></a><h3>g_usb_device_get_address ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+g_usb_device_get_address (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the USB address for the device.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.7.6"></a><h4>Returns</h4>
+<p> The 8-bit address</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-port-number"></a><h3>g_usb_device_get_port_number ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+g_usb_device_get_port_number (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the USB port number for the device.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.8.6"></a><h4>Returns</h4>
+<p> The 8-bit port number</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-vid"></a><h3>g_usb_device_get_vid ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+g_usb_device_get_vid (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the vendor ID for the device.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.9.6"></a><h4>Returns</h4>
+<p> an ID.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-pid"></a><h3>g_usb_device_get_pid ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+g_usb_device_get_pid (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the product ID for the device.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.10.6"></a><h4>Returns</h4>
+<p> an ID.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-vid-as-str"></a><h3>g_usb_device_get_vid_as_str ()</h3>
+<pre class="programlisting">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+g_usb_device_get_vid_as_str (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the vendor ID for the device as a string.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.11.6"></a><h4>Returns</h4>
+<p> an string ID, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> if not available.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-pid-as-str"></a><h3>g_usb_device_get_pid_as_str ()</h3>
+<pre class="programlisting">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+g_usb_device_get_pid_as_str (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the product ID for the device as a string.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.12.6"></a><h4>Returns</h4>
+<p> an string ID, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a> if not available.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-device-class"></a><h3>g_usb_device_get_device_class ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+g_usb_device_get_device_class (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the device class.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.13.6"></a><h4>Returns</h4>
+<p> a device class number, e.g. 0x09 is a USB hub.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.7</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-device-subclass"></a><h3>g_usb_device_get_device_subclass ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+g_usb_device_get_device_subclass (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the device subclass qualified by the class number.
+See <a class="link" href="GUsbDevice.html#g-usb-device-get-device-class" title="g_usb_device_get_device_class ()"><code class="function">g_usb_device_get_device_class()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.14.6"></a><h4>Returns</h4>
+<p> a device subclass number.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-device-protocol"></a><h3>g_usb_device_get_device_protocol ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+g_usb_device_get_device_protocol (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the device protocol qualified by the class and subclass numbers.
+See <a class="link" href="GUsbDevice.html#g-usb-device-get-device-class" title="g_usb_device_get_device_class ()"><code class="function">g_usb_device_get_device_class()</code></a> and <a class="link" href="GUsbDevice.html#g-usb-device-get-device-subclass" title="g_usb_device_get_device_subclass ()"><code class="function">g_usb_device_get_device_subclass()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.15.6"></a><h4>Returns</h4>
+<p> a device protocol number.</p>
+<p></p>
+</div>
+<p class="since">Since 0.2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-manufacturer-index"></a><h3>g_usb_device_get_manufacturer_index ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+g_usb_device_get_manufacturer_index (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the index for the Manufacturer string descriptor.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.16.6"></a><h4>Returns</h4>
+<p> a string descriptor index.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-product-index"></a><h3>g_usb_device_get_product_index ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+g_usb_device_get_product_index (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the index for the Product string descriptor.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.17.6"></a><h4>Returns</h4>
+<p> a string descriptor index.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-serial-number-index"></a><h3>g_usb_device_get_serial_number_index ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+g_usb_device_get_serial_number_index (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>);</pre>
+<p>Gets the index for the Serial Number string descriptor.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.18.6"></a><h4>Returns</h4>
+<p> a string descriptor index.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-open"></a><h3>g_usb_device_open ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+g_usb_device_open (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                   <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Opens the device for use.</p>
+<p>Warning: this function is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.19.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.19.7"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-close"></a><h3>g_usb_device_close ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+g_usb_device_close (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                    <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Closes the device when it is no longer required.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.20.6"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-reset"></a><h3>g_usb_device_reset ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+g_usb_device_reset (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                    <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Perform a USB port reset to reinitialize a device.</p>
+<p>If the reset succeeds, the device will appear to disconnected and reconnected.
+This means the <em class="parameter"><code>device</code></em>
+ will no longer be valid and should be closed and
+rediscovered.</p>
+<p>This is a blocking function which usually incurs a noticeable delay.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.21.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.21.8"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-configuration"></a><h3>g_usb_device_get_configuration ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+g_usb_device_get_configuration (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the bConfigurationValue for the active configuration of the device.</p>
+<p>Warning: this function is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.22.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.22.7"></a><h4>Returns</h4>
+<p> The bConfigurationValue of the active config, or -1 on error</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-set-configuration"></a><h3>g_usb_device_set_configuration ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+g_usb_device_set_configuration (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> configuration</code></em>,
+                                <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Set the active bConfigurationValue for the device.</p>
+<p>Warning: this function is synchronous.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.23.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>configuration</p></td>
+<td class="parameter_description"><p>the configuration value to set</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.23.7"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-claim-interface"></a><h3>g_usb_device_claim_interface ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+g_usb_device_claim_interface (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                              <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> interface</code></em>,
+                              <em class="parameter"><code><a class="link" href="GUsbDevice.html#GUsbDeviceClaimInterfaceFlags" title="enum GUsbDeviceClaimInterfaceFlags"><span class="type">GUsbDeviceClaimInterfaceFlags</span></a> flags</code></em>,
+                              <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Claim an interface of the device.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface</p></td>
+<td class="parameter_description"><p>bInterfaceNumber of the interface you wish to claim</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p><a class="link" href="GUsbDevice.html#GUsbDeviceClaimInterfaceFlags" title="enum GUsbDeviceClaimInterfaceFlags"><span class="type">GUsbDeviceClaimInterfaceFlags</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.24.6"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-release-interface"></a><h3>g_usb_device_release_interface ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+g_usb_device_release_interface (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> interface</code></em>,
+                                <em class="parameter"><code><a class="link" href="GUsbDevice.html#GUsbDeviceClaimInterfaceFlags" title="enum GUsbDeviceClaimInterfaceFlags"><span class="type">GUsbDeviceClaimInterfaceFlags</span></a> flags</code></em>,
+                                <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Release an interface of the device.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface</p></td>
+<td class="parameter_description"><p>bInterfaceNumber of the interface you wish to release</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p><a class="link" href="GUsbDevice.html#GUsbDeviceClaimInterfaceFlags" title="enum GUsbDeviceClaimInterfaceFlags"><span class="type">GUsbDeviceClaimInterfaceFlags</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.25.6"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-get-string-descriptor"></a><h3>g_usb_device_get_string_descriptor ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+g_usb_device_get_string_descriptor (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                    <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> desc_index</code></em>,
+                                    <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get a string descriptor from the device. The returned string should be freed
+with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when no longer needed.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>desc_index</p></td>
+<td class="parameter_description"><p>the index for the string descriptor to retreive</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.26.6"></a><h4>Returns</h4>
+<p> a newly-allocated string holding the descriptor, or NULL on error.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-control-transfer"></a><h3>g_usb_device_control_transfer ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+g_usb_device_control_transfer (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                               <em class="parameter"><code><a class="link" href="GUsbDevice.html#GUsbDeviceDirection" title="enum GUsbDeviceDirection"><span class="type">GUsbDeviceDirection</span></a> direction</code></em>,
+                               <em class="parameter"><code><a class="link" href="GUsbDevice.html#GUsbDeviceRequestType" title="enum GUsbDeviceRequestType"><span class="type">GUsbDeviceRequestType</span></a> request_type</code></em>,
+                               <em class="parameter"><code><a class="link" href="GUsbDevice.html#GUsbDeviceRecipient" title="enum GUsbDeviceRecipient"><span class="type">GUsbDeviceRecipient</span></a> recipient</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> request</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> value</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> idx</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *actual_length</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Perform a USB control transfer.</p>
+<p>Warning: this function is synchronous, and cannot be cancelled.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.27.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>request_type</p></td>
+<td class="parameter_description"><p>the request type field for the setup packet</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>request</p></td>
+<td class="parameter_description"><p>the request field for the setup packet</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the value field for the setup packet</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>idx</p></td>
+<td class="parameter_description"><p>the index field for the setup packet</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p> a suitably-sized data buffer for
+either input or output. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<a href="http://foldoc.org/array"><span class="acronym">array</span></a> length=length]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>the length field for the setup packet.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>actual_length</p></td>
+<td class="parameter_description"><p>the actual number of bytes sent, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>timeout timeout (in millseconds) that this function should wait
+before giving up due to no response being received. For an unlimited
+timeout, use 0.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.27.7"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-bulk-transfer"></a><h3>g_usb_device_bulk_transfer ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+g_usb_device_bulk_transfer (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                            <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> endpoint</code></em>,
+                            <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                            <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                            <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *actual_length</code></em>,
+                            <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                            <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                            <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Perform a USB bulk transfer.</p>
+<p>Warning: this function is synchronous, and cannot be cancelled.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.28.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endpoint</p></td>
+<td class="parameter_description"><p>the address of a valid endpoint to communicate with</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p> a suitably-sized data buffer for
+either input or output. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<a href="http://foldoc.org/array"><span class="acronym">array</span></a> length=length]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>the length field for the setup packet.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>actual_length</p></td>
+<td class="parameter_description"><p>the actual number of bytes sent, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>timeout timeout (in millseconds) that this function should wait
+before giving up due to no response being received. For an unlimited
+timeout, use 0.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.28.7"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-interrupt-transfer"></a><h3>g_usb_device_interrupt_transfer ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+g_usb_device_interrupt_transfer (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> endpoint</code></em>,
+                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *actual_length</code></em>,
+                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                                 <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Perform a USB interrupt transfer.</p>
+<p>Warning: this function is synchronous, and cannot be cancelled.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.29.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endpoint</p></td>
+<td class="parameter_description"><p>the address of a valid endpoint to communicate with</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p> a suitably-sized data buffer for
+either input or output. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<a href="http://foldoc.org/array"><span class="acronym">array</span></a> length=length]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>the length field for the setup packet.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>actual_length</p></td>
+<td class="parameter_description"><p>the actual number of bytes sent, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>timeout timeout (in millseconds) that this function should wait
+before giving up due to no response being received. For an unlimited
+timeout, use 0.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.29.7"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-control-transfer-async"></a><h3>g_usb_device_control_transfer_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+g_usb_device_control_transfer_async (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                     <em class="parameter"><code><a class="link" href="GUsbDevice.html#GUsbDeviceDirection" title="enum GUsbDeviceDirection"><span class="type">GUsbDeviceDirection</span></a> direction</code></em>,
+                                     <em class="parameter"><code><a class="link" href="GUsbDevice.html#GUsbDeviceRequestType" title="enum GUsbDeviceRequestType"><span class="type">GUsbDeviceRequestType</span></a> request_type</code></em>,
+                                     <em class="parameter"><code><a class="link" href="GUsbDevice.html#GUsbDeviceRecipient" title="enum GUsbDeviceRecipient"><span class="type">GUsbDeviceRecipient</span></a> recipient</code></em>,
+                                     <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> request</code></em>,
+                                     <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> value</code></em>,
+                                     <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> idx</code></em>,
+                                     <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                                     <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                                     <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                                     <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                     <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                     <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Do an async control transfer</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p> a suitably-sized data buffer for
+either input or output. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<a href="http://foldoc.org/array"><span class="acronym">array</span></a> length=length]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>the length field for the setup packet.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>timeout timeout (in millseconds) that this function should wait
+before giving up due to no response being received. For an unlimited
+timeout, use 0.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>the function to run on completion</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-control-transfer-finish"></a><h3>g_usb_device_control_transfer_finish ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gssize"><span class="returnvalue">gssize</span></a>
+g_usb_device_control_transfer_finish (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                      <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                      <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the result from the asynchronous function.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>the <a href="https://developer.gnome.org/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>A <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.31.6"></a><h4>Returns</h4>
+<p> the actual number of bytes sent, or -1 on error.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-bulk-transfer-async"></a><h3>g_usb_device_bulk_transfer_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+g_usb_device_bulk_transfer_async (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> endpoint</code></em>,
+                                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                                  <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                  <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Do an async bulk transfer</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endpoint</p></td>
+<td class="parameter_description"><p>the address of a valid endpoint to communicate with</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p> a suitably-sized data buffer for
+either input or output. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<a href="http://foldoc.org/array"><span class="acronym">array</span></a> length=length]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>the length field for the setup packet.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>timeout timeout (in millseconds) that this function should wait
+before giving up due to no response being received. For an unlimited
+timeout, use 0.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>the function to run on completion</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-bulk-transfer-finish"></a><h3>g_usb_device_bulk_transfer_finish ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gssize"><span class="returnvalue">gssize</span></a>
+g_usb_device_bulk_transfer_finish (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                   <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                   <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the result from the asynchronous function.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.33.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>the <a href="https://developer.gnome.org/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>A <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.33.6"></a><h4>Returns</h4>
+<p> the actual number of bytes sent, or -1 on error.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-interrupt-transfer-async"></a><h3>g_usb_device_interrupt_transfer_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+g_usb_device_interrupt_transfer_async (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                       <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> endpoint</code></em>,
+                                       <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                                       <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                                       <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                                       <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                       <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                       <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Do an async interrupt transfer</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endpoint</p></td>
+<td class="parameter_description"><p>the address of a valid endpoint to communicate with</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p> a suitably-sized data buffer for
+either input or output. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<a href="http://foldoc.org/array"><span class="acronym">array</span></a> length=length]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>the length field for the setup packet.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>timeout timeout (in millseconds) that this function should wait
+before giving up due to no response being received. For an unlimited
+timeout, use 0.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>the function to run on completion</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-usb-device-interrupt-transfer-finish"></a><h3>g_usb_device_interrupt_transfer_finish ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gssize"><span class="returnvalue">gssize</span></a>
+g_usb_device_interrupt_transfer_finish
+                               (<em class="parameter"><code><a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> *device</code></em>,
+                                <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the result from the asynchronous function.</p>
+<div class="refsect3">
+<a name="id-1.3.5.9.35.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>the <a href="https://developer.gnome.org/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>A <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> or <a href="/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.9.35.6"></a><h4>Returns</h4>
+<p> the actual number of bytes sent, or -1 on error.</p>
+<p></p>
+</div>
+<p class="since">Since 0.1.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GUsbDevice.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="G-USB-DEVICE-ERROR:CAPS"></a><h3>G_USB_DEVICE_ERROR</h3>
+<pre class="programlisting">#define G_USB_DEVICE_ERROR		(g_usb_device_error_quark ())
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDeviceDirection"></a><h3>enum GUsbDeviceDirection</h3>
+<p>The message direction.</p>
+<div class="refsect3">
+<a name="id-1.3.5.10.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-DIRECTION-DEVICE-TO-HOST:CAPS"></a>G_USB_DEVICE_DIRECTION_DEVICE_TO_HOST</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-DIRECTION-HOST-TO-DEVICE:CAPS"></a>G_USB_DEVICE_DIRECTION_HOST_TO_DEVICE</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDeviceRequestType"></a><h3>enum GUsbDeviceRequestType</h3>
+<p>The message request type.</p>
+<div class="refsect3">
+<a name="id-1.3.5.10.4.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-REQUEST-TYPE-STANDARD:CAPS"></a>G_USB_DEVICE_REQUEST_TYPE_STANDARD</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-REQUEST-TYPE-CLASS:CAPS"></a>G_USB_DEVICE_REQUEST_TYPE_CLASS</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-REQUEST-TYPE-VENDOR:CAPS"></a>G_USB_DEVICE_REQUEST_TYPE_VENDOR</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-REQUEST-TYPE-RESERVED:CAPS"></a>G_USB_DEVICE_REQUEST_TYPE_RESERVED</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDeviceRecipient"></a><h3>enum GUsbDeviceRecipient</h3>
+<p>The message recipient.</p>
+<div class="refsect3">
+<a name="id-1.3.5.10.5.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-RECIPIENT-DEVICE:CAPS"></a>G_USB_DEVICE_RECIPIENT_DEVICE</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-RECIPIENT-INTERFACE:CAPS"></a>G_USB_DEVICE_RECIPIENT_INTERFACE</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-RECIPIENT-ENDPOINT:CAPS"></a>G_USB_DEVICE_RECIPIENT_ENDPOINT</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-RECIPIENT-OTHER:CAPS"></a>G_USB_DEVICE_RECIPIENT_OTHER</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDeviceError"></a><h3>enum GUsbDeviceError</h3>
+<p>The error code.</p>
+<div class="refsect3">
+<a name="id-1.3.5.10.6.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-INTERNAL:CAPS"></a>G_USB_DEVICE_ERROR_INTERNAL</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-IO:CAPS"></a>G_USB_DEVICE_ERROR_IO</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-TIMED-OUT:CAPS"></a>G_USB_DEVICE_ERROR_TIMED_OUT</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-NOT-SUPPORTED:CAPS"></a>G_USB_DEVICE_ERROR_NOT_SUPPORTED</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-NO-DEVICE:CAPS"></a>G_USB_DEVICE_ERROR_NO_DEVICE</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-NOT-OPEN:CAPS"></a>G_USB_DEVICE_ERROR_NOT_OPEN</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-ALREADY-OPEN:CAPS"></a>G_USB_DEVICE_ERROR_ALREADY_OPEN</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-CANCELLED:CAPS"></a>G_USB_DEVICE_ERROR_CANCELLED</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-FAILED:CAPS"></a>G_USB_DEVICE_ERROR_FAILED</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-ERROR-LAST:CAPS"></a>G_USB_DEVICE_ERROR_LAST</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDeviceClaimInterfaceFlags"></a><h3>enum GUsbDeviceClaimInterfaceFlags</h3>
+<p>Flags for the g_usb_device_claim_interface and
+g_usb_device_release_interface methods flags parameters.</p>
+<div class="refsect3">
+<a name="id-1.3.5.10.7.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="enum_member_name"><p><a name="G-USB-DEVICE-CLAIM-INTERFACE-BIND-KERNEL-DRIVER:CAPS"></a>G_USB_DEVICE_CLAIM_INTERFACE_BIND_KERNEL_DRIVER</p></td>
+<td class="enum_member_description"> </td>
+<td class="enum_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDevice-struct"></a><h3>struct GUsbDevice</h3>
+<pre class="programlisting">struct GUsbDevice;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDeviceClass"></a><h3>struct GUsbDeviceClass</h3>
+<pre class="programlisting">struct GUsbDeviceClass {
+	GObjectClass			 parent_class;
+};
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDevicePrivate"></a><h3>GUsbDevicePrivate</h3>
+<pre class="programlisting">typedef struct _GUsbDevicePrivate GUsbDevicePrivate;</pre>
+<p>Private <a class="link" href="GUsbDevice.html" title="GUsbDevice"><span class="type">GUsbDevice</span></a> data</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GUsbDevice.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GUsbDevice--context"></a><h3>The <code class="literal">“context”</code> property</h3>
+<pre class="programlisting">  “context”                  <a class="link" href="GUsbContext.html" title="GUsbContext"><span class="type">GUsbContext</span></a> *</pre>
+<p></p>
+<p>Flags: Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDevice--libusb-device"></a><h3>The <code class="literal">“libusb-device”</code> property</h3>
+<pre class="programlisting">  “libusb-device”            <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p></p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUsbDevice--platform-id"></a><h3>The <code class="literal">“platform-id”</code> property</h3>
+<pre class="programlisting">  “platform-id”              <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p></p>
+<p>Flags: Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

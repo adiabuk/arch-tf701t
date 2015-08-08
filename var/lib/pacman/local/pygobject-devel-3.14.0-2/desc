@@ -1,0 +1,36 @@
+%NAME%
+pygobject-devel
+
+%VERSION%
+3.14.0-2
+
+%DESC%
+Development files for the pygobject bindings
+
+%URL%
+https://live.gnome.org/PyGObject
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1413748243
+
+%INSTALLDATE%
+1428424644
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+51200
+
+%REASON%
+1
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+

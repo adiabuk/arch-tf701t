@@ -1,0 +1,11 @@
+%FILES%
+usr/
+usr/include/
+usr/include/keybinder.h
+usr/lib/
+usr/lib/libkeybinder.so
+usr/lib/libkeybinder.so.0
+usr/lib/libkeybinder.so.0.1.0
+usr/lib/pkgconfig/
+usr/lib/pkgconfig/keybinder.pc
+

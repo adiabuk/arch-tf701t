@@ -1,0 +1,19 @@
+
+
+
+****nvrm_init failed****
+
+
+Error: Can't open /dev/nvhost-ctrl
+
+** (lightdm-gtk-greeter:1253): WARNING **: [PIDs] Failed to execute command: upstart
+
+(lightdm-gtk-greeter:1253): Gtk-WARNING **: Theme file for default has no name
+
+
+(lightdm-gtk-greeter:1253): Gtk-WARNING **: Theme file for default has no directories
+
+
+** (lightdm-gtk-greeter:1253): WARNING **: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+
+(lightdm-gtk-greeter:1253): GLib-GObject-CRITICAL **: g_object_set_data_full: assertion 'G_IS_OBJECT (object)' failed

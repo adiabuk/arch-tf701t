@@ -1,0 +1,36 @@
+%NAME%
+xorg-util-macros
+
+%VERSION%
+1.19.0-1
+
+%DESC%
+X.Org Autotools macros
+
+%URL%
+http://xorg.freedesktop.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1396125785
+
+%INSTALLDATE%
+1428352570
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+odroid1@archlinuxarm.org>
+
+%SIZE%
+125952
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

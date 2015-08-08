@@ -1,0 +1,11 @@
+ap_scan=1
+ctrl_interface=/var/run/wpa_supplicant
+network={
+       ssid="dzena"
+       scan_ssid=1
+       proto=WPA RSN
+       key_mgmt=WPA-PSK
+       pairwise=CCMP TKIP
+       group=CCMP TKIP
+       psk=1f6e130e2906343b96cea46975ca9c55fa7e5e84345bff65e9d0dc9292ee3a4d
+}

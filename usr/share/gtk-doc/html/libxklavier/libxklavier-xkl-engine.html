@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Libxklavier Reference Manual: XklEngine</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Libxklavier Reference Manual">
+<link rel="up" href="ch01.html" title="Libxklavier Objects">
+<link rel="prev" href="ch01.html" title="Libxklavier Objects">
+<link rel="next" href="XklConfigItem.html" title="XklConfigItem">
+<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
+                  <a href="#libxklavier-xkl-engine.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+                  <a href="#libxklavier-xkl-engine.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties"> <span class="dim">|</span> 
+                  <a href="#libxklavier-xkl-engine.properties" class="shortcut">Properties</a></span><span id="nav_signals"> <span class="dim">|</span> 
+                  <a href="#libxklavier-xkl-engine.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="XklConfigItem.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libxklavier-xkl-engine"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libxklavier-xkl-engine.top_of_page"></a>XklEngine</span></h2>
+<p>XklEngine</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libxklavier-xkl-engine.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GType</span>
+</td>
+<td class="function_name">
+<a class="link" href="libxklavier-xkl-engine.html#xkl-engine-features-get-type" title="xkl_engine_features_get_type ()">xkl_engine_features_get_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GType</span>
+</td>
+<td class="function_name">
+<a class="link" href="libxklavier-xkl-engine.html#xkl-engine-listen-modes-get-type" title="xkl_engine_listen_modes_get_type ()">xkl_engine_listen_modes_get_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GType</span>
+</td>
+<td class="function_name">
+<a class="link" href="libxklavier-xkl-engine.html#xkl-engine-state-change-get-type" title="xkl_engine_state_change_get_type ()">xkl_engine_state_change_get_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libxklavier-xkl-engine.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<span class="type">gchar</span> *</td>
+<td class="property_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine--backendName" title="The “backendName” property">backendName</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">guint</span></td>
+<td class="property_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine--default-group" title="The “default-group” property">default-group</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">gpointer</span></td>
+<td class="property_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine--display" title="The “display” property">display</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="libxklavier-xkl-engine.html#XklEngineFeatures" title="enum XklEngineFeatures"><span class="type">XklEngineFeatures</span></a></td>
+<td class="property_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine--features" title="The “features” property">features</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">gboolean</span></td>
+<td class="property_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine--indicators-handling" title="The “indicators-handling” property">indicators-handling</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">guint</span></td>
+<td class="property_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine--max-num-groups" title="The “max-num-groups” property">max-num-groups</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">guint</span></td>
+<td class="property_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine--num-groups" title="The “num-groups” property">num-groups</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">guint</span></td>
+<td class="property_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine--secondary-groups-mask" title="The “secondary-groups-mask” property">secondary-groups-mask</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libxklavier-xkl-engine.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="signals_return">
+<col width="300px" class="signals_name">
+<col width="200px" class="signals_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine-X-config-changed" title="The “X-config-changed” signal">X-config-changed</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine-X-new-device" title="The “X-new-device” signal">X-new-device</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine-X-state-changed" title="The “X-state-changed” signal">X-state-changed</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">gint</span></td>
+<td class="signal_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine-new-toplevel-window" title="The “new-toplevel-window” signal">new-toplevel-window</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="XklEngine"></a><div class="refsect1">
+<a name="libxklavier-xkl-engine.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libxklavier-xkl-engine.html#XklEnginePrivate" title="XklEnginePrivate">XklEnginePrivate</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngineStateChange" title="enum XklEngineStateChange">XklEngineStateChange</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngineFeatures" title="enum XklEngineFeatures">XklEngineFeatures</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libxklavier-xkl-engine.html#XklState" title="XklState">XklState</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libxklavier-xkl-engine.html#XklEngine-struct" title="XklEngine">XklEngine</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libxklavier-xkl-engine.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> XklEngine
+</pre>
+</div>
+<div class="refsect1">
+<a name="libxklavier-xkl-engine.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="libxklavier-xkl-engine.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="xkl-engine-features-get-type"></a><h3>xkl_engine_features_get_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">GType</span>
+xkl_engine_features_get_type (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.2.5"></a><h4>Returns</h4>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="xkl-engine-listen-modes-get-type"></a><h3>xkl_engine_listen_modes_get_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">GType</span>
+xkl_engine_listen_modes_get_type (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.3.5"></a><h4>Returns</h4>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="xkl-engine-state-change-get-type"></a><h3>xkl_engine_state_change_get_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">GType</span>
+xkl_engine_state_change_get_type (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.4.5"></a><h4>Returns</h4>
+<p></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="libxklavier-xkl-engine.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="XklEnginePrivate"></a><h3>XklEnginePrivate</h3>
+<pre class="programlisting">typedef struct _XklEnginePrivate XklEnginePrivate;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngineStateChange"></a><h3>enum XklEngineStateChange</h3>
+<p>The type of the keyboard state change</p>
+<div class="refsect3">
+<a name="id-1.2.2.11.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GROUP-CHANGED:CAPS"></a>GROUP_CHANGED</p></td>
+<td class="enum_member_description">
+<p>Group was changed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="INDICATORS-CHANGED:CAPS"></a>INDICATORS_CHANGED</p></td>
+<td class="enum_member_description">
+<p>Indicators were changed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngineFeatures"></a><h3>enum XklEngineFeatures</h3>
+<p>A set of flags used to indicate the capabilities of the active backend</p>
+<div class="refsect3">
+<a name="id-1.2.2.11.4.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="XKLF-CAN-TOGGLE-INDICATORS:CAPS"></a>XKLF_CAN_TOGGLE_INDICATORS</p></td>
+<td class="enum_member_description">
+<p>Backend allows to toggls indicators on/off</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="XKLF-CAN-OUTPUT-CONFIG-AS-ASCII:CAPS"></a>XKLF_CAN_OUTPUT_CONFIG_AS_ASCII</p></td>
+<td class="enum_member_description">
+<p>Backend allows writing ASCII representation of the configuration</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="XKLF-CAN-OUTPUT-CONFIG-AS-BINARY:CAPS"></a>XKLF_CAN_OUTPUT_CONFIG_AS_BINARY</p></td>
+<td class="enum_member_description">
+<p>Backend allows writing binary representation of the configuration</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="XKLF-MULTIPLE-LAYOUTS-SUPPORTED:CAPS"></a>XKLF_MULTIPLE_LAYOUTS_SUPPORTED</p></td>
+<td class="enum_member_description">
+<p>Backend supports multiple layouts</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="XKLF-REQUIRES-MANUAL-LAYOUT-MANAGEMENT:CAPS"></a>XKLF_REQUIRES_MANUAL_LAYOUT_MANAGEMENT</p></td>
+<td class="enum_member_description">
+<p>Backend requires manual configuration, some daemon should do 
+                                  xkl_start_listen(engine,XKLL_MANAGE_LAYOUTS);</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="XKLF-DEVICE-DISCOVERY:CAPS"></a>XKLF_DEVICE_DISCOVERY</p></td>
+<td class="enum_member_description">
+<p>Backend supports device discovery, can notify</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklState"></a><h3>XklState</h3>
+<pre class="programlisting">typedef struct _XklState XklState;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine-struct"></a><h3>XklEngine</h3>
+<pre class="programlisting">typedef struct _XklEngine XklEngine;</pre>
+<p>
+</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libxklavier-xkl-engine.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="XklEngine--backendName"></a><h3>The <code class="literal">“backendName”</code> property</h3>
+<pre class="programlisting">  “backendName”              <span class="type">gchar</span> *</pre>
+<p>Backend name.</p>
+<p>Flags: Read</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine--default-group"></a><h3>The <code class="literal">“default-group”</code> property</h3>
+<pre class="programlisting">  “default-group”            <span class="type">guint</span></pre>
+<p>Default group.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &lt;= 256</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine--display"></a><h3>The <code class="literal">“display”</code> property</h3>
+<pre class="programlisting">  “display”                  <span class="type">gpointer</span></pre>
+<p>X Display pointer.</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine--features"></a><h3>The <code class="literal">“features”</code> property</h3>
+<pre class="programlisting">  “features”                 <a class="link" href="libxklavier-xkl-engine.html#XklEngineFeatures" title="enum XklEngineFeatures"><span class="type">XklEngineFeatures</span></a></pre>
+<p>Backend features.</p>
+<p>Flags: Read</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine--indicators-handling"></a><h3>The <code class="literal">“indicators-handling”</code> property</h3>
+<pre class="programlisting">  “indicators-handling”      <span class="type">gboolean</span></pre>
+<p>Whether engine should handle indicators.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine--max-num-groups"></a><h3>The <code class="literal">“max-num-groups”</code> property</h3>
+<pre class="programlisting">  “max-num-groups”           <span class="type">guint</span></pre>
+<p>Max number of groups.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &lt;= 256</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine--num-groups"></a><h3>The <code class="literal">“num-groups”</code> property</h3>
+<pre class="programlisting">  “num-groups”               <span class="type">guint</span></pre>
+<p>Current number of groups.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &lt;= 256</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine--secondary-groups-mask"></a><h3>The <code class="literal">“secondary-groups-mask”</code> property</h3>
+<pre class="programlisting">  “secondary-groups-mask”    <span class="type">guint</span></pre>
+<p>Secondary groups mask.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &lt;= 256</p>
+<p>Default value: 0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libxklavier-xkl-engine.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="XklEngine-X-config-changed"></a><h3>The <code class="literal">“X-config-changed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="libxklavier-xkl-engine.html#XklEngine"><span class="type">XklEngine</span></a> *xklengine,
+               <span class="type">gpointer</span>   user_data)</pre>
+<p>
+</p>
+<div class="refsect3">
+<a name="id-1.2.2.13.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xklengine</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine-X-new-device"></a><h3>The <code class="literal">“X-new-device”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="libxklavier-xkl-engine.html#XklEngine"><span class="type">XklEngine</span></a> *xklengine,
+               <span class="type">gpointer</span>   user_data)</pre>
+<p>
+</p>
+<div class="refsect3">
+<a name="id-1.2.2.13.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xklengine</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine-X-state-changed"></a><h3>The <code class="literal">“X-state-changed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="libxklavier-xkl-engine.html#XklEngine"><span class="type">XklEngine</span></a>           *xklengine,
+               <a class="link" href="libxklavier-xkl-engine.html#XklEngineStateChange" title="enum XklEngineStateChange"><span class="type">XklEngineStateChange</span></a> arg1,
+               <span class="type">gint</span>                 arg2,
+               <span class="type">gboolean</span>             arg3,
+               <span class="type">gpointer</span>             user_data)</pre>
+<p>
+</p>
+<div class="refsect3">
+<a name="id-1.2.2.13.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xklengine</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="XklEngine-new-toplevel-window"></a><h3>The <code class="literal">“new-toplevel-window”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+user_function (<a class="link" href="libxklavier-xkl-engine.html#XklEngine"><span class="type">XklEngine</span></a> *xklengine,
+               <span class="type">glong</span>      arg1,
+               <span class="type">glong</span>      arg2,
+               <span class="type">gpointer</span>   user_data)</pre>
+<p>
+</p>
+<div class="refsect3">
+<a name="id-1.2.2.13.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xklengine</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.13.5.6"></a><h4>Returns</h4>
+<p></p>
+</div>
+<p>Flags: Run Last</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.20</div>
+</body>
+</html>

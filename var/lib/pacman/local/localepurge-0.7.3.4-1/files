@@ -1,0 +1,19 @@
+%FILES%
+etc/
+etc/locale.nopurge
+usr/
+usr/bin/
+usr/bin/localepurge
+usr/bin/localepurge-config
+usr/share/
+usr/share/man/
+usr/share/man/man8/
+usr/share/man/man8/localepurge.8.gz
+var/
+var/cache/
+var/cache/localepurge/
+var/cache/localepurge/localelist
+
+%BACKUP%
+etc/locale.nopurge	26517310bba6496cd27c9ad87c600cda
+

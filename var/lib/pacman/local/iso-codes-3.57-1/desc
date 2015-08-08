@@ -1,0 +1,36 @@
+%NAME%
+iso-codes
+
+%VERSION%
+3.57-1
+
+%DESC%
+Lists of the country, language, and currency names
+
+%URL%
+http://pkg-isocodes.alioth.debian.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1420532950
+
+%INSTALLDATE%
+1428360632
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+16462848
+
+%REASON%
+1
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+

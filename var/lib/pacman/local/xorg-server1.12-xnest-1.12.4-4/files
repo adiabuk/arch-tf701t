@@ -1,0 +1,12 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/Xnest
+usr/share/
+usr/share/licenses/
+usr/share/licenses/xorg-server1.12-xnest/
+usr/share/licenses/xorg-server1.12-xnest/COPYING
+usr/share/man/
+usr/share/man/man1/
+usr/share/man/man1/Xnest.1.gz
+

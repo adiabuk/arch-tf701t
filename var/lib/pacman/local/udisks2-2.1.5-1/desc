@@ -1,0 +1,49 @@
+%NAME%
+udisks2
+
+%VERSION%
+2.1.5-1
+
+%DESC%
+Disk Management Service, version 2
+
+%URL%
+http://www.freedesktop.org/wiki/Software/udisks
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1425987038
+
+%INSTALLDATE%
+1428577736
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu1@archlinuxarm.org>
+
+%SIZE%
+8150016
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glib2
+systemd
+polkit
+libatasmart
+util-linux
+
+%OPTDEPENDS%
+parted: partition management
+gptfdisk: GUID partition table support
+ntfs-3g: NTFS filesystem management support
+dosfstools: VFAT filesystem management support
+

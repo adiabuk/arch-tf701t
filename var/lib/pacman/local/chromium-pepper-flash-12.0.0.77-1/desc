@@ -1,0 +1,42 @@
+%NAME%
+chromium-pepper-flash
+
+%VERSION%
+12.0.0.77-1
+
+%DESC%
+Google Chrome's Pepper Flash plugin for Chromium on armv7h
+
+%URL%
+http://www.google.com/chrome
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1408733256
+
+%INSTALLDATE%
+1428426308
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu0@archlinuxarm.org>
+
+%SIZE%
+15763456
+
+%LICENSE%
+custom:chrome
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+chromium
+
+%OPTDEPENDS%
+pulseaudio-alsa: For PulseAudio users
+
+%PROVIDES%
+chromium-pepper-flash=12.0.0.77
+

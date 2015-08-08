@@ -1,0 +1,11 @@
+ap_scan=1
+ctrl_interface=/var/run/wpa_supplicant
+network={
+       ssid="amrox"
+       scan_ssid=1
+       proto=WPA RSN
+       key_mgmt=WPA-PSK
+       pairwise=CCMP TKIP
+       group=CCMP TKIP
+       psk=9397d17c103f6f8c4b69f76384285b6f8070eb47a8cc5af52b9cad913d515a20
+}

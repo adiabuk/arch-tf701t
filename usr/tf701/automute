@@ -1,0 +1,34 @@
+#!/bin/bash
+old_state=0
+
+function myread {
+state=`cat /sys/devices/virtual/switch/h2w/state`
+if [ "$state" -ne "$old_state" ];
+then 
+echo lol;
+check
+fi
+sleep 0.5
+}
+
+
+function check {
+if [ $state = 2 ]; 
+then 
+amixer -c 1 sset "Int Spk" mute;
+elif [ $state = 0 ];
+then
+amixer -c 1 sset "Int Spk" unmute
+fi
+old_state=$state
+}
+
+amixer -c 1 sset "Int Spk" unmute;
+
+sleep 30;
+
+amixer -c 1 sset "Int Spk" unmute
+
+while true;
+do myread
+done

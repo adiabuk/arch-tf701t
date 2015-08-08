@@ -1,0 +1,37 @@
+%NAME%
+strace
+
+%VERSION%
+4.10-2
+
+%DESC%
+A useful diagnositic, instructional, and debugging tool
+
+%URL%
+http://sourceforge.net/projects/strace/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1427621140
+
+%INSTALLDATE%
+1428402608
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+366592
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+perl
+libunwind
+

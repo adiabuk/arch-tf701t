@@ -1,0 +1,33 @@
+%NAME%
+localepurge
+
+%VERSION%
+0.7.3.4-1
+
+%DESC%
+Script to remove disk space wasted for unneeded localizations.
+
+%URL%
+http://packages.debian.org/source/sid/localepurge
+
+%ARCH%
+any
+
+%BUILDDATE%
+1417886906
+
+%INSTALLDATE%
+1428471059
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+55296
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+

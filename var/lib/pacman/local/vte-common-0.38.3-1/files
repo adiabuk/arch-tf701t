@@ -1,0 +1,9 @@
+%FILES%
+etc/
+etc/profile.d/
+etc/profile.d/vte.sh
+usr/
+usr/lib/
+usr/lib/vte/
+usr/lib/vte/gnome-pty-helper
+

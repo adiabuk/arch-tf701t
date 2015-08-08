@@ -1,0 +1,14 @@
+%FILES%
+usr/
+usr/lib/
+usr/lib/pkgconfig/
+usr/lib/pkgconfig/xorg-macros.pc
+usr/share/
+usr/share/aclocal/
+usr/share/aclocal/xorg-macros.m4
+usr/share/licenses/
+usr/share/licenses/xorg-util-macros/
+usr/share/licenses/xorg-util-macros/COPYING
+usr/share/util-macros/
+usr/share/util-macros/INSTALL
+

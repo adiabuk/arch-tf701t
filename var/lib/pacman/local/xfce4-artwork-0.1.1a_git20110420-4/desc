@@ -1,0 +1,36 @@
+%NAME%
+xfce4-artwork
+
+%VERSION%
+0.1.1a_git20110420-4
+
+%DESC%
+Backdrops for the Xfce4 desktop
+
+%URL%
+http://goodies.xfce.org/projects/artwork/xfce4-artwork
+
+%ARCH%
+any
+
+%BUILDDATE%
+1411077198
+
+%INSTALLDATE%
+1428409864
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu5@archlinuxarm.org>
+
+%SIZE%
+10320896
+
+%GROUPS%
+xfce4-goodies
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+

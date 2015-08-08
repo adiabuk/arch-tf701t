@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>ristretto.desktop</id>
+  <metadata_license>CC-BY-3.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>Ristretto</name>
+  <summary>Fast and lightweight image viewer</summary>
+
+  <description>
+    <p>Ristretto is an image viewer for the Xfce desktop environment.</p>
+    <p xml:lang="ar">Ristretto هو عارض صور لسطح مكتب إكسفسي.</p>
+    <p xml:lang="ast">Ristretto ye un visor d'imáxenes pal entornu d'escritoriu Xfce.</p>
+    <p xml:lang="bg">Ristretto е бърза и лека програма за преглед на изображения за работната среда XFCE</p>
+    <p xml:lang="ca">Ristretto és un visor d'imatges per l'entorn d'escriptori Xfce.</p>
+    <p xml:lang="cs">Ristretto je prohlížeč obrázků pro pracovní prostředí Xfce.</p>
+    <p xml:lang="da">Ristretto er en billedfremviser til skrivebordsmiljøet Xfce.</p>
+    <p xml:lang="de">Ristretto ist ein Bildbetrachter für die Xfce-Arbeitsumgebung.</p>
+    <p xml:lang="el">Το ristretto είναι ένας διαχειριστής εικόνων για το γραφικό περιβάλλον xfce.</p>
+    <p xml:lang="en_AU">Ristretto is an image viewer for the Xfce desktop environment.</p>
+    <p xml:lang="en_GB">Ristretto is an image viewer for the Xfce desktop environment.</p>
+    <p xml:lang="es">Ristretto es un visor de imágenes rápido y ligero para el entorno de escritorio de Xfce.</p>
+    <p xml:lang="eu">Ristretto Xfce idazmahai inguruneko irudi-ikustatzaile bat da.</p>
+    <p xml:lang="fi">Ristretto on kuvakatselin Xfce-työpöytäympäristöön.</p>
+    <p xml:lang="fr">Ristretto est un visionneur d’images pour l’environnement de bureau Xfce.</p>
+    <p xml:lang="gl">Ristretto é un visor de imaxes para o ambiente de escritorio Xfce.</p>
+    <p xml:lang="hr">Ristretto je preglednik slika za  Xfce radno okruženje.</p>
+    <p xml:lang="hu">A Ristretto egy képmegjelenítő az Xfce asztali környezethez.</p>
+    <p xml:lang="id">Ristretto adalah penilik gambar untuk lingkungan desktop Xfce.</p>
+    <p xml:lang="is">Ristretto er myndaforrit fyrir Xfce skjáborðsumhverfið.</p>
+    <p xml:lang="it">Ristretto è un visualizzatore di immagini per l'ambiente grafico Xfce.</p>
+    <p xml:lang="ja">Ristretto は Xfce デスクトップ環境向けの画像ビューアーです。</p>
+    <p xml:lang="kk">Ristretto - Xfce жұмыс үстел ортасы үшін суреттер көрсетушісі.</p>
+    <p xml:lang="ko">리스트레또는 Xfce 데스크톱 환경의 그림 보기 프로그램입니다.</p>
+    <p xml:lang="lt">Ristretto yra paveikslėlių peržiūros programa skirta Xfce darbastalio aplinkai.</p>
+    <p xml:lang="ms">Mousepad merupakan pelihat imej untuk persekitaran desktop Xfce.</p>
+    <p xml:lang="nb">Ristretto er en bildefremviser for Xfce-skrivebordsmiljøet</p>
+    <p xml:lang="nl">Ristretto is een afbeeldingkijker voor de Xfce-werkomgeving.</p>
+    <p xml:lang="oc">Ristretto es un visionador d’imatges per l’environament de burèu Xfce.</p>
+    <p xml:lang="pl">Przeglądarka obrazów dla środowiska Xfce</p>
+    <p xml:lang="pt">O Ristretto é um visualizador de imagens para o ambiente de trabalho Xfce</p>
+    <p xml:lang="pt_BR">O Ristretto é um visualizador de imagens rápido e leve para o ambiente de trabalho Xfce.</p>
+    <p xml:lang="ro">Ristretto este un vizualizator de imagini pentru mediul desktop Xfce.</p>
+    <p xml:lang="ru">Ristretto — быстрая и легковесная программа просмотра изображений для рабочего окружения Xfce.</p>
+    <p xml:lang="sk">Ristretto je prehliadač obrázkov pre pracovné prostredie Xfce.</p>
+    <p xml:lang="sr">Ристрето је прегледач слика радно окружење Иксфце-а.</p>
+    <p xml:lang="sv">Ristretto är en bildvisare för skrivbordsmiljön Xfce</p>
+    <p xml:lang="th">Ristretto คือโปรแกรมแสดงรูปภาพสำหรับเดสก์ท็อป Xfce</p>
+    <p xml:lang="tr">Ristretto, Xfce masaüstü ortamı için bir resim göstericidir.</p>
+    <p xml:lang="ug">رىسترېتتو(Ristretto) بولسا Xfce ئۈستەلئۈستى مۇھىتىدىكى سۈرەت كۆرگۈدۇر.</p>
+    <p xml:lang="uk">Ristretto - переглядач зображень для робочого середовища Xfce.</p>
+    <p xml:lang="zh_CN">Ristretto 是 Xfce 桌面环境下的图片查看器。</p>
+    <p xml:lang="zh_TW">Ristretto 是個 Xfce 桌面環境的影像檢視器。</p>
+    <p>The Ristretto Image Viewer is an application that can be used to view and scroll through images, run a slideshow of images, open images with other applications like an image-editor or configure an image as the desktop wallpaper.</p>
+    <p xml:lang="bg">С програмата за преглед на изображения Ristretto можете да преглеждате Вашите изображенията, да превъртате списъка с изображения, да стартирате слайд шоу, да отваряте изображенията с друга програма, като редактор на изображения, както и да задавате изображение, като фон на работният плот.</p>
+    <p xml:lang="de">Mit dem Ristretto-Bildbetrachter können Bilder angezeigt, durchgeblättert und als Diaschau angezeigt werden. Außerdem können Bilder mit anderen Programmen wie Bildbearbeitungsanwendungen geöffnet oder als Hintergrundbild eingestellt werden.</p>
+    <p xml:lang="en_AU">The Ristretto Image Viewer is an application that can be used to view and scroll through images, run a slideshow of images, open images with other applications like an image-editor or configure an image as the desktop wallpaper.</p>
+    <p xml:lang="es">El visor de imágenes Ristretto es una aplicación que se puede utilizar para ver y desplazarse a través de las imágenes, ejecutar una presentación de imágenes, abrir imágenes con otras aplicaciones como un editor de imágenes o configurar una imagen como fondo de escritorio.</p>
+    <p xml:lang="fi">Ristretto-kuvankatselin on sovellus, jota voidaan käyttää kuvien katsomiseen ja selaamiseen, diaesitysten näyttämiseen, kuvien avaamiseen muilla sovelluksilla, kuten kuvankäsittelyohjelmilla tai määrittämään kuva työpöydän taustakuvaksi.</p>
+    <p xml:lang="fr">Le visionneur d’images Ristretto est une application qui peut être utilisée pour visionner et faire défiler des images, les ouvrir dans d’autres applications comme un éditeur d’images, ou les définir comme fond d’écran.</p>
+    <p xml:lang="hr">Ristretto preglednik slika je aplikacija koja se može koristiti za otvaranje i pregledavanje slika. Slike se mogu pregledavati kao prezentacija, otvariti u uređivaču slika ili postaviti kao pozadina radne površine.</p>
+    <p xml:lang="it">Il visualizzatore di immagini Ristretto è un'applicazione che può essere utilizzata per visualizzare e scorrere tra le immagini, eseguire una presentazione, aprire le immagini con altre applicazioni (quali editor di immagini) o per impostare un'immagine come sfondo della scrivania.</p>
+    <p xml:lang="ja">Ristretto は画像ビューアーアプリケーションです。画像の表示やスクロール、スライドショー、グラフィックエディターなど他のアプリケーションで画像を開く、あるいはデスクトップの壁紙の設定などが行えます。</p>
+    <p xml:lang="ko">리스트레또 그림 보기 프로그램에서는 이미지를 스크롤 방식으로도 볼 수 있으며 슬라이드 쇼 방식으로 보여줄 수 있고 다른 이미지 편집기에서 이미지를 열어보거나 데스크톱 바탕 화면 이미지로 설정할 수 있습니다.</p>
+    <p xml:lang="ms">Pelihat IMej Ristretto ialah aplikasi yang digunakan untuk melihat dan menatal imej, menjalankan paparan slaid imej, membuka imej dengan aplikasi lain seperti image-editor atau konfigur imej sebagai kertas dinding desktop.</p>
+    <p xml:lang="nb">Risetto bildeviser er et program som kan brukes til å se og bla igjennom bilder, kjøre bildefremvisning, åpne bilder med andre programmer, for eksempel et bilderedigeringsprogram, eller sette et bilde som skrivebordsbakgrunn.</p>
+    <p xml:lang="nl">De afbeeldingkijker Ristretto is een toepassing die kan worden gebruikt om door afbeeldingen te bladeren en ze te bekijken, een diapresentatie van afbeeldingen weer te geven, afbeeldingen te openen met andere toepassingen zoals een fotobewerker of om een afbeelding in te stellen als bureaubladachtergrond.</p>
+    <p xml:lang="pt">O visualizador de imagens Ristretto é uma aplicação que pode ser usada para ver e deslocar entre imagens, executar uma apresentação de imagens, abrir imagens com outras aplicações como um editor de imagens ou configurar uma imagem como papel de parede.</p>
+    <p xml:lang="pt_BR">O Visualizador de Imagens Ristretto é um aplicativo que pode ser usado para visualizar ou navegar por uma coleção de imagens, exibir uma apresentação de slides de imagens, abrir imagens com outros aplicativos como um editor de imagens or definir uma imagem como papel de parede da área de trabalho.</p>
+    <p xml:lang="ru">Программа просмотра изображений Ristretto может быть использована для показа и смены изображений, демонстрации слайд-шоу из изображений, открытия изображений в других программах, например в редакторах, и замены обоев на рабочем столе.</p>
+    <p xml:lang="sk">Prehliadač obrázkov Ristretto je aplikácia, ktorú môžete použiť na zobrazenie a prechádzanie obrázkami, spustenie prezentácie obrázkov, otvorenie obrázkov v inej aplikácii, ako napr. editor obrázkov, alebo nastaviť obrázok ako tapetu plochy.</p>
+    <p xml:lang="sr">Прегледник слика Ристрето је програм који може да се користи за преглед и клизање кроз слике, покретање покретног приказа слика, отварање слика осталим програмима, као уредник слика или за подешавање слике да буде позадина радне површи.</p>
+    <p xml:lang="th">โปรแกรมดูรูปภาพ Ristretto เป็นโปรแกรมที่สามารถใช้แสดงและเลื่อนดูรูปภาพต่างๆ, แสดงสไลด์ของรูปภาพ, เปิดรูปภาพด้วยโปรแกรมอื่นเช่นโปรแกรมแก้ไขรูปภาพ หรือกำหนดรูปภาพเป็นภาพพื้นหลัง</p>
+    <p xml:lang="uk">Переглядач малюнків Ristretto - це програма, яку можна використовувати для перегляду малюнків, запуску слайд-шоу з малюнків, відкривання малюнків за допомогою інших програм, таких як редактор малюнків, або налаштовувати малюнок в якості шпалер стільниці.</p>
+    <p xml:lang="zh_CN">Ristretto 图片查看器是一个应用程序,它可以用来查看和滚动浏览图片,运行图片幻灯片,使用其他程序比如图片编辑器来打开图片或者设置一张图片为桌面背景。</p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot.png</image>
+ 
+    </screenshot>
+    <screenshot>
+      <caption>Ristretto - Set as Wallpaper</caption>
+      <image>http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot-2.png</image>
+ 
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">http://goodies.xfce.org/projects/applications/ristretto</url>
+  <url type="bugtracker">https://bugzilla.xfce.org/describecomponents.cgi?product=Ristretto</url>
+  <url type="help">http://docs.xfce.org/apps/ristretto/start</url>
+
+  <updatecontact>xfce4-dev@xfce.org</updatecontact>
+
+  <project_group>XFCE</project_group>
+
+  <provides>
+    <binary>ristretto</binary>
+  </provides>
+
+  <releases>
+    <release version="0.6.3" timestamp="1344206922">
+      <description>
+        <p>This version comes with the improvements such as thumbnail usage as appicon and update to the first image in the image-list when receiving a ready-signal, required to show the thumbnail once it's generated.</p>
+        <p xml:lang="bg">Тази версия идва с подобрения, като например използването на миниатюри като икони на програмите и актуализиране на първото изображение в списъка при получаване на сигнал за готовност, когато миниатюрата е генерирана.</p>
+        <p xml:lang="de">Diese Version enthält Verbesserungen wie die Verwendung eines Vorschaubildes für das Anwendungssymbol und Aktualisierung sobald das erste Bild in der Bilderliste bereit ist.</p>
+        <p xml:lang="en_AU">This version comes with the improvements such as thumbnail usage as appicon and update to the first image in the image-list when receiving a ready-signal, required to show the thumbnail once it's generated.</p>
+        <p xml:lang="es">Esta versión viene con mejoras como el uso de miniaturas como icono de aplicación y actualización a la primera imagen de la lista de imagen cuando se recibe una señal, necesario para mostrar la imagen una vez que se ha generado la miniatura.</p>
+        <p xml:lang="fr">Cette version a évolué et utilise une miniature comme icône d’application. Celle-ci se met à jour avec la première image de la liste ouverte une fois que le signal indiquant la génération de la miniature a été émis.</p>
+        <p xml:lang="hr">Ova verzija dolazi sa poboljšanjima kao što su upotreba sličica kao ikona te ažuriranjem prve slike u listi slika kada je spremna što je potrebno za prikaz sličice kada je ona generirana.</p>
+        <p xml:lang="it">Questa versione aggiunge la possibilità di utilizzare le miniature come icona delle applicazioni e consente di aggiornare la prima immagine nell'elenco delle immagini quando riceve il segnale di "pronto" richiesto per mostrare la miniatura una volta che è stata generata.</p>
+        <p xml:lang="ja">このバージョンでは、サムネイルにアプリケーションアイコンを使用し、Ready シグナルを受け取り、生成されたサムネイルの表示が要求されると、画像リストの最初の画像を更新するよう改善されました。</p>
+        <p xml:lang="ko">이 버전에서는 미리보기 사용 수단을 앱 아이콘처럼 나타내도록 개선했으며, 대기 신호를 받고 미리보기 이미지를 만들고 난 후 미리보기 이미지 표시가 필요할 때, 이미지 목록의 첫 이미지를 업데이트합니다.</p>
+        <p xml:lang="ms">Versi ini disertakan dengan penambahbaikan seperti penggunaan lakaran kenit sebagai appicon dan kemaskini imej pertama di dalam image-list bila menerima ready-signal, diperlukan untuk menunjukkan lakaran kenit bilamana ia dijanakan.</p>
+        <p xml:lang="nb">Denne versjonen kommer med forbedringer som miniatyrvisning som programikon som ved klarsignal vil oppdatere til første bilde i listen over bilder, påkrevd for å vise bilder i miniatyrvsningen når den er generert.</p>
+        <p xml:lang="nl">Deze versie bevat verbeteringen zoals gebruik van miniaturen als toepassingspictogram en bijwerken naar de eerste afbeelding in de afbeeldingenlijst bij het ontvangen van een 'gereed'-signaal, wat vereist is om de miniatuur te tonen zodra deze is aangemaakt.</p>
+        <p xml:lang="pt">Esta versão vem com melhorias como uso de miniatura como ícone e atualiza para a primeira imagem na lista quando recebe um sinal de pronto, necessário para mostrar a miniatura assim que é gerada.</p>
+        <p xml:lang="pt_BR">Esta versão vem com melhorias, tais como o uso de miniaturas como ícone do aplicativo e atualizar a primeira imagem da lista de imagens quando receber um sinal de pronto, necessário para mostrar a miniatura assim que for gerada.</p>
+        <p xml:lang="ru">Данный выпуск содержит такие улучшения, как использование эскизов как значков приложений и обновление до первого изображения в списке при получении сигнала готовности, требуемого для показа эскиза после его создания. </p>
+        <p xml:lang="sk">Táto verzia prichádza s vylepšeniami, ako napr. použitie miniatúry ako ikony aplikácie a jej aktualizácia na prvý obrázok v zozname pri prijatí signálu „pripravený”, nutného na zobrazenie miniatúry po jej vygenerovaní.</p>
+        <p xml:lang="sr">Ово издање долази са побољшањима употребе умањених сличица као сличице програма и освежавањем прве слике у списку слика при пријему знака спреман, потребном за приказ умањених сличица када оне буду образоване.</p>
+        <p xml:lang="th">รุ่นนี้มาพร้อมกับการปรับปรุงหลายรายการ เช่น การใช้ภาพย่อของรูปภาพเป็นไอคอนของโปรแกรม และการปรับแสดงรูปภาพแรกในรายชื่อรูปภาพเมื่อได้รับสัญญาณพร้อม ซึ่งจำเป็นสำหรับการแสดงภาพย่อเมื่อสร้างเสร็จ</p>
+        <p xml:lang="uk">Ця версія має кілька покращень, пов’язаних з генерацією і  показом мініатюр списку малюнків.</p>
+      </description>
+    </release>
+
+    <release version="0.6.2" timestamp="1343602164">
+      <description>
+        <p>This release contains lots of translation-updates, and a crash when configuring the 'limit-quality' property.</p>
+        <p xml:lang="bg">Тази версия съдържа актуализация на много преводи, както и поправя срив при настройката на „ограничаване на качеството“.</p>
+        <p xml:lang="de">Diese Version aktualisiert einen Großteil der Übersetzung und stürzt ab, wenn die Eigenschaft 'Qualitätslimit' bearbeitet wird.</p>
+        <p xml:lang="en_AU">This release contains lots of translation-updates, and a crash when configuring the 'limit-quality' property.</p>
+        <p xml:lang="es">Esta versión contiene gran cantidad de actualizaciones a las traducciones, y un corrección a un cuelgue al configurar la propiedad de calidad máxima de imagen.</p>
+        <p xml:lang="fr">Cette version contient de nombreuses mises à jour de traduction et peut planter en configurant l’option limitant la qualité de rendu de l’image.</p>
+        <p xml:lang="hr">Ovo izdanje sadrži puno ažuriranja prijevoda te ispravak za rušenje aplikacije kada se izmjenjivalo svojstvo ograničavanja kvalitete.</p>
+        <p xml:lang="it">Questo rilascio contiene molti aggiornamenti alle traduzioni e a un problema di configurazione della proprietà "limite qualità"</p>
+        <p xml:lang="ja">このリリースでは、多くの翻訳の更新と、「描画品質を画面サイズまでに制限する」オプションの設定時にクラッシュする問題の修正が行われました。</p>
+        <p xml:lang="ko">이번 출시 버전에서는 여러부분의 번역 업데이트를 포함하며, '화질 제한' 속성을 설정하면 깨지는 기능이 들어있습니다.</p>
+        <p xml:lang="ms">Keluaran ini mengandungi banyak kemaskini-terjemahan, dan mengalamai kerosakan bila mengkonfigur sifat 'limit-quality'.</p>
+        <p xml:lang="nb">Denne utgivelsen inneholder mange oversettelsesoppdateringer, og fikser et kræsj som oppstår ved oppsett av egenskapene for 'begrens-kvalitet'</p>
+        <p xml:lang="nl">Deze versie bevat veel bijgewerkte vertalingen, en een vastloper bij het instellen van de eigenschap 'kwaliteit beperken'.</p>
+        <p xml:lang="pt">Este lançamento contém muitas atualizações de traduções e um bloqueio quando configurada a propriedade 'limite de qualidade'.</p>
+        <p xml:lang="pt_BR">Esta versão contém várias atualizações de tradução, e a correção de uma falha que ocorria durante a configuração da propriedade "limite-qualidade".</p>
+        <p xml:lang="ru">В данном выпуске обновлены переводы на многие языки. При настройке параметра ограничения качества происходит аварийное завершение программы.</p>
+        <p xml:lang="sk">Toto vydanie obsahuje veľa aktualizácií prekladov a spadne, pri nastavovaní vlastnosti „limit-quality”.</p>
+        <p xml:lang="sr">Ово издање садржи доста освежења превода, и рушење програма при подешавању својства „ограничење каквоће“.</p>
+        <p xml:lang="th">รุ่นนี้มีการปรับคำแปลจำนวนมาก และแก้อาการพังเมื่อตั้งค่า 'จำกัดคุณภาพ'</p>
+        <p xml:lang="uk">Це випуск містить багато оновлень перекладів.</p>
+        <p xml:lang="zh_CN">此版本包含大量翻译更新,并且在配置"极限画质"属性时会出现崩溃。</p>
+      </description>
+    </release>
+
+    <release version="0.6.0" timestamp="1335662454">
+      <description>
+        <p>This version comes with several changes such as online documentation on http://docs.xfce.org, the option to limit the maximum image-quality to the screen dimensions to improve memory-usage and performance - now ristretto renders at full quality with this option disabled, only one toolbar - instead of two, a quick-launch button on the toolbar to execute an editor, the option to pick a default-editor per mime-type, an optional clock that shows up when ristretto is fullscreen, Ristretto now shows a 'Loading..' message in the statusbar to indicate when it is busy and progressive loading of directories to prevent lockup of the UI. This version is designed to work with version 4.10 of Xfce.</p>
+        <p xml:lang="bg">Тази версия се предлага с няколко промени, като например онлайн документация на http://docs.xfce.org, възможността да ограничат максимално качество на изображението, за да размерите на екрана, за да се подобри използваната памет и производителността – сега Ristretto ограничава изобразяването с максимално качество, ако тази опция е забранена, само една лента с инструменти - вместо две, бутон за бързо стартиране в лентата с инструменти, за да се отвори редактор, възможност да зададете редактор по подразбиране с MIME-тип, опционален часовник, който се появява, когато Ristretto е на цял екран. Ristretto сега показва съобщение „Зареждане...“ в лентата за състоянието, когато е зает и прогресивно зареждане на директории за да се предотврати блокирането на потребителския интерфейс. Тази версия е предназначена за работа с версия 4.10 на Xfce.</p>
+        <p xml:lang="de">Diese Version bringt zahlreiche Neuerungen wie eine Internetdokumentation unter http://docs.xfce.org, die Option die maximale Bildqualität auf Bildschirmgröße zu beschränken, um Speichernutzung und Leistung zu verbessern - Ristretto berechnet Bilder nun in voller Auflösung, wenn diese Option deaktiviert ist. Es gibt nur noch eine Werkzeugleiste - statt zwei, einen Schnellstartknopf in der Werkzeugleiste um ein Bildbearbeitungsprogramm zu starten, sowie die Option ein Standardbearbeitungsprogramm nach MIME-Typ zu wählen. Außerdem gibt es optional eine Uhr die im Vollbildmodus angezeigt wird, Ristretto zeigt eine »Ladevorgang …«-Nachricht in der Statusleiste, um zu zeigen, dass es gerade beschäftigt ist und Ordner lädt, um ein Einfrieren der Oberfläche zu verhindern. Diese Version wurde für Xfce 4.10 entworfen.</p>
+        <p xml:lang="en_AU">This version comes with several changes such as online documentation on http://docs.xfce.org, the option to limit the maximum image-quality to the screen dimensions to improve memory-usage and performance - now ristretto renders at full quality with this option disabled, only one toolbar - instead of two, a quick-launch button on the toolbar to execute an editor, the option to pick a default-editor per mime-type, an optional clock that shows up when ristretto is fullscreen, Ristretto now shows a 'Loading..' message in the statusbar to indicate when it is busy and progressive loading of directories to prevent lockup of the UI. This version is designed to work with version 4.10 of Xfce.</p>
+        <p xml:lang="es">Esta versión viene con varios cambios como documentación en línea en http://docs.xfce.org, la facultad de limitar la calidad máxima de la imagen para las dimensiones de la pantalla para mejorar el uso de memoria y el rendimiento: ahora Ristretto muestra a máxima calidad de las imágenes con esta opción deshabilitada; solo una barra de herramientas en lugar de dos, un botón de inicio rápido en la barra de herramientas para ejecutar un editor, la opción de escoger un editor predeterminado por tipo MIME, un reloj opcional que aparece cuando Ristretto es utilizado a pantalla completa, Ristretto ahora muestra un mensaje de «Cargando..» en la barra de estado para indicar cuando está ocupado y progresivamente cargando directorios para evitar el bloqueo de la interfaz de usuario. Esta versión está diseñada para trabajar con la versión 4.10 de Xfce.</p>
+        <p xml:lang="fr">Cette version est conçue pour fonctionner avec Xfce 4.10 et apporte plusieurs changements : la documentation est désormais disponible sur http://docs.xfce.org ; il est possible de limiter la qualité de rendu de l’image à la dimension de l’écran afin d’améliorer l’utilisation de la mémoire et la performance ; une seule barre d’outils, possédant un bouton de lancement rapide pour exécuter un éditeur, a été conservée ; il est possible d’assigner un éditeur par défaut par type MIME ; une horloge peut s’afficher en mode plein écran ; Ristretto affiche dorénavant un message de chargement dans la barre d’état pour indiquer qu’il est occupé et empêcher le blocage de l’interface utilisateur.</p>
+        <p xml:lang="hr">Ova verzija dolazi s nekoliko ispravaka. Dodana je online dokumentacija na http://docs.xfce.org, dodana je opcija ograničavanja maksimalne kvalitete slike prema dimenzijama ekrana što poboljšava performanse i smanjuje upotrebu memorije. Ristretto stvara u punoj kvaliteti ako je ova opcija isključena. Sada se koristi samo jedna alatna traka umjesto dvije, dodan je gumb za brzo pokretanje uređivača te opcija za odabir zadanih uređivača prema ekstenziji slike. Dodan je opcionalni sat kada se vrši prikaz u punom ekranu, statusna traka sada pokazuje poruku 'Učitavanje...' kada Ristretto radi te se mape sada učitavaju progresivno kako bi se spriječilo nereagiranje sučelja. Ova verzija je dizajnirana da radi s 4.10 verzijom Xfcea.</p>
+        <p xml:lang="it">Questa versione introduce le seguenti novità:
+- documentazione su http://docs.xfce.org;
+- opzione per limitare la massima qualità dell'immagine alla dimensione dello schermo per migliorare le prestazioni e il consumo di memoria;
+- una sola barra degli strumenti in luogo di due;
+- un pulsante di avvio veloce nella barra strumenti per avviare un editor;
+- opzione per selezionare un editor in funzione dei tipi mime;
+- un orologio opzionale mostrato quando Ristretto è in modalità a schermo intero;
+- Ristretto mostra ora un messaggio di caricamento nella barra di stato quando è occupato ed è stato aggiunto il caricamento progressivo delle cartelle per impedire il blocco dell'interfaccia.
+Questa versione è progettata per funzionare con Xfce 4.10</p>
+        <p xml:lang="ja">このバージョンではいくつかの変更が行われました。ドキュメントがオンライン化されました (http://docs.xfce.org)。メモリ使用量と性能を向上させるため、最大画質を画面サイズまでに制限するオプションが追加されました。ツールバーがひとつにまとめられました ― 「編集」ボタンから画像エディターを起動でき、MIME タイプごとにデフォルトエディターが選択できるようになりました。全画面化時に任意で時計を表示できるようになりました。UI がフリーズしたように見えないよう、ファイルの読み込み時にビジーだったときやディレクトリを読み込んでいるときにステータスバーに「読み込んでいます...」を表示するようになりました。このバージョンは Xfce 4.10 で動作することを前提に設計されています。</p>
+        <p xml:lang="ko">이 버전에는 http://docs.xfce.org 온라인 문서에 기술한 바와 같이 다양한 개선 사항을 넣었습니다. 메모리 사용 방식 및 프로그램 성능을 개선하기 위해 화면 해상도에 대한 최대 화질을 제한하는 옵션을 넣었습니다. 이제 리스트레또에서는 이 옵션을 비활성화하면 완벽한 화질로 표현합니다. 그리고 도구 모음을 하나만 배치하여 편집기를 실행할 도구모음에서 빠른 실행 단추를 추가했습니다. MIME 형식별 기본 편집기를 고를 옵션을 넣었고, 리스트레또가 전체 화면 상태일 경우 나타날 추가 시계 기능도 넣어, 이제는 리스트레또에서 디렉터리를 불러오는 동안 상태를 표시하고 UI 잠금 현상을 막기 위해 '불러오는 중..' 메시지를 나타냅니다. 이 버전은 Xfce 버전 4.10에서 동작하도록 만들었습니다.</p>
+        <p xml:lang="ms">Versi ini disertakan dengan beberapa perubahan seperti dokumentasi atas http://docs.xfce.org, pilihan untuk hadkan kualiti imej maksimum terhadap dimensi skrin untuk menambahbaik penggunaan-ingatan dan prestasi - kini ristretto dapat mempersembahkan dengan kualiti penuh jika pilihan ini dilumpuhkan, hanya satu palang alat - sebelum ini ada dua, butang lancar-pantas pada palang alat untuk membuka penyunting, pilihan untuk memilih penyunting- lalai per jenis-mime, jam pilihan yang ditunjukkan bila ristretto dalam mod skrin penuh, Ristretto kini memaparkan mesej 'Memuatkan..' di dalam palang status untuk menunjukkan ia sibuk dan masih memuatkan direktori untuk menghindari penguncian UI. Versi ini direka untuk berfungsi dengan Xfce versi 4.10.</p>
+        <p xml:lang="nb">Denne versjonen kommer med flere endringer som nettsidebasert dokumentasjon på http://docs.xfce.org, muligheten til å begrense maksimal billedkvalitet til skjermdimensjonene for å forbedre minnebruk og ytelse - risetto tegner nå i full kvalitet hvis dette valget er avskrudd, bare en verktøylinje istedenfor to, en hurtigoppstartingsknapp på verktøylinjen for å kjøre en billedbehandler, muligheten til å velge forvalgt billedbehandler per mime-type en valgfri klokke når risetto er i fullskjermsvisning, Risetto viser nå en 'Laster inn..'-melding i statusfeltet for å indukere at den er i aksjon, og progressiv innlasting av mapper for å hindre låsning av grensesnittet. Denne versjonen er utviklet for å virke med versjon 4.10 av Xfce.</p>
+        <p xml:lang="nl">Deze versie bevat verschillende wijzigingen zoals documentatie op het internet op http://docs.xfce.org, de optie om de maximale afbeeldingkwaliteit te beperken tot de schermgrootte om geheugengebruik en prestaties te verbeteren - Ristretto geeft thans weer op volledige kwaliteit met deze optie uitgeschakeld, slechts één werkbalk in plaats van twee, een snelstarterknop op de werkbalk voor het starten van een bewerkingsprogramma, de optie om een standaard-bewerkingsprogramma te kiezen per bestandtype, een optionele klok die verschijnt wanneer Ristretto schermvullend is, Ristretto toont nu een 'Bezig met laden...'-boodschap in de statusbalk om aan te geven wanneer hij bezig is en voortschrijdend laden van mappen om vastlopen van de gebruikersomgeving te voorkomen. Deze versie is ontworpen voor versie 4.10 van Xfce.</p>
+        <p xml:lang="pt">Esta versão vem com muitas mudanças como documentação online em http://docs.xfce.org, a opção de limitar o máximo da qualidade de imagem para a dimensão do ecrã para melhorar o uso de memória e desempenho - agora o ristretto renderiza à máxima qualidade com esta opção desligada, apenas uma barra de tarefas - em vez de duas, um botão de início rápido na barra de tarefas para executar um editor, a opção de escolha de um editor por omissão para tipos mime, um relógio opcional que é mostrado quando o ristretto está em ecrã inteiro. Ristretto agora mostra uma mensagem 'A carregar...' na barra de estado para indicar quando está ocupado e carrega progressivamente as pastas para prevenir o bloqueio da IU. Esta versão é desenhada para funcionar com a versão 4.10 do Xfce.</p>
+        <p xml:lang="pt_BR">Esta versão vem com várias mudanças como: documentação on-line em http://docs.xfce.org; a opção para limitar a qualidade máxima da imagem para as dimensões da tela visando melhorias no uso de memória e performance - atualmente o ristretto exibe imagens em qualidade máxima com esta opção desabilitada; apenas uma barra de ferramentas - em vez de duas; um botão de lançamento rápido na barra de ferramentas para executar um editor; a opção de escolher um editor padrão por mime-type; um relógio opcional que aparece quando o ristretto está no modo tela cheia; o Ristretto agora mostra a mensagem "Carregando.." na barra de status para indicar quando o carregamento está em andamento e progressivamente carrega diretórios a fim de evitar travamentos. Esta versão foi projetada para funcionar com a versão 4.10 do Xfce.</p>
+        <p xml:lang="ru">Данная версия содержит несколько изменений, таких как онлайн документация на http://docs.xfce.org, опцию ограничения максимального качества изображения размерами экрана для уменьшения используемой памяти и улучшения производительности. Теперь при отключении этой опции Ristretto формирует изображение наибольшего качества. Также из изменений: только одна инструментальная панель вместо двух, кнопка быстрого запуска редактора, опция выбора редактора по умолчанию для mime-типа, возможность отображения часов в полноэкранном режиме. Теперь Ristretto отображает сообщение «Загрузка...» в строке статуса при занятости и загрузке каталогов для предотвращения блокировки интерфейса пользователя. Данная версия рассчитана на работу с Xfce версии 4.10.</p>
+        <p xml:lang="sk">Táto verzia prichádza s viacerými zmenami, ako napr. online dokumentácia na http://docs.xfce.org, možnosť nastaviť limit image-quality na rozmery obrazovky, čím zlepšuje spotrebu pamäte a výkon – ristretto spracúva obrázok v plnej kvalite pri vypnutí tejto voľby, len jeden panel nástrojov – namiesto dvoch, tlačidlo rýchleho spustenia v paneli nástrojov na spustenie editora, voľba na výber predvoleného editora podľa typu MIME, voliteľné hodiny, ktoré sa zobrazujú keď je ristretto na celej obrazovke, Ristretto teraz zobrazuje v stavovom riadku správu „Načítam..” na indikáciu, že pracuje a postupne načítava adresáre, aby predišiel zablokovaniu používateľského rozhrania. Táto verzia tak, aby pracovala s verziou 4.10 Xfce.</p>
+        <p xml:lang="sr">Ово издање доноси неколико измена попут оних описаних на мрежи на http://docs.xfce.org, могућност ограничења најбоље каквоће слике на размеру екрана ради побољшања употребе меморије и учинка - сада Ристрето приказује у пуном квалитету када је то онемогућено, само једну траку алата - уместо две, дугме за брзо покретање на траци алата за извршење уредника, могућност да се изабере подразумевани уредник по миме врсти, могућ приказ часовника када је Ристрето преко целог екрана, сада приказује поруку „Учитавам...“ у траци стања за указивање када је заузет и поступно учитавање фасцикли ради спречавања закључавања корисничког сучеља. Ово издање је осмишљено да ради са Иксфцеом издања 4.10.</p>
+        <p xml:lang="th">รุ่นนี้มาพร้อมกับการเปลี่ยนแปลงหลายรายการ เช่น การใช้เอกสารออนไลน์ที่ http://docs.xfce.org, ตัวเลือกสำหรับจำกัดคุณภาพของรูปภาพตามขนาดของหน้าจอ เพื่อการใช้หน่วยความจำและสมรรถนะการทำงานที่ดีขึ้น - ขณะนี้ ristretto จะแสดงรูปภาพแบบคุณภาพเต็มถ้าปิดตัวเลือกนี้, ใช้แถบเครื่องมือเพียงแถบเดียว - แทนการใช้สองแถบ, ปุ่มเรียกโปรแกรมแบบเร็วบนแถบเครื่องมือสำหรับเรียกเครื่องมือแก้ไข, ตัวเลือกสำหรับเลือกเครื่องมือแก้ไขปริยายสำหรับชนิด MIME แต่ละชนิด, ตัวเลือกแสดงนาฬิกาเมื่อ ristretto แสดงเต็มจอ, ristretto รุ่นนี้จะแสดงข้อความ 'กำลังโหลด..' ที่แถบสถานะเพื่อบ่งบอกว่ากำลังทำงานอยู่ และการโหลดไดเรกทอรีแบบค่อยเป็นค่อยไปเพื่อป้องกันไม่ให้ UI ค้าง รุ่นนี้ออกแบบมาสำหรับทำงานกับ Xfce รุ่น 4.10</p>
+        <p xml:lang="uk">Ця версія має кілька змін, таких як документація онлайн на http://docs.xfce.org, опція допасування якості малюнка до роздільної здатності екрану для кращого використання пам’яті - тепер ristretto відображає в повній якості, коли ця опція виключена, тільки одна панель інструментів - замість двох, кнопка швидкого запуску на панелі для запуску редактора, опція вибору типового редактора через тип mime, Ristretto тепер показує повідомлення 'Завантажую..' на панелі статусу, щоб повідомляти, коли він зайнятий операцією, і процес завантаження тек, щоб не блокувати інтерфейс користувача. Ця версія розроблена для роботи з версією 4.10 Xfce.</p>
+      </description>
+    </release>
+  </releases>
+
+</component>

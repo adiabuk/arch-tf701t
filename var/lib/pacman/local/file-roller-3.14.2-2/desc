@@ -1,0 +1,51 @@
+%NAME%
+file-roller
+
+%VERSION%
+3.14.2-2
+
+%DESC%
+Create and modify archives
+
+%URL%
+http://www.gnome.org
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1424023480
+
+%INSTALLDATE%
+1428382801
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu5@archlinuxarm.org>
+
+%SIZE%
+5138432
+
+%GROUPS%
+gnome-extra
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+desktop-file-utils
+gtk3
+hicolor-icon-theme
+dconf
+libarchive
+file
+json-glib
+libnotify
+p7zip
+
+%OPTDEPENDS%
+lrzip: lrzip archive support
+unace: extraction tool for the proprietary ace archive format
+

@@ -1,0 +1,37 @@
+%NAME%
+burp
+
+%VERSION%
+5-1
+
+%DESC%
+A simple AUR uploader
+
+%URL%
+http://github.com/falconindy/burp
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1401430089
+
+%INSTALLDATE%
+1428345452
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu0@archlinuxarm.org>
+
+%SIZE%
+66560
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+curl
+

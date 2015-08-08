@@ -1,0 +1,36 @@
+%NAME%
+dri2proto
+
+%VERSION%
+2.8-2
+
+%DESC%
+X11 DRI protocol
+
+%URL%
+http://xorg.freedesktop.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1404187217
+
+%INSTALLDATE%
+1428352571
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu0@archlinuxarm.org>
+
+%SIZE%
+86016
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

@@ -1,0 +1,45 @@
+%NAME%
+xfce4-mixer
+
+%VERSION%
+4.11.0-2
+
+%DESC%
+The volume control plugin for the Xfce panel
+
+%URL%
+http://www.xfce.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1425809814
+
+%INSTALLDATE%
+1428360610
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu4@archlinuxarm.org>
+
+%SIZE%
+832512
+
+%GROUPS%
+xfce4
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+xfce4-panel
+gstreamer0.10-base-plugins
+libunique
+libkeybinder2
+
+%OPTDEPENDS%
+gstreamer0.10-good-plugins: for OSS and PulseAudio support
+

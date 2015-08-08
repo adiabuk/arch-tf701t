@@ -1,0 +1,56 @@
+%NAME%
+pulseaudio
+
+%VERSION%
+6.0-1
+
+%DESC%
+A featureful, general-purpose sound server
+
+%URL%
+http://www.freedesktop.org/wiki/Software/PulseAudio
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1423802403
+
+%INSTALLDATE%
+1428416703
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+5701632
+
+%LICENSE%
+LGPL
+AGPL3
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libpulse=6.0-1
+rtkit
+libltdl
+speexdsp
+tdb
+fftw
+orc
+webrtc-audio-processing
+sbc
+
+%OPTDEPENDS%
+pulseaudio-alsa: ALSA configuration (recommended)
+avahi: zeroconf publishing and discovery
+bluez: Bluetooth
+bluez-libs: Bluetooth
+gconf: paprefs configuration
+jack2-dbus: JACK support
+lirc: IR control
+openssl: RAOP (AirPlay) output
+python-pyqt4: Equalizer GUI (qpaeq)
+

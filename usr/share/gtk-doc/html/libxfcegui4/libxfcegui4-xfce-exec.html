@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>xfce-exec</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="libxfcegui4 Reference Manual">
+<link rel="up" href="libxfcegui4-fundamentals.html" title="Xfce GUI Fundamentals">
+<link rel="prev" href="libxfcegui4-Standard-Macros.html" title="Standard Macros">
+<link rel="next" href="libxfcegui4-Xfce-Gdk-extensions.html" title="Xfce Gdk extensions">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libxfcegui4-Standard-Macros.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="libxfcegui4-fundamentals.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libxfcegui4 Reference Manual</th>
+<td><a accesskey="n" href="libxfcegui4-Xfce-Gdk-extensions.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libxfcegui4-xfce-exec.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libxfcegui4-xfce-exec.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libxfcegui4-xfce-exec"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libxfcegui4-xfce-exec.top_of_page"></a>xfce-exec</span></h2>
+<p>xfce-exec — executing commands from within Xfce applications.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libxfcegui4-xfce-exec.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libxfcegui4/libxfcegui4.h&gt;
+
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libxfcegui4-xfce-exec.html#xfce-exec" title="xfce_exec ()">xfce_exec</a>                           (<em class="parameter"><code>const <span class="type">char</span> *cmd</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> in_terminal</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_sn</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libxfcegui4-xfce-exec.html#xfce-exec-with-envp" title="xfce_exec_with_envp ()">xfce_exec_with_envp</a>                 (<em class="parameter"><code>const <span class="type">char</span> *cmd</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> in_terminal</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_sn</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>,
+                                                         <em class="parameter"><code><span class="type">char</span> **envp</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libxfcegui4-xfce-exec.description"></a><h2>Description</h2>
+<p>
+The xfce-exec module provides functions to execute other applications from
+within Xfce applications using <a class="ulink" href="http://freedesktop.org/Standards/startup-notification-spec" target="_top">Startup
+Notification</a> or executing applications that use the CLI (command
+line interface) in an X terminal.
+</p>
+</div>
+<div class="refsect1">
+<a name="libxfcegui4-xfce-exec.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="xfce-exec"></a><h3>xfce_exec ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xfce_exec                           (<em class="parameter"><code>const <span class="type">char</span> *cmd</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> in_terminal</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_sn</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Use <a class="link" href="libxfcegui4-xfce-exec.html#xfce-exec-with-envp" title="xfce_exec_with_envp ()"><span class="type">xfce_exec_with_envp</span></a> if you want to specify the environment.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cmd</code></em> :</span></p></td>
+<td>command line to run</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>in_terminal</code></em> :</span></p></td>
+<td>whether to run <em class="parameter"><code>cmd</code></em> in a terminal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>use_sn</code></em> :</span></p></td>
+<td>whether to use startup notification</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location for a GError or NULL</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success, FALSE on failure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="xfce-exec-with-envp"></a><h3>xfce_exec_with_envp ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            xfce_exec_with_envp                 (<em class="parameter"><code>const <span class="type">char</span> *cmd</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> in_terminal</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_sn</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>,
+                                                         <em class="parameter"><code><span class="type">char</span> **envp</code></em>);</pre>
+<p>
+See also <a class="link" href="libxfcegui4-xfce-exec.html#xfce-exec" title="xfce_exec ()"><span class="type">xfce_exec</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cmd</code></em> :</span></p></td>
+<td>command line to run</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>in_terminal</code></em> :</span></p></td>
+<td>whether to run <em class="parameter"><code>cmd</code></em> in a terminal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>use_sn</code></em> :</span></p></td>
+<td>whether to use startup notification</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location for a GError or NULL</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>envp</code></em> :</span></p></td>
+<td>the environment</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success, FALSE on failure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

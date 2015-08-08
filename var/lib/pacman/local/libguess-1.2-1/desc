@@ -1,0 +1,36 @@
+%NAME%
+libguess
+
+%VERSION%
+1.2-1
+
+%DESC%
+High-speed character set detection library
+
+%URL%
+http://atheme.org/projects/libguess.html
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1415658890
+
+%INSTALLDATE%
+1428408131
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+71680
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

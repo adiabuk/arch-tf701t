@@ -1,0 +1,47 @@
+%NAME%
+libcanberra
+
+%VERSION%
+0.30-5
+
+%DESC%
+A small and lightweight implementation of the XDG Sound Theme Specification
+
+%URL%
+http://0pointer.de/lennart/projects/libcanberra
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1424167532
+
+%INSTALLDATE%
+1428412030
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+496640
+
+%REASON%
+1
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libvorbis
+libltdl
+alsa-lib
+tdb
+sound-theme-freedesktop
+
+%OPTDEPENDS%
+libcanberra-pulse: PulseAudio driver
+libcanberra-gstreamer: GStreamer driver
+

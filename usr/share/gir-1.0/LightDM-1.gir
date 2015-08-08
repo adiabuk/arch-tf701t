@@ -1,0 +1,2099 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.2"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <include name="GObject" version="2.0"/>
+  <include name="Gio" version="2.0"/>
+  <namespace name="LightDM"
+             version="1"
+             shared-library="liblightdm-gobject-1.so.0"
+             c:identifier-prefixes="LightDM"
+             c:symbol-prefixes="lightdm">
+    <constant name="GREETER_SIGNAL_AUTHENTICATION_COMPLETE"
+              value="authentication-complete"
+              c:type="LIGHTDM_GREETER_SIGNAL_AUTHENTICATION_COMPLETE">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <constant name="GREETER_SIGNAL_AUTOLOGIN_TIMER_EXPIRED"
+              value="autologin-timer-expired"
+              c:type="LIGHTDM_GREETER_SIGNAL_AUTOLOGIN_TIMER_EXPIRED">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <constant name="GREETER_SIGNAL_IDLE"
+              value="idle"
+              c:type="LIGHTDM_GREETER_SIGNAL_IDLE">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <constant name="GREETER_SIGNAL_RESET"
+              value="reset"
+              c:type="LIGHTDM_GREETER_SIGNAL_RESET">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <constant name="GREETER_SIGNAL_SHOW_MESSAGE"
+              value="show-message"
+              c:type="LIGHTDM_GREETER_SIGNAL_SHOW_MESSAGE">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <constant name="GREETER_SIGNAL_SHOW_PROMPT"
+              value="show-prompt"
+              c:type="LIGHTDM_GREETER_SIGNAL_SHOW_PROMPT">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <class name="Greeter"
+           c:symbol-prefix="greeter"
+           c:type="LightDMGreeter"
+           parent="GObject.Object"
+           glib:type-name="LightDMGreeter"
+           glib:get-type="lightdm_greeter_get_type"
+           glib:type-struct="GreeterClass">
+      <constructor name="new" c:identifier="lightdm_greeter_new">
+        <doc xml:space="preserve">Create a new greeter.</doc>
+        <return-value transfer-ownership="full">
+          <doc xml:space="preserve">the new #LightDMGreeter</doc>
+          <type name="Greeter" c:type="LightDMGreeter*"/>
+        </return-value>
+      </constructor>
+      <virtual-method name="authentication_complete">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="autologin_timer_expired">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="idle">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="reset">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="show_message">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="text" transfer-ownership="none">
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+          <parameter name="type" transfer-ownership="none">
+            <type name="MessageType" c:type="LightDMMessageType"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="show_prompt">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="text" transfer-ownership="none">
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+          <parameter name="type" transfer-ownership="none">
+            <type name="PromptType" c:type="LightDMPromptType"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <method name="authenticate" c:identifier="lightdm_greeter_authenticate">
+        <doc xml:space="preserve">Starts the authentication procedure for a user.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="username"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">A username or #NULL to prompt for a username.</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="authenticate_as_guest"
+              c:identifier="lightdm_greeter_authenticate_as_guest">
+        <doc xml:space="preserve">Starts the authentication procedure for the guest user.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="authenticate_autologin"
+              c:identifier="lightdm_greeter_authenticate_autologin">
+        <doc xml:space="preserve">Starts the authentication procedure for the automatic login user.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="authenticate_remote"
+              c:identifier="lightdm_greeter_authenticate_remote">
+        <doc xml:space="preserve">Start authentication for a remote session type.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="session" transfer-ownership="none">
+            <doc xml:space="preserve">The name of a remote session</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+          <parameter name="username"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">A username of #NULL to prompt for a username.</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="cancel_authentication"
+              c:identifier="lightdm_greeter_cancel_authentication">
+        <doc xml:space="preserve">Cancel the current user authentication.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="cancel_autologin"
+              c:identifier="lightdm_greeter_cancel_autologin">
+        <doc xml:space="preserve">Cancel the automatic login.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="connect_sync"
+              c:identifier="lightdm_greeter_connect_sync"
+              deprecated="1"
+              deprecated-version="1.11.1"
+              throws="1">
+        <doc xml:space="preserve">Connects the greeter to the display manager.  Will block until connected.</doc>
+        <doc-deprecated xml:space="preserve">Use lightdm_greeter_connect_to_daemon_sync() instead</doc-deprecated>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if successfully connected</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">The greeter to connect</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="connect_to_daemon"
+              c:identifier="lightdm_greeter_connect_to_daemon">
+        <doc xml:space="preserve">Asynchronously connects the greeter to the display manager.
+
+When the operation is finished, @callback will be invoked. You can then call lightdm_greeter_connect_to_daemon_finish() to get the result of the operation.
+
+See lightdm_greeter_connect_to_daemon_sync() for the synchronous version.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">The greeter to connect</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="cancellable"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">A #GCancellable or %NULL.</doc>
+            <type name="Gio.Cancellable" c:type="GCancellable*"/>
+          </parameter>
+          <parameter name="callback"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1"
+                     scope="async"
+                     closure="2">
+            <doc xml:space="preserve">A #GAsyncReadyCallback to call when completed or %NULL.</doc>
+            <type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+          </parameter>
+          <parameter name="user_data"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">data to pass to the @callback or %NULL.</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="connect_to_daemon_finish"
+              c:identifier="lightdm_greeter_connect_to_daemon_finish"
+              throws="1">
+        <doc xml:space="preserve">Finishes an operation started with lightdm_greeter_connect_to_daemon().</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if successfully connected</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="result" transfer-ownership="none">
+            <doc xml:space="preserve">A #GAsyncResult.</doc>
+            <type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="connect_to_daemon_sync"
+              c:identifier="lightdm_greeter_connect_to_daemon_sync"
+              throws="1">
+        <doc xml:space="preserve">Connects the greeter to the display manager.  Will block until connected.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if successfully connected</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">The greeter to connect</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="ensure_shared_data_dir"
+              c:identifier="lightdm_greeter_ensure_shared_data_dir">
+        <doc xml:space="preserve">Ensure that a shared data dir for the given user is available.  Both the
+greeter user and @username will have write access to that folder.  The
+intention is that larger pieces of shared data would be stored there (files
+that the greeter creates but wants to give to a user -- like camera
+photos -- or files that the user creates but wants the greeter to
+see -- like contact avatars).
+
+LightDM will automatically create these if the user actually logs in, so
+greeters only need to call this method if they want to store something in
+the directory themselves.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="username" transfer-ownership="none">
+            <doc xml:space="preserve">A username</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+          <parameter name="cancellable"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">A #GCancellable or %NULL.</doc>
+            <type name="Gio.Cancellable" c:type="GCancellable*"/>
+          </parameter>
+          <parameter name="callback"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1"
+                     scope="async"
+                     closure="3">
+            <doc xml:space="preserve">A #GAsyncReadyCallback to call when completed or %NULL.</doc>
+            <type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+          </parameter>
+          <parameter name="user_data"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">data to pass to the @callback or %NULL.</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="ensure_shared_data_dir_finish"
+              c:identifier="lightdm_greeter_ensure_shared_data_dir_finish">
+        <return-value transfer-ownership="full">
+          <doc xml:space="preserve">The path to the shared directory, free with g_free.</doc>
+          <type name="utf8" c:type="gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="result" transfer-ownership="none">
+            <doc xml:space="preserve">A #GAsyncResult.</doc>
+            <type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="ensure_shared_data_dir_sync"
+              c:identifier="lightdm_greeter_ensure_shared_data_dir_sync">
+        <doc xml:space="preserve">Ensure that a shared data dir for the given user is available.  Both the
+greeter user and @username will have write access to that folder.  The
+intention is that larger pieces of shared data would be stored there (files
+that the greeter creates but wants to give to a user -- like camera
+photos -- or files that the user creates but wants the greeter to
+see -- like contact avatars).
+
+LightDM will automatically create these if the user actually logs in, so
+greeters only need to call this method if they want to store something in
+the directory themselves.</doc>
+        <return-value transfer-ownership="full">
+          <doc xml:space="preserve">The path to the shared directory, free with g_free.</doc>
+          <type name="utf8" c:type="gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="username" transfer-ownership="none">
+            <doc xml:space="preserve">A username</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_authentication_user"
+              c:identifier="lightdm_greeter_get_authentication_user">
+        <doc xml:space="preserve">Get the user that is being authenticated.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The username of the authentication user being authenticated or #NULL if no authentication in progress.</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_autologin_guest_hint"
+              c:identifier="lightdm_greeter_get_autologin_guest_hint">
+        <doc xml:space="preserve">Check if the guest account should be automatically logged into when the timer expires.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if the guest account should be automatically logged into.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_autologin_timeout_hint"
+              c:identifier="lightdm_greeter_get_autologin_timeout_hint">
+        <doc xml:space="preserve">Get the number of seconds to wait before automaitcally logging in.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The number of seconds to wait before automatically logging in or 0 for no timeout.</doc>
+          <type name="gint" c:type="gint"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_autologin_user_hint"
+              c:identifier="lightdm_greeter_get_autologin_user_hint">
+        <doc xml:space="preserve">Get the user account to automatically logg into when the timer expires.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The user account to automatically log into.</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_default_session_hint"
+              c:identifier="lightdm_greeter_get_default_session_hint">
+        <doc xml:space="preserve">Get the default session to use.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The session name</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_has_guest_account_hint"
+              c:identifier="lightdm_greeter_get_has_guest_account_hint">
+        <doc xml:space="preserve">Check if guest sessions are supported.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if guest sessions are supported.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_hide_users_hint"
+              c:identifier="lightdm_greeter_get_hide_users_hint">
+        <doc xml:space="preserve">Check if user accounts should be shown.  If this is TRUE then the list of
+accounts should be taken from #LightDMUserList and displayed in the greeter
+for the user to choose from.  Note that this list can be empty and it is
+recommended you show a method for the user to enter a username manually.
+
+If this option is shown the greeter should only allow these users to be
+chosen for login unless the manual login hint is set.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if the available users should not be shown.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_hint" c:identifier="lightdm_greeter_get_hint">
+        <doc xml:space="preserve">Get a hint.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The value for this hint or #NULL if not set.</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="name" transfer-ownership="none">
+            <doc xml:space="preserve">The hint name to query.</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_in_authentication"
+              c:identifier="lightdm_greeter_get_in_authentication">
+        <doc xml:space="preserve">Checks if the greeter is in the process of authenticating.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if the greeter is authenticating a user.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_is_authenticated"
+              c:identifier="lightdm_greeter_get_is_authenticated">
+        <doc xml:space="preserve">Checks if the greeter has successfully authenticated.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if the greeter is authenticated for login.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_lock_hint"
+              c:identifier="lightdm_greeter_get_lock_hint">
+        <doc xml:space="preserve">Check if the greeter is acting as a lock screen.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if the greeter was triggered by locking the seat.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_select_guest_hint"
+              c:identifier="lightdm_greeter_get_select_guest_hint">
+        <doc xml:space="preserve">Check if the guest account should be selected by default.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if the guest account should be selected by default.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_select_user_hint"
+              c:identifier="lightdm_greeter_get_select_user_hint">
+        <doc xml:space="preserve">Get the user to select by default.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">A username</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_show_manual_login_hint"
+              c:identifier="lightdm_greeter_get_show_manual_login_hint">
+        <doc xml:space="preserve">Check if a manual login option should be shown.  If set the GUI
+should provide a way for a username to be entered manually.
+Without this hint a greeter which is showing a user list can
+limit logins to only those users.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if a manual login option should be shown.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_show_remote_login_hint"
+              c:identifier="lightdm_greeter_get_show_remote_login_hint">
+        <doc xml:space="preserve">Check if a remote login option should be shown.  If set the GUI
+should provide a way for a user to log into a remote desktop server.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if a remote login option should be shown.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="respond" c:identifier="lightdm_greeter_respond">
+        <doc xml:space="preserve">Provide response to a prompt.  May be one in a series.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="response" transfer-ownership="none">
+            <doc xml:space="preserve">Response to a prompt</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="set_language" c:identifier="lightdm_greeter_set_language">
+        <doc xml:space="preserve">Set the language for the currently authenticated user.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="language" transfer-ownership="none">
+            <doc xml:space="preserve">The language to use for this user in the form of a locale specification (e.g. "de_DE.UTF-8").</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="set_resettable"
+              c:identifier="lightdm_greeter_set_resettable">
+        <doc xml:space="preserve">Set whether the greeter will be reset instead of killed after the user logs in.
+This must be called before lightdm_greeter_connect is called.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="resettable" transfer-ownership="none">
+            <doc xml:space="preserve">Whether the greeter wants to be reset instead of killed after the user logs in</doc>
+            <type name="gboolean" c:type="gboolean"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="start_session"
+              c:identifier="lightdm_greeter_start_session">
+        <doc xml:space="preserve">Asynchronously start a session for the authenticated user.
+
+When the operation is finished, @callback will be invoked. You can then call lightdm_greeter_start_session_finish() to get the result of the operation.
+
+See lightdm_greeter_start_session_sync() for the synchronous version.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="session"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">The session to log into or #NULL to use the default.</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+          <parameter name="cancellable"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">A #GCancellable or %NULL.</doc>
+            <type name="Gio.Cancellable" c:type="GCancellable*"/>
+          </parameter>
+          <parameter name="callback"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1"
+                     scope="async"
+                     closure="3">
+            <doc xml:space="preserve">A #GAsyncReadyCallback to call when completed or %NULL.</doc>
+            <type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+          </parameter>
+          <parameter name="user_data"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">data to pass to the @callback or %NULL.</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="start_session_finish"
+              c:identifier="lightdm_greeter_start_session_finish"
+              throws="1">
+        <doc xml:space="preserve">Start a session for the authenticated user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">TRUE if the session was started.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="result" transfer-ownership="none">
+            <doc xml:space="preserve">A #GAsyncResult.</doc>
+            <type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="start_session_sync"
+              c:identifier="lightdm_greeter_start_session_sync"
+              throws="1">
+        <doc xml:space="preserve">Start a session for the authenticated user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">TRUE if the session was started.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMGreeter</doc>
+            <type name="Greeter" c:type="LightDMGreeter*"/>
+          </instance-parameter>
+          <parameter name="session"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">The session to log into or #NULL to use the default.</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <property name="authentication-user" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="autologin-guest-hint" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="autologin-timeout-hint" transfer-ownership="none">
+        <type name="gint" c:type="gint"/>
+      </property>
+      <property name="autologin-user-hint" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="default-session-hint"
+                writable="1"
+                transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="has-guest-account-hint" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="hide-users-hint" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="in-authentication" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="is-authenticated" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="lock-hint" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="select-guest-hint" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="select-user-hint" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="show-manual-login-hint" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="show-remote-login-hint" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <field name="parent_instance">
+        <type name="GObject.Object" c:type="GObject"/>
+      </field>
+      <glib:signal name="authentication-complete" when="last">
+        <doc xml:space="preserve">The ::authentication-complete signal gets emitted when the greeter
+has completed authentication.
+
+Call lightdm_greeter_get_is_authenticated() to check if the authentication
+was successful.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </glib:signal>
+      <glib:signal name="autologin-timer-expired" when="last">
+        <doc xml:space="preserve">The ::timed-login signal gets emitted when the automatic login timer has expired.
+The application should then call lightdm_greeter_login().</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </glib:signal>
+      <glib:signal name="idle" when="last">
+        <doc xml:space="preserve">The ::idle signal gets emitted when the user has logged in and the
+greeter is no longer needed.
+
+This signal only matters if the greeter has marked itself as
+resettable using lightdm_greeter_set_resettable().</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </glib:signal>
+      <glib:signal name="reset" when="last">
+        <doc xml:space="preserve">The ::reset signal gets emitted when the user is returning to a greeter
+that was previously marked idle.
+
+This signal only matters if the greeter has marked itself as
+resettable using lightdm_greeter_set_resettable().</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </glib:signal>
+      <glib:signal name="show-message" when="last">
+        <doc xml:space="preserve">The ::show-message signal gets emitted when the greeter
+should show a message to the user.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="text" transfer-ownership="none">
+            <doc xml:space="preserve">Message text</doc>
+            <type name="utf8" c:type="gchar*"/>
+          </parameter>
+          <parameter name="type" transfer-ownership="none">
+            <doc xml:space="preserve">Message type</doc>
+            <type name="gint" c:type="gint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="show-prompt" when="last">
+        <doc xml:space="preserve">The ::show-prompt signal gets emitted when the greeter should show a
+prompt to the user.  The given text should be displayed and an input
+field for the user to provide a response.
+
+Call lightdm_greeter_respond() with the resultant input or
+lightdm_greeter_cancel_authentication() to abort the authentication.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="text" transfer-ownership="none">
+            <doc xml:space="preserve">Prompt text</doc>
+            <type name="utf8" c:type="gchar*"/>
+          </parameter>
+          <parameter name="type" transfer-ownership="none">
+            <doc xml:space="preserve">Prompt type</doc>
+            <type name="gint" c:type="gint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+    </class>
+    <record name="GreeterClass"
+            c:type="LightDMGreeterClass"
+            glib:is-gtype-struct-for="Greeter">
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+      <field name="show_message">
+        <callback name="show_message">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="greeter" transfer-ownership="none">
+              <type name="Greeter" c:type="LightDMGreeter*"/>
+            </parameter>
+            <parameter name="text" transfer-ownership="none">
+              <type name="utf8" c:type="const gchar*"/>
+            </parameter>
+            <parameter name="type" transfer-ownership="none">
+              <type name="MessageType" c:type="LightDMMessageType"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="show_prompt">
+        <callback name="show_prompt">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="greeter" transfer-ownership="none">
+              <type name="Greeter" c:type="LightDMGreeter*"/>
+            </parameter>
+            <parameter name="text" transfer-ownership="none">
+              <type name="utf8" c:type="const gchar*"/>
+            </parameter>
+            <parameter name="type" transfer-ownership="none">
+              <type name="PromptType" c:type="LightDMPromptType"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="authentication_complete">
+        <callback name="authentication_complete">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="greeter" transfer-ownership="none">
+              <type name="Greeter" c:type="LightDMGreeter*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="autologin_timer_expired">
+        <callback name="autologin_timer_expired">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="greeter" transfer-ownership="none">
+              <type name="Greeter" c:type="LightDMGreeter*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="idle">
+        <callback name="idle">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="greeter" transfer-ownership="none">
+              <type name="Greeter" c:type="LightDMGreeter*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="reset">
+        <callback name="reset">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="greeter" transfer-ownership="none">
+              <type name="Greeter" c:type="LightDMGreeter*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="reserved1">
+        <callback name="reserved1">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved2">
+        <callback name="reserved2">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved3">
+        <callback name="reserved3">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved4">
+        <callback name="reserved4">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+    </record>
+    <class name="Language"
+           c:symbol-prefix="language"
+           c:type="LightDMLanguage"
+           parent="GObject.Object"
+           glib:type-name="LightDMLanguage"
+           glib:get-type="lightdm_language_get_type"
+           glib:type-struct="LanguageClass">
+      <method name="get_code" c:identifier="lightdm_language_get_code">
+        <doc xml:space="preserve">Get the code of a language (e.g. "de_DE.UTF-8")</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The code of the language</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="language" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMLanguage</doc>
+            <type name="Language" c:type="LightDMLanguage*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_name" c:identifier="lightdm_language_get_name">
+        <doc xml:space="preserve">Get the name of a language.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The name of the language</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="language" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMLanguage</doc>
+            <type name="Language" c:type="LightDMLanguage*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_territory"
+              c:identifier="lightdm_language_get_territory">
+        <doc xml:space="preserve">Get the territory the language is used in.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The territory the language is used in.</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="language" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMLanguage</doc>
+            <type name="Language" c:type="LightDMLanguage*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="matches" c:identifier="lightdm_language_matches">
+        <doc xml:space="preserve">Check if a language code matches this language.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if the code matches this language.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="language" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMLanguage</doc>
+            <type name="Language" c:type="LightDMLanguage*"/>
+          </instance-parameter>
+          <parameter name="code" transfer-ownership="none">
+            <doc xml:space="preserve">A language code</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <property name="code"
+                writable="1"
+                construct-only="1"
+                transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="name" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="territory" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <field name="parent_instance">
+        <type name="GObject.Object" c:type="GObject"/>
+      </field>
+    </class>
+    <record name="LanguageClass"
+            c:type="LightDMLanguageClass"
+            glib:is-gtype-struct-for="Language">
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+      <field name="reserved1">
+        <callback name="reserved1">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved2">
+        <callback name="reserved2">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved3">
+        <callback name="reserved3">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved4">
+        <callback name="reserved4">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved5">
+        <callback name="reserved5">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved6">
+        <callback name="reserved6">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+    </record>
+    <class name="Layout"
+           c:symbol-prefix="layout"
+           c:type="LightDMLayout"
+           parent="GObject.Object"
+           glib:type-name="LightDMLayout"
+           glib:get-type="lightdm_layout_get_type"
+           glib:type-struct="LayoutClass">
+      <method name="get_description"
+              c:identifier="lightdm_layout_get_description">
+        <doc xml:space="preserve">Get the long description of a layout.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">A long description of the layout</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="layout" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMLayout</doc>
+            <type name="Layout" c:type="LightDMLayout*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_name" c:identifier="lightdm_layout_get_name">
+        <doc xml:space="preserve">Get the name of a layout.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The name of the layout</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="layout" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMLayout</doc>
+            <type name="Layout" c:type="LightDMLayout*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_short_description"
+              c:identifier="lightdm_layout_get_short_description">
+        <doc xml:space="preserve">Get the short description of a layout.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">A short description of the layout</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="layout" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMLayout</doc>
+            <type name="Layout" c:type="LightDMLayout*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <property name="description"
+                writable="1"
+                construct-only="1"
+                transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="name"
+                writable="1"
+                construct-only="1"
+                transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="short-description"
+                writable="1"
+                construct-only="1"
+                transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <field name="parent_instance">
+        <type name="GObject.Object" c:type="GObject"/>
+      </field>
+    </class>
+    <record name="LayoutClass"
+            c:type="LightDMLayoutClass"
+            glib:is-gtype-struct-for="Layout">
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+      <field name="reserved1">
+        <callback name="reserved1">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved2">
+        <callback name="reserved2">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved3">
+        <callback name="reserved3">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved4">
+        <callback name="reserved4">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved5">
+        <callback name="reserved5">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved6">
+        <callback name="reserved6">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+    </record>
+    <enumeration name="MessageType" c:type="LightDMMessageType">
+      <member name="info" value="0" c:identifier="LIGHTDM_MESSAGE_TYPE_INFO">
+        <doc xml:space="preserve">Informational message.</doc>
+      </member>
+      <member name="error" value="1" c:identifier="LIGHTDM_MESSAGE_TYPE_ERROR">
+        <doc xml:space="preserve">Error message.</doc>
+      </member>
+    </enumeration>
+    <enumeration name="PromptType" c:type="LightDMPromptType">
+      <member name="question"
+              value="0"
+              c:identifier="LIGHTDM_PROMPT_TYPE_QUESTION">
+        <doc xml:space="preserve">Prompt is a question.  The information can be shown as it is entered.</doc>
+      </member>
+      <member name="secret"
+              value="1"
+              c:identifier="LIGHTDM_PROMPT_TYPE_SECRET">
+        <doc xml:space="preserve">Prompt is for secret information.  The entered information should be obscured so it can't be publically visible.</doc>
+      </member>
+    </enumeration>
+    <constant name="SIGNAL_USER_CHANGED"
+              value="changed"
+              c:type="LIGHTDM_SIGNAL_USER_CHANGED">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <class name="Session"
+           c:symbol-prefix="session"
+           c:type="LightDMSession"
+           parent="GObject.Object"
+           glib:type-name="LightDMSession"
+           glib:get-type="lightdm_session_get_type"
+           glib:type-struct="SessionClass">
+      <method name="get_comment" c:identifier="lightdm_session_get_comment">
+        <doc xml:space="preserve">Get the comment for a session</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The session comment</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="session" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMSession</doc>
+            <type name="Session" c:type="LightDMSession*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_key" c:identifier="lightdm_session_get_key">
+        <doc xml:space="preserve">Get the key for a session</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The session key</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="session" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMSession</doc>
+            <type name="Session" c:type="LightDMSession*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_name" c:identifier="lightdm_session_get_name">
+        <doc xml:space="preserve">Get the name for a session</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The session name</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="session" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMSession</doc>
+            <type name="Session" c:type="LightDMSession*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_session_type"
+              c:identifier="lightdm_session_get_session_type">
+        <doc xml:space="preserve">Get the type a session</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The session type, e.g. x or mir</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="session" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMSession</doc>
+            <type name="Session" c:type="LightDMSession*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <property name="comment" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="key" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="name" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <field name="parent_instance">
+        <type name="GObject.Object" c:type="GObject"/>
+      </field>
+    </class>
+    <record name="SessionClass"
+            c:type="LightDMSessionClass"
+            glib:is-gtype-struct-for="Session">
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+      <field name="reserved1">
+        <callback name="reserved1">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved2">
+        <callback name="reserved2">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved3">
+        <callback name="reserved3">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved4">
+        <callback name="reserved4">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved5">
+        <callback name="reserved5">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved6">
+        <callback name="reserved6">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+    </record>
+    <constant name="USER_LIST_SIGNAL_USER_ADDED"
+              value="user-added"
+              c:type="LIGHTDM_USER_LIST_SIGNAL_USER_ADDED">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <constant name="USER_LIST_SIGNAL_USER_CHANGED"
+              value="user-changed"
+              c:type="LIGHTDM_USER_LIST_SIGNAL_USER_CHANGED">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <constant name="USER_LIST_SIGNAL_USER_REMOVED"
+              value="user-removed"
+              c:type="LIGHTDM_USER_LIST_SIGNAL_USER_REMOVED">
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <class name="User"
+           c:symbol-prefix="user"
+           c:type="LightDMUser"
+           parent="GObject.Object"
+           glib:type-name="LightDMUser"
+           glib:get-type="lightdm_user_get_type"
+           glib:type-struct="UserClass">
+      <virtual-method name="changed">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </virtual-method>
+      <method name="get_background" c:identifier="lightdm_user_get_background">
+        <doc xml:space="preserve">Get the background file path for a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The background file path for the given user or #NULL if no path</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_display_name"
+              c:identifier="lightdm_user_get_display_name">
+        <doc xml:space="preserve">Get the display name of a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The display name of the given user</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_has_messages"
+              c:identifier="lightdm_user_get_has_messages">
+        <doc xml:space="preserve">Check if a user has waiting messages.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if the user has waiting messages.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_home_directory"
+              c:identifier="lightdm_user_get_home_directory">
+        <doc xml:space="preserve">Get the home directory for a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The users home directory</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_image" c:identifier="lightdm_user_get_image">
+        <doc xml:space="preserve">Get the image URI for a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The image URI for the given user or #NULL if no URI</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_language" c:identifier="lightdm_user_get_language">
+        <doc xml:space="preserve">Get the language for a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The language in the form of a local specification (e.g. "de_DE.UTF-8") for the given user or #NULL if using the system default locale.</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_layout" c:identifier="lightdm_user_get_layout">
+        <doc xml:space="preserve">Get the keyboard layout for a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The keyboard layout for the given user or #NULL if using system defaults.  Copy the value if you want to use it long term.</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_layouts" c:identifier="lightdm_user_get_layouts">
+        <doc xml:space="preserve">Get the configured keyboard layouts for a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">A NULL-terminated array of keyboard layouts for the given user.  Copy the values if you want to use them long term.</doc>
+          <array c:type="const gchar* const*">
+            <type name="utf8"/>
+          </array>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_logged_in" c:identifier="lightdm_user_get_logged_in">
+        <doc xml:space="preserve">Check if a user is logged in.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">#TRUE if the user is currently logged in.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_name" c:identifier="lightdm_user_get_name">
+        <doc xml:space="preserve">Get the name of a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The name of the given user</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_real_name" c:identifier="lightdm_user_get_real_name">
+        <doc xml:space="preserve">Get the real name of a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The real name of the given user</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_session" c:identifier="lightdm_user_get_session">
+        <doc xml:space="preserve">Get the session for a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The session for the given user or #NULL if using system defaults.</doc>
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_uid" c:identifier="lightdm_user_get_uid">
+        <doc xml:space="preserve">Get the uid of a user.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The uid of the given user</doc>
+          <type name="guint" c:type="uid_t"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUser</doc>
+            <type name="User" c:type="LightDMUser*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <property name="background" writable="1" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="common-user"
+                introspectable="0"
+                readable="0"
+                writable="1"
+                construct-only="1"
+                transfer-ownership="none">
+        <type/>
+      </property>
+      <property name="display-name" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="has-messages" writable="1" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="home-directory" writable="1" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="image" writable="1" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="language" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="layout" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="layouts" transfer-ownership="none">
+        <array>
+          <type name="utf8"/>
+        </array>
+      </property>
+      <property name="logged-in" writable="1" transfer-ownership="none">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="name" writable="1" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="real-name" writable="1" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="session" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="uid" transfer-ownership="none">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <field name="parent_instance">
+        <type name="GObject.Object" c:type="GObject"/>
+      </field>
+      <glib:signal name="changed" when="last">
+        <doc xml:space="preserve">The ::changed signal gets emitted this user account is modified.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </glib:signal>
+    </class>
+    <record name="UserClass"
+            c:type="LightDMUserClass"
+            glib:is-gtype-struct-for="User">
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+      <field name="changed">
+        <callback name="changed">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="user" transfer-ownership="none">
+              <type name="User" c:type="LightDMUser*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="reserved1">
+        <callback name="reserved1">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved2">
+        <callback name="reserved2">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved3">
+        <callback name="reserved3">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved4">
+        <callback name="reserved4">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved5">
+        <callback name="reserved5">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved6">
+        <callback name="reserved6">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+    </record>
+    <class name="UserList"
+           c:symbol-prefix="user_list"
+           c:type="LightDMUserList"
+           parent="GObject.Object"
+           glib:type-name="LightDMUserList"
+           glib:get-type="lightdm_user_list_get_type"
+           glib:type-struct="UserListClass">
+      <function name="get_instance"
+                c:identifier="lightdm_user_list_get_instance">
+        <doc xml:space="preserve">Get the user list.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">the #LightDMUserList</doc>
+          <type name="UserList" c:type="LightDMUserList*"/>
+        </return-value>
+      </function>
+      <virtual-method name="user_added">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user_list" transfer-ownership="none">
+            <type name="UserList" c:type="LightDMUserList*"/>
+          </instance-parameter>
+          <parameter name="user" transfer-ownership="none">
+            <type name="User" c:type="LightDMUser*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="user_changed">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user_list" transfer-ownership="none">
+            <type name="UserList" c:type="LightDMUserList*"/>
+          </instance-parameter>
+          <parameter name="user" transfer-ownership="none">
+            <type name="User" c:type="LightDMUser*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="user_removed">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user_list" transfer-ownership="none">
+            <type name="UserList" c:type="LightDMUserList*"/>
+          </instance-parameter>
+          <parameter name="user" transfer-ownership="none">
+            <type name="User" c:type="LightDMUser*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <method name="get_length" c:identifier="lightdm_user_list_get_length">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">The number of users able to log in</doc>
+          <type name="gint" c:type="gint"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user_list" transfer-ownership="none">
+            <doc xml:space="preserve">a #LightDMUserList</doc>
+            <type name="UserList" c:type="LightDMUserList*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_user_by_name"
+              c:identifier="lightdm_user_list_get_user_by_name">
+        <doc xml:space="preserve">Get infomation about a given user or #NULL if this user doesn't exist.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">A #LightDMUser entry for the given user.</doc>
+          <type name="User" c:type="LightDMUser*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user_list" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUserList</doc>
+            <type name="UserList" c:type="LightDMUserList*"/>
+          </instance-parameter>
+          <parameter name="username" transfer-ownership="none">
+            <doc xml:space="preserve">Name of user to get.</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_users" c:identifier="lightdm_user_list_get_users">
+        <doc xml:space="preserve">Get a list of users to present to the user.  This list may be a subset of the
+available users and may be empty depending on the server configuration.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">A list of #LightDMUser that should be presented to the user.</doc>
+          <type name="GLib.List" c:type="GList*">
+            <type name="User"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="user_list" transfer-ownership="none">
+            <doc xml:space="preserve">A #LightDMUserList</doc>
+            <type name="UserList" c:type="LightDMUserList*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <property name="num-users" transfer-ownership="none">
+        <type name="gint" c:type="gint"/>
+      </property>
+      <field name="parent_instance">
+        <type name="GObject.Object" c:type="GObject"/>
+      </field>
+      <glib:signal name="user-added" when="last">
+        <doc xml:space="preserve">The ::user-added signal gets emitted when a user account is created.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">The #LightDM user that has been added.</doc>
+            <type name="User"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="user-changed" when="last">
+        <doc xml:space="preserve">The ::user-changed signal gets emitted when a user account is modified.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">The #LightDM user that has been changed.</doc>
+            <type name="User"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="user-removed" when="last">
+        <doc xml:space="preserve">The ::user-removed signal gets emitted when a user account is removed.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="user" transfer-ownership="none">
+            <doc xml:space="preserve">The #LightDM user that has been removed.</doc>
+            <type name="User"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+    </class>
+    <record name="UserListClass"
+            c:type="LightDMUserListClass"
+            glib:is-gtype-struct-for="UserList">
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+      <field name="user_added">
+        <callback name="user_added">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="user_list" transfer-ownership="none">
+              <type name="UserList" c:type="LightDMUserList*"/>
+            </parameter>
+            <parameter name="user" transfer-ownership="none">
+              <type name="User" c:type="LightDMUser*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="user_changed">
+        <callback name="user_changed">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="user_list" transfer-ownership="none">
+              <type name="UserList" c:type="LightDMUserList*"/>
+            </parameter>
+            <parameter name="user" transfer-ownership="none">
+              <type name="User" c:type="LightDMUser*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="user_removed">
+        <callback name="user_removed">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+          <parameters>
+            <parameter name="user_list" transfer-ownership="none">
+              <type name="UserList" c:type="LightDMUserList*"/>
+            </parameter>
+            <parameter name="user" transfer-ownership="none">
+              <type name="User" c:type="LightDMUser*"/>
+            </parameter>
+          </parameters>
+        </callback>
+      </field>
+      <field name="reserved1">
+        <callback name="reserved1">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved2">
+        <callback name="reserved2">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved3">
+        <callback name="reserved3">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved4">
+        <callback name="reserved4">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved5">
+        <callback name="reserved5">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+      <field name="reserved6">
+        <callback name="reserved6">
+          <return-value transfer-ownership="none">
+            <type name="none" c:type="void"/>
+          </return-value>
+        </callback>
+      </field>
+    </record>
+    <function name="get_can_hibernate"
+              c:identifier="lightdm_get_can_hibernate">
+      <doc xml:space="preserve">Checks if is authorized to do a system hibernate.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">#TRUE if can hibernate the system</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </return-value>
+    </function>
+    <function name="get_can_restart" c:identifier="lightdm_get_can_restart">
+      <doc xml:space="preserve">Checks if is authorized to do a system restart.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">#TRUE if can restart the system</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </return-value>
+    </function>
+    <function name="get_can_shutdown" c:identifier="lightdm_get_can_shutdown">
+      <doc xml:space="preserve">Checks if is authorized to do a system shutdown.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">#TRUE if can shutdown the system</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </return-value>
+    </function>
+    <function name="get_can_suspend" c:identifier="lightdm_get_can_suspend">
+      <doc xml:space="preserve">Checks if authorized to do a system suspend.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">#TRUE if can suspend the system</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </return-value>
+    </function>
+    <function name="get_hostname" c:identifier="lightdm_get_hostname">
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">The name of the host we are running on.</doc>
+        <type name="utf8" c:type="const gchar*"/>
+      </return-value>
+    </function>
+    <function name="get_language" c:identifier="lightdm_get_language">
+      <doc xml:space="preserve">Get the current language.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">The current language or #NULL if no language.</doc>
+        <type name="Language" c:type="LightDMLanguage*"/>
+      </return-value>
+    </function>
+    <function name="get_languages" c:identifier="lightdm_get_languages">
+      <doc xml:space="preserve">Get a list of languages to present to the user.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">A list of #LightDMLanguage that should be presented to the user.</doc>
+        <type name="GLib.List" c:type="GList*">
+          <type name="Language"/>
+        </type>
+      </return-value>
+    </function>
+    <function name="get_layout" c:identifier="lightdm_get_layout">
+      <doc xml:space="preserve">Get the current keyboard layout.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">The currently active layout for this user.</doc>
+        <type name="Layout" c:type="LightDMLayout*"/>
+      </return-value>
+    </function>
+    <function name="get_layouts" c:identifier="lightdm_get_layouts">
+      <doc xml:space="preserve">Get a list of keyboard layouts to present to the user.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">A list of #LightDMLayout that should be presented to the user.</doc>
+        <type name="GLib.List" c:type="GList*">
+          <type name="Layout"/>
+        </type>
+      </return-value>
+    </function>
+    <function name="get_remote_sessions"
+              c:identifier="lightdm_get_remote_sessions">
+      <doc xml:space="preserve">Get the available remote sessions.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">A list of #LightDMSession</doc>
+        <type name="GLib.List" c:type="GList*">
+          <type name="Session"/>
+        </type>
+      </return-value>
+    </function>
+    <function name="get_sessions" c:identifier="lightdm_get_sessions">
+      <doc xml:space="preserve">Get the available sessions.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">A list of #LightDMSession</doc>
+        <type name="GLib.List" c:type="GList*">
+          <type name="Session"/>
+        </type>
+      </return-value>
+    </function>
+    <function name="hibernate" c:identifier="lightdm_hibernate" throws="1">
+      <doc xml:space="preserve">Triggers a system hibernate.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">#TRUE if hibernate initiated.</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </return-value>
+    </function>
+    <function name="restart" c:identifier="lightdm_restart" throws="1">
+      <doc xml:space="preserve">Triggers a system restart.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">#TRUE if restart initiated.</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </return-value>
+    </function>
+    <function name="set_layout" c:identifier="lightdm_set_layout">
+      <doc xml:space="preserve">Set the layout for this session.</doc>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="layout" transfer-ownership="none">
+          <doc xml:space="preserve">The layout to use</doc>
+          <type name="Layout" c:type="LightDMLayout*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="shutdown" c:identifier="lightdm_shutdown" throws="1">
+      <doc xml:space="preserve">Triggers a system shutdown.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">#TRUE if shutdown initiated.</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </return-value>
+    </function>
+    <function name="suspend" c:identifier="lightdm_suspend" throws="1">
+      <doc xml:space="preserve">Triggers a system suspend.</doc>
+      <return-value transfer-ownership="none">
+        <doc xml:space="preserve">#TRUE if suspend initiated.</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </return-value>
+    </function>
+  </namespace>
+</repository>

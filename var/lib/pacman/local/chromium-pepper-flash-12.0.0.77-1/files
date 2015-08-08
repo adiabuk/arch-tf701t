@@ -1,0 +1,13 @@
+%FILES%
+usr/
+usr/lib/
+usr/lib/PepperFlash/
+usr/lib/PepperFlash/libnetflixhelper.so
+usr/lib/PepperFlash/libpepflashplayer.so
+usr/lib/PepperFlash/libppgoogletalk.so
+usr/lib/PepperFlash/libppo3dautoplugin.so
+usr/share/
+usr/share/licenses/
+usr/share/licenses/chromium-pepper-flash/
+usr/share/licenses/chromium-pepper-flash/license.html
+

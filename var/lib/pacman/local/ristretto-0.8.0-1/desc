@@ -1,0 +1,45 @@
+%NAME%
+ristretto
+
+%VERSION%
+0.8.0-1
+
+%DESC%
+A fast and lightweight picture-viewer for Xfce
+
+%URL%
+http://goodies.xfce.org/projects/applications/ristretto
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1425808867
+
+%INSTALLDATE%
+1428409867
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu4@archlinuxarm.org>
+
+%SIZE%
+1356800
+
+%GROUPS%
+xfce4-goodies
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libxfce4ui
+libexif
+desktop-file-utils
+
+%OPTDEPENDS%
+librsvg: SVG support
+tumbler: thumbnailing support
+

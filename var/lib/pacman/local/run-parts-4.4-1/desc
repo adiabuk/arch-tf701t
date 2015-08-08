@@ -1,0 +1,36 @@
+%NAME%
+run-parts
+
+%VERSION%
+4.4-1
+
+%DESC%
+run scripts or programs in a directory
+
+%URL%
+http://packages.qa.debian.org/d/debianutils.html
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1376504888
+
+%INSTALLDATE%
+1428342057
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+112640
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+

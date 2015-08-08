@@ -1,0 +1,15 @@
+prefix=/usr
+exec_prefix=${prefix}
+datarootdir=${prefix}/share
+data_dir=${datarootdir}/libguess
+
+version=1.2
+include_dir=${prefix}/include/libguess
+lib_dir=${exec_prefix}/lib
+
+Name: libguess
+Description: A library which is used for blind character set detection.
+Version: 1.2
+Libs: -L${lib_dir} -lguess
+Cflags: -I${include_dir}
+

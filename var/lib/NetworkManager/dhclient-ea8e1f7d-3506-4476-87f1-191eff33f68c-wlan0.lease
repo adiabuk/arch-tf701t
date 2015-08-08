@@ -1,0 +1,32 @@
+lease {
+  interface "wlan0";
+  fixed-address 192.168.1.146;
+  option subnet-mask 255.255.255.0;
+  option dhcp-lease-time 86400;
+  option routers 192.168.1.1;
+  option dhcp-message-type 5;
+  option dhcp-server-identifier 192.168.1.1;
+  option domain-name-servers 192.168.1.1;
+  option dhcp-renewal-time 43200;
+  option dhcp-rebinding-time 75600;
+  option broadcast-address 192.168.1.255;
+  renew 2 2015/04/07 15:09:00;
+  rebind 3 2015/04/08 02:51:37;
+  expire 3 2015/04/08 05:51:37;
+}
+lease {
+  interface "wlan0";
+  fixed-address 192.168.1.145;
+  option subnet-mask 255.255.255.0;
+  option routers 192.168.1.1;
+  option dhcp-lease-time 86400;
+  option dhcp-message-type 5;
+  option domain-name-servers 192.168.1.1;
+  option dhcp-server-identifier 192.168.1.1;
+  option dhcp-renewal-time 43200;
+  option broadcast-address 192.168.1.255;
+  option dhcp-rebinding-time 75600;
+  renew 3 2015/04/08 06:27:41;
+  rebind 3 2015/04/08 16:36:36;
+  expire 3 2015/04/08 19:36:36;
+}

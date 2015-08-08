@@ -1,0 +1,46 @@
+%NAME%
+xfce4-power-manager
+
+%VERSION%
+1.4.4-1
+
+%DESC%
+Power manager for Xfce desktop
+
+%URL%
+http://www.xfce.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1427043339
+
+%INSTALLDATE%
+1428360619
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+4122624
+
+%GROUPS%
+xfce4
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libxfce4ui
+upower
+libnotify
+hicolor-icon-theme
+
+%OPTDEPENDS%
+xfce4-panel: for the Xfce panel plugin
+lxpanel: for the LXDE panel plugin
+

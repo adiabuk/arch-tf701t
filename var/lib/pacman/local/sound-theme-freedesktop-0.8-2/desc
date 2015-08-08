@@ -1,0 +1,36 @@
+%NAME%
+sound-theme-freedesktop
+
+%VERSION%
+0.8-2
+
+%DESC%
+Freedesktop sound theme
+
+%URL%
+http://freedesktop.org/wiki/Specifications/sound-theme-spec
+
+%ARCH%
+any
+
+%BUILDDATE%
+1404395138
+
+%INSTALLDATE%
+1428412030
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu5@archlinuxarm.org>
+
+%SIZE%
+505856
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

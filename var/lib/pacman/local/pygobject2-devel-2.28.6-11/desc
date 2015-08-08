@@ -1,0 +1,36 @@
+%NAME%
+pygobject2-devel
+
+%VERSION%
+2.28.6-11
+
+%DESC%
+Development files for the pygobject bindings
+
+%URL%
+http://www.pygtk.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1409518809
+
+%INSTALLDATE%
+1428382615
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+94208
+
+%REASON%
+1
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+

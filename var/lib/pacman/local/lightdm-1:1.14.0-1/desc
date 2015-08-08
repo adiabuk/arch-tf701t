@@ -1,0 +1,51 @@
+%NAME%
+lightdm
+
+%VERSION%
+1:1.14.0-1
+
+%DESC%
+A lightweight display manager
+
+%URL%
+https://launchpad.net/lightdm
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1427228746
+
+%INSTALLDATE%
+1428360713
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+1708032
+
+%LICENSE%
+GPL3
+LGPL3
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libxklavier
+polkit
+systemd
+
+%OPTDEPENDS%
+accountsservice: limit visible accounts
+lightdm-gtk-greeter: GTK greeter
+lightdm-kde-greeter: Qt greeter
+xorg-server-xephyr: LightDM test mode
+
+%CONFLICTS%
+display-manager
+
+%PROVIDES%
+display-manager
+

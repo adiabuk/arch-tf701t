@@ -1,0 +1,45 @@
+%NAME%
+xfce4-sensors-plugin
+
+%VERSION%
+1.2.6-2
+
+%DESC%
+A lm_sensors plugin for the Xfce panel
+
+%URL%
+http://goodies.xfce.org/projects/panel-plugins/xfce4-sensors-plugin
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1425809578
+
+%INSTALLDATE%
+1428409866
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+927744
+
+%GROUPS%
+xfce4-goodies
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+xfce4-panel
+lm_sensors
+libnotify
+hicolor-icon-theme
+
+%OPTDEPENDS%
+hddtemp: for monitoring the temperature of hard drives
+

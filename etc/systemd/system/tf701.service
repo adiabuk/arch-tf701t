@@ -1,0 +1,11 @@
+[Unit]
+Description=tf701-specific scripts
+Before=graphical.target
+
+[Service]
+User=root
+Group=root
+ExecStart=/usr/tf701/tf701
+
+[Install]
+WantedBy=multi-user.target

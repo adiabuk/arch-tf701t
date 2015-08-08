@@ -1,0 +1,48 @@
+%NAME%
+tumbler
+
+%VERSION%
+0.1.31-1
+
+%DESC%
+D-Bus service for applications to request thumbnails
+
+%URL%
+http://www.xfce.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1425226462
+
+%INSTALLDATE%
+1428360585
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu4@archlinuxarm.org>
+
+%SIZE%
+1220608
+
+%GROUPS%
+xfce4
+
+%LICENSE%
+GPL2
+LGPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+dbus-glib
+gdk-pixbuf2
+
+%OPTDEPENDS%
+ffmpegthumbnailer: for video thumbnails
+poppler-glib: for PDF thumbnails
+libgsf: for ODF thumbnails
+libopenraw: for RAW thumbnails
+freetype2: for font thumbnails
+

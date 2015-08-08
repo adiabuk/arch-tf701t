@@ -1,0 +1,46 @@
+%NAME%
+wicd-gtk
+
+%VERSION%
+1.7.3-1
+
+%DESC%
+Wired and wireless network manager for Linux - GTK client
+
+%URL%
+https://launchpad.net/wicd/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1423017238
+
+%INSTALLDATE%
+1428577691
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+660480
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+wicd
+pygtk
+hicolor-icon-theme
+
+%OPTDEPENDS%
+gksu: needed to access some preferences in gtk interface
+notification-daemon: needed if you want notifications
+python2-notify: needed if you want notifications
+
+%CONFLICTS%
+wicd-svn
+

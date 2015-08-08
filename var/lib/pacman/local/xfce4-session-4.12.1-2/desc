@@ -1,0 +1,57 @@
+%NAME%
+xfce4-session
+
+%VERSION%
+4.12.1-2
+
+%DESC%
+A session manager for Xfce
+
+%URL%
+http://www.xfce.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1427197862
+
+%INSTALLDATE%
+1428360628
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+2578432
+
+%GROUPS%
+xfce4
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+
+%REPLACES%
+xfce-utils
+
+%DEPENDS%
+libxfce4ui
+libwnck
+libsm
+polkit
+xorg-iceauth
+xorg-xinit
+xorg-xrdb
+polkit-gnome
+hicolor-icon-theme
+
+%OPTDEPENDS%
+gnome-keyring: for keyring support when GNOME compatibility is enabled
+xscreensaver: for locking screen with xflock4
+gnome-screensaver: for locking screen with xflock4
+xlockmore: for locking screen with xflock4
+slock: for locking screen with xflock4
+

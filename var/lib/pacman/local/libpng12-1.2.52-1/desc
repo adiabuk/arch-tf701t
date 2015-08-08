@@ -1,0 +1,36 @@
+%NAME%
+libpng12
+
+%VERSION%
+1.2.52-1
+
+%DESC%
+A collection of routines used to create PNG format graphics files
+
+%URL%
+http://www.libpng.org/pub/png/libpng.html
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1428367751
+
+%INSTALLDATE%
+1428367769
+
+%PACKAGER%
+Unknown Packager
+
+%SIZE%
+516096
+
+%LICENSE%
+custom
+
+%VALIDATION%
+none
+
+%DEPENDS%
+zlib
+

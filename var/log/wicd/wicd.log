@@ -1,0 +1,496 @@
+2015/04/09 15:40:58 :: ---------------------------
+2015/04/09 15:40:58 :: wicd initializing...
+2015/04/09 15:40:58 :: ---------------------------
+2015/04/09 15:40:58 :: wicd is version 1.7.3 933
+2015/04/09 15:40:58 :: setting backend to external
+2015/04/09 15:40:58 :: trying to load backend external
+2015/04/09 15:40:58 :: successfully loaded backend external
+2015/04/09 15:40:58 :: trying to load backend external
+2015/04/09 15:40:58 :: successfully loaded backend external
+2015/04/09 15:40:59 :: Automatically detected wireless interface wlan0
+2015/04/09 15:40:59 :: setting wireless interface wlan0
+2015/04/09 15:40:59 :: automatically detected wired interface wlan0
+2015/04/09 15:40:59 :: setting wired interface None
+2015/04/09 15:40:59 :: setting wpa driver nl80211
+2015/04/09 15:40:59 :: setting use global dns to False
+2015/04/09 15:40:59 :: setting global dns
+2015/04/09 15:40:59 :: global dns servers are None None None
+2015/04/09 15:40:59 :: domain is None
+2015/04/09 15:40:59 :: search domain is None
+2015/04/09 15:40:59 :: setting automatically reconnect when connection drops True
+2015/04/09 15:40:59 :: Setting dhcp client to 2
+2015/04/09 15:40:59 :: Wireless configuration file found...
+2015/04/09 15:40:59 :: Wired configuration file found...
+2015/04/09 15:40:59 :: chmoding configuration files 0600...
+2015/04/09 15:40:59 :: chowning configuration files root:root...
+2015/04/09 15:40:59 :: Using wireless interface...wlan0
+2015/04/09 15:40:59 :: Using wired interface...
+2015/04/09 15:41:05 :: Autoconnecting...
+2015/04/09 15:41:05 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 15:41:07 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 15:41:10 :: Autoconnecting...
+2015/04/09 15:41:10 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 15:41:12 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 15:41:15 :: Autoconnecting...
+2015/04/09 15:41:15 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 15:41:17 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 15:41:20 :: Autoconnecting...
+2015/04/09 15:41:20 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 15:41:22 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 15:42:37 :: Connecting to wireless network dzena
+2015/04/09 15:42:38 :: Putting interface down
+2015/04/09 15:42:38 :: Releasing DHCP leases...
+2015/04/09 15:42:38 :: Setting false IP...
+2015/04/09 15:42:39 :: Stopping wpa_supplicant
+2015/04/09 15:42:39 :: Flushing the routing table...
+2015/04/09 15:42:40 :: Putting interface up...
+2015/04/09 15:42:42 :: Generating psk...
+2015/04/09 15:42:42 :: Attempting to authenticate...
+2015/04/09 15:42:45 :: Running DHCP with NO hostname
+2015/04/09 15:42:50 :: DUID 00:01:00:01:1c:b5:96:6e:40:16:7e:02:27:62
+2015/04/09 15:42:50 :: 
+2015/04/09 15:42:50 :: wlan0: IAID 7e:02:27:62
+2015/04/09 15:42:50 :: 
+2015/04/09 15:42:50 :: wlan0: rebinding lease of 192.168.1.144
+2015/04/09 15:42:50 :: 
+2015/04/09 15:42:50 :: wlan0: soliciting an IPv6 router
+2015/04/09 15:42:50 :: 
+2015/04/09 15:42:50 :: wlan0: leased 192.168.1.144 for 86400 seconds
+2015/04/09 15:42:50 :: 
+2015/04/09 15:42:50 :: wlan0: adding route to 192.168.1.0/24
+2015/04/09 15:42:50 :: 
+2015/04/09 15:42:50 :: wlan0: adding default route via 192.168.1.1
+2015/04/09 15:42:50 :: 
+2015/04/09 15:42:50 :: forked to background, child pid 5424
+2015/04/09 15:42:50 :: 
+2015/04/09 15:42:50 :: 
+2015/04/09 15:42:50 :: DHCP connection successful
+2015/04/09 15:42:50 :: not verifying
+2015/04/09 15:42:50 :: Connecting thread exiting.
+2015/04/09 15:42:51 :: Sending connection attempt result success
+2015/04/09 16:42:29 :: Daemon going down, killing wicd-monitor...
+2015/04/09 16:42:29 :: Removing PID file...
+2015/04/09 16:42:29 :: Shutting down...
+2015/04/09 16:42:29 :: Exception KeyError: KeyError(-1225014768,) in <module 'threading' from '/usr/lib/python2.7/threading.pyo'> ignored
+2015/04/09 16:49:18 :: ---------------------------
+2015/04/09 16:49:18 :: wicd initializing...
+2015/04/09 16:49:18 :: ---------------------------
+2015/04/09 16:49:18 :: wicd is version 1.7.3 933
+2015/04/09 16:49:18 :: setting backend to external
+2015/04/09 16:49:18 :: trying to load backend external
+2015/04/09 16:49:18 :: successfully loaded backend external
+2015/04/09 16:49:18 :: trying to load backend external
+2015/04/09 16:49:18 :: successfully loaded backend external
+2015/04/09 16:49:18 :: Automatically detected wireless interface wlan0
+2015/04/09 16:49:18 :: setting wireless interface wlan0
+2015/04/09 16:49:18 :: automatically detected wired interface wlan0
+2015/04/09 16:49:18 :: setting wired interface None
+2015/04/09 16:49:18 :: setting wpa driver nl80211
+2015/04/09 16:49:18 :: setting use global dns to False
+2015/04/09 16:49:18 :: setting global dns
+2015/04/09 16:49:18 :: global dns servers are None None None
+2015/04/09 16:49:18 :: domain is None
+2015/04/09 16:49:18 :: search domain is None
+2015/04/09 16:49:18 :: setting automatically reconnect when connection drops True
+2015/04/09 16:49:18 :: Setting dhcp client to 2
+2015/04/09 16:49:18 :: Wireless configuration file found...
+2015/04/09 16:49:18 :: Wired configuration file found...
+2015/04/09 16:49:18 :: chmoding configuration files 0600...
+2015/04/09 16:49:18 :: chowning configuration files root:root...
+2015/04/09 16:49:18 :: Using wireless interface...wlan0
+2015/04/09 16:49:18 :: Using wired interface...
+2015/04/09 16:49:24 :: Autoconnecting...
+2015/04/09 16:49:24 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 16:49:26 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 16:49:29 :: Autoconnecting...
+2015/04/09 16:49:29 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 16:49:31 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 16:49:34 :: Autoconnecting...
+2015/04/09 16:49:34 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 16:49:36 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 16:49:39 :: Autoconnecting...
+2015/04/09 16:49:39 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 16:49:41 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 16:52:59 :: Autoconnecting...
+2015/04/09 16:52:59 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 16:53:01 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 16:56:24 :: Autoconnecting...
+2015/04/09 16:56:24 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 16:56:26 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 16:59:49 :: Autoconnecting...
+2015/04/09 16:59:49 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 16:59:51 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:03:09 :: Autoconnecting...
+2015/04/09 17:03:09 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:03:11 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:06:16 :: Connecting to wireless network dzena
+2015/04/09 17:06:17 :: Putting interface down
+2015/04/09 17:06:18 :: Releasing DHCP leases...
+2015/04/09 17:06:18 :: Setting false IP...
+2015/04/09 17:06:18 :: Stopping wpa_supplicant
+2015/04/09 17:06:19 :: Flushing the routing table...
+2015/04/09 17:06:19 :: Putting interface up...
+2015/04/09 17:06:21 :: Generating psk...
+2015/04/09 17:06:21 :: Attempting to authenticate...
+2015/04/09 17:06:24 :: Running DHCP with NO hostname
+2015/04/09 17:06:30 :: DUID 00:01:00:01:1c:b5:96:6e:40:16:7e:02:27:62
+2015/04/09 17:06:30 :: 
+2015/04/09 17:06:30 :: wlan0: IAID 7e:02:27:62
+2015/04/09 17:06:30 :: 
+2015/04/09 17:06:30 :: wlan0: rebinding lease of 192.168.1.144
+2015/04/09 17:06:30 :: 
+2015/04/09 17:06:30 :: wlan0: soliciting an IPv6 router
+2015/04/09 17:06:30 :: 
+2015/04/09 17:06:30 :: wlan0: leased 192.168.1.144 for 86400 seconds
+2015/04/09 17:06:30 :: 
+2015/04/09 17:06:30 :: wlan0: adding route to 192.168.1.0/24
+2015/04/09 17:06:30 :: 
+2015/04/09 17:06:30 :: wlan0: adding default route via 192.168.1.1
+2015/04/09 17:06:30 :: 
+2015/04/09 17:06:30 :: forked to background, child pid 3590
+2015/04/09 17:06:30 :: 
+2015/04/09 17:06:30 :: 
+2015/04/09 17:06:30 :: DHCP connection successful
+2015/04/09 17:06:30 :: not verifying
+2015/04/09 17:06:30 :: Connecting thread exiting.
+2015/04/09 17:06:30 :: Sending connection attempt result success
+2015/04/09 17:23:28 :: ---------------------------
+2015/04/09 17:23:28 :: wicd initializing...
+2015/04/09 17:23:28 :: ---------------------------
+2015/04/09 17:23:28 :: wicd is version 1.7.3 933
+2015/04/09 17:23:28 :: setting backend to external
+2015/04/09 17:23:28 :: trying to load backend external
+2015/04/09 17:23:28 :: successfully loaded backend external
+2015/04/09 17:23:28 :: trying to load backend external
+2015/04/09 17:23:28 :: successfully loaded backend external
+2015/04/09 17:23:28 :: Automatically detected wireless interface wlan0
+2015/04/09 17:23:28 :: setting wireless interface wlan0
+2015/04/09 17:23:28 :: automatically detected wired interface wlan0
+2015/04/09 17:23:28 :: setting wired interface None
+2015/04/09 17:23:28 :: setting wpa driver nl80211
+2015/04/09 17:23:28 :: setting use global dns to False
+2015/04/09 17:23:29 :: setting global dns
+2015/04/09 17:23:29 :: global dns servers are None None None
+2015/04/09 17:23:29 :: domain is None
+2015/04/09 17:23:29 :: search domain is None
+2015/04/09 17:23:29 :: setting automatically reconnect when connection drops True
+2015/04/09 17:23:29 :: Setting dhcp client to 2
+2015/04/09 17:23:29 :: Wireless configuration file found...
+2015/04/09 17:23:29 :: Wired configuration file found...
+2015/04/09 17:23:29 :: chmoding configuration files 0600...
+2015/04/09 17:23:29 :: chowning configuration files root:root...
+2015/04/09 17:23:29 :: Using wireless interface...wlan0
+2015/04/09 17:23:29 :: Using wired interface...
+2015/04/09 17:23:35 :: Autoconnecting...
+2015/04/09 17:23:35 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:23:37 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:23:40 :: Autoconnecting...
+2015/04/09 17:23:40 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:23:42 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:23:45 :: Autoconnecting...
+2015/04/09 17:23:45 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:23:47 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:23:50 :: Autoconnecting...
+2015/04/09 17:23:50 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:23:52 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:26:28 :: Connecting to wireless network dzena
+2015/04/09 17:26:29 :: Putting interface down
+2015/04/09 17:26:29 :: Releasing DHCP leases...
+2015/04/09 17:26:29 :: Setting false IP...
+2015/04/09 17:26:30 :: Stopping wpa_supplicant
+2015/04/09 17:26:30 :: Flushing the routing table...
+2015/04/09 17:26:30 :: Putting interface up...
+2015/04/09 17:26:32 :: Generating psk...
+2015/04/09 17:26:32 :: Attempting to authenticate...
+2015/04/09 17:26:35 :: Running DHCP with NO hostname
+2015/04/09 17:26:41 :: DUID 00:01:00:01:1c:b5:96:6e:40:16:7e:02:27:62
+2015/04/09 17:26:41 :: 
+2015/04/09 17:26:41 :: wlan0: IAID 7e:02:27:62
+2015/04/09 17:26:41 :: 
+2015/04/09 17:26:41 :: wlan0: rebinding lease of 192.168.1.144
+2015/04/09 17:26:41 :: 
+2015/04/09 17:26:41 :: wlan0: soliciting an IPv6 router
+2015/04/09 17:26:41 :: 
+2015/04/09 17:26:41 :: wlan0: leased 192.168.1.144 for 86400 seconds
+2015/04/09 17:26:41 :: 
+2015/04/09 17:26:41 :: wlan0: adding route to 192.168.1.0/24
+2015/04/09 17:26:41 :: 
+2015/04/09 17:26:41 :: wlan0: adding default route via 192.168.1.1
+2015/04/09 17:26:41 :: 
+2015/04/09 17:26:41 :: forked to background, child pid 10675
+2015/04/09 17:26:41 :: 
+2015/04/09 17:26:41 :: 
+2015/04/09 17:26:41 :: DHCP connection successful
+2015/04/09 17:26:41 :: not verifying
+2015/04/09 17:26:41 :: Connecting thread exiting.
+2015/04/09 17:26:41 :: Sending connection attempt result success
+2015/04/09 17:28:34 :: ---------------------------
+2015/04/09 17:28:34 :: wicd initializing...
+2015/04/09 17:28:34 :: ---------------------------
+2015/04/09 17:28:34 :: wicd is version 1.7.3 933
+2015/04/09 17:28:34 :: setting backend to external
+2015/04/09 17:28:34 :: trying to load backend external
+2015/04/09 17:28:34 :: successfully loaded backend external
+2015/04/09 17:28:34 :: trying to load backend external
+2015/04/09 17:28:34 :: successfully loaded backend external
+2015/04/09 17:28:34 :: Automatically detected wireless interface wlan0
+2015/04/09 17:28:34 :: setting wireless interface wlan0
+2015/04/09 17:28:34 :: automatically detected wired interface wlan0
+2015/04/09 17:28:34 :: setting wired interface None
+2015/04/09 17:28:34 :: setting wpa driver nl80211
+2015/04/09 17:28:34 :: setting use global dns to False
+2015/04/09 17:28:34 :: setting global dns
+2015/04/09 17:28:34 :: global dns servers are None None None
+2015/04/09 17:28:34 :: domain is None
+2015/04/09 17:28:34 :: search domain is None
+2015/04/09 17:28:34 :: setting automatically reconnect when connection drops True
+2015/04/09 17:28:34 :: Setting dhcp client to 2
+2015/04/09 17:28:35 :: Wireless configuration file found...
+2015/04/09 17:28:35 :: Wired configuration file found...
+2015/04/09 17:28:35 :: chmoding configuration files 0600...
+2015/04/09 17:28:35 :: chowning configuration files root:root...
+2015/04/09 17:28:35 :: Using wireless interface...wlan0
+2015/04/09 17:28:35 :: Using wired interface...
+2015/04/09 17:28:40 :: Autoconnecting...
+2015/04/09 17:28:40 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:28:42 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:28:45 :: Autoconnecting...
+2015/04/09 17:28:45 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:28:47 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:28:50 :: Autoconnecting...
+2015/04/09 17:28:50 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:28:52 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:28:55 :: Autoconnecting...
+2015/04/09 17:28:55 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:28:57 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:32:20 :: Autoconnecting...
+2015/04/09 17:32:20 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:32:44 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:35:19 :: Daemon going down, killing wicd-monitor...
+2015/04/09 17:35:19 :: Removing PID file...
+2015/04/09 17:35:19 :: Shutting down...
+2015/04/09 17:35:19 :: Exception KeyError: KeyError(-1225137648,) in <module 'threading' from '/usr/lib/python2.7/threading.pyo'> ignored
+2015/04/09 17:35:47 :: ---------------------------
+2015/04/09 17:35:47 :: wicd initializing...
+2015/04/09 17:35:47 :: ---------------------------
+2015/04/09 17:35:47 :: wicd is version 1.7.3 933
+2015/04/09 17:35:47 :: setting backend to external
+2015/04/09 17:35:47 :: trying to load backend external
+2015/04/09 17:35:47 :: successfully loaded backend external
+2015/04/09 17:35:47 :: trying to load backend external
+2015/04/09 17:35:47 :: successfully loaded backend external
+2015/04/09 17:35:48 :: Automatically detected wireless interface wlan0
+2015/04/09 17:35:48 :: setting wireless interface wlan0
+2015/04/09 17:35:48 :: automatically detected wired interface wlan0
+2015/04/09 17:35:48 :: setting wired interface None
+2015/04/09 17:35:48 :: setting wpa driver nl80211
+2015/04/09 17:35:48 :: setting use global dns to False
+2015/04/09 17:35:48 :: setting global dns
+2015/04/09 17:35:48 :: global dns servers are None None None
+2015/04/09 17:35:48 :: domain is None
+2015/04/09 17:35:48 :: search domain is None
+2015/04/09 17:35:48 :: setting automatically reconnect when connection drops True
+2015/04/09 17:35:48 :: Setting dhcp client to 2
+2015/04/09 17:35:48 :: Wireless configuration file found...
+2015/04/09 17:35:48 :: Wired configuration file found...
+2015/04/09 17:35:48 :: chmoding configuration files 0600...
+2015/04/09 17:35:48 :: chowning configuration files root:root...
+2015/04/09 17:35:48 :: Using wireless interface...wlan0
+2015/04/09 17:35:48 :: Using wired interface...
+2015/04/09 17:35:54 :: Autoconnecting...
+2015/04/09 17:35:54 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:35:56 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:35:59 :: Autoconnecting...
+2015/04/09 17:35:59 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:36:01 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:36:04 :: Autoconnecting...
+2015/04/09 17:36:04 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:36:06 :: Unable to autoconnect, you'll have to manually connect
+2015/04/09 17:36:09 :: Autoconnecting...
+2015/04/09 17:36:09 :: No wired connection present, attempting to autoconnect to wireless network
+2015/04/09 17:36:11 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 20:31:12 :: ---------------------------
+2015/08/08 20:31:12 :: wicd initializing...
+2015/08/08 20:31:12 :: ---------------------------
+2015/08/08 20:31:12 :: wicd is version 1.7.3 933
+2015/08/08 20:31:12 :: setting backend to external
+2015/08/08 20:31:12 :: trying to load backend external
+2015/08/08 20:31:12 :: successfully loaded backend external
+2015/08/08 20:31:12 :: trying to load backend external
+2015/08/08 20:31:12 :: successfully loaded backend external
+2015/08/08 20:31:12 :: Automatically detected wireless interface wlan0
+2015/08/08 20:31:12 :: setting wireless interface wlan0
+2015/08/08 20:31:12 :: automatically detected wired interface wlan0
+2015/08/08 20:31:12 :: setting wired interface None
+2015/08/08 20:31:12 :: setting wpa driver nl80211
+2015/08/08 20:31:12 :: setting use global dns to False
+2015/08/08 20:31:12 :: setting global dns
+2015/08/08 20:31:12 :: global dns servers are None None None
+2015/08/08 20:31:12 :: domain is None
+2015/08/08 20:31:12 :: search domain is None
+2015/08/08 20:31:12 :: setting automatically reconnect when connection drops True
+2015/08/08 20:31:12 :: Setting dhcp client to 2
+2015/08/08 20:31:12 :: Wireless configuration file found...
+2015/08/08 20:31:12 :: Wired configuration file found...
+2015/08/08 20:31:12 :: chmoding configuration files 0600...
+2015/08/08 20:31:12 :: chowning configuration files root:root...
+2015/08/08 20:31:12 :: Using wireless interface...wlan0
+2015/08/08 20:31:12 :: Using wired interface...
+2015/08/08 20:31:15 :: hidden
+2015/08/08 20:31:15 :: hidden
+2015/08/08 20:31:18 :: Autoconnecting...
+2015/08/08 20:31:18 :: No wired connection present, attempting to autoconnect to wireless network
+2015/08/08 20:31:20 :: hidden
+2015/08/08 20:31:20 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 20:31:23 :: Autoconnecting...
+2015/08/08 20:31:23 :: No wired connection present, attempting to autoconnect to wireless network
+2015/08/08 20:31:25 :: hidden
+2015/08/08 20:31:25 :: hidden
+2015/08/08 20:31:25 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 20:31:28 :: Autoconnecting...
+2015/08/08 20:31:28 :: No wired connection present, attempting to autoconnect to wireless network
+2015/08/08 20:31:30 :: hidden
+2015/08/08 20:31:30 :: hidden
+2015/08/08 20:31:30 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 20:31:33 :: Autoconnecting...
+2015/08/08 20:31:33 :: No wired connection present, attempting to autoconnect to wireless network
+2015/08/08 20:31:35 :: hidden
+2015/08/08 20:31:35 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 20:32:25 :: hidden
+2015/08/08 20:32:27 :: Connecting to wireless network Google Starbucks
+2015/08/08 20:32:29 :: Putting interface down
+2015/08/08 20:32:29 :: Releasing DHCP leases...
+2015/08/08 20:32:29 :: Setting false IP...
+2015/08/08 20:32:30 :: Stopping wpa_supplicant
+2015/08/08 20:32:30 :: Flushing the routing table...
+2015/08/08 20:32:30 :: Putting interface up...
+2015/08/08 20:32:32 :: Running DHCP with NO hostname
+2015/08/08 20:33:02 :: timed out
+2015/08/08 20:33:02 :: 
+2015/08/08 20:33:02 :: DHCP connection failed
+2015/08/08 20:33:02 :: exiting connection thread
+2015/08/08 20:33:02 :: Sending connection attempt result dhcp_failed
+2015/08/08 20:33:38 :: hidden
+2015/08/08 20:34:32 :: hidden
+2015/08/08 20:34:35 :: Connecting to wireless network amrox
+2015/08/08 20:34:36 :: Putting interface down
+2015/08/08 20:34:36 :: Releasing DHCP leases...
+2015/08/08 20:34:36 :: Setting false IP...
+2015/08/08 20:34:37 :: Stopping wpa_supplicant
+2015/08/08 20:34:37 :: Flushing the routing table...
+2015/08/08 20:34:37 :: Putting interface up...
+2015/08/08 20:34:39 :: Generating psk...
+2015/08/08 20:34:40 :: Attempting to authenticate...
+2015/08/08 20:34:43 :: Running DHCP with NO hostname
+2015/08/08 20:34:52 :: DUID 00:01:00:01:1c:b5:96:6e:40:16:7e:02:27:62
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: wlan0: IAID e6:1b:43:96
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: wlan0: soliciting an IPv6 router
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: wlan0: soliciting a DHCP lease
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: wlan0: offered 192.168.43.171 from 192.168.43.1
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: wlan0: leased 192.168.43.171 for 3600 seconds
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: wlan0: adding route to 192.168.43.0/24
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: wlan0: adding default route via 192.168.43.1
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: forked to background, child pid 13930
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: 
+2015/08/08 20:34:52 :: DHCP connection successful
+2015/08/08 20:34:52 :: not verifying
+2015/08/08 20:34:52 :: Connecting thread exiting.
+2015/08/08 20:34:52 :: Sending connection attempt result success
+2015/08/08 20:52:21 :: Daemon going down, killing wicd-monitor...
+2015/08/08 20:52:21 :: Removing PID file...
+2015/08/08 20:52:21 :: Shutting down...
+2015/08/08 20:52:21 :: Exception KeyError: KeyError(-1225743856,) in <module 'threading' from '/usr/lib/python2.7/threading.pyo'> ignored
+2015/08/08 20:56:49 :: ---------------------------
+2015/08/08 20:56:49 :: wicd initializing...
+2015/08/08 20:56:49 :: ---------------------------
+2015/08/08 20:56:49 :: wicd is version 1.7.3 933
+2015/08/08 20:56:49 :: setting backend to external
+2015/08/08 20:56:50 :: trying to load backend external
+2015/08/08 20:56:50 :: successfully loaded backend external
+2015/08/08 20:56:50 :: trying to load backend external
+2015/08/08 20:56:50 :: successfully loaded backend external
+2015/08/08 20:56:50 :: Automatically detected wireless interface wlan0
+2015/08/08 20:56:50 :: setting wireless interface wlan0
+2015/08/08 20:56:50 :: automatically detected wired interface wlan0
+2015/08/08 20:56:50 :: setting wired interface None
+2015/08/08 20:56:50 :: setting wpa driver nl80211
+2015/08/08 20:56:50 :: setting use global dns to False
+2015/08/08 20:56:50 :: setting global dns
+2015/08/08 20:56:50 :: global dns servers are None None None
+2015/08/08 20:56:50 :: domain is None
+2015/08/08 20:56:50 :: search domain is None
+2015/08/08 20:56:50 :: setting automatically reconnect when connection drops True
+2015/08/08 20:56:50 :: Setting dhcp client to 2
+2015/08/08 20:56:50 :: Wireless configuration file found...
+2015/08/08 20:56:50 :: Wired configuration file found...
+2015/08/08 20:56:50 :: chmoding configuration files 0600...
+2015/08/08 20:56:50 :: chowning configuration files root:root...
+2015/08/08 20:56:50 :: Using wireless interface...wlan0
+2015/08/08 20:56:50 :: Using wired interface...
+2015/08/08 20:56:53 :: hidden
+2015/08/08 20:56:54 :: hidden
+2015/08/08 20:56:56 :: Autoconnecting...
+2015/08/08 20:56:56 :: No wired connection present, attempting to autoconnect to wireless network
+2015/08/08 20:56:58 :: hidden
+2015/08/08 20:56:58 :: hidden
+2015/08/08 20:56:58 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 20:57:01 :: Autoconnecting...
+2015/08/08 20:57:01 :: No wired connection present, attempting to autoconnect to wireless network
+2015/08/08 20:57:03 :: hidden
+2015/08/08 20:57:03 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 20:57:06 :: Autoconnecting...
+2015/08/08 20:57:06 :: No wired connection present, attempting to autoconnect to wireless network
+2015/08/08 20:57:08 :: hidden
+2015/08/08 20:57:08 :: hidden
+2015/08/08 20:57:08 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 20:57:11 :: Autoconnecting...
+2015/08/08 20:57:11 :: No wired connection present, attempting to autoconnect to wireless network
+2015/08/08 20:57:13 :: hidden
+2015/08/08 20:57:13 :: hidden
+2015/08/08 20:57:13 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 21:00:31 :: Autoconnecting...
+2015/08/08 21:00:31 :: No wired connection present, attempting to autoconnect to wireless network
+2015/08/08 21:00:34 :: hidden
+2015/08/08 21:00:34 :: Unable to autoconnect, you'll have to manually connect
+2015/08/08 21:00:49 :: hidden
+2015/08/08 21:00:49 :: hidden
+2015/08/08 21:01:02 :: Connecting to wireless network amrox
+2015/08/08 21:01:03 :: Putting interface down
+2015/08/08 21:01:03 :: Releasing DHCP leases...
+2015/08/08 21:01:03 :: Setting false IP...
+2015/08/08 21:01:04 :: Stopping wpa_supplicant
+2015/08/08 21:01:04 :: Flushing the routing table...
+2015/08/08 21:01:05 :: Putting interface up...
+2015/08/08 21:01:07 :: Generating psk...
+2015/08/08 21:01:07 :: Attempting to authenticate...
+2015/08/08 21:01:10 :: Running DHCP with NO hostname
+2015/08/08 21:01:16 :: DUID 00:01:00:01:1c:b5:96:6e:40:16:7e:02:27:62
+2015/08/08 21:01:16 :: 
+2015/08/08 21:01:16 :: wlan0: IAID e6:1b:43:96
+2015/08/08 21:01:16 :: 
+2015/08/08 21:01:16 :: wlan0: soliciting an IPv6 router
+2015/08/08 21:01:16 :: 
+2015/08/08 21:01:16 :: wlan0: rebinding lease of 192.168.43.171
+2015/08/08 21:01:16 :: 
+2015/08/08 21:01:16 :: wlan0: leased 192.168.43.171 for 3600 seconds
+2015/08/08 21:01:16 :: 
+2015/08/08 21:01:16 :: wlan0: adding route to 192.168.43.0/24
+2015/08/08 21:01:16 :: 
+2015/08/08 21:01:16 :: wlan0: adding default route via 192.168.43.1
+2015/08/08 21:01:16 :: 
+2015/08/08 21:01:16 :: forked to background, child pid 8929
+2015/08/08 21:01:16 :: 
+2015/08/08 21:01:16 :: 
+2015/08/08 21:01:16 :: DHCP connection successful
+2015/08/08 21:01:16 :: not verifying
+2015/08/08 21:01:16 :: Connecting thread exiting.
+2015/08/08 21:01:16 :: Sending connection attempt result success

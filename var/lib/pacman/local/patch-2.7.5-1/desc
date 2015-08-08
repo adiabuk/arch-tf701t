@@ -1,0 +1,43 @@
+%NAME%
+patch
+
+%VERSION%
+2.7.5-1
+
+%DESC%
+A utility to apply patch files to original sources
+
+%URL%
+http://www.gnu.org/software/patch/patch.html
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1426607756
+
+%INSTALLDATE%
+1428349502
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+174080
+
+%GROUPS%
+base-devel
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+attr
+
+%OPTDEPENDS%
+ed: for patch -e functionality
+

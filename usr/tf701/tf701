@@ -1,0 +1,15 @@
+#! /bin/sh
+# Simple init | Trel725
+
+echo 16 > /sys/class/graphics/fb0/bits_per_pixel
+echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo interactive > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+echo interactive > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+echo interactive > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+echo 1 > /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/enable
+echo "balanced" > /sys/devices/system/cpu/cpuquiet/current_governor
+echo 2048 > /sys/block/mmcblk0/queue/read_ahead_kb
+
+LD_LIBRARY_PATH=/usr/lib/touch rm-wrapper
+
+exit 0
