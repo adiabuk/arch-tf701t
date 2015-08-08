@@ -1,0 +1,18 @@
+
+[alsa]
+mixer=hw:1
+mixer-element=Speaker
+pcm=pulse
+
+[audgui]
+filebrowser_win=918,517,1141,450
+filesel_path=/storage/Music/2004 - Once
+
+[gtkui]
+column_expand=1,1,1,0,0
+column_widths=-1,-1,-1,-1,-1
+player_x=888
+player_y=560
+
+[gtkui-layout]
+item_count=0

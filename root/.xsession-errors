@@ -1,0 +1,38 @@
+gpg-agent[1851]: directory '/root/.gnupg' created
+gpg-agent[1851]: directory '/root/.gnupg/private-keys-v1.d' created
+gpg-agent[1853]: gpg-agent (GnuPG) 2.1.2 started
+
+(xfce4-session:1831): xfce4-session-WARNING **: gpg-agent returned no PID in the variables
+
+(xfce4-session:1831): xfce4-session-WARNING **: xfsm_manager_load_session: Something wrong with /root/.cache/sessions/xfce4-session-localhost:0, Does it exist? Permissions issue?
+
+(xfsettingsd:1869): GLib-CRITICAL **: g_str_has_prefix: assertion 'prefix != NULL' failed
+
+(xfsettingsd:1869): GLib-GObject-CRITICAL **: g_value_get_string: assertion 'G_VALUE_HOLDS_STRING (value)' failed
+
+(xfsettingsd:1869): GLib-GObject-CRITICAL **: g_value_get_string: assertion 'G_VALUE_HOLDS_STRING (value)' failed
+
+(xfwm4:1856): GLib-CRITICAL **: g_str_has_prefix: assertion 'prefix != NULL' failed
+
+(xfsettingsd:1869): xfsettingsd-WARNING **: Failed to get the _NET_NUMBER_OF_DESKTOPS property.
+
+(xfwm4:1856): xfwm4-WARNING **: The property '/general/double_click_distance' of type int is not supported
+
+(xfdesktop:1868): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(xfwm4:1856): xfwm4-WARNING **: Error opening /dev/dri/card0: No such file or directory
+
+(xfwm4:1856): xfwm4-WARNING **: Another compositing manager is running on screen 0
+
+(xfce4-panel:1861): Gtk-CRITICAL **: IA__gtk_widget_show: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(xfce4-session:1831): Gtk-CRITICAL **: IA__gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(xfce4-session:1831): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+nm-applet-Message: PID 1878 (we are 1878) sent signal 15, shutting down...
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+
+(nm-applet:1878): GLib-CRITICAL **: Source ID 131 was not found when attempting to remove it
+
+(nm-applet:1878): GLib-CRITICAL **: Source ID 130 was not found when attempting to remove it
