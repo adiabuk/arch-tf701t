@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ATK - Accessibility Toolkit: AtkHyperlink</title>
+<title>AtkHyperlink: ATK - Accessibility Toolkit</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="ATK - Accessibility Toolkit">
 <link rel="up" href="accessibles.html" title="Custom accessible objects">
@@ -426,10 +426,9 @@ atk_hyperlink_get_n_anchors (<em class="parameter"><code><a class="link" href="A
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 atk_hyperlink_is_selected_link (<em class="parameter"><code><a class="link" href="AtkHyperlink.html" title="AtkHyperlink"><span class="type">AtkHyperlink</span></a> *link_</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_hyperlink_is_selected_link</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version 1.8.
-Please use ATK_STATE_FOCUSABLE for all links, and ATK_STATE_FOCUSED
-for focused links.</p>
+<p><code class="literal">atk_hyperlink_is_selected_link</code> has been deprecated since version 1.8 and should not be used in newly-written code.</p>
+<p>Please use ATK_STATE_FOCUSABLE for all links,
+and ATK_STATE_FOCUSED for focused links.</p>
 </div>
 <p>Determines whether this AtkHyperlink is selected</p>
 <div class="refsect3">
@@ -511,9 +510,8 @@ for focused links.</p>
 <pre class="programlisting">  “selected-link”            <span class="type">gboolean</span></pre>
 <p>Selected link</p>
 <div class="warning">
-<p><code class="literal">AtkHyperlink:selected-link</code> is deprecated and should not be used in newly-written code.</p>
-<p>Since 1.8. This property is deprecated since ATK
-version 1.8. Please use ATK_STATE_FOCUSABLE for all links, and
+<p><code class="literal">AtkHyperlink:selected-link</code> has been deprecated since version 1.8 and should not be used in newly-written code.</p>
+<p>Please use ATK_STATE_FOCUSABLE for all links, and
 ATK_STATE_FOCUSED for focused links.</p>
 </div>
 <p>Flags: Read</p>

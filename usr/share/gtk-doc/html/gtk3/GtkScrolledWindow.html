@@ -8,7 +8,7 @@
 <link rel="up" href="ScrollingWidgets.html" title="Scrolling">
 <link rel="prev" href="GtkScrollbar.html" title="GtkScrollbar">
 <link rel="next" href="GtkScrollable.html" title="GtkScrollable">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -228,6 +228,22 @@
 <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-capture-button-press" title="gtk_scrolled_window_get_capture_button_press ()">gtk_scrolled_window_get_capture_button_press</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-overlay-scrolling" title="gtk_scrolled_window_set_overlay_scrolling ()">gtk_scrolled_window_set_overlay_scrolling</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-overlay-scrolling" title="gtk_scrolled_window_get_overlay_scrolling ()">gtk_scrolled_window_get_overlay_scrolling</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -264,6 +280,11 @@
 <tr>
 <td class="property_type"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
 <td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--min-content-width" title="The “min-content-width” property">min-content-width</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--overlay-scrolling" title="The “overlay-scrolling” property">overlay-scrolling</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
@@ -328,6 +349,16 @@
 <tbody>
 <tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow-edge-overshot" title="The “edge-overshot” signal">edge-overshot</a></td>
+<td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow-edge-reached" title="The “edge-reached” signal">edge-reached</a></td>
+<td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow-move-focus-out" title="The “move-focus-out” signal">move-focus-out</a></td>
 <td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></td>
 </tr>
@@ -390,8 +421,8 @@ GtkScrolledWindow implements
 </div>
 <div class="refsect1">
 <a name="GtkScrolledWindow.description"></a><h2>Description</h2>
-<p><a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> is a <a class="link" href="GtkBin.html" title="GtkBin"><span class="type">GtkBin</span></a> subclass: it’s a container
-the accepts a single child widget. <a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> adds scrollbars
+<p>GtkScrolledWindow is a <a class="link" href="GtkBin.html" title="GtkBin"><span class="type">GtkBin</span></a> subclass: it’s a container
+the accepts a single child widget. GtkScrolledWindow adds scrollbars
 to the child widget and optionally draws a beveled frame around the
 child widget.</p>
 <p>The scrolled window can work in two ways. Some widgets have native
@@ -403,23 +434,38 @@ widget acts as an adaptor class, implementing scrollability for child
 widgets that lack their own scrolling capabilities. Use <a class="link" href="GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a>
 to scroll child widgets such as <a class="link" href="GtkGrid.html" title="GtkGrid"><span class="type">GtkGrid</span></a>, <a class="link" href="GtkBox.html" title="GtkBox"><span class="type">GtkBox</span></a>, and so on.</p>
 <p>If a widget has native scrolling abilities, it can be added to the
-<a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> with <a class="link" href="GtkContainer.html#gtk-container-add" title="gtk_container_add ()"><code class="function">gtk_container_add()</code></a>. If a widget does not, you
+GtkScrolledWindow with <a class="link" href="GtkContainer.html#gtk-container-add" title="gtk_container_add ()"><code class="function">gtk_container_add()</code></a>. If a widget does not, you
 must first add the widget to a <a class="link" href="GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a>, then add the <a class="link" href="GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a>
 to the scrolled window. <a class="link" href="GtkContainer.html#gtk-container-add" title="gtk_container_add ()"><code class="function">gtk_container_add()</code></a> will do this for you for
 widgets that don’t implement <a class="link" href="GtkScrollable.html" title="GtkScrollable"><span class="type">GtkScrollable</span></a> natively, so you can
 ignore the presence of the viewport.</p>
-<p>The position of the scrollbars is controlled by the scroll
-adjustments. See <a class="link" href="GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> for the fields in an adjustment - for
-<a class="link" href="GtkScrollbar.html" title="GtkScrollbar"><span class="type">GtkScrollbar</span></a>, used by <a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a>, the “value” field
+<p>The position of the scrollbars is controlled by the scroll adjustments.
+See <a class="link" href="GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> for the fields in an adjustment — for
+<a class="link" href="GtkScrollbar.html" title="GtkScrollbar"><span class="type">GtkScrollbar</span></a>, used by GtkScrolledWindow, the “value” field
 represents the position of the scrollbar, which must be between the
 “lower” field and “upper - page_size.” The “page_size” field
 represents the size of the visible scrollable area. The
 “step_increment” and “page_increment” fields are used when the user
 asks to step down (using the small stepper arrows) or page down (using
 for example the PageDown key).</p>
-<p>If a <a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> doesn’t behave quite as you would like, or
+<p>If a GtkScrolledWindow doesn’t behave quite as you would like, or
 doesn’t have exactly the right layout, it’s very possible to set up
 your own scrolling with <a class="link" href="GtkScrollbar.html" title="GtkScrollbar"><span class="type">GtkScrollbar</span></a> and for example a <a class="link" href="GtkGrid.html" title="GtkGrid"><span class="type">GtkGrid</span></a>.</p>
+<div class="refsect2">
+<a name="id-1.3.16.3.11.8"></a><h3>Touch support</h3>
+<p>GtkScrolledWindow has built-in support for touch devices. When a
+touchscreen is used, swiping will move the scrolled window, and will
+expose 'kinetic' behavior. This can be turned off with the
+<a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--kinetic-scrolling" title="The “kinetic-scrolling” property"><span class="type">“kinetic-scrolling”</span></a> property if it is undesired.</p>
+<p>GtkScrolledWindow also displays visual 'overshoot' indication when
+the content is pulled beyond the end, and this situation can be
+captured with the <a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow-edge-overshot" title="The “edge-overshot” signal"><span class="type">“edge-overshot”</span></a> signal.</p>
+<p>If no mouse device is present, the scrollbars will overlayed as
+narrow, auto-hiding indicators over the content. If traditional
+scrollbars are desired although no mouse is present, this behaviour
+can be turned off with the <a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--overlay-scrolling" title="The “overlay-scrolling” property"><span class="type">“overlay-scrolling”</span></a>
+property.</p>
+</div>
 </div>
 <div class="refsect1">
 <a name="GtkScrolledWindow.functions_details"></a><h2>Functions</h2>
@@ -458,7 +504,6 @@ will cause the scrolled window to create them for you.</p>
 <div class="refsect3">
 <a name="id-1.3.16.3.12.2.7"></a><h4>Returns</h4>
 <p> a new scrolled window</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -545,7 +590,7 @@ gtk_scrolled_window_get_hscrollbar (<em class="parameter"><code><a class="link" 
 <p> the horizontal scrollbar of the scrolled window. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -574,7 +619,7 @@ gtk_scrolled_window_get_vscrollbar (<em class="parameter"><code><a class="link" 
 <p> the vertical scrollbar of the scrolled window. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -589,7 +634,7 @@ from the <a class="link" href="GtkScrolledWindow.html#GtkPolicyType" title="enum
 scrollbar is always present; if <a class="link" href="GtkScrolledWindow.html#GTK-POLICY-NEVER:CAPS"><code class="literal">GTK_POLICY_NEVER</code></a>, the scrollbar is
 never present; if <a class="link" href="GtkScrolledWindow.html#GTK-POLICY-AUTOMATIC:CAPS"><code class="literal">GTK_POLICY_AUTOMATIC</code></a>, the scrollbar is present only
 if needed (that is, if the slider part of the bar would be smaller
-than the trough - the display is larger than the page size).</p>
+than the trough — the display is larger than the page size).</p>
 <div class="refsect3">
 <a name="id-1.3.16.3.12.7.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -626,7 +671,7 @@ gtk_scrolled_window_add_with_viewport (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *child</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">gtk_scrolled_window_add_with_viewport</code> has been deprecated since version 3.8 and should not be used in newly-written code.</p>
-<p>gtk_container_add() will now automatically add
+<p>gtk_container_add() will automatically add
 a <a class="link" href="GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a> if the child doesn’t implement <a class="link" href="GtkScrollable.html" title="GtkScrollable"><span class="type">GtkScrollable</span></a>.</p>
 </div>
 <p>Used to add children without native scrolling capabilities. This
@@ -710,7 +755,7 @@ Other values in <a class="link" href="GtkScrolledWindow.html#GtkCornerType" titl
 gtk_scrolled_window_unset_placement (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
 <p>Unsets the placement of the contents with respect to the scrollbars
 for the scrolled window. If no window placement is set for a scrolled
-window, it defaults to GTK_CORNER_TOP_LEFT.</p>
+window, it defaults to <a class="link" href="GtkScrolledWindow.html#GTK-CORNER-TOP-LEFT:CAPS"><code class="literal">GTK_CORNER_TOP_LEFT</code></a>.</p>
 <p>See also <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-placement" title="gtk_scrolled_window_set_placement ()"><code class="function">gtk_scrolled_window_set_placement()</code></a> and
 <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-placement" title="gtk_scrolled_window_get_placement ()"><code class="function">gtk_scrolled_window_get_placement()</code></a>.</p>
 <div class="refsect3">
@@ -728,7 +773,7 @@ window, it defaults to GTK_CORNER_TOP_LEFT.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -849,7 +894,6 @@ for the scrolled window. See <a class="link" href="GtkScrolledWindow.html#gtk-sc
 <p> the current placement value.</p>
 <p>See also <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-placement" title="gtk_scrolled_window_set_placement ()"><code class="function">gtk_scrolled_window_set_placement()</code></a> and
 <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-unset-placement" title="gtk_scrolled_window_unset_placement ()"><code class="function">gtk_scrolled_window_unset_placement()</code></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -916,7 +960,6 @@ gtk_scrolled_window_get_shadow_type (<em class="parameter"><code><a class="link"
 <div class="refsect3">
 <a name="id-1.3.16.3.12.16.6"></a><h4>Returns</h4>
 <p> the current shadow type</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -945,9 +988,8 @@ gtk_scrolled_window_get_min_content_width
 <div class="refsect3">
 <a name="id-1.3.16.3.12.17.6"></a><h4>Returns</h4>
 <p> the minimum content width</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -982,7 +1024,7 @@ size of the content.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1010,9 +1052,8 @@ gtk_scrolled_window_get_min_content_height
 <div class="refsect3">
 <a name="id-1.3.16.3.12.19.6"></a><h4>Returns</h4>
 <p> the minimal content height</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1047,7 +1088,7 @@ size of the content.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1081,7 +1122,7 @@ Kinetic scrolling only applies to devices with source
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1108,9 +1149,8 @@ gtk_scrolled_window_get_kinetic_scrolling
 <div class="refsect3">
 <a name="id-1.3.16.3.12.22.6"></a><h4>Returns</h4>
 <p> the scrolling behavior flags.</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1153,7 +1193,7 @@ to set <em class="parameter"><code>capture_button_press</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1181,9 +1221,68 @@ scrolling. See <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-
 <div class="refsect3">
 <a name="id-1.3.16.3.12.24.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if button presses are captured during kinetic scrolling</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-overlay-scrolling"></a><h3>gtk_scrolled_window_set_overlay_scrolling ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_overlay_scrolling
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> overlay_scrolling</code></em>);</pre>
+<p>Enables or disables overlay scrolling for this scrolled window.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>overlay_scrolling</p></td>
+<td class="parameter_description"><p>whether to enable overlay scrolling</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-overlay-scrolling"></a><h3>gtk_scrolled_window_get_overlay_scrolling ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_scrolled_window_get_overlay_scrolling
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Returns whether overlay scrolling is enabled for this scrolled window.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.26.6"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if overlay scrolling is enabled</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -1289,6 +1388,15 @@ visibility mode for the scrollbars.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-POLICY-EXTERNAL:CAPS"></a>GTK_POLICY_EXTERNAL</p></td>
+<td class="enum_member_description">
+<p>Don't show a scrollbar, but don't force the
+ size to follow the content. This can be used e.g. to make multiple
+ scrolled windows share a scrollbar. Since: 3.16</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -1365,11 +1473,11 @@ bars are placed.</p>
 <div class="refsect2">
 <a name="GtkScrolledWindow--kinetic-scrolling"></a><h3>The <code class="literal">“kinetic-scrolling”</code> property</h3>
 <pre class="programlisting">  “kinetic-scrolling”        <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
-<p>The kinetic scrolling behavior flags. Kinetic scrolling
-only applies to devices with source <a href="http://developer.gnome.org/gdk2/GdkDevice.html#GDK-SOURCE-TOUCHSCREEN:CAPS"><code class="literal">GDK_SOURCE_TOUCHSCREEN</code></a></p>
+<p>Whether kinetic scrolling is enabled or not. Kinetic scrolling
+only applies to devices with source <a href="http://developer.gnome.org/gdk2/GdkDevice.html#GDK-SOURCE-TOUCHSCREEN:CAPS"><code class="literal">GDK_SOURCE_TOUCHSCREEN</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1380,7 +1488,7 @@ only applies to devices with source <a href="http://developer.gnome.org/gdk2/Gdk
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: -1</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1391,7 +1499,19 @@ only applies to devices with source <a href="http://developer.gnome.org/gdk2/Gdk
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: -1</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--overlay-scrolling"></a><h3>The <code class="literal">“overlay-scrolling”</code> property</h3>
+<pre class="programlisting">  “overlay-scrolling”        <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether overlay scrolling is enabled or not. If it is, the
+scrollbars are only added as traditional widgets when a mouse
+is present. Otherwise, they are overlayed on top of the content,
+as narrow indicators.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1438,7 +1558,7 @@ of the contents with respect to the scrollbars.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 </div>
 <div class="refsect1">
@@ -1458,11 +1578,101 @@ of the contents with respect to the scrollbars.</p>
 <p>Whether to place scrollbars within the scrolled window's bevel.</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 </div>
 <div class="refsect1">
 <a name="GtkScrolledWindow.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkScrolledWindow-edge-overshot"></a><h3>The <code class="literal">“edge-overshot”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window,
+               <a class="link" href="gtk3-Standard-Enumerations.html#GtkPositionType" title="enum GtkPositionType"><span class="type">GtkPositionType</span></a>    pos,
+               <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)</pre>
+<p>The ::edge-overshot signal is emitted whenever user initiated scrolling
+makes the scrolledwindow firmly surpass (ie. with some edge resistance)
+the lower or upper limits defined by the adjustment in that orientation.</p>
+<p>A similar behavior without edge resistance is provided by the
+<a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow-edge-reached" title="The “edge-reached” signal"><span class="type">“edge-reached”</span></a> signal.</p>
+<p>Note: The <em class="parameter"><code>pos</code></em>
+ argument is LTR/RTL aware, so callers should be aware too
+if intending to provide behavior on horizontal edges.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.16.2.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>edge side that was hit</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow-edge-reached"></a><h3>The <code class="literal">“edge-reached”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window,
+               <a class="link" href="gtk3-Standard-Enumerations.html#GtkPositionType" title="enum GtkPositionType"><span class="type">GtkPositionType</span></a>    pos,
+               <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)</pre>
+<p>The ::edge-reached signal is emitted whenever user-initiated scrolling
+makes the scrolledwindow exactly reaches the lower or upper limits
+defined by the adjustment in that orientation.</p>
+<p>A similar behavior with edge resistance is provided by the
+<a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow-edge-overshot" title="The “edge-overshot” signal"><span class="type">“edge-overshot”</span></a> signal.</p>
+<p>Note: The <em class="parameter"><code>pos</code></em>
+ argument is LTR/RTL aware, so callers should be aware too
+if intending to provide behavior on horizontal edges.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.16.3.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>edge side that was reached</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="GtkScrolledWindow-move-focus-out"></a><h3>The <code class="literal">“move-focus-out”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1472,13 +1682,13 @@ user_function (<a class="link" href="GtkScrolledWindow.html" title="GtkScrolledW
 <p>The ::move-focus-out signal is a
 <a class="link" href="gtk3-Bindings.html#GtkBindingSignal" title="struct GtkBindingSignal">keybinding signal</a> which gets
 emitted when focus is moved away from the scrolled window by a
-keybinding.  The <a class="link" href="GtkWidget.html#GtkWidget-move-focus" title="The “move-focus” signal"><span class="type">“move-focus”</span></a> signal is emitted with
+keybinding. The <a class="link" href="GtkWidget.html#GtkWidget-move-focus" title="The “move-focus” signal"><span class="type">“move-focus”</span></a> signal is emitted with
 <em class="parameter"><code>direction_type</code></em>
  on this scrolled windows toplevel parent in the
-container hierarchy.  The default bindings for this signal are
+container hierarchy. The default bindings for this signal are
 <code class="literal">Tab + Ctrl</code> and <code class="literal">Tab + Ctrl + Shift</code>.</p>
 <div class="refsect3">
-<a name="id-1.3.16.3.16.2.5"></a><h4>Parameters</h4>
+<a name="id-1.3.16.3.16.4.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1521,7 +1731,7 @@ which gets emitted when a keybinding that scrolls is pressed.
 The horizontal or vertical adjustment is updated which triggers a
 signal that the scrolled windows child may listen to and scroll itself.</p>
 <div class="refsect3">
-<a name="id-1.3.16.3.16.3.5"></a><h4>Parameters</h4>
+<a name="id-1.3.16.3.16.5.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1562,7 +1772,6 @@ horizontally or not</p></td>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

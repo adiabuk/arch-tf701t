@@ -332,12 +332,20 @@
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="SoupURI.html#SOUP-URI-SCHEME-RESOURCE:CAPS" title="SOUP_URI_SCHEME_RESOURCE">SOUP_URI_SCHEME_RESOURCE</a></td>
 </tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="SoupURI.html#SOUP-URI-SCHEME-WS:CAPS" title="SOUP_URI_SCHEME_WS">SOUP_URI_SCHEME_WS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="SoupURI.html#SOUP-URI-SCHEME-WSS:CAPS" title="SOUP_URI_SCHEME_WSS">SOUP_URI_SCHEME_WSS</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="SoupURI.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GBoxed
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> SoupURI
 </pre>
 </div>
@@ -1654,6 +1662,26 @@ as well, but this would be more annoying than useful.)</p>
 <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>'s <code class="literal">scheme</code> field using
 <code class="literal">==</code>.</p>
 <p class="since">Since 2.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="SOUP-URI-SCHEME-WS:CAPS"></a><h3>SOUP_URI_SCHEME_WS</h3>
+<pre class="programlisting">#define SOUP_URI_SCHEME_WS       _SOUP_ATOMIC_INTERN_STRING (_SOUP_URI_SCHEME_WS, "ws")
+</pre>
+<p>"ws" (WebSocket) as an interned string; you can compare this
+directly to a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>'s <code class="literal">scheme</code> field using
+<code class="literal">==</code>.</p>
+<p class="since">Since 2.50</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="SOUP-URI-SCHEME-WSS:CAPS"></a><h3>SOUP_URI_SCHEME_WSS</h3>
+<pre class="programlisting">#define SOUP_URI_SCHEME_WSS      _SOUP_ATOMIC_INTERN_STRING (_SOUP_URI_SCHEME_WSS, "wss")
+</pre>
+<p>"wss" (WebSocket over TLS) as an interned string; you can compare
+this directly to a <a class="link" href="SoupURI.html" title="SoupURI"><span class="type">SoupURI</span></a>'s <code class="literal">scheme</code> field using
+<code class="literal">==</code>.</p>
+<p class="since">Since 2.50</p>
 </div>
 </div>
 </div>

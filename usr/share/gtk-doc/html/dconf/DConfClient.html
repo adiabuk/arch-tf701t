@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>dconf Reference Manual: DConfClient</title>
+<title>DConfClient: dconf Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="dconf Reference Manual">
 <link rel="up" href="ch01.html" title="DConf Client API">
@@ -51,7 +51,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GVariant</span> *
+<a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
 </td>
 <td class="function_name">
 <a href="DConfClient.html#dconf-client-read">dconf_client_read</a> <span class="c_punctuation">()</span>
@@ -59,7 +59,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gchar</span> **
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
 </td>
 <td class="function_name">
 <a href="DConfClient.html#dconf-client-list">dconf_client_list</a> <span class="c_punctuation">()</span>
@@ -67,7 +67,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gboolean</span>
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a href="DConfClient.html#dconf-client-is-writable">dconf_client_is_writable</a> <span class="c_punctuation">()</span>
@@ -75,7 +75,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gboolean</span>
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a href="DConfClient.html#dconf-client-write-fast">dconf_client_write_fast</a> <span class="c_punctuation">()</span>
@@ -83,7 +83,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gboolean</span>
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a href="DConfClient.html#dconf-client-write-sync">dconf_client_write_sync</a> <span class="c_punctuation">()</span>
@@ -91,7 +91,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gboolean</span>
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a href="DConfClient.html#dconf-client-change-fast">dconf_client_change_fast</a> <span class="c_punctuation">()</span>
@@ -99,7 +99,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gboolean</span>
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a href="DConfClient.html#dconf-client-change-sync">dconf_client_change_sync</a> <span class="c_punctuation">()</span>
@@ -178,7 +178,7 @@
 </div>
 <div class="refsect1">
 <a name="DConfClient.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
     <span class="lineart">╰──</span> DConfClient
 </pre>
 </div>
@@ -188,7 +188,7 @@
 <p>It allows applications to directly read from and write to the dconf
 database.  Applications can subscribe to change notifications.</p>
 <p>Most applications probably don't want to access dconf directly and
-would be better off using something like <span class="type">GSettings</span>.</p>
+would be better off using something like <a href="https://developer.gnome.org/gio/unstable/GSettings.html"><span class="type">GSettings</span></a>.</p>
 <p>Please note that the API of libdconf is not stable in any way.  It
 has changed in incompatible ways in the past and there will be
 further changes in the future.</p>
@@ -209,13 +209,13 @@ dconf_client_new (<em class="parameter"><code><span class="type">void</span></co
 <hr>
 <div class="refsect2">
 <a name="dconf-client-read"></a><h3>dconf_client_read ()</h3>
-<pre class="programlisting"><span class="returnvalue">GVariant</span> *
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
 dconf_client_read (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
-                   <em class="parameter"><code>const <span class="type">gchar</span> *key</code></em>);</pre>
+                   <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>);</pre>
 <p>Reads the current value of <em class="parameter"><code>key</code></em>
 .</p>
 <p>If <em class="parameter"><code>key</code></em>
- exists, its value is returned.  Otherwise, <code class="literal">NULL</code> is returned.</p>
+ exists, its value is returned.  Otherwise, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned.</p>
 <p>If there are outstanding "fast" changes in progress they may affect
 the result of this call.</p>
 <div class="refsect3">
@@ -242,22 +242,22 @@ the result of this call.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.5.8.3.8"></a><h4>Returns</h4>
-<p> a <span class="type">GVariant</span>, or <code class="literal">NULL</code></p>
+<p> a <a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p>
 <p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="dconf-client-list"></a><h3>dconf_client_list ()</h3>
-<pre class="programlisting"><span class="returnvalue">gchar</span> **
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
 dconf_client_list (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
-                   <em class="parameter"><code>const <span class="type">gchar</span> *dir</code></em>,
-                   <em class="parameter"><code><span class="type">gint</span> *length</code></em>);</pre>
+                   <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *dir</code></em>,
+                   <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *length</code></em>);</pre>
 <p>Gets the list of all dirs and keys immediately under <em class="parameter"><code>dir</code></em>
 .</p>
 <p>If <em class="parameter"><code>length</code></em>
- is non-<code class="literal">NULL</code> then it will be set to the length of the
-returned array.  In any case, the array is <code class="literal">NULL</code>-terminated.</p>
+ is non-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> then it will be set to the length of the
+returned array.  In any case, the array is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated.</p>
 <p>IF there are outstanding "fast" changes in progress then this call
 may return inaccurate results with respect to those outstanding
 changes.</p>
@@ -290,16 +290,16 @@ changes.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.5.8.4.8"></a><h4>Returns</h4>
-<p> an array of strings, never <code class="literal">NULL</code>.</p>
+<p> an array of strings, never <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="dconf-client-is-writable"></a><h3>dconf_client_is_writable ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 dconf_client_is_writable (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
-                          <em class="parameter"><code>const <span class="type">gchar</span> *key</code></em>);</pre>
+                          <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>);</pre>
 <p>Checks if <em class="parameter"><code>key</code></em>
  is writable (ie: the key has no locks).</p>
 <p>This call does not verify that writing to the key will actually be
@@ -332,7 +332,7 @@ cause the write to fail.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.5.8.5.7"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> is <em class="parameter"><code>key</code></em>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> is <em class="parameter"><code>key</code></em>
 is writable</p>
 <p></p>
 </div>
@@ -340,17 +340,17 @@ is writable</p>
 <hr>
 <div class="refsect2">
 <a name="dconf-client-write-fast"></a><h3>dconf_client_write_fast ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 dconf_client_write_fast (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
-                         <em class="parameter"><code>const <span class="type">gchar</span> *key</code></em>,
-                         <em class="parameter"><code><span class="type">GVariant</span> *value</code></em>,
-                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+                         <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                         <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *value</code></em>,
+                         <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Writes <em class="parameter"><code>value</code></em>
  to the given <em class="parameter"><code>key</code></em>
 , or reset <em class="parameter"><code>key</code></em>
  to its default value.</p>
 <p>If <em class="parameter"><code>value</code></em>
- is <code class="literal">NULL</code> then <em class="parameter"><code>key</code></em>
+ is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> then <em class="parameter"><code>key</code></em>
  is reset to its default value (which may
 be completely unset), otherwise <em class="parameter"><code>value</code></em>
  becomes the new value.</p>
@@ -388,12 +388,12 @@ is scheduled on the main context.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>value</p></td>
-<td class="parameter_description"><p>a <span class="type">GVariant</span>, the value to write</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>, the value to write</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>a pointer to a <code class="literal">NULL</code> <span class="type">GError</span>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a pointer to a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -401,26 +401,26 @@ is scheduled on the main context.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.5.8.6.10"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> if the write was queued</p>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the write was queued</p>
 <p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="dconf-client-write-sync"></a><h3>dconf_client_write_sync ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 dconf_client_write_sync (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
-                         <em class="parameter"><code>const <span class="type">gchar</span> *key</code></em>,
-                         <em class="parameter"><code><span class="type">GVariant</span> *value</code></em>,
-                         <em class="parameter"><code><span class="type">gchar</span> **tag</code></em>,
-                         <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
-                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+                         <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                         <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *value</code></em>,
+                         <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **tag</code></em>,
+                         <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                         <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Write <em class="parameter"><code>value</code></em>
  to the given <em class="parameter"><code>key</code></em>
 , or reset <em class="parameter"><code>key</code></em>
  to its default value.</p>
 <p>If <em class="parameter"><code>value</code></em>
- is <code class="literal">NULL</code> then <em class="parameter"><code>key</code></em>
+ is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> then <em class="parameter"><code>key</code></em>
  is reset to its default value (which may
 be completely unset), otherwise <em class="parameter"><code>value</code></em>
  becomes the new value.</p>
@@ -430,7 +430,7 @@ key is currently being watched then a signal will be emitted from the
 main context of <em class="parameter"><code>client</code></em>
  (once the signal arrives from the service).</p>
 <p>If <em class="parameter"><code>tag</code></em>
- is non-<code class="literal">NULL</code> then it is set to the unique tag associated with
+ is non-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> then it is set to the unique tag associated with
 this write.  This is the same tag that will appear in the following
 change signal.</p>
 <div class="refsect3">
@@ -454,7 +454,7 @@ change signal.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>value</p></td>
-<td class="parameter_description"><p>a <span class="type">GVariant</span>, the value to write</p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>, the value to write</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -464,12 +464,12 @@ change signal.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <span class="type">GCancellable</span>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>a pointer to a <code class="literal">NULL</code> <span class="type">GError</span>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a pointer to a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -477,7 +477,7 @@ change signal.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.5.8.7.9"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> on success, else <code class="literal">FALSE</code> with <em class="parameter"><code>error</code></em>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success, else <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> with <em class="parameter"><code>error</code></em>
 set</p>
 <p></p>
 </div>
@@ -485,10 +485,10 @@ set</p>
 <hr>
 <div class="refsect2">
 <a name="dconf-client-change-fast"></a><h3>dconf_client_change_fast ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 dconf_client_change_fast (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
                           <em class="parameter"><code><a href="dconf-DConfChangeset.html#DConfChangeset"><span class="type">DConfChangeset</span></a> *changeset</code></em>,
-                          <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+                          <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Performs the change operation described by <em class="parameter"><code>changeset</code></em>
 .</p>
 <p>Once <em class="parameter"><code>changeset</code></em>
@@ -527,7 +527,7 @@ is scheduled on the main context.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>a pointer to a <code class="literal">NULL</code> <span class="type">GError</span>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a pointer to a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -535,19 +535,19 @@ is scheduled on the main context.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.5.8.8.10"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> if the requested changed was queued</p>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the requested changed was queued</p>
 <p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="dconf-client-change-sync"></a><h3>dconf_client_change_sync ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 dconf_client_change_sync (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
                           <em class="parameter"><code><a href="dconf-DConfChangeset.html#DConfChangeset"><span class="type">DConfChangeset</span></a> *changeset</code></em>,
-                          <em class="parameter"><code><span class="type">gchar</span> **tag</code></em>,
-                          <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
-                          <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+                          <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **tag</code></em>,
+                          <em class="parameter"><code><a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                          <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Performs the change operation described by <em class="parameter"><code>changeset</code></em>
 .</p>
 <p>Once <em class="parameter"><code>changeset</code></em>
@@ -559,7 +559,7 @@ emitted from the main context of <em class="parameter"><code>client</code></em>
  (once the signal arrives
 from the service).</p>
 <p>If <em class="parameter"><code>tag</code></em>
- is non-<code class="literal">NULL</code> then it is set to the unique tag associated with
+ is non-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> then it is set to the unique tag associated with
 this change.  This is the same tag that will appear in the following
 change signal.  If <em class="parameter"><code>changeset</code></em>
  makes no changes then <em class="parameter"><code>tag</code></em>
@@ -591,12 +591,12 @@ non-unique (eg: the empty string may be used for empty changesets).</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <span class="type">GCancellable</span>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a <a href="https://developer.gnome.org/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>a pointer to a <code class="literal">NULL</code> <span class="type">GError</span>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a pointer to a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -604,7 +604,7 @@ non-unique (eg: the empty string may be used for empty changesets).</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.5.8.9.9"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> on success, else <code class="literal">FALSE</code> with <em class="parameter"><code>error</code></em>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success, else <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> with <em class="parameter"><code>error</code></em>
 set</p>
 <p></p>
 </div>
@@ -614,7 +614,7 @@ set</p>
 <a name="dconf-client-watch-fast"></a><h3>dconf_client_watch_fast ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 dconf_client_watch_fast (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
-                         <em class="parameter"><code>const <span class="type">gchar</span> *path</code></em>);</pre>
+                         <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>);</pre>
 <p>Requests change notifications for <em class="parameter"><code>path</code></em>
 .</p>
 <p>If <em class="parameter"><code>path</code></em>
@@ -654,7 +654,7 @@ the case then a synthetic change signal will be emitted.</p>
 <a name="dconf-client-watch-sync"></a><h3>dconf_client_watch_sync ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 dconf_client_watch_sync (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
-                         <em class="parameter"><code>const <span class="type">gchar</span> *path</code></em>);</pre>
+                         <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>);</pre>
 <p>Requests change notifications for <em class="parameter"><code>path</code></em>
 .</p>
 <p>If <em class="parameter"><code>path</code></em>
@@ -693,7 +693,7 @@ the time this function returns, the watch has been established.</p>
 <a name="dconf-client-unwatch-fast"></a><h3>dconf_client_unwatch_fast ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 dconf_client_unwatch_fast (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
-                           <em class="parameter"><code>const <span class="type">gchar</span> *path</code></em>);</pre>
+                           <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>);</pre>
 <p>Cancels the effect of a previous call to <a href="DConfClient.html#dconf-client-watch-fast"><code class="function">dconf_client_watch_fast()</code></a>.</p>
 <p>This call returns immediately.</p>
 <p>It is still possible that change signals are received after this call
@@ -727,7 +727,7 @@ unwatching does not guarantee no notifications).</p>
 <a name="dconf-client-unwatch-sync"></a><h3>dconf_client_unwatch_sync ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 dconf_client_unwatch_sync (<em class="parameter"><code><a href="DConfClient.html"><span class="type">DConfClient</span></a> *client</code></em>,
-                           <em class="parameter"><code>const <span class="type">gchar</span> *path</code></em>);</pre>
+                           <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>);</pre>
 <p>Cancels the effect of a previous call to <a href="DConfClient.html#dconf-client-watch-sync"><code class="function">dconf_client_watch_sync()</code></a>.</p>
 <p>This function submits each of the various unwatch requests and waits
 until each of them returns.  It is still possible that change signals
@@ -788,8 +788,8 @@ been submitted to the service.</p>
 <div class="refsect2">
 <a name="DConfClient-struct"></a><h3>DConfClient</h3>
 <pre class="programlisting">typedef struct _DConfClient DConfClient;</pre>
-<p>The main object for interacting with dconf.  This is a <span class="type">GObject</span>, so
-you should manage it with <code class="function">g_object_ref()</code> and <code class="function">g_object_unref()</code>.</p>
+<p>The main object for interacting with dconf.  This is a <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>, so
+you should manage it with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref"><code class="function">g_object_ref()</code></a> and <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
 </div>
 </div>
 <div class="refsect1">
@@ -798,10 +798,10 @@ you should manage it with <code class="function">g_object_ref()</code> and <code
 <a name="DConfClient-changed"></a><h3>The <code class="literal">“changed”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a href="DConfClient.html"><span class="type">DConfClient</span></a> *client,
-               <span class="type">gchar</span>       *prefix,
-               <span class="type">GStrv</span>        changes,
-               <span class="type">gchar</span>       *tag,
-               <span class="type">gpointer</span>     user_data)</pre>
+               <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *prefix,
+               <a href="https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a>        changes,
+               <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *tag,
+               <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)</pre>
 <p>This signal is emitted when the <a href="DConfClient.html"><span class="type">DConfClient</span></a> has a possible change
 to report.  The signal is an indication that a change may have
 occurred; it's possible that the keys will still have the same value
@@ -813,10 +813,10 @@ paths that you did not explicitly watch.</p>
 <p><em class="parameter"><code>prefix</code></em>
  will be an absolute dconf path; see <a href="dconf-dconf-Paths.html#dconf-is-path"><code class="function">dconf_is_path()</code></a>.
 <em class="parameter"><code>changes</code></em>
- is a <code class="literal">NULL</code>-terminated array of dconf rel paths; see
+ is a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of dconf rel paths; see
 <a href="dconf-dconf-Paths.html#dconf-is-rel-path"><code class="function">dconf_is_rel_path()</code></a>.</p>
 <p><em class="parameter"><code>tag</code></em>
- is an opaque tag string, or <code class="literal">NULL</code>.  The only thing you should
+ is an opaque tag string, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.  The only thing you should
 do with <em class="parameter"><code>tag</code></em>
  is to compare it to tag values returned by
 <a href="DConfClient.html#dconf-client-write-sync"><code class="function">dconf_client_write_sync()</code></a> or <a href="DConfClient.html#dconf-client-change-sync"><code class="function">dconf_client_change_sync()</code></a>.</p>

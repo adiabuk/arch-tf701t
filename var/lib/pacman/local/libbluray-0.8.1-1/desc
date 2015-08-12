@@ -1,0 +1,44 @@
+%NAME%
+libbluray
+
+%VERSION%
+0.8.1-1
+
+%DESC%
+Library to access Blu-Ray disks for video playback
+
+%URL%
+http://www.videolan.org/developers/libbluray.html
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1432291659
+
+%INSTALLDATE%
+1439237100
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+1002496
+
+%REASON%
+1
+
+%LICENSE%
+LGPL2.1
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libxml2
+freetype2
+fontconfig
+
+%OPTDEPENDS%
+java-environment: for BD-J library
+

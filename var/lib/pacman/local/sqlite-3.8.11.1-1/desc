@@ -1,0 +1,45 @@
+%NAME%
+sqlite
+
+%VERSION%
+3.8.11.1-1
+
+%DESC%
+A C library that implements an SQL database engine
+
+%URL%
+http://www.sqlite.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1438504762
+
+%INSTALLDATE%
+1439237024
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+1902592
+
+%REASON%
+1
+
+%LICENSE%
+custom:Public Domain
+
+%VALIDATION%
+sha256
+
+%REPLACES%
+sqlite3
+
+%DEPENDS%
+readline
+
+%PROVIDES%
+sqlite3=3.8.11.1
+

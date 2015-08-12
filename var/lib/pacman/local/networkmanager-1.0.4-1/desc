@@ -1,0 +1,56 @@
+%NAME%
+networkmanager
+
+%VERSION%
+1.0.4-1
+
+%DESC%
+Network Management daemon
+
+%URL%
+http://www.gnome.org/projects/NetworkManager/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1437050389
+
+%INSTALLDATE%
+1439276939
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+17869824
+
+%LICENSE%
+GPL2
+LGPL2.1
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libnm-glib
+iproute2
+libnl
+polkit
+wpa_supplicant
+dhclient
+libsoup
+libmm-glib
+libnewt
+libndp
+libteam
+libgudev
+
+%OPTDEPENDS%
+dnsmasq: connection sharing
+bluez: Bluetooth support
+openresolv: resolvconf support
+ppp: dialup connection support
+rp-pppoe: ADSL support
+modemmanager: cellular network support
+

@@ -78,12 +78,12 @@ ENDECHO
 		;;
 	--libs)
 		sed -e 's,^[ ]*,,' -e 's, [ ]*, ,g' -e 's,[ ]*$,,' <<-ENDECHO
-			-L${exec_prefix}/lib -l${THIS}  -L/usr/lib -lncursesw -lm
+			-L${exec_prefix}/lib -l${THIS}  -lncursesw -lm
 ENDECHO
 		;;
 	# identification
 	--version)
-		echo "1.2.20150225"
+		echo "1.2.20150528"
 		;;
 	--abi-version)
 		echo "12:0:0" | sed -e 's/:/./g'

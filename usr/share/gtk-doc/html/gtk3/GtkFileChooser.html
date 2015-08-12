@@ -8,7 +8,7 @@
 <link rel="up" href="SelectorWidgets.html" title="Selector Widgets and Dialogs">
 <link rel="prev" href="GtkColorChooserDialog.html" title="GtkColorChooserDialog">
 <link rel="next" href="GtkFileChooserButton.html" title="GtkFileChooserButton">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -659,7 +659,7 @@
 </div>
 <div class="refsect1">
 <a name="GtkFileChooser.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GInterface
+<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> GtkFileChooser
 </pre>
 </div>
@@ -800,7 +800,7 @@ generate a preview.</p>
 <span class="normal">  preview </span><span class="symbol">=</span><span class="normal"> </span><span class="function">GTK_WIDGET</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">data</span><span class="symbol">);</span>
 <span class="normal">  filename </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="GtkFileChooser.html#gtk-file-chooser-get-preview-filename">gtk_file_chooser_get_preview_filename</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">file_chooser</span><span class="symbol">);</span>
 
-<span class="normal">  pixbuf </span><span class="symbol">=</span><span class="normal"> </span><span class="function">gdk_pixbuf_new_from_file_at_size</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">filename</span><span class="symbol">,</span><span class="normal"> </span><span class="number">128</span><span class="symbol">,</span><span class="normal"> </span><span class="number">128</span><span class="symbol">,</span><span class="normal"> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
+<span class="normal">  pixbuf </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file-at-size">gdk_pixbuf_new_from_file_at_size</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">filename</span><span class="symbol">,</span><span class="normal"> </span><span class="number">128</span><span class="symbol">,</span><span class="normal"> </span><span class="number">128</span><span class="symbol">,</span><span class="normal"> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="normal">  have_preview </span><span class="symbol">=</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pixbuf </span><span class="symbol">!=</span><span class="normal"> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="normal">  </span><span class="function"><a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">g_free</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">filename</span><span class="symbol">);</span>
 
@@ -901,7 +901,7 @@ an option to create a new folder might be shown if the action is
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -928,9 +928,8 @@ gtk_file_chooser_get_action (<em class="parameter"><code><a class="link" href="G
 <div class="refsect3">
 <a name="id-1.3.14.6.12.4.6"></a><h4>Returns</h4>
 <p> the action that the file selector is performing</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -973,7 +972,7 @@ filesystem (FUSE).</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1000,9 +999,8 @@ file selector. See <a class="link" href="GtkFileChooser.html#gtk-file-chooser-se
 <div class="refsect3">
 <a name="id-1.3.14.6.12.6.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if only local files can be selected.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1035,7 +1033,7 @@ only relevant if the action is set to be <a class="link" href="GtkFileChooser.ht
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1062,9 +1060,8 @@ selector. See <a class="link" href="GtkFileChooser.html#gtk-file-chooser-set-sel
 <div class="refsect3">
 <a name="id-1.3.14.6.12.8.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if multiple files can be selected.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1095,7 +1092,7 @@ gtk_file_chooser_set_show_hidden (<em class="parameter"><code><a class="link" hr
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1122,9 +1119,8 @@ See <a class="link" href="GtkFileChooser.html#gtk-file-chooser-set-show-hidden" 
 <div class="refsect3">
 <a name="id-1.3.14.6.12.10.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if hidden files and folders are displayed.</p>
-<p></p>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1165,7 +1161,7 @@ for the details.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1194,9 +1190,8 @@ types a file name that already exists.</p>
 <a name="id-1.3.14.6.12.12.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the file chooser will present a confirmation dialog;
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1229,7 +1224,7 @@ This is only relevant if the action is not set to be
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1256,9 +1251,8 @@ See <a class="link" href="GtkFileChooser.html#gtk-file-chooser-set-create-folder
 <div class="refsect3">
 <a name="id-1.3.14.6.12.14.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the Create Folder button should be displayed.</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1298,7 +1292,7 @@ Please see the documentation for those functions for an example of using
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1333,9 +1327,8 @@ from “.jpg” to “.png”.</p>
 <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.  Note that this string is not a full pathname or URI; it is
 whatever the contents of the entry are.  Note also that this string is in
 UTF-8 encoding, which is not necessarily the system’s encoding for filenames.</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1370,7 +1363,7 @@ if no file is selected, or the selected file can't
 be represented with a local filename. Free with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> filename]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1452,9 +1445,8 @@ is already known, so the file chooser will use it.</p>
 <div class="refsect3">
 <a name="id-1.3.14.6.12.18.11"></a><h4>Returns</h4>
 <p> Not useful.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1494,9 +1486,8 @@ be changed to the folder containing <em class="parameter"><code>filename</code><
 <a name="id-1.3.14.6.12.19.6"></a><h4>Returns</h4>
 <p> Not useful.</p>
 <p>See also: <a class="link" href="GtkFileChooser.html#gtk-file-chooser-set-filename" title="gtk_file_chooser_set_filename ()"><code class="function">gtk_file_chooser_set_filename()</code></a></p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1529,7 +1520,7 @@ is otherwise not currently selected, does nothing.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1552,7 +1543,7 @@ gtk_file_chooser_select_all (<em class="parameter"><code><a class="link" href="G
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1575,7 +1566,7 @@ gtk_file_chooser_unselect_all (<em class="parameter"><code><a class="link" href=
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1610,7 +1601,7 @@ the current folder. Free the returned list with <a href="https://developer.gnome
 and the filenames with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> filename][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1650,9 +1641,8 @@ for the rationale behind this.</p>
 <div class="refsect3">
 <a name="id-1.3.14.6.12.24.7"></a><h4>Returns</h4>
 <p> Not useful.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1694,7 +1684,7 @@ was requested from it; for example, as would be for calling
 <a class="link" href="GtkFileChooser.html#gtk-file-chooser-set-current-folder" title="gtk_file_chooser_set_current_folder ()"><code class="function">gtk_file_chooser_set_current_folder()</code></a> on a nonexistent folder. </p>
 <p><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> filename]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1727,9 +1717,8 @@ folder.</p>
 if no file is selected. If <a class="link" href="GtkFileChooser.html#gtk-file-chooser-set-local-only" title="gtk_file_chooser_set_local_only ()"><code class="function">gtk_file_chooser_set_local_only()</code></a> is set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>
 (the default) a local URI will be returned for any FUSE locations.
 Free with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a></p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1810,9 +1799,8 @@ is already known, so the file chooser will use it.</p>
 <div class="refsect3">
 <a name="id-1.3.14.6.12.27.11"></a><h4>Returns</h4>
 <p> Not useful.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1852,9 +1840,8 @@ file in the current folder of <em class="parameter"><code>chooser</code></em>
 <div class="refsect3">
 <a name="id-1.3.14.6.12.28.6"></a><h4>Returns</h4>
 <p> Not useful.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1888,7 +1875,7 @@ is otherwise not currently selected, does nothing.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1920,7 +1907,7 @@ files and subfolders in the current folder. Free the returned list
 with <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free"><code class="function">g_slist_free()</code></a>, and the filenames with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1962,9 +1949,8 @@ for the rationale behind this.</p>
 <a name="id-1.3.14.6.12.31.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the folder could be changed successfully, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>
 otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2003,9 +1989,8 @@ usual way to get the selection.</p>
 function will also return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the file chooser was unable to load the
 last folder that was requested from it; for example, as would be for calling
 <a class="link" href="GtkFileChooser.html#gtk-file-chooser-set-current-folder-uri" title="gtk_file_chooser_set_current_folder_uri ()"><code class="function">gtk_file_chooser_set_current_folder_uri()</code></a> on a nonexistent folder.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2046,7 +2031,7 @@ will display no preview at all.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2075,7 +2060,7 @@ gtk_file_chooser_get_preview_widget (<em class="parameter"><code><a class="link"
 <p> the current preview widget, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2113,7 +2098,7 @@ or it may display no preview at all. See
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2142,9 +2127,8 @@ should be shown for the current filename. See
 <div class="refsect3">
 <a name="id-1.3.14.6.12.36.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the preview widget is active for the current filename.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2180,7 +2164,7 @@ display the name themselves in their preview widget.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2209,7 +2193,6 @@ file.  See <a class="link" href="GtkFileChooser.html#gtk-file-chooser-set-use-pr
 <a name="id-1.3.14.6.12.38.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the file chooser is set to display a label with the
 name of the previewed file, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2241,7 +2224,7 @@ no file is selected, or if the selected file cannot be represented
 as a local filename. Free with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> filename]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2269,9 +2252,8 @@ widget. See <a class="link" href="GtkFileChooser.html#gtk-file-chooser-set-previ
 <a name="id-1.3.14.6.12.40.6"></a><h4>Returns</h4>
 <p> the URI for the file to preview, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no file is
 selected. Free with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2302,7 +2284,7 @@ gtk_file_chooser_set_extra_widget (<em class="parameter"><code><a class="link" h
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2331,7 +2313,7 @@ gtk_file_chooser_get_extra_widget (<em class="parameter"><code><a class="link" h
 <p> the current extra widget, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2368,7 +2350,7 @@ ref and sink it if you want to keep a reference.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2400,7 +2382,7 @@ gtk_file_chooser_remove_filter (<em class="parameter"><code><a class="link" href
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2432,7 +2414,7 @@ contents of the list are owned by GTK+, but you must free the list
 itself with <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free"><code class="function">g_slist_free()</code></a> when you are done with it. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkFileFilter][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2468,7 +2450,7 @@ set of files without letting the user change it.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2496,7 +2478,7 @@ gtk_file_chooser_get_filter (<em class="parameter"><code><a class="link" href="G
 <p> the current filter, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2541,9 +2523,8 @@ application.  For example, you can use this to add a
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the folder could be added successfully, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>
 otherwise.  In the latter case, the <em class="parameter"><code>error</code></em>
 will be set as appropriate.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2587,9 +2568,8 @@ gtk_file_chooser_remove_shortcut_folder
 In the latter case, the <em class="parameter"><code>error</code></em>
 will be set as appropriate.</p>
 <p>See also: <a class="link" href="GtkFileChooser.html#gtk-file-chooser-add-shortcut-folder" title="gtk_file_chooser_add_shortcut_folder ()"><code class="function">gtk_file_chooser_add_shortcut_folder()</code></a></p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2622,7 +2602,7 @@ Free the returned list with <a href="https://developer.gnome.org/glib/unstable/g
 <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> filename][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2668,9 +2648,8 @@ by the application.  For example, you can use this to add a
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the folder could be added successfully, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>
 otherwise.  In the latter case, the <em class="parameter"><code>error</code></em>
 will be set as appropriate.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2714,9 +2693,8 @@ gtk_file_chooser_remove_shortcut_folder_uri
 In the latter case, the <em class="parameter"><code>error</code></em>
 will be set as appropriate.</p>
 <p>See also: <a class="link" href="GtkFileChooser.html#gtk-file-chooser-add-shortcut-folder-uri" title="gtk_file_chooser_add_shortcut_folder_uri ()"><code class="function">gtk_file_chooser_add_shortcut_folder_uri()</code></a></p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2748,7 +2726,7 @@ folder URIs, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard
 returned list with <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free"><code class="function">g_slist_free()</code></a>, and the URIs with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2779,7 +2757,7 @@ See <a class="link" href="GtkFileChooser.html#gtk-file-chooser-get-current-folde
 <p> the <a href="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> for the current folder. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2812,7 +2790,7 @@ folder.</p>
 use <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> to release it. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2845,7 +2823,7 @@ current folder.  Free the returned list with <a href="https://developer.gnome.or
 the files with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GFile][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2875,7 +2853,7 @@ Internal function, see <a class="link" href="GtkFileChooser.html#gtk-file-choose
 or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no file is selected. Free with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2917,9 +2895,8 @@ gtk_file_chooser_select_file (<em class="parameter"><code><a class="link" href="
 <div class="refsect3">
 <a name="id-1.3.14.6.12.58.6"></a><h4>Returns</h4>
 <p> Not useful.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2963,9 +2940,8 @@ Internal function, see <a class="link" href="GtkFileChooser.html#gtk-file-choose
 <a name="id-1.3.14.6.12.59.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the folder could be changed successfully, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>
 otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3058,9 +3034,8 @@ Instead, use something similar to this:</p>
 <div class="refsect3">
 <a name="id-1.3.14.6.12.60.11"></a><h4>Returns</h4>
 <p> Not useful.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3093,7 +3068,7 @@ directory, does not exist, or is otherwise not currently selected, does nothing.
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 </div>
 <div class="refsect1">
@@ -3199,7 +3174,7 @@ let the user choose another filename.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3266,7 +3241,7 @@ let the user choose another filename.</p>
 will offer the user to create new folders.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3277,7 +3252,7 @@ will present an overwrite confirmation dialog if the user
 selects a file name that already exists.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3467,10 +3442,9 @@ illustrates this.</p>
 <a name="id-1.3.14.6.15.2.9"></a><h4>Returns</h4>
 <p> a <a class="link" href="GtkFileChooser.html#GtkFileChooserConfirmation" title="enum GtkFileChooserConfirmation"><span class="type">GtkFileChooserConfirmation</span></a> value that indicates which
 action to take after emitting the signal.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3650,7 +3624,6 @@ chooser about whether the preview was generated successfully or not.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

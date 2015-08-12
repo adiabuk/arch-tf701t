@@ -8,7 +8,7 @@
 <link rel="up" href="migrating.html" title="Part V. Migrating from Previous Versions of GTK+">
 <link rel="prev" href="migrating.html" title="Part V. Migrating from Previous Versions of GTK+">
 <link rel="next" href="ch25s02.html" title="Changes that need to be done at the time of the switch">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -140,7 +140,7 @@
     widgets have been deprecated. These deprecations are clearly spelled
     out in the API reference, with hints about the recommended replacements.
     The API reference for GTK+ 2 also includes an
-    <a class="ulink" href="http://developer.gnome.org/gtk/2.24/api-index-deprecated.html" target="_top">index</a> of all deprecated symbols.
+    <a class="ulink" href="https://developer.gnome.org/gtk2/2.24/api-index-deprecated.html" target="_top">index</a> of all deprecated symbols.
   </p>
 <p>
     To verify that your program does not use any deprecated symbols,
@@ -156,7 +156,7 @@
     Note that some parts of our API, such as enumeration values, are
     not well covered by the deprecation warnings. In most cases, using
     them will require you to also use deprecated functions, which will
-    trigger warnings. But some things, like the <code class="literal">GTK_DIALOG_NO_SEPARATOR</code>
+    trigger warnings. But some things, like the <a href="http://library.gnome.org/devel/gtk3/GtkDialog.html#GTK-DIALOG-NO-SEPARATOR:CAPS"><code class="literal">GTK_DIALOG_NO_SEPARATOR</code></a>
     flag that has disappeared in GTK+ 3, may not.
   </p>
 </div>
@@ -389,9 +389,9 @@
 <span class="normal">                 pixbuf</span><span class="symbol">,</span>
 <span class="normal">                 </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span>
 <span class="normal">                 x</span><span class="symbol">,</span><span class="normal"> y</span><span class="symbol">,</span>
-<span class="normal">                 </span><span class="function">gdk_pixbuf_get_width</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pixbuf</span><span class="symbol">),</span>
-<span class="normal">                 </span><span class="function">gdk_pixbuf_get_height</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pixbuf</span><span class="symbol">),</span>
-<span class="normal">                 GDK_RGB_DITHER_NORMAL</span><span class="symbol">,</span>
+<span class="normal">                 </span><span class="function"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#gdk-pixbuf-get-width">gdk_pixbuf_get_width</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pixbuf</span><span class="symbol">),</span>
+<span class="normal">                 </span><span class="function"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#gdk-pixbuf-get-height">gdk_pixbuf_get_height</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">pixbuf</span><span class="symbol">),</span>
+<span class="normal">                 <a href="http://library.gnome.org/devel/gdk3/gdk2-GdkRGB.html#GDK-RGB-DITHER-NORMAL:CAPS">GDK_RGB_DITHER_NORMAL</a></span><span class="symbol">,</span>
 <span class="normal">                 </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">);</span></pre></td>
       </tr>
     </tbody>
@@ -457,13 +457,13 @@
 <span class="comment">/* setup */</span>
 <span class="normal">gc </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="GtkWidget.html#gtk-widget-get-style">gtk_widget_get_style</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">widget</span><span class="symbol">)-&gt;</span><span class="normal">black_gc</span><span class="symbol">;</span>
 <span class="function"><a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#gdk-gc-set-tile">gdk_gc_set_tile</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">gc</span><span class="symbol">,</span><span class="normal"> pixmap</span><span class="symbol">);</span>
-<span class="function"><a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#gdk-gc-set-fill">gdk_gc_set_fill</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">gc</span><span class="symbol">,</span><span class="normal"> GDK_TILED</span><span class="symbol">);</span>
+<span class="function"><a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#gdk-gc-set-fill">gdk_gc_set_fill</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">gc</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#GDK-TILED:CAPS">GDK_TILED</a></span><span class="symbol">);</span>
 <span class="function"><a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#gdk-gc-set-ts-origin">gdk_gc_set_ts_origin</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">gc</span><span class="symbol">,</span><span class="normal"> x_origin</span><span class="symbol">,</span><span class="normal"> y_origin</span><span class="symbol">);</span>
 <span class="comment">/* use */</span>
 <span class="function"><a href="http://library.gnome.org/devel/gdk3/gdk2-Drawing-Primitives.html#gdk-draw-rectangle">gdk_draw_rectangle</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">window</span><span class="symbol">,</span><span class="normal"> gc</span><span class="symbol">,</span><span class="normal"> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a></span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> width</span><span class="symbol">,</span><span class="normal"> height</span><span class="symbol">);</span>
 <span class="comment">/* restore */</span>
 <span class="function"><a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#gdk-gc-set-tile">gdk_gc_set_tile</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">gc</span><span class="symbol">,</span><span class="normal"> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
-<span class="function"><a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#gdk-gc-set-fill">gdk_gc_set_fill</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">gc</span><span class="symbol">,</span><span class="normal"> GDK_SOLID</span><span class="symbol">);</span>
+<span class="function"><a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#gdk-gc-set-fill">gdk_gc_set_fill</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">gc</span><span class="symbol">,</span><span class="normal"> <a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#GDK-SOLID:CAPS">GDK_SOLID</a></span><span class="symbol">);</span>
 <span class="function"><a href="http://library.gnome.org/devel/gdk3/gdk2-Graphics-Contexts.html#gdk-gc-set-ts-origin">gdk_gc_set_ts_origin</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">gc</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">);</span></pre></td>
       </tr>
     </tbody>
@@ -758,7 +758,6 @@ Another alternative is to use pixbufs instead of surfaces with
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

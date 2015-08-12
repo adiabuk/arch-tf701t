@@ -8,7 +8,7 @@
 <link rel="up" href="reference.html" title="API Reference">
 <link rel="prev" href="gdk3-Pango-Interaction.html" title="Pango Interaction">
 <link rel="next" href="gdk3-X-Window-System-Interaction.html" title="X Window System Interaction">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -135,6 +135,14 @@
 <a class="link" href="gdk3-Cairo-Interaction.html#gdk-cairo-surface-create-from-pixbuf" title="gdk_cairo_surface_create_from_pixbuf ()">gdk_cairo_surface_create_from_pixbuf</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gdk3-Cairo-Interaction.html#gdk-cairo-draw-from-gl" title="gdk_cairo_draw_from_gl ()">gdk_cairo_draw_from_gl</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -151,7 +159,7 @@ can be used with GDK. GTK+ does all of its drawing using cairo.</p>
 <p>GDK does not wrap the cairo API, instead it allows to create cairo
 contexts which can be used to draw on <a href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindows</span></a>. Additional
 functions allow use <a href="gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangles</span></a> with cairo and to use <a href="gdk3-Colors.html#GdkColor"><span class="type">GdkColors</span></a>,
-<a href="gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBAs</span></a>, <span class="type">GdkPixbufs</span> and <a href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindows</span></a> as sources for drawing
+<a href="gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBAs</span></a>, <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbufs</span></a> and <a href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindows</span></a> as sources for drawing
 operations.</p>
 </div>
 <div class="refsect1">
@@ -175,7 +183,7 @@ be examined with <code class="function">cairo_surface_get_type()</code>.</p>
 <p>Initially the surface contents are all 0 (transparent if contents
 have transparency, black otherwise.)</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.2.6"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.2.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -207,7 +215,7 @@ have transparency, black otherwise.)</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.24.6.2.7"></a><h4>Returns</h4>
+<a name="id-1.2.25.6.2.7"></a><h4>Returns</h4>
 <p> a pointer to the newly allocated surface. The caller
 owns the surface and should call <code class="function">cairo_surface_destroy()</code> when done
 with it.</p>
@@ -215,9 +223,8 @@ with it.</p>
 pointer to a “nil” surface if <em class="parameter"><code>other</code></em>
 is already in an error state
 or any other error occurs.</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -235,7 +242,7 @@ given <em class="parameter"><code>window</code></em>
 <p>Initially the surface contents are all 0 (transparent if contents
 have transparency, black otherwise.)</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.3.6"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.3.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -274,7 +281,7 @@ have transparency, black otherwise.)</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.24.6.3.7"></a><h4>Returns</h4>
+<a name="id-1.2.25.6.3.7"></a><h4>Returns</h4>
 <p> a pointer to the newly allocated surface. The caller
 owns the surface and should call <code class="function">cairo_surface_destroy()</code> when done
 with it.</p>
@@ -282,9 +289,8 @@ with it.</p>
 pointer to a “nil” surface if <em class="parameter"><code>other</code></em>
 is already in an error state
 or any other error occurs.</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -294,9 +300,9 @@ gdk_cairo_create (<em class="parameter"><code><a class="link" href="gdk3-Windows
 <p>Creates a Cairo context for drawing to <em class="parameter"><code>window</code></em>
 .</p>
 <p>Note that calling <code class="function">cairo_reset_clip()</code> on the resulting <span class="type">cairo_t</span> will
-rproduce undefined results, so avoid it at all costs.</p>
+produce undefined results, so avoid it at all costs.</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.4.6"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.4.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -311,12 +317,11 @@ rproduce undefined results, so avoid it at all costs.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.24.6.4.7"></a><h4>Returns</h4>
+<a name="id-1.2.25.6.4.7"></a><h4>Returns</h4>
 <p> A newly created Cairo context. Free with
 <code class="function">cairo_destroy()</code> when you are done drawing.</p>
-<p></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -328,7 +333,7 @@ gdk_cairo_get_clip_rectangle (<em class="parameter"><code><span class="type">cai
 It rounds the clip extents to integer coordinates and returns
 a boolean indicating if a clip area exists.</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.5.5"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.5.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -350,11 +355,10 @@ a boolean indicating if a clip area exists.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.24.6.5.6"></a><h4>Returns</h4>
+<a name="id-1.2.25.6.5.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if a clip rectangle exists, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if all of <em class="parameter"><code>cr</code></em>
 is
 clipped and all drawing can be skipped</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -370,7 +374,7 @@ gdk_cairo_set_source_color (<em class="parameter"><code><span class="type">cairo
 <p>Sets the specified <a class="link" href="gdk3-Colors.html#GdkColor" title="GdkColor"><span class="type">GdkColor</span></a> as the source color of <em class="parameter"><code>cr</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.6.7"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.6.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -391,7 +395,7 @@ gdk_cairo_set_source_color (<em class="parameter"><code><span class="type">cairo
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -402,7 +406,7 @@ gdk_cairo_set_source_rgba (<em class="parameter"><code><span class="type">cairo_
 <p>Sets the specified <a class="link" href="gdk3-RGBA-Colors.html#GdkRGBA" title="GdkRGBA"><span class="type">GdkRGBA</span></a> as the source color of <em class="parameter"><code>cr</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.7.5"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -423,14 +427,14 @@ gdk_cairo_set_source_rgba (<em class="parameter"><code><span class="type">cairo_
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gdk-cairo-set-source-pixbuf"></a><h3>gdk_cairo_set_source_pixbuf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gdk_cairo_set_source_pixbuf (<em class="parameter"><code><span class="type">cairo_t</span> *cr</code></em>,
-                             <em class="parameter"><code>const <span class="type">GdkPixbuf</span> *pixbuf</code></em>,
+                             <em class="parameter"><code>const <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *pixbuf</code></em>,
                              <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> pixbuf_x</code></em>,
                              <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> pixbuf_y</code></em>);</pre>
 <p>Sets the given pixbuf as the source pattern for <em class="parameter"><code>cr</code></em>
@@ -441,7 +445,7 @@ so that the origin of <em class="parameter"><code>pixbuf</code></em>
 , <em class="parameter"><code>pixbuf_y</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.8.6"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.8.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -456,7 +460,7 @@ so that the origin of <em class="parameter"><code>pixbuf</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>pixbuf</p></td>
-<td class="parameter_description"><p>a <span class="type">GdkPixbuf</span></p></td>
+<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -474,7 +478,7 @@ so that the origin of <em class="parameter"><code>pixbuf</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -497,7 +501,7 @@ subwindows when rendering.</p>
 visible part of <em class="parameter"><code>window</code></em>
 , so use this function with care.</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.9.7"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.9.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -530,7 +534,7 @@ visible part of <em class="parameter"><code>window</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -541,7 +545,7 @@ gdk_cairo_rectangle (<em class="parameter"><code><span class="type">cairo_t</spa
 <p>Adds the given rectangle to the current path of <em class="parameter"><code>cr</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.10.5"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.10.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -562,7 +566,7 @@ gdk_cairo_rectangle (<em class="parameter"><code><span class="type">cairo_t</spa
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -573,7 +577,7 @@ gdk_cairo_region (<em class="parameter"><code><span class="type">cairo_t</span> 
 <p>Adds the given region to the current path of <em class="parameter"><code>cr</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.11.5"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -594,7 +598,7 @@ gdk_cairo_region (<em class="parameter"><code><span class="type">cairo_t</span> 
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -607,7 +611,7 @@ gdk_cairo_region_create_from_surface (<em class="parameter"><code><span class="t
 <p>This function takes into account device offsets that might be
 set with <code class="function">cairo_surface_set_device_offset()</code>.</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.12.6"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.12.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -622,22 +626,21 @@ set with <code class="function">cairo_surface_set_device_offset()</code>.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.24.6.12.7"></a><h4>Returns</h4>
+<a name="id-1.2.25.6.12.7"></a><h4>Returns</h4>
 <p> A <span class="type">cairo_region_t</span>; must be freed with <code class="function">cairo_region_destroy()</code></p>
-<p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gdk-cairo-surface-create-from-pixbuf"></a><h3>gdk_cairo_surface_create_from_pixbuf ()</h3>
 <pre class="programlisting"><span class="returnvalue">cairo_surface_t</span> *
-gdk_cairo_surface_create_from_pixbuf (<em class="parameter"><code>const <span class="type">GdkPixbuf</span> *pixbuf</code></em>,
+gdk_cairo_surface_create_from_pixbuf (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *pixbuf</code></em>,
                                       <em class="parameter"><code><span class="type">int</span> scale</code></em>,
                                       <em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *for_window</code></em>);</pre>
 <p>Creates an image surface with the same contents as
 the pixbuf.</p>
 <div class="refsect3">
-<a name="id-1.2.24.6.13.5"></a><h4>Parameters</h4>
+<a name="id-1.2.25.6.13.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -647,7 +650,7 @@ the pixbuf.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>pixbuf</p></td>
-<td class="parameter_description"><p>a <span class="type">GdkPixbuf</span></p></td>
+<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -665,11 +668,108 @@ the pixbuf.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.24.6.13.6"></a><h4>Returns</h4>
+<a name="id-1.2.25.6.13.6"></a><h4>Returns</h4>
 <p> a new cairo surface, must be freed with <code class="function">cairo_surface_destroy()</code></p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdk-cairo-draw-from-gl"></a><h3>gdk_cairo_draw_from_gl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gdk_cairo_draw_from_gl (<em class="parameter"><code><span class="type">cairo_t</span> *cr</code></em>,
+                        <em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>,
+                        <em class="parameter"><code><span class="type">int</span> source</code></em>,
+                        <em class="parameter"><code><span class="type">int</span> source_type</code></em>,
+                        <em class="parameter"><code><span class="type">int</span> buffer_scale</code></em>,
+                        <em class="parameter"><code><span class="type">int</span> x</code></em>,
+                        <em class="parameter"><code><span class="type">int</span> y</code></em>,
+                        <em class="parameter"><code><span class="type">int</span> width</code></em>,
+                        <em class="parameter"><code><span class="type">int</span> height</code></em>);</pre>
+<p>This is the main way to draw GL content in GTK+. It takes a render buffer ID 
+(<em class="parameter"><code>source_type</code></em>
+ == <span class="type">GL_RENDERBUFFER</span>) or a texture id (<em class="parameter"><code>source_type</code></em>
+ == <span class="type">GL_TEXTURE</span>)
+and draws it onto <em class="parameter"><code>cr</code></em>
+ with an OVER operation, respecting the current clip.
+The top left corner of the rectangle specified by <em class="parameter"><code>x</code></em>
+, <em class="parameter"><code>y</code></em>
+, <em class="parameter"><code>width</code></em>
+ and <em class="parameter"><code>height</code></em>
+
+will be drawn at the current (0,0) position of the cairo_t.</p>
+<p>This will work for *all* cairo_t, as long as <em class="parameter"><code>window</code></em>
+ is realized, but the
+fallback implementation that reads back the pixels from the buffer may be
+used in the general case. In the case of direct drawing to a window with
+no special effects applied to <em class="parameter"><code>cr</code></em>
+ it will however use a more efficient
+approach.</p>
+<p>For <span class="type">GL_RENDERBUFFER</span> the code will always fall back to software for buffers
+with alpha components, so make sure you use <span class="type">GL_TEXTURE</span> if using alpha.</p>
+<p>Calling this may change the current GL context.</p>
+<div class="refsect3">
+<a name="id-1.2.25.6.14.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cr</p></td>
+<td class="parameter_description"><p>a cairo context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>The window we're rendering for (not necessarily into)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>The GL ID of the source buffer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source_type</p></td>
+<td class="parameter_description"><p>The type of the <em class="parameter"><code>source</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buffer_scale</p></td>
+<td class="parameter_description"><p>The scale-factor that the <em class="parameter"><code>source</code></em>
+buffer is allocated for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>The source x position in <em class="parameter"><code>source</code></em>
+to start copying from in GL coordinates</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y</p></td>
+<td class="parameter_description"><p>The source y position in <em class="parameter"><code>source</code></em>
+to start copying from in GL coordinates</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>The width of the region to draw</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>The height of the region to draw</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -677,7 +777,6 @@ the pixbuf.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

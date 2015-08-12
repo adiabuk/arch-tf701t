@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ATK - Accessibility Toolkit: AtkState</title>
+<title>AtkState: ATK - Accessibility Toolkit</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="ATK - Accessibility Toolkit">
 <link rel="up" href="data.html" title="Basic accessible data types">
@@ -27,7 +27,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="atk-AtkState.top_of_page"></a>AtkState</span></h2>
-<p>AtkState — An AtkState describes a component's particular state.</p>
+<p>AtkState — An AtkState describes a single state of an object.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -86,9 +86,9 @@
 </div>
 <div class="refsect1">
 <a name="atk-AtkState.description"></a><h2>Description</h2>
-<p>An AtkState describes a component's particular state. The actual
-state of an component is described by its AtkStateSet, which is a
-set of AtkStates.</p>
+<p>An AtkState describes a single state of an object. The full set of states
+that apply to an object at a given time are contained in its <a class="link" href="AtkStateSet.html" title="AtkStateSet"><span class="type">AtkStateSet</span></a>.
+See also <a class="link" href="AtkObject.html#atk-object-ref-state-set" title="atk_object_ref_state_set ()"><span class="type">atk_object_ref_state_set</span></a> and <a class="link" href="AtkObject.html#atk-object-notify-state-change" title="atk_object_notify_state_change ()"><span class="type">atk_object_notify_state_change</span></a>.</p>
 </div>
 <div class="refsect1">
 <a name="atk-AtkState.functions_details"></a><h2>Functions</h2>
@@ -200,14 +200,14 @@ atk_state_type_for_name (<em class="parameter"><code>const <span class="type">gc
 <tr>
 <td class="enum_member_name"><p><a name="ATK-STATE-ACTIVE:CAPS"></a>ATK_STATE_ACTIVE</p></td>
 <td class="enum_member_description">
-<p>Indicates a window is currently the active window, or is an active subelement within a container or table</p>
+<p>Indicates a window is currently the active window, or an object is the active subelement within a container or table. ATK_STATE_ACTIVE should not be used for objects which have ATK_STATE_FOCUSABLE or ATK_STATE_SELECTABLE: Those objects should use ATK_STATE_FOCUSED and ATK_STATE_SELECTED respectively. ATK_STATE_ACTIVE is a means to indicate that an object which is not focusable and not selectable is the currently-active item within its parent container.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="ATK-STATE-ARMED:CAPS"></a>ATK_STATE_ARMED</p></td>
 <td class="enum_member_description">
-<p>Indicates that the object is 'armed', i.e. will be activated by if a pointer button-release event occurs within its bounds.  Buttons often enter this state when a pointer click occurs within their bounds, as a precursor to activation.</p>
+<p>Indicates that the object is 'armed', i.e. will be activated by if a pointer button-release event occurs within its bounds.  Buttons often enter this state when a pointer click occurs within their bounds, as a precursor to activation. ATK_STATE_ARMED has been deprecated since ATK-2.16 and should not be used in newly-written code.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -235,7 +235,12 @@ atk_state_type_for_name (<em class="parameter"><code>const <span class="type">gc
 <tr>
 <td class="enum_member_name"><p><a name="ATK-STATE-EDITABLE:CAPS"></a>ATK_STATE_EDITABLE</p></td>
 <td class="enum_member_description">
-<p>Indicates the user can change the contents of this object</p>
+<p>Indicates that this object can contain text, and that the
+user can change the textual contents of this object by editing those contents
+directly. For an object which is expected to be editable due to its type, but
+which cannot be edited due to the application or platform preventing the user
+from doing so, that object's <a class="link" href="AtkStateSet.html" title="AtkStateSet"><span class="type">AtkStateSet</span></a> should lack ATK_STATE_EDITABLE and
+should contain ATK_STATE_READ_ONLY.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -319,7 +324,7 @@ atk_state_type_for_name (<em class="parameter"><code>const <span class="type">gc
 <tr>
 <td class="enum_member_name"><p><a name="ATK-STATE-PRESSED:CAPS"></a>ATK_STATE_PRESSED</p></td>
 <td class="enum_member_description">
-<p>Indicates this object is currently pressed; c.f. ATK_STATE_ARMED</p>
+<p>Indicates this object is currently pressed.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -426,14 +431,13 @@ having previously requested references to those children.</p>
 <tr>
 <td class="enum_member_name"><p><a name="ATK-STATE-INDETERMINATE:CAPS"></a>ATK_STATE_INDETERMINATE</p></td>
 <td class="enum_member_description">
-<p>Indicates that a check box is in a state other than checked or not checked.
-This usually means that the boolean value reflected or 
-controlled by the object does not apply consistently to the entire current context.
-For example, a checkbox for the "Bold" attribute of text may have STATE_INDETERMINATE
-if the currently selected text contains a mixture of weight attributes.  
-In many cases interacting with a STATE_INDETERMINATE object will cause 
-the context's corresponding boolean attribute to be homogenized, whereupon the object
-will lose STATE_INDETERMINATE and a corresponding state-changed event will be fired.</p>
+<p>Indicates that the value, or some other quantifiable
+property, of this AtkObject cannot be fully determined. In the case of a large
+data set in which the total number of items in that set is unknown (e.g. 1 of
+999+), implementors should expose the currently-known set size (999) along
+with this state. In the case of a check box, this state should be used to
+indicate that the check box is a tri-state check box which is currently
+neither checked nor unchecked.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -525,6 +529,30 @@ menu or sub-level menu which may or may not be showing. This means
 that activation renders conditional content.  Note that ordinary
 tooltips are not considered popups in this context. <em class="parameter"><code>Since</code></em>
 : ATK-2.12</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ATK-STATE-HAS-TOOLTIP:CAPS"></a>ATK_STATE_HAS_TOOLTIP</p></td>
+<td class="enum_member_description">
+<p>Indicates this object has a tooltip. <em class="parameter"><code>Since</code></em>
+: ATK-2.16</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ATK-STATE-READ-ONLY:CAPS"></a>ATK_STATE_READ_ONLY</p></td>
+<td class="enum_member_description">
+<p>Indicates that a widget which is ENABLED and SENSITIVE
+has a value which can be read, but not modified, by the user. Note that this
+state should only be applied to widget types whose value is normally directly
+user modifiable, such as check boxes, radio buttons, spin buttons, text input
+fields, and combo boxes, as a means to convey that the expected interaction
+with that widget is not possible. When the expected interaction with a
+widget does not include modification by the user, as is the case with
+labels and containers, ATK_STATE_READ_ONLY should not be applied. See also
+ATK_STATE_EDITABLE. <em class="parameter"><code>Since</code></em>
+: ATK-2-16</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

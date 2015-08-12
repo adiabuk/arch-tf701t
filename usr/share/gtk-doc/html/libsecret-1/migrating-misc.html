@@ -2,17 +2,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Libsecret Library Reference Manual: Errors and cancellation</title>
+<title>Errors and cancellation: Libsecret Library Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Libsecret Library Reference Manual">
 <link rel="up" href="migrating-api.html" title="API conversion">
 <link rel="prev" href="migrating-memory.html" title="Non-pageable memory">
 <link rel="next" href="annotation-glossary.html" title="Annotation Glossary">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts"></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="migrating-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
@@ -22,14 +22,14 @@
 <div class="section">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="migrating-misc"></a>Errors and cancellation</h2></div></div></div>
-<p>libsecret uses standard the standard <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> idiom
+<p>libsecret uses standard the standard <span class="type">GCancellable</span> idiom
 	to cancel operations.</p>
 <p>It is not necessary to check whether the keyring daemon is
 	available before using it. It is started automatically.</p>
-<p>Errors are returned as standard <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> in the usual way.
+<p>Errors are returned as standard <span class="type">GError</span> in the usual way.
 	There are fewer errors that are worth handling in an intelligent way,
 	exceptions are in the <a class="link" href="libsecret-SecretError.html#SecretError" title="enum SecretError"><span class="type">SecretError</span></a> enumeration. It is not recommended
-	to display any <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> message returned by libsecret to the user. Most
+	to display any <span class="type">GError</span> message returned by libsecret to the user. Most
 	of the possible errors are DBus communication problems or similar.</p>
 <p>Replacements for related libgnome-keyring functions and types
 	are described below:
@@ -49,7 +49,7 @@
 <tr>
 <td><code class="function">gnome_keyring_cancel_request()</code></td>
 <td>
-<a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html#g-cancellable-cancel"><code class="function">g_cancellable_cancel()</code></a> on a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> passed to the relevant operation</td>
+<code class="function">g_cancellable_cancel()</code> on a <span class="type">GCancellable</span> passed to the relevant operation</td>
 </tr>
 <tr>
 <td><code class="function">gnome_keyring_is_available()</code></td>
@@ -57,11 +57,11 @@
 </tr>
 <tr>
 <td><code class="function">gnome_keyring_result_to_message()</code></td>
-<td>use the message in the <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, although most failures are not appropriate for display to the user</td>
+<td>use the message in the <span class="type">GError</span>, although most failures are not appropriate for display to the user</td>
 </tr>
 <tr>
 <td><code class="literal">GNOME_KEYRING_RESULT_OK</code></td>
-<td>no <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> returned</td>
+<td>no <span class="type">GError</span> returned</td>
 </tr>
 <tr>
 <td><code class="literal">GNOME_KEYRING_RESULT_DENIED</code></td>
@@ -69,7 +69,7 @@
 </tr>
 <tr>
 <td><code class="literal">GNOME_KEYRING_RESULT_NO_KEYRING_DAEMON</code></td>
-<td><a href="http://library.gnome.org/devel/gio/unstable/gio-GDBusError.html#G-DBUS-ERROR-SPAWN-SERVICE-NOT-FOUND:CAPS"><code class="literal">G_DBUS_ERROR_SPAWN_SERVICE_NOT_FOUND</code></a></td>
+<td><code class="literal">G_DBUS_ERROR_SPAWN_SERVICE_NOT_FOUND</code></td>
 </tr>
 <tr>
 <td><code class="literal">GNOME_KEYRING_RESULT_ALREADY_UNLOCKED</code></td>
@@ -82,7 +82,7 @@
 <tr>
 <td><code class="literal">GNOME_KEYRING_RESULT_BAD_ARGUMENTS</code></td>
 <td>
-<a href="http://library.gnome.org/devel/gio/unstable/gio-GDBusError.html#G-DBUS-ERROR-INVALID-ARGS:CAPS"><code class="literal">G_DBUS_ERROR_INVALID_ARGS</code></a> or precondition failure in libsecret, this is always
+<code class="literal">G_DBUS_ERROR_INVALID_ARGS</code> or precondition failure in libsecret, this is always
 			a programmer error</td>
 </tr>
 <tr>
@@ -92,7 +92,7 @@
 </tr>
 <tr>
 <td><code class="literal">GNOME_KEYRING_RESULT_CANCELLED</code></td>
-<td><a href="http://library.gnome.org/devel/gio/unstable/gio-GIOError.html#G-IO-ERROR-CANCELLED:CAPS"><code class="literal">G_IO_ERROR_CANCELLED</code></a></td>
+<td><code class="literal">G_IO_ERROR_CANCELLED</code></td>
 </tr>
 <tr>
 <td><code class="literal">GNOME_KEYRING_RESULT_KEYRING_ALREADY_EXISTS</code></td>
@@ -112,7 +112,6 @@
 <p><br class="table-break"></p>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

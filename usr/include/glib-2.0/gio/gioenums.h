@@ -470,12 +470,18 @@ typedef enum {
  * @G_IO_ERROR_PROXY_NOT_ALLOWED: Proxy connection is not allowed by ruleset.
  *     Since 2.26
  * @G_IO_ERROR_BROKEN_PIPE: Broken pipe. Since 2.36
+ * @G_IO_ERROR_CONNECTION_CLOSED: Connection closed by peer. Note that this
+ *     is the same code as %G_IO_ERROR_BROKEN_PIPE; before 2.44 some
+ *     "connection closed" errors returned %G_IO_ERROR_BROKEN_PIPE, but others
+ *     returned %G_IO_ERROR_FAILED. Now they should all return the same
+ *     value, which has this more logical name. Since 2.44.
+ * @G_IO_ERROR_NOT_CONNECTED: Transport endpoint is not connected. Since 2.44
  *
  * Error codes returned by GIO functions.
  *
  * Note that this domain may be extended in future GLib releases. In
  * general, new error codes either only apply to new APIs, or else
- * replace #G_IO_ERROR_FAILED in cases that were not explicitly
+ * replace %G_IO_ERROR_FAILED in cases that were not explicitly
  * distinguished before. You should therefore avoid writing code like
  * |[<!-- language="C" -->
  * if (g_error_matches (error, G_IO_ERROR, G_IO_ERROR_FAILED))
@@ -532,7 +538,9 @@ typedef enum {
   G_IO_ERROR_PROXY_AUTH_FAILED,
   G_IO_ERROR_PROXY_NEED_AUTH,
   G_IO_ERROR_PROXY_NOT_ALLOWED,
-  G_IO_ERROR_BROKEN_PIPE
+  G_IO_ERROR_BROKEN_PIPE,
+  G_IO_ERROR_CONNECTION_CLOSED = G_IO_ERROR_BROKEN_PIPE,
+  G_IO_ERROR_NOT_CONNECTED
 } GIOErrorEnum;
 
 
@@ -1810,6 +1818,30 @@ typedef enum {
   G_NOTIFICATION_PRIORITY_HIGH,
   G_NOTIFICATION_PRIORITY_URGENT
 } GNotificationPriority;
+
+/**
+ * GNetworkConnectivity:
+ * @G_NETWORK_CONNECTIVITY_LOCAL: The host is not configured with a
+ *   route to the Internet; it may or may not be connected to a local
+ *   network.
+ * @G_NETWORK_CONNECTIVITY_LIMITED: The host is connected to a network, but
+ *   does not appear to be able to reach the full Internet, perhaps
+ *   due to upstream network problems.
+ * @G_NETWORK_CONNECTIVITY_PORTAL: The host is behind a captive portal and
+ *   cannot reach the full Internet.
+ * @G_NETWORK_CONNECTIVITY_FULL: The host is connected to a network, and
+ *   appears to be able to reach the full Internet.
+ *
+ * The host's network connectivity state, as reported by #GNetworkMonitor.
+ *
+ * Since: 2.44
+ */
+typedef enum {
+  G_NETWORK_CONNECTIVITY_LOCAL       = 1,
+  G_NETWORK_CONNECTIVITY_LIMITED     = 2,
+  G_NETWORK_CONNECTIVITY_PORTAL      = 3,
+  G_NETWORK_CONNECTIVITY_FULL        = 4
+} GNetworkConnectivity;
 
 G_END_DECLS
 

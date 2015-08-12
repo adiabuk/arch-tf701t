@@ -284,6 +284,8 @@ type_names['int32_t'] = TYPE_INT32
 type_names['uint32_t'] = TYPE_UINT32
 type_names['int64_t'] = TYPE_INT64
 type_names['uint64_t'] = TYPE_UINT64
+# C99 stdbool
+type_names['bool'] = TYPE_BOOLEAN
 
 # A few additional GLib type aliases
 type_names['guchar'] = TYPE_UINT8
@@ -374,6 +376,7 @@ class Namespace(object):
         self.type_names = {}         # Maps from GTName -> node
         self.ctypes = {}             # Maps from CType -> node
         self.symbols = {}            # Maps from function symbols -> Function
+        # Immediate includes only, not their transitive closure:
         self.includes = set()        # Include
         self.shared_libraries = []   # str
         self.c_includes = []         # str

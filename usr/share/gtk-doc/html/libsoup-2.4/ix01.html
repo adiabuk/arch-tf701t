@@ -173,6 +173,8 @@
 </dt>
 <dt>SoupMessage::restarted, <a class="indexterm" href="SoupMessage.html#SoupMessage-restarted">The “restarted” signal</a>
 </dt>
+<dt>SoupMessage::starting, <a class="indexterm" href="SoupMessage.html#SoupMessage-starting">The “starting” signal</a>
+</dt>
 <dt>SoupMessage::wrote-body, <a class="indexterm" href="SoupMessage.html#SoupMessage-wrote-body">The “wrote-body” signal</a>
 </dt>
 <dt>SoupMessage::wrote-body-data, <a class="indexterm" href="SoupMessage.html#SoupMessage-wrote-body-data">The “wrote-body-data” signal</a>
@@ -291,6 +293,8 @@
 </dt>
 <dt>SoupServerListenOptions, <a class="indexterm" href="SoupServer.html#SoupServerListenOptions">enum SoupServerListenOptions</a>
 </dt>
+<dt>SoupServerWebsocketCallback, <a class="indexterm" href="SoupServer.html#SoupServerWebsocketCallback">SoupServerWebsocketCallback ()</a>
+</dt>
 <dt>SoupSession, <a class="indexterm" href="SoupSession.html#SoupSession-struct">SoupSession</a>
 </dt>
 <dt>SoupSession::authenticate, <a class="indexterm" href="SoupSession.html#SoupSession-authenticate">The “authenticate” signal</a>
@@ -375,11 +379,11 @@
 </dt>
 <dt>SoupSocket:async-context, <a class="indexterm" href="SoupSocket.html#SoupSocket--async-context">The “async-context” property</a>
 </dt>
-<dt>SoupSocket:close-on-dispose, <a class="indexterm" href="SoupSocket.html#SoupSocket--close-on-dispose">The “close-on-dispose” property</a>
-</dt>
 <dt>SoupSocket:fd, <a class="indexterm" href="SoupSocket.html#SoupSocket--fd">The “fd” property</a>
 </dt>
 <dt>SoupSocket:gsocket, <a class="indexterm" href="SoupSocket.html#SoupSocket--gsocket">The “gsocket” property</a>
+</dt>
+<dt>SoupSocket:iostream, <a class="indexterm" href="SoupSocket.html#SoupSocket--iostream">The “iostream” property</a>
 </dt>
 <dt>SoupSocket:ipv6-only, <a class="indexterm" href="SoupSocket.html#SoupSocket--ipv6-only">The “ipv6-only” property</a>
 </dt>
@@ -418,6 +422,38 @@
 <dt>SoupTLDError, <a class="indexterm" href="libsoup-2.4-Top-Level-Domain-utils.html#SoupTLDError">enum SoupTLDError</a>
 </dt>
 <dt>SoupURI, <a class="indexterm" href="SoupURI.html#SoupURI-struct">SoupURI</a>
+</dt>
+<dt>SoupWebsocketCloseCode, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketCloseCode">enum SoupWebsocketCloseCode</a>
+</dt>
+<dt>SoupWebsocketConnection, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-struct">SoupWebsocketConnection</a>
+</dt>
+<dt>SoupWebsocketConnection::closed, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-closed">The “closed” signal</a>
+</dt>
+<dt>SoupWebsocketConnection::closing, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-closing">The “closing” signal</a>
+</dt>
+<dt>SoupWebsocketConnection::error, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-error">The “error” signal</a>
+</dt>
+<dt>SoupWebsocketConnection::message, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-message">The “message” signal</a>
+</dt>
+<dt>SoupWebsocketConnection:connection-type, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--connection-type">The “connection-type” property</a>
+</dt>
+<dt>SoupWebsocketConnection:io-stream, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--io-stream">The “io-stream” property</a>
+</dt>
+<dt>SoupWebsocketConnection:origin, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--origin">The “origin” property</a>
+</dt>
+<dt>SoupWebsocketConnection:protocol, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--protocol">The “protocol” property</a>
+</dt>
+<dt>SoupWebsocketConnection:state, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--state">The “state” property</a>
+</dt>
+<dt>SoupWebsocketConnection:uri, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--uri">The “uri” property</a>
+</dt>
+<dt>SoupWebsocketConnectionType, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnectionType">enum SoupWebsocketConnectionType</a>
+</dt>
+<dt>SoupWebsocketDataType, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketDataType">enum SoupWebsocketDataType</a>
+</dt>
+<dt>SoupWebsocketError, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketError">enum SoupWebsocketError</a>
+</dt>
+<dt>SoupWebsocketState, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SoupWebsocketState">enum SoupWebsocketState</a>
 </dt>
 <dt>SoupXMLRPCFault, <a class="indexterm" href="libsoup-2.4-XMLRPC-Support.html#SoupXMLRPCFault">enum SoupXMLRPCFault</a>
 </dt>
@@ -614,6 +650,8 @@
 <dt>soup_client_context_get_remote_address, <a class="indexterm" href="SoupServer.html#soup-client-context-get-remote-address">soup_client_context_get_remote_address ()</a>
 </dt>
 <dt>soup_client_context_get_socket, <a class="indexterm" href="libsoup-2.4-SoupServer-deprecated-API.html#soup-client-context-get-socket">soup_client_context_get_socket ()</a>
+</dt>
+<dt>soup_client_context_steal_connection, <a class="indexterm" href="SoupServer.html#soup-client-context-steal-connection">soup_client_context_steal_connection ()</a>
 </dt>
 <dt>soup_content_sniffer_get_buffer_size, <a class="indexterm" href="SoupContentSniffer.html#soup-content-sniffer-get-buffer-size">soup_content_sniffer_get_buffer_size ()</a>
 </dt>
@@ -907,11 +945,17 @@
 </dt>
 <dt>soup_message_headers_get_expectations, <a class="indexterm" href="SoupMessageHeaders.html#soup-message-headers-get-expectations">soup_message_headers_get_expectations ()</a>
 </dt>
+<dt>soup_message_headers_get_headers_type, <a class="indexterm" href="SoupMessageHeaders.html#soup-message-headers-get-headers-type">soup_message_headers_get_headers_type ()</a>
+</dt>
 <dt>soup_message_headers_get_list, <a class="indexterm" href="SoupMessageHeaders.html#soup-message-headers-get-list">soup_message_headers_get_list ()</a>
 </dt>
 <dt>soup_message_headers_get_one, <a class="indexterm" href="SoupMessageHeaders.html#soup-message-headers-get-one">soup_message_headers_get_one ()</a>
 </dt>
 <dt>soup_message_headers_get_ranges, <a class="indexterm" href="SoupMessageHeaders.html#soup-message-headers-get-ranges">soup_message_headers_get_ranges ()</a>
+</dt>
+<dt>soup_message_headers_header_contains, <a class="indexterm" href="SoupMessageHeaders.html#soup-message-headers-header-contains">soup_message_headers_header_contains ()</a>
+</dt>
+<dt>soup_message_headers_header_equals, <a class="indexterm" href="SoupMessageHeaders.html#soup-message-headers-header-equals">soup_message_headers_header_equals ()</a>
 </dt>
 <dt>soup_message_headers_iter_init, <a class="indexterm" href="SoupMessageHeaders.html#soup-message-headers-iter-init">soup_message_headers_iter_init ()</a>
 </dt>
@@ -1083,9 +1127,15 @@
 </dt>
 <dt>SOUP_REQUEST_URI, <a class="indexterm" href="SoupRequest.html#SOUP-REQUEST-URI:CAPS">SOUP_REQUEST_URI</a>
 </dt>
+<dt>soup_server_accept_iostream, <a class="indexterm" href="SoupServer.html#soup-server-accept-iostream">soup_server_accept_iostream ()</a>
+</dt>
 <dt>soup_server_add_auth_domain, <a class="indexterm" href="SoupServer.html#soup-server-add-auth-domain">soup_server_add_auth_domain ()</a>
 </dt>
+<dt>soup_server_add_early_handler, <a class="indexterm" href="SoupServer.html#soup-server-add-early-handler">soup_server_add_early_handler ()</a>
+</dt>
 <dt>soup_server_add_handler, <a class="indexterm" href="SoupServer.html#soup-server-add-handler">soup_server_add_handler ()</a>
+</dt>
+<dt>soup_server_add_websocket_handler, <a class="indexterm" href="SoupServer.html#soup-server-add-websocket-handler">soup_server_add_websocket_handler ()</a>
 </dt>
 <dt>SOUP_SERVER_ASYNC_CONTEXT, <a class="indexterm" href="libsoup-2.4-SoupServer-deprecated-API.html#SOUP-SERVER-ASYNC-CONTEXT:CAPS">SOUP_SERVER_ASYNC_CONTEXT</a>
 </dt>
@@ -1094,6 +1144,8 @@
 <dt>soup_server_get_async_context, <a class="indexterm" href="libsoup-2.4-SoupServer-deprecated-API.html#soup-server-get-async-context">soup_server_get_async_context ()</a>
 </dt>
 <dt>soup_server_get_listener, <a class="indexterm" href="libsoup-2.4-SoupServer-deprecated-API.html#soup-server-get-listener">soup_server_get_listener ()</a>
+</dt>
+<dt>soup_server_get_listeners, <a class="indexterm" href="SoupServer.html#soup-server-get-listeners">soup_server_get_listeners ()</a>
 </dt>
 <dt>soup_server_get_port, <a class="indexterm" href="libsoup-2.4-SoupServer-deprecated-API.html#soup-server-get-port">soup_server_get_port ()</a>
 </dt>
@@ -1239,6 +1291,8 @@
 </dt>
 <dt>SOUP_SESSION_SSL_USE_SYSTEM_CA_FILE, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-SSL-USE-SYSTEM-CA-FILE:CAPS">SOUP_SESSION_SSL_USE_SYSTEM_CA_FILE</a>
 </dt>
+<dt>soup_session_steal_connection, <a class="indexterm" href="SoupSession.html#soup-session-steal-connection">soup_session_steal_connection ()</a>
+</dt>
 <dt>soup_session_sync_new, <a class="indexterm" href="SoupSessionSync.html#soup-session-sync-new">soup_session_sync_new ()</a>
 </dt>
 <dt>soup_session_sync_new_with_options, <a class="indexterm" href="SoupSessionSync.html#soup-session-sync-new-with-options">soup_session_sync_new_with_options ()</a>
@@ -1247,11 +1301,17 @@
 </dt>
 <dt>SOUP_SESSION_TLS_DATABASE, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-TLS-DATABASE:CAPS">SOUP_SESSION_TLS_DATABASE</a>
 </dt>
+<dt>SOUP_SESSION_TLS_INTERACTION, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-TLS-INTERACTION:CAPS">SOUP_SESSION_TLS_INTERACTION</a>
+</dt>
 <dt>soup_session_unpause_message, <a class="indexterm" href="SoupSession.html#soup-session-unpause-message">soup_session_unpause_message ()</a>
 </dt>
 <dt>SOUP_SESSION_USER_AGENT, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-USER-AGENT:CAPS">SOUP_SESSION_USER_AGENT</a>
 </dt>
 <dt>SOUP_SESSION_USE_THREAD_CONTEXT, <a class="indexterm" href="SoupSession.html#SOUP-SESSION-USE-THREAD-CONTEXT:CAPS">SOUP_SESSION_USE_THREAD_CONTEXT</a>
+</dt>
+<dt>soup_session_websocket_connect_async, <a class="indexterm" href="SoupSession.html#soup-session-websocket-connect-async">soup_session_websocket_connect_async ()</a>
+</dt>
+<dt>soup_session_websocket_connect_finish, <a class="indexterm" href="SoupSession.html#soup-session-websocket-connect-finish">soup_session_websocket_connect_finish ()</a>
 </dt>
 <dt>soup_session_would_redirect, <a class="indexterm" href="SoupSession.html#soup-session-would-redirect">soup_session_would_redirect ()</a>
 </dt>
@@ -1399,6 +1459,10 @@
 </dt>
 <dt>SOUP_URI_SCHEME_RESOURCE, <a class="indexterm" href="SoupURI.html#SOUP-URI-SCHEME-RESOURCE:CAPS">SOUP_URI_SCHEME_RESOURCE</a>
 </dt>
+<dt>SOUP_URI_SCHEME_WS, <a class="indexterm" href="SoupURI.html#SOUP-URI-SCHEME-WS:CAPS">SOUP_URI_SCHEME_WS</a>
+</dt>
+<dt>SOUP_URI_SCHEME_WSS, <a class="indexterm" href="SoupURI.html#SOUP-URI-SCHEME-WSS:CAPS">SOUP_URI_SCHEME_WSS</a>
+</dt>
 <dt>soup_uri_set_fragment, <a class="indexterm" href="SoupURI.html#soup-uri-set-fragment">soup_uri_set_fragment ()</a>
 </dt>
 <dt>soup_uri_set_host, <a class="indexterm" href="SoupURI.html#soup-uri-set-host">soup_uri_set_host ()</a>
@@ -1483,9 +1547,47 @@
 </dt>
 <dt>SOUP_VERSION_2_46, <a class="indexterm" href="libsoup-2.4-Version-Information.html#SOUP-VERSION-2-46:CAPS">SOUP_VERSION_2_46</a>
 </dt>
+<dt>SOUP_VERSION_2_48, <a class="indexterm" href="libsoup-2.4-Version-Information.html#SOUP-VERSION-2-48:CAPS">SOUP_VERSION_2_48</a>
+</dt>
+<dt>SOUP_VERSION_2_50, <a class="indexterm" href="libsoup-2.4-Version-Information.html#SOUP-VERSION-2-50:CAPS">SOUP_VERSION_2_50</a>
+</dt>
 <dt>SOUP_VERSION_MAX_ALLOWED, <a class="indexterm" href="libsoup-2.4-Version-Information.html#SOUP-VERSION-MAX-ALLOWED:CAPS">SOUP_VERSION_MAX_ALLOWED</a>
 </dt>
 <dt>SOUP_VERSION_MIN_REQUIRED, <a class="indexterm" href="libsoup-2.4-Version-Information.html#SOUP-VERSION-MIN-REQUIRED:CAPS">SOUP_VERSION_MIN_REQUIRED</a>
+</dt>
+<dt>soup_websocket_client_prepare_handshake, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-client-prepare-handshake">soup_websocket_client_prepare_handshake ()</a>
+</dt>
+<dt>soup_websocket_client_verify_handshake, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-client-verify-handshake">soup_websocket_client_verify_handshake ()</a>
+</dt>
+<dt>soup_websocket_connection_close, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-close">soup_websocket_connection_close ()</a>
+</dt>
+<dt>soup_websocket_connection_get_close_code, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-close-code">soup_websocket_connection_get_close_code ()</a>
+</dt>
+<dt>soup_websocket_connection_get_close_data, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-close-data">soup_websocket_connection_get_close_data ()</a>
+</dt>
+<dt>soup_websocket_connection_get_connection_type, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-connection-type">soup_websocket_connection_get_connection_type ()</a>
+</dt>
+<dt>soup_websocket_connection_get_io_stream, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-io-stream">soup_websocket_connection_get_io_stream ()</a>
+</dt>
+<dt>soup_websocket_connection_get_origin, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-origin">soup_websocket_connection_get_origin ()</a>
+</dt>
+<dt>soup_websocket_connection_get_protocol, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-protocol">soup_websocket_connection_get_protocol ()</a>
+</dt>
+<dt>soup_websocket_connection_get_state, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-state">soup_websocket_connection_get_state ()</a>
+</dt>
+<dt>soup_websocket_connection_get_uri, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-uri">soup_websocket_connection_get_uri ()</a>
+</dt>
+<dt>soup_websocket_connection_new, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-new">soup_websocket_connection_new ()</a>
+</dt>
+<dt>soup_websocket_connection_send_binary, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-send-binary">soup_websocket_connection_send_binary ()</a>
+</dt>
+<dt>soup_websocket_connection_send_text, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-connection-send-text">soup_websocket_connection_send_text ()</a>
+</dt>
+<dt>SOUP_WEBSOCKET_ERROR, <a class="indexterm" href="libsoup-2.4-WebSockets.html#SOUP-WEBSOCKET-ERROR:CAPS">SOUP_WEBSOCKET_ERROR</a>
+</dt>
+<dt>soup_websocket_server_check_handshake, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-server-check-handshake">soup_websocket_server_check_handshake ()</a>
+</dt>
+<dt>soup_websocket_server_process_handshake, <a class="indexterm" href="libsoup-2.4-WebSockets.html#soup-websocket-server-process-handshake">soup_websocket_server_process_handshake ()</a>
 </dt>
 <dt>soup_xmlrpc_build_fault, <a class="indexterm" href="libsoup-2.4-XMLRPC-Support.html#soup-xmlrpc-build-fault">soup_xmlrpc_build_fault ()</a>
 </dt>

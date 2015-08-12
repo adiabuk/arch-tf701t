@@ -1,0 +1,36 @@
+%NAME%
+libvisual
+
+%VERSION%
+0.4.0-6
+
+%DESC%
+Abstraction library that comes between applications and audio visualisation plugins
+
+%URL%
+http://sourceforge.net/projects/libvisual/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1434027907
+
+%INSTALLDATE%
+1439237103
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu4@archlinuxarm.org>
+
+%SIZE%
+514048
+
+%REASON%
+1
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+

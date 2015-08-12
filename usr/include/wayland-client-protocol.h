@@ -39,28 +39,28 @@ extern "C" {
 struct wl_client;
 struct wl_resource;
 
-struct wl_display;
-struct wl_registry;
+struct wl_buffer;
 struct wl_callback;
 struct wl_compositor;
-struct wl_shm_pool;
-struct wl_shm;
-struct wl_buffer;
-struct wl_data_offer;
-struct wl_data_source;
 struct wl_data_device;
 struct wl_data_device_manager;
+struct wl_data_offer;
+struct wl_data_source;
+struct wl_display;
+struct wl_keyboard;
+struct wl_output;
+struct wl_pointer;
+struct wl_region;
+struct wl_registry;
+struct wl_seat;
 struct wl_shell;
 struct wl_shell_surface;
-struct wl_surface;
-struct wl_seat;
-struct wl_pointer;
-struct wl_keyboard;
-struct wl_touch;
-struct wl_output;
-struct wl_region;
+struct wl_shm;
+struct wl_shm_pool;
 struct wl_subcompositor;
 struct wl_subsurface;
+struct wl_surface;
+struct wl_touch;
 
 extern const struct wl_interface wl_display_interface;
 extern const struct wl_interface wl_registry_interface;
@@ -2170,7 +2170,7 @@ wl_touch_release(struct wl_touch *wl_touch)
  * @WL_OUTPUT_SUBPIXEL_VERTICAL_BGR: (none)
  *
  * This enumeration describes how the physical pixels on an output are
- * layed out.
+ * laid out.
  */
 enum wl_output_subpixel {
 	WL_OUTPUT_SUBPIXEL_UNKNOWN = 0,

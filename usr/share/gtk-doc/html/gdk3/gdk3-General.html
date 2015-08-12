@@ -8,7 +8,7 @@
 <link rel="up" href="reference.html" title="API Reference">
 <link rel="prev" href="reference.html" title="API Reference">
 <link rel="next" href="GdkDisplayManager.html" title="GdkDisplayManager">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -413,7 +413,6 @@ needed by GTK+ applications.</p>
 <div class="refsect3">
 <a name="id-1.2.2.7.3.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if initialization succeeded.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -452,7 +451,7 @@ updated accordingly.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -468,7 +467,7 @@ otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macro
 modified or freed. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -482,7 +481,7 @@ windows.</p>
 <p>GTK+ will call this function automatically after opening the first
 <a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="type">GtkWindow</span></a> unless <a href="http://developer.gnome.org/gtk2/GtkWindow.html#gtk-window-set-auto-startup-notification"><code class="function">gtk_window_set_auto_startup_notification()</code></a> is called
 to disable that feature.</p>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -511,7 +510,7 @@ notification process should be completed</p></td>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -563,7 +562,7 @@ in order to take effect.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -577,7 +576,6 @@ with <a href="https://developer.gnome.org/glib/unstable/glib-Miscellaneous-Utili
 <div class="refsect3">
 <a name="id-1.2.2.7.9.5"></a><h4>Returns</h4>
 <p> the program class.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -588,8 +586,10 @@ gdk_set_program_class (<em class="parameter"><code>const <a href="https://develo
 <p>Sets the program class. The X11 backend uses the program class to set
 the class name part of the <code class="literal">WM_CLASS</code> property on
 toplevel windows; see the ICCCM.</p>
+<p>The program class can still be overridden with the --class command
+line option.</p>
 <div class="refsect3">
-<a name="id-1.2.2.7.10.5"></a><h4>Parameters</h4>
+<a name="id-1.2.2.7.10.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -620,7 +620,6 @@ gdk_get_display (<em class="parameter"><code><span class="type">void</span></cod
 <div class="refsect3">
 <a name="id-1.2.2.7.11.6"></a><h4>Returns</h4>
 <p> the name of the display.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -641,7 +640,6 @@ gdk_screen_width (<em class="parameter"><code><span class="type">void</span></co
 <div class="refsect3">
 <a name="id-1.2.2.7.13.5"></a><h4>Returns</h4>
 <p> the width of the default screen in pixels.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -653,7 +651,6 @@ gdk_screen_height (<em class="parameter"><code><span class="type">void</span></c
 <div class="refsect3">
 <a name="id-1.2.2.7.14.5"></a><h4>Returns</h4>
 <p> the height of the default screen in pixels.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -667,7 +664,6 @@ Note that on many X servers this value will not be correct.</p>
 <a name="id-1.2.2.7.15.5"></a><h4>Returns</h4>
 <p> the width of the default screen in millimeters,
 though it is not always correct.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -681,7 +677,6 @@ Note that on many X servers this value will not be correct.</p>
 <a name="id-1.2.2.7.16.5"></a><h4>Returns</h4>
 <p> the height of the default screen in millimeters,
 though it is not always correct.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -784,7 +779,6 @@ the time isn’t known.</p></td>
 <div class="refsect3">
 <a name="id-1.2.2.7.17.10"></a><h4>Returns</h4>
 <p> <a class="link" href="gdk3-General.html#GDK-GRAB-SUCCESS:CAPS"><code class="literal">GDK_GRAB_SUCCESS</code></a> if the grab was successful.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -832,7 +826,6 @@ presses into account.</p>
 <div class="refsect3">
 <a name="id-1.2.2.7.19.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the pointer is currently grabbed by this application.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -916,7 +909,6 @@ available.</p></td>
 <div class="refsect3">
 <a name="id-1.2.2.7.21.8"></a><h4>Returns</h4>
 <p> <a class="link" href="gdk3-General.html#GDK-GRAB-SUCCESS:CAPS"><code class="literal">GDK_GRAB_SUCCESS</code></a> if the grab was successful.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1021,7 +1013,6 @@ call to Xlib was not a blocking round trip.</p>
 <div class="refsect3">
 <a name="id-1.2.2.7.25.6"></a><h4>Returns</h4>
 <p> X error code or 0 on success</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1033,7 +1024,7 @@ gdk_error_trap_pop_ignored (<em class="parameter"><code><span class="type">void<
 without bothering to wait and see whether an error occurred.  If an
 error arrives later asynchronously that was triggered while the
 trap was pushed, that error will be ignored.</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1042,7 +1033,7 @@ trap was pushed, that error will be ignored.</p>
 </pre>
 <p>A macro that evaluates to the 3.0 version of GDK, in a format
 that can be used by the C pre-processor.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1051,7 +1042,7 @@ that can be used by the C pre-processor.</p>
 </pre>
 <p>A macro that evaluates to the 3.2 version of GDK, in a format
 that can be used by the C pre-processor.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1060,7 +1051,7 @@ that can be used by the C pre-processor.</p>
 </pre>
 <p>A macro that evaluates to the 3.4 version of GDK, in a format
 that can be used by the C pre-processor.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1069,7 +1060,7 @@ that can be used by the C pre-processor.</p>
 </pre>
 <p>A macro that evaluates to the 3.6 version of GDK, in a format
 that can be used by the C pre-processor.</p>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1078,7 +1069,7 @@ that can be used by the C pre-processor.</p>
 </pre>
 <p>A macro that evaluates to the 3.8 version of GDK, in a format
 that can be used by the C pre-processor.</p>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1087,7 +1078,7 @@ that can be used by the C pre-processor.</p>
 </pre>
 <p>A macro that evaluates to the 3.10 version of GDK, in a format
 that can be used by the C pre-processor.</p>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1096,7 +1087,7 @@ that can be used by the C pre-processor.</p>
 </pre>
 <p>A macro that evaluates to the 3.12 version of GDK, in a format
 that can be used by the C pre-processor.</p>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1105,7 +1096,7 @@ that can be used by the C pre-processor.</p>
 </pre>
 <p>A macro that evaluates to the 3.14 version of GDK, in a format
 that can be used by the C pre-processor.</p>
-<p class="since">Since 3.14</p>
+<p class="since">Since: <a class="link" href="api-index-3-14.html#api-index-3.14">3.14</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1120,7 +1111,7 @@ macros: <a class="link" href="gdk3-General.html#GDK-VERSION-3-0:CAPS" title="GDK
 <p>If a function has been deprecated in a newer version of GDK,
 it is possible to use this symbol to avoid the compiler warnings
 without disabling warning for every deprecated function.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -1173,6 +1164,13 @@ indicate success or the reason for the failure of the grab attempt.</p>
 <td class="enum_member_name"><p><a name="GDK-GRAB-FROZEN:CAPS"></a>GDK_GRAB_FROZEN</p></td>
 <td class="enum_member_description">
 <p>the resource is frozen by an active grab of another client.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GDK-GRAB-FAILED:CAPS"></a>GDK_GRAB_FAILED</p></td>
+<td class="enum_member_description">
+<p>the grab failed for some other reason.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1229,7 +1227,7 @@ macros: <a class="link" href="gdk3-General.html#GDK-VERSION-3-0:CAPS" title="GDK
 <p>If a function has been introduced in a newer version of GDK,
 it is possible to use this symbol to get compiler warnings when
 trying to use that function.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1243,7 +1241,6 @@ of deprecated GDK APIs.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

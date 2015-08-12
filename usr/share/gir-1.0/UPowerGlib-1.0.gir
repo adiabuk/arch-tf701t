@@ -5462,7 +5462,7 @@ See up_device_glue_proxy_new_for_bus_sync() for the synchronous, blocking versio
     <constant name="MAJOR_VERSION" value="0" c:type="UP_MAJOR_VERSION">
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="MICRO_VERSION" value="2" c:type="UP_MICRO_VERSION">
+    <constant name="MICRO_VERSION" value="3" c:type="UP_MICRO_VERSION">
       <doc xml:space="preserve">The compile-time micro version</doc>
       <type name="gint" c:type="gint"/>
     </constant>

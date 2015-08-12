@@ -8,6 +8,7 @@
 
 #include <libsoup/soup-types.h>
 #include <libsoup/soup-uri.h>
+#include <libsoup/soup-websocket-connection.h>
 
 G_BEGIN_DECLS
 
@@ -54,13 +55,6 @@ typedef struct {
 } SoupServerClass;
 
 GType soup_server_get_type (void);
-
-typedef void (*SoupServerCallback) (SoupServer        *server,
-				    SoupMessage       *msg, 
-				    const char        *path,
-				    GHashTable        *query,
-				    SoupClientContext *client,
-				    gpointer           user_data);
 
 #define SOUP_SERVER_TLS_CERTIFICATE "tls-certificate"
 #define SOUP_SERVER_RAW_PATHS       "raw-paths"
@@ -110,14 +104,48 @@ GSList         *soup_server_get_listeners      (SoupServer               *server
 
 void            soup_server_disconnect         (SoupServer               *server);
 
+SOUP_AVAILABLE_IN_2_50
+gboolean        soup_server_accept_iostream    (SoupServer               *server,
+						GIOStream                *stream,
+						GSocketAddress           *local_addr,
+						GSocketAddress           *remote_addr,
+						GError                  **error);
 
 /* Handlers and auth */
+
+typedef void  (*SoupServerCallback)            (SoupServer         *server,
+						SoupMessage        *msg,
+						const char         *path,
+						GHashTable         *query,
+						SoupClientContext  *client,
+						gpointer            user_data);
 
 void            soup_server_add_handler        (SoupServer         *server,
 					        const char         *path,
 					        SoupServerCallback  callback,
 					        gpointer            user_data,
 					        GDestroyNotify      destroy);
+SOUP_AVAILABLE_IN_2_50
+void            soup_server_add_early_handler  (SoupServer         *server,
+						const char         *path,
+						SoupServerCallback  callback,
+						gpointer            user_data,
+						GDestroyNotify      destroy);
+
+typedef void (*SoupServerWebsocketCallback) (SoupServer              *server,
+					     SoupWebsocketConnection *connection,
+					     const char              *path,
+					     SoupClientContext       *client,
+					     gpointer                 user_data);
+SOUP_AVAILABLE_IN_2_50
+void            soup_server_add_websocket_handler (SoupServer                   *server,
+						   const char                   *path,
+						   const char                   *origin,
+						   char                        **protocols,
+						   SoupServerWebsocketCallback   callback,
+						   gpointer                      user_data,
+						   GDestroyNotify                destroy);
+
 void            soup_server_remove_handler     (SoupServer         *server,
 					        const char         *path);
 
@@ -145,6 +173,8 @@ const char     *soup_client_context_get_host           (SoupClientContext *clien
 SoupAuthDomain *soup_client_context_get_auth_domain    (SoupClientContext *client);
 const char     *soup_client_context_get_auth_user      (SoupClientContext *client);
 
+SOUP_AVAILABLE_IN_2_50
+GIOStream      *soup_client_context_steal_connection   (SoupClientContext *client);
 
 /* Legacy API */
 

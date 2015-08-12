@@ -1,4 +1,4 @@
-root:$6$U1yY2yn7$KhXpHrZq9/5ez4HTjHwfkkJ.6ZJ5coT7p5gel/T51i.kGzoofcqUhMOUU3P7ucnZ7pZm6CWJkWgK1TJvbuoHn/:16531::::::
+root:$6$sffwuM5v$/HxCDONr5SPXW2runCw2IQVJFgphKKKhi/Nc17EElWdJLw0rm5mFlprVYRn2sx1EQMH4njuZYShwjvV/faHar1:16655::::::
 bin:x:14871::::::
 daemon:x:14871::::::
 mail:x:14871::::::
@@ -21,3 +21,4 @@ colord:!:16531:0:99999:7:::
 lightdm:!:16531:0:99999:7:::
 git:!:16531::::::
 rtkit:!:16532:0:99999:7:::
+pulse:!:16532:0:99999:7:::

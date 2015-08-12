@@ -8,7 +8,7 @@
 <link rel="up" href="gtkbase.html" title="Part III. GTK+ Core Reference">
 <link rel="prev" href="gtk3-Drag-and-Drop.html" title="Drag and Drop">
 <link rel="next" href="gtk3-Bindings.html" title="Bindings">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -654,13 +654,13 @@ These files must be valid key files (see <a href="https://developer.gnome.org/gl
 a section called Settings. Themes can also provide default values
 for settings by installing a <code class="literal">settings.ini</code> file
 next to their <code class="literal">gtk.css</code> file.</p>
-<p>Applications can override system-wide settings with
-<a class="link" href="GtkSettings.html#gtk-settings-set-string-property" title="gtk_settings_set_string_property ()"><code class="function">gtk_settings_set_string_property()</code></a>, <a class="link" href="GtkSettings.html#gtk-settings-set-long-property" title="gtk_settings_set_long_property ()"><code class="function">gtk_settings_set_long_property()</code></a>,
-etc. This should be restricted to special cases though; GtkSettings are
-not meant as an application configuration facility. When doing so, you
-need to be aware that settings that are specific to individual widgets
-may not be available before the widget type has been realized at least
-once. The following example demonstrates a way to do this:</p>
+<p>Applications can override system-wide settings by setting the property
+of the GtkSettings object with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set"><code class="function">g_object_set()</code></a>. This should be restricted
+to special cases though; GtkSettings are not meant as an application
+configuration facility. When doing so, you need to be aware that settings
+that are specific to individual widgets may not be available before the
+widget type has been realized at least once. The following example
+demonstrates a way to do this:</p>
 <div class="informalexample">
   <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
     <tbody>
@@ -730,13 +730,17 @@ gtk_settings_get_for_screen (<em class="parameter"><code><a href="http://develop
 <p> a <a class="link" href="GtkSettings.html" title="Settings"><span class="type">GtkSettings</span></a> object. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-settings-install-property"></a><h3>gtk_settings_install_property ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_settings_install_property (<em class="parameter"><code><a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec"><span class="type">GParamSpec</span></a> *pspec</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_settings_install_property</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>This function is not useful outside GTK+.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -744,8 +748,12 @@ gtk_settings_install_property (<em class="parameter"><code><a href="https://deve
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_settings_install_property_parser (<em class="parameter"><code><a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec"><span class="type">GParamSpec</span></a> *pspec</code></em>,
                                       <em class="parameter"><code><a class="link" href="GtkStyle.html#GtkRcPropertyParser" title="GtkRcPropertyParser ()"><span class="type">GtkRcPropertyParser</span></a> parser</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_settings_install_property_parser</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>This function is not useful outside GTK+.</p>
+</div>
 <div class="refsect3">
-<a name="id-1.4.8.10.5.4"></a><h4>Parameters</h4>
+<a name="id-1.4.8.10.5.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -805,7 +813,6 @@ between 0 and 1.</p>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>gstring</code></em>
 could be parsed and <em class="parameter"><code>property_value</code></em>
 has been set to the resulting <a href="http://developer.gnome.org/gdk2/gdk3-Colors.html#GdkColor"><span class="type">GdkColor</span></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -853,7 +860,6 @@ may be surrounded by parentheses.</p>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>gstring</code></em>
 could be parsed and <em class="parameter"><code>property_value</code></em>
 has been set to the resulting <a href="https://developer.gnome.org/gobject/unstable/gobject-Enumeration-and-Flag-Types.html#GEnumValue"><span class="type">GEnumValue</span></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -900,7 +906,6 @@ numerically. Multiple flags can be specified in the form
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>gstring</code></em>
 could be parsed and <em class="parameter"><code>property_value</code></em>
 has been set to the resulting flags value.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -946,7 +951,6 @@ requisition in the form
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>gstring</code></em>
 could be parsed and <em class="parameter"><code>property_value</code></em>
 has been set to the resulting <a class="link" href="GtkWidget.html#GtkRequisition"><span class="type">GtkRequisition</span></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -993,7 +997,6 @@ left, right, top and bottom.</p>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>gstring</code></em>
 could be parsed and <em class="parameter"><code>property_value</code></em>
 has been set to the resulting <a class="link" href="GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1003,6 +1006,10 @@ has been set to the resulting <a class="link" href="GtkStyleContext.html#GtkBord
 gtk_settings_set_property_value (<em class="parameter"><code><a class="link" href="GtkSettings.html" title="Settings"><span class="type">GtkSettings</span></a> *settings</code></em>,
                                  <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
                                  <em class="parameter"><code>const <a class="link" href="GtkSettings.html#GtkSettingsValue" title="struct GtkSettingsValue"><span class="type">GtkSettingsValue</span></a> *svalue</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_settings_set_property_value</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>Use <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set"><code class="function">g_object_set()</code></a> instead.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -1012,6 +1019,10 @@ gtk_settings_set_string_property (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
                                   <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *v_string</code></em>,
                                   <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *origin</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_settings_set_string_property</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>Use <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set"><code class="function">g_object_set()</code></a> instead.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -1021,6 +1032,10 @@ gtk_settings_set_long_property (<em class="parameter"><code><a class="link" href
                                 <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> v_long</code></em>,
                                 <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *origin</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_settings_set_long_property</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>Use <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set"><code class="function">g_object_set()</code></a> instead.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -1030,6 +1045,10 @@ gtk_settings_set_double_property (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
                                   <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> v_double</code></em>,
                                   <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *origin</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_settings_set_double_property</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>Use <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set"><code class="function">g_object_set()</code></a> instead.</p>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -1184,7 +1203,7 @@ views. By default an arrow pointing down means the column is sorted
 in ascending order. When set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, this order will be inverted.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1201,7 +1220,7 @@ the distraction of the chrome.</p>
 and the dark chrome creates too much contrast (web browser, text editor...).</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1215,7 +1234,7 @@ presses the mnemonic activator.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1298,7 +1317,7 @@ by ';' instead of newlines:</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: ""</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1330,7 +1349,7 @@ The timer is reset after each user interaction.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 10</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1371,7 +1390,7 @@ that can be closed.</p>
 <a class="link" href="GtkHeaderBar.html#GtkHeaderBar--decoration-layout" title="The “decoration-layout” property"><span class="type">“decoration-layout”</span></a> property.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: "menu:minimize,maximize,close"</p>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1384,7 +1403,7 @@ the top to show action widgets, or an action area at the bottom.</p>
 directly, or message dialogs.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1421,7 +1440,7 @@ directly, or message dialogs.</p>
 activated.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1442,7 +1461,7 @@ for more information on event sounds and sound themes.</p>
 module like the one that comes with libcanberra.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1455,7 +1474,7 @@ for more information on event sounds and sound themes.</p>
 module like the one that comes with libcanberra.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1470,7 +1489,7 @@ can be activated.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1480,7 +1499,7 @@ can be activated.</p>
 'PRIMARY' clipboard content at the cursor location.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1493,7 +1512,7 @@ can be activated.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1504,7 +1523,7 @@ entries. This value is in milliseconds. 0 disables showing the
 last char. 600 is a good value for enabling it.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1525,7 +1544,7 @@ configure the error bell in many ways, such as flashing the
 window or similar visual effects.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1653,7 +1672,7 @@ to be present on the used input device.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1667,7 +1686,7 @@ navigation, such as menus, menubars and notebooks.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1685,7 +1704,7 @@ navigation, such as menus, menubars and notebooks.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &lt;= G_MAXINT</p>
 <p>Default value: 500</p>
-<p class="since">Since 3.14</p>
+<p class="since">Since: <a class="link" href="api-index-3-14.html#api-index-3.14">3.14</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1763,7 +1782,7 @@ navigation, such as menus, menubars and notebooks.</p>
 scroll by a single page in the respective direction.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1774,7 +1793,7 @@ dialog. Available print backends depend on the GTK+ installation,
 and may include "file", "cups", "lpr" or "papi".</p>
 <p>Flags: Read / Write</p>
 <p>Default value: "file,cups,cloudprint"</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1790,7 +1809,7 @@ containing the print settings in the format produced by
 and the print settings file when it is done.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: "evince --unlink-tempfile --preview --print-settings %s %f"</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1800,7 +1819,7 @@ and the print settings file when it is done.</p>
 resources list. If set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>, the list will always be empty.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1816,7 +1835,7 @@ resources list. If set to <a href="https://developer.gnome.org/glib/unstable/gli
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: 50</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1829,7 +1848,7 @@ set to -1, no item will be removed.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: 30</p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1843,7 +1862,7 @@ scrollbars, if not overridden by the scrolled window's own placement.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: GTK_CORNER_TOP_LEFT</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1904,7 +1923,7 @@ for more information on event sounds and sound themes.</p>
 module like the one that comes with libcanberra.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: "freedesktop"</p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1971,7 +1990,7 @@ occurs on the titlebar of client-side decorated windows.</p>
 or none.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: "toggle-maximize"</p>
-<p class="since">Since 3.14.1</p>
+<p class="since">Since: 3.14.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1983,7 +2002,7 @@ occurs on the titlebar of client-side decorated windows.</p>
 or none.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: "none"</p>
-<p class="since">Since 3.14.1</p>
+<p class="since">Since: 3.14.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1995,7 +2014,7 @@ occurs on the titlebar of client-side decorated windows.</p>
 or none.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: "menu"</p>
-<p class="since">Since 3.14.1</p>
+<p class="since">Since: 3.14.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2036,7 +2055,7 @@ about browse mode.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 500</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2057,7 +2076,7 @@ for the new object.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 60</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2072,7 +2091,7 @@ cursor is hovering on top of a widget.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 500</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2088,7 +2107,7 @@ functionality.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2102,7 +2121,7 @@ or hidden until the user starts to use the keyboard.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: GTK_POLICY_AUTOMATIC</p>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2150,7 +2169,6 @@ or hidden until the user starts to use the keyboard.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

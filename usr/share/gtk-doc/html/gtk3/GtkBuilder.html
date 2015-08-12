@@ -8,7 +8,7 @@
 <link rel="up" href="Builder.html" title="Interface builder">
 <link rel="prev" href="Builder.html" title="Interface builder">
 <link rel="next" href="GtkBuildable.html" title="GtkBuildable">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -341,14 +341,12 @@ used to connect handlers to the named signals in the description.</p>
 <a name="BUILDER-UI"></a><h3>GtkBuilder UI Definitions</h3>
 <p>GtkBuilder parses textual descriptions of user interfaces which are
 specified in an XML format which can be roughly described by the
-RELAX NG schema below. We refer to these descriptions as
-“GtkBuilder UI definitions” or just
-“UI definitions” if the context is clear.
+RELAX NG schema below. We refer to these descriptions as “GtkBuilder
+UI definitions” or just “UI definitions” if the context is clear.
 Do not confuse GtkBuilder UI Definitions with
-<a class="link" href="GtkUIManager.html#XML-UI" title="UI Definitions">GtkUIManager UI Definitions</a>, which
-are more limited in scope. It is common to use <code class="literal">.ui</code>
-as the filename extension for files containing GtkBuilder UI
-definitions.</p>
+<a class="link" href="GtkUIManager.html#XML-UI" title="UI Definitions">GtkUIManager UI Definitions</a>, which are more limited in scope.
+It is common to use <code class="literal">.ui</code> as the filename extension for files containing
+GtkBuilder UI definitions.</p>
 <p><a class="ulink" href="https://git.gnome.org/browse/gtk+/tree/gtk/gtkbuilder.rnc" target="_top">RELAX NG Compact Syntax</a></p>
 <p>The toplevel element is &lt;interface&gt;. It optionally takes a “domain”
 attribute, which will make the builder look for translated strings
@@ -470,10 +468,10 @@ sections describing the widget-specific portions of UI definitions.</p>
         <td class="listing_code"><pre class="programlisting"><span class="symbol">&lt;</span><span class="normal">interface</span><span class="symbol">&gt;</span>
 <span class="normal">  </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkDialog"</span><span class="normal"> id</span><span class="symbol">=</span><span class="string">"dialog1"</span><span class="symbol">&gt;</span>
 <span class="normal">    </span><span class="symbol">&lt;</span><span class="usertype">child</span><span class="normal"> internal</span><span class="symbol">-</span><span class="normal">child</span><span class="symbol">=</span><span class="string">"vbox"</span><span class="symbol">&gt;</span>
-<span class="normal">      </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkVBox"</span><span class="normal"> id</span><span class="symbol">=</span><span class="string">"vbox1"</span><span class="symbol">&gt;</span>
+<span class="normal">      </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkBox"</span><span class="normal"> id</span><span class="symbol">=</span><span class="string">"vbox1"</span><span class="symbol">&gt;</span>
 <span class="normal">        </span><span class="symbol">&lt;</span><span class="usertype">property</span><span class="normal"> name</span><span class="symbol">=</span><span class="string">"border-width"</span><span class="symbol">&gt;</span><span class="number">10</span><span class="symbol">&lt;/</span><span class="normal">property</span><span class="symbol">&gt;</span>
 <span class="normal">        </span><span class="symbol">&lt;</span><span class="usertype">child</span><span class="normal"> internal</span><span class="symbol">-</span><span class="normal">child</span><span class="symbol">=</span><span class="string">"action_area"</span><span class="symbol">&gt;</span>
-<span class="normal">          </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkHButtonBox"</span><span class="normal"> id</span><span class="symbol">=</span><span class="string">"hbuttonbox1"</span><span class="symbol">&gt;</span>
+<span class="normal">          </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkButtonBox"</span><span class="normal"> id</span><span class="symbol">=</span><span class="string">"hbuttonbox1"</span><span class="symbol">&gt;</span>
 <span class="normal">            </span><span class="symbol">&lt;</span><span class="usertype">property</span><span class="normal"> name</span><span class="symbol">=</span><span class="string">"border-width"</span><span class="symbol">&gt;</span><span class="number">20</span><span class="symbol">&lt;/</span><span class="normal">property</span><span class="symbol">&gt;</span>
 <span class="normal">            </span><span class="symbol">&lt;</span><span class="normal">child</span><span class="symbol">&gt;</span>
 <span class="normal">              </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkButton"</span><span class="normal"> id</span><span class="symbol">=</span><span class="string">"ok_button"</span><span class="symbol">&gt;</span>
@@ -502,7 +500,8 @@ an &lt;object&gt; element gets parsed by the custom tag handler of the object.</
 <p>These XML fragments are explained in the documentation of the
 respective objects.</p>
 <p>Additionally, since 3.10 a special &lt;template&gt; tag has been added
-to the format allowing one to define a widget class’s components.</p>
+to the format allowing one to define a widget class’s components.
+See the <a class="link" href="GtkWidget.html#composite-templates" title="Building composite widgets from template XML">GtkWidget documentation</a> for details.</p>
 </div>
 </div>
 <div class="refsect1">
@@ -570,7 +569,7 @@ subsequent calls will do nothing.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -578,18 +577,17 @@ subsequent calls will do nothing.</p>
 <pre class="programlisting"><a class="link" href="GtkBuilder.html" title="GtkBuilder"><span class="returnvalue">GtkBuilder</span></a> *
 gtk_builder_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Creates a new empty builder object.</p>
-<p>This function is only useful if you intend to make multiple calls to
-<a class="link" href="GtkBuilder.html#gtk-builder-add-from-file" title="gtk_builder_add_from_file ()"><code class="function">gtk_builder_add_from_file()</code></a>, <a class="link" href="GtkBuilder.html#gtk-builder-add-from-resource" title="gtk_builder_add_from_resource ()"><code class="function">gtk_builder_add_from_resource()</code></a> or
-<a class="link" href="GtkBuilder.html#gtk-builder-add-from-string" title="gtk_builder_add_from_string ()"><code class="function">gtk_builder_add_from_string()</code></a> in order to merge multiple UI
+<p>This function is only useful if you intend to make multiple calls
+to <a class="link" href="GtkBuilder.html#gtk-builder-add-from-file" title="gtk_builder_add_from_file ()"><code class="function">gtk_builder_add_from_file()</code></a>, <a class="link" href="GtkBuilder.html#gtk-builder-add-from-resource" title="gtk_builder_add_from_resource ()"><code class="function">gtk_builder_add_from_resource()</code></a>
+or <a class="link" href="GtkBuilder.html#gtk-builder-add-from-string" title="gtk_builder_add_from_string ()"><code class="function">gtk_builder_add_from_string()</code></a> in order to merge multiple UI
 descriptions into a single builder.</p>
 <p>Most users will probably want to use <a class="link" href="GtkBuilder.html#gtk-builder-new-from-file" title="gtk_builder_new_from_file ()"><code class="function">gtk_builder_new_from_file()</code></a>,
 <a class="link" href="GtkBuilder.html#gtk-builder-new-from-resource" title="gtk_builder_new_from_resource ()"><code class="function">gtk_builder_new_from_resource()</code></a> or <a class="link" href="GtkBuilder.html#gtk-builder-new-from-string" title="gtk_builder_new_from_string ()"><code class="function">gtk_builder_new_from_string()</code></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.3.7"></a><h4>Returns</h4>
 <p> a new (empty) <a class="link" href="GtkBuilder.html" title="GtkBuilder"><span class="type">GtkBuilder</span></a> object</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -620,9 +618,8 @@ user interface descriptions that are shipped as part of your program.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.4.7"></a><h4>Returns</h4>
 <p> a <a class="link" href="GtkBuilder.html" title="GtkBuilder"><span class="type">GtkBuilder</span></a> containing the described interface</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -632,8 +629,8 @@ gtk_builder_new_from_resource (<em class="parameter"><code>const <a href="https:
 <p>Builds the <a class="link" href="GtkBuilder.html#BUILDER-UI" title="GtkBuilder UI Definitions">GtkBuilder UI definition</a>
 at <em class="parameter"><code>resource_path</code></em>
 .</p>
-<p>If there is an error locating the resurce or parsing the description
-then the program will be aborted.</p>
+<p>If there is an error locating the resource or parsing the
+description, then the program will be aborted.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.5.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -652,9 +649,8 @@ then the program will be aborted.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.5.7"></a><h4>Returns</h4>
 <p> a <a class="link" href="GtkBuilder.html" title="GtkBuilder"><span class="type">GtkBuilder</span></a> containing the described interface</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -666,14 +662,14 @@ gtk_builder_new_from_string (<em class="parameter"><code>const <a href="https://
  (in the
 <a class="link" href="GtkBuilder.html#BUILDER-UI" title="GtkBuilder UI Definitions">GtkBuilder UI definition</a> format).</p>
 <p>If <em class="parameter"><code>string</code></em>
- is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated then <em class="parameter"><code>length</code></em>
- should be -1.  If <em class="parameter"><code>length</code></em>
-
-is not -1 then it is the length of <em class="parameter"><code>string</code></em>
+ is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated, then <em class="parameter"><code>length</code></em>
+ should be -1.
+If <em class="parameter"><code>length</code></em>
+ is not -1, then it is the length of <em class="parameter"><code>string</code></em>
 .</p>
 <p>If there is an error parsing <em class="parameter"><code>string</code></em>
  then the program will be
-aborted.  You should not attempt to parse user interface description
+aborted. You should not attempt to parse user interface description
 from untrusted sources.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.6.7"></a><h4>Parameters</h4>
@@ -702,9 +698,8 @@ from untrusted sources.</p>
 <a name="id-1.3.5.2.9.6.8"></a><h4>Returns</h4>
 <p> a <a class="link" href="GtkBuilder.html" title="GtkBuilder"><span class="type">GtkBuilder</span></a> containing the interface described by <em class="parameter"><code>string</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -748,7 +743,7 @@ the global namespace.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -792,7 +787,7 @@ gtk_builder_add_callback_symbols (<em class="parameter"><code><a class="link" hr
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -806,8 +801,9 @@ with <a class="link" href="GtkBuilder.html#gtk-builder-add-callback-symbols" tit
 <p>This function is intended for possible use in language bindings
 or for any case that one might be cusomizing signal connections
 using <a class="link" href="GtkBuilder.html#gtk-builder-connect-signals-full" title="gtk_builder_connect_signals_full ()"><code class="function">gtk_builder_connect_signals_full()</code></a></p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.3.5.2.9.9.6"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.9.9.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -829,13 +825,12 @@ using <a class="link" href="GtkBuilder.html#gtk-builder-connect-signals-full" ti
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.2.9.9.7"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.9.9.8"></a><h4>Returns</h4>
 <p> The callback symbol in <em class="parameter"><code>builder</code></em>
 for <em class="parameter"><code>callback_name</code></em>
 , or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -848,15 +843,15 @@ gtk_builder_add_from_file (<em class="parameter"><code><a class="link" href="Gtk
 and merges it with the current contents of <em class="parameter"><code>builder</code></em>
 .</p>
 <p>Most users will probably want to use <a class="link" href="GtkBuilder.html#gtk-builder-new-from-file" title="gtk_builder_new_from_file ()"><code class="function">gtk_builder_new_from_file()</code></a>.</p>
-<p>Upon errors 0 will be returned and <em class="parameter"><code>error</code></em>
+<p>If an error occurs, 0 will be returned and <em class="parameter"><code>error</code></em>
  will be assigned a
 <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> from the <a class="link" href="GtkBuilder.html#GTK-BUILDER-ERROR:CAPS" title="GTK_BUILDER_ERROR"><span class="type">GTK_BUILDER_ERROR</span></a>, <a href="https://developer.gnome.org/glib/unstable/glib-Simple-XML-Subset-Parser.html#G-MARKUP-ERROR:CAPS"><span class="type">G_MARKUP_ERROR</span></a> or <a href="https://developer.gnome.org/glib/unstable/glib-File-Utilities.html#G-FILE-ERROR:CAPS"><span class="type">G_FILE_ERROR</span></a> 
 domain.</p>
 <p>It’s not really reasonable to attempt to handle failures of this
-call.  You should not use this function with untrusted files (ie:
-files that are not part of your application).  Broken <a class="link" href="GtkBuilder.html" title="GtkBuilder"><span class="type">GtkBuilder</span></a>
+call. You should not use this function with untrusted files (ie:
+files that are not part of your application). Broken <a class="link" href="GtkBuilder.html" title="GtkBuilder"><span class="type">GtkBuilder</span></a>
 files can easily crash your program, and it’s possible that memory
-was leaked leading up to the reported failure.  The only reasonable
+was leaked leading up to the reported failure. The only reasonable
 thing to do when an error is detected is to call <a href="https://developer.gnome.org/glib/unstable/glib-Message-Logging.html#g-error"><code class="function">g_error()</code></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.10.8"></a><h4>Parameters</h4>
@@ -888,9 +883,8 @@ thing to do when an error is detected is to call <a href="https://developer.gnom
 <div class="refsect3">
 <a name="id-1.3.5.2.9.10.9"></a><h4>Returns</h4>
 <p> A positive value on success, 0 if an error occurred</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -903,7 +897,7 @@ gtk_builder_add_from_resource (<em class="parameter"><code><a class="link" href=
 and merges it with the current contents of <em class="parameter"><code>builder</code></em>
 .</p>
 <p>Most users will probably want to use <a class="link" href="GtkBuilder.html#gtk-builder-new-from-resource" title="gtk_builder_new_from_resource ()"><code class="function">gtk_builder_new_from_resource()</code></a>.</p>
-<p>Upon errors 0 will be returned and <em class="parameter"><code>error</code></em>
+<p>If an error occurs, 0 will be returned and <em class="parameter"><code>error</code></em>
  will be assigned a
 <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> from the <a class="link" href="GtkBuilder.html#GTK-BUILDER-ERROR:CAPS" title="GTK_BUILDER_ERROR"><span class="type">GTK_BUILDER_ERROR</span></a>, <a href="https://developer.gnome.org/glib/unstable/glib-Simple-XML-Subset-Parser.html#G-MARKUP-ERROR:CAPS"><span class="type">G_MARKUP_ERROR</span></a> or <a href="https://developer.gnome.org/gio/unstable/GResource.html#G-RESOURCE-ERROR:CAPS"><span class="type">G_RESOURCE_ERROR</span></a>
 domain.</p>
@@ -940,9 +934,8 @@ to call <a href="https://developer.gnome.org/glib/unstable/glib-Message-Logging.
 <div class="refsect3">
 <a name="id-1.3.5.2.9.11.9"></a><h4>Returns</h4>
 <p> A positive value on success, 0 if an error occurred</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1000,9 +993,8 @@ is nul-terminated)</p></td>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.12.9"></a><h4>Returns</h4>
 <p> A positive value on success, 0 if an error occurred</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1059,9 +1051,8 @@ its child (for instance a <a class="link" href="GtkTreeView.html" title="GtkTree
 <div class="refsect3">
 <a name="id-1.3.5.2.9.13.8"></a><h4>Returns</h4>
 <p> A positive value on success, 0 if an error occurred</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1125,9 +1116,8 @@ is nul-terminated)</p></td>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.14.8"></a><h4>Returns</h4>
 <p> A positive value on success, 0 if an error occurred</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1184,9 +1174,8 @@ its child (for instance a <a class="link" href="GtkTreeView.html" title="GtkTree
 <div class="refsect3">
 <a name="id-1.3.5.2.9.15.8"></a><h4>Returns</h4>
 <p> A positive value on success, 0 if an error occurred</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1226,7 +1215,7 @@ or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#
 it could not be found in the object tree. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1259,7 +1248,7 @@ constructed by the <a class="link" href="GtkBuilder.html" title="GtkBuilder"><sp
 <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free"><code class="function">g_slist_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GObject][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1299,7 +1288,7 @@ other object built by builder.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1348,7 +1337,7 @@ gmodule-export-2.0.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1387,7 +1376,7 @@ require GModule to function correctly.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1420,7 +1409,7 @@ See <a class="link" href="GtkBuilder.html#GtkBuilder--translation-domain" title=
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1448,9 +1437,8 @@ gtk_builder_get_translation_domain (<em class="parameter"><code><a class="link" 
 <a name="id-1.3.5.2.9.22.6"></a><h4>Returns</h4>
 <p> the translation domain. This string is owned
 by the builder object and must not be modified or freed.</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1461,7 +1449,7 @@ gtk_builder_set_application (<em class="parameter"><code><a class="link" href="G
 <p>Sets the application associated with <em class="parameter"><code>builder</code></em>
 .</p>
 <p>You only need this function if there is more than one <a href="https://developer.gnome.org/gio/unstable/GApplication.html"><span class="type">GApplication</span></a>
-in your process.  <em class="parameter"><code>application</code></em>
+in your process. <em class="parameter"><code>application</code></em>
  cannot be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.23.6"></a><h4>Parameters</h4>
@@ -1485,7 +1473,7 @@ in your process.  <em class="parameter"><code>application</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1496,7 +1484,7 @@ gtk_builder_get_application (<em class="parameter"><code><a class="link" href="G
 <p>The <a class="link" href="GtkApplication.html" title="GtkApplication"><span class="type">GtkApplication</span></a> is used for creating action proxies as requested
 from XML that the builder is loading.</p>
 <p>By default, the builder uses the default application: the one from
-<a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-get-default"><code class="function">g_application_get_default()</code></a>.  If you want to use another application
+<a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-get-default"><code class="function">g_application_get_default()</code></a>. If you want to use another application
 for constructing proxies, use <a class="link" href="GtkBuilder.html#gtk-builder-set-application" title="gtk_builder_set_application ()"><code class="function">gtk_builder_set_application()</code></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.24.7"></a><h4>Parameters</h4>
@@ -1519,7 +1507,7 @@ for constructing proxies, use <a class="link" href="GtkBuilder.html#gtk-builder-
 or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1557,9 +1545,8 @@ implementing the <a class="link" href="GtkBuildable.html" title="GtkBuildable"><
 <p> the <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> found for <em class="parameter"><code>type_name</code></em>
 or <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-INVALID:CAPS"><span class="type">G_TYPE_INVALID</span></a>
 if no type was found</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1621,9 +1608,8 @@ still to come.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.26.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1682,9 +1668,8 @@ need not be initialised beforehand.</p>
 <div class="refsect3">
 <a name="id-1.3.5.2.9.27.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1859,12 +1844,11 @@ If the translation domain is <a href="https://developer.gnome.org/glib/unstable/
 otherwise <a href="https://developer.gnome.org/glib/unstable/glib-I18N.html#g-dgettext"><code class="function">g_dgettext()</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

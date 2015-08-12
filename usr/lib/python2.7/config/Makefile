@@ -28,8 +28,8 @@ MODLIBS=        $(LOCALMODLIBS) $(BASEMODLIBS)
 VERSION=	2.7
 srcdir=		.
 
-abs_srcdir=	/build/python2/src/Python-2.7.9
-abs_builddir=	/build/python2/src/Python-2.7.9
+abs_srcdir=	/build/python2/src/Python-2.7.10
+abs_builddir=	/build/python2/src/Python-2.7.10
 build=		armv7l-unknown-linux-gnueabihf
 host=		armv7l-unknown-linux-gnueabihf
 
@@ -143,7 +143,7 @@ MACOSX_DEPLOYMENT_TARGET=
 OTHER_LIBTOOL_OPT=
 
 # Environment to run shared python without installed libraries
-RUNSHARED=       LD_LIBRARY_PATH=/build/python2/src/Python-2.7.9
+RUNSHARED=       LD_LIBRARY_PATH=/build/python2/src/Python-2.7.10
 
 # ensurepip options
 ENSUREPIP=      no
@@ -218,7 +218,7 @@ COREPYTHONPATH=$(DESTPATH)$(SITEPATH)$(TESTPATH)$(MACHDEPPATH)$(EXTRAMACHDEPPATH
 OLDPATH=:lib-old
 TKPATH=:lib-tk
 EXTRAMACHDEPPATH=
-MACHDEPPATH=:plat-$(MACHDEP)
+MACHDEPPATH=:$(PLATDIR)
 TESTPATH=
 SITEPATH=
 DESTPATH=
@@ -246,7 +246,7 @@ GRAMMAR_C=	Python/graminit.c
 GRAMMAR_INPUT=	$(srcdir)/Grammar/Grammar
 
 
-LIBFFI_INCLUDEDIR=	/usr/lib/libffi-3.1/include
+LIBFFI_INCLUDEDIR=	/usr/lib/libffi-3.2.1/include
 
 ##########################################################################
 # Parser
@@ -963,7 +963,7 @@ maninstall:	altmaninstall
 	(cd $(DESTDIR)$(MANDIR)/man1; $(LN) -s python2.1 python.1)
 
 # Install the library
-PLATDIR=	plat-$(MACHDEP)
+PLATDIR=	plat-linux2
 EXTRAPLATDIR= 
 EXTRAMACHDEPPATH=
 MACHDEPS=	$(PLATDIR) $(EXTRAPLATDIR)

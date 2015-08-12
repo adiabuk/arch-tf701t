@@ -50,12 +50,12 @@ typedef struct {
 	void     (*got_body)            (SoupMessage *msg);
 	void     (*restarted)           (SoupMessage *msg);
 	void     (*finished)            (SoupMessage *msg);
+	void     (*starting)            (SoupMessage *msg);
 
 	/* Padding for future expansion */
 	void (*_libsoup_reserved1) (void);
 	void (*_libsoup_reserved2) (void);
 	void (*_libsoup_reserved3) (void);
-	void (*_libsoup_reserved4) (void);
 } SoupMessageClass;
 
 GType soup_message_get_type (void);
@@ -118,15 +118,16 @@ void             soup_message_set_first_party     (SoupMessage       *msg,
 						   SoupURI           *first_party);
 
 typedef enum {
-	SOUP_MESSAGE_NO_REDIRECT          = (1 << 1),
-	SOUP_MESSAGE_CAN_REBUILD          = (1 << 2),
+	SOUP_MESSAGE_NO_REDIRECT              = (1 << 1),
+	SOUP_MESSAGE_CAN_REBUILD              = (1 << 2),
 #ifndef SOUP_DISABLE_DEPRECATED
-	SOUP_MESSAGE_OVERWRITE_CHUNKS     = (1 << 3),
+	SOUP_MESSAGE_OVERWRITE_CHUNKS         = (1 << 3),
 #endif
-	SOUP_MESSAGE_CONTENT_DECODED      = (1 << 4),
-	SOUP_MESSAGE_CERTIFICATE_TRUSTED  = (1 << 5),
-	SOUP_MESSAGE_NEW_CONNECTION       = (1 << 6),
-	SOUP_MESSAGE_IDEMPOTENT           = (1 << 7)
+	SOUP_MESSAGE_CONTENT_DECODED          = (1 << 4),
+	SOUP_MESSAGE_CERTIFICATE_TRUSTED      = (1 << 5),
+	SOUP_MESSAGE_NEW_CONNECTION           = (1 << 6),
+	SOUP_MESSAGE_IDEMPOTENT               = (1 << 7),
+	SOUP_MESSAGE_IGNORE_CONNECTION_LIMITS = (1 << 8)
 } SoupMessageFlags;
 
 void             soup_message_set_flags           (SoupMessage           *msg,
@@ -216,6 +217,10 @@ void soup_message_got_headers         (SoupMessage *msg);
 void soup_message_got_chunk           (SoupMessage *msg, SoupBuffer *chunk);
 void soup_message_got_body            (SoupMessage *msg);
 void soup_message_content_sniffed     (SoupMessage *msg, const char *content_type, GHashTable *params);
+
+SOUP_AVAILABLE_IN_2_50
+void soup_message_starting            (SoupMessage *msg);
+
 void soup_message_restarted           (SoupMessage *msg);
 void soup_message_finished            (SoupMessage *msg);
 

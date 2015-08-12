@@ -53,7 +53,7 @@
  *
  * The compile-time micro version
  */
-#define G_USB_MICRO_VERSION		(4)
+#define G_USB_MICRO_VERSION		(6)
 
 /**
  * G_USB_CHECK_VERSION:

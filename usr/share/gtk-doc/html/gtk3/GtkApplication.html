@@ -8,7 +8,7 @@
 <link rel="up" href="Application.html" title="Application support">
 <link rel="prev" href="Application.html" title="Application support">
 <link rel="next" href="GtkApplicationWindow.html" title="GtkApplicationWindow">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -331,7 +331,7 @@ actions invoked in a predictable context it is therefore recommended
 that the GDK lock be held while invoking actions locally with
 <a href="https://developer.gnome.org/gio/unstable/GActionGroup.html#g-action-group-activate-action"><code class="function">g_action_group_activate_action()</code></a>.  The same applies to actions
 associated with <a class="link" href="GtkApplicationWindow.html" title="GtkApplicationWindow"><span class="type">GtkApplicationWindow</span></a> and to the “activate” and
-'open' <a href="https://developer.gnome.org/gio/unstable/GApplication.html"><span class="type">GApplication</span></a> methods.</p>
+“open” <a href="https://developer.gnome.org/gio/unstable/GApplication.html"><span class="type">GApplication</span></a> methods.</p>
 <div class="refsect3">
 <a name="automatic-resources"></a><h4>Automatic resources</h4>
 <p><a class="link" href="GtkApplication.html" title="GtkApplication"><span class="type">GtkApplication</span></a> will automatically load menus from the <a class="link" href="GtkBuilder.html" title="GtkBuilder"><span class="type">GtkBuilder</span></a>
@@ -367,6 +367,11 @@ such as burning a CD or performing a disk backup. The session
 manager may not honor the inhibitor, but it can be expected to
 inform the user about the negative consequences of ending the
 session while inhibitors are present.</p>
+</div>
+<div class="refsect3">
+<a name="seealso"></a><h4>See Also</h4>
+<p><a class="ulink" href="https://wiki.gnome.org/HowDoI/GtkApplication" target="_top">HowDoI: Using GtkApplication</a>,
+<a class="ulink" href="https://developer.gnome.org/gtk3/stable/gtk-getting-started.html#id-1.2.3.3" target="_top">Getting Started with GTK+: Basics</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -420,9 +425,8 @@ GTK+ 3.6 or later.</p>
 <div class="refsect3">
 <a name="id-1.3.4.2.11.2.11"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkApplication.html" title="GtkApplication"><span class="type">GtkApplication</span></a> instance</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -463,7 +467,7 @@ any windows.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -503,7 +507,7 @@ function.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -538,7 +542,7 @@ deletion.</p>
 <p> a <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a class="link" href="GtkWindow.html" title="GtkWindow"><span class="type">GtkWindow</span></a>. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkWindow][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -576,7 +580,7 @@ gtk_application_get_window_by_id (<em class="parameter"><code><a class="link" hr
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there is no window with this ID. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -586,7 +590,7 @@ gtk_application_get_active_window (<em class="parameter"><code><a class="link" h
 <p>Gets the “active” window for the application.</p>
 <p>The active window is the one that was most recently focused (within
 the application).  This window may not have the focus at the moment
-if another application has it -- this is just the most
+if another application has it — this is just the most
 recently-focused window within this application.</p>
 <div class="refsect3">
 <a name="id-1.3.4.2.11.7.6"></a><h4>Parameters</h4>
@@ -608,7 +612,7 @@ recently-focused window within this application.</p>
 <p> the active window. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -676,9 +680,8 @@ why these operations are inhibited. </p></td>
 request. It should be used as an argument to <a class="link" href="GtkApplication.html#gtk-application-uninhibit" title="gtk_application_uninhibit ()"><code class="function">gtk_application_uninhibit()</code></a>
 in order to remove the request. If the platform does not support
 inhibiting or the request failed for some reason, 0 is returned.</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -710,7 +713,7 @@ Inhibitors are also cleared when the application exits.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -747,9 +750,8 @@ currently inhibited (possibly by another application).</p>
 <a name="id-1.3.4.2.11.10.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if any of the actions specified in <em class="parameter"><code>flags</code></em>
 are inhibited</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -802,9 +804,8 @@ replaced with your own.</p>
 <div class="refsect3">
 <a name="id-1.3.4.2.11.11.12"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if you should set an app menu</p>
-<p></p>
 </div>
-<p class="since">Since 3.14</p>
+<p class="since">Since: <a class="link" href="api-index-3-14.html#api-index-3.14">3.14</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -834,7 +835,7 @@ gtk_application_get_app_menu (<em class="parameter"><code><a class="link" href="
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -878,7 +879,7 @@ selecting these menu items.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -908,7 +909,7 @@ gtk_application_get_menubar (<em class="parameter"><code><a class="link" href="G
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -926,11 +927,11 @@ to call this.</p>
 each window, or at the top of the screen.  In some environments, if
 both the application menu and the menubar are set, the application
 menu will be presented as if it were the first item of the menubar.
-Other environments treat the two as completely separate -- for
-example, the application menu may be rendered by the desktop shell
-while the menubar (if set) remains in each individual window.</p>
-<p>Use the base <a href="https://developer.gnome.org/gio/unstable/GActionMap.html"><span class="type">GActionMap</span></a> interface to add actions, to respond to the user
-selecting these menu items.</p>
+Other environments treat the two as completely separate — for example,
+the application menu may be rendered by the desktop shell while the
+menubar (if set) remains in each individual window.</p>
+<p>Use the base <a href="https://developer.gnome.org/gio/unstable/GActionMap.html"><span class="type">GActionMap</span></a> interface to add actions, to respond to the
+user selecting these menu items.</p>
 <div class="refsect3">
 <a name="id-1.3.4.2.11.15.9"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -953,7 +954,7 @@ selecting these menu items.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -992,7 +993,7 @@ for more information.</p>
 given id from the automatically loaded resources. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.14</p>
+<p class="since">Since: <a class="link" href="api-index-3-14.html#api-index-3.14">3.14</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1055,7 +1056,7 @@ or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1098,7 +1099,7 @@ or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1129,7 +1130,7 @@ See <a class="link" href="GtkApplication.html#gtk-application-set-accels-for-act
 free with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a> when done. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1169,7 +1170,7 @@ and target to obtain accelerators for</p></td>
 a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array. Free with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a> when no longer needed. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1180,7 +1181,7 @@ gtk_application_set_accels_for_action (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *accels</code></em>);</pre>
 <p>Sets zero or more keyboard accelerators that will trigger the
 given action. The first item in <em class="parameter"><code>accels</code></em>
- will be the primary 
+ will be the primary
 accelerator, which may be displayed in the UI.</p>
 <p>To remove all accelerators for an action, use an empty, zero-terminated
 array for <em class="parameter"><code>accels</code></em>
@@ -1207,14 +1208,14 @@ and target to associate accelerators with</p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>accels</p></td>
-<td class="parameter_description"><p> a list of accelerators in the format understood by
-<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" title="gtk_accelerator_parse ()"><code class="function">gtk_accelerator_parse()</code></a>. </p></td>
+<td class="parameter_description"><p> a list of accelerators in the format
+understood by <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" title="gtk_accelerator_parse ()"><code class="function">gtk_accelerator_parse()</code></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1263,7 +1264,7 @@ If you are unsure, check it with <a class="link" href="gtk3-Keyboard-Accelerator
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.14</p>
+<p class="since">Since: <a class="link" href="api-index-3-14.html#api-index-3.14">3.14</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -1363,7 +1364,7 @@ explicitly through <a class="link" href="GtkApplication.html#gtk-application-rem
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -1395,7 +1396,7 @@ explicitly through <a class="link" href="GtkApplication.html#gtk-application-rem
 <p>Set this property to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to register with the session manager.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -1437,7 +1438,7 @@ user_function (<a class="link" href="GtkApplication.html" title="GtkApplication"
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1478,12 +1479,11 @@ through <a class="link" href="GtkApplication.html#gtk-application-remove-window"
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

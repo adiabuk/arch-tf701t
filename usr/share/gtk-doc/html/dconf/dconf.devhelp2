@@ -12,7 +12,6 @@
     <sub name="Object Hierarchy" link="object-tree.html"/>
     <sub name="Programs" link="programs.html">
       <sub name="dconf-service" link="dconf-service.html"/>
-      <sub name="dconf-editor" link="dconf-editor.html"/>
       <sub name="dconf" link="dconf-tool.html"/>
     </sub>
     <sub name="API Index" link="api-index-full.html"/>
@@ -60,5 +59,8 @@
     <keyword type="function" name="dconf_client_sync ()" link="DConfClient.html#dconf-client-sync"/>
     <keyword type="struct" name="DConfClient" link="DConfClient.html#DConfClient-struct"/>
     <keyword type="signal" name="The “changed” signal" link="DConfClient.html#DConfClient-changed"/>
+    <keyword type="constant" name="DCONF_ERROR_FAILED" link="dconf-DConfError.html#DCONF-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="DCONF_ERROR_PATH" link="dconf-DConfError.html#DCONF-ERROR-PATH:CAPS"/>
+    <keyword type="constant" name="DCONF_ERROR_NOT_WRITABLE" link="dconf-DConfError.html#DCONF-ERROR-NOT-WRITABLE:CAPS"/>
   </functions>
 </book>

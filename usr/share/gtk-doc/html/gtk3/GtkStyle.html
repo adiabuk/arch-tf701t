@@ -8,7 +8,7 @@
 <link rel="up" href="DeprecatedObjects.html" title="Deprecated">
 <link rel="prev" href="gtk3-Resource-Files.html" title="Resource Files">
 <link rel="next" href="GtkHScale.html" title="GtkHScale">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -123,7 +123,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GdkPixbuf</span> *
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="GtkStyle.html#gtk-style-render-icon" title="gtk_style_render_icon ()">gtk_style_render_icon</a> <span class="c_punctuation">()</span>
@@ -447,7 +447,6 @@ their widgets.</p>
 <div class="refsect3">
 <a name="id-1.3.24.5.10.2.5"></a><h4>Returns</h4>
 <p> whether the style is attached to a window.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -463,7 +462,6 @@ gtk_style_new (<em class="parameter"><code><span class="type">void</span></code>
 <div class="refsect3">
 <a name="id-1.3.24.5.10.3.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkStyle.html" title="GtkStyle"><span class="type">GtkStyle</span></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -516,8 +514,9 @@ window with a different style and visual.</p>
 <p>Since this function may return a new object, you have to use it
 in the following way:
 <code class="literal">style = gtk_style_attach (style, window)</code></p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.3.24.5.10.5.7"></a><h4>Parameters</h4>
+<a name="id-1.3.24.5.10.5.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -539,13 +538,12 @@ in the following way:
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.24.5.10.5.8"></a><h4>Returns</h4>
+<a name="id-1.3.24.5.10.5.9"></a><h4>Returns</h4>
 <p> Either <em class="parameter"><code>style</code></em>
 , or a newly-created <a class="link" href="GtkStyle.html" title="GtkStyle"><span class="type">GtkStyle</span></a>.
 If the style is newly created, the style parameter
 will be unref'ed, and the new style will have
 a reference count belonging to the caller.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -602,9 +600,8 @@ gtk_style_has_context (<em class="parameter"><code><a class="link" href="GtkStyl
 <a name="id-1.3.24.5.10.7.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>style</code></em>
 has a <a class="link" href="GtkStyleContext.html" title="GtkStyleContext"><span class="type">GtkStyleContext</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -714,9 +711,8 @@ switch occurs.</p>
 <div class="refsect3">
 <a name="id-1.3.24.5.10.10.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the mapping was found.</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -765,7 +761,7 @@ otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macro
 <hr>
 <div class="refsect2">
 <a name="gtk-style-render-icon"></a><h3>gtk_style_render_icon ()</h3>
-<pre class="programlisting"><span class="returnvalue">GdkPixbuf</span> *
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 gtk_style_render_icon (<em class="parameter"><code><a class="link" href="GtkStyle.html" title="GtkStyle"><span class="type">GtkStyle</span></a> *style</code></em>,
                        <em class="parameter"><code>const <a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSource" title="GtkIconSource"><span class="type">GtkIconSource</span></a> *source</code></em>,
                        <em class="parameter"><code><a class="link" href="GtkWidget.html#GtkTextDirection" title="enum GtkTextDirection"><span class="type">GtkTextDirection</span></a> direction</code></em>,
@@ -833,7 +829,7 @@ don’t scale. </p></td>
 </div>
 <div class="refsect3">
 <a name="id-1.3.24.5.10.12.7"></a><h4>Returns</h4>
-<p> a newly-created <span class="type">GdkPixbuf</span>
+<p> a newly-created <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a>
 containing the rendered icon. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -882,7 +878,7 @@ queried will be stored. </p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -930,7 +926,7 @@ location for <em class="parameter"><code>first_property_name</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -980,7 +976,7 @@ return the property values, starting with the location for
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2758,7 +2754,7 @@ cursor. Should be <a href="https://developer.gnome.org/glib/unstable/glib-Standa
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3424,7 +3420,7 @@ deal with styles that have been already realized.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3459,12 +3455,11 @@ This signal provides a convenient place to free such cached objects.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

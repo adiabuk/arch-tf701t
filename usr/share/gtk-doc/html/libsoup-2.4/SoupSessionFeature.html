@@ -55,7 +55,7 @@
 </div>
 <div class="refsect1">
 <a name="SoupSessionFeature.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GInterface
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> SoupSessionFeature
 </pre>
 </div>
@@ -63,7 +63,7 @@
 <a name="SoupSessionFeature.prerequisites"></a><h2>Prerequisites</h2>
 <p>
 SoupSessionFeature requires
- <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+ GObject.</p>
 </div>
 <div class="refsect1">
 <a name="SoupSessionFeature.implementations"></a><h2>Known Implementations</h2>
@@ -139,7 +139,7 @@ by the application. (Eg, <a class="link" href="SoupLogger.html" title="SoupLogge
 </colgroup>
 <tbody>
 <tr>
-<td class="struct_member_name"><p><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="SoupSessionFeatureInterface.parent"></a>parent</code></em>;</p></td>
+<td class="struct_member_name"><p><span class="type">GTypeInterface</span> <em class="structfield"><code><a name="SoupSessionFeatureInterface.parent"></a>parent</code></em>;</p></td>
 <td class="struct_member_description"><p>The parent interface.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
@@ -160,7 +160,7 @@ by the application. (Eg, <a class="link" href="SoupLogger.html" title="SoupLogge
 </tr>
 <tr>
 <td class="struct_member_name"><p><em class="structfield"><code><a name="SoupSessionFeatureInterface.request-started"></a>request_started</code></em> ()</p></td>
-<td class="struct_member_description"><p>Proxies the session's <a class="link" href="SoupSession.html#SoupSession-request-started" title="The “request-started” signal"><span class="type">“request_started”</span></a> signal</p></td>
+<td class="struct_member_description"><p>Proxies the session's <a class="link" href="SoupSession.html#SoupSession-request-started" title="The “request-started” signal"><span class="type">“request_started”</span></a> signal. Deprecated 2.50. Use <a class="link" href="SoupMessage.html#SoupMessage-starting" title="The “starting” signal"><span class="type">“starting”</span></a> instead.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>

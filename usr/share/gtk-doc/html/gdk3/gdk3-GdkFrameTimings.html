@@ -7,8 +7,8 @@
 <link rel="home" href="index.html" title="GDK 3 Reference Manual">
 <link rel="up" href="reference.html" title="API Reference">
 <link rel="prev" href="GdkFrameClock.html" title="Frame clock">
-<link rel="next" href="gdk3-Events.html" title="Events">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<link rel="next" href="GdkGLContext.html" title="GdkGLContext">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -20,7 +20,7 @@
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="reference.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
 <td><a accesskey="p" href="GdkFrameClock.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="gdk3-Events.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="n" href="GdkGLContext.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
 <a name="gdk3-GdkFrameTimings"></a><div class="titlepage"></div>
@@ -160,9 +160,8 @@ gdk_frame_timings_ref (<em class="parameter"><code><a class="link" href="gdk3-Gd
 <a name="id-1.2.15.7.2.6"></a><h4>Returns</h4>
 <p> <em class="parameter"><code>timings</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -188,7 +187,7 @@ is no longer referenced, it will be freed.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -215,9 +214,8 @@ this frame was drawn.</p>
 <div class="refsect3">
 <a name="id-1.2.15.7.4.6"></a><h4>Returns</h4>
 <p> the frame counter value for this frame</p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -252,9 +250,8 @@ will become available and be stored in the <a class="link" href="gdk3-GdkFrameTi
 <a name="id-1.2.15.7.5.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if all information that will be available
 for the frame has been filled in.</p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -283,7 +280,6 @@ that is typically used to time animations for the frame. See
 <a name="id-1.2.15.7.6.6"></a><h4>Returns</h4>
 <p> the frame time for the frame, in the timescale
 of <a href="https://developer.gnome.org/glib/unstable/glib-Date-and-Time-Functions.html#g-get-monotonic-time"><code class="function">g_get_monotonic_time()</code></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -314,9 +310,8 @@ became visible to the user.</p>
 <p> the time the frame was displayed to the user, in the
 timescale of <a href="https://developer.gnome.org/glib/unstable/glib-Date-and-Time-Functions.html#g-get-monotonic-time"><code class="function">g_get_monotonic_time()</code></a>, or 0 if no presentation
 time is available. See <a class="link" href="gdk3-GdkFrameTimings.html#gdk-frame-timings-get-complete" title="gdk_frame_timings_get_complete ()"><code class="function">gdk_frame_timings_get_complete()</code></a></p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -347,9 +342,8 @@ usually happens during the “vertical blanking interval”.</p>
 <p> the refresh interval of the display, in microseconds,
 or 0 if the refresh interval is not available.
 See <a class="link" href="gdk3-GdkFrameTimings.html#gdk-frame-timings-get-complete" title="gdk_frame_timings_get_complete ()"><code class="function">gdk_frame_timings_get_complete()</code></a>.</p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -386,9 +380,8 @@ may want this information for Audio/Video synchronization.</p>
 <p> The predicted time at which the frame will be presented,
 in the timescale of <a href="https://developer.gnome.org/glib/unstable/glib-Date-and-Time-Functions.html#g-get-monotonic-time"><code class="function">g_get_monotonic_time()</code></a>, or 0 if no predicted
 presentation time is available.</p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -402,7 +395,6 @@ presentation time is available.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

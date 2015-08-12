@@ -1,0 +1,36 @@
+%NAME%
+mobile-broadband-provider-info
+
+%VERSION%
+20120614-2
+
+%DESC%
+Network Management daemon
+
+%URL%
+http://git.gnome.org/browse/mobile-broadband-provider-info/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1391557138
+
+%INSTALLDATE%
+1439276785
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu0@archlinuxarm.org>
+
+%SIZE%
+291840
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

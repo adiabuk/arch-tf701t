@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>libatspi Reference Manual: AtspiAccessible</title>
+<title>AtspiAccessible: libatspi Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="libatspi Reference Manual">
 <link rel="up" href="ch01.html" title="API reference">
@@ -569,7 +569,7 @@ relationships with other <a class="link" href="AtspiAccessible.html" title="Atsp
 <a name="id-1.2.12.8.9.6"></a><h4>Returns</h4>
 <p> a <span class="type">GArray</span> of
 <a class="link" href="AtspiRelation.html" title="atspi-relation"><span class="type">AtspiRelation</span></a> pointers or NULL on exception. </p>
-<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> AtspiAccessible*][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> AtspiRelation*][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -852,8 +852,7 @@ this object. </p>
 atspi_accessible_get_action (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_action</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_action_iface instead.
-Rename to: atspi_accessible_get_action_iface</p>
+<p>Use atspi_accessible_get_action_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-action.html#AtspiAction"><span class="type">AtspiAction</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -886,8 +885,7 @@ does not implement <a class="link" href="libatspi-atspi-action.html#AtspiAction"
 atspi_accessible_get_collection (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_collection</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_collection_iface instead.
-Rename to: atspi_accessible_get_collection_iface</p>
+<p>Use atspi_accessible_get_collection_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-collection.html#AtspiCollection"><span class="type">AtspiCollection</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -920,8 +918,7 @@ does not implement <a class="link" href="libatspi-atspi-collection.html#AtspiCol
 atspi_accessible_get_component (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_component</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_component_iface instead.
-Rename to: atspi_accessible_get_component_iface</p>
+<p>Use atspi_accessible_get_component_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-component.html#AtspiComponent"><span class="type">AtspiComponent</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -954,8 +951,7 @@ does not implement <a class="link" href="libatspi-atspi-component.html#AtspiComp
 atspi_accessible_get_document (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_document</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_document_iface instead.
-Rename to: atspi_accessible_get_document_iface</p>
+<p>Use atspi_accessible_get_document_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-document.html#AtspiDocument"><span class="type">AtspiDocument</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -988,8 +984,7 @@ does not implement <a class="link" href="libatspi-atspi-document.html#AtspiDocum
 atspi_accessible_get_editable_text (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_editable_text</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_editable_text_iface instead.
-Rename to: atspi_accessible_get_editable_text_iface</p>
+<p>Use atspi_accessible_get_editable_text_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-editabletext.html#AtspiEditableText"><span class="type">AtspiEditableText</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -1050,8 +1045,7 @@ the given <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><s
 atspi_accessible_get_hypertext (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_hypertext</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_hypertext_iface instead.
-Rename to: atspi_accessible_get_hypertext_iface</p>
+<p>Use atspi_accessible_get_hypertext_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-hypertext.html#AtspiHypertext"><span class="type">AtspiHypertext</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -1084,8 +1078,7 @@ does not implement <a class="link" href="libatspi-atspi-hypertext.html#AtspiHype
 atspi_accessible_get_image (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_image</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_image_iface instead.
-Rename to: atspi_accessible_get_image_iface</p>
+<p>Use atspi_accessible_get_image_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-image.html#AtspiImage"><span class="type">AtspiImage</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -1118,8 +1111,7 @@ does not implement <a class="link" href="libatspi-atspi-image.html#AtspiImage"><
 atspi_accessible_get_selection (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_selection</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_selection_iface instead.
-Rename to: atspi_accessible_get_selection_iface</p>
+<p>Use atspi_accessible_get_selection_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-selection.html#AtspiSelection"><span class="type">AtspiSelection</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -1152,8 +1144,7 @@ does not implement <a class="link" href="libatspi-atspi-selection.html#AtspiSele
 atspi_accessible_get_table (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_table</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_table_iface instead.
-Rename to: atspi_accessible_get_table_iface</p>
+<p>Use atspi_accessible_get_table_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-table.html#AtspiTable"><span class="type">AtspiTable</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -1186,8 +1177,7 @@ does not implement <a class="link" href="libatspi-atspi-table.html#AtspiTable"><
 atspi_accessible_get_text (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_text</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_text_iface instead.
-Rename to: atspi_accessible_get_text_iface</p>
+<p>Use atspi_accessible_get_text_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-table.html#AtspiTable"><span class="type">AtspiTable</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">
@@ -1220,8 +1210,7 @@ does not implement <a class="link" href="libatspi-atspi-text.html#AtspiText"><sp
 atspi_accessible_get_value (<em class="parameter"><code><a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a> *obj</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">atspi_accessible_get_value</code> has been deprecated since version 2.10 and should not be used in newly-written code.</p>
-<p>Use atspi_accessible_get_value_iface instead.
-Rename to: atspi_accessible_get_value_iface</p>
+<p>Use atspi_accessible_get_value_iface instead.</p>
 </div>
 <p>Gets the <a class="link" href="libatspi-atspi-table.html#AtspiTable"><span class="type">AtspiTable</span></a> interface for an <a class="link" href="AtspiAccessible.html" title="AtspiAccessible"><span class="type">AtspiAccessible</span></a>.</p>
 <div class="refsect3">

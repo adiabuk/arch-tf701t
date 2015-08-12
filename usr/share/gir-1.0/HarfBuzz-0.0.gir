@@ -87,16 +87,16 @@ and/or use gtk-doc annotations.  -->
               c:type="HB_UNICODE_MAX_DECOMPOSITION_LEN">
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="VERSION_MAJOR" value="0" c:type="HB_VERSION_MAJOR">
+    <constant name="VERSION_MAJOR" value="1" c:type="HB_VERSION_MAJOR">
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="VERSION_MICRO" value="40" c:type="HB_VERSION_MICRO">
+    <constant name="VERSION_MICRO" value="1" c:type="HB_VERSION_MICRO">
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="VERSION_MINOR" value="9" c:type="HB_VERSION_MINOR">
+    <constant name="VERSION_MINOR" value="0" c:type="HB_VERSION_MINOR">
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="VERSION_STRING" value="0.9.40" c:type="HB_VERSION_STRING">
+    <constant name="VERSION_STRING" value="1.0.1" c:type="HB_VERSION_STRING">
       <type name="utf8" c:type="gchar*"/>
     </constant>
     <function name="blob_create"
@@ -376,7 +376,7 @@ See TODO:link object types for more information.</doc>
     </function>
     <function name="buffer_add_codepoints"
               c:identifier="hb_buffer_add_codepoints"
-              version="1.0">
+              version="0.9.31">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -403,7 +403,7 @@ See TODO:link object types for more information.</doc>
     </function>
     <function name="buffer_add_latin1"
               c:identifier="hb_buffer_add_latin1"
-              version="1.0">
+              version="0.9.39">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -524,7 +524,7 @@ See TODO:link object types for more information.</doc>
     </function>
     <function name="buffer_clear_contents"
               c:identifier="hb_buffer_clear_contents"
-              version="1.0">
+              version="0.9.11">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -535,6 +535,31 @@ See TODO:link object types for more information.</doc>
         </parameter>
       </parameters>
     </function>
+    <enumeration name="buffer_cluster_level_t"
+                 glib:type-name="hb_buffer_cluster_level_t"
+                 glib:get-type="hb_gobject_buffer_cluster_level_get_type"
+                 c:type="hb_buffer_cluster_level_t">
+      <member name="monotone_graphemes"
+              value="0"
+              c:identifier="HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES"
+              glib:nick="monotone-graphemes">
+      </member>
+      <member name="monotone_characters"
+              value="1"
+              c:identifier="HB_BUFFER_CLUSTER_LEVEL_MONOTONE_CHARACTERS"
+              glib:nick="monotone-characters">
+      </member>
+      <member name="characters"
+              value="2"
+              c:identifier="HB_BUFFER_CLUSTER_LEVEL_CHARACTERS"
+              glib:nick="characters">
+      </member>
+      <member name="default"
+              value="0"
+              c:identifier="HB_BUFFER_CLUSTER_LEVEL_DEFAULT"
+              glib:nick="default">
+      </member>
+    </enumeration>
     <enumeration name="buffer_content_type_t"
                  glib:type-name="hb_buffer_content_type_t"
                  glib:get-type="hb_gobject_buffer_content_type_get_type"
@@ -635,9 +660,23 @@ See TODO:link object types for more information.</doc>
               glib:nick="preserve-default-ignorables">
       </member>
     </bitfield>
+    <function name="buffer_get_cluster_level"
+              c:identifier="hb_buffer_get_cluster_level"
+              version="0.9.42">
+      <return-value transfer-ownership="none">
+        <type name="buffer_cluster_level_t"
+              c:type="hb_buffer_cluster_level_t"/>
+      </return-value>
+      <parameters>
+        <parameter name="buffer" transfer-ownership="none">
+          <doc xml:space="preserve">a buffer.</doc>
+          <type name="buffer_t" c:type="hb_buffer_t*"/>
+        </parameter>
+      </parameters>
+    </function>
     <function name="buffer_get_content_type"
               c:identifier="hb_buffer_get_content_type"
-              version="1.0">
+              version="0.9.5">
       <return-value transfer-ownership="none">
         <type name="buffer_content_type_t" c:type="hb_buffer_content_type_t"/>
       </return-value>
@@ -670,7 +709,7 @@ See TODO:link object types for more information.</doc>
     </function>
     <function name="buffer_get_flags"
               c:identifier="hb_buffer_get_flags"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="buffer_flags_t" c:type="hb_buffer_flags_t"/>
       </return-value>
@@ -734,7 +773,7 @@ is valid as long as buffer contents are not modified.</doc>
     <function name="buffer_get_language"
               c:identifier="hb_buffer_get_language"
               version="1.0">
-      <return-value transfer-ownership="full">
+      <return-value transfer-ownership="none">
         <type name="language_t" c:type="hb_language_t"/>
       </return-value>
       <parameters>
@@ -761,7 +800,7 @@ is valid as long as buffer contents are not modified.</doc>
     </function>
     <function name="buffer_get_replacement_codepoint"
               c:identifier="hb_buffer_get_replacement_codepoint"
-              version="1.0">
+              version="0.9.31">
       <return-value transfer-ownership="none">
         <type name="codepoint_t" c:type="hb_codepoint_t"/>
       </return-value>
@@ -787,7 +826,7 @@ is valid as long as buffer contents are not modified.</doc>
     </function>
     <function name="buffer_get_segment_properties"
               c:identifier="hb_buffer_get_segment_properties"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -796,7 +835,10 @@ is valid as long as buffer contents are not modified.</doc>
           <doc xml:space="preserve">a buffer.</doc>
           <type name="buffer_t" c:type="hb_buffer_t*"/>
         </parameter>
-        <parameter name="props" transfer-ownership="none">
+        <parameter name="props"
+                   direction="out"
+                   caller-allocates="1"
+                   transfer-ownership="none">
           <type name="segment_properties_t" c:type="hb_segment_properties_t*"/>
         </parameter>
       </parameters>
@@ -833,7 +875,7 @@ is valid as long as buffer contents are not modified.</doc>
     </function>
     <function name="buffer_guess_segment_properties"
               c:identifier="hb_buffer_guess_segment_properties"
-              version="1.0">
+              version="0.9.7">
       <doc xml:space="preserve">Sets unset buffer segment properties based on buffer Unicode
 contents.  If buffer is not empty, it must have content type
 %HB_BUFFER_CONTENT_TYPE_UNICODE.
@@ -863,7 +905,7 @@ taking buffer script into consideration when choosing a language.</doc>
     </function>
     <function name="buffer_normalize_glyphs"
               c:identifier="hb_buffer_normalize_glyphs"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -942,6 +984,28 @@ same cluster number) are reversed again.</doc>
         <parameter name="buffer" transfer-ownership="none">
           <doc xml:space="preserve">a buffer.</doc>
           <type name="buffer_t" c:type="hb_buffer_t*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="buffer_reverse_range"
+              c:identifier="hb_buffer_reverse_range"
+              version="1.0">
+      <doc xml:space="preserve">Reverses buffer contents between  start to end.</doc>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="buffer" transfer-ownership="none">
+          <doc xml:space="preserve">a buffer.</doc>
+          <type name="buffer_t" c:type="hb_buffer_t*"/>
+        </parameter>
+        <parameter name="start" transfer-ownership="none">
+          <doc xml:space="preserve">start index.</doc>
+          <type name="guint" c:type="unsigned int"/>
+        </parameter>
+        <parameter name="end" transfer-ownership="none">
+          <doc xml:space="preserve">end index.</doc>
+          <type name="guint" c:type="unsigned int"/>
         </parameter>
       </parameters>
     </function>
@@ -1072,9 +1136,26 @@ same cluster number) are reversed again.</doc>
         </array>
       </return-value>
     </function>
+    <function name="buffer_set_cluster_level"
+              c:identifier="hb_buffer_set_cluster_level"
+              version="0.9.42">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="buffer" transfer-ownership="none">
+          <doc xml:space="preserve">a buffer.</doc>
+          <type name="buffer_t" c:type="hb_buffer_t*"/>
+        </parameter>
+        <parameter name="cluster_level" transfer-ownership="none">
+          <type name="buffer_cluster_level_t"
+                c:type="hb_buffer_cluster_level_t"/>
+        </parameter>
+      </parameters>
+    </function>
     <function name="buffer_set_content_type"
               c:identifier="hb_buffer_set_content_type"
-              version="1.0">
+              version="0.9.5">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -1107,7 +1188,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="buffer_set_flags"
               c:identifier="hb_buffer_set_flags"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -1155,7 +1236,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="buffer_set_replacement_codepoint"
               c:identifier="hb_buffer_set_replacement_codepoint"
-              version="1.0">
+              version="0.9.31">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -1187,7 +1268,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="buffer_set_segment_properties"
               c:identifier="hb_buffer_set_segment_properties"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -1269,7 +1350,7 @@ same cluster number) are reversed again.</doc>
       <parameters>
         <parameter name="str" transfer-ownership="none">
           <array length="1" zero-terminated="0" c:type="char*">
-            <type name="utf8" c:type="char"/>
+            <type name="guint8"/>
           </array>
         </parameter>
         <parameter name="len" transfer-ownership="none">
@@ -1378,7 +1459,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="face_get_glyph_count"
               c:identifier="hb_face_get_glyph_count"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="guint" c:type="unsigned int"/>
       </return-value>
@@ -1391,7 +1472,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="face_get_index"
               c:identifier="hb_face_get_index"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="guint" c:type="unsigned int"/>
       </return-value>
@@ -1474,7 +1555,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="face_reference_blob"
               c:identifier="hb_face_reference_blob"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="full">
         <type name="blob_t" c:type="hb_blob_t*"/>
       </return-value>
@@ -1503,7 +1584,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="face_set_glyph_count"
               c:identifier="hb_face_set_glyph_count"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -1519,7 +1600,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="face_set_index"
               c:identifier="hb_face_set_index"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -1535,7 +1616,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="face_set_upem"
               c:identifier="hb_face_set_upem"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -1583,25 +1664,29 @@ same cluster number) are reversed again.</doc>
     </record>
     <function name="feature_from_string"
               c:identifier="hb_feature_from_string"
-              version="1.0">
+              version="0.9.5">
+      <doc xml:space="preserve">Parses a string into a #hb_feature_t. If @len is -1 then @str is
+%NULL-terminated.</doc>
       <return-value transfer-ownership="none">
+        <doc xml:space="preserve">%TRUE if @str is successfully parsed, %FALSE otherwise</doc>
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
       <parameters>
         <parameter name="str" transfer-ownership="none">
+          <doc xml:space="preserve">a string to parse</doc>
           <array length="1" zero-terminated="0" c:type="char*">
-            <type name="utf8" c:type="char"/>
+            <type name="guint8"/>
           </array>
         </parameter>
         <parameter name="len" transfer-ownership="none">
+          <doc xml:space="preserve">length of @str, or -1 if string is nul-terminated</doc>
           <type name="gint" c:type="int"/>
         </parameter>
         <parameter name="feature"
                    direction="out"
                    caller-allocates="1"
-                   transfer-ownership="none"
-                   optional="1"
-                   allow-none="1">
+                   transfer-ownership="none">
+          <doc xml:space="preserve">the #hb_feature_t to initialize with the parsed values</doc>
           <type name="feature_t" c:type="hb_feature_t*"/>
         </parameter>
       </parameters>
@@ -1626,20 +1711,32 @@ same cluster number) are reversed again.</doc>
       <method name="_string"
               c:identifier="hb_feature_to_string"
               moved-to="feature_to_string"
-              version="1.0">
+              version="0.9.5">
+        <doc xml:space="preserve">Converts a #hb_feature_t into a %NULL-terminated string in the format
+understood by hb_feature_from_string(). The client in responsible for
+allocating big enough size for @buf, 128 bytes is more than enough.</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>
         <parameters>
           <instance-parameter name="feature" transfer-ownership="none">
+            <doc xml:space="preserve">an #hb_feature_t to convert</doc>
             <type name="feature_t" c:type="hb_feature_t*"/>
           </instance-parameter>
-          <parameter name="buf" transfer-ownership="none">
+          <parameter name="buf"
+                     direction="out"
+                     caller-allocates="0"
+                     transfer-ownership="full">
+            <doc xml:space="preserve">output string</doc>
             <array length="1" zero-terminated="0" c:type="char*">
               <type name="utf8" c:type="char"/>
             </array>
           </parameter>
-          <parameter name="size" transfer-ownership="none">
+          <parameter name="size"
+                     direction="out"
+                     caller-allocates="0"
+                     transfer-ownership="full">
+            <doc xml:space="preserve">the allocated size of @buf</doc>
             <type name="guint" c:type="unsigned int"/>
           </parameter>
         </parameters>
@@ -1647,20 +1744,32 @@ same cluster number) are reversed again.</doc>
     </record>
     <function name="feature_to_string"
               c:identifier="hb_feature_to_string"
-              version="1.0">
+              version="0.9.5">
+      <doc xml:space="preserve">Converts a #hb_feature_t into a %NULL-terminated string in the format
+understood by hb_feature_from_string(). The client in responsible for
+allocating big enough size for @buf, 128 bytes is more than enough.</doc>
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
       <parameters>
         <parameter name="feature" transfer-ownership="none">
+          <doc xml:space="preserve">an #hb_feature_t to convert</doc>
           <type name="feature_t" c:type="hb_feature_t*"/>
         </parameter>
-        <parameter name="buf" transfer-ownership="none">
+        <parameter name="buf"
+                   direction="out"
+                   caller-allocates="0"
+                   transfer-ownership="full">
+          <doc xml:space="preserve">output string</doc>
           <array length="2" zero-terminated="0" c:type="char*">
             <type name="utf8" c:type="char"/>
           </array>
         </parameter>
-        <parameter name="size" transfer-ownership="none">
+        <parameter name="size"
+                   direction="out"
+                   caller-allocates="0"
+                   transfer-ownership="full">
+          <doc xml:space="preserve">the allocated size of @buf</doc>
           <type name="guint" c:type="unsigned int"/>
         </parameter>
       </parameters>
@@ -1875,7 +1984,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="font_funcs_set_glyph_from_name_func"
               c:identifier="hb_font_funcs_set_glyph_from_name_func"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -2010,7 +2119,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="font_funcs_set_glyph_name_func"
               c:identifier="hb_font_funcs_set_glyph_name_func"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -2157,7 +2266,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="font_get_face"
               c:identifier="hb_font_get_face"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="face_t" c:type="hb_face_t*"/>
       </return-value>
@@ -2410,7 +2519,7 @@ same cluster number) are reversed again.</doc>
     </callback>
     <function name="font_get_glyph_from_name"
               c:identifier="hb_font_get_glyph_from_name"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -2608,7 +2717,7 @@ same cluster number) are reversed again.</doc>
     </callback>
     <function name="font_get_glyph_name"
               c:identifier="hb_font_get_glyph_name"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -2858,7 +2967,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="font_glyph_from_string"
               c:identifier="hb_font_glyph_from_string"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -2869,7 +2978,7 @@ same cluster number) are reversed again.</doc>
         </parameter>
         <parameter name="s" transfer-ownership="none">
           <array length="2" zero-terminated="0" c:type="char*">
-            <type name="utf8" c:type="char"/>
+            <type name="guint8"/>
           </array>
         </parameter>
         <parameter name="len" transfer-ownership="none">
@@ -2885,7 +2994,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="font_glyph_to_string"
               c:identifier="hb_font_glyph_to_string"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -2949,7 +3058,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="font_set_funcs"
               c:identifier="hb_font_set_funcs"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -2975,7 +3084,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="font_set_funcs_data"
               c:identifier="hb_font_set_funcs_data"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -3130,7 +3239,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="ft_face_create_referenced"
               c:identifier="hb_ft_face_create_referenced"
-              version="1.0"
+              version="0.9.38"
               introspectable="0">
       <return-value transfer-ownership="full">
         <type name="face_t" c:type="hb_face_t*"/>
@@ -3162,7 +3271,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="ft_font_create_referenced"
               c:identifier="hb_ft_font_create_referenced"
-              version="1.0"
+              version="0.9.38"
               introspectable="0">
       <return-value transfer-ownership="full">
         <type name="font_t" c:type="hb_font_t*"/>
@@ -3316,13 +3425,13 @@ same cluster number) are reversed again.</doc>
     <function name="language_from_string"
               c:identifier="hb_language_from_string"
               version="1.0">
-      <return-value transfer-ownership="full">
+      <return-value transfer-ownership="none">
         <type name="language_t" c:type="hb_language_t"/>
       </return-value>
       <parameters>
         <parameter name="str" transfer-ownership="none">
           <array length="1" zero-terminated="0" c:type="char*">
-            <type name="utf8" c:type="char"/>
+            <type name="guint8"/>
           </array>
         </parameter>
         <parameter name="len" transfer-ownership="none">
@@ -3333,15 +3442,11 @@ same cluster number) are reversed again.</doc>
     <function name="language_get_default"
               c:identifier="hb_language_get_default"
               version="1.0">
-      <return-value transfer-ownership="full">
+      <return-value transfer-ownership="none">
         <type name="language_t" c:type="hb_language_t"/>
       </return-value>
     </function>
-    <record name="language_t"
-            c:type="hb_language_t"
-            glib:type-name="hb_language_t"
-            glib:get-type="hb_gobject_language_get_type"
-            c:symbol-prefix="gobject_language">
+    <record name="language_t" c:type="hb_language_t" disguised="1">
       <method name="_string"
               c:identifier="hb_language_to_string"
               moved-to="language_to_string"
@@ -4031,8 +4136,10 @@ same cluster number) are reversed again.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="ot_tag_to_language" c:identifier="hb_ot_tag_to_language">
-      <return-value transfer-ownership="full">
+    <function name="ot_tag_to_language"
+              c:identifier="hb_ot_tag_to_language"
+              version="1.0">
+      <return-value transfer-ownership="none">
         <type name="language_t" c:type="hb_language_t"/>
       </return-value>
       <parameters>
@@ -4104,7 +4211,7 @@ same cluster number) are reversed again.</doc>
       <parameters>
         <parameter name="s" transfer-ownership="none">
           <array length="1" zero-terminated="0" c:type="char*">
-            <type name="utf8" c:type="char"/>
+            <type name="guint8"/>
           </array>
         </parameter>
         <parameter name="len" transfer-ownership="none">
@@ -4758,6 +4865,36 @@ same cluster number) are reversed again.</doc>
               c:identifier="HB_SCRIPT_WARANG_CITI"
               glib:nick="warang-citi">
       </member>
+      <member name="ahom"
+              value="1097363309"
+              c:identifier="HB_SCRIPT_AHOM"
+              glib:nick="ahom">
+      </member>
+      <member name="anatolian_hieroglyphs"
+              value="1215067511"
+              c:identifier="HB_SCRIPT_ANATOLIAN_HIEROGLYPHS"
+              glib:nick="anatolian-hieroglyphs">
+      </member>
+      <member name="hatran"
+              value="1214346354"
+              c:identifier="HB_SCRIPT_HATRAN"
+              glib:nick="hatran">
+      </member>
+      <member name="multani"
+              value="1299541108"
+              c:identifier="HB_SCRIPT_MULTANI"
+              glib:nick="multani">
+      </member>
+      <member name="old_hungarian"
+              value="1215655527"
+              c:identifier="HB_SCRIPT_OLD_HUNGARIAN"
+              glib:nick="old-hungarian">
+      </member>
+      <member name="signwriting"
+              value="1399287415"
+              c:identifier="HB_SCRIPT_SIGNWRITING"
+              glib:nick="signwriting">
+      </member>
       <member name="invalid"
               value="0"
               c:identifier="HB_SCRIPT_INVALID"
@@ -4825,7 +4962,7 @@ same cluster number) are reversed again.</doc>
         <type name="gpointer" c:type="void*"/>
       </field>
     </record>
-    <function name="set_add" c:identifier="hb_set_add" version="1.0">
+    <function name="set_add" c:identifier="hb_set_add" version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -4841,7 +4978,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="set_add_range"
               c:identifier="hb_set_add_range"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -4860,7 +4997,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="set_allocation_successful"
               c:identifier="hb_set_allocation_successful"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -4871,7 +5008,7 @@ same cluster number) are reversed again.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_clear" c:identifier="hb_set_clear" version="1.0">
+    <function name="set_clear" c:identifier="hb_set_clear" version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -4882,12 +5019,12 @@ same cluster number) are reversed again.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_create" c:identifier="hb_set_create" version="1.0">
+    <function name="set_create" c:identifier="hb_set_create" version="0.9.2">
       <return-value transfer-ownership="full">
         <type name="set_t" c:type="hb_set_t*"/>
       </return-value>
     </function>
-    <function name="set_del" c:identifier="hb_set_del" version="1.0">
+    <function name="set_del" c:identifier="hb_set_del" version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -4903,7 +5040,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="set_del_range"
               c:identifier="hb_set_del_range"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -4922,7 +5059,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="set_destroy"
               c:identifier="hb_set_destroy"
-              version="1.0"
+              version="0.9.2"
               introspectable="0">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
@@ -4936,12 +5073,12 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="set_get_empty"
               c:identifier="hb_set_get_empty"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="full">
         <type name="set_t" c:type="hb_set_t*"/>
       </return-value>
     </function>
-    <function name="set_get_max" c:identifier="hb_set_get_max" version="1.0">
+    <function name="set_get_max" c:identifier="hb_set_get_max" version="0.9.7">
       <doc xml:space="preserve">Finds the maximum number in the set.</doc>
       <return-value transfer-ownership="none">
         <doc xml:space="preserve">minimum of the set, or %HB_SET_VALUE_INVALID if set is empty.</doc>
@@ -4954,7 +5091,7 @@ same cluster number) are reversed again.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_get_min" c:identifier="hb_set_get_min" version="1.0">
+    <function name="set_get_min" c:identifier="hb_set_get_min" version="0.9.7">
       <doc xml:space="preserve">Finds the minimum number in the set.</doc>
       <return-value transfer-ownership="none">
         <doc xml:space="preserve">minimum of the set, or %HB_SET_VALUE_INVALID if set is empty.</doc>
@@ -4969,7 +5106,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="set_get_population"
               c:identifier="hb_set_get_population"
-              version="1.0">
+              version="0.9.7">
       <doc xml:space="preserve">Returns the number of numbers in the set.</doc>
       <return-value transfer-ownership="none">
         <doc xml:space="preserve">set population.</doc>
@@ -4984,7 +5121,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="set_get_user_data"
               c:identifier="hb_set_get_user_data"
-              version="1.0"
+              version="0.9.2"
               introspectable="0">
       <return-value transfer-ownership="none">
         <type name="gpointer" c:type="void*"/>
@@ -4999,7 +5136,7 @@ same cluster number) are reversed again.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_has" c:identifier="hb_set_has" version="1.0">
+    <function name="set_has" c:identifier="hb_set_has" version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -5015,7 +5152,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="set_intersect"
               c:identifier="hb_set_intersect"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -5029,7 +5166,7 @@ same cluster number) are reversed again.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_invert" c:identifier="hb_set_invert" version="1.0">
+    <function name="set_invert" c:identifier="hb_set_invert" version="0.9.10">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -5040,7 +5177,9 @@ same cluster number) are reversed again.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_is_empty" c:identifier="hb_set_is_empty" version="1.0">
+    <function name="set_is_empty"
+              c:identifier="hb_set_is_empty"
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -5051,7 +5190,9 @@ same cluster number) are reversed again.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_is_equal" c:identifier="hb_set_is_equal" version="1.0">
+    <function name="set_is_equal"
+              c:identifier="hb_set_is_equal"
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -5065,7 +5206,7 @@ same cluster number) are reversed again.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_next" c:identifier="hb_set_next" version="1.0">
+    <function name="set_next" c:identifier="hb_set_next" version="0.9.2">
       <return-value transfer-ownership="none">
         <doc xml:space="preserve">whether there was a next value.</doc>
         <type name="bool_t" c:type="hb_bool_t"/>
@@ -5085,7 +5226,7 @@ same cluster number) are reversed again.</doc>
     </function>
     <function name="set_next_range"
               c:identifier="hb_set_next_range"
-              version="1.0">
+              version="0.9.7">
       <doc xml:space="preserve">Gets the next consecutive range of numbers in @set that
 are greater than current value of @last.</doc>
       <return-value transfer-ownership="none">
@@ -5115,7 +5256,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="set_reference"
               c:identifier="hb_set_reference"
-              version="1.0"
+              version="0.9.2"
               introspectable="0">
       <return-value transfer-ownership="full">
         <type name="set_t" c:type="hb_set_t*"/>
@@ -5127,7 +5268,7 @@ are greater than current value of @last.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_set" c:identifier="hb_set_set" version="1.0">
+    <function name="set_set" c:identifier="hb_set_set" version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -5143,7 +5284,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="set_set_user_data"
               c:identifier="hb_set_set_user_data"
-              version="1.0"
+              version="0.9.2"
               introspectable="0">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
@@ -5168,7 +5309,9 @@ are greater than current value of @last.</doc>
         </parameter>
       </parameters>
     </function>
-    <function name="set_subtract" c:identifier="hb_set_subtract" version="1.0">
+    <function name="set_subtract"
+              c:identifier="hb_set_subtract"
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -5184,7 +5327,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="set_symmetric_difference"
               c:identifier="hb_set_symmetric_difference"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -5204,7 +5347,7 @@ are greater than current value of @last.</doc>
             glib:get-type="hb_gobject_set_get_type"
             c:symbol-prefix="gobject_set">
     </record>
-    <function name="set_union" c:identifier="hb_set_union" version="1.0">
+    <function name="set_union" c:identifier="hb_set_union" version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -5219,50 +5362,75 @@ are greater than current value of @last.</doc>
       </parameters>
     </function>
     <function name="shape" c:identifier="hb_shape" version="1.0">
+      <doc xml:space="preserve">Shapes @buffer using @font turning its Unicode characters content to
+positioned glyphs. If @features is not %NULL, it will be used to control the
+features applied during shaping.</doc>
       <return-value transfer-ownership="none">
+        <doc xml:space="preserve">%FALSE if all shapers failed, %TRUE otherwise</doc>
         <type name="none" c:type="void"/>
       </return-value>
       <parameters>
         <parameter name="font" transfer-ownership="none">
-          <doc xml:space="preserve">a font.</doc>
+          <doc xml:space="preserve">an #hb_font_t to use for shaping</doc>
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
         <parameter name="buffer" transfer-ownership="none">
-          <doc xml:space="preserve">a buffer.</doc>
+          <doc xml:space="preserve">an #hb_buffer_t to shape</doc>
           <type name="buffer_t" c:type="hb_buffer_t*"/>
         </parameter>
-        <parameter name="features" transfer-ownership="none">
+        <parameter name="features"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
+          <doc xml:space="preserve">an array of user
+   specified #hb_feature_t or %NULL</doc>
           <array length="3" zero-terminated="0" c:type="hb_feature_t*">
             <type name="feature_t" c:type="hb_feature_t"/>
           </array>
         </parameter>
         <parameter name="num_features" transfer-ownership="none">
+          <doc xml:space="preserve">the length of @features array</doc>
           <type name="guint" c:type="unsigned int"/>
         </parameter>
       </parameters>
     </function>
-    <function name="shape_full" c:identifier="hb_shape_full" version="1.0">
+    <function name="shape_full" c:identifier="hb_shape_full" version="0.9.2">
+      <doc xml:space="preserve">See hb_shape() for details. If @shaper_list is not %NULL, the specified
+shapers will be used in the given order, otherwise the default shapers list
+will be used.</doc>
       <return-value transfer-ownership="none">
+        <doc xml:space="preserve">%FALSE if all shapers failed, %TRUE otherwise</doc>
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
       <parameters>
         <parameter name="font" transfer-ownership="none">
-          <doc xml:space="preserve">a font.</doc>
+          <doc xml:space="preserve">an #hb_font_t to use for shaping</doc>
           <type name="font_t" c:type="hb_font_t*"/>
         </parameter>
         <parameter name="buffer" transfer-ownership="none">
-          <doc xml:space="preserve">a buffer.</doc>
+          <doc xml:space="preserve">an #hb_buffer_t to shape</doc>
           <type name="buffer_t" c:type="hb_buffer_t*"/>
         </parameter>
-        <parameter name="features" transfer-ownership="none">
+        <parameter name="features"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
+          <doc xml:space="preserve">an array of user
+   specified #hb_feature_t or %NULL</doc>
           <array length="3" zero-terminated="0" c:type="hb_feature_t*">
             <type name="feature_t" c:type="hb_feature_t"/>
           </array>
         </parameter>
         <parameter name="num_features" transfer-ownership="none">
+          <doc xml:space="preserve">the length of @features array</doc>
           <type name="guint" c:type="unsigned int"/>
         </parameter>
-        <parameter name="shaper_list" transfer-ownership="none">
+        <parameter name="shaper_list"
+                   transfer-ownership="none"
+                   nullable="1"
+                   allow-none="1">
+          <doc xml:space="preserve">a %NULL-terminated
+   array of shapers to use or %NULL</doc>
           <array c:type="char**">
             <type name="utf8" c:type="char*"/>
           </array>
@@ -5271,16 +5439,19 @@ are greater than current value of @last.</doc>
     </function>
     <function name="shape_list_shapers"
               c:identifier="hb_shape_list_shapers"
-              version="1.0">
+              version="0.9.2">
+      <doc xml:space="preserve">Retrieves the list of shapers supported by HarfBuzz.</doc>
       <return-value transfer-ownership="none">
-        <array c:type="const char**">
+        <doc xml:space="preserve">an array of
+   constant strings</doc>
+        <array c:type="char**">
           <type name="utf8"/>
         </array>
       </return-value>
     </function>
     <function name="shape_plan_create"
               c:identifier="hb_shape_plan_create"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="full">
         <type name="shape_plan_t" c:type="hb_shape_plan_t*"/>
       </return-value>
@@ -5309,7 +5480,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="shape_plan_create_cached"
               c:identifier="hb_shape_plan_create_cached"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="full">
         <type name="shape_plan_t" c:type="hb_shape_plan_t*"/>
       </return-value>
@@ -5338,7 +5509,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="shape_plan_destroy"
               c:identifier="hb_shape_plan_destroy"
-              version="1.0"
+              version="0.9.7"
               introspectable="0">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
@@ -5352,7 +5523,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="shape_plan_execute"
               c:identifier="hb_shape_plan_execute"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -5381,14 +5552,14 @@ are greater than current value of @last.</doc>
     </function>
     <function name="shape_plan_get_empty"
               c:identifier="hb_shape_plan_get_empty"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="full">
         <type name="shape_plan_t" c:type="hb_shape_plan_t*"/>
       </return-value>
     </function>
     <function name="shape_plan_get_shaper"
               c:identifier="hb_shape_plan_get_shaper"
-              version="1.0">
+              version="0.9.7">
       <return-value transfer-ownership="none">
         <type name="utf8" c:type="const char*"/>
       </return-value>
@@ -5401,7 +5572,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="shape_plan_get_user_data"
               c:identifier="hb_shape_plan_get_user_data"
-              version="1.0"
+              version="0.9.7"
               introspectable="0">
       <return-value transfer-ownership="none">
         <type name="gpointer" c:type="void*"/>
@@ -5418,7 +5589,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="shape_plan_reference"
               c:identifier="hb_shape_plan_reference"
-              version="1.0"
+              version="0.9.7"
               introspectable="0">
       <return-value transfer-ownership="full">
         <type name="shape_plan_t" c:type="hb_shape_plan_t*"/>
@@ -5432,7 +5603,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="shape_plan_set_user_data"
               c:identifier="hb_shape_plan_set_user_data"
-              version="1.0"
+              version="0.9.7"
               introspectable="0">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
@@ -5471,7 +5642,7 @@ are greater than current value of @last.</doc>
       <parameters>
         <parameter name="str" transfer-ownership="none">
           <array length="1" zero-terminated="0" c:type="char*">
-            <type name="utf8" c:type="char"/>
+            <type name="guint8"/>
           </array>
         </parameter>
         <parameter name="len" transfer-ownership="none">
@@ -5481,7 +5652,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="tag_to_string"
               c:identifier="hb_tag_to_string"
-              version="1.0">
+              version="0.9.5">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -5821,7 +5992,7 @@ are greater than current value of @last.</doc>
     </enumeration>
     <function name="unicode_compose"
               c:identifier="hb_unicode_compose"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -5868,7 +6039,7 @@ are greater than current value of @last.</doc>
     </callback>
     <function name="unicode_decompose"
               c:identifier="hb_unicode_decompose"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>
@@ -5896,7 +6067,7 @@ are greater than current value of @last.</doc>
     </function>
     <function name="unicode_decompose_compatibility"
               c:identifier="hb_unicode_decompose_compatibility"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="guint" c:type="unsigned int"/>
       </return-value>
@@ -6144,7 +6315,7 @@ of this function type must ensure that they do not write past the provided array
     </function>
     <function name="unicode_funcs_set_compose_func"
               c:identifier="hb_unicode_funcs_set_compose_func"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -6171,7 +6342,7 @@ of this function type must ensure that they do not write past the provided array
     </function>
     <function name="unicode_funcs_set_decompose_compatibility_func"
               c:identifier="hb_unicode_funcs_set_decompose_compatibility_func"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -6198,7 +6369,7 @@ of this function type must ensure that they do not write past the provided array
     </function>
     <function name="unicode_funcs_set_decompose_func"
               c:identifier="hb_unicode_funcs_set_decompose_func"
-              version="1.0">
+              version="0.9.2">
       <return-value transfer-ownership="none">
         <type name="none" c:type="void"/>
       </return-value>
@@ -6678,7 +6849,7 @@ of this function type must ensure that they do not write past the provided array
     </function>
     <function name="version_atleast"
               c:identifier="hb_version_atleast"
-              version="1.0">
+              version="0.9.30">
       <return-value transfer-ownership="none">
         <type name="bool_t" c:type="hb_bool_t"/>
       </return-value>

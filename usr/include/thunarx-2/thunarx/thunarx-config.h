@@ -1,4 +1,4 @@
-/* $Id$ */
+/* vi:set et ai sw=2 sts=2 ts=2: */
 /*-
  * Copyright (c) 2005-2006 Benedikt Meurer <benny@xfce.org>
  *
@@ -31,7 +31,7 @@ G_BEGIN_DECLS;
 
 #define THUNARX_MAJOR_VERSION 1
 #define THUNARX_MINOR_VERSION 6
-#define THUNARX_MICRO_VERSION 6
+#define THUNARX_MICRO_VERSION 10
 
 #define THUNARX_CHECK_VERSION(major,minor,micro) \
   (THUNARX_MAJOR_VERSION > (major) \

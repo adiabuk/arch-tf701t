@@ -54,11 +54,11 @@ extern "C"
 /* The version of this header should match the one of the library.  Do
    not use this symbol in your application; use assuan_check_version
    instead.  */
-#define ASSUAN_VERSION "2.1.3"
+#define ASSUAN_VERSION "2.2.0"
 
 /* The version number of this header.  It may be used to handle minor
    API incompatibilities.  */
-#define ASSUAN_VERSION_NUMBER 0x020103
+#define ASSUAN_VERSION_NUMBER 0x020200
 
 
 /* Check for compiler features.  */
@@ -488,6 +488,8 @@ assuan_fd_t assuan_sock_new (int domain, int type, int proto);
 int assuan_sock_connect (assuan_fd_t sockfd,
                          struct sockaddr *addr, int addrlen);
 int assuan_sock_bind (assuan_fd_t sockfd, struct sockaddr *addr, int addrlen);
+int assuan_sock_set_sockaddr_un (const char *fname, struct sockaddr *addr,
+                                 int *r_redirected);
 int assuan_sock_get_nonce (struct sockaddr *addr, int addrlen,
                            assuan_sock_nonce_t *nonce);
 int assuan_sock_check_nonce (assuan_fd_t fd, assuan_sock_nonce_t *nonce);

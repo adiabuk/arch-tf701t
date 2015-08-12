@@ -8,7 +8,7 @@
 <link rel="up" href="rn01.html" title="API Reference">
 <link rel="prev" href="gdk-pixbuf-Reference-Counting-and-Memory-Mangement.html" title="Reference Counting and Memory Mangement">
 <link rel="next" href="gdk-pixbuf-File-saving.html" title="File saving">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -202,7 +202,6 @@ Possible errors are in the <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Struct
 any of several error conditions occurred:  the file could not be opened,
 there was no loader for the file's format, there was not enough memory to
 allocate the image buffer, or the image file contained invalid data.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -264,9 +263,8 @@ and image at the requested size, regardless of aspect ratio, use
 be opened, there was no loader for the file's format, there was not
 enough memory to allocate the image buffer, or the image file contained
 invalid data.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: <a class="link" href="api-index-2-4.html#api-index-2.4">2.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -338,9 +336,8 @@ allowed since 2.8.</p>
 if any of several error conditions occurred:  the file could not be opened,
 there was no loader for the file's format, there was not enough memory to
 allocate the image buffer, or the image file contained invalid data.</p>
-<p></p>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: <a class="link" href="api-index-2-6.html#api-index-2.6">2.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -387,7 +384,7 @@ recognized. The return value is owned by <a class="link" href="gdk-pixbuf-The-Gd
 not be freed. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: <a class="link" href="api-index-2-4.html#api-index-2.4">2.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -437,7 +434,7 @@ get the result of the operation.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.32</p>
+<p class="since">Since: <a class="link" href="api-index-2-32.html#api-index-2.32">2.32</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -489,7 +486,7 @@ recognized. The return value is owned by GdkPixbuf and should
 not be freed. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.32</p>
+<p class="since">Since: <a class="link" href="api-index-2-32.html#api-index-2.32">2.32</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -529,9 +526,8 @@ gdk_pixbuf_new_from_resource (<em class="parameter"><code>const <span class="typ
 conditions occurred: the file could not be opened, the image format is
 not supported, there was not enough memory to allocate the image buffer,
 the stream contained invalid data, or the operation was cancelled.</p>
-<p></p>
 </div>
-<p class="since">Since 2.26</p>
+<p class="since">Since: <a class="link" href="api-index-2-26.html#api-index-2.26">2.26</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -600,9 +596,8 @@ exact given width. When not preserving aspect ratio, a <em class="parameter"><co
 conditions occurred: the file could not be opened, the image format is
 not supported, there was not enough memory to allocate the image buffer,
 the stream contained invalid data, or the operation was cancelled.</p>
-<p></p>
 </div>
-<p class="since">Since 2.26</p>
+<p class="since">Since: <a class="link" href="api-index-2-26.html#api-index-2.26">2.26</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -653,9 +648,8 @@ the <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GDK-PIXBUF-ERR
 conditions occurred: the file could not be opened, the image format is
 not supported, there was not enough memory to allocate the image buffer,
 the stream contained invalid data, or the operation was cancelled.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: <a class="link" href="api-index-2-14.html#api-index-2.14">2.14</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -703,7 +697,7 @@ You can then call <a class="link" href="gdk-pixbuf-File-Loading.html#gdk-pixbuf-
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -739,9 +733,8 @@ gdk_pixbuf_new_from_stream_finish (<em class="parameter"><code><a href="https://
 <a name="id-1.2.6.6.12.6"></a><h4>Returns</h4>
 <p> a <a class="link" href="gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on error. Free the returned
 object with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
-<p></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -825,9 +818,8 @@ scale the image at all in that dimension.</p>
 conditions occurred: the file could not be opened, the image format is
 not supported, there was not enough memory to allocate the image buffer,
 the stream contained invalid data, or the operation was cancelled.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: <a class="link" href="api-index-2-14.html#api-index-2.14">2.14</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -894,7 +886,7 @@ You can then call <a class="link" href="gdk-pixbuf-File-Loading.html#gdk-pixbuf-
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 </div>
 <div class="refsect1">
@@ -906,7 +898,6 @@ You can then call <a class="link" href="gdk-pixbuf-File-Loading.html#gdk-pixbuf-
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

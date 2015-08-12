@@ -8,7 +8,7 @@
 <link rel="up" href="Printing.html" title="Printing">
 <link rel="prev" href="GtkPageSetup.html" title="GtkPageSetup">
 <link rel="next" href="GtkPrinter.html" title="GtkPrinter">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -54,6 +54,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="GtkPaperSize.html#gtk-paper-size-new-from-ppd" title="gtk_paper_size_new_from_ppd ()">gtk_paper_size_new_from_ppd</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="returnvalue">GtkPaperSize</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPaperSize.html#gtk-paper-size-new-from-ipp" title="gtk_paper_size_new_from_ipp ()">gtk_paper_size_new_from_ipp</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -131,6 +139,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="GtkPaperSize.html#gtk-paper-size-get-height" title="gtk_paper_size_get_height ()">gtk_paper_size_get_height</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPaperSize.html#gtk-paper-size-is-ipp" title="gtk_paper_size_is_ipp ()">gtk_paper_size_is_ipp</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -225,6 +241,10 @@
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GtkPaperSize.html#GTK-UNIT-PIXEL:CAPS" title="GTK_UNIT_PIXEL">GTK_UNIT_PIXEL</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="GtkPaperSize.html#GTK-PAPER-NAME-A3:CAPS" title="GTK_PAPER_NAME_A3">GTK_PAPER_NAME_A3</a></td>
 </tr>
 <tr>
@@ -256,7 +276,7 @@
 </div>
 <div class="refsect1">
 <a name="GtkPaperSize.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GBoxed
+<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> GtkPaperSize
 </pre>
 </div>
@@ -308,9 +328,8 @@ see <a class="link" href="GtkPaperSize.html#gtk-paper-size-get-default" title="g
 <a name="id-1.3.17.6.8.2.7"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>, use <a class="link" href="GtkPaperSize.html#gtk-paper-size-free" title="gtk_paper_size_free ()"><code class="function">gtk_paper_size_free()</code></a>
 to free it</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -365,9 +384,57 @@ construct a custom <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"
 <a name="id-1.3.17.6.8.3.7"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>, use <a class="link" href="GtkPaperSize.html#gtk-paper-size-free" title="gtk_paper_size_free ()"><code class="function">gtk_paper_size_free()</code></a>
 to free it</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-paper-size-new-from-ipp"></a><h3>gtk_paper_size_new_from_ipp ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="returnvalue">GtkPaperSize</span></a> *
+gtk_paper_size_new_from_ipp (<em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ipp_name</code></em>,
+                             <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> width</code></em>,
+                             <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> height</code></em>);</pre>
+<p>Creates a new <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object by using
+IPP information.</p>
+<p>If <em class="parameter"><code>ipp_name</code></em>
+ is not a recognized paper name,
+<em class="parameter"><code>width</code></em>
+ and <em class="parameter"><code>height</code></em>
+ are used to
+construct a custom <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object.</p>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.4.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ipp_name</p></td>
+<td class="parameter_description"><p>an IPP paper name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the paper width, in points</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the paper height in points</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.4.7"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>, use <a class="link" href="GtkPaperSize.html#gtk-paper-size-free" title="gtk_paper_size_free ()"><code class="function">gtk_paper_size_free()</code></a>
+to free it</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -381,7 +448,7 @@ gtk_paper_size_new_custom (<em class="parameter"><code>const <a href="https://de
 <p>Creates a new <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object with the
 given parameters.</p>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.4.5"></a><h4>Parameters</h4>
+<a name="id-1.3.17.6.8.5.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -422,12 +489,11 @@ and <em class="parameter"><code>height</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.4.6"></a><h4>Returns</h4>
+<a name="id-1.3.17.6.8.5.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object, use <a class="link" href="GtkPaperSize.html#gtk-paper-size-free" title="gtk_paper_size_free ()"><code class="function">gtk_paper_size_free()</code></a>
 to free it</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -436,7 +502,7 @@ to free it</p>
 gtk_paper_size_copy (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *other</code></em>);</pre>
 <p>Copies an existing <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.5.5"></a><h4>Parameters</h4>
+<a name="id-1.3.17.6.8.6.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -451,12 +517,11 @@ gtk_paper_size_copy (<em class="parameter"><code><a class="link" href="GtkPaperS
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.5.6"></a><h4>Returns</h4>
+<a name="id-1.3.17.6.8.6.6"></a><h4>Returns</h4>
 <p> a copy of <em class="parameter"><code>other</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -465,7 +530,7 @@ gtk_paper_size_copy (<em class="parameter"><code><a class="link" href="GtkPaperS
 gtk_paper_size_free (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>);</pre>
 <p>Free the given <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object.</p>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.6.5"></a><h4>Parameters</h4>
+<a name="id-1.3.17.6.8.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -479,7 +544,7 @@ gtk_paper_size_free (<em class="parameter"><code><a class="link" href="GtkPaperS
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -489,7 +554,7 @@ gtk_paper_size_is_equal (<em class="parameter"><code><a class="link" href="GtkPa
                          <em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size2</code></em>);</pre>
 <p>Compares two <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> objects.</p>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.7.5"></a><h4>Parameters</h4>
+<a name="id-1.3.17.6.8.8.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -511,13 +576,12 @@ gtk_paper_size_is_equal (<em class="parameter"><code><a class="link" href="GtkPa
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.7.6"></a><h4>Returns</h4>
+<a name="id-1.3.17.6.8.8.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, if <em class="parameter"><code>size1</code></em>
 and <em class="parameter"><code>size2</code></em>
 represent the same paper size</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -526,7 +590,7 @@ represent the same paper size</p>
 gtk_paper_size_get_paper_sizes (<em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> include_custom</code></em>);</pre>
 <p>Creates a list of known paper sizes.</p>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.8.5"></a><h4>Parameters</h4>
+<a name="id-1.3.17.6.8.9.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -542,12 +606,12 @@ as defined in the page setup dialog</p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.8.6"></a><h4>Returns</h4>
+<a name="id-1.3.17.6.8.9.6"></a><h4>Returns</h4>
 <p> a newly allocated list of newly
 allocated <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> objects. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkPaperSize][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -555,35 +619,6 @@ allocated <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span cl
 <pre class="programlisting">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 gtk_paper_size_get_name (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>);</pre>
 <p>Gets the name of the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
-<div class="refsect3">
-<a name="id-1.3.17.6.8.9.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>a <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="id-1.3.17.6.8.9.6"></a><h4>Returns</h4>
-<p> the name of <em class="parameter"><code>size</code></em>
-</p>
-<p></p>
-</div>
-<p class="since">Since 2.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="gtk-paper-size-get-display-name"></a><h3>gtk_paper_size_get_display_name ()</h3>
-<pre class="programlisting">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-gtk_paper_size_get_display_name (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>);</pre>
-<p>Gets the human-readable name of the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.10.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -601,19 +636,17 @@ gtk_paper_size_get_display_name (<em class="parameter"><code><a class="link" hre
 </div>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.10.6"></a><h4>Returns</h4>
-<p> the human-readable name of <em class="parameter"><code>size</code></em>
+<p> the name of <em class="parameter"><code>size</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="gtk-paper-size-get-ppd-name"></a><h3>gtk_paper_size_get_ppd_name ()</h3>
+<a name="gtk-paper-size-get-display-name"></a><h3>gtk_paper_size_get_display_name ()</h3>
 <pre class="programlisting">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-gtk_paper_size_get_ppd_name (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>);</pre>
-<p>Gets the PPD name of the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>, which
-may be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
+gtk_paper_size_get_display_name (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>);</pre>
+<p>Gets the human-readable name of the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -631,21 +664,18 @@ may be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.h
 </div>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.11.6"></a><h4>Returns</h4>
-<p> the PPD name of <em class="parameter"><code>size</code></em>
+<p> the human-readable name of <em class="parameter"><code>size</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="gtk-paper-size-get-width"></a><h3>gtk_paper_size_get_width ()</h3>
-<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-gtk_paper_size_get_width (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
-                          <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
-<p>Gets the paper width of the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>, in
-units of <em class="parameter"><code>unit</code></em>
-.</p>
+<a name="gtk-paper-size-get-ppd-name"></a><h3>gtk_paper_size_get_ppd_name ()</h3>
+<pre class="programlisting">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+gtk_paper_size_get_ppd_name (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>);</pre>
+<p>Gets the PPD name of the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>, which
+may be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.12.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -654,34 +684,27 @@ units of <em class="parameter"><code>unit</code></em>
 <col class="parameters_description">
 <col width="200px" class="parameters_annotations">
 </colgroup>
-<tbody>
-<tr>
+<tbody><tr>
 <td class="parameter_name"><p>size</p></td>
 <td class="parameter_description"><p>a <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object</p></td>
 <td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>unit</p></td>
-<td class="parameter_description"><p>the unit for the return value, not <a class="link" href="GtkPaperSize.html#GTK-UNIT-NONE:CAPS"><code class="literal">GTK_UNIT_NONE</code></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
+</tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.12.6"></a><h4>Returns</h4>
-<p> the paper width</p>
-<p></p>
+<p> the PPD name of <em class="parameter"><code>size</code></em>
+</p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="gtk-paper-size-get-height"></a><h3>gtk_paper_size_get_height ()</h3>
+<a name="gtk-paper-size-get-width"></a><h3>gtk_paper_size_get_width ()</h3>
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-gtk_paper_size_get_height (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
-                           <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
-<p>Gets the paper height of the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>, in
+gtk_paper_size_get_width (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
+                          <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
+<p>Gets the paper width of the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>, in
 units of <em class="parameter"><code>unit</code></em>
 .</p>
 <div class="refsect3">
@@ -708,20 +731,56 @@ units of <em class="parameter"><code>unit</code></em>
 </div>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.13.6"></a><h4>Returns</h4>
-<p> the paper height</p>
-<p></p>
+<p> the paper width</p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="gtk-paper-size-is-custom"></a><h3>gtk_paper_size_is_custom ()</h3>
-<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gtk_paper_size_is_custom (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>);</pre>
-<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>size</code></em>
- is not a standard paper size.</p>
+<a name="gtk-paper-size-get-height"></a><h3>gtk_paper_size_get_height ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+gtk_paper_size_get_height (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
+                           <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
+<p>Gets the paper height of the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>, in
+units of <em class="parameter"><code>unit</code></em>
+.</p>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unit</p></td>
+<td class="parameter_description"><p>the unit for the return value, not <a class="link" href="GtkPaperSize.html#GTK-UNIT-NONE:CAPS"><code class="literal">GTK_UNIT_NONE</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.14.6"></a><h4>Returns</h4>
+<p> the paper height</p>
+</div>
+<p class="since">Since: 2.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-paper-size-is-ipp"></a><h3>gtk_paper_size_is_ipp ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_paper_size_is_ipp (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>);</pre>
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>size</code></em>
+ is an IPP standard paper size.</p>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -736,10 +795,37 @@ gtk_paper_size_is_custom (<em class="parameter"><code><a class="link" href="GtkP
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.14.6"></a><h4>Returns</h4>
+<a name="id-1.3.17.6.8.15.6"></a><h4>Returns</h4>
+<p> whether <em class="parameter"><code>size</code></em>
+is not an IPP custom paper size.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-paper-size-is-custom"></a><h3>gtk_paper_size_is_custom ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_paper_size_is_custom (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>);</pre>
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>size</code></em>
+ is not a standard paper size.</p>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.16.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>size</code></em>
 is a custom paper size.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -755,7 +841,7 @@ gtk_paper_size_set_size (<em class="parameter"><code><a class="link" href="GtkPa
  x <em class="parameter"><code>height</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.15.5"></a><h4>Parameters</h4>
+<a name="id-1.3.17.6.8.17.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -790,7 +876,7 @@ and <em class="parameter"><code>height</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -799,80 +885,6 @@ and <em class="parameter"><code>height</code></em>
 gtk_paper_size_get_default_top_margin (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
                                        <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
 <p>Gets the default top margin for the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
-<div class="refsect3">
-<a name="id-1.3.17.6.8.16.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>a <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>unit</p></td>
-<td class="parameter_description"><p>the unit for the return value, not <a class="link" href="GtkPaperSize.html#GTK-UNIT-NONE:CAPS"><code class="literal">GTK_UNIT_NONE</code></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="id-1.3.17.6.8.16.6"></a><h4>Returns</h4>
-<p> the default top margin</p>
-<p></p>
-</div>
-<p class="since">Since 2.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="gtk-paper-size-get-default-bottom-margin"></a><h3>gtk_paper_size_get_default_bottom_margin ()</h3>
-<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-gtk_paper_size_get_default_bottom_margin
-                               (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
-                                <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
-<p>Gets the default bottom margin for the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
-<div class="refsect3">
-<a name="id-1.3.17.6.8.17.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>a <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>unit</p></td>
-<td class="parameter_description"><p>the unit for the return value, not <a class="link" href="GtkPaperSize.html#GTK-UNIT-NONE:CAPS"><code class="literal">GTK_UNIT_NONE</code></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="id-1.3.17.6.8.17.6"></a><h4>Returns</h4>
-<p> the default bottom margin</p>
-<p></p>
-</div>
-<p class="since">Since 2.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="gtk-paper-size-get-default-left-margin"></a><h3>gtk_paper_size_get_default_left_margin ()</h3>
-<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-gtk_paper_size_get_default_left_margin
-                               (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
-                                <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
-<p>Gets the default left margin for the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.18.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -897,19 +909,18 @@ gtk_paper_size_get_default_left_margin
 </div>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.18.6"></a><h4>Returns</h4>
-<p> the default left margin</p>
-<p></p>
+<p> the default top margin</p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="gtk-paper-size-get-default-right-margin"></a><h3>gtk_paper_size_get_default_right_margin ()</h3>
+<a name="gtk-paper-size-get-default-bottom-margin"></a><h3>gtk_paper_size_get_default_bottom_margin ()</h3>
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-gtk_paper_size_get_default_right_margin
+gtk_paper_size_get_default_bottom_margin
                                (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
                                 <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
-<p>Gets the default right margin for the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
+<p>Gets the default bottom margin for the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.19.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -934,10 +945,81 @@ gtk_paper_size_get_default_right_margin
 </div>
 <div class="refsect3">
 <a name="id-1.3.17.6.8.19.6"></a><h4>Returns</h4>
-<p> the default right margin</p>
-<p></p>
+<p> the default bottom margin</p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-paper-size-get-default-left-margin"></a><h3>gtk_paper_size_get_default_left_margin ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+gtk_paper_size_get_default_left_margin
+                               (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
+                                <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
+<p>Gets the default left margin for the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unit</p></td>
+<td class="parameter_description"><p>the unit for the return value, not <a class="link" href="GtkPaperSize.html#GTK-UNIT-NONE:CAPS"><code class="literal">GTK_UNIT_NONE</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.20.6"></a><h4>Returns</h4>
+<p> the default left margin</p>
+</div>
+<p class="since">Since: 2.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-paper-size-get-default-right-margin"></a><h3>gtk_paper_size_get_default_right_margin ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+gtk_paper_size_get_default_right_margin
+                               (<em class="parameter"><code><a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> *size</code></em>,
+                                <em class="parameter"><code><a class="link" href="GtkPaperSize.html#GtkUnit" title="enum GtkUnit"><span class="type">GtkUnit</span></a> unit</code></em>);</pre>
+<p>Gets the default right margin for the <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unit</p></td>
+<td class="parameter_description"><p>the unit for the return value, not <a class="link" href="GtkPaperSize.html#GTK-UNIT-NONE:CAPS"><code class="literal">GTK_UNIT_NONE</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.6.8.21.6"></a><h4>Returns</h4>
+<p> the default right margin</p>
+</div>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -947,12 +1029,11 @@ gtk_paper_size_get_default (<em class="parameter"><code><span class="type">void<
 <p>Returns the name of the default paper size, which
 depends on the current locale.</p>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.20.5"></a><h4>Returns</h4>
+<a name="id-1.3.17.6.8.22.5"></a><h4>Returns</h4>
 <p> the name of the default paper size. The string
 is owned by GTK+ and should not be modified.</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -966,7 +1047,7 @@ gtk_paper_size_new_from_key_file (<em class="parameter"><code><a href="https://d
 <em class="parameter"><code>key_file</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.21.5"></a><h4>Parameters</h4>
+<a name="id-1.3.17.6.8.23.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -994,12 +1075,11 @@ or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.21.6"></a><h4>Returns</h4>
+<a name="id-1.3.17.6.8.23.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkPaperSize.html" title="GtkPaperSize"><span class="type">GtkPaperSize</span></a> object with the restored
 paper size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if an error occurred</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1012,7 +1092,7 @@ gtk_paper_size_to_key_file (<em class="parameter"><code><a class="link" href="Gt
  to <em class="parameter"><code>key_file</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.17.6.8.22.5"></a><h4>Parameters</h4>
+<a name="id-1.3.17.6.8.24.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1039,7 +1119,7 @@ gtk_paper_size_to_key_file (<em class="parameter"><code><a class="link" href="Gt
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 </div>
 <div class="refsect1">
@@ -1092,6 +1172,12 @@ gtk_paper_size_to_key_file (<em class="parameter"><code><a class="link" href="Gt
 </tbody>
 </table></div>
 </div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GTK-UNIT-PIXEL:CAPS"></a><h3>GTK_UNIT_PIXEL</h3>
+<pre class="programlisting">#define GTK_UNIT_PIXEL GTK_UNIT_NONE
+</pre>
 </div>
 <hr>
 <div class="refsect2">
@@ -1149,7 +1235,6 @@ gtk_paper_size_to_key_file (<em class="parameter"><code><a class="link" href="Gt
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

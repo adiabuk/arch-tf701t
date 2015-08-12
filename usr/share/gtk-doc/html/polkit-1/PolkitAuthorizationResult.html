@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>polkit Reference Manual: PolkitAuthorizationResult</title>
+<title>PolkitAuthorizationResult: polkit Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="polkit Reference Manual">
 <link rel="up" href="ref-api.html" title="Part III. Library API Reference">
 <link rel="prev" href="PolkitAuthority.html" title="PolkitAuthority">
 <link rel="next" href="PolkitDetails.html" title="PolkitDetails">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#PolkitAuthorizationResult.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#PolkitAuthorizationResult.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#PolkitAuthorizationResult.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -34,7 +34,13 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="PolkitAuthorizationResult.stability-level"></a><h2>Stability Level</h2>
-Stable, unless otherwise indicated
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
 <a name="PolkitAuthorizationResult.functions"></a><h2>Functions</h2>
@@ -160,7 +166,7 @@ is
 <td class="parameter_name"><p>details</p></td>
 <td class="parameter_description"><p> Must be <code class="literal">NULL</code> unless <em class="parameter"><code>is_authorized</code></em>
 is <code class="literal">TRUE</code>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -168,7 +174,6 @@ is <code class="literal">TRUE</code>. </p></td>
 <div class="refsect3">
 <a name="id-1.4.3.8.2.6"></a><h4>Returns</h4>
 <p> A <a class="link" href="PolkitAuthorizationResult.html" title="PolkitAuthorizationResult"><span class="type">PolkitAuthorizationResult</span></a> object. Free with <code class="function">g_object_unref()</code>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -198,7 +203,6 @@ to get the opaque identifier for the temporary authorization.</p>
 <div class="refsect3">
 <a name="id-1.4.3.8.3.7"></a><h4>Returns</h4>
 <p> Whether the subject is authorized.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -226,7 +230,6 @@ polkit_authorization_result_get_is_challenge
 <div class="refsect3">
 <a name="id-1.4.3.8.4.6"></a><h4>Returns</h4>
 <p> Whether the subject is authorized if more information is provided.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -263,7 +266,6 @@ key <code class="literal">polkit.retains_authorization_after_challenge</code>.</
 <div class="refsect3">
 <a name="id-1.4.3.8.5.8"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the authorization is or will be temporary.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -308,7 +310,7 @@ key <code class="literal">polkit.temporary_authorization_id</code>.</p>
 or <code class="literal">NULL</code> if not available. Do not free this string, it
 is owned by <em class="parameter"><code>result</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -339,9 +341,8 @@ key <code class="literal">polkit.dismissed</code>.</p>
 <div class="refsect3">
 <a name="id-1.4.3.8.7.7"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the authentication request was dismissed, <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 0.101</p>
+<p class="since">Since: 0.101</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -371,7 +372,7 @@ polkit_authorization_result_get_details
 <code class="literal">NULL</code> if there are no details. This object is owned by <em class="parameter"><code>result</code></em>
 and
 should not be freed by the caller. </p>
-<p><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 </div>
@@ -385,7 +386,6 @@ should not be freed by the caller. </p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

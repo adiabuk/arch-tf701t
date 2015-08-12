@@ -118,6 +118,7 @@ typedef struct {
     char bdj_org_id[9];      /* (BD-J) disc organization ID */
     char bdj_disc_id[33];    /* (BD-J) disc ID */
 
+    const char *udf_volume_id; /* optional UDF volume identifier */
 } BLURAY_DISC_INFO;
 
 /*
@@ -284,7 +285,6 @@ typedef struct bd_sound_effect {
  */
 void bd_get_version(int *major, int *minor, int *micro);
 
-
 /*
  * Disc functions
  */
@@ -292,11 +292,44 @@ void bd_get_version(int *major, int *minor, int *micro);
 /**
  *  Open BluRay disc
  *
- * @param device_path   path to mounted Blu-ray disc or device
+ *  Shortcut for bd_open_disc(bd_init(), device_path, keyfile_path)
+ *
+ * @param device_path   path to mounted Blu-ray disc, device or image file
  * @param keyfile_path  path to KEYDB.cfg (may be NULL)
  * @return allocated BLURAY object, NULL if error
  */
 BLURAY *bd_open(const char *device_path, const char *keyfile_path);
+
+/**
+ *  Initialize BLURAY object
+ *
+ *  Resulting object can be passed to following bd_open_??? functions.
+ *
+ * @return allocated BLURAY object, NULL if error
+ */
+BLURAY *bd_init(void);
+
+/**
+ *  Open BluRay disc
+ *
+ * @param bd  BLURAY object
+ * @param device_path   path to mounted Blu-ray disc, device or image file
+ * @param keyfile_path  path to KEYDB.cfg (may be NULL)
+ * @return 1 on success, 0 if error
+ */
+int bd_open_disc(BLURAY *bd, const char *device_path, const char *keyfile_path);
+
+/**
+ *  Open BluRay disc
+ *
+ * @param bd  BLURAY object
+ * @param handle  opaque handle for read_blocks
+ * @param read_blocks  function used to read disc blocks
+ * @return 1 on success, 0 if error
+ */
+int bd_open_stream(BLURAY *bd,
+                   void *read_blocks_handle,
+                   int (*read_blocks)(void *handle, void *buf, int lba, int num_blocks));
 
 /**
  *  Close BluRay disc
@@ -659,6 +692,9 @@ typedef enum {
      * playback control
      */
 
+    /* HDMV VM or JVM stopped playlist playback. Flush all buffers. */
+    BD_EVENT_PLAYLIST_STOP          = 31,
+
     /* discontinuity in the stream (non-seamless connection). Reset demuxer PES buffers. */
     BD_EVENT_DISCONTINUITY          = 28,  /* new timestamp (45 kHz) */
 
@@ -691,7 +727,13 @@ typedef enum {
     /* 3D */
     BD_EVENT_STEREOSCOPIC_STATUS    = 27,  /* 0 - 2D, 1 - 3D */
 
-    /*BD_EVENT_LAST = 30, */
+    /* BD-J key interest table changed */
+    BD_EVENT_KEY_INTEREST_TABLE     = 32,  /* bitmask, BLURAY_KIT_* */
+
+    /* UO mask changed */
+    BD_EVENT_UO_MASK_CHANGED        = 33,  /* bitmask, BLURAY_UO_* */
+
+    /*BD_EVENT_LAST = 33, */
 
 } bd_event_e;
 
@@ -711,6 +753,23 @@ typedef struct {
 /* BD_EVENT_TITLE special titles */
 #define BLURAY_TITLE_FIRST_PLAY  0xffff
 #define BLURAY_TITLE_TOP_MENU    0
+
+/* BD_EVENT_KEY_INTEREST flags */
+#define BLURAY_KIT_PLAY          0x1
+#define BLURAY_KIT_STOP          0x2
+#define BLURAY_KIT_FFW           0x4
+#define BLURAY_KIT_REW           0x8
+#define BLURAY_KIT_TRACK_NEXT    0x10
+#define BLURAY_KIT_TRACK_PREV    0x20
+#define BLURAY_KIT_PAUSE         0x40
+#define BLURAY_KIT_STILL_OFF     0x80
+#define BLURAY_KIT_SEC_AUDIO     0x100
+#define BLURAY_KIT_SEC_VIDEO     0x200
+#define BLURAY_KIT_PG_TEXTST     0x400
+
+/* BD_EVENT_UO_MASK flags */
+#define BLURAY_UO_MENU_CALL      0x1
+#define BLURAY_UO_TITLE_SEARCH   0x2
 
 /**
  *
@@ -944,7 +1003,7 @@ void bd_stop_bdj(BLURAY *bd); // shutdown BD-J and clean up resources
 
 
 #ifdef __cplusplus
-};
+}
 #endif
 
 #endif /* BLURAY_H_ */

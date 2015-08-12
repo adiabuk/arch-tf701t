@@ -8,7 +8,7 @@
 <link rel="up" href="NumericEntry.html" title="Numeric and Text Data Entry">
 <link rel="prev" href="GtkSpinButton.html" title="GtkSpinButton">
 <link rel="next" href="GtkSearchBar.html" title="GtkSearchBar">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -41,14 +41,24 @@
 <col width="150px" class="functions_return">
 <col class="functions_name">
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
 <td class="function_type">
 <a class="link" href="GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="GtkSearchEntry.html#gtk-search-entry-new" title="gtk_search_entry_new ()">gtk_search_entry_new</a> <span class="c_punctuation">()</span>
 </td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkSearchEntry.html#gtk-search-entry-handle-event" title="gtk_search_entry_handle_event ()">gtk_search_entry_handle_event</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -59,11 +69,28 @@
 <col width="300px" class="signals_name">
 <col width="200px" class="signals_flags">
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkSearchEntry.html#GtkSearchEntry-next-match" title="The “next-match” signal">next-match</a></td>
+<td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkSearchEntry.html#GtkSearchEntry-previous-match" title="The “previous-match” signal">previous-match</a></td>
+<td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></td>
+</tr>
+<tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="GtkSearchEntry.html#GtkSearchEntry-search-changed" title="The “search-changed” signal">search-changed</a></td>
 <td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkSearchEntry.html#GtkSearchEntry-stop-search" title="The “stop-search” signal">stop-search</a></td>
+<td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -101,12 +128,11 @@ GtkSearchEntry implements
 </div>
 <div class="refsect1">
 <a name="GtkSearchEntry.description"></a><h2>Description</h2>
-<p><a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a> is a subclass of <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a> that has
-been tailored for use as a search entry.</p>
-<p>It will show an inactive symbolic “find” icon when the
-search entry is empty, and a symbolic “clear” icon when
-there is text. Clicking on the “clear” icon will empty
-the search entry.</p>
+<p><a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a> is a subclass of <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a> that has been
+tailored for use as a search entry.</p>
+<p>It will show an inactive symbolic “find” icon when the search
+entry is empty, and a symbolic “clear” icon when there is text.
+Clicking on the “clear” icon will empty the search entry.</p>
 <p>Note that the search/clear icon is shown using a secondary
 icon, and thus does not work if you are using the secondary
 icon position for some other purpose.</p>
@@ -115,6 +141,12 @@ not react to every change in the entry text immediately, but
 only after a short delay. To support this, <a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a>
 emits the <a class="link" href="GtkSearchEntry.html#GtkSearchEntry-search-changed" title="The “search-changed” signal"><span class="type">“search-changed”</span></a> signal which can
 be used instead of the <a class="link" href="GtkEditable.html#GtkEditable-changed" title="The “changed” signal"><span class="type">“changed”</span></a> signal.</p>
+<p>The <a class="link" href="GtkSearchEntry.html#GtkSearchEntry-previous-match" title="The “previous-match” signal"><span class="type">“previous-match”</span></a>, <a class="link" href="GtkSearchEntry.html#GtkSearchEntry-next-match" title="The “next-match” signal"><span class="type">“next-match”</span></a>
+and <a class="link" href="GtkSearchEntry.html#GtkSearchEntry-stop-search" title="The “stop-search” signal"><span class="type">“stop-search”</span></a> signals can be uesd to implement
+moving between search results and ending the search.</p>
+<p>Often, GtkSearchEntry will be fed events by means of being
+placed inside a <a class="link" href="GtkSearchBar.html" title="GtkSearchBar"><span class="type">GtkSearchBar</span></a>. If that is not the case,
+you can use <a class="link" href="GtkSearchEntry.html#gtk-search-entry-handle-event" title="gtk_search_entry_handle_event ()"><code class="function">gtk_search_entry_handle_event()</code></a> to pass events.</p>
 </div>
 <div class="refsect1">
 <a name="GtkSearchEntry.functions_details"></a><h2>Functions</h2>
@@ -127,9 +159,54 @@ empty, and a clear icon when it isn't.</p>
 <div class="refsect3">
 <a name="id-1.3.10.7.10.2.5"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-search-entry-handle-event"></a><h3>gtk_search_entry_handle_event ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_search_entry_handle_event (<em class="parameter"><code><a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a> *entry</code></em>,
+                               <em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Event-Structures.html#GdkEvent"><span class="type">GdkEvent</span></a> *event</code></em>);</pre>
+<p>This function should be called when the top-level window
+which contains the search entry received a key event. If
+the entry is part of a <a class="link" href="GtkSearchBar.html" title="GtkSearchBar"><span class="type">GtkSearchBar</span></a>, it is preferable
+to call <a class="link" href="GtkSearchBar.html#gtk-search-bar-handle-event" title="gtk_search_bar_handle_event ()"><code class="function">gtk_search_bar_handle_event()</code></a> instead, which will
+reveal the entry in addition to passing the event to this
+function.</p>
+<p>If the key event is handled by the search entry and starts
+or continues a search, <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GDK-EVENT-STOP:CAPS"><code class="literal">GDK_EVENT_STOP</code></a> will be returned.
+The caller should ensure that the entry is shown in this
+case, and not propagate the event further.</p>
+<div class="refsect3">
+<a name="id-1.3.10.7.10.3.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>entry</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event</p></td>
+<td class="parameter_description"><p>a key event</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.10.7.10.3.7"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GDK-EVENT-STOP:CAPS"><code class="literal">GDK_EVENT_STOP</code></a> if the key press event resulted
+in a search beginning or continuing, <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GDK-EVENT-PROPAGATE:CAPS"><code class="literal">GDK_EVENT_PROPAGATE</code></a>
+otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -142,6 +219,80 @@ empty, and a clear icon when it isn't.</p>
 <div class="refsect1">
 <a name="GtkSearchEntry.signal-details"></a><h2>Signal Details</h2>
 <div class="refsect2">
+<a name="GtkSearchEntry-next-match"></a><h3>The <code class="literal">“next-match”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a> *entry,
+               <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>The ::next-match signal is a <a class="link" href="gtk3-Bindings.html#GtkBindingSignal" title="struct GtkBindingSignal">keybinding signal</a>
+which gets emitted when the user initiates a move to the next match
+for the current search string.</p>
+<p>Applications should connect to it, to implement moving between
+matches.</p>
+<p>The default bindings for this signal is Ctrl-g.</p>
+<div class="refsect3">
+<a name="id-1.3.10.7.12.2.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>entry</p></td>
+<td class="parameter_description"><p>the entry on which the signal was emitted</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></p>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GtkSearchEntry-previous-match"></a><h3>The <code class="literal">“previous-match”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a> *entry,
+               <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>The ::previous-match signal is a <a class="link" href="gtk3-Bindings.html#GtkBindingSignal" title="struct GtkBindingSignal">keybinding signal</a>
+which gets emitted when the user initiates a move to the previous match
+for the current search string.</p>
+<p>Applications should connect to it, to implement moving between
+matches.</p>
+<p>The default bindings for this signal is Ctrl-Shift-g.</p>
+<div class="refsect3">
+<a name="id-1.3.10.7.12.3.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>entry</p></td>
+<td class="parameter_description"><p>the entry on which the signal was emitted</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></p>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="GtkSearchEntry-search-changed"></a><h3>The <code class="literal">“search-changed”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a> *entry,
@@ -149,7 +300,7 @@ user_function (<a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"
 <p>The <a class="link" href="GtkSearchEntry.html#GtkSearchEntry-search-changed" title="The “search-changed” signal"><span class="type">“search-changed”</span></a> signal is emitted with a short
 delay of 150 milliseconds after the last change to the entry text.</p>
 <div class="refsect3">
-<a name="id-1.3.10.7.12.2.5"></a><h4>Parameters</h4>
+<a name="id-1.3.10.7.12.4.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -171,12 +322,47 @@ delay of 150 milliseconds after the last change to the entry text.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GtkSearchEntry-stop-search"></a><h3>The <code class="literal">“stop-search”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkSearchEntry.html" title="GtkSearchEntry"><span class="type">GtkSearchEntry</span></a> *entry,
+               <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>The ::stop-search signal is a <a class="link" href="gtk3-Bindings.html#GtkBindingSignal" title="struct GtkBindingSignal">keybinding signal</a>
+which gets emitted when the user stops a search via keyboard input.</p>
+<p>Applications should connect to it, to implement hiding the search
+entry in this case.</p>
+<p>The default bindings for this signal is Escape.</p>
+<div class="refsect3">
+<a name="id-1.3.10.7.12.5.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>entry</p></td>
+<td class="parameter_description"><p>the entry on which the signal was emitted</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></p>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

@@ -32,6 +32,9 @@
 <ANCHOR id="ExoToolbarsModel.other_details" href="exo/ExoToolbarsModel.html#ExoToolbarsModel.other_details">
 <ANCHOR id="ExoToolbarsModel-struct" href="exo/ExoToolbarsModel.html#ExoToolbarsModel-struct">
 <ANCHOR id="ExoToolbarsModelFlags" href="exo/ExoToolbarsModel.html#ExoToolbarsModelFlags">
+<ANCHOR id="EXO-TOOLBARS-MODEL-NOT-REMOVABLE:CAPS" href="exo/ExoToolbarsModel.html#EXO-TOOLBARS-MODEL-NOT-REMOVABLE:CAPS">
+<ANCHOR id="EXO-TOOLBARS-MODEL-ACCEPT-ITEMS-ONLY:CAPS" href="exo/ExoToolbarsModel.html#EXO-TOOLBARS-MODEL-ACCEPT-ITEMS-ONLY:CAPS">
+<ANCHOR id="EXO-TOOLBARS-MODEL-OVERRIDE-STYLE:CAPS" href="exo/ExoToolbarsModel.html#EXO-TOOLBARS-MODEL-OVERRIDE-STYLE:CAPS">
 <ANCHOR id="EXO-TOOLBARS-ITEM-TYPE:CAPS" href="exo/ExoToolbarsModel.html#EXO-TOOLBARS-ITEM-TYPE:CAPS">
 <ANCHOR id="ExoToolbarsModel.signal-details" href="exo/ExoToolbarsModel.html#ExoToolbarsModel.signal-details">
 <ANCHOR id="ExoToolbarsModel-get-item-data" href="exo/ExoToolbarsModel.html#ExoToolbarsModel-get-item-data">
@@ -241,7 +244,15 @@
 <ANCHOR id="ExoIconView.other_details" href="exo/ExoIconView.html#ExoIconView.other_details">
 <ANCHOR id="ExoIconView-struct" href="exo/ExoIconView.html#ExoIconView-struct">
 <ANCHOR id="ExoIconViewDropPosition" href="exo/ExoIconView.html#ExoIconViewDropPosition">
+<ANCHOR id="EXO-ICON-VIEW-NO-DROP:CAPS" href="exo/ExoIconView.html#EXO-ICON-VIEW-NO-DROP:CAPS">
+<ANCHOR id="EXO-ICON-VIEW-DROP-INTO:CAPS" href="exo/ExoIconView.html#EXO-ICON-VIEW-DROP-INTO:CAPS">
+<ANCHOR id="EXO-ICON-VIEW-DROP-LEFT:CAPS" href="exo/ExoIconView.html#EXO-ICON-VIEW-DROP-LEFT:CAPS">
+<ANCHOR id="EXO-ICON-VIEW-DROP-RIGHT:CAPS" href="exo/ExoIconView.html#EXO-ICON-VIEW-DROP-RIGHT:CAPS">
+<ANCHOR id="EXO-ICON-VIEW-DROP-ABOVE:CAPS" href="exo/ExoIconView.html#EXO-ICON-VIEW-DROP-ABOVE:CAPS">
+<ANCHOR id="EXO-ICON-VIEW-DROP-BELOW:CAPS" href="exo/ExoIconView.html#EXO-ICON-VIEW-DROP-BELOW:CAPS">
 <ANCHOR id="ExoIconViewLayoutMode" href="exo/ExoIconView.html#ExoIconViewLayoutMode">
+<ANCHOR id="EXO-ICON-VIEW-LAYOUT-ROWS:CAPS" href="exo/ExoIconView.html#EXO-ICON-VIEW-LAYOUT-ROWS:CAPS">
+<ANCHOR id="EXO-ICON-VIEW-LAYOUT-COLS:CAPS" href="exo/ExoIconView.html#EXO-ICON-VIEW-LAYOUT-COLS:CAPS">
 <ANCHOR id="ExoIconView.property-details" href="exo/ExoIconView.html#ExoIconView.property-details">
 <ANCHOR id="ExoIconView--column-spacing" href="exo/ExoIconView.html#ExoIconView--column-spacing">
 <ANCHOR id="ExoIconView--columns" href="exo/ExoIconView.html#ExoIconView--columns">

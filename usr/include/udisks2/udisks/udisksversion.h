@@ -48,7 +48,7 @@ G_BEGIN_DECLS
  *
  * The micro version of the libudisks2 header files.
  */
-#define UDISKS_MICRO_VERSION 5
+#define UDISKS_MICRO_VERSION 6
 
 /**
  * UDISKS_CHECK_VERSION:

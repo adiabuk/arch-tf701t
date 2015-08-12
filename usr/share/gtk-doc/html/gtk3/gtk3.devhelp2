@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
 <book xmlns="http://www.devhelp.net/book" title="GTK+ 3 Reference Manual" link="index.html" author="" name="gtk3" version="2" language="c">
   <chapters>
     <sub name="GTK+ Overview" link="gtk.html">
       <sub name="Getting Started with GTK+" link="gtk-getting-started.html">
-        <sub name="Basics" link="gtk-getting-started.html#id-1.2.3.3"/>
+        <sub name="Basics" link="gtk-getting-started.html#id-1.2.3.5"/>
         <sub name="Packing" link="ch01s02.html"/>
-        <sub name="Drawing" link="ch01s03.html"/>
-        <sub name="Building user interfaces" link="ch01s04.html"/>
-        <sub name="Building applications" link="ch01s05.html">
-          <sub name="A trivial application" link="ch01s05.html#id-1.2.3.7.5"/>
-          <sub name="Populating the window" link="ch01s05.html#id-1.2.3.7.6"/>
-          <sub name="Opening files" link="ch01s05.html#id-1.2.3.7.7"/>
-          <sub name="An application menu" link="ch01s05.html#id-1.2.3.7.8"/>
-          <sub name="A preference dialog" link="ch01s05.html#id-1.2.3.7.9"/>
-          <sub name="Adding a search bar" link="ch01s05.html#id-1.2.3.7.10"/>
-          <sub name="Adding a side bar" link="ch01s05.html#id-1.2.3.7.11"/>
-          <sub name="Properties" link="ch01s05.html#id-1.2.3.7.12"/>
-          <sub name="Header bar" link="ch01s05.html#id-1.2.3.7.13"/>
+        <sub name="Building user interfaces" link="ch01s03.html"/>
+        <sub name="Building applications" link="ch01s04.html">
+          <sub name="A trivial application" link="ch01s04.html#id-1.2.3.12.5"/>
+          <sub name="Populating the window" link="ch01s04.html#id-1.2.3.12.6"/>
+          <sub name="Opening files" link="ch01s04.html#id-1.2.3.12.7"/>
+          <sub name="An application menu" link="ch01s04.html#id-1.2.3.12.8"/>
+          <sub name="A preference dialog" link="ch01s04.html#id-1.2.3.12.9"/>
+          <sub name="Adding a search bar" link="ch01s04.html#id-1.2.3.12.10"/>
+          <sub name="Adding a side bar" link="ch01s04.html#id-1.2.3.12.11"/>
+          <sub name="Properties" link="ch01s04.html#id-1.2.3.12.12"/>
+          <sub name="Header bar" link="ch01s04.html#id-1.2.3.12.13"/>
         </sub>
+        <sub name="Custom Drawing" link="ch01s05.html"/>
       </sub>
       <sub name="Mailing lists and bug reports" link="gtk-resources.html"/>
       <sub name="Common Questions" link="gtk-question-index.html"/>
       <sub name="The GTK+ Drawing Model" link="chap-drawing-model.html"/>
-      <sub name="The GTK+ Input Handling Model" link="chap-input-handling.html"/>
+      <sub name="The GTK+ Input and Event Handling Model" link="chap-input-handling.html"/>
     </sub>
     <sub name="GTK+ Widgets and Objects" link="gtkobjects.html">
       <sub name="Object Hierarchy" link="ch02.html"/>
@@ -55,6 +54,7 @@
         <sub name="GtkFlowBox" link="GtkFlowBox.html"/>
         <sub name="GtkStack" link="GtkStack.html"/>
         <sub name="GtkStackSwitcher" link="GtkStackSwitcher.html"/>
+        <sub name="GtkStackSidebar" link="GtkStackSidebar.html"/>
         <sub name="GtkActionBar" link="GtkActionBar.html"/>
         <sub name="GtkHeaderBar" link="GtkHeaderBar.html"/>
         <sub name="GtkOverlay" link="GtkOverlay.html"/>
@@ -88,6 +88,7 @@
         <sub name="GtkScaleButton" link="GtkScaleButton.html"/>
         <sub name="GtkVolumeButton" link="GtkVolumeButton.html"/>
         <sub name="GtkLockButton" link="GtkLockButton.html"/>
+        <sub name="GtkModelButton" link="GtkModelButton.html"/>
       </sub>
       <sub name="Numeric and Text Data Entry" link="NumericEntry.html">
         <sub name="GtkEntry" link="GtkEntry.html"/>
@@ -157,6 +158,7 @@
         <sub name="GtkToggleToolButton" link="GtkToggleToolButton.html"/>
         <sub name="GtkRadioToolButton" link="GtkRadioToolButton.html"/>
         <sub name="GtkPopover" link="GtkPopover.html"/>
+        <sub name="GtkPopoverMenu" link="GtkPopoverMenu.html"/>
       </sub>
       <sub name="Selector Widgets and Dialogs" link="SelectorWidgets.html">
         <sub name="GtkColorChooser" link="GtkColorChooser.html"/>
@@ -198,6 +200,7 @@
         <sub name="GtkAdjustment" link="GtkAdjustment.html"/>
         <sub name="GtkCalendar" link="GtkCalendar.html"/>
         <sub name="GtkDrawingArea" link="GtkDrawingArea.html"/>
+        <sub name="GtkGLArea" link="GtkGLArea.html"/>
         <sub name="GtkEventBox" link="GtkEventBox.html"/>
         <sub name="GtkHandleBox" link="GtkHandleBox.html"/>
         <sub name="GtkIMContextSimple" link="GtkIMContextSimple.html"/>
@@ -369,6 +372,7 @@
     </sub>
     <sub name="GTK+ Tools" link="pt06.html">
       <sub name="gtk3-demo" link="gtk3-demo.html"/>
+      <sub name="gtk3-demo-application" link="gtk3-demo-application.html"/>
       <sub name="gtk3-widget-factory" link="gtk3-widget-factory.html"/>
       <sub name="gtk3-icon-browser" link="gtk3-icon-browser.html"/>
       <sub name="gtk-query-immodules-3.0" link="gtk-query-immodules-3.0.html"/>
@@ -386,6 +390,7 @@
       <sub name="Using GTK+ on Mac OS X" link="gtk-osx.html"/>
       <sub name="Using GTK+ with Broadway" link="gtk-broadway.html"/>
       <sub name="Using GTK+ with Wayland" link="gtk-wayland.html"/>
+      <sub name="Using GTK+ with Mir" link="gtk-mir.html"/>
     </sub>
     <sub name="Glossary" link="glossary.html"/>
     <sub name="Index of all symbols" link="api-index-full.html"/>
@@ -398,21 +403,10 @@
     <sub name="Index of new symbols in 3.10" link="api-index-3-10.html"/>
     <sub name="Index of new symbols in 3.12" link="api-index-3-12.html"/>
     <sub name="Index of new symbols in 3.14" link="api-index-3-14.html"/>
+    <sub name="Index of new symbols in 3.16" link="api-index-3-16.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
   </chapters>
   <functions>
-    <keyword type="" name="Windows and events" link="chap-drawing-model.html#drawing model windows"/>
-    <keyword type="" name="The frame clock" link="chap-drawing-model.html#frameclock"/>
-    <keyword type="" name="Hierarchical drawing" link="chap-drawing-model.html#hierarchical-drawing"/>
-    <keyword type="" name="Scrolling" link="chap-drawing-model.html#scrolling drawing model"/>
-    <keyword type="" name="Automatic double buffering" link="chap-drawing-model.html#automatic-double-buffering"/>
-    <keyword type="" name="Devices and events" link="chap-input-handling.html#id-1.2.7.3.3"/>
-    <keyword type="" name="Event propagation" link="chap-input-handling.html#id-1.2.7.3.4"/>
-    <keyword type="" name="Touch events" link="chap-input-handling.html#id-1.2.7.3.5"/>
-    <keyword type="" name="Grabs" link="chap-input-handling.html#id-1.2.7.3.6"/>
-    <keyword type="" name="Keyboard input" link="chap-input-handling.html#id-1.2.7.3.7"/>
-    <keyword type="" name="Event controllers and gestures" link="chap-input-handling.html#id-1.2.7.3.8"/>
-    <keyword type="" name="Gesture states" link="chap-input-handling.html#id-1.2.7.3.9"/>
     <keyword type="function" name="gtk_application_new ()" link="GtkApplication.html#gtk-application-new" since="3.0"/>
     <keyword type="function" name="gtk_application_add_window ()" link="GtkApplication.html#gtk-application-add-window" since="3.0"/>
     <keyword type="function" name="gtk_application_remove_window ()" link="GtkApplication.html#gtk-application-remove-window" since="3.0"/>
@@ -460,8 +454,6 @@
     <keyword type="struct" name="struct GtkActionableInterface" link="GtkActionable.html#GtkActionableInterface"/>
     <keyword type="property" name="The “action-name” property" link="GtkActionable.html#GtkActionable--action-name"/>
     <keyword type="property" name="The “action-target” property" link="GtkActionable.html#GtkActionable--action-target"/>
-    <keyword type="" name="GtkBuilder UI Definitions" link="GtkBuilder.html#BUILDER-UI"/>
-    <keyword type="" name="A GtkBuilder UI Definition" link="GtkBuilder.html#id-1.3.5.2.8.8"/>
     <keyword type="function" name="GtkBuilderConnectFunc ()" link="GtkBuilder.html#GtkBuilderConnectFunc" since="2.12"/>
     <keyword type="function" name="gtk_builder_new ()" link="GtkBuilder.html#gtk-builder-new" since="2.12"/>
     <keyword type="function" name="gtk_builder_new_from_file ()" link="GtkBuilder.html#gtk-builder-new-from-file" since="3.10"/>
@@ -505,7 +497,6 @@
     <keyword type="function" name="gtk_buildable_get_internal_child ()" link="GtkBuildable.html#gtk-buildable-get-internal-child" since="2.12"/>
     <keyword type="struct" name="GtkBuildable" link="GtkBuildable.html#GtkBuildable-struct"/>
     <keyword type="struct" name="struct GtkBuildableIface" link="GtkBuildable.html#GtkBuildableIface"/>
-    <keyword type="" name="GtkWindow as GtkBuildable" link="GtkWindow.html#id-1.3.6.2.11.3"/>
     <keyword type="function" name="gtk_window_new ()" link="GtkWindow.html#gtk-window-new"/>
     <keyword type="function" name="gtk_window_set_title ()" link="GtkWindow.html#gtk-window-set-title"/>
     <keyword type="function" name="gtk_window_set_wmclass ()" link="GtkWindow.html#gtk-window-set-wmclass"/>
@@ -622,6 +613,7 @@
     <keyword type="function" name="gtk_window_set_application ()" link="GtkWindow.html#gtk-window-set-application" since="3.0"/>
     <keyword type="function" name="gtk_window_set_has_user_ref_count ()" link="GtkWindow.html#gtk-window-set-has-user-ref-count" since="3.0"/>
     <keyword type="function" name="gtk_window_set_titlebar ()" link="GtkWindow.html#gtk-window-set-titlebar" since="3.10"/>
+    <keyword type="function" name="gtk_window_get_titlebar ()" link="GtkWindow.html#gtk-window-get-titlebar" since="3.16"/>
     <keyword type="function" name="gtk_window_set_interactive_debugging ()" link="GtkWindow.html#gtk-window-set-interactive-debugging" since="3.14"/>
     <keyword type="struct" name="GtkWindow" link="GtkWindow.html#GtkWindow-struct"/>
     <keyword type="struct" name="struct GtkWindowClass" link="GtkWindow.html#GtkWindowClass"/>
@@ -667,7 +659,6 @@
     <keyword type="signal" name="The “enable-debugging” signal" link="GtkWindow.html#GtkWindow-enable-debugging"/>
     <keyword type="signal" name="The “keys-changed” signal" link="GtkWindow.html#GtkWindow-keys-changed"/>
     <keyword type="signal" name="The “set-focus” signal" link="GtkWindow.html#GtkWindow-set-focus"/>
-    <keyword type="" name="GtkDialog as GtkBuildable" link="GtkDialog.html#id-1.3.6.3.11.13"/>
     <keyword type="function" name="gtk_dialog_new ()" link="GtkDialog.html#gtk-dialog-new"/>
     <keyword type="function" name="gtk_dialog_new_with_buttons ()" link="GtkDialog.html#gtk-dialog-new-with-buttons"/>
     <keyword type="function" name="gtk_dialog_run ()" link="GtkDialog.html#gtk-dialog-run"/>
@@ -696,7 +687,6 @@
     <keyword type="property" name="The “content-area-spacing” style property" link="GtkDialog.html#GtkDialog--s-content-area-spacing"/>
     <keyword type="signal" name="The “close” signal" link="GtkDialog.html#GtkDialog-close"/>
     <keyword type="signal" name="The “response” signal" link="GtkDialog.html#GtkDialog-response"/>
-    <keyword type="" name="GtkMessageDialog as GtkBuildable" link="GtkMessageDialog.html#id-1.3.6.4.10.12"/>
     <keyword type="function" name="gtk_message_dialog_new ()" link="GtkMessageDialog.html#gtk-message-dialog-new"/>
     <keyword type="function" name="gtk_message_dialog_new_with_markup ()" link="GtkMessageDialog.html#gtk-message-dialog-new-with-markup" since="2.4"/>
     <keyword type="function" name="gtk_message_dialog_set_markup ()" link="GtkMessageDialog.html#gtk-message-dialog-set-markup" since="2.4"/>
@@ -768,7 +758,6 @@
     <keyword type="property" name="The “website-label” property" link="GtkAboutDialog.html#GtkAboutDialog--website-label"/>
     <keyword type="property" name="The “wrap-license” property" link="GtkAboutDialog.html#GtkAboutDialog--wrap-license"/>
     <keyword type="signal" name="The “activate-link” signal" link="GtkAboutDialog.html#GtkAboutDialog-activate-link"/>
-    <keyword type="" name="GtkAssistant as GtkBuildable" link="GtkAssistant.html#id-1.3.6.6.12.5"/>
     <keyword type="function" name="gtk_assistant_new ()" link="GtkAssistant.html#gtk-assistant-new" since="2.10"/>
     <keyword type="function" name="gtk_assistant_get_current_page ()" link="GtkAssistant.html#gtk-assistant-get-current-page" since="2.10"/>
     <keyword type="function" name="gtk_assistant_set_current_page ()" link="GtkAssistant.html#gtk-assistant-set-current-page" since="2.10"/>
@@ -932,11 +921,12 @@
     <keyword type="function" name="gtk_list_box_set_sort_func ()" link="GtkListBox.html#gtk-list-box-set-sort-func" since="3.10"/>
     <keyword type="function" name="gtk_list_box_drag_highlight_row ()" link="GtkListBox.html#gtk-list-box-drag-highlight-row" since="3.10"/>
     <keyword type="function" name="gtk_list_box_drag_unhighlight_row ()" link="GtkListBox.html#gtk-list-box-drag-unhighlight-row" since="3.10"/>
+    <keyword type="function" name="GtkListBoxCreateWidgetFunc ()" link="GtkListBox.html#GtkListBoxCreateWidgetFunc" since="3.16"/>
+    <keyword type="function" name="gtk_list_box_bind_model ()" link="GtkListBox.html#gtk-list-box-bind-model" since="3.16"/>
     <keyword type="function" name="gtk_list_box_row_new ()" link="GtkListBox.html#gtk-list-box-row-new" since="3.10"/>
     <keyword type="function" name="gtk_list_box_row_changed ()" link="GtkListBox.html#gtk-list-box-row-changed" since="3.10"/>
     <keyword type="function" name="gtk_list_box_row_is_selected ()" link="GtkListBox.html#gtk-list-box-row-is-selected" since="3.14"/>
     <keyword type="function" name="gtk_list_box_row_get_header ()" link="GtkListBox.html#gtk-list-box-row-get-header" since="3.10"/>
-    <keyword type="function" name="gtk_list_box_row_get_type ()" link="GtkListBox.html#gtk-list-box-row-get-type"/>
     <keyword type="function" name="gtk_list_box_row_set_header ()" link="GtkListBox.html#gtk-list-box-row-set-header" since="3.10"/>
     <keyword type="function" name="gtk_list_box_row_get_index ()" link="GtkListBox.html#gtk-list-box-row-get-index" since="3.10"/>
     <keyword type="function" name="gtk_list_box_row_set_activatable ()" link="GtkListBox.html#gtk-list-box-row-set-activatable" since="3.14"/>
@@ -1024,6 +1014,10 @@
     <keyword type="function" name="gtk_stack_set_visible_child_full ()" link="GtkStack.html#gtk-stack-set-visible-child-full" since="3.10"/>
     <keyword type="function" name="gtk_stack_set_homogeneous ()" link="GtkStack.html#gtk-stack-set-homogeneous" since="3.10"/>
     <keyword type="function" name="gtk_stack_get_homogeneous ()" link="GtkStack.html#gtk-stack-get-homogeneous" since="3.10"/>
+    <keyword type="function" name="gtk_stack_set_hhomogeneous ()" link="GtkStack.html#gtk-stack-set-hhomogeneous" since="3.16"/>
+    <keyword type="function" name="gtk_stack_get_hhomogeneous ()" link="GtkStack.html#gtk-stack-get-hhomogeneous" since="3.16"/>
+    <keyword type="function" name="gtk_stack_set_vhomogeneous ()" link="GtkStack.html#gtk-stack-set-vhomogeneous" since="3.16"/>
+    <keyword type="function" name="gtk_stack_get_vhomogeneous ()" link="GtkStack.html#gtk-stack-get-vhomogeneous" since="3.16"/>
     <keyword type="function" name="gtk_stack_set_transition_duration ()" link="GtkStack.html#gtk-stack-set-transition-duration" since="3.10"/>
     <keyword type="function" name="gtk_stack_get_transition_duration ()" link="GtkStack.html#gtk-stack-get-transition-duration" since="3.10"/>
     <keyword type="function" name="gtk_stack_set_transition_type ()" link="GtkStack.html#gtk-stack-set-transition-type" since="3.10"/>
@@ -1031,10 +1025,12 @@
     <keyword type="function" name="gtk_stack_get_transition_running ()" link="GtkStack.html#gtk-stack-get-transition-running" since="3.12"/>
     <keyword type="struct" name="struct GtkStack" link="GtkStack.html#GtkStack-struct"/>
     <keyword type="enum" name="enum GtkStackTransitionType" link="GtkStack.html#GtkStackTransitionType"/>
+    <keyword type="property" name="The “hhomogeneous” property" link="GtkStack.html#GtkStack--hhomogeneous"/>
     <keyword type="property" name="The “homogeneous” property" link="GtkStack.html#GtkStack--homogeneous"/>
     <keyword type="property" name="The “transition-duration” property" link="GtkStack.html#GtkStack--transition-duration"/>
     <keyword type="property" name="The “transition-running” property" link="GtkStack.html#GtkStack--transition-running"/>
     <keyword type="property" name="The “transition-type” property" link="GtkStack.html#GtkStack--transition-type"/>
+    <keyword type="property" name="The “vhomogeneous” property" link="GtkStack.html#GtkStack--vhomogeneous"/>
     <keyword type="property" name="The “visible-child” property" link="GtkStack.html#GtkStack--visible-child"/>
     <keyword type="property" name="The “visible-child-name” property" link="GtkStack.html#GtkStack--visible-child-name"/>
     <keyword type="property" name="The “icon-name” child property" link="GtkStack.html#GtkStack--c-icon-name"/>
@@ -1047,6 +1043,12 @@
     <keyword type="function" name="gtk_stack_switcher_get_stack ()" link="GtkStackSwitcher.html#gtk-stack-switcher-get-stack" since="3.10"/>
     <keyword type="struct" name="struct GtkStackSwitcher" link="GtkStackSwitcher.html#GtkStackSwitcher-struct"/>
     <keyword type="property" name="The “stack” property" link="GtkStackSwitcher.html#GtkStackSwitcher--stack"/>
+    <keyword type="function" name="gtk_stack_sidebar_new ()" link="GtkStackSidebar.html#gtk-stack-sidebar-new" since="3.16"/>
+    <keyword type="function" name="gtk_stack_sidebar_set_stack ()" link="GtkStackSidebar.html#gtk-stack-sidebar-set-stack" since="3.16"/>
+    <keyword type="function" name="gtk_stack_sidebar_get_stack ()" link="GtkStackSidebar.html#gtk-stack-sidebar-get-stack" since="3.16"/>
+    <keyword type="struct" name="struct GtkStackSidebar" link="GtkStackSidebar.html#GtkStackSidebar-struct"/>
+    <keyword type="struct" name="struct GtkStackSidebarClass" link="GtkStackSidebar.html#GtkStackSidebarClass"/>
+    <keyword type="property" name="The “stack” property" link="GtkStackSidebar.html#GtkStackSidebar--stack"/>
     <keyword type="function" name="gtk_action_bar_new ()" link="GtkActionBar.html#gtk-action-bar-new" since="3.12"/>
     <keyword type="function" name="gtk_action_bar_pack_start ()" link="GtkActionBar.html#gtk-action-bar-pack-start" since="3.12"/>
     <keyword type="function" name="gtk_action_bar_pack_end ()" link="GtkActionBar.html#gtk-action-bar-pack-end" since="3.12"/>
@@ -1081,7 +1083,6 @@
     <keyword type="property" name="The “title” property" link="GtkHeaderBar.html#GtkHeaderBar--title"/>
     <keyword type="property" name="The “pack-type” child property" link="GtkHeaderBar.html#GtkHeaderBar--c-pack-type"/>
     <keyword type="property" name="The “position” child property" link="GtkHeaderBar.html#GtkHeaderBar--c-position"/>
-    <keyword type="" name="GtkOverlay as GtkBuildable" link="GtkOverlay.html#id-1.3.7.11.9.4"/>
     <keyword type="function" name="gtk_overlay_new ()" link="GtkOverlay.html#gtk-overlay-new" since="3.2"/>
     <keyword type="function" name="gtk_overlay_add_overlay ()" link="GtkOverlay.html#gtk-overlay-add-overlay" since="3.2"/>
     <keyword type="struct" name="struct GtkOverlay" link="GtkOverlay.html#GtkOverlay-struct"/>
@@ -1114,11 +1115,14 @@
     <keyword type="function" name="gtk_paned_set_position ()" link="GtkPaned.html#gtk-paned-set-position"/>
     <keyword type="function" name="gtk_paned_get_position ()" link="GtkPaned.html#gtk-paned-get-position"/>
     <keyword type="function" name="gtk_paned_get_handle_window ()" link="GtkPaned.html#gtk-paned-get-handle-window" since="2.20"/>
+    <keyword type="function" name="gtk_paned_set_wide_handle ()" link="GtkPaned.html#gtk-paned-set-wide-handle" since="3.16"/>
+    <keyword type="function" name="gtk_paned_get_wide_handle ()" link="GtkPaned.html#gtk-paned-get-wide-handle" since="3.16"/>
     <keyword type="struct" name="struct GtkPaned" link="GtkPaned.html#GtkPaned-struct"/>
     <keyword type="property" name="The “max-position” property" link="GtkPaned.html#GtkPaned--max-position"/>
     <keyword type="property" name="The “min-position” property" link="GtkPaned.html#GtkPaned--min-position"/>
     <keyword type="property" name="The “position” property" link="GtkPaned.html#GtkPaned--position"/>
     <keyword type="property" name="The “position-set” property" link="GtkPaned.html#GtkPaned--position-set"/>
+    <keyword type="property" name="The “wide-handle” property" link="GtkPaned.html#GtkPaned--wide-handle"/>
     <keyword type="property" name="The “resize” child property" link="GtkPaned.html#GtkPaned--c-resize"/>
     <keyword type="property" name="The “shrink” child property" link="GtkPaned.html#GtkPaned--c-shrink"/>
     <keyword type="property" name="The “handle-size” style property" link="GtkPaned.html#GtkPaned--s-handle-size"/>
@@ -1143,7 +1147,6 @@
     <keyword type="property" name="The “width” property" link="GtkLayout.html#GtkLayout--width"/>
     <keyword type="property" name="The “x” child property" link="GtkLayout.html#GtkLayout--c-x"/>
     <keyword type="property" name="The “y” child property" link="GtkLayout.html#GtkLayout--c-y"/>
-    <keyword type="" name="GtkNotebook as GtkBuildable" link="GtkNotebook.html#id-1.3.7.15.12.4"/>
     <keyword type="function" name="gtk_notebook_new ()" link="GtkNotebook.html#gtk-notebook-new"/>
     <keyword type="function" name="gtk_notebook_append_page ()" link="GtkNotebook.html#gtk-notebook-append-page"/>
     <keyword type="function" name="gtk_notebook_append_page_menu ()" link="GtkNotebook.html#gtk-notebook-append-page-menu"/>
@@ -1152,6 +1155,7 @@
     <keyword type="function" name="gtk_notebook_insert_page ()" link="GtkNotebook.html#gtk-notebook-insert-page"/>
     <keyword type="function" name="gtk_notebook_insert_page_menu ()" link="GtkNotebook.html#gtk-notebook-insert-page-menu"/>
     <keyword type="function" name="gtk_notebook_remove_page ()" link="GtkNotebook.html#gtk-notebook-remove-page"/>
+    <keyword type="function" name="gtk_notebook_detach_tab ()" link="GtkNotebook.html#gtk-notebook-detach-tab" since="3.16"/>
     <keyword type="function" name="gtk_notebook_page_num ()" link="GtkNotebook.html#gtk-notebook-page-num"/>
     <keyword type="function" name="gtk_notebook_next_page ()" link="GtkNotebook.html#gtk-notebook-next-page"/>
     <keyword type="function" name="gtk_notebook_prev_page ()" link="GtkNotebook.html#gtk-notebook-prev-page"/>
@@ -1222,8 +1226,6 @@
     <keyword type="signal" name="The “reorder-tab” signal" link="GtkNotebook.html#GtkNotebook-reorder-tab"/>
     <keyword type="signal" name="The “select-page” signal" link="GtkNotebook.html#GtkNotebook-select-page"/>
     <keyword type="signal" name="The “switch-page” signal" link="GtkNotebook.html#GtkNotebook-switch-page"/>
-    <keyword type="" name="Special Usage" link="GtkExpander.html#id-1.3.7.16.11.4"/>
-    <keyword type="" name="GtkExpander as GtkBuildable" link="GtkExpander.html#id-1.3.7.16.11.5"/>
     <keyword type="function" name="gtk_expander_new ()" link="GtkExpander.html#gtk-expander-new" since="2.4"/>
     <keyword type="function" name="gtk_expander_new_with_mnemonic ()" link="GtkExpander.html#gtk-expander-new-with-mnemonic" since="2.4"/>
     <keyword type="function" name="gtk_expander_set_expanded ()" link="GtkExpander.html#gtk-expander-set-expanded" since="2.4"/>
@@ -1273,12 +1275,6 @@
     <keyword type="struct" name="struct GtkFixed" link="GtkFixed.html#GtkFixed-struct"/>
     <keyword type="property" name="The “x” child property" link="GtkFixed.html#GtkFixed--c-x"/>
     <keyword type="property" name="The “y” child property" link="GtkFixed.html#GtkFixed--c-y"/>
-    <keyword type="" name="GtkLabel as GtkBuildable" link="GtkLabel.html#id-1.3.8.2.10.3"/>
-    <keyword type="" name="Mnemonics" link="GtkLabel.html#id-1.3.8.2.10.4"/>
-    <keyword type="" name="Markup (styled text)" link="GtkLabel.html#id-1.3.8.2.10.5"/>
-    <keyword type="" name="Selectable labels" link="GtkLabel.html#id-1.3.8.2.10.6"/>
-    <keyword type="" name="Text layout" link="GtkLabel.html#label-text-layout"/>
-    <keyword type="" name="Links" link="GtkLabel.html#id-1.3.8.2.10.8"/>
     <keyword type="function" name="gtk_label_new ()" link="GtkLabel.html#gtk-label-new"/>
     <keyword type="function" name="gtk_label_set_text ()" link="GtkLabel.html#gtk-label-set-text"/>
     <keyword type="function" name="gtk_label_set_attributes ()" link="GtkLabel.html#gtk-label-set-attributes"/>
@@ -1286,6 +1282,8 @@
     <keyword type="function" name="gtk_label_set_markup_with_mnemonic ()" link="GtkLabel.html#gtk-label-set-markup-with-mnemonic"/>
     <keyword type="function" name="gtk_label_set_pattern ()" link="GtkLabel.html#gtk-label-set-pattern"/>
     <keyword type="function" name="gtk_label_set_justify ()" link="GtkLabel.html#gtk-label-set-justify"/>
+    <keyword type="function" name="gtk_label_set_xalign ()" link="GtkLabel.html#gtk-label-set-xalign" since="3.16"/>
+    <keyword type="function" name="gtk_label_set_yalign ()" link="GtkLabel.html#gtk-label-set-yalign" since="3.16"/>
     <keyword type="function" name="gtk_label_set_ellipsize ()" link="GtkLabel.html#gtk-label-set-ellipsize" since="2.6"/>
     <keyword type="function" name="gtk_label_set_width_chars ()" link="GtkLabel.html#gtk-label-set-width-chars" since="2.6"/>
     <keyword type="function" name="gtk_label_set_max_width_chars ()" link="GtkLabel.html#gtk-label-set-max-width-chars" since="2.6"/>
@@ -1303,6 +1301,8 @@
     <keyword type="function" name="gtk_label_set_text_with_mnemonic ()" link="GtkLabel.html#gtk-label-set-text-with-mnemonic"/>
     <keyword type="function" name="gtk_label_get_attributes ()" link="GtkLabel.html#gtk-label-get-attributes"/>
     <keyword type="function" name="gtk_label_get_justify ()" link="GtkLabel.html#gtk-label-get-justify"/>
+    <keyword type="function" name="gtk_label_get_xalign ()" link="GtkLabel.html#gtk-label-get-xalign" since="3.16"/>
+    <keyword type="function" name="gtk_label_get_yalign ()" link="GtkLabel.html#gtk-label-get-yalign" since="3.16"/>
     <keyword type="function" name="gtk_label_get_ellipsize ()" link="GtkLabel.html#gtk-label-get-ellipsize" since="2.6"/>
     <keyword type="function" name="gtk_label_get_width_chars ()" link="GtkLabel.html#gtk-label-get-width-chars" since="2.6"/>
     <keyword type="function" name="gtk_label_get_max_width_chars ()" link="GtkLabel.html#gtk-label-get-max-width-chars" since="2.6"/>
@@ -1346,6 +1346,8 @@
     <keyword type="property" name="The “width-chars” property" link="GtkLabel.html#GtkLabel--width-chars"/>
     <keyword type="property" name="The “wrap” property" link="GtkLabel.html#GtkLabel--wrap"/>
     <keyword type="property" name="The “wrap-mode” property" link="GtkLabel.html#GtkLabel--wrap-mode"/>
+    <keyword type="property" name="The “xalign” property" link="GtkLabel.html#GtkLabel--xalign"/>
+    <keyword type="property" name="The “yalign” property" link="GtkLabel.html#GtkLabel--yalign"/>
     <keyword type="signal" name="The “activate-current-link” signal" link="GtkLabel.html#GtkLabel-activate-current-link"/>
     <keyword type="signal" name="The “activate-link” signal" link="GtkLabel.html#GtkLabel-activate-link"/>
     <keyword type="signal" name="The “copy-clipboard” signal" link="GtkLabel.html#GtkLabel-copy-clipboard"/>
@@ -1400,7 +1402,6 @@
     <keyword type="function" name="gtk_spinner_stop ()" link="GtkSpinner.html#gtk-spinner-stop" since="2.20"/>
     <keyword type="struct" name="struct GtkSpinner" link="GtkSpinner.html#GtkSpinner-struct"/>
     <keyword type="property" name="The “active” property" link="GtkSpinner.html#GtkSpinner--active"/>
-    <keyword type="" name="GtkInfoBar as GtkBuildable" link="GtkInfoBar.html#id-1.3.8.5.11.8"/>
     <keyword type="function" name="gtk_info_bar_new ()" link="GtkInfoBar.html#gtk-info-bar-new" since="2.18"/>
     <keyword type="function" name="gtk_info_bar_new_with_buttons ()" link="GtkInfoBar.html#gtk-info-bar-new-with-buttons"/>
     <keyword type="function" name="gtk_info_bar_add_action_widget ()" link="GtkInfoBar.html#gtk-info-bar-add-action-widget" since="2.18"/>
@@ -1662,6 +1663,17 @@
     <keyword type="property" name="The “tooltip-lock” property" link="GtkLockButton.html#GtkLockButton--tooltip-lock"/>
     <keyword type="property" name="The “tooltip-not-authorized” property" link="GtkLockButton.html#GtkLockButton--tooltip-not-authorized"/>
     <keyword type="property" name="The “tooltip-unlock” property" link="GtkLockButton.html#GtkLockButton--tooltip-unlock"/>
+    <keyword type="function" name="gtk_model_button_new ()" link="GtkModelButton.html#gtk-model-button-new" since="3.16"/>
+    <keyword type="struct" name="GtkModelButton" link="GtkModelButton.html#GtkModelButton-struct"/>
+    <keyword type="enum" name="enum GtkButtonRole" link="GtkModelButton.html#GtkButtonRole"/>
+    <keyword type="property" name="The “active” property" link="GtkModelButton.html#GtkModelButton--active"/>
+    <keyword type="property" name="The “centered” property" link="GtkModelButton.html#GtkModelButton--centered"/>
+    <keyword type="property" name="The “icon” property" link="GtkModelButton.html#GtkModelButton--icon"/>
+    <keyword type="property" name="The “iconic” property" link="GtkModelButton.html#GtkModelButton--iconic"/>
+    <keyword type="property" name="The “inverted” property" link="GtkModelButton.html#GtkModelButton--inverted"/>
+    <keyword type="property" name="The “menu-name” property" link="GtkModelButton.html#GtkModelButton--menu-name"/>
+    <keyword type="property" name="The “role” property" link="GtkModelButton.html#GtkModelButton--role"/>
+    <keyword type="property" name="The “text” property" link="GtkModelButton.html#GtkModelButton--text"/>
     <keyword type="function" name="gtk_entry_new ()" link="GtkEntry.html#gtk-entry-new"/>
     <keyword type="function" name="gtk_entry_new_with_buffer ()" link="GtkEntry.html#gtk-entry-new-with-buffer" since="2.18"/>
     <keyword type="function" name="gtk_entry_get_buffer ()" link="GtkEntry.html#gtk-entry-get-buffer" since="2.18"/>
@@ -1737,7 +1749,9 @@
     <keyword type="function" name="gtk_entry_get_input_purpose ()" link="GtkEntry.html#gtk-entry-get-input-purpose" since="3.6"/>
     <keyword type="function" name="gtk_entry_set_input_hints ()" link="GtkEntry.html#gtk-entry-set-input-hints" since="3.6"/>
     <keyword type="function" name="gtk_entry_get_input_hints ()" link="GtkEntry.html#gtk-entry-get-input-hints" since="3.6"/>
+    <keyword type="function" name="gtk_entry_grab_focus_without_selecting ()" link="GtkEntry.html#gtk-entry-grab-focus-without-selecting" since="3.16"/>
     <keyword type="struct" name="struct GtkEntry" link="GtkEntry.html#GtkEntry-struct"/>
+    <keyword type="struct" name="struct GtkEntryClass" link="GtkEntry.html#GtkEntryClass"/>
     <keyword type="enum" name="enum GtkEntryIconPosition" link="GtkEntry.html#GtkEntryIconPosition" since="2.16"/>
     <keyword type="enum" name="enum GtkInputPurpose" link="GtkEntry.html#GtkInputPurpose" since="3.6"/>
     <keyword type="enum" name="enum GtkInputHints" link="GtkEntry.html#GtkInputHints" since="3.6"/>
@@ -1867,7 +1881,6 @@
     <keyword type="signal" name="The “insert-prefix” signal" link="GtkEntryCompletion.html#GtkEntryCompletion-insert-prefix"/>
     <keyword type="signal" name="The “match-selected” signal" link="GtkEntryCompletion.html#GtkEntryCompletion-match-selected"/>
     <keyword type="signal" name="The “no-matches” signal" link="GtkEntryCompletion.html#GtkEntryCompletion-no-matches"/>
-    <keyword type="" name="GtkScale as GtkBuildable" link="GtkScale.html#id-1.3.10.5.11.4"/>
     <keyword type="function" name="gtk_scale_new ()" link="GtkScale.html#gtk-scale-new" since="3.0"/>
     <keyword type="function" name="gtk_scale_new_with_range ()" link="GtkScale.html#gtk-scale-new-with-range" since="3.0"/>
     <keyword type="function" name="gtk_scale_set_digits ()" link="GtkScale.html#gtk-scale-set-digits"/>
@@ -1933,8 +1946,12 @@
     <keyword type="signal" name="The “value-changed” signal" link="GtkSpinButton.html#GtkSpinButton-value-changed"/>
     <keyword type="signal" name="The “wrapped” signal" link="GtkSpinButton.html#GtkSpinButton-wrapped"/>
     <keyword type="function" name="gtk_search_entry_new ()" link="GtkSearchEntry.html#gtk-search-entry-new" since="3.6"/>
+    <keyword type="function" name="gtk_search_entry_handle_event ()" link="GtkSearchEntry.html#gtk-search-entry-handle-event" since="3.16"/>
     <keyword type="struct" name="struct GtkSearchEntry" link="GtkSearchEntry.html#GtkSearchEntry-struct"/>
+    <keyword type="signal" name="The “next-match” signal" link="GtkSearchEntry.html#GtkSearchEntry-next-match"/>
+    <keyword type="signal" name="The “previous-match” signal" link="GtkSearchEntry.html#GtkSearchEntry-previous-match"/>
     <keyword type="signal" name="The “search-changed” signal" link="GtkSearchEntry.html#GtkSearchEntry-search-changed"/>
+    <keyword type="signal" name="The “stop-search” signal" link="GtkSearchEntry.html#GtkSearchEntry-stop-search"/>
     <keyword type="function" name="gtk_search_bar_new ()" link="GtkSearchBar.html#gtk-search-bar-new" since="3.10"/>
     <keyword type="function" name="gtk_search_bar_connect_entry ()" link="GtkSearchBar.html#gtk-search-bar-connect-entry" since="3.10"/>
     <keyword type="function" name="gtk_search_bar_get_search_mode ()" link="GtkSearchBar.html#gtk-search-bar-get-search-mode" since="3.10"/>
@@ -2079,6 +2096,7 @@
     <keyword type="function" name="gtk_text_buffer_insert_range_interactive ()" link="GtkTextBuffer.html#gtk-text-buffer-insert-range-interactive"/>
     <keyword type="function" name="gtk_text_buffer_insert_with_tags ()" link="GtkTextBuffer.html#gtk-text-buffer-insert-with-tags"/>
     <keyword type="function" name="gtk_text_buffer_insert_with_tags_by_name ()" link="GtkTextBuffer.html#gtk-text-buffer-insert-with-tags-by-name"/>
+    <keyword type="function" name="gtk_text_buffer_insert_markup ()" link="GtkTextBuffer.html#gtk-text-buffer-insert-markup" since="3.16"/>
     <keyword type="function" name="gtk_text_buffer_delete ()" link="GtkTextBuffer.html#gtk-text-buffer-delete"/>
     <keyword type="function" name="gtk_text_buffer_delete_interactive ()" link="GtkTextBuffer.html#gtk-text-buffer-delete-interactive"/>
     <keyword type="function" name="gtk_text_buffer_backspace ()" link="GtkTextBuffer.html#gtk-text-buffer-backspace" since="2.6"/>
@@ -2143,6 +2161,7 @@
     <keyword type="function" name="gtk_text_buffer_unregister_deserialize_format ()" link="GtkTextBuffer.html#gtk-text-buffer-unregister-deserialize-format" since="2.10"/>
     <keyword type="function" name="gtk_text_buffer_unregister_serialize_format ()" link="GtkTextBuffer.html#gtk-text-buffer-unregister-serialize-format" since="2.10"/>
     <keyword type="struct" name="GtkTextBuffer" link="GtkTextBuffer.html#GtkTextBuffer-struct"/>
+    <keyword type="struct" name="struct GtkTextBufferClass" link="GtkTextBuffer.html#GtkTextBufferClass"/>
     <keyword type="enum" name="enum GtkTextBufferTargetInfo" link="GtkTextBuffer.html#GtkTextBufferTargetInfo"/>
     <keyword type="property" name="The “copy-target-list” property" link="GtkTextBuffer.html#GtkTextBuffer--copy-target-list"/>
     <keyword type="property" name="The “cursor-position” property" link="GtkTextBuffer.html#GtkTextBuffer--cursor-position"/>
@@ -2185,6 +2204,8 @@
     <keyword type="property" name="The “direction” property" link="GtkTextTag.html#GtkTextTag--direction"/>
     <keyword type="property" name="The “editable” property" link="GtkTextTag.html#GtkTextTag--editable"/>
     <keyword type="property" name="The “editable-set” property" link="GtkTextTag.html#GtkTextTag--editable-set"/>
+    <keyword type="property" name="The “fallback” property" link="GtkTextTag.html#GtkTextTag--fallback"/>
+    <keyword type="property" name="The “fallback-set” property" link="GtkTextTag.html#GtkTextTag--fallback-set"/>
     <keyword type="property" name="The “family” property" link="GtkTextTag.html#GtkTextTag--family"/>
     <keyword type="property" name="The “family-set” property" link="GtkTextTag.html#GtkTextTag--family-set"/>
     <keyword type="property" name="The “font” property" link="GtkTextTag.html#GtkTextTag--font"/>
@@ -2203,6 +2224,8 @@
     <keyword type="property" name="The “language-set” property" link="GtkTextTag.html#GtkTextTag--language-set"/>
     <keyword type="property" name="The “left-margin” property" link="GtkTextTag.html#GtkTextTag--left-margin"/>
     <keyword type="property" name="The “left-margin-set” property" link="GtkTextTag.html#GtkTextTag--left-margin-set"/>
+    <keyword type="property" name="The “letter-spacing” property" link="GtkTextTag.html#GtkTextTag--letter-spacing"/>
+    <keyword type="property" name="The “letter-spacing-set” property" link="GtkTextTag.html#GtkTextTag--letter-spacing-set"/>
     <keyword type="property" name="The “name” property" link="GtkTextTag.html#GtkTextTag--name"/>
     <keyword type="property" name="The “paragraph-background” property" link="GtkTextTag.html#GtkTextTag--paragraph-background"/>
     <keyword type="property" name="The “paragraph-background-gdk” property" link="GtkTextTag.html#GtkTextTag--paragraph-background-gdk"/>
@@ -2226,12 +2249,16 @@
     <keyword type="property" name="The “stretch” property" link="GtkTextTag.html#GtkTextTag--stretch"/>
     <keyword type="property" name="The “stretch-set” property" link="GtkTextTag.html#GtkTextTag--stretch-set"/>
     <keyword type="property" name="The “strikethrough” property" link="GtkTextTag.html#GtkTextTag--strikethrough"/>
+    <keyword type="property" name="The “strikethrough-rgba” property" link="GtkTextTag.html#GtkTextTag--strikethrough-rgba"/>
+    <keyword type="property" name="The “strikethrough-rgba-set” property" link="GtkTextTag.html#GtkTextTag--strikethrough-rgba-set"/>
     <keyword type="property" name="The “strikethrough-set” property" link="GtkTextTag.html#GtkTextTag--strikethrough-set"/>
     <keyword type="property" name="The “style” property" link="GtkTextTag.html#GtkTextTag--style"/>
     <keyword type="property" name="The “style-set” property" link="GtkTextTag.html#GtkTextTag--style-set"/>
     <keyword type="property" name="The “tabs” property" link="GtkTextTag.html#GtkTextTag--tabs"/>
     <keyword type="property" name="The “tabs-set” property" link="GtkTextTag.html#GtkTextTag--tabs-set"/>
     <keyword type="property" name="The “underline” property" link="GtkTextTag.html#GtkTextTag--underline"/>
+    <keyword type="property" name="The “underline-rgba” property" link="GtkTextTag.html#GtkTextTag--underline-rgba"/>
+    <keyword type="property" name="The “underline-rgba-set” property" link="GtkTextTag.html#GtkTextTag--underline-rgba-set"/>
     <keyword type="property" name="The “underline-set” property" link="GtkTextTag.html#GtkTextTag--underline-set"/>
     <keyword type="property" name="The “variant” property" link="GtkTextTag.html#GtkTextTag--variant"/>
     <keyword type="property" name="The “variant-set” property" link="GtkTextTag.html#GtkTextTag--variant-set"/>
@@ -2240,7 +2267,6 @@
     <keyword type="property" name="The “wrap-mode” property" link="GtkTextTag.html#GtkTextTag--wrap-mode"/>
     <keyword type="property" name="The “wrap-mode-set” property" link="GtkTextTag.html#GtkTextTag--wrap-mode-set"/>
     <keyword type="signal" name="The “event” signal" link="GtkTextTag.html#GtkTextTag-event"/>
-    <keyword type="" name="GtkTextTagTables as GtkBuildable" link="GtkTextTagTable.html#id-1.3.11.7.9.3"/>
     <keyword type="function" name="GtkTextTagTableForeach ()" link="GtkTextTagTable.html#GtkTextTagTableForeach"/>
     <keyword type="function" name="gtk_text_tag_table_new ()" link="GtkTextTagTable.html#gtk-text-tag-table-new"/>
     <keyword type="function" name="gtk_text_tag_table_add ()" link="GtkTextTagTable.html#gtk-text-tag-table-add"/>
@@ -2267,6 +2293,7 @@
     <keyword type="function" name="gtk_text_view_get_iter_location ()" link="GtkTextView.html#gtk-text-view-get-iter-location"/>
     <keyword type="function" name="gtk_text_view_get_cursor_locations ()" link="GtkTextView.html#gtk-text-view-get-cursor-locations" since="3.0"/>
     <keyword type="function" name="gtk_text_view_get_line_at_y ()" link="GtkTextView.html#gtk-text-view-get-line-at-y"/>
+    <keyword type="function" name="gtk_text_view_get_line_yrange ()" link="GtkTextView.html#gtk-text-view-get-line-yrange"/>
     <keyword type="function" name="gtk_text_view_get_iter_at_location ()" link="GtkTextView.html#gtk-text-view-get-iter-at-location"/>
     <keyword type="function" name="gtk_text_view_get_iter_at_position ()" link="GtkTextView.html#gtk-text-view-get-iter-at-position" since="2.6"/>
     <keyword type="function" name="gtk_text_view_buffer_to_window_coords ()" link="GtkTextView.html#gtk-text-view-buffer-to-window-coords"/>
@@ -2320,11 +2347,14 @@
     <keyword type="function" name="gtk_text_view_get_input_purpose ()" link="GtkTextView.html#gtk-text-view-get-input-purpose" since="3.6"/>
     <keyword type="function" name="gtk_text_view_set_input_hints ()" link="GtkTextView.html#gtk-text-view-set-input-hints" since="3.6"/>
     <keyword type="function" name="gtk_text_view_get_input_hints ()" link="GtkTextView.html#gtk-text-view-get-input-hints" since="3.6"/>
+    <keyword type="function" name="gtk_text_view_set_monospace ()" link="GtkTextView.html#gtk-text-view-set-monospace" since="3.16"/>
+    <keyword type="function" name="gtk_text_view_get_monospace ()" link="GtkTextView.html#gtk-text-view-get-monospace" since="3.16"/>
     <keyword type="macro" name="GTK_TEXT_VIEW_PRIORITY_VALIDATE" link="GtkTextView.html#GTK-TEXT-VIEW-PRIORITY-VALIDATE:CAPS"/>
     <keyword type="struct" name="struct GtkTextView" link="GtkTextView.html#GtkTextView-struct"/>
     <keyword type="struct" name="struct GtkTextViewClass" link="GtkTextView.html#GtkTextViewClass"/>
     <keyword type="enum" name="enum GtkTextViewLayer" link="GtkTextView.html#GtkTextViewLayer"/>
     <keyword type="enum" name="enum GtkTextWindowType" link="GtkTextView.html#GtkTextWindowType"/>
+    <keyword type="enum" name="enum GtkTextExtendSelection" link="GtkTextView.html#GtkTextExtendSelection" since="3.16"/>
     <keyword type="enum" name="enum GtkWrapMode" link="GtkTextView.html#GtkWrapMode"/>
     <keyword type="struct" name="struct GtkTextChildAnchor" link="GtkTextView.html#GtkTextChildAnchor-struct"/>
     <keyword type="property" name="The “accepts-tab” property" link="GtkTextView.html#GtkTextView--accepts-tab"/>
@@ -2337,6 +2367,7 @@
     <keyword type="property" name="The “input-purpose” property" link="GtkTextView.html#GtkTextView--input-purpose"/>
     <keyword type="property" name="The “justification” property" link="GtkTextView.html#GtkTextView--justification"/>
     <keyword type="property" name="The “left-margin” property" link="GtkTextView.html#GtkTextView--left-margin"/>
+    <keyword type="property" name="The “monospace” property" link="GtkTextView.html#GtkTextView--monospace"/>
     <keyword type="property" name="The “overwrite” property" link="GtkTextView.html#GtkTextView--overwrite"/>
     <keyword type="property" name="The “pixels-above-lines” property" link="GtkTextView.html#GtkTextView--pixels-above-lines"/>
     <keyword type="property" name="The “pixels-below-lines” property" link="GtkTextView.html#GtkTextView--pixels-below-lines"/>
@@ -2350,6 +2381,7 @@
     <keyword type="signal" name="The “copy-clipboard” signal" link="GtkTextView.html#GtkTextView-copy-clipboard"/>
     <keyword type="signal" name="The “cut-clipboard” signal" link="GtkTextView.html#GtkTextView-cut-clipboard"/>
     <keyword type="signal" name="The “delete-from-cursor” signal" link="GtkTextView.html#GtkTextView-delete-from-cursor"/>
+    <keyword type="signal" name="The “extend-selection” signal" link="GtkTextView.html#GtkTextView-extend-selection"/>
     <keyword type="signal" name="The “insert-at-cursor” signal" link="GtkTextView.html#GtkTextView-insert-at-cursor"/>
     <keyword type="signal" name="The “move-cursor” signal" link="GtkTextView.html#GtkTextView-move-cursor"/>
     <keyword type="signal" name="The “move-viewport” signal" link="GtkTextView.html#GtkTextView-move-viewport"/>
@@ -2360,8 +2392,6 @@
     <keyword type="signal" name="The “set-anchor” signal" link="GtkTextView.html#GtkTextView-set-anchor"/>
     <keyword type="signal" name="The “toggle-cursor-visible” signal" link="GtkTextView.html#GtkTextView-toggle-cursor-visible"/>
     <keyword type="signal" name="The “toggle-overwrite” signal" link="GtkTextView.html#GtkTextView-toggle-overwrite"/>
-    <keyword type="" name="Columns and cell renderers" link="TreeWidget.html#id-1.3.12.2.5.4"/>
-    <keyword type="" name="Selection handling" link="TreeWidget.html#id-1.3.12.2.5.5"/>
     <keyword type="function" name="GtkTreeModelForeachFunc ()" link="GtkTreeModel.html#GtkTreeModelForeachFunc"/>
     <keyword type="function" name="gtk_tree_path_new ()" link="GtkTreeModel.html#gtk-tree-path-new"/>
     <keyword type="function" name="gtk_tree_path_new_from_string ()" link="GtkTreeModel.html#gtk-tree-path-new-from-string"/>
@@ -2421,6 +2451,7 @@
     <keyword type="function" name="gtk_tree_model_row_has_child_toggled ()" link="GtkTreeModel.html#gtk-tree-model-row-has-child-toggled"/>
     <keyword type="function" name="gtk_tree_model_row_deleted ()" link="GtkTreeModel.html#gtk-tree-model-row-deleted"/>
     <keyword type="function" name="gtk_tree_model_rows_reordered ()" link="GtkTreeModel.html#gtk-tree-model-rows-reordered"/>
+    <keyword type="function" name="gtk_tree_model_rows_reordered_with_length ()" link="GtkTreeModel.html#gtk-tree-model-rows-reordered-with-length" since="3.10"/>
     <keyword type="struct" name="GtkTreeModel" link="GtkTreeModel.html#GtkTreeModel-struct"/>
     <keyword type="struct" name="struct GtkTreeIter" link="GtkTreeModel.html#GtkTreeIter-struct"/>
     <keyword type="struct" name="GtkTreePath" link="GtkTreeModel.html#GtkTreePath-struct"/>
@@ -2534,7 +2565,6 @@
     <keyword type="property" name="The “width” property" link="GtkTreeViewColumn.html#GtkTreeViewColumn--width"/>
     <keyword type="property" name="The “x-offset” property" link="GtkTreeViewColumn.html#GtkTreeViewColumn--x-offset"/>
     <keyword type="signal" name="The “clicked” signal" link="GtkTreeViewColumn.html#GtkTreeViewColumn-clicked"/>
-    <keyword type="" name="GtkTreeView as GtkBuildable" link="GtkTreeView.html#id-1.3.12.6.11.9"/>
     <keyword type="function" name="GtkTreeViewColumnDropFunc ()" link="GtkTreeView.html#GtkTreeViewColumnDropFunc"/>
     <keyword type="function" name="GtkTreeViewMappingFunc ()" link="GtkTreeView.html#GtkTreeViewMappingFunc"/>
     <keyword type="function" name="GtkTreeViewSearchEqualFunc ()" link="GtkTreeView.html#GtkTreeViewSearchEqualFunc"/>
@@ -2861,8 +2891,6 @@
     <keyword type="struct" name="struct GtkTreeModelFilter" link="GtkTreeModelFilter.html#GtkTreeModelFilter-struct"/>
     <keyword type="property" name="The “child-model” property" link="GtkTreeModelFilter.html#GtkTreeModelFilter--child-model"/>
     <keyword type="property" name="The “virtual-root” property" link="GtkTreeModelFilter.html#GtkTreeModelFilter--virtual-root"/>
-    <keyword type="" name="GtkCellLayouts as GtkBuildable" link="GtkCellLayout.html#id-1.3.12.13.9.4"/>
-    <keyword type="" name="Subclassing GtkCellLayout implementations" link="GtkCellLayout.html#id-1.3.12.13.9.5"/>
     <keyword type="function" name="GtkCellLayoutDataFunc ()" link="GtkCellLayout.html#GtkCellLayoutDataFunc"/>
     <keyword type="function" name="gtk_cell_layout_pack_start ()" link="GtkCellLayout.html#gtk-cell-layout-pack-start" since="2.4"/>
     <keyword type="function" name="gtk_cell_layout_pack_end ()" link="GtkCellLayout.html#gtk-cell-layout-pack-end" since="2.4"/>
@@ -2876,10 +2904,6 @@
     <keyword type="function" name="gtk_cell_layout_clear_attributes ()" link="GtkCellLayout.html#gtk-cell-layout-clear-attributes" since="2.4"/>
     <keyword type="struct" name="GtkCellLayout" link="GtkCellLayout.html#GtkCellLayout-struct"/>
     <keyword type="struct" name="struct GtkCellLayoutIface" link="GtkCellLayout.html#GtkCellLayoutIface"/>
-    <keyword type="" name="Requesting area sizes" link="GtkCellArea.html#id-1.3.12.14.10.5"/>
-    <keyword type="" name="Rendering Areas" link="GtkCellArea.html#id-1.3.12.14.10.6"/>
-    <keyword type="" name="Handling Events and Driving Keyboard Focus" link="GtkCellArea.html#id-1.3.12.14.10.7"/>
-    <keyword type="" name="Cell Properties" link="GtkCellArea.html#id-1.3.12.14.10.8"/>
     <keyword type="function" name="GtkCellCallback ()" link="GtkCellArea.html#GtkCellCallback"/>
     <keyword type="function" name="GtkCellAllocCallback ()" link="GtkCellArea.html#GtkCellAllocCallback"/>
     <keyword type="macro" name="GTK_CELL_AREA_WARN_INVALID_CELL_PROPERTY_ID()" link="GtkCellArea.html#GTK-CELL-AREA-WARN-INVALID-CELL-PROPERTY-ID:CAPS"/>
@@ -2903,6 +2927,7 @@
     <keyword type="function" name="gtk_cell_area_apply_attributes ()" link="GtkCellArea.html#gtk-cell-area-apply-attributes" since="3.0"/>
     <keyword type="function" name="gtk_cell_area_attribute_connect ()" link="GtkCellArea.html#gtk-cell-area-attribute-connect" since="3.0"/>
     <keyword type="function" name="gtk_cell_area_attribute_disconnect ()" link="GtkCellArea.html#gtk-cell-area-attribute-disconnect" since="3.0"/>
+    <keyword type="function" name="gtk_cell_area_attribute_get_column ()" link="GtkCellArea.html#gtk-cell-area-attribute-get-column" since="3.14"/>
     <keyword type="function" name="gtk_cell_area_class_install_cell_property ()" link="GtkCellArea.html#gtk-cell-area-class-install-cell-property" since="3.0"/>
     <keyword type="function" name="gtk_cell_area_class_find_cell_property ()" link="GtkCellArea.html#gtk-cell-area-class-find-cell-property" since="3.0"/>
     <keyword type="function" name="gtk_cell_area_class_list_cell_properties ()" link="GtkCellArea.html#gtk-cell-area-class-list-cell-properties" since="3.0"/>
@@ -3133,9 +3158,6 @@
     <keyword type="property" name="The “active” property" link="GtkCellRendererSpinner.html#GtkCellRendererSpinner--active"/>
     <keyword type="property" name="The “pulse” property" link="GtkCellRendererSpinner.html#GtkCellRendererSpinner--pulse"/>
     <keyword type="property" name="The “size” property" link="GtkCellRendererSpinner.html#GtkCellRendererSpinner--size"/>
-    <keyword type="" name="Performance Considerations" link="GtkListStore.html#id-1.3.12.27.8.7"/>
-    <keyword type="" name="Atomic Operations" link="GtkListStore.html#id-1.3.12.27.8.8"/>
-    <keyword type="" name="GtkListStore as GtkBuildable" link="GtkListStore.html#id-1.3.12.27.8.9"/>
     <keyword type="function" name="gtk_list_store_new ()" link="GtkListStore.html#gtk-list-store-new"/>
     <keyword type="function" name="gtk_list_store_newv ()" link="GtkListStore.html#gtk-list-store-newv"/>
     <keyword type="function" name="gtk_list_store_set_column_types ()" link="GtkListStore.html#gtk-list-store-set-column-types"/>
@@ -3158,7 +3180,6 @@
     <keyword type="function" name="gtk_list_store_move_before ()" link="GtkListStore.html#gtk-list-store-move-before" since="2.2"/>
     <keyword type="function" name="gtk_list_store_move_after ()" link="GtkListStore.html#gtk-list-store-move-after" since="2.2"/>
     <keyword type="struct" name="struct GtkListStore" link="GtkListStore.html#GtkListStore-struct"/>
-    <keyword type="" name="GtkTreeStore as GtkBuildable" link="GtkTreeStore.html#id-1.3.12.28.8.3"/>
     <keyword type="function" name="gtk_tree_store_new ()" link="GtkTreeStore.html#gtk-tree-store-new"/>
     <keyword type="function" name="gtk_tree_store_newv ()" link="GtkTreeStore.html#gtk-tree-store-newv"/>
     <keyword type="function" name="gtk_tree_store_set_column_types ()" link="GtkTreeStore.html#gtk-tree-store-set-column-types"/>
@@ -3252,7 +3273,6 @@
     <keyword type="signal" name="The “move-active” signal" link="GtkComboBox.html#GtkComboBox-move-active"/>
     <keyword type="signal" name="The “popdown” signal" link="GtkComboBox.html#GtkComboBox-popdown"/>
     <keyword type="signal" name="The “popup” signal" link="GtkComboBox.html#GtkComboBox-popup"/>
-    <keyword type="" name="GtkComboBoxText as GtkBuildable" link="GtkComboBoxText.html#id-1.3.13.3.8.7"/>
     <keyword type="function" name="gtk_combo_box_text_new ()" link="GtkComboBoxText.html#gtk-combo-box-text-new" since="2.24"/>
     <keyword type="function" name="gtk_combo_box_text_new_with_entry ()" link="GtkComboBoxText.html#gtk-combo-box-text-new-with-entry" since="2.24"/>
     <keyword type="function" name="gtk_combo_box_text_append ()" link="GtkComboBoxText.html#gtk-combo-box-text-append" since="2.24"/>
@@ -3328,7 +3348,6 @@
     <keyword type="property" name="The “pack-direction” property" link="GtkMenuBar.html#GtkMenuBar--pack-direction"/>
     <keyword type="property" name="The “internal-padding” style property" link="GtkMenuBar.html#GtkMenuBar--s-internal-padding"/>
     <keyword type="property" name="The “shadow-type” style property" link="GtkMenuBar.html#GtkMenuBar--s-shadow-type"/>
-    <keyword type="" name="GtkMenuItem as GtkBuildable" link="GtkMenuItem.html#id-1.3.13.6.11.8"/>
     <keyword type="function" name="gtk_menu_item_new ()" link="GtkMenuItem.html#gtk-menu-item-new"/>
     <keyword type="function" name="gtk_menu_item_new_with_label ()" link="GtkMenuItem.html#gtk-menu-item-new-with-label"/>
     <keyword type="function" name="gtk_menu_item_new_with_mnemonic ()" link="GtkMenuItem.html#gtk-menu-item-new-with-mnemonic"/>
@@ -3570,7 +3589,6 @@
     <keyword type="property" name="The “use-underline” property" link="GtkToolButton.html#GtkToolButton--use-underline"/>
     <keyword type="property" name="The “icon-spacing” style property" link="GtkToolButton.html#GtkToolButton--s-icon-spacing"/>
     <keyword type="signal" name="The “clicked” signal" link="GtkToolButton.html#GtkToolButton-clicked"/>
-    <keyword type="" name="GtkMenuToolButton as GtkBuildable" link="GtkMenuToolButton.html#id-1.3.13.17.10.4"/>
     <keyword type="function" name="gtk_menu_tool_button_new ()" link="GtkMenuToolButton.html#gtk-menu-tool-button-new" since="2.6"/>
     <keyword type="function" name="gtk_menu_tool_button_new_from_stock ()" link="GtkMenuToolButton.html#gtk-menu-tool-button-new-from-stock" deprecated="3.10: Use gtk_menu_tool_button_new() instead." since="2.6"/>
     <keyword type="function" name="gtk_menu_tool_button_set_menu ()" link="GtkMenuToolButton.html#gtk-menu-tool-button-set-menu" since="2.6"/>
@@ -3608,12 +3626,21 @@
     <keyword type="function" name="gtk_popover_get_position ()" link="GtkPopover.html#gtk-popover-get-position"/>
     <keyword type="function" name="gtk_popover_set_modal ()" link="GtkPopover.html#gtk-popover-set-modal" since="3.12"/>
     <keyword type="function" name="gtk_popover_get_modal ()" link="GtkPopover.html#gtk-popover-get-modal" since="3.12"/>
+    <keyword type="function" name="gtk_popover_set_transitions_enabled ()" link="GtkPopover.html#gtk-popover-set-transitions-enabled" since="3.16"/>
+    <keyword type="function" name="gtk_popover_get_transitions_enabled ()" link="GtkPopover.html#gtk-popover-get-transitions-enabled" since="3.16"/>
     <keyword type="struct" name="struct GtkPopover" link="GtkPopover.html#GtkPopover-struct"/>
     <keyword type="property" name="The “modal” property" link="GtkPopover.html#GtkPopover--modal"/>
     <keyword type="property" name="The “pointing-to” property" link="GtkPopover.html#GtkPopover--pointing-to"/>
     <keyword type="property" name="The “position” property" link="GtkPopover.html#GtkPopover--position"/>
     <keyword type="property" name="The “relative-to” property" link="GtkPopover.html#GtkPopover--relative-to"/>
+    <keyword type="property" name="The “transitions-enabled” property" link="GtkPopover.html#GtkPopover--transitions-enabled"/>
     <keyword type="signal" name="The “closed” signal" link="GtkPopover.html#GtkPopover-closed"/>
+    <keyword type="function" name="gtk_popover_menu_new ()" link="GtkPopoverMenu.html#gtk-popover-menu-new" since="3.16"/>
+    <keyword type="function" name="gtk_popover_menu_open_submenu ()" link="GtkPopoverMenu.html#gtk-popover-menu-open-submenu" since="3.16"/>
+    <keyword type="struct" name="GtkPopoverMenu" link="GtkPopoverMenu.html#GtkPopoverMenu-struct"/>
+    <keyword type="property" name="The “visible-submenu” property" link="GtkPopoverMenu.html#GtkPopoverMenu--visible-submenu"/>
+    <keyword type="property" name="The “position” child property" link="GtkPopoverMenu.html#GtkPopoverMenu--c-position"/>
+    <keyword type="property" name="The “submenu” child property" link="GtkPopoverMenu.html#GtkPopoverMenu--c-submenu"/>
     <keyword type="function" name="gtk_color_chooser_get_rgba ()" link="GtkColorChooser.html#gtk-color-chooser-get-rgba" since="3.4"/>
     <keyword type="function" name="gtk_color_chooser_set_rgba ()" link="GtkColorChooser.html#gtk-color-chooser-set-rgba" since="3.4"/>
     <keyword type="function" name="gtk_color_chooser_get_use_alpha ()" link="GtkColorChooser.html#gtk-color-chooser-get-use-alpha" since="3.4"/>
@@ -3650,9 +3677,6 @@
     <keyword type="function" name="gtk_color_chooser_dialog_new ()" link="GtkColorChooserDialog.html#gtk-color-chooser-dialog-new" since="3.4"/>
     <keyword type="struct" name="struct GtkColorChooserDialog" link="GtkColorChooserDialog.html#GtkColorChooserDialog-struct"/>
     <keyword type="property" name="The “show-editor” property" link="GtkColorChooserDialog.html#GtkColorChooserDialog--show-editor"/>
-    <keyword type="" name="File Names and Encodings" link="GtkFileChooser.html#id-1.3.14.6.11.5"/>
-    <keyword type="" name="Adding a Preview Widget" link="GtkFileChooser.html#id-1.3.14.6.11.6"/>
-    <keyword type="" name="Adding Extra Widgets" link="GtkFileChooser.html#id-1.3.14.6.11.7"/>
     <keyword type="macro" name="GTK_FILE_CHOOSER_ERROR" link="GtkFileChooser.html#GTK-FILE-CHOOSER-ERROR:CAPS"/>
     <keyword type="function" name="gtk_file_chooser_set_action ()" link="GtkFileChooser.html#gtk-file-chooser-set-action" since="2.4"/>
     <keyword type="function" name="gtk_file_chooser_get_action ()" link="GtkFileChooser.html#gtk-file-chooser-get-action" since="2.4"/>
@@ -3753,6 +3777,7 @@
     <keyword type="function" name="gtk_file_chooser_widget_new ()" link="GtkFileChooserWidget.html#gtk-file-chooser-widget-new" since="2.4"/>
     <keyword type="struct" name="struct GtkFileChooserWidget" link="GtkFileChooserWidget.html#GtkFileChooserWidget-struct"/>
     <keyword type="struct" name="struct GtkFileChooserWidgetClass" link="GtkFileChooserWidget.html#GtkFileChooserWidgetClass"/>
+    <keyword type="property" name="The “search-mode” property" link="GtkFileChooserWidget.html#GtkFileChooserWidget--search-mode"/>
     <keyword type="signal" name="The “desktop-folder” signal" link="GtkFileChooserWidget.html#GtkFileChooserWidget-desktop-folder"/>
     <keyword type="signal" name="The “down-folder” signal" link="GtkFileChooserWidget.html#GtkFileChooserWidget-down-folder"/>
     <keyword type="signal" name="The “home-folder” signal" link="GtkFileChooserWidget.html#GtkFileChooserWidget-home-folder"/>
@@ -3764,7 +3789,6 @@
     <keyword type="signal" name="The “search-shortcut” signal" link="GtkFileChooserWidget.html#GtkFileChooserWidget-search-shortcut"/>
     <keyword type="signal" name="The “show-hidden” signal" link="GtkFileChooserWidget.html#GtkFileChooserWidget-show-hidden"/>
     <keyword type="signal" name="The “up-folder” signal" link="GtkFileChooserWidget.html#GtkFileChooserWidget-up-folder"/>
-    <keyword type="" name="GtkFileFilter as GtkBuildable" link="GtkFileFilter.html#id-1.3.14.10.8.5"/>
     <keyword type="function" name="GtkFileFilterFunc ()" link="GtkFileFilter.html#GtkFileFilterFunc"/>
     <keyword type="function" name="gtk_file_filter_new ()" link="GtkFileFilter.html#gtk-file-filter-new" since="2.4"/>
     <keyword type="function" name="gtk_file_filter_set_name ()" link="GtkFileFilter.html#gtk-file-filter-set-name" since="2.4"/>
@@ -3822,7 +3846,6 @@
     <keyword type="function" name="gtk_font_chooser_widget_new ()" link="GtkFontChooserWidget.html#gtk-font-chooser-widget-new" since="3.2"/>
     <keyword type="struct" name="struct GtkFontChooserWidget" link="GtkFontChooserWidget.html#GtkFontChooserWidget-struct"/>
     <keyword type="struct" name="struct GtkFontChooserWidgetClass" link="GtkFontChooserWidget.html#GtkFontChooserWidgetClass"/>
-    <keyword type="" name="GtkFontChooserDialog as GtkBuildable" link="GtkFontChooserDialog.html#id-1.3.14.14.8.3"/>
     <keyword type="function" name="gtk_font_chooser_dialog_new ()" link="GtkFontChooserDialog.html#gtk-font-chooser-dialog-new" since="3.2"/>
     <keyword type="struct" name="struct GtkFontChooserDialog" link="GtkFontChooserDialog.html#GtkFontChooserDialog-struct"/>
     <keyword type="struct" name="struct GtkFontChooserDialogClass" link="GtkFontChooserDialog.html#GtkFontChooserDialogClass"/>
@@ -3859,7 +3882,6 @@
     <keyword type="signal" name="The “show-connect-to-server” signal" link="GtkPlacesSidebar.html#GtkPlacesSidebar-show-connect-to-server"/>
     <keyword type="signal" name="The “show-enter-location” signal" link="GtkPlacesSidebar.html#GtkPlacesSidebar-show-enter-location"/>
     <keyword type="signal" name="The “show-error-message” signal" link="GtkPlacesSidebar.html#GtkPlacesSidebar-show-error-message"/>
-    <keyword type="" name="GtkFrame as GtkBuildable" link="GtkFrame.html#id-1.3.15.2.9.3"/>
     <keyword type="function" name="gtk_frame_new ()" link="GtkFrame.html#gtk-frame-new"/>
     <keyword type="function" name="gtk_frame_set_label ()" link="GtkFrame.html#gtk-frame-set-label"/>
     <keyword type="function" name="gtk_frame_set_label_widget ()" link="GtkFrame.html#gtk-frame-set-label-widget"/>
@@ -3909,6 +3931,8 @@
     <keyword type="function" name="gtk_scrolled_window_get_kinetic_scrolling ()" link="GtkScrolledWindow.html#gtk-scrolled-window-get-kinetic-scrolling" since="3.4"/>
     <keyword type="function" name="gtk_scrolled_window_set_capture_button_press ()" link="GtkScrolledWindow.html#gtk-scrolled-window-set-capture-button-press" since="3.4"/>
     <keyword type="function" name="gtk_scrolled_window_get_capture_button_press ()" link="GtkScrolledWindow.html#gtk-scrolled-window-get-capture-button-press" since="3.4"/>
+    <keyword type="function" name="gtk_scrolled_window_set_overlay_scrolling ()" link="GtkScrolledWindow.html#gtk-scrolled-window-set-overlay-scrolling" since="3.16"/>
+    <keyword type="function" name="gtk_scrolled_window_get_overlay_scrolling ()" link="GtkScrolledWindow.html#gtk-scrolled-window-get-overlay-scrolling" since="3.16"/>
     <keyword type="struct" name="struct GtkScrolledWindow" link="GtkScrolledWindow.html#GtkScrolledWindow-struct"/>
     <keyword type="struct" name="struct GtkScrolledWindowClass" link="GtkScrolledWindow.html#GtkScrolledWindowClass"/>
     <keyword type="enum" name="enum GtkPolicyType" link="GtkScrolledWindow.html#GtkPolicyType"/>
@@ -3918,6 +3942,7 @@
     <keyword type="property" name="The “kinetic-scrolling” property" link="GtkScrolledWindow.html#GtkScrolledWindow--kinetic-scrolling"/>
     <keyword type="property" name="The “min-content-height” property" link="GtkScrolledWindow.html#GtkScrolledWindow--min-content-height"/>
     <keyword type="property" name="The “min-content-width” property" link="GtkScrolledWindow.html#GtkScrolledWindow--min-content-width"/>
+    <keyword type="property" name="The “overlay-scrolling” property" link="GtkScrolledWindow.html#GtkScrolledWindow--overlay-scrolling"/>
     <keyword type="property" name="The “shadow-type” property" link="GtkScrolledWindow.html#GtkScrolledWindow--shadow-type"/>
     <keyword type="property" name="The “vadjustment” property" link="GtkScrolledWindow.html#GtkScrolledWindow--vadjustment"/>
     <keyword type="property" name="The “vscrollbar-policy” property" link="GtkScrolledWindow.html#GtkScrolledWindow--vscrollbar-policy"/>
@@ -3925,6 +3950,8 @@
     <keyword type="property" name="The “window-placement-set” property" link="GtkScrolledWindow.html#GtkScrolledWindow--window-placement-set"/>
     <keyword type="property" name="The “scrollbar-spacing” style property" link="GtkScrolledWindow.html#GtkScrolledWindow--s-scrollbar-spacing"/>
     <keyword type="property" name="The “scrollbars-within-bevel” style property" link="GtkScrolledWindow.html#GtkScrolledWindow--s-scrollbars-within-bevel"/>
+    <keyword type="signal" name="The “edge-overshot” signal" link="GtkScrolledWindow.html#GtkScrolledWindow-edge-overshot"/>
+    <keyword type="signal" name="The “edge-reached” signal" link="GtkScrolledWindow.html#GtkScrolledWindow-edge-reached"/>
     <keyword type="signal" name="The “move-focus-out” signal" link="GtkScrolledWindow.html#GtkScrolledWindow-move-focus-out"/>
     <keyword type="signal" name="The “scroll-child” signal" link="GtkScrolledWindow.html#GtkScrolledWindow-scroll-child"/>
     <keyword type="function" name="gtk_scrollable_get_hadjustment ()" link="GtkScrollable.html#gtk-scrollable-get-hadjustment" since="3.0"/>
@@ -3935,13 +3962,13 @@
     <keyword type="function" name="gtk_scrollable_set_hscroll_policy ()" link="GtkScrollable.html#gtk-scrollable-set-hscroll-policy" since="3.0"/>
     <keyword type="function" name="gtk_scrollable_get_vscroll_policy ()" link="GtkScrollable.html#gtk-scrollable-get-vscroll-policy" since="3.0"/>
     <keyword type="function" name="gtk_scrollable_set_vscroll_policy ()" link="GtkScrollable.html#gtk-scrollable-set-vscroll-policy" since="3.0"/>
+    <keyword type="function" name="gtk_scrollable_get_border ()" link="GtkScrollable.html#gtk-scrollable-get-border" since="3.16"/>
     <keyword type="struct" name="GtkScrollable" link="GtkScrollable.html#GtkScrollable-struct"/>
     <keyword type="enum" name="enum GtkScrollablePolicy" link="GtkScrollable.html#GtkScrollablePolicy"/>
     <keyword type="property" name="The “hadjustment” property" link="GtkScrollable.html#GtkScrollable--hadjustment"/>
     <keyword type="property" name="The “hscroll-policy” property" link="GtkScrollable.html#GtkScrollable--hscroll-policy"/>
     <keyword type="property" name="The “vadjustment” property" link="GtkScrollable.html#GtkScrollable--vadjustment"/>
     <keyword type="property" name="The “vscroll-policy” property" link="GtkScrollable.html#GtkScrollable--vscroll-policy"/>
-    <keyword type="" name="The high-level printing API" link="gtk3-High-level-Printing-API.html#id-1.3.17.2.14.5"/>
     <keyword type="function" name="gtk_print_operation_new ()" link="gtk3-High-level-Printing-API.html#gtk-print-operation-new" since="2.10"/>
     <keyword type="function" name="gtk_print_operation_set_allow_async ()" link="gtk3-High-level-Printing-API.html#gtk-print-operation-set-allow-async" since="2.10"/>
     <keyword type="function" name="gtk_print_operation_get_error ()" link="gtk3-High-level-Printing-API.html#gtk-print-operation-get-error" since="2.10"/>
@@ -4172,6 +4199,7 @@
     <keyword type="struct" name="GtkPageSetup" link="GtkPageSetup.html#GtkPageSetup-struct"/>
     <keyword type="function" name="gtk_paper_size_new ()" link="GtkPaperSize.html#gtk-paper-size-new" since="2.10"/>
     <keyword type="function" name="gtk_paper_size_new_from_ppd ()" link="GtkPaperSize.html#gtk-paper-size-new-from-ppd" since="2.10"/>
+    <keyword type="function" name="gtk_paper_size_new_from_ipp ()" link="GtkPaperSize.html#gtk-paper-size-new-from-ipp" since="3.16"/>
     <keyword type="function" name="gtk_paper_size_new_custom ()" link="GtkPaperSize.html#gtk-paper-size-new-custom" since="2.10"/>
     <keyword type="function" name="gtk_paper_size_copy ()" link="GtkPaperSize.html#gtk-paper-size-copy" since="2.10"/>
     <keyword type="function" name="gtk_paper_size_free ()" link="GtkPaperSize.html#gtk-paper-size-free" since="2.10"/>
@@ -4182,6 +4210,7 @@
     <keyword type="function" name="gtk_paper_size_get_ppd_name ()" link="GtkPaperSize.html#gtk-paper-size-get-ppd-name" since="2.10"/>
     <keyword type="function" name="gtk_paper_size_get_width ()" link="GtkPaperSize.html#gtk-paper-size-get-width" since="2.10"/>
     <keyword type="function" name="gtk_paper_size_get_height ()" link="GtkPaperSize.html#gtk-paper-size-get-height" since="2.10"/>
+    <keyword type="function" name="gtk_paper_size_is_ipp ()" link="GtkPaperSize.html#gtk-paper-size-is-ipp"/>
     <keyword type="function" name="gtk_paper_size_is_custom ()" link="GtkPaperSize.html#gtk-paper-size-is-custom"/>
     <keyword type="function" name="gtk_paper_size_set_size ()" link="GtkPaperSize.html#gtk-paper-size-set-size" since="2.10"/>
     <keyword type="function" name="gtk_paper_size_get_default_top_margin ()" link="GtkPaperSize.html#gtk-paper-size-get-default-top-margin" since="2.10"/>
@@ -4193,6 +4222,7 @@
     <keyword type="function" name="gtk_paper_size_to_key_file ()" link="GtkPaperSize.html#gtk-paper-size-to-key-file" since="2.12"/>
     <keyword type="struct" name="GtkPaperSize" link="GtkPaperSize.html#GtkPaperSize-struct"/>
     <keyword type="enum" name="enum GtkUnit" link="GtkPaperSize.html#GtkUnit"/>
+    <keyword type="macro" name="GTK_UNIT_PIXEL" link="GtkPaperSize.html#GTK-UNIT-PIXEL:CAPS"/>
     <keyword type="macro" name="GTK_PAPER_NAME_A3" link="GtkPaperSize.html#GTK-PAPER-NAME-A3:CAPS"/>
     <keyword type="macro" name="GTK_PAPER_NAME_A4" link="GtkPaperSize.html#GTK-PAPER-NAME-A4:CAPS"/>
     <keyword type="macro" name="GTK_PAPER_NAME_A5" link="GtkPaperSize.html#GTK-PAPER-NAME-A5:CAPS"/>
@@ -4276,7 +4306,6 @@
     <keyword type="property" name="The “title” property" link="GtkPrintJob.html#GtkPrintJob--title"/>
     <keyword type="property" name="The “track-print-status” property" link="GtkPrintJob.html#GtkPrintJob--track-print-status"/>
     <keyword type="signal" name="The “status-changed” signal" link="GtkPrintJob.html#GtkPrintJob-status-changed"/>
-    <keyword type="" name="GtkPrintUnixDialog as GtkBuildable" link="GtkPrintUnixDialog.html#id-1.3.17.9.9.7"/>
     <keyword type="function" name="gtk_print_unix_dialog_new ()" link="GtkPrintUnixDialog.html#gtk-print-unix-dialog-new" since="2.10"/>
     <keyword type="function" name="gtk_print_unix_dialog_set_page_setup ()" link="GtkPrintUnixDialog.html#gtk-print-unix-dialog-set-page-setup" since="2.10"/>
     <keyword type="function" name="gtk_print_unix_dialog_get_page_setup ()" link="GtkPrintUnixDialog.html#gtk-print-unix-dialog-get-page-setup" since="2.10"/>
@@ -4379,6 +4408,33 @@
     <keyword type="signal" name="The “prev-year” signal" link="GtkCalendar.html#GtkCalendar-prev-year"/>
     <keyword type="function" name="gtk_drawing_area_new ()" link="GtkDrawingArea.html#gtk-drawing-area-new"/>
     <keyword type="struct" name="struct GtkDrawingArea" link="GtkDrawingArea.html#GtkDrawingArea-struct"/>
+    <keyword type="function" name="gtk_gl_area_new ()" link="GtkGLArea.html#gtk-gl-area-new" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_get_context ()" link="GtkGLArea.html#gtk-gl-area-get-context" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_make_current ()" link="GtkGLArea.html#gtk-gl-area-make-current" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_queue_render ()" link="GtkGLArea.html#gtk-gl-area-queue-render" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_attach_buffers ()" link="GtkGLArea.html#gtk-gl-area-attach-buffers" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_set_error ()" link="GtkGLArea.html#gtk-gl-area-set-error" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_get_error ()" link="GtkGLArea.html#gtk-gl-area-get-error" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_set_has_alpha ()" link="GtkGLArea.html#gtk-gl-area-set-has-alpha" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_get_has_alpha ()" link="GtkGLArea.html#gtk-gl-area-get-has-alpha" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_set_has_depth_buffer ()" link="GtkGLArea.html#gtk-gl-area-set-has-depth-buffer" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_get_has_depth_buffer ()" link="GtkGLArea.html#gtk-gl-area-get-has-depth-buffer" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_set_has_stencil_buffer ()" link="GtkGLArea.html#gtk-gl-area-set-has-stencil-buffer" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_get_has_stencil_buffer ()" link="GtkGLArea.html#gtk-gl-area-get-has-stencil-buffer" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_set_auto_render ()" link="GtkGLArea.html#gtk-gl-area-set-auto-render" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_get_auto_render ()" link="GtkGLArea.html#gtk-gl-area-get-auto-render" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_get_required_version ()" link="GtkGLArea.html#gtk-gl-area-get-required-version" since="3.16"/>
+    <keyword type="function" name="gtk_gl_area_set_required_version ()" link="GtkGLArea.html#gtk-gl-area-set-required-version" since="3.16"/>
+    <keyword type="struct" name="struct GtkGLArea" link="GtkGLArea.html#GtkGLArea-struct"/>
+    <keyword type="struct" name="struct GtkGLAreaClass" link="GtkGLArea.html#GtkGLAreaClass" since="3.16"/>
+    <keyword type="property" name="The “auto-render” property" link="GtkGLArea.html#GtkGLArea--auto-render"/>
+    <keyword type="property" name="The “context” property" link="GtkGLArea.html#GtkGLArea--context"/>
+    <keyword type="property" name="The “has-alpha” property" link="GtkGLArea.html#GtkGLArea--has-alpha"/>
+    <keyword type="property" name="The “has-depth-buffer” property" link="GtkGLArea.html#GtkGLArea--has-depth-buffer"/>
+    <keyword type="property" name="The “has-stencil-buffer” property" link="GtkGLArea.html#GtkGLArea--has-stencil-buffer"/>
+    <keyword type="signal" name="The “create-context” signal" link="GtkGLArea.html#GtkGLArea-create-context"/>
+    <keyword type="signal" name="The “render” signal" link="GtkGLArea.html#GtkGLArea-render"/>
+    <keyword type="signal" name="The “resize” signal" link="GtkGLArea.html#GtkGLArea-resize"/>
     <keyword type="function" name="gtk_event_box_new ()" link="GtkEventBox.html#gtk-event-box-new"/>
     <keyword type="function" name="gtk_event_box_set_above_child ()" link="GtkEventBox.html#gtk-event-box-set-above-child" since="2.4"/>
     <keyword type="function" name="gtk_event_box_get_above_child ()" link="GtkEventBox.html#gtk-event-box-get-above-child" since="2.4"/>
@@ -4414,7 +4470,6 @@
     <keyword type="function" name="gtk_im_multicontext_get_context_id ()" link="GtkIMMulticontext.html#gtk-im-multicontext-get-context-id" since="2.16"/>
     <keyword type="function" name="gtk_im_multicontext_set_context_id ()" link="GtkIMMulticontext.html#gtk-im-multicontext-set-context-id" since="2.16"/>
     <keyword type="struct" name="struct GtkIMMulticontext" link="GtkIMMulticontext.html#GtkIMMulticontext-struct"/>
-    <keyword type="" name="GtkSizeGroup as GtkBuildable" link="GtkSizeGroup.html#id-1.3.18.9.9.9"/>
     <keyword type="function" name="gtk_size_group_new ()" link="GtkSizeGroup.html#gtk-size-group-new"/>
     <keyword type="function" name="gtk_size_group_set_mode ()" link="GtkSizeGroup.html#gtk-size-group-set-mode"/>
     <keyword type="function" name="gtk_size_group_get_mode ()" link="GtkSizeGroup.html#gtk-size-group-get-mode"/>
@@ -4454,10 +4509,6 @@
     <keyword type="function" name="gtk_accessible_set_widget ()" link="GtkAccessible.html#gtk-accessible-set-widget" since="2.22"/>
     <keyword type="struct" name="struct GtkAccessible" link="GtkAccessible.html#GtkAccessible-struct"/>
     <keyword type="property" name="The “widget” property" link="GtkAccessible.html#GtkAccessible--widget"/>
-    <keyword type="" name="Height-for-width Geometry Management" link="GtkWidget.html#geometry-management"/>
-    <keyword type="" name="Style Properties" link="GtkWidget.html#id-1.3.19.2.13.4"/>
-    <keyword type="" name="GtkWidget as GtkBuildable" link="GtkWidget.html#id-1.3.19.2.13.5"/>
-    <keyword type="" name="Building composite widgets from template XML" link="GtkWidget.html#id-1.3.19.2.13.6"/>
     <keyword type="function" name="GtkCallback ()" link="GtkWidget.html#GtkCallback"/>
     <keyword type="function" name="gtk_widget_new ()" link="GtkWidget.html#gtk-widget-new"/>
     <keyword type="function" name="gtk_widget_destroy ()" link="GtkWidget.html#gtk-widget-destroy"/>
@@ -4534,11 +4585,11 @@
     <keyword type="function" name="gtk_widget_path ()" link="GtkWidget.html#gtk-widget-path" deprecated="3.0: Use gtk_widget_get_path() instead"/>
     <keyword type="function" name="gtk_widget_class_path ()" link="GtkWidget.html#gtk-widget-class-path" deprecated="3.0: Use gtk_widget_get_path() instead"/>
     <keyword type="function" name="gtk_widget_get_composite_name ()" link="GtkWidget.html#gtk-widget-get-composite-name" deprecated="3.10: Use gtk_widget_class_set_template(), or don’t use this API at all."/>
-    <keyword type="function" name="gtk_widget_override_background_color ()" link="GtkWidget.html#gtk-widget-override-background-color" since="3.0"/>
-    <keyword type="function" name="gtk_widget_override_color ()" link="GtkWidget.html#gtk-widget-override-color" since="3.0"/>
-    <keyword type="function" name="gtk_widget_override_font ()" link="GtkWidget.html#gtk-widget-override-font" since="3.0"/>
-    <keyword type="function" name="gtk_widget_override_symbolic_color ()" link="GtkWidget.html#gtk-widget-override-symbolic-color" since="3.0"/>
-    <keyword type="function" name="gtk_widget_override_cursor ()" link="GtkWidget.html#gtk-widget-override-cursor" since="3.0"/>
+    <keyword type="function" name="gtk_widget_override_background_color ()" link="GtkWidget.html#gtk-widget-override-background-color" deprecated="" since="3.0"/>
+    <keyword type="function" name="gtk_widget_override_color ()" link="GtkWidget.html#gtk-widget-override-color" deprecated="3.16: Use a custom style provider and style classes instead" since="3.0"/>
+    <keyword type="function" name="gtk_widget_override_font ()" link="GtkWidget.html#gtk-widget-override-font" deprecated="" since="3.0"/>
+    <keyword type="function" name="gtk_widget_override_symbolic_color ()" link="GtkWidget.html#gtk-widget-override-symbolic-color" deprecated="" since="3.0"/>
+    <keyword type="function" name="gtk_widget_override_cursor ()" link="GtkWidget.html#gtk-widget-override-cursor" deprecated="" since="3.0"/>
     <keyword type="function" name="gtk_widget_modify_style ()" link="GtkWidget.html#gtk-widget-modify-style" deprecated="3.0: Use #GtkStyleContext with a custom #GtkStyleProvider instead"/>
     <keyword type="function" name="gtk_widget_get_modifier_style ()" link="GtkWidget.html#gtk-widget-get-modifier-style" deprecated="3.0: Use #GtkStyleContext with a custom #GtkStyleProvider instead"/>
     <keyword type="function" name="gtk_widget_modify_fg ()" link="GtkWidget.html#gtk-widget-modify-fg" deprecated="3.0: Use gtk_widget_override_color() instead"/>
@@ -4658,6 +4709,8 @@
     <keyword type="function" name="gtk_widget_insert_action_group ()" link="GtkWidget.html#gtk-widget-insert-action-group" since="3.6"/>
     <keyword type="function" name="gtk_widget_get_opacity ()" link="GtkWidget.html#gtk-widget-get-opacity" since="3.8"/>
     <keyword type="function" name="gtk_widget_set_opacity ()" link="GtkWidget.html#gtk-widget-set-opacity" since="3.8"/>
+    <keyword type="function" name="gtk_widget_list_action_prefixes ()" link="GtkWidget.html#gtk-widget-list-action-prefixes" since="3.16"/>
+    <keyword type="function" name="gtk_widget_get_action_group ()" link="GtkWidget.html#gtk-widget-get-action-group" since="3.16"/>
     <keyword type="function" name="gtk_widget_get_path ()" link="GtkWidget.html#gtk-widget-get-path"/>
     <keyword type="function" name="gtk_widget_get_style_context ()" link="GtkWidget.html#gtk-widget-get-style-context"/>
     <keyword type="function" name="gtk_widget_reset_style ()" link="GtkWidget.html#gtk-widget-reset-style" since="3.0"/>
@@ -4846,9 +4899,6 @@
     <keyword type="signal" name="The “unrealize” signal" link="GtkWidget.html#GtkWidget-unrealize"/>
     <keyword type="signal" name="The “visibility-notify-event” signal" link="GtkWidget.html#GtkWidget-visibility-notify-event"/>
     <keyword type="signal" name="The “window-state-event” signal" link="GtkWidget.html#GtkWidget-window-state-event"/>
-    <keyword type="" name="Height for width geometry management" link="GtkContainer.html#id-1.3.19.3.10.6"/>
-    <keyword type="" name="Child properties" link="GtkContainer.html#id-1.3.19.3.10.7"/>
-    <keyword type="" name="GtkContainer as GtkBuildable" link="GtkContainer.html#id-1.3.19.3.10.8"/>
     <keyword type="macro" name="GTK_IS_RESIZE_CONTAINER()" link="GtkContainer.html#GTK-IS-RESIZE-CONTAINER:CAPS"/>
     <keyword type="macro" name="GTK_CONTAINER_WARN_INVALID_CHILD_PROPERTY_ID()" link="GtkContainer.html#GTK-CONTAINER-WARN-INVALID-CHILD-PROPERTY-ID:CAPS"/>
     <keyword type="function" name="gtk_container_add ()" link="GtkContainer.html#gtk-container-add"/>
@@ -4900,7 +4950,6 @@
     <keyword type="function" name="gtk_bin_get_child ()" link="GtkBin.html#gtk-bin-get-child"/>
     <keyword type="struct" name="struct GtkBin" link="GtkBin.html#GtkBin-struct"/>
     <keyword type="struct" name="struct GtkBinClass" link="GtkBin.html#GtkBinClass"/>
-    <keyword type="" name="Terminology" link="GtkMenuShell.html#id-1.3.19.5.10.4"/>
     <keyword type="function" name="gtk_menu_shell_append ()" link="GtkMenuShell.html#gtk-menu-shell-append"/>
     <keyword type="function" name="gtk_menu_shell_prepend ()" link="GtkMenuShell.html#gtk-menu-shell-prepend"/>
     <keyword type="function" name="gtk_menu_shell_insert ()" link="GtkMenuShell.html#gtk-menu-shell-insert"/>
@@ -5297,14 +5346,6 @@
     <keyword type="function" name="gtk_gradient_resolve_for_context ()" link="gtk3-GtkGradient.html#gtk-gradient-resolve-for-context" deprecated=""/>
     <keyword type="function" name="gtk_gradient_to_string ()" link="gtk3-GtkGradient.html#gtk-gradient-to-string" deprecated="3.8: #GtkGradient is deprecated."/>
     <keyword type="struct" name="GtkGradient" link="gtk3-GtkGradient.html#GtkGradient"/>
-    <keyword type="" name="Default Files" link="gtk3-Resource-Files.html#id-1.3.24.4.8.4"/>
-    <keyword type="" name="Locale Specific Files" link="gtk3-Resource-Files.html#locale-specific-rc"/>
-    <keyword type="" name="Pathnames and Patterns" link="gtk3-Resource-Files.html#id-1.3.24.4.8.6"/>
-    <keyword type="" name="Theme gtkrc Files" link="gtk3-Resource-Files.html#id-1.3.24.4.8.7"/>
-    <keyword type="" name="Optimizing RC Style Matches" link="gtk3-Resource-Files.html#id-1.3.24.4.8.8"/>
-    <keyword type="" name="Toplevel Declarations" link="gtk3-Resource-Files.html#id-1.3.24.4.8.9"/>
-    <keyword type="" name="Styles" link="gtk3-Resource-Files.html#id-1.3.24.4.8.10"/>
-    <keyword type="" name="Key bindings" link="gtk3-Resource-Files.html#id-1.3.24.4.8.11"/>
     <keyword type="function" name="gtk_rc_scanner_new ()" link="gtk3-Resource-Files.html#gtk-rc-scanner-new" deprecated="3.0: Use #GtkCssProvider instead"/>
     <keyword type="function" name="gtk_rc_get_style ()" link="gtk3-Resource-Files.html#gtk-rc-get-style" deprecated="3.0: Use #GtkStyleContext instead"/>
     <keyword type="function" name="gtk_rc_get_style_by_paths ()" link="gtk3-Resource-Files.html#gtk-rc-get-style-by-paths" deprecated="3.0: Use #GtkStyleContext instead"/>
@@ -5417,7 +5458,6 @@
     <keyword type="property" name="The “has-opacity-control” property" link="GtkColorSelection.html#GtkColorSelection--has-opacity-control"/>
     <keyword type="property" name="The “has-palette” property" link="GtkColorSelection.html#GtkColorSelection--has-palette"/>
     <keyword type="signal" name="The “color-changed” signal" link="GtkColorSelection.html#GtkColorSelection-color-changed"/>
-    <keyword type="" name="GtkColorSelectionDialog as GtkBuildable" link="GtkColorSelectionDialog.html#GtkColorSelectionDialog-BUILDER-UI"/>
     <keyword type="function" name="gtk_color_selection_dialog_new ()" link="GtkColorSelectionDialog.html#gtk-color-selection-dialog-new" deprecated=""/>
     <keyword type="function" name="gtk_color_selection_dialog_get_color_selection ()" link="GtkColorSelectionDialog.html#gtk-color-selection-dialog-get-color-selection" deprecated="" since="2.14"/>
     <keyword type="struct" name="struct GtkColorSelectionDialog" link="GtkColorSelectionDialog.html#GtkColorSelectionDialog-struct"/>
@@ -5452,7 +5492,6 @@
     <keyword type="struct" name="struct GtkFontSelection" link="GtkFontSelection.html#GtkFontSelection-struct"/>
     <keyword type="property" name="The “font-name” property" link="GtkFontSelection.html#GtkFontSelection--font-name"/>
     <keyword type="property" name="The “preview-text” property" link="GtkFontSelection.html#GtkFontSelection--preview-text"/>
-    <keyword type="" name="GtkFontSelectionDialog as GtkBuildable" link="GtkFontSelectionDialog.html#GtkFontSelectionDialog-BUILDER-UI"/>
     <keyword type="function" name="gtk_font_selection_dialog_new ()" link="GtkFontSelectionDialog.html#gtk-font-selection-dialog-new" deprecated="3.2: Use #GtkFontChooserDialog"/>
     <keyword type="function" name="gtk_font_selection_dialog_get_font_name ()" link="GtkFontSelectionDialog.html#gtk-font-selection-dialog-get-font-name" deprecated="3.2: Use #GtkFontChooserDialog"/>
     <keyword type="function" name="gtk_font_selection_dialog_set_font_name ()" link="GtkFontSelectionDialog.html#gtk-font-selection-dialog-set-font-name" deprecated="3.2: Use #GtkFontChooserDialog"/>
@@ -5512,13 +5551,6 @@
     <keyword type="struct" name="struct GtkHScrollbar" link="GtkHScrollbar.html#GtkHScrollbar-struct"/>
     <keyword type="function" name="gtk_vscrollbar_new ()" link="GtkVScrollbar.html#gtk-vscrollbar-new" deprecated="3.2: Use gtk_scrollbar_new() with %GTK_ORIENTATION_VERTICAL instead"/>
     <keyword type="struct" name="struct GtkVScrollbar" link="GtkVScrollbar.html#GtkVScrollbar-struct"/>
-    <keyword type="" name="UI Definitions" link="GtkUIManager.html#XML-UI"/>
-    <keyword type="" name="A UI definition" link="GtkUIManager.html#id-1.3.24.25.10.4"/>
-    <keyword type="" name="UI Merging" link="GtkUIManager.html#UI-Merging"/>
-    <keyword type="" name="Accelerators" link="GtkUIManager.html#id-1.3.24.25.10.6"/>
-    <keyword type="" name="Smart Separators" link="GtkUIManager.html#Smart-Separators"/>
-    <keyword type="" name="Empty Menus" link="GtkUIManager.html#id-1.3.24.25.10.8"/>
-    <keyword type="" name="GtkUIManager as GtkBuildable" link="GtkUIManager.html#GtkUIManager-BUILDER-UI"/>
     <keyword type="function" name="gtk_ui_manager_new ()" link="GtkUIManager.html#gtk-ui-manager-new" deprecated="3.10" since="2.4"/>
     <keyword type="function" name="gtk_ui_manager_set_add_tearoffs ()" link="GtkUIManager.html#gtk-ui-manager-set-add-tearoffs" deprecated="" since="2.4"/>
     <keyword type="function" name="gtk_ui_manager_get_add_tearoffs ()" link="GtkUIManager.html#gtk-ui-manager-get-add-tearoffs" deprecated="" since="2.4"/>
@@ -5547,7 +5579,6 @@
     <keyword type="signal" name="The “disconnect-proxy” signal" link="GtkUIManager.html#GtkUIManager-disconnect-proxy"/>
     <keyword type="signal" name="The “post-activate” signal" link="GtkUIManager.html#GtkUIManager-post-activate"/>
     <keyword type="signal" name="The “pre-activate” signal" link="GtkUIManager.html#GtkUIManager-pre-activate"/>
-    <keyword type="" name="GtkActionGroup as GtkBuildable" link="GtkActionGroup.html#GtkActionGroup-BUILDER-UI"/>
     <keyword type="function" name="gtk_action_group_new ()" link="GtkActionGroup.html#gtk-action-group-new" deprecated="3.10" since="2.4"/>
     <keyword type="function" name="gtk_action_group_get_name ()" link="GtkActionGroup.html#gtk-action-group-get-name" deprecated="3.10" since="2.4"/>
     <keyword type="function" name="gtk_action_group_get_sensitive ()" link="GtkActionGroup.html#gtk-action-group-get-sensitive" deprecated="3.10" since="2.4"/>
@@ -5672,7 +5703,6 @@
     <keyword type="function" name="gtk_recent_action_set_show_numbers ()" link="GtkRecentAction.html#gtk-recent-action-set-show-numbers" deprecated="3.10" since="2.12"/>
     <keyword type="struct" name="struct GtkRecentAction" link="GtkRecentAction.html#GtkRecentAction-struct"/>
     <keyword type="property" name="The “show-numbers” property" link="GtkRecentAction.html#GtkRecentAction--show-numbers"/>
-    <keyword type="" name="Implementing GtkActivatable" link="GtkActivatable.html#id-1.3.24.31.10.3"/>
     <keyword type="function" name="gtk_activatable_do_set_related_action ()" link="GtkActivatable.html#gtk-activatable-do-set-related-action" deprecated="3.10" since="2.16"/>
     <keyword type="function" name="gtk_activatable_get_related_action ()" link="GtkActivatable.html#gtk-activatable-get-related-action" deprecated="3.10" since="2.16"/>
     <keyword type="function" name="gtk_activatable_get_use_action_appearance ()" link="GtkActivatable.html#gtk-activatable-get-use-action-appearance" deprecated="3.10" since="2.16"/>
@@ -5686,7 +5716,7 @@
     <keyword type="function" name="gtk_image_menu_item_set_image ()" link="GtkImageMenuItem.html#gtk-image-menu-item-set-image" deprecated="3.10"/>
     <keyword type="function" name="gtk_image_menu_item_get_image ()" link="GtkImageMenuItem.html#gtk-image-menu-item-get-image" deprecated="3.10"/>
     <keyword type="function" name="gtk_image_menu_item_new ()" link="GtkImageMenuItem.html#gtk-image-menu-item-new" deprecated="3.10: Use gtk_menu_item_new() instead."/>
-    <keyword type="function" name="gtk_image_menu_item_new_from_stock ()" link="GtkImageMenuItem.html#gtk-image-menu-item-new-from-stock" deprecated="3.10: Use gtk_menu_item_new() instead."/>
+    <keyword type="function" name="gtk_image_menu_item_new_from_stock ()" link="GtkImageMenuItem.html#gtk-image-menu-item-new-from-stock" deprecated="3.10: Use gtk_menu_item_new_with_mnemonic() instead."/>
     <keyword type="function" name="gtk_image_menu_item_new_with_label ()" link="GtkImageMenuItem.html#gtk-image-menu-item-new-with-label" deprecated="3.10: Use gtk_menu_item_new_with_label() instead."/>
     <keyword type="function" name="gtk_image_menu_item_new_with_mnemonic ()" link="GtkImageMenuItem.html#gtk-image-menu-item-new-with-mnemonic" deprecated="3.10: Use gtk_menu_item_new_with_mnemonic() instead."/>
     <keyword type="function" name="gtk_image_menu_item_get_use_stock ()" link="GtkImageMenuItem.html#gtk-image-menu-item-get-use-stock" deprecated="3.10" since="2.16"/>
@@ -5700,7 +5730,7 @@
     <keyword type="property" name="The “always-show-image” property" link="GtkImageMenuItem.html#GtkImageMenuItem--always-show-image"/>
     <keyword type="property" name="The “image” property" link="GtkImageMenuItem.html#GtkImageMenuItem--image"/>
     <keyword type="property" name="The “use-stock” property" link="GtkImageMenuItem.html#GtkImageMenuItem--use-stock"/>
-    <keyword type="function" name="gtk_misc_set_alignment ()" link="GtkMisc.html#gtk-misc-set-alignment" deprecated="3.14: Use #GtkWidget alignment and margin properties."/>
+    <keyword type="function" name="gtk_misc_set_alignment ()" link="GtkMisc.html#gtk-misc-set-alignment" deprecated="3.14: Use #GtkWidget's alignment (#GtkWidget:halign and #GtkWidget:valign) and margin properties or #GtkLabel's #GtkLabel:xalign and #GtkLabel:yalign properties."/>
     <keyword type="function" name="gtk_misc_set_padding ()" link="GtkMisc.html#gtk-misc-set-padding" deprecated="3.14: Use #GtkWidget alignment and margin properties."/>
     <keyword type="function" name="gtk_misc_get_alignment ()" link="GtkMisc.html#gtk-misc-get-alignment" deprecated="3.14: Use #GtkWidget alignment and margin properties."/>
     <keyword type="function" name="gtk_misc_get_padding ()" link="GtkMisc.html#gtk-misc-get-padding" deprecated="3.14: Use #GtkWidget alignment and margin properties."/>
@@ -5730,7 +5760,7 @@
     <keyword type="macro" name="GTK_STOCK_CONNECT" link="gtk3-Stock-Items.html#GTK-STOCK-CONNECT:CAPS" deprecated="3.10" since="2.6"/>
     <keyword type="macro" name="GTK_STOCK_COPY" link="gtk3-Stock-Items.html#GTK-STOCK-COPY:CAPS" deprecated="3.10: Use the named icon &quot;edit-copy&quot; or the label &quot;_Copy&quot;."/>
     <keyword type="macro" name="GTK_STOCK_CUT" link="gtk3-Stock-Items.html#GTK-STOCK-CUT:CAPS" deprecated="3.10: Use the named icon &quot;edit-cut&quot; or the label &quot;Cu_t&quot;."/>
-    <keyword type="macro" name="GTK_STOCK_DELETE" link="gtk3-Stock-Items.html#GTK-STOCK-DELETE:CAPS" deprecated="3.10: Use the named icon &quot;edit-cut&quot; or the label &quot;_Delete&quot;."/>
+    <keyword type="macro" name="GTK_STOCK_DELETE" link="gtk3-Stock-Items.html#GTK-STOCK-DELETE:CAPS" deprecated="3.10: Use the named icon &quot;edit-delete&quot; or the label &quot;_Delete&quot;."/>
     <keyword type="macro" name="GTK_STOCK_DIALOG_AUTHENTICATION" link="gtk3-Stock-Items.html#GTK-STOCK-DIALOG-AUTHENTICATION:CAPS" deprecated="3.10: Use named icon &quot;dialog-password&quot;." since="2.4"/>
     <keyword type="macro" name="GTK_STOCK_DIALOG_ERROR" link="gtk3-Stock-Items.html#GTK-STOCK-DIALOG-ERROR:CAPS" deprecated="3.10: Use named icon &quot;dialog-error&quot;."/>
     <keyword type="macro" name="GTK_STOCK_DIALOG_INFO" link="gtk3-Stock-Items.html#GTK-STOCK-DIALOG-INFO:CAPS" deprecated="3.10: Use named icon &quot;dialog-information&quot;."/>
@@ -5788,7 +5818,7 @@
     <keyword type="macro" name="GTK_STOCK_ORIENTATION_REVERSE_LANDSCAPE" link="gtk3-Stock-Items.html#GTK-STOCK-ORIENTATION-REVERSE-LANDSCAPE:CAPS" deprecated="3.10" since="2.10"/>
     <keyword type="macro" name="GTK_STOCK_ORIENTATION_REVERSE_PORTRAIT" link="gtk3-Stock-Items.html#GTK-STOCK-ORIENTATION-REVERSE-PORTRAIT:CAPS" deprecated="3.10" since="2.10"/>
     <keyword type="macro" name="GTK_STOCK_PAGE_SETUP" link="gtk3-Stock-Items.html#GTK-STOCK-PAGE-SETUP:CAPS" deprecated="3.10: Use named icon &quot;document-page-setup&quot; or the label &quot;Page Set_up&quot;." since="2.14"/>
-    <keyword type="macro" name="GTK_STOCK_PASTE" link="gtk3-Stock-Items.html#GTK-STOCK-PASTE:CAPS" deprecated="3.10: Do not use an icon. Use label &quot;_Paste&quot;."/>
+    <keyword type="macro" name="GTK_STOCK_PASTE" link="gtk3-Stock-Items.html#GTK-STOCK-PASTE:CAPS" deprecated="3.10: Use named icon &quot;edit-paste&quot; or the label &quot;_Paste&quot;."/>
     <keyword type="macro" name="GTK_STOCK_PREFERENCES" link="gtk3-Stock-Items.html#GTK-STOCK-PREFERENCES:CAPS" deprecated="3.10: Use named icon &quot;preferences-system&quot; or the label &quot;_Preferences&quot;."/>
     <keyword type="macro" name="GTK_STOCK_PRINT" link="gtk3-Stock-Items.html#GTK-STOCK-PRINT:CAPS" deprecated="3.10: Use named icon &quot;document-print&quot; or the label &quot;_Print&quot;."/>
     <keyword type="macro" name="GTK_STOCK_PRINT_ERROR" link="gtk3-Stock-Items.html#GTK-STOCK-PRINT-ERROR:CAPS" deprecated="3.10: Use named icon &quot;printer-error&quot;." since="2.14"/>
@@ -5822,7 +5852,6 @@
     <keyword type="macro" name="GTK_STOCK_ZOOM_IN" link="gtk3-Stock-Items.html#GTK-STOCK-ZOOM-IN:CAPS" deprecated="3.10: Use named icon &quot;zoom-in&quot; or the label &quot;Zoom _In&quot;."/>
     <keyword type="macro" name="GTK_STOCK_ZOOM_OUT" link="gtk3-Stock-Items.html#GTK-STOCK-ZOOM-OUT:CAPS" deprecated="3.10: Use named icon &quot;zoom-out&quot; or the label &quot;Zoom _Out&quot;."/>
     <keyword type="struct" name="struct GtkStockItem" link="gtk3-Stock-Items.html#GtkStockItem" deprecated="3.10"/>
-    <keyword type="" name="GtkIconFactory as GtkBuildable" link="gtk3-Themeable-Stock-Images.html#GtkIconFactory-BUILDER-UI"/>
     <keyword type="function" name="gtk_icon_source_copy ()" link="gtk3-Themeable-Stock-Images.html#gtk-icon-source-copy" deprecated="3.10: Use #GtkIconTheme instead."/>
     <keyword type="function" name="gtk_icon_source_free ()" link="gtk3-Themeable-Stock-Images.html#gtk-icon-source-free" deprecated="3.10: Use #GtkIconTheme instead."/>
     <keyword type="function" name="gtk_icon_factory_add ()" link="gtk3-Themeable-Stock-Images.html#gtk-icon-factory-add" deprecated="3.10: Use #GtkIconTheme instead."/>
@@ -6039,6 +6068,11 @@
     <keyword type="macro" name="GTK_BINARY_AGE" link="gtk3-Feature-Test-Macros.html#GTK-BINARY-AGE:CAPS"/>
     <keyword type="macro" name="GTK_INTERFACE_AGE" link="gtk3-Feature-Test-Macros.html#GTK-INTERFACE-AGE:CAPS"/>
     <keyword type="macro" name="GTK_CHECK_VERSION()" link="gtk3-Feature-Test-Macros.html#GTK-CHECK-VERSION:CAPS"/>
+    <keyword type="macro" name="gtk_major_version" link="gtk3-Feature-Test-Macros.html#gtk-major-version"/>
+    <keyword type="macro" name="gtk_minor_version" link="gtk3-Feature-Test-Macros.html#gtk-minor-version"/>
+    <keyword type="macro" name="gtk_micro_version" link="gtk3-Feature-Test-Macros.html#gtk-micro-version"/>
+    <keyword type="macro" name="gtk_binary_age" link="gtk3-Feature-Test-Macros.html#gtk-binary-age"/>
+    <keyword type="macro" name="gtk_interface_age" link="gtk3-Feature-Test-Macros.html#gtk-interface-age"/>
     <keyword type="function" name="gtk_accel_group_new ()" link="gtk3-Keyboard-Accelerators.html#gtk-accel-group-new"/>
     <keyword type="function" name="gtk_accel_group_connect ()" link="gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect"/>
     <keyword type="function" name="gtk_accel_group_connect_by_path ()" link="gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect-by-path"/>
@@ -6072,9 +6106,6 @@
     <keyword type="property" name="The “modifier-mask” property" link="gtk3-Keyboard-Accelerators.html#GtkAccelGroup--modifier-mask"/>
     <keyword type="signal" name="The “accel-activate” signal" link="gtk3-Keyboard-Accelerators.html#GtkAccelGroup-accel-activate"/>
     <keyword type="signal" name="The “accel-changed” signal" link="gtk3-Keyboard-Accelerators.html#GtkAccelGroup-accel-changed"/>
-    <keyword type="" name="Manipulating accelerators" link="gtk3-Accelerator-Maps.html#id-1.4.5.9.7"/>
-    <keyword type="" name="Saving and loading accelerator maps" link="gtk3-Accelerator-Maps.html#id-1.4.5.9.8"/>
-    <keyword type="" name="Monitoring changes" link="gtk3-Accelerator-Maps.html#id-1.4.5.9.9"/>
     <keyword type="function" name="GtkAccelMapForeach ()" link="gtk3-Accelerator-Maps.html#GtkAccelMapForeach"/>
     <keyword type="function" name="gtk_accel_map_add_entry ()" link="gtk3-Accelerator-Maps.html#gtk-accel-map-add-entry"/>
     <keyword type="function" name="gtk_accel_map_lookup_entry ()" link="gtk3-Accelerator-Maps.html#gtk-accel-map-lookup-entry"/>
@@ -6103,6 +6134,7 @@
     <keyword type="function" name="gtk_clipboard_get ()" link="gtk3-Clipboards.html#gtk-clipboard-get"/>
     <keyword type="function" name="gtk_clipboard_get_for_display ()" link="gtk3-Clipboards.html#gtk-clipboard-get-for-display" since="2.2"/>
     <keyword type="function" name="gtk_clipboard_get_display ()" link="gtk3-Clipboards.html#gtk-clipboard-get-display" since="2.2"/>
+    <keyword type="function" name="gtk_clipboard_get_default ()" link="gtk3-Clipboards.html#gtk-clipboard-get-default" since="3.16"/>
     <keyword type="function" name="gtk_clipboard_set_with_data ()" link="gtk3-Clipboards.html#gtk-clipboard-set-with-data"/>
     <keyword type="function" name="gtk_clipboard_set_with_owner ()" link="gtk3-Clipboards.html#gtk-clipboard-set-with-owner"/>
     <keyword type="function" name="gtk_clipboard_get_owner ()" link="gtk3-Clipboards.html#gtk-clipboard-get-owner"/>
@@ -6148,7 +6180,7 @@
     <keyword type="function" name="gtk_drag_unhighlight ()" link="gtk3-Drag-and-Drop.html#gtk-drag-unhighlight"/>
     <keyword type="function" name="gtk_drag_begin ()" link="gtk3-Drag-and-Drop.html#gtk-drag-begin" deprecated="3.10: Use gtk_drag_begin_with_coordinates() instead"/>
     <keyword type="function" name="gtk_drag_begin_with_coordinates ()" link="gtk3-Drag-and-Drop.html#gtk-drag-begin-with-coordinates" since="3.10"/>
-    <keyword type="function" name="gtk_drag_cancel ()" link="gtk3-Drag-and-Drop.html#gtk-drag-cancel"/>
+    <keyword type="function" name="gtk_drag_cancel ()" link="gtk3-Drag-and-Drop.html#gtk-drag-cancel" since="3.16"/>
     <keyword type="function" name="gtk_drag_set_icon_widget ()" link="gtk3-Drag-and-Drop.html#gtk-drag-set-icon-widget"/>
     <keyword type="function" name="gtk_drag_set_icon_pixbuf ()" link="gtk3-Drag-and-Drop.html#gtk-drag-set-icon-pixbuf"/>
     <keyword type="function" name="gtk_drag_set_icon_stock ()" link="gtk3-Drag-and-Drop.html#gtk-drag-set-icon-stock" deprecated="3.10: Use gtk_drag_set_icon_name() instead."/>
@@ -6173,17 +6205,17 @@
     <keyword type="enum" name="enum GtkDragResult" link="gtk3-Drag-and-Drop.html#GtkDragResult"/>
     <keyword type="function" name="gtk_settings_get_default ()" link="GtkSettings.html#gtk-settings-get-default"/>
     <keyword type="function" name="gtk_settings_get_for_screen ()" link="GtkSettings.html#gtk-settings-get-for-screen" since="2.2"/>
-    <keyword type="function" name="gtk_settings_install_property ()" link="GtkSettings.html#gtk-settings-install-property"/>
-    <keyword type="function" name="gtk_settings_install_property_parser ()" link="GtkSettings.html#gtk-settings-install-property-parser"/>
+    <keyword type="function" name="gtk_settings_install_property ()" link="GtkSettings.html#gtk-settings-install-property" deprecated="3.16: This function is not useful outside GTK+."/>
+    <keyword type="function" name="gtk_settings_install_property_parser ()" link="GtkSettings.html#gtk-settings-install-property-parser" deprecated="3.16: This function is not useful outside GTK+."/>
     <keyword type="function" name="gtk_rc_property_parse_color ()" link="GtkSettings.html#gtk-rc-property-parse-color"/>
     <keyword type="function" name="gtk_rc_property_parse_enum ()" link="GtkSettings.html#gtk-rc-property-parse-enum"/>
     <keyword type="function" name="gtk_rc_property_parse_flags ()" link="GtkSettings.html#gtk-rc-property-parse-flags"/>
     <keyword type="function" name="gtk_rc_property_parse_requisition ()" link="GtkSettings.html#gtk-rc-property-parse-requisition"/>
     <keyword type="function" name="gtk_rc_property_parse_border ()" link="GtkSettings.html#gtk-rc-property-parse-border"/>
-    <keyword type="function" name="gtk_settings_set_property_value ()" link="GtkSettings.html#gtk-settings-set-property-value"/>
-    <keyword type="function" name="gtk_settings_set_string_property ()" link="GtkSettings.html#gtk-settings-set-string-property"/>
-    <keyword type="function" name="gtk_settings_set_long_property ()" link="GtkSettings.html#gtk-settings-set-long-property"/>
-    <keyword type="function" name="gtk_settings_set_double_property ()" link="GtkSettings.html#gtk-settings-set-double-property"/>
+    <keyword type="function" name="gtk_settings_set_property_value ()" link="GtkSettings.html#gtk-settings-set-property-value" deprecated="3.16: Use g_object_set() instead."/>
+    <keyword type="function" name="gtk_settings_set_string_property ()" link="GtkSettings.html#gtk-settings-set-string-property" deprecated="3.16: Use g_object_set() instead."/>
+    <keyword type="function" name="gtk_settings_set_long_property ()" link="GtkSettings.html#gtk-settings-set-long-property" deprecated="3.16: Use g_object_set() instead."/>
+    <keyword type="function" name="gtk_settings_set_double_property ()" link="GtkSettings.html#gtk-settings-set-double-property" deprecated="3.16: Use g_object_set() instead."/>
     <keyword type="struct" name="GtkSettings" link="GtkSettings.html#GtkSettings-struct"/>
     <keyword type="struct" name="struct GtkSettingsValue" link="GtkSettings.html#GtkSettingsValue"/>
     <keyword type="enum" name="enum GtkIMPreeditStyle" link="GtkSettings.html#GtkIMPreeditStyle" deprecated="3.10"/>
@@ -6270,8 +6302,6 @@
     <keyword type="property" name="The “gtk-xft-hinting” property" link="GtkSettings.html#GtkSettings--gtk-xft-hinting"/>
     <keyword type="property" name="The “gtk-xft-hintstyle” property" link="GtkSettings.html#GtkSettings--gtk-xft-hintstyle"/>
     <keyword type="property" name="The “gtk-xft-rgba” property" link="GtkSettings.html#GtkSettings--gtk-xft-rgba"/>
-    <keyword type="" name="Installing a key binding" link="gtk3-Bindings.html#id-1.4.9.6.3"/>
-    <keyword type="" name="Unbinding existing key bindings" link="gtk3-Bindings.html#id-1.4.9.6.4"/>
     <keyword type="function" name="gtk_binding_entry_add_signall ()" link="gtk3-Bindings.html#gtk-binding-entry-add-signall"/>
     <keyword type="function" name="gtk_binding_set_new ()" link="gtk3-Bindings.html#gtk-binding-set-new"/>
     <keyword type="function" name="gtk_binding_set_by_class ()" link="gtk3-Bindings.html#gtk-binding-set-by-class"/>
@@ -6386,9 +6416,6 @@
     <keyword type="property" name="The “is-showing” property" link="gtk3-Filesystem-utilities.html#GtkMountOperation--is-showing"/>
     <keyword type="property" name="The “parent” property" link="gtk3-Filesystem-utilities.html#GtkMountOperation--parent"/>
     <keyword type="property" name="The “screen” property" link="gtk3-Filesystem-utilities.html#GtkMountOperation--screen"/>
-    <keyword type="" name="Style Classes" link="GtkStyleContext.html#gtkstylecontext-classes"/>
-    <keyword type="" name="Style Regions" link="GtkStyleContext.html#id-1.5.2.10.7"/>
-    <keyword type="" name="Custom styling in UI libraries and applications" link="GtkStyleContext.html#id-1.5.2.10.8"/>
     <keyword type="function" name="gtk_style_context_new ()" link="GtkStyleContext.html#gtk-style-context-new"/>
     <keyword type="function" name="gtk_style_context_add_provider ()" link="GtkStyleContext.html#gtk-style-context-add-provider" since="3.0"/>
     <keyword type="function" name="gtk_style_context_add_provider_for_screen ()" link="GtkStyleContext.html#gtk-style-context-add-provider-for-screen" since="3.0"/>
@@ -6407,8 +6434,8 @@
     <keyword type="function" name="gtk_style_context_get_valist ()" link="GtkStyleContext.html#gtk-style-context-get-valist" since="3.0"/>
     <keyword type="function" name="gtk_style_context_get_section ()" link="GtkStyleContext.html#gtk-style-context-get-section"/>
     <keyword type="function" name="gtk_style_context_get_color ()" link="GtkStyleContext.html#gtk-style-context-get-color" since="3.0"/>
-    <keyword type="function" name="gtk_style_context_get_background_color ()" link="GtkStyleContext.html#gtk-style-context-get-background-color" since="3.0"/>
-    <keyword type="function" name="gtk_style_context_get_border_color ()" link="GtkStyleContext.html#gtk-style-context-get-border-color" since="3.0"/>
+    <keyword type="function" name="gtk_style_context_get_background_color ()" link="GtkStyleContext.html#gtk-style-context-get-background-color" deprecated="3.16: Use gtk_render_background() instead." since="3.0"/>
+    <keyword type="function" name="gtk_style_context_get_border_color ()" link="GtkStyleContext.html#gtk-style-context-get-border-color" deprecated="3.16: Use gtk_render_border() instead." since="3.0"/>
     <keyword type="function" name="gtk_style_context_get_border ()" link="GtkStyleContext.html#gtk-style-context-get-border" since="3.0"/>
     <keyword type="function" name="gtk_style_context_get_padding ()" link="GtkStyleContext.html#gtk-style-context-get-padding" since="3.0"/>
     <keyword type="function" name="gtk_style_context_get_margin ()" link="GtkStyleContext.html#gtk-style-context-get-margin" since="3.0"/>
@@ -6485,6 +6512,7 @@
     <keyword type="macro" name="GTK_STYLE_CLASS_CALENDAR" link="GtkStyleContext.html#GTK-STYLE-CLASS-CALENDAR:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_CELL" link="GtkStyleContext.html#GTK-STYLE-CLASS-CELL:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_COMBOBOX_ENTRY" link="GtkStyleContext.html#GTK-STYLE-CLASS-COMBOBOX-ENTRY:CAPS"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_CONTEXT_MENU" link="GtkStyleContext.html#GTK-STYLE-CLASS-CONTEXT-MENU:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_CHECK" link="GtkStyleContext.html#GTK-STYLE-CLASS-CHECK:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_CSD" link="GtkStyleContext.html#GTK-STYLE-CLASS-CSD:CAPS" since="3.14"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_CURSOR_HANDLE" link="GtkStyleContext.html#GTK-STYLE-CLASS-CURSOR-HANDLE:CAPS"/>
@@ -6506,6 +6534,7 @@
     <keyword type="macro" name="GTK_STYLE_CLASS_INFO" link="GtkStyleContext.html#GTK-STYLE-CLASS-INFO:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_INLINE_TOOLBAR" link="GtkStyleContext.html#GTK-STYLE-CLASS-INLINE-TOOLBAR:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_INSERTION_CURSOR" link="GtkStyleContext.html#GTK-STYLE-CLASS-INSERTION-CURSOR:CAPS"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_LABEL" link="GtkStyleContext.html#GTK-STYLE-CLASS-LABEL:CAPS" since="3.16"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_LEFT" link="GtkStyleContext.html#GTK-STYLE-CLASS-LEFT:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_LEVEL_BAR" link="GtkStyleContext.html#GTK-STYLE-CLASS-LEVEL-BAR:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_LINKED" link="GtkStyleContext.html#GTK-STYLE-CLASS-LINKED:CAPS"/>
@@ -6516,18 +6545,22 @@
     <keyword type="macro" name="GTK_STYLE_CLASS_MENUBAR" link="GtkStyleContext.html#GTK-STYLE-CLASS-MENUBAR:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_MENUITEM" link="GtkStyleContext.html#GTK-STYLE-CLASS-MENUITEM:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_MESSAGE_DIALOG" link="GtkStyleContext.html#GTK-STYLE-CLASS-MESSAGE-DIALOG:CAPS" since="3.14"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_MONOSPACE" link="GtkStyleContext.html#GTK-STYLE-CLASS-MONOSPACE:CAPS" since="3.16"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_NEEDS_ATTENTION" link="GtkStyleContext.html#GTK-STYLE-CLASS-NEEDS-ATTENTION:CAPS" since="3.12"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_NOTEBOOK" link="GtkStyleContext.html#GTK-STYLE-CLASS-NOTEBOOK:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_OSD" link="GtkStyleContext.html#GTK-STYLE-CLASS-OSD:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_OVERSHOOT" link="GtkStyleContext.html#GTK-STYLE-CLASS-OVERSHOOT:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_PANE_SEPARATOR" link="GtkStyleContext.html#GTK-STYLE-CLASS-PANE-SEPARATOR:CAPS"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_PAPER" link="GtkStyleContext.html#GTK-STYLE-CLASS-PAPER:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_POPUP" link="GtkStyleContext.html#GTK-STYLE-CLASS-POPUP:CAPS" since="3.14"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_POPOVER" link="GtkStyleContext.html#GTK-STYLE-CLASS-POPOVER:CAPS" since="3.14"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_PRIMARY_TOOLBAR" link="GtkStyleContext.html#GTK-STYLE-CLASS-PRIMARY-TOOLBAR:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_PROGRESSBAR" link="GtkStyleContext.html#GTK-STYLE-CLASS-PROGRESSBAR:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_PULSE" link="GtkStyleContext.html#GTK-STYLE-CLASS-PULSE:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_QUESTION" link="GtkStyleContext.html#GTK-STYLE-CLASS-QUESTION:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_RADIO" link="GtkStyleContext.html#GTK-STYLE-CLASS-RADIO:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_RAISED" link="GtkStyleContext.html#GTK-STYLE-CLASS-RAISED:CAPS"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_READ_ONLY" link="GtkStyleContext.html#GTK-STYLE-CLASS-READ-ONLY:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_RIGHT" link="GtkStyleContext.html#GTK-STYLE-CLASS-RIGHT:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_RUBBERBAND" link="GtkStyleContext.html#GTK-STYLE-CLASS-RUBBERBAND:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_SCALE" link="GtkStyleContext.html#GTK-STYLE-CLASS-SCALE:CAPS"/>
@@ -6540,17 +6573,21 @@
     <keyword type="macro" name="GTK_STYLE_CLASS_SLIDER" link="GtkStyleContext.html#GTK-STYLE-CLASS-SLIDER:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_SPINBUTTON" link="GtkStyleContext.html#GTK-STYLE-CLASS-SPINBUTTON:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_SPINNER" link="GtkStyleContext.html#GTK-STYLE-CLASS-SPINNER:CAPS"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_STATUSBAR" link="GtkStyleContext.html#GTK-STYLE-CLASS-STATUSBAR:CAPS" since="3.16"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_SUBTITLE" link="GtkStyleContext.html#GTK-STYLE-CLASS-SUBTITLE:CAPS" since="3.14"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_SUGGESTED_ACTION" link="GtkStyleContext.html#GTK-STYLE-CLASS-SUGGESTED-ACTION:CAPS" since="3.12"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_TITLE" link="GtkStyleContext.html#GTK-STYLE-CLASS-TITLE:CAPS" since="3.14"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_TITLEBAR" link="GtkStyleContext.html#GTK-STYLE-CLASS-TITLEBAR:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_TOOLBAR" link="GtkStyleContext.html#GTK-STYLE-CLASS-TOOLBAR:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_TOOLTIP" link="GtkStyleContext.html#GTK-STYLE-CLASS-TOOLTIP:CAPS"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_TOUCH_SELECTION" link="GtkStyleContext.html#GTK-STYLE-CLASS-TOUCH-SELECTION:CAPS" since="3.16"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_TOP" link="GtkStyleContext.html#GTK-STYLE-CLASS-TOP:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_TROUGH" link="GtkStyleContext.html#GTK-STYLE-CLASS-TROUGH:CAPS"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_UNDERSHOOT" link="GtkStyleContext.html#GTK-STYLE-CLASS-UNDERSHOOT:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_VERTICAL" link="GtkStyleContext.html#GTK-STYLE-CLASS-VERTICAL:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_VIEW" link="GtkStyleContext.html#GTK-STYLE-CLASS-VIEW:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_CLASS_WARNING" link="GtkStyleContext.html#GTK-STYLE-CLASS-WARNING:CAPS"/>
+    <keyword type="macro" name="GTK_STYLE_CLASS_WIDE" link="GtkStyleContext.html#GTK-STYLE-CLASS-WIDE:CAPS" since="3.16"/>
     <keyword type="macro" name="GTK_STYLE_REGION_COLUMN" link="GtkStyleContext.html#GTK-STYLE-REGION-COLUMN:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_REGION_COLUMN_HEADER" link="GtkStyleContext.html#GTK-STYLE-REGION-COLUMN-HEADER:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_REGION_ROW" link="GtkStyleContext.html#GTK-STYLE-REGION-ROW:CAPS"/>
@@ -6564,19 +6601,12 @@
     <keyword type="property" name="The “parent” property" link="GtkStyleContext.html#GtkStyleContext--parent"/>
     <keyword type="property" name="The “screen” property" link="GtkStyleContext.html#GtkStyleContext--screen"/>
     <keyword type="signal" name="The “changed” signal" link="GtkStyleContext.html#GtkStyleContext-changed"/>
-    <keyword type="" name="Style sheets" link="GtkCssProvider.html#id-1.5.3.10.4"/>
-    <keyword type="" name="Selectors" link="GtkCssProvider.html#gtkcssprovider-selectors"/>
-    <keyword type="" name="@ Rules" link="GtkCssProvider.html#id-1.5.3.10.6"/>
-    <keyword type="" name="Symbolic colors" link="GtkCssProvider.html#id-1.5.3.10.7"/>
-    <keyword type="" name="Specifying Colors" link="GtkCssProvider.html#specifying-colors"/>
-    <keyword type="" name="Gradients" link="GtkCssProvider.html#id-1.5.3.10.9"/>
-    <keyword type="" name="Border images" link="GtkCssProvider.html#border-images"/>
-    <keyword type="" name="Supported Properties" link="GtkCssProvider.html#id-1.5.3.10.11"/>
     <keyword type="function" name="gtk_css_provider_get_default ()" link="GtkCssProvider.html#gtk-css-provider-get-default"/>
     <keyword type="function" name="gtk_css_provider_get_named ()" link="GtkCssProvider.html#gtk-css-provider-get-named"/>
     <keyword type="function" name="gtk_css_provider_load_from_data ()" link="GtkCssProvider.html#gtk-css-provider-load-from-data"/>
     <keyword type="function" name="gtk_css_provider_load_from_file ()" link="GtkCssProvider.html#gtk-css-provider-load-from-file"/>
     <keyword type="function" name="gtk_css_provider_load_from_path ()" link="GtkCssProvider.html#gtk-css-provider-load-from-path"/>
+    <keyword type="function" name="gtk_css_provider_load_from_resource ()" link="GtkCssProvider.html#gtk-css-provider-load-from-resource" since="3.16"/>
     <keyword type="function" name="gtk_css_provider_new ()" link="GtkCssProvider.html#gtk-css-provider-new"/>
     <keyword type="function" name="gtk_css_provider_to_string ()" link="GtkCssProvider.html#gtk-css-provider-to-string" since="3.2"/>
     <keyword type="macro" name="GTK_CSS_PROVIDER_ERROR" link="GtkCssProvider.html#GTK-CSS-PROVIDER-ERROR:CAPS"/>
@@ -6604,21 +6634,21 @@
     <keyword type="macro" name="GTK_STYLE_PROVIDER_PRIORITY_SETTINGS" link="GtkStyleProvider.html#GTK-STYLE-PROVIDER-PRIORITY-SETTINGS:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_PROVIDER_PRIORITY_APPLICATION" link="GtkStyleProvider.html#GTK-STYLE-PROVIDER-PRIORITY-APPLICATION:CAPS"/>
     <keyword type="macro" name="GTK_STYLE_PROVIDER_PRIORITY_USER" link="GtkStyleProvider.html#GTK-STYLE-PROVIDER-PRIORITY-USER:CAPS"/>
-    <keyword type="function" name="gtk_style_properties_clear ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-clear"/>
-    <keyword type="function" name="gtk_style_properties_get ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-get" since="3.0"/>
-    <keyword type="function" name="gtk_style_properties_get_property ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-get-property" since="3.0"/>
-    <keyword type="function" name="gtk_style_properties_get_valist ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-get-valist" since="3.0"/>
+    <keyword type="function" name="gtk_style_properties_clear ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-clear" deprecated="3.16: #GtkStyleProperties are deprecated."/>
+    <keyword type="function" name="gtk_style_properties_get ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-get" deprecated="3.16: #GtkStyleProperties are deprecated." since="3.0"/>
+    <keyword type="function" name="gtk_style_properties_get_property ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-get-property" deprecated="3.16: #GtkStyleProperties are deprecated." since="3.0"/>
+    <keyword type="function" name="gtk_style_properties_get_valist ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-get-valist" deprecated="3.16: #GtkStyleProperties are deprecated." since="3.0"/>
     <keyword type="function" name="gtk_style_properties_lookup_color ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-lookup-color" deprecated="3.8: #GtkSymbolicColor is deprecated." since="3.0"/>
     <keyword type="function" name="gtk_style_properties_lookup_property ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-lookup-property" deprecated="" since="3.0"/>
     <keyword type="function" name="gtk_style_properties_map_color ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-map-color" deprecated="3.8: #GtkSymbolicColor is deprecated." since="3.0"/>
-    <keyword type="function" name="gtk_style_properties_merge ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-merge" since="3.0"/>
-    <keyword type="function" name="gtk_style_properties_new ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-new"/>
+    <keyword type="function" name="gtk_style_properties_merge ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-merge" deprecated="3.16: #GtkStyleProperties are deprecated." since="3.0"/>
+    <keyword type="function" name="gtk_style_properties_new ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-new" deprecated="3.16: #GtkStyleProperties are deprecated."/>
     <keyword type="function" name="GtkStylePropertyParser ()" link="gtk3-GtkStyleProperties.html#GtkStylePropertyParser"/>
     <keyword type="function" name="gtk_style_properties_register_property ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-register-property" deprecated="3.8: Code should use the default properties provided by CSS." since="3.0"/>
-    <keyword type="function" name="gtk_style_properties_set ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-set" since="3.0"/>
-    <keyword type="function" name="gtk_style_properties_set_property ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-set-property" since="3.0"/>
-    <keyword type="function" name="gtk_style_properties_set_valist ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-set-valist" since="3.0"/>
-    <keyword type="function" name="gtk_style_properties_unset_property ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-unset-property" since="3.0"/>
+    <keyword type="function" name="gtk_style_properties_set ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-set" deprecated="3.16: #GtkStyleProperties are deprecated." since="3.0"/>
+    <keyword type="function" name="gtk_style_properties_set_property ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-set-property" deprecated="3.16: #GtkStyleProperties are deprecated." since="3.0"/>
+    <keyword type="function" name="gtk_style_properties_set_valist ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-set-valist" deprecated="3.16: #GtkStyleProperties are deprecated." since="3.0"/>
+    <keyword type="function" name="gtk_style_properties_unset_property ()" link="gtk3-GtkStyleProperties.html#gtk-style-properties-unset-property" deprecated="3.16: #GtkStyleProperties are deprecated." since="3.0"/>
     <keyword type="struct" name="struct GtkStyleProperties" link="gtk3-GtkStyleProperties.html#GtkStyleProperties"/>
     <keyword type="function" name="gtk_widget_path_append_type ()" link="gtk3-GtkWidgetPath.html#gtk-widget-path-append-type" since="3.0"/>
     <keyword type="function" name="gtk_widget_path_append_with_siblings ()" link="gtk3-GtkWidgetPath.html#gtk-widget-path-append-with-siblings" since="3.2"/>
@@ -6713,16 +6743,6 @@
     <keyword type="macro" name="GTK_ICON_THEME_ERROR" link="GtkIconTheme.html#GTK-ICON-THEME-ERROR:CAPS"/>
     <keyword type="enum" name="enum GtkIconThemeError" link="GtkIconTheme.html#GtkIconThemeError"/>
     <keyword type="signal" name="The “changed” signal" link="GtkIconTheme.html#GtkIconTheme-changed"/>
-    <keyword type="" name="Useful autotools macros" link="gtk-compiling.html#id-1.8.3.3.11"/>
-    <keyword type="" name="Common commandline options" link="gtk-running.html#id-1.8.4.3.2"/>
-    <keyword type="" name="Environment variables" link="gtk-running.html#id-1.8.4.3.3"/>
-    <keyword type="" name="Interactive debugging" link="gtk-running.html#interactive-debugging"/>
-    <keyword type="" name="X11-specific commandline options" link="gtk-x11.html#x11-cmdline"/>
-    <keyword type="" name="X11-specific environment variables" link="gtk-x11.html#x11-envar"/>
-    <keyword type="" name="Server, client, window manager" link="gtk-x11.html#id-1.8.5.4.5"/>
-    <keyword type="" name="Windows-specific commandline options" link="gtk-windows.html#win32-cmdline"/>
-    <keyword type="" name="Windows-specific environment variables" link="gtk-windows.html#win32-envar"/>
-    <keyword type="" name="Broadway-specific environment variables" link="gtk-broadway.html#broadway-envar"/>
     <keyword type="constant" name="GTK_APPLICATION_INHIBIT_LOGOUT" link="GtkApplication.html#GTK-APPLICATION-INHIBIT-LOGOUT:CAPS"/>
     <keyword type="constant" name="GTK_APPLICATION_INHIBIT_SWITCH" link="GtkApplication.html#GTK-APPLICATION-INHIBIT-SWITCH:CAPS"/>
     <keyword type="constant" name="GTK_APPLICATION_INHIBIT_SUSPEND" link="GtkApplication.html#GTK-APPLICATION-INHIBIT-SUSPEND:CAPS"/>
@@ -6838,6 +6858,9 @@
     <keyword type="constant" name="GTK_ARROW_LEFT" link="GtkMenuButton.html#GTK-ARROW-LEFT:CAPS"/>
     <keyword type="constant" name="GTK_ARROW_RIGHT" link="GtkMenuButton.html#GTK-ARROW-RIGHT:CAPS"/>
     <keyword type="constant" name="GTK_ARROW_NONE" link="GtkMenuButton.html#GTK-ARROW-NONE:CAPS"/>
+    <keyword type="constant" name="GTK_BUTTON_ROLE_NORMAL" link="GtkModelButton.html#GTK-BUTTON-ROLE-NORMAL:CAPS"/>
+    <keyword type="constant" name="GTK_BUTTON_ROLE_CHECK" link="GtkModelButton.html#GTK-BUTTON-ROLE-CHECK:CAPS"/>
+    <keyword type="constant" name="GTK_BUTTON_ROLE_RADIO" link="GtkModelButton.html#GTK-BUTTON-ROLE-RADIO:CAPS"/>
     <keyword type="constant" name="GTK_ENTRY_ICON_PRIMARY" link="GtkEntry.html#GTK-ENTRY-ICON-PRIMARY:CAPS"/>
     <keyword type="constant" name="GTK_ENTRY_ICON_SECONDARY" link="GtkEntry.html#GTK-ENTRY-ICON-SECONDARY:CAPS"/>
     <keyword type="constant" name="GTK_INPUT_PURPOSE_FREE_FORM" link="GtkEntry.html#GTK-INPUT-PURPOSE-FREE-FORM:CAPS"/>
@@ -6882,6 +6905,8 @@
     <keyword type="constant" name="GTK_TEXT_WINDOW_RIGHT" link="GtkTextView.html#GTK-TEXT-WINDOW-RIGHT:CAPS"/>
     <keyword type="constant" name="GTK_TEXT_WINDOW_TOP" link="GtkTextView.html#GTK-TEXT-WINDOW-TOP:CAPS"/>
     <keyword type="constant" name="GTK_TEXT_WINDOW_BOTTOM" link="GtkTextView.html#GTK-TEXT-WINDOW-BOTTOM:CAPS"/>
+    <keyword type="constant" name="GTK_TEXT_EXTEND_SELECTION_WORD" link="GtkTextView.html#GTK-TEXT-EXTEND-SELECTION-WORD:CAPS"/>
+    <keyword type="constant" name="GTK_TEXT_EXTEND_SELECTION_LINE" link="GtkTextView.html#GTK-TEXT-EXTEND-SELECTION-LINE:CAPS"/>
     <keyword type="constant" name="GTK_WRAP_NONE" link="GtkTextView.html#GTK-WRAP-NONE:CAPS"/>
     <keyword type="constant" name="GTK_WRAP_CHAR" link="GtkTextView.html#GTK-WRAP-CHAR:CAPS"/>
     <keyword type="constant" name="GTK_WRAP_WORD" link="GtkTextView.html#GTK-WRAP-WORD:CAPS"/>
@@ -6949,6 +6974,7 @@
     <keyword type="constant" name="GTK_POLICY_ALWAYS" link="GtkScrolledWindow.html#GTK-POLICY-ALWAYS:CAPS"/>
     <keyword type="constant" name="GTK_POLICY_AUTOMATIC" link="GtkScrolledWindow.html#GTK-POLICY-AUTOMATIC:CAPS"/>
     <keyword type="constant" name="GTK_POLICY_NEVER" link="GtkScrolledWindow.html#GTK-POLICY-NEVER:CAPS"/>
+    <keyword type="constant" name="GTK_POLICY_EXTERNAL" link="GtkScrolledWindow.html#GTK-POLICY-EXTERNAL:CAPS"/>
     <keyword type="constant" name="GTK_CORNER_TOP_LEFT" link="GtkScrolledWindow.html#GTK-CORNER-TOP-LEFT:CAPS"/>
     <keyword type="constant" name="GTK_CORNER_BOTTOM_LEFT" link="GtkScrolledWindow.html#GTK-CORNER-BOTTOM-LEFT:CAPS"/>
     <keyword type="constant" name="GTK_CORNER_TOP_RIGHT" link="GtkScrolledWindow.html#GTK-CORNER-TOP-RIGHT:CAPS"/>

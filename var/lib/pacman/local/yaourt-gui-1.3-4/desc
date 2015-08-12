@@ -1,0 +1,45 @@
+%NAME%
+yaourt-gui
+
+%VERSION%
+1.3-4
+
+%DESC%
+A bash GUI for yaourt
+
+%URL%
+http://alexiobash.com/yaourt-gui-a-bash-gui-per-yaourt-3/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1439239865
+
+%INSTALLDATE%
+1439239879
+
+%PACKAGER%
+Unknown Packager
+
+%SIZE%
+54272
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+none
+
+%DEPENDS%
+yaourt
+sudo
+lsb-release
+git
+
+%OPTDEPENDS%
+aurvote: Tool to vote for favorite AUR packages
+
+%CONFLICTS%
+yaourt-gui-manjaro
+

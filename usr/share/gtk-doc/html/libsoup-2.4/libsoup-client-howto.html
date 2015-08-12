@@ -112,9 +112,9 @@ you can specify various additional options:
 <td>
 <p>
 		<a class="link" href="SoupSession.html#SOUP-SESSION-PROXY-RESOLVER:CAPS" title="SOUP_SESSION_PROXY_RESOLVER"><code class="literal">SOUP_SESSION_PROXY_RESOLVER</code></a>
-		specifies a <a href="http://library.gnome.org/devel/gio/unstable/GProxyResolver.html"><span class="type">GProxyResolver</span></a>
+		specifies a <span class="type">GProxyResolver</span>
 		to use to determine the HTTP proxies to use. By default,
-		this is set to the resolver returned by <a href="http://library.gnome.org/devel/gio/unstable/GProxyResolver.html#g-proxy-resolver-get-default"><code class="function">g_proxy_resolver_get_default</code></a>,
+		this is set to the resolver returned by <code class="function">g_proxy_resolver_get_default</code>,
 		so you do not need to set it yourself.
 	    </p>
 <p>
@@ -232,7 +232,7 @@ application might do something like the following:
 
 <span class="normal">    logger </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="SoupLogger.html#soup-logger-new">soup_logger_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">debug_level</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">-</span><span class="number">1</span><span class="symbol">);</span>
 <span class="normal">    </span><span class="function"><a href="SoupSession.html#soup-session-add-feature">soup_session_add_feature</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">session</span><span class="symbol">,</span><span class="normal"> </span><span class="function">SOUP_SESSION_FEATURE</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">logger</span><span class="symbol">));</span>
-<span class="normal">    </span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">logger</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="function">g_object_unref</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">logger</span><span class="symbol">);</span>
 <span class="cbracket">}</span></pre></td>
       </tr>
     </tbody>
@@ -329,7 +329,7 @@ request will have been sent, and the response headers read back in;
 you can examine the message's <em class="structfield"><code>status_code</code></em>,
 <em class="structfield"><code>reason_phrase</code></em>, and
 <em class="structfield"><code>response_headers</code></em> fields to see the response
-metadata. To get the response body, read from the returned <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a>, and close it
+metadata. To get the response body, read from the returned <span class="type">GInputStream</span>, and close it
 when you are done.
 </p>
 <p>
@@ -418,7 +418,7 @@ The message will be added to the session's queue, and eventually (when
 control is returned back to the main loop), it will be sent and the
 response be will be read. When the message has been sent, and its
 headers received, the callback will be invoked, in the standard
-<a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a>
+<span class="type">GAsyncReadyCallback</span>
 style.
 </p>
 <p>

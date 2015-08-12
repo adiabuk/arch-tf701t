@@ -50,6 +50,9 @@ GType hb_gobject_buffer_content_type_get_type (void) G_GNUC_CONST;
 GType hb_gobject_buffer_flags_get_type (void) G_GNUC_CONST;
 #define HB_GOBJECT_TYPE_BUFFER_FLAGS (hb_gobject_buffer_flags_get_type ())
 
+GType hb_gobject_buffer_cluster_level_get_type (void) G_GNUC_CONST;
+#define HB_GOBJECT_TYPE_BUFFER_CLUSTER_LEVEL (hb_gobject_buffer_cluster_level_get_type ())
+
 GType hb_gobject_buffer_serialize_flags_get_type (void) G_GNUC_CONST;
 #define HB_GOBJECT_TYPE_BUFFER_SERIALIZE_FLAGS (hb_gobject_buffer_serialize_flags_get_type ())
 

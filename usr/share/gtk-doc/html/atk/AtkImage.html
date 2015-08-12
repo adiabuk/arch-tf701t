@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ATK - Accessibility Toolkit: AtkImage</title>
+<title>AtkImage: ATK - Accessibility Toolkit</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="ATK - Accessibility Toolkit">
 <link rel="up" href="interfaces.html" title="ATK Interfaces">
@@ -98,7 +98,7 @@
 </div>
 <div class="refsect1">
 <a name="AtkImage.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GInterface
+<pre class="screen">    <a href="/opt/gnome3/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> AtkImage
 </pre>
 </div>
@@ -277,9 +277,8 @@ values cannot be obtained (for instance, if the object is not onscreen).</p>
 <a name="atk-image-get-image-locale"></a><h3>atk_image_get_image_locale ()</h3>
 <pre class="programlisting">const <span class="returnvalue">gchar</span> *
 atk_image_get_image_locale (<em class="parameter"><code><a class="link" href="AtkImage.html" title="AtkImage"><span class="type">AtkImage</span></a> *image</code></em>);</pre>
-<p>Since ATK 1.12</p>
 <div class="refsect3">
-<a name="id-1.5.8.8.6.5"></a><h4>Parameters</h4>
+<a name="id-1.5.8.8.6.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -294,12 +293,13 @@ atk_image_get_image_locale (<em class="parameter"><code><a class="link" href="At
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.8.8.6.6"></a><h4>Returns</h4>
+<a name="id-1.5.8.8.6.5"></a><h4>Returns</h4>
 <p> a string corresponding to the POSIX
 LC_MESSAGES locale used by the image description, or <code class="literal">NULL</code> if the
 image does not specify a locale. </p>
 <p><span class="annotation">[<a href="http://foldoc.org/nullable"><span class="acronym">nullable</span></a>]</span></p>
 </div>
+<p class="since">Since 1.12</p>
 </div>
 </div>
 <div class="refsect1">

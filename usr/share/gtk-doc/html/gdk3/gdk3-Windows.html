@@ -8,7 +8,7 @@
 <link rel="up" href="reference.html" title="API Reference">
 <link rel="prev" href="gdk3-Cursors.html" title="Cursors">
 <link rel="next" href="GdkFrameClock.html" title="Frame clock">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -480,6 +480,22 @@
 </td>
 <td class="function_name">
 <a class="link" href="gdk3-Windows.html#gdk-window-set-opaque-region" title="gdk_window_set_opaque_region ()">gdk_window_set_opaque_region</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GdkGLContext.html" title="GdkGLContext"><span class="returnvalue">GdkGLContext</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="gdk3-Windows.html#gdk-window-create-gl-context" title="gdk_window_create_gl_context ()">gdk_window_create_gl_context</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gdk3-Windows.html#gdk-window-mark-paint-from-clip" title="gdk_window_mark_paint_from_clip ()">gdk_window_mark_paint_from_clip</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -1478,8 +1494,9 @@ gdk_window_new (<em class="parameter"><code><a class="link" href="gdk3-Windows.h
 more details.  Note: to use this on displays other than the default
 display, <em class="parameter"><code>parent</code></em>
  must be specified.</p>
+<p><span class="annotation">[<acronym title="This symbol is a constructor, not a static method."><span class="acronym">constructor</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.2.13.11.2.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.2.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1509,7 +1526,7 @@ are valid. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.2.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.2.7"></a><h4>Returns</h4>
 <p> the new <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -1567,7 +1584,6 @@ gdk_window_get_window_type (<em class="parameter"><code><a class="link" href="gd
 <div class="refsect3">
 <a name="id-1.2.13.11.4.6"></a><h4>Returns</h4>
 <p> type of window</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1597,7 +1613,7 @@ gdk_window_get_display (<em class="parameter"><code><a class="link" href="gdk3-W
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1626,7 +1642,7 @@ gdk_window_get_screen (<em class="parameter"><code><a class="link" href="gdk3-Wi
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1655,7 +1671,7 @@ gdk_window_get_visual (<em class="parameter"><code><a class="link" href="gdk3-Wi
 <p> a <a class="link" href="gdk3-Visuals.html#GdkVisual"><span class="type">GdkVisual</span></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1808,9 +1824,8 @@ gdk_window_is_destroyed (<em class="parameter"><code><a class="link" href="gdk3-
 <div class="refsect3">
 <a name="id-1.2.13.11.12.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window is destroyed</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1837,7 +1852,6 @@ gdk_window_is_visible (<em class="parameter"><code><a class="link" href="gdk3-Wi
 <div class="refsect3">
 <a name="id-1.2.13.11.13.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window is mapped</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1867,7 +1881,6 @@ window.)</p>
 <div class="refsect3">
 <a name="id-1.2.13.11.14.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window is viewable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1895,9 +1908,8 @@ gdk_window_is_input_only (<em class="parameter"><code><a class="link" href="gdk3
 <a name="id-1.2.13.11.15.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>window</code></em>
 is input only</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1924,9 +1936,8 @@ gdk_window_is_shaped (<em class="parameter"><code><a class="link" href="gdk3-Win
 <a name="id-1.2.13.11.16.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>window</code></em>
 is shaped</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1953,7 +1964,6 @@ from the <a class="link" href="gdk3-Event-Structures.html#GdkWindowState" title=
 <div class="refsect3">
 <a name="id-1.2.13.11.17.6"></a><h4>Returns</h4>
 <p> window state bitfield</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2180,7 +2190,7 @@ it to happen.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2212,7 +2222,7 @@ it to happen.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2239,9 +2249,8 @@ gdk_window_get_fullscreen_mode (<em class="parameter"><code><a class="link" href
 <div class="refsect3">
 <a name="id-1.2.13.11.27.6"></a><h4>Returns</h4>
 <p> The <a class="link" href="gdk3-Windows.html#GdkFullscreenMode" title="enum GdkFullscreenMode"><span class="type">GdkFullscreenMode</span></a> applied to the window when fullscreen.</p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2288,7 +2297,7 @@ is specified.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2329,7 +2338,7 @@ above other windows</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2370,7 +2379,7 @@ below other windows</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2384,7 +2393,12 @@ with opacity 0 being fully transparent and 1 fully opaque. (Values
 of the opacity parameter are clamped to the [0,1] range.) </p>
 <p>For toplevel windows this depends on support from the windowing system
 that may not always be there. For instance, On X11, this works only on
-X screens with a compositing manager running.</p>
+X screens with a compositing manager running. On Wayland, there is no
+per-window opacity value that the compositor would apply. Instead, use
+<code class="literal">gdk_window_set_opaque_region (window, NULL)</code> to tell the compositor
+that the entire window is (potentially) non-opaque, and draw your content
+with alpha, or use <a href="http://developer.gnome.org/gtk2/GtkWidget.html#gtk-widget-set-opacity"><code class="function">gtk_widget_set_opacity()</code></a> to set an overall opacity
+for your widgets.</p>
 <p>For child windows this function only works for non-native windows.</p>
 <p>For setting up per-pixel alpha topelevels, see <a class="link" href="GdkScreen.html#gdk-screen-get-rgba-visual" title="gdk_screen_get_rgba_visual ()"><code class="function">gdk_screen_get_rgba_visual()</code></a>,
 and for non-toplevels, see <a class="link" href="gdk3-Windows.html#gdk-window-set-composited" title="gdk_window_set_composited ()"><code class="function">gdk_window_set_composited()</code></a>.</p>
@@ -2411,7 +2425,7 @@ and for non-toplevels, see <a class="link" href="gdk3-Windows.html#gdk-window-se
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2419,6 +2433,11 @@ and for non-toplevels, see <a class="link" href="gdk3-Windows.html#gdk-window-se
 <pre class="programlisting"><span class="returnvalue">void</span>
 gdk_window_set_composited (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>,
                            <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> composited</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gdk_window_set_composited</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>Compositing is an outdated technology that
+  only ever worked on X11.</p>
+</div>
 <p>Sets a <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> as composited, or unsets it. Composited
 windows do not automatically have their contents drawn to
 the screen. Drawing is redirected to an offscreen buffer
@@ -2439,7 +2458,7 @@ You must call <a class="link" href="GdkDisplay.html#gdk-display-supports-composi
 setting a window as composited is supported before
 attempting to do so.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.32.8"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.32.10"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2460,18 +2479,23 @@ attempting to do so.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gdk-window-get-composited"></a><h3>gdk_window_get_composited ()</h3>
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gdk_window_get_composited (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gdk_window_get_composited</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>Compositing is an outdated technology that
+  only ever worked on X11.</p>
+</div>
 <p>Determines whether <em class="parameter"><code>window</code></em>
  is composited.</p>
 <p>See <a class="link" href="gdk3-Windows.html#gdk-window-set-composited" title="gdk_window_set_composited ()"><code class="function">gdk_window_set_composited()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.33.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.33.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2486,11 +2510,10 @@ gdk_window_get_composited (<em class="parameter"><code><a class="link" href="gdk
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.33.7"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.33.9"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window is composited.</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2724,7 +2747,7 @@ that not covered by the new position of <em class="parameter"><code>region</code
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2748,7 +2771,7 @@ gdk_window_flush (<em class="parameter"><code><a class="link" href="gdk3-Windows
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2776,9 +2799,8 @@ you can use <a class="link" href="gdk3-Windows.html#gdk-window-ensure-native" ti
 <a name="id-1.2.13.11.40.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the <em class="parameter"><code>window</code></em>
 has a native window, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2807,9 +2829,8 @@ GdkWindow. This may fail in some situations, returning <a href="https://develope
 <div class="refsect3">
 <a name="id-1.2.13.11.41.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window has a native window, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2970,7 +2991,7 @@ requests the restack, does not guarantee it.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3148,7 +3169,7 @@ but has a fallback implementation for other window managers.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3258,7 +3279,7 @@ but has a fallback implementation for other window managers.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3296,9 +3317,8 @@ on the window decorations.</p>
 <div class="refsect3">
 <a name="id-1.2.13.11.52.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window menu was shown and <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 3.14</p>
+<p class="since">Since: <a class="link" href="api-index-3-14.html#api-index-3.14">3.14</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3380,7 +3400,7 @@ the display just as <a class="link" href="GdkDisplay.html#gdk-display-beep" titl
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3415,9 +3435,8 @@ a configure event will be sent to the toplevel window.</p>
 <div class="refsect3">
 <a name="id-1.2.13.11.55.8"></a><h4>Returns</h4>
 <p> the scale factor</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3425,14 +3444,14 @@ a configure event will be sent to the toplevel window.</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gdk_window_set_opaque_region (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>,
                               <em class="parameter"><code><span class="type">cairo_region_t</span> *region</code></em>);</pre>
-<p>For optimizization purposes, compositing window managers may
+<p>For optimisation purposes, compositing window managers may
 like to not draw obscured regions of windows, or turn off blending
 during for these regions. With RGB windows with no transparency,
 this is just the shape of the window, but with ARGB32 windows, the
 compositor does not know what regions of the window are transparent
 or not.</p>
 <p>This function only works for toplevel windows.</p>
-<p>GTK+ will automatically update this property automatically if
+<p>GTK+ will update this property automatically if
 the <em class="parameter"><code>window</code></em>
  background is opaque, as we know where the opaque regions
 are. If your window background is not opaque, please update this
@@ -3453,13 +3472,93 @@ property in your <a href="http://developer.gnome.org/gtk2/GtkWidget.html#GtkWidg
 </tr>
 <tr>
 <td class="parameter_name"><p>region</p></td>
-<td class="parameter_description"><p>a region</p></td>
+<td class="parameter_description"><p>  a region, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdk-window-create-gl-context"></a><h3>gdk_window_create_gl_context ()</h3>
+<pre class="programlisting"><a class="link" href="GdkGLContext.html" title="GdkGLContext"><span class="returnvalue">GdkGLContext</span></a> *
+gdk_window_create_gl_context (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>,
+                              <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Creates a new <a class="link" href="GdkGLContext.html" title="GdkGLContext"><span class="type">GdkGLContext</span></a> matching the
+framebuffer format to the visual of the <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>. The context
+is disconnected from any particular window or surface.</p>
+<p>If the creation of the <a class="link" href="GdkGLContext.html" title="GdkGLContext"><span class="type">GdkGLContext</span></a> failed, <em class="parameter"><code>error</code></em>
+ will be set.</p>
+<p>Before using the returned <a class="link" href="GdkGLContext.html" title="GdkGLContext"><span class="type">GdkGLContext</span></a>, you will need to
+call <a class="link" href="GdkGLContext.html#gdk-gl-context-make-current" title="gdk_gl_context_make_current ()"><code class="function">gdk_gl_context_make_current()</code></a> or <a class="link" href="GdkGLContext.html#gdk-gl-context-realize" title="gdk_gl_context_realize ()"><code class="function">gdk_gl_context_realize()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.13.11.57.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for an error</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<div class="refsect3">
+<a name="id-1.2.13.11.57.8"></a><h4>Returns</h4>
+<p> the newly created <a class="link" href="GdkGLContext.html" title="GdkGLContext"><span class="type">GdkGLContext</span></a>, or
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on error. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdk-window-mark-paint-from-clip"></a><h3>gdk_window_mark_paint_from_clip ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gdk_window_mark_paint_from_clip (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>,
+                                 <em class="parameter"><code><span class="type">cairo_t</span> *cr</code></em>);</pre>
+<p>If you call this during a paint (e.g. between <a class="link" href="gdk3-Windows.html#gdk-window-begin-paint-region" title="gdk_window_begin_paint_region ()"><code class="function">gdk_window_begin_paint_region()</code></a>
+and <a class="link" href="gdk3-Windows.html#gdk-window-end-paint" title="gdk_window_end_paint ()"><code class="function">gdk_window_end_paint()</code></a> then GDK will mark the current clip region of the
+window as being drawn. This is required when mixing GL rendering via
+<a class="link" href="gdk3-Cairo-Interaction.html#gdk-cairo-draw-from-gl" title="gdk_cairo_draw_from_gl ()"><code class="function">gdk_cairo_draw_from_gl()</code></a> and cairo rendering, as otherwise GDK has no way
+of knowing when something paints over the GL-drawn regions.</p>
+<p>This is typically called automatically by GTK+ and you don't need
+to care about this.</p>
+<div class="refsect3">
+<a name="id-1.2.13.11.58.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cr</p></td>
+<td class="parameter_description"><p>a <span class="type">cairo_t</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3472,7 +3571,7 @@ other factors such as if the window is obscured by other windows,
 but no area outside of this region will be affected by drawing
 primitives.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.57.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.59.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3487,10 +3586,9 @@ primitives.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.57.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.59.6"></a><h4>Returns</h4>
 <p> a <span class="type">cairo_region_t</span>. This must be freed with <code class="function">cairo_region_destroy()</code>
 when you are done.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3503,7 +3601,7 @@ gdk_window_begin_paint_rect (<em class="parameter"><code><a class="link" href="g
 creates a rectangular region for you. See
 <a class="link" href="gdk3-Windows.html#gdk-window-begin-paint-region" title="gdk_window_begin_paint_region ()"><code class="function">gdk_window_begin_paint_region()</code></a> for details.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.58.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.60.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3576,7 +3674,7 @@ the topmost backing store in the stack. One matching call to
 <a class="link" href="gdk3-Windows.html#gdk-window-end-paint" title="gdk_window_end_paint ()"><code class="function">gdk_window_end_paint()</code></a> is required for each call to
 <a class="link" href="gdk3-Windows.html#gdk-window-begin-paint-region" title="gdk_window_begin_paint_region ()"><code class="function">gdk_window_begin_paint_region()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.59.8"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.61.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3603,15 +3701,15 @@ the topmost backing store in the stack. One matching call to
 <a name="gdk-window-end-paint"></a><h3>gdk_window_end_paint ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gdk_window_end_paint (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>);</pre>
-<p>Indicates that the backing store created by the most recent call to
-<a class="link" href="gdk3-Windows.html#gdk-window-begin-paint-region" title="gdk_window_begin_paint_region ()"><code class="function">gdk_window_begin_paint_region()</code></a> should be copied onscreen and
+<p>Indicates that the backing store created by the most recent call
+to <a class="link" href="gdk3-Windows.html#gdk-window-begin-paint-region" title="gdk_window_begin_paint_region ()"><code class="function">gdk_window_begin_paint_region()</code></a> should be copied onscreen and
 deleted, leaving the next-most-recent backing store or no backing
 store at all as the active paint region. See
-<a class="link" href="gdk3-Windows.html#gdk-window-begin-paint-region" title="gdk_window_begin_paint_region ()"><code class="function">gdk_window_begin_paint_region()</code></a> for full details. It is an error to
-call this function without a matching
+<a class="link" href="gdk3-Windows.html#gdk-window-begin-paint-region" title="gdk_window_begin_paint_region ()"><code class="function">gdk_window_begin_paint_region()</code></a> for full details.</p>
+<p>It is an error to call this function without a matching
 <a class="link" href="gdk3-Windows.html#gdk-window-begin-paint-region" title="gdk_window_begin_paint_region ()"><code class="function">gdk_window_begin_paint_region()</code></a> first.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.60.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.62.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3637,7 +3735,7 @@ This does not necessarily take into account if the window is
 obscured by other windows, but no area outside of this region
 is visible.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.61.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.63.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3652,10 +3750,9 @@ is visible.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.61.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.63.6"></a><h4>Returns</h4>
 <p> a <span class="type">cairo_region_t</span>. This must be freed with <code class="function">cairo_region_destroy()</code>
 when you are done.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3675,7 +3772,7 @@ keep track of the dirty region, or you can actually change
  in case you are doing display tricks like showing
 a child in multiple places.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.62.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.64.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3696,7 +3793,7 @@ a child in multiple places.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3712,8 +3809,9 @@ useful if you are keeping an offscreen copy of some region
 and want to keep it up to date. You can also modify the
 invalidated region in case you’re doing some effect where
 e.g. a child widget appears in multiple places.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.2.13.11.63.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.65.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3734,7 +3832,7 @@ e.g. a child widget appears in multiple places.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3747,7 +3845,7 @@ gdk_window_invalidate_rect (<em class="parameter"><code><a class="link" href="gd
 invalidates a rectangular region. See
 <a class="link" href="gdk3-Windows.html#gdk-window-invalidate-region" title="gdk_window_invalidate_region ()"><code class="function">gdk_window_invalidate_region()</code></a> for details.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.64.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.66.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3803,7 +3901,7 @@ If <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#
 unaffected. See gdk_window_invalidate_maybe_recurse if you need
 fine grained control over which children are invalidated.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.65.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.67.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3840,7 +3938,7 @@ fine grained control over which children are invalidated.</p>
 It gets called for each child of the window to determine whether to
 recursively invalidate it or now.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.66.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.68.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3862,10 +3960,9 @@ recursively invalidate it or now.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.66.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.68.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to invalidate <em class="parameter"><code>window</code></em>
 recursively</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3897,7 +3994,7 @@ Only children for which <em class="parameter"><code>child_func</code></em>
  returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> will have the area
 invalidated.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.67.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.69.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3946,7 +4043,7 @@ from <em class="parameter"><code>window</code></em>
 <a class="link" href="gdk3-Windows.html#gdk-window-get-update-area" title="gdk_window_get_update_area ()"><code class="function">gdk_window_get_update_area()</code></a> returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. You are responsible for
 calling <code class="function">cairo_region_destroy()</code> on the returned region if it’s non-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.68.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.70.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3961,10 +4058,9 @@ calling <code class="function">cairo_region_destroy()</code> on the returned reg
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.68.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.70.6"></a><h4>Returns</h4>
 <p> the update area for <em class="parameter"><code>window</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3978,7 +4074,7 @@ events.  The window will begin receiving expose events again when
 has been called more than once, <a class="link" href="gdk3-Windows.html#gdk-window-thaw-updates" title="gdk_window_thaw_updates ()"><code class="function">gdk_window_thaw_updates()</code></a> must be called
 an equal number of times to begin processing exposes.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.69.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.71.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4000,7 +4096,7 @@ an equal number of times to begin processing exposes.</p>
 gdk_window_thaw_updates (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>);</pre>
 <p>Thaws a window frozen with <a class="link" href="gdk3-Windows.html#gdk-window-freeze-updates" title="gdk_window_freeze_updates ()"><code class="function">gdk_window_freeze_updates()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.70.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.72.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4039,7 +4135,7 @@ to be delivered immediately and synchronously (vs. the usual
 case, where GDK delivers them in an idle handler). Occasionally
 this is useful to produce nicer scrolling behavior, for example.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.72.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.74.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4084,7 +4180,7 @@ usually more useful than calling <a class="link" href="gdk3-Windows.html#gdk-win
 yourself, though you might want to use this function to enable
 updates sometime after application startup time.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.73.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.75.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4111,7 +4207,7 @@ gdk_window_enable_synchronized_configure
 </div>
 <p>Does nothing, present only for compatiblity.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.74.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.76.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4125,7 +4221,7 @@ gdk_window_enable_synchronized_configure
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4138,7 +4234,7 @@ gdk_window_configure_finished (<em class="parameter"><code><a class="link" href=
 </div>
 <p>Does nothing, present only for compatiblity.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.75.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.77.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4152,7 +4248,7 @@ gdk_window_configure_finished (<em class="parameter"><code><a class="link" href=
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4163,7 +4259,7 @@ gdk_window_get_frame_clock (<em class="parameter"><code><a class="link" href="gd
 never changes unless the window is reparented to a new toplevel
 window.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.76.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.78.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4178,11 +4274,11 @@ window.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.76.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.78.6"></a><h4>Returns</h4>
 <p> the frame clock. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4198,7 +4294,7 @@ this function for that. If GTK+ receives an event for a <a class="link" href="gd
 and the user data for the window is non-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, GTK+ will assume the
 user data is a <a href="http://developer.gnome.org/gtk2/GtkWidget.html"><span class="type">GtkWidget</span></a>, and forward the event to that widget.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.77.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.79.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4234,7 +4330,7 @@ can’t see the override redirect window at all.</p>
 windows, such as popup menus. <a href="http://developer.gnome.org/gtk2/GtkMenu.html"><span class="type">GtkMenu</span></a> uses an override redirect
 window in its implementation, for example.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.78.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.80.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4268,7 +4364,7 @@ window doesn’t want to receive input focus.</p>
 <p>On X, it is the responsibility of the window manager to interpret this
 hint. ICCCM-compliant window manager usually respect it.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.79.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.81.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4289,7 +4385,7 @@ hint. ICCCM-compliant window manager usually respect it.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4299,7 +4395,7 @@ gdk_window_get_accept_focus (<em class="parameter"><code><a class="link" href="g
 <p>Determines whether or not the desktop environment shuld be hinted that
 the window does not want to receive input focus.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.80.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.82.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4314,11 +4410,10 @@ the window does not want to receive input focus.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.80.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.82.6"></a><h4>Returns</h4>
 <p> whether or not the window should receive input focus.</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4335,7 +4430,7 @@ interactively (such as popups from network activity).</p>
 this hint. Window managers following the freedesktop.org window
 manager extension specification should respect it.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.81.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.83.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4356,7 +4451,7 @@ manager extension specification should respect it.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4366,7 +4461,7 @@ gdk_window_get_focus_on_map (<em class="parameter"><code><a class="link" href="g
 <p>Determines whether or not the desktop environment should be hinted that the
 window does not want to receive input focus when it is mapped.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.82.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.84.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4381,12 +4476,11 @@ window does not want to receive input focus when it is mapped.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.82.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.84.6"></a><h4>Returns</h4>
 <p> whether or not the window wants to receive input focus when
 it is mapped.</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4406,8 +4500,9 @@ instead of events for a specific window.</p>
 <code class="function">XGetEventData()</code> has been already called on the event, and
 <code class="function">XFreeEventData()</code> must not be called within <em class="parameter"><code>function</code></em>
 .</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.2.13.11.83.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.85.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4442,8 +4537,9 @@ gdk_window_remove_filter (<em class="parameter"><code><a class="link" href="gdk3
                           <em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkFilterFunc" title="GdkFilterFunc ()"><span class="type">GdkFilterFunc</span></a> function</code></em>,
                           <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
 <p>Remove a filter previously added with <a class="link" href="gdk3-Windows.html#gdk-window-add-filter" title="gdk_window_add_filter ()"><code class="function">gdk_window_add_filter()</code></a>.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.2.13.11.84.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.86.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4487,7 +4583,7 @@ event to a GDK event and store the result in <em class="parameter"><code>event</
 translation. If the filter translates the event and processing should
 continue, it should return <a class="link" href="gdk3-Windows.html#GDK-FILTER-TRANSLATE:CAPS"><code class="literal">GDK_FILTER_TRANSLATE</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.85.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.87.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4514,9 +4610,8 @@ continue, it should return <a class="link" href="gdk3-Windows.html#GDK-FILTER-TR
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.85.7"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.87.7"></a><h4>Returns</h4>
 <p> a <a class="link" href="gdk3-Windows.html#GdkFilterReturn" title="enum GdkFilterReturn"><span class="type">GdkFilterReturn</span></a> value.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4545,7 +4640,7 @@ buggy. On servers without the shape extension, this function
 will do nothing.</p>
 <p>This function works on both toplevel and child windows.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.86.8"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.88.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4595,7 +4690,7 @@ itself. Contrast with <a class="link" href="gdk3-Windows.html#gdk-window-merge-c
 the shape mask of <em class="parameter"><code>window</code></em>
  in the masks to be merged.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.87.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.89.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4627,7 +4722,7 @@ because it includes <em class="parameter"><code>window</code></em>
 ’s shape mask in the set of shapes to
 be merged.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.88.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.90.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4665,7 +4760,7 @@ shape extension.</p>
 <p>On the Win32 platform, this functionality is not present and the
 function does nothing.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.89.8"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.91.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4700,7 +4795,7 @@ coordinates</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4716,7 +4811,7 @@ itself. Contrast with <a class="link" href="gdk3-Windows.html#gdk-window-merge-c
 the input shape mask of <em class="parameter"><code>window</code></em>
  in the masks to be merged.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.90.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.92.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4730,7 +4825,7 @@ the input shape mask of <em class="parameter"><code>window</code></em>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4749,7 +4844,7 @@ because it includes <em class="parameter"><code>window</code></em>
 ’s input shape mask in the set of
 shapes to be merged.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.91.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.93.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4763,7 +4858,7 @@ shapes to be merged.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4771,12 +4866,17 @@ shapes to be merged.</p>
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gdk_window_set_static_gravities (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>,
                                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_static</code></em>);</pre>
-<p>Set the bit gravity of the given window to static, and flag it so
-all children get static subwindow gravity. This is used if you are
-implementing scary features that involve deep knowledge of the
-windowing system. Don’t worry about it unless you have to.</p>
+<div class="warning">
+<p><code class="literal">gdk_window_set_static_gravities</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>static gravities haven't worked on anything but X11
+  for a long time.</p>
+</div>
+<p>Used to set the bit gravity of the given window to static, and flag
+it so all children get static subwindow gravity. This is used if you
+are implementing scary features that involve deep knowledge of the
+windowing system. Don’t worry about it.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.92.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.94.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4798,9 +4898,8 @@ windowing system. Don’t worry about it unless you have to.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.92.6"></a><h4>Returns</h4>
-<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the server supports static gravity</p>
-<p></p>
+<a name="id-1.2.13.11.94.7"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a></p>
 </div>
 </div>
 <hr>
@@ -4818,7 +4917,7 @@ If you haven’t explicitly set the icon name for the window
 user-readable strings in GDK/GTK+). <em class="parameter"><code>title</code></em>
  may not be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.93.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.95.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4852,13 +4951,14 @@ gdk_window_set_background (<em class="parameter"><code><a class="link" href="gdk
 <p>Use <a class="link" href="gdk3-Windows.html#gdk-window-set-background-rgba" title="gdk_window_set_background_rgba ()"><code class="function">gdk_window_set_background_rgba()</code></a> instead.</p>
 </div>
 <p>Sets the background color of <em class="parameter"><code>window</code></em>
-. (However, when using GTK+,
-set the background of a widget with <a href="http://developer.gnome.org/gtk2/GtkWidget.html#gtk-widget-modify-bg"><code class="function">gtk_widget_modify_bg()</code></a> - if
-you’re an application - or <a href="http://developer.gnome.org/gtk2/GtkStyle.html#gtk-style-set-background"><code class="function">gtk_style_set_background()</code></a> - if you're
-implementing a custom widget.)</p>
+.</p>
+<p>However, when using GTK+, influence the background of a widget
+using a style class or CSS — if you’re an application — or with
+<a href="http://developer.gnome.org/gtk2/GtkStyleContext.html#gtk-style-context-set-background"><code class="function">gtk_style_context_set_background()</code></a> — if you're implementing a
+custom widget.</p>
 <p>See also <a class="link" href="gdk3-Windows.html#gdk-window-set-background-pattern" title="gdk_window_set_background_pattern ()"><code class="function">gdk_window_set_background_pattern()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.94.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.96.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4890,7 +4990,7 @@ gdk_window_set_background_rgba (<em class="parameter"><code><a class="link" href
 .</p>
 <p>See also <a class="link" href="gdk3-Windows.html#gdk-window-set-background-pattern" title="gdk_window_set_background_pattern ()"><code class="function">gdk_window_set_background_pattern()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.95.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.97.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4925,7 +5025,7 @@ background from its parent window.</p>
 <p>The windowing system will normally fill a window with its background
 when the window is obscured then exposed.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.96.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.98.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4958,7 +5058,7 @@ gdk_window_get_background_pattern (<em class="parameter"><code><a class="link" h
 does not have its own background and reuses the parent's, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is
 returned and you’ll have to query it yourself.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.97.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.99.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4973,12 +5073,12 @@ returned and you’ll have to query it yourself.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.97.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.99.6"></a><h4>Returns</h4>
 <p> The pattern to use for the
 background or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to use the parent’s background. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4986,15 +5086,19 @@ background or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-M
 <pre class="programlisting"><span class="returnvalue">void</span>
 gdk_window_set_cursor (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>,
                        <em class="parameter"><code><a class="link" href="gdk3-Cursors.html#GdkCursor"><span class="type">GdkCursor</span></a> *cursor</code></em>);</pre>
-<p>Sets the default mouse pointer for a <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>. Use <a class="link" href="gdk3-Cursors.html#gdk-cursor-new-for-display" title="gdk_cursor_new_for_display ()"><code class="function">gdk_cursor_new_for_display()</code></a>
-or <a class="link" href="gdk3-Cursors.html#gdk-cursor-new-from-pixbuf" title="gdk_cursor_new_from_pixbuf ()"><code class="function">gdk_cursor_new_from_pixbuf()</code></a> to create the cursor. To make the cursor
-invisible, use <a class="link" href="gdk3-Cursors.html#GDK-BLANK-CURSOR:CAPS"><code class="literal">GDK_BLANK_CURSOR</code></a>. Passing <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for the <em class="parameter"><code>cursor</code></em>
- argument
-to <a class="link" href="gdk3-Windows.html#gdk-window-set-cursor" title="gdk_window_set_cursor ()"><code class="function">gdk_window_set_cursor()</code></a> means that <em class="parameter"><code>window</code></em>
- will use the cursor of its
-parent window. Most windows should use this default.</p>
+<p>Sets the default mouse pointer for a <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>.</p>
+<p>Note that <em class="parameter"><code>cursor</code></em>
+ must be for the same display as <em class="parameter"><code>window</code></em>
+.</p>
+<p>Use <a class="link" href="gdk3-Cursors.html#gdk-cursor-new-for-display" title="gdk_cursor_new_for_display ()"><code class="function">gdk_cursor_new_for_display()</code></a> or <a class="link" href="gdk3-Cursors.html#gdk-cursor-new-from-pixbuf" title="gdk_cursor_new_from_pixbuf ()"><code class="function">gdk_cursor_new_from_pixbuf()</code></a> to
+create the cursor. To make the cursor invisible, use <a class="link" href="gdk3-Cursors.html#GDK-BLANK-CURSOR:CAPS"><code class="literal">GDK_BLANK_CURSOR</code></a>.
+Passing <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for the <em class="parameter"><code>cursor</code></em>
+ argument to <a class="link" href="gdk3-Windows.html#gdk-window-set-cursor" title="gdk_window_set_cursor ()"><code class="function">gdk_window_set_cursor()</code></a> means
+that <em class="parameter"><code>window</code></em>
+ will use the cursor of its parent window. Most windows
+should use this default.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.98.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.100.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5026,7 +5130,7 @@ specified <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">
 there is no custom cursor set on the specified window, and it is
 using the cursor for its parent window.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.99.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.101.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5041,14 +5145,14 @@ using the cursor for its parent window.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.99.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.101.6"></a><h4>Returns</h4>
 <p> a <a class="link" href="gdk3-Cursors.html#GdkCursor"><span class="type">GdkCursor</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. The
 returned object is owned by the <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> and should not be
 unreferenced directly. Use <a class="link" href="gdk3-Windows.html#gdk-window-set-cursor" title="gdk_window_set_cursor ()"><code class="function">gdk_window_set_cursor()</code></a> to unset the
 cursor of the window. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5061,7 +5165,7 @@ gdk_window_get_user_data (<em class="parameter"><code><a class="link" href="gdk3
 that <em class="parameter"><code>window</code></em>
  belongs to. See <a class="link" href="gdk3-Windows.html#gdk-window-set-user-data" title="gdk_window_set_user_data ()"><code class="function">gdk_window_set_user_data()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.100.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.102.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5114,7 +5218,7 @@ the X server and because these functions support the full 32-bit
 coordinate space, whereas <a class="link" href="gdk3-Windows.html#gdk-window-get-geometry" title="gdk_window_get_geometry ()"><code class="function">gdk_window_get_geometry()</code></a> is restricted to
 the 16-bit coordinates of X11.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.101.8"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.103.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5182,7 +5286,7 @@ constraints for programmatic resizes, you should generally
 call <a class="link" href="gdk3-Windows.html#gdk-window-constrain-size" title="gdk_window_constrain_size ()"><code class="function">gdk_window_constrain_size()</code></a> yourself to determine
 appropriate sizes.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.102.8"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.104.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5221,7 +5325,7 @@ gdk_window_get_width (<em class="parameter"><code><a class="link" href="gdk3-Win
 most-recently-processed configure event, rather than the current
 size on the X server.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.103.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.105.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5236,12 +5340,11 @@ size on the X server.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.103.7"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.105.7"></a><h4>Returns</h4>
 <p> The width of <em class="parameter"><code>window</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5254,7 +5357,7 @@ gdk_window_get_height (<em class="parameter"><code><a class="link" href="gdk3-Wi
 most-recently-processed configure event, rather than the current
 size on the X server.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.104.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.106.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5269,12 +5372,11 @@ size on the X server.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.104.7"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.106.7"></a><h4>Returns</h4>
 <p> The height of <em class="parameter"><code>window</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5290,7 +5392,7 @@ can scale the icon  but setting several size icons can give better
 image quality since the window manager may only need to scale the
 icon by a small amount or not at all.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.105.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.107.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5325,7 +5427,7 @@ way.</p>
 <p>You should only use this on windows for which you have
 previously called <a class="link" href="gdk3-Windows.html#gdk-window-set-transient-for" title="gdk_window_set_transient_for ()"><code class="function">gdk_window_set_transient_for()</code></a></p>
 <div class="refsect3">
-<a name="id-1.2.13.11.106.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.108.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5356,7 +5458,7 @@ gdk_window_get_modal_hint (<em class="parameter"><code><a class="link" href="gdk
 
 has modal behaviour.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.107.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.109.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5371,11 +5473,10 @@ has modal behaviour.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.107.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.109.6"></a><h4>Returns</h4>
 <p> whether or not the window has the modal hint set.</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5389,7 +5490,7 @@ can use this information when determining the decoration and behaviour
 of the window.</p>
 <p>The hint must be set before the window is mapped.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.108.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.110.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5418,7 +5519,7 @@ of the window.</p>
 gdk_window_get_type_hint (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>);</pre>
 <p>This function returns the type hint set for a window.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.109.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.111.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5433,12 +5534,11 @@ gdk_window_get_type_hint (<em class="parameter"><code><a class="link" href="gdk3
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.109.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.111.6"></a><h4>Returns</h4>
 <p> The type hint set for <em class="parameter"><code>window</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5458,7 +5558,7 @@ don’t feel like windows are snapping against random invisible edges.</p>
 function should only be used by applications which do not use GTK+
 to create toplevel windows.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.110.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.112.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5494,7 +5594,7 @@ to create toplevel windows.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5509,7 +5609,7 @@ function should not be called in addition,
 instead you should allow the window to be treated according to
 standard policy for its semantic type.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.111.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.113.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5530,7 +5630,7 @@ standard policy for its semantic type.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5547,7 +5647,7 @@ not be called in addition, instead you should
 allow the window to be treated according to standard policy for
 its semantic type.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.112.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.114.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5568,7 +5668,7 @@ its semantic type.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5579,7 +5679,7 @@ gdk_window_set_urgency_hint (<em class="parameter"><code><a class="link" href="g
 <p>Toggles whether a window needs the user's
 urgent attention.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.113.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.115.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5600,7 +5700,7 @@ urgent attention.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5616,7 +5716,7 @@ current window position, regardless of which events have been
 received or processed.</p>
 <p>The position coordinates are relative to the window’s parent window.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.114.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.116.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5653,7 +5753,7 @@ gdk_window_get_root_origin (<em class="parameter"><code><a class="link" href="gd
 <p>Obtains the top-left corner of the window manager frame in root
 window coordinates.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.115.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.117.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5691,7 +5791,7 @@ titlebar/borders if any. The frame position is given in root window
 coordinates. To get the position of the window itself (rather than
 the frame) in root window coordinates, use <a class="link" href="gdk3-Windows.html#gdk-window-get-origin" title="gdk_window_get_origin ()"><code class="function">gdk_window_get_origin()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.116.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.118.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5725,7 +5825,7 @@ gdk_window_get_origin (<em class="parameter"><code><a class="link" href="gdk3-Wi
 <a class="link" href="gdk3-Windows.html#gdk-window-get-geometry" title="gdk_window_get_geometry ()"><code class="function">gdk_window_get_geometry()</code></a> which return the position of a window
 relative to its parent window.)</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.117.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.119.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5752,9 +5852,8 @@ relative to its parent window.)</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.117.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.119.6"></a><h4>Returns</h4>
 <p> not meaningful, ignore</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -5768,10 +5867,10 @@ gdk_window_get_root_coords (<em class="parameter"><code><a class="link" href="gd
                             <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *root_y</code></em>);</pre>
 <p>Obtains the position of a window position in root
 window coordinates. This is similar to
-<a class="link" href="gdk3-Windows.html#gdk-window-get-origin" title="gdk_window_get_origin ()"><code class="function">gdk_window_get_origin()</code></a> but allows you go pass
+<a class="link" href="gdk3-Windows.html#gdk-window-get-origin" title="gdk_window_get_origin ()"><code class="function">gdk_window_get_origin()</code></a> but allows you to pass
 in any position in the window, not just the origin.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.118.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.120.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5807,7 +5906,7 @@ in any position in the window, not just the origin.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5826,7 +5925,7 @@ The position is given in coordinates relative to the upper left
 corner of <em class="parameter"><code>window</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.119.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.121.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5861,7 +5960,7 @@ modifier mask. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.119.7"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.121.7"></a><h4>Returns</h4>
 <p> the window containing the
 pointer (as with <a class="link" href="gdk3-Windows.html#gdk-window-at-pointer" title="gdk_window_at_pointer ()"><code class="function">gdk_window_at_pointer()</code></a>), or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the window
 containing the pointer isn’t known to GDK. </p>
@@ -5883,7 +5982,7 @@ corner of <em class="parameter"><code>window</code></em>
 .</p>
 <p>Use <a class="link" href="gdk3-Windows.html#gdk-window-get-device-position-double" title="gdk_window_get_device_position_double ()"><code class="function">gdk_window_get_device_position_double()</code></a> if you need subpixel precision.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.120.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.122.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5922,13 +6021,13 @@ corner of <em class="parameter"><code>window</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.120.7"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.122.7"></a><h4>Returns</h4>
 <p> The window underneath <em class="parameter"><code>device</code></em>
 (as with <a class="link" href="GdkDevice.html#gdk-device-get-window-at-position" title="gdk_device_get_window_at_position ()"><code class="function">gdk_device_get_window_at_position()</code></a>), or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the
 window is not known to GDK. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5944,7 +6043,7 @@ The position is given in coordinates relative to the upper left
 corner of <em class="parameter"><code>window</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.121.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.123.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -5983,13 +6082,13 @@ corner of <em class="parameter"><code>window</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.121.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.123.6"></a><h4>Returns</h4>
 <p> The window underneath <em class="parameter"><code>device</code></em>
 (as with <a class="link" href="GdkDevice.html#gdk-device-get-window-at-position" title="gdk_device_get_window_at_position ()"><code class="function">gdk_device_get_window_at_position()</code></a>), or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the
 window is not known to GDK. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6008,7 +6107,7 @@ writing generic code that walks up a window hierarchy, because
 <a class="link" href="gdk3-Windows.html#gdk-window-get-parent" title="gdk_window_get_parent ()"><code class="function">gdk_window_get_parent()</code></a> will most likely not do what you expect if
 there are offscreen windows in the hierarchy.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.122.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.124.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6023,7 +6122,7 @@ there are offscreen windows in the hierarchy.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.122.7"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.124.7"></a><h4>Returns</h4>
 <p> parent of <em class="parameter"><code>window</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -6044,7 +6143,7 @@ you want to get to a window’s toplevel as seen on screen, because
 <a class="link" href="gdk3-Windows.html#gdk-window-get-toplevel" title="gdk_window_get_toplevel ()"><code class="function">gdk_window_get_toplevel()</code></a> will most likely not do what you expect
 if there are offscreen windows in the hierarchy.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.123.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.125.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6059,7 +6158,7 @@ if there are offscreen windows in the hierarchy.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.123.8"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.125.8"></a><h4>Returns</h4>
 <p> the toplevel window containing <em class="parameter"><code>window</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -6078,7 +6177,7 @@ it only returns windows an application created itself.</p>
 <p>The returned list must be freed, but the elements in the
 list need not be.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.124.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.126.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6093,7 +6192,7 @@ list need not be.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.124.7"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.126.7"></a><h4>Returns</h4>
 <p>    list of child windows inside <em class="parameter"><code>window</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GdkWindow]</span></p>
@@ -6115,7 +6214,7 @@ list need not be.</p>
 <p>The list is returned in (relative) stacking order, i.e. the
 lowest window is first.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.125.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.127.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6137,12 +6236,12 @@ lowest window is first.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.125.8"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.127.8"></a><h4>Returns</h4>
 <p>    list of child windows inside <em class="parameter"><code>window</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GdkWindow]</span></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6152,7 +6251,7 @@ gdk_window_peek_children (<em class="parameter"><code><a class="link" href="gdk3
 <p>Like <a class="link" href="gdk3-Windows.html#gdk-window-get-children" title="gdk_window_get_children ()"><code class="function">gdk_window_get_children()</code></a>, but does not copy the list of
 children, so the list does not need to be freed.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.126.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.128.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6167,7 +6266,7 @@ children, so the list does not need to be freed.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.126.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.128.6"></a><h4>Returns</h4>
 <p>    a reference to the list of child windows in <em class="parameter"><code>window</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GdkWindow]</span></p>
@@ -6182,7 +6281,7 @@ gdk_window_get_events (<em class="parameter"><code><a class="link" href="gdk3-Wi
  for all master input devices. See
 <a class="link" href="gdk3-Windows.html#gdk-window-set-events" title="gdk_window_set_events ()"><code class="function">gdk_window_set_events()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.127.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.129.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6197,10 +6296,9 @@ gdk_window_get_events (<em class="parameter"><code><a class="link" href="gdk3-Wi
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.127.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.129.6"></a><h4>Returns</h4>
 <p> event mask for <em class="parameter"><code>window</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -6214,8 +6312,9 @@ for that window from all master input devices. For example, an event mask
 including <a class="link" href="gdk3-Events.html#GDK-BUTTON-PRESS-MASK:CAPS"><span class="type">GDK_BUTTON_PRESS_MASK</span></a> means the window should report button
 press events. The event mask is the bitwise OR of values from the
 <a class="link" href="gdk3-Events.html#GdkEventMask" title="enum GdkEventMask"><span class="type">GdkEventMask</span></a> enumeration.</p>
+<p>See the <a href="http://developer.gnome.org/gtk2/chap-input-handling.html#event-masks">input handling overview</a> for details.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.128.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.130.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6255,7 +6354,7 @@ will not update the icon title.</p>
  unsets the icon title; further calls to
 <a class="link" href="gdk3-Windows.html#gdk-window-set-title" title="gdk_window_set_title ()"><code class="function">gdk_window_set_title()</code></a> will again update the icon title as well.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.129.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.131.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6296,7 +6395,7 @@ keep <em class="parameter"><code>window</code></em>
 <p>See <a href="http://developer.gnome.org/gtk2/GtkWindow.html#gtk-window-set-transient-for"><code class="function">gtk_window_set_transient_for()</code></a> if you’re using <a href="http://developer.gnome.org/gtk2/GtkWindow.html"><span class="type">GtkWindow</span></a> or
 <a href="http://developer.gnome.org/gtk2/GtkDialog.html"><span class="type">GtkDialog</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.130.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.132.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6336,7 +6435,7 @@ should set the role on those windows. It doesn’t matter what string
 you use for the role, as long as you have a different role for each
 non-interchangeable kind of window.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.131.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.133.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6367,7 +6466,7 @@ gdk_window_set_startup_id (<em class="parameter"><code><a class="link" href="gdk
 <p>When using GTK+, typically you should use <a href="http://developer.gnome.org/gtk2/GtkWindow.html#gtk-window-set-startup-id"><code class="function">gtk_window_set_startup_id()</code></a>
 instead of this low-level function.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.132.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.134.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6388,7 +6487,7 @@ instead of this low-level function.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6407,7 +6506,7 @@ allow users to minimize/unminimize all windows belonging to an
 application at once. You should only set a non-default group window
 if your application pretends to be multiple applications.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.133.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.135.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6437,7 +6536,7 @@ gdk_window_get_group (<em class="parameter"><code><a class="link" href="gdk3-Win
 <p>Returns the group leader window for <em class="parameter"><code>window</code></em>
 . See <a class="link" href="gdk3-Windows.html#gdk-window-set-group" title="gdk_window_set_group ()"><code class="function">gdk_window_set_group()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.134.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.136.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6452,12 +6551,12 @@ gdk_window_get_group (<em class="parameter"><code><a class="link" href="gdk3-Win
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.134.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.136.6"></a><h4>Returns</h4>
 <p> the group leader window for <em class="parameter"><code>window</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6479,7 +6578,7 @@ which decorations should be turned on.</p>
 <p>Most window managers honor a decorations hint of 0 to disable all decorations,
 but very few honor all possible combinations of bits.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.135.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.137.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6510,7 +6609,7 @@ gdk_window_get_decorations (<em class="parameter"><code><a class="link" href="gd
 <p>Returns the decorations set on the GdkWindow with
 <a class="link" href="gdk3-Windows.html#gdk-window-set-decorations" title="gdk_window_set_decorations ()"><code class="function">gdk_window_set_decorations()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.136.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.138.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6532,9 +6631,8 @@ gdk_window_get_decorations (<em class="parameter"><code><a class="link" href="gd
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.136.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.138.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window has decorations set, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -6556,7 +6654,7 @@ then the other bits indicate which functions to disable; if
 it doesn’t include <a class="link" href="gdk3-Windows.html#GDK-FUNC-ALL:CAPS"><span class="type">GDK_FUNC_ALL</span></a>, it indicates which functions to
 enable.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.137.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.139.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6587,7 +6685,7 @@ gdk_get_default_root_window (<em class="parameter"><code><span class="type">void
 <p>Obtains the root window (parent all other windows are inside)
 for the default display and screen.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.138.5"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.140.5"></a><h4>Returns</h4>
 <p> the default root window. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -6600,7 +6698,7 @@ gdk_window_get_support_multidevice (<em class="parameter"><code><a class="link" 
 <p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window is aware of the existence of multiple
 devices.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.139.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.141.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6615,11 +6713,10 @@ devices.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.139.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.141.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window handles multidevice features.</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6632,7 +6729,7 @@ gdk_window_set_support_multidevice (<em class="parameter"><code><a class="link" 
 <p>Multidevice aware windows will need to handle properly multiple,
 per device enter/leave events, device grabs and grab ownerships.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.140.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.142.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6654,7 +6751,7 @@ per device enter/leave events, device grabs and grab ownerships.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6668,7 +6765,7 @@ specified <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">
 there is no custom cursor set on the specified window, and it is
 using the cursor for its parent window.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.141.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.143.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6690,14 +6787,14 @@ using the cursor for its parent window.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.141.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.143.6"></a><h4>Returns</h4>
 <p> a <a class="link" href="gdk3-Cursors.html#GdkCursor"><span class="type">GdkCursor</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. The
 returned object is owned by the <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> and should not be
 unreferenced directly. Use <a class="link" href="gdk3-Windows.html#gdk-window-set-cursor" title="gdk_window_set_cursor ()"><code class="function">gdk_window_set_cursor()</code></a> to unset the
 cursor of the window. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6716,7 +6813,7 @@ the cursor. To make the cursor invisible, use <a class="link" href="gdk3-Cursors
  will use the cursor of its parent window. Most windows should
 use this default.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.142.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.144.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6742,7 +6839,7 @@ use this default.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6753,7 +6850,7 @@ gdk_window_get_device_events (<em class="parameter"><code><a class="link" href="
 <p>Returns the event mask for <em class="parameter"><code>window</code></em>
  corresponding to an specific device.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.143.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.145.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6775,12 +6872,11 @@ gdk_window_get_device_events (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.143.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.145.6"></a><h4>Returns</h4>
 <p> device event mask for <em class="parameter"><code>window</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6795,8 +6891,9 @@ attached to any visible pointer) to <em class="parameter"><code>window</code></e
 including <a class="link" href="gdk3-Events.html#GDK-BUTTON-PRESS-MASK:CAPS"><span class="type">GDK_BUTTON_PRESS_MASK</span></a> means the window should report button
 press events. The event mask is the bitwise OR of values from the
 <a class="link" href="gdk3-Events.html#GdkEventMask" title="enum GdkEventMask"><span class="type">GdkEventMask</span></a> enumeration.</p>
+<p>See the <a href="http://developer.gnome.org/gtk2/chap-input-handling.html#event-masks">input handling overview</a> for details.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.144.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.146.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6823,7 +6920,7 @@ press events. The event mask is the bitwise OR of values from the
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6836,7 +6933,7 @@ gdk_window_get_source_events (<em class="parameter"><code><a class="link" href="
 by <em class="parameter"><code>source</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.145.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.147.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6858,10 +6955,9 @@ by <em class="parameter"><code>source</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.145.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.147.6"></a><h4>Returns</h4>
 <p> source event mask for <em class="parameter"><code>window</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -6877,7 +6973,7 @@ visible pointer) that has the source defined as <em class="parameter"><code>sour
 mask will be applied both to currently existing, newly added devices
 after this call, and devices being attached/detached.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.146.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.148.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6904,7 +7000,7 @@ after this call, and devices being attached/detached.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6913,7 +7009,7 @@ after this call, and devices being attached/detached.</p>
 gdk_window_get_event_compression (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>);</pre>
 <p>Get the current event compression setting for this window.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.147.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.149.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6928,11 +7024,10 @@ gdk_window_get_event_compression (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.147.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.149.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if motion events will be compressed</p>
-<p></p>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6947,7 +7042,7 @@ event will be delivered.</p>
 motion events and will benefit from turning off event compression.</p>
 <p>By default, event compression is enabled.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.148.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.150.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6968,7 +7063,7 @@ motion events and will benefit from turning off event compression.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6979,7 +7074,7 @@ gdk_offscreen_window_get_surface (<em class="parameter"><code><a class="link" hr
 If you need to keep this around over window resizes, you need to
 add a reference to it.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.149.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.151.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6994,7 +7089,7 @@ add a reference to it.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.149.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.151.6"></a><h4>Returns</h4>
 <p> The offscreen surface, or
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not offscreen. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -7016,7 +7111,7 @@ signal on the <em class="parameter"><code>embedder</code></em>
 <a class="link" href="gdk3-Windows.html#GdkWindow-from-embedder" title="The “from-embedder” signal"><span class="type">“from-embedder”</span></a> signals on <em class="parameter"><code>window</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.150.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.152.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -7038,7 +7133,7 @@ gets embedded in</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7048,7 +7143,7 @@ gdk_offscreen_window_get_embedder (<em class="parameter"><code><a class="link" h
 <p>Gets the window that <em class="parameter"><code>window</code></em>
  is embedded in.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.151.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.153.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -7063,13 +7158,13 @@ gdk_offscreen_window_get_embedder (<em class="parameter"><code><a class="link" h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.151.6"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.153.6"></a><h4>Returns</h4>
 <p> the embedding <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>, or
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>window</code></em>
 is not an mbedded offscreen window. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7080,7 +7175,7 @@ gdk_window_geometry_changed (<em class="parameter"><code><a class="link" href="g
 offscreen window has changed. This is necessary for GDK to keep
 track of which offscreen window the pointer is in.</p>
 <div class="refsect3">
-<a name="id-1.2.13.11.152.5"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.154.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -7094,7 +7189,7 @@ track of which offscreen window the pointer is in.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7119,7 +7214,7 @@ the coordinates.</p>
 walks down a window hierarchy.</p>
 <p>See also: <a class="link" href="gdk3-Windows.html#gdk-window-coords-to-parent" title="gdk_window_coords_to_parent ()"><code class="function">gdk_window_coords_to_parent()</code></a></p>
 <div class="refsect3">
-<a name="id-1.2.13.11.153.8"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.155.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -7155,7 +7250,7 @@ walks down a window hierarchy.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7180,7 +7275,7 @@ the coordinates.</p>
 walks up a window hierarchy.</p>
 <p>See also: <a class="link" href="gdk3-Windows.html#gdk-window-coords-from-parent" title="gdk_window_coords_from_parent ()"><code class="function">gdk_window_coords_from_parent()</code></a></p>
 <div class="refsect3">
-<a name="id-1.2.13.11.154.8"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.156.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -7218,7 +7313,7 @@ in parent’s coordinate system, or <a href="https://developer.gnome.org/glib/un
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7231,7 +7326,7 @@ gdk_window_get_effective_parent (<em class="parameter"><code><a class="link" hre
 window’s embedder for offscreen windows.</p>
 <p>See also: <a class="link" href="gdk3-Windows.html#gdk-offscreen-window-get-embedder" title="gdk_offscreen_window_get_embedder ()"><code class="function">gdk_offscreen_window_get_embedder()</code></a></p>
 <div class="refsect3">
-<a name="id-1.2.13.11.155.6"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.157.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -7246,12 +7341,12 @@ window’s embedder for offscreen windows.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.155.7"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.157.7"></a><h4>Returns</h4>
 <p> effective parent of <em class="parameter"><code>window</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7264,7 +7359,7 @@ gdk_window_get_effective_toplevel (<em class="parameter"><code><a class="link" h
 embedder as its parent, using <a class="link" href="gdk3-Windows.html#gdk-window-get-effective-parent" title="gdk_window_get_effective_parent ()"><code class="function">gdk_window_get_effective_parent()</code></a>.</p>
 <p>See also: <a class="link" href="gdk3-Windows.html#gdk-offscreen-window-get-embedder" title="gdk_offscreen_window_get_embedder ()"><code class="function">gdk_offscreen_window_get_embedder()</code></a></p>
 <div class="refsect3">
-<a name="id-1.2.13.11.156.7"></a><h4>Parameters</h4>
+<a name="id-1.2.13.11.158.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -7279,12 +7374,12 @@ embedder as its parent, using <a class="link" href="gdk3-Windows.html#gdk-window
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.13.11.156.8"></a><h4>Returns</h4>
+<a name="id-1.2.13.11.158.8"></a><h4>Returns</h4>
 <p> the effective toplevel window containing <em class="parameter"><code>window</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 </div>
 <div class="refsect1">
@@ -8184,7 +8279,7 @@ when in fullscreen mode.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8255,8 +8350,11 @@ to Mod2 - Mod5, and indicates this by setting <a class="link" href="gdk3-Windows
 reserved values such as <a class="link" href="gdk3-Windows.html#GDK-MODIFIER-RESERVED-13-MASK:CAPS"><code class="literal">GDK_MODIFIER_RESERVED_13_MASK</code></a>.  Your code
 should preserve and ignore them.  You can use <a class="link" href="gdk3-Windows.html#GDK-MODIFIER-MASK:CAPS"><code class="literal">GDK_MODIFIER_MASK</code></a> to
 remove all reserved values.</p>
+<p>Also note that the GDK X backend interprets button press events for button
+4-7 as scroll events, so <a class="link" href="gdk3-Windows.html#GDK-BUTTON4-MASK:CAPS"><code class="literal">GDK_BUTTON4_MASK</code></a> and <a class="link" href="gdk3-Windows.html#GDK-BUTTON5-MASK:CAPS"><code class="literal">GDK_BUTTON5_MASK</code></a> will never
+be set.</p>
 <div class="refsect3">
-<a name="id-1.2.13.12.16.7"></a><h4>Members</h4>
+<a name="id-1.2.13.12.16.8"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -8572,7 +8670,7 @@ it’s the Command key (which correspond to <a class="link" href="gdk3-Windows.h
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8712,7 +8810,7 @@ hint must be set before mapping the window.</p>
 <p>The mouse pointer for a <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>. See <a class="link" href="gdk3-Windows.html#gdk-window-set-cursor" title="gdk_window_set_cursor ()"><code class="function">gdk_window_set_cursor()</code></a> and
 <a class="link" href="gdk3-Windows.html#gdk-window-get-cursor" title="gdk_window_get_cursor ()"><code class="function">gdk_window_get_cursor()</code></a> for details.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 </div>
 <div class="refsect1">
@@ -8768,10 +8866,9 @@ surface from within any callback of this signal. Calling
 <div class="refsect3">
 <a name="id-1.2.13.14.2.7"></a><h4>Returns</h4>
 <p> the newly created <span class="type">cairo_surface_t</span> for the offscreen window</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8831,7 +8928,7 @@ coordinate in the offscreen window. </p></td>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8884,7 +8981,7 @@ embedded child at <em class="parameter"><code>x</code></em>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8944,12 +9041,11 @@ coordinate in the embedder window. </p></td>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

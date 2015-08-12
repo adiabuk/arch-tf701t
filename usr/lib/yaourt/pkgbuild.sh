@@ -4,6 +4,7 @@
 # This file is part of Yaourt (http://archlinux.fr/yaourt-en)
 
 load_lib alpm_query
+Y_MAKEPKG_CHECKDEP=0
 
 # source makepkg configuration
 source_makepkg_conf() {
@@ -15,7 +16,13 @@ source_makepkg_conf() {
 	local _SRCDEST=${SRCDEST}
 	local _SRCPKGDEST=${SRCPKGDEST}
 	[[ -r $MAKEPKG_CONF ]] && source "$MAKEPKG_CONF" || return 1
-	[[ -r ~/.makepkg.conf ]] && source ~/.makepkg.conf
+	XDG_PACMAN_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/pacman"
+	if [[ -r $XDG_PACMAN_DIR/makepkg.conf ]]; then
+		source "$XDG_PACMAN_DIR/makepkg.conf"
+	elif [[ -r ~/.makepkg.conf ]]; then
+		source ~/.makepkg.conf
+	fi
+	[[ " ${BUILDENV[*]} " =~ ' check ' ]] && Y_MAKEPKG_CHECKDEP=1
 	# Preserve environment variable
 	# else left empty (do not set to $PWD)
 	export BUILDDIR=${_BUILDDIR:-$BUILDDIR}
@@ -36,11 +43,12 @@ source_makepkg_conf() {
 read_pkgbuild() {
 	local update=${1:-0}
 	local vars=(pkgbase pkgname pkgver pkgrel arch pkgdesc provides url \
-		groups license source install md5sums depends makedepends conflicts \
+		groups license source install md5sums depends checkdepends makedepends conflicts \
+		depends_${CARCH} checkdepends_${CARCH} makedepends_${CARCH} \
 		replaces \
 		_svntrunk _svnmod _cvsroot_cvsmod _hgroot _hgrepo \
 		_darcsmod _darcstrunk _bzrtrunk _bzrmod _gitroot _gitname \
-		YPKGVER_FUNC
+		YPKGVER_FUNC YCHECK_FUNC
 		)
 
 	unset ${vars[*]}
@@ -50,38 +58,48 @@ read_pkgbuild() {
 	cat PKGBUILD                                    >> $pkgbuild_tmp
 	echo                                            >> $pkgbuild_tmp
 	echo "YPKGVER_FUNC=0"                           >> $pkgbuild_tmp
+	echo "YCHECK_FUNC=0"                            >> $pkgbuild_tmp
 	echo "declare -f pkgver && YPKGVER_FUNC=1"      >> $pkgbuild_tmp
+	echo "declare -f check && YCHECK_FUNC=1"        >> $pkgbuild_tmp
 	echo "declare -p ${vars[*]} 2>/dev/null >&3"    >> $pkgbuild_tmp
 	echo "return 0"                                 >> $pkgbuild_tmp
 	echo "}"                                        >> $pkgbuild_tmp
 	echo "( yaourt_$$ ) || exit 1"                  >> $pkgbuild_tmp
 	echo "exit 0"                                   >> $pkgbuild_tmp
-	PKGBUILD_VARS="$(makepkg "${MAKEPKG_ARG[@]}" -p "$pkgbuild_tmp" 3>&1 1>/dev/null | tr '\n' ';')"
+	PKGBUILD_VARS="$(y_makepkg -p "$pkgbuild_tmp" 3>&1 1>/dev/null | tr '\n' ';')"
 	rm "$pkgbuild_tmp"
 	eval $PKGBUILD_VARS
 	pkgbase=${pkgbase:-${pkgname[0]}}
+
+	((!Y_MAKEPKG_CHECKDEP)) || ((!YCHECK_FUNC)) && unset checkdepends checkdepends_${CARCH}
 	PKGBUILD_VARS="$(declare -p ${vars[*]} 2>/dev/null | tr '\n' ';')"
 	if [[ ! "$pkgbase" ]]; then
 		echo $(gettext 'Unable to read PKGBUILD')
 		return 1
 	fi
 	(( ${#pkgname[@]} > 1 )) && {
-		warning $(gettext 'This PKGBUILD describes a splitted package.')
+		warning $(gettext 'This PKGBUILD describes a split package.')
 		msg $(gettext 'Specific package options are unknown')
 	}
 	return 0
 }
 
-# Check PKGBUILD dependances 
+# Check PKGBUILD dependances
 # call read_pkgbuild() before
 # Usage:	check_deps ($nodisplay)
 #	$nodisplay: 1: don't display depends information
 check_deps() {
 	local nodisplay=${1:-0} dep
 	eval $PKGBUILD_VARS
-	PKGBUILD_DEPS=( $(pacman_parse -T "${depends[@]}" "${makedepends[@]}" ) )
+
+	# Merge generic dependencies with architecture specific dependencies
+	eval depends+=(\"\${depends_${CARCH}[@]}\")
+	eval makedepends+=(\"\${makedepends_${CARCH}[@]}\")
+	eval checkdepends+=(\"\${checkdepends_${CARCH}[@]}\")
+
+	PKGBUILD_DEPS=( $(pacman_parse -T "${depends[@]}" "${makedepends[@]}" "${checkdepends[@]}") )
 	PKGBUILD_DEPS_INSTALLED=()
-	for dep in "${depends[@]}" "${makedepends[@]}"
+	for dep in "${depends[@]}" "${makedepends[@]}" "${checkdepends[@]}"
 	do
 		if ! in_array "$dep" "${PKGBUILD_DEPS[@]}"; then
 			PKGBUILD_DEPS_INSTALLED+=("$dep")
@@ -94,10 +112,10 @@ check_deps() {
 	done
 	for dep in "${PKGBUILD_DEPS[@]}"; do
 		isavailable $dep && echo -e " - $CBLUE$dep$C0 $(gettext '(package found)')" && continue
-		echo -e " - $CYELLOW$dep$C0" $(gettext '(building from AUR)') 
+		echo -e " - $CYELLOW$dep$C0" $(gettext '(building from AUR)')
 	done
 	echo
-	return 0 
+	return 0
 }
 
 # Check if PKGBUILD conflicts with an installed package
@@ -110,15 +128,15 @@ check_conflicts() {
 	eval $PKGBUILD_VARS
 	local cfs=( $(pacman_parse -T "${conflicts[@]}") )
 	PKGBUILD_CONFLICTS=()
-	if (( ${#cfs[@]} != ${#conflicts[@]} )); then 
+	if (( ${#cfs[@]} != ${#conflicts[@]} )); then
 		for cf in "${conflicts[@]}"
 		do
 			if ! in_array "$cf" "${cfs[@]}"; then
 				PKGBUILD_CONFLICTS+=("$cf")
 			fi
 		done
-		# Workaround to disable self detection 
-		# If package is installed and provides that 
+		# Workaround to disable self detection
+		# If package is installed and provides that
 		# which conflict with.
 		local i=0
 		for cf in "${PKGBUILD_CONFLICTS[@]}"; do
@@ -128,7 +146,7 @@ check_conflicts() {
 		[[ "$PKGBUILD_CONFLICTS" ]] && (( nodisplay )) && return 1
 	fi
 	(( nodisplay )) && return 0
-	if [[ "$PKGBUILD_CONFLICTS" ]]; then 
+	if [[ "$PKGBUILD_CONFLICTS" ]]; then
 		msg "$(_gettext '%s conflicts:' "$pkgbase")"
 		for cf in $(pkgquery -Qif "%n-%v" "${PKGBUILD_CONFLICTS[@]%[<=>]*}"); do
 			echo -e " - $CBOLD$cf$C0"
@@ -162,7 +180,7 @@ edit_pkgbuild() {
 	local default_answer=${1:-1}
 	local check_dep=${2:-1}
 	local sum loop=1
-	(( ! EDITFILES )) && { 
+	(( ! EDITFILES )) && {
 		read_pkgbuild || return 1
 		(( check_dep )) && { check_deps; check_conflicts; }
 		return 0
@@ -179,12 +197,12 @@ edit_pkgbuild() {
 		read_pkgbuild || return 1
 		(( check_dep )) && { check_deps; check_conflicts; }
 	done
-	
+
 	eval $PKGBUILD_VARS
 	local installfile
 	for installfile in "${install[@]}"; do
 		[[ "$installfile" ]] || continue
-		run_editor "$installfile" $default_answer 
+		run_editor "$installfile" $default_answer
 		(( $? == 2 )) && return 1
 	done
 	return 0
@@ -207,7 +225,7 @@ build_package() {
 		fi
 		if (( SYSUPGRADE )) && (( DEVEL )) && (( ! FORCE )); then
 			if ((YPKGVER_FUNC)); then
-				SRCDEST="$YSRCDEST" makepkg "${MAKEPKG_ARG[@]}" -o -p ./PKGBUILD
+				SRCDEST="$YSRCDEST" y_makepkg -o -p ./PKGBUILD
 				# re-read PKGBUILD to update version
 				read_pkgbuild || return 1
 				eval $PKGBUILD_VARS
@@ -235,15 +253,22 @@ build_package() {
 			return 1
 		fi
 	fi
-	
-	# Build 
-	SRCDEST="$YSRCDEST" PKGDEST="$YPKGDEST" makepkg "${MAKEPKG_ARG[@]}" -s -f -p ./PKGBUILD
+
+	local TARGET_PACKAGE
+	[[ ! $SPLITOPT && ${#pkgname[@]} > 1 ]] && {
+		msg $(_gettext 'This PKGBUILD provides " %b "' "${pkgname[*]}")
+		prompt  $(_gettext 'Install only %s ?' "${pl_pkgname}") $(yes_no 1)
+		builduseragrees && TARGET_PACKAGE="--pkg ${pl_pkgname}"
+	}
+
+	# Build
+	SRCDEST="$YSRCDEST" PKGDEST="$YPKGDEST" y_makepkg -s ${TARGET_PACKAGE} -f -p ./PKGBUILD
 
 	if (( $? )); then
 		error $(_gettext 'Makepkg was unable to build %s.' "$pkgbase")
 		return 1
 	fi
-	(( EXPORT && EXPORTSRC )) && [[ $SRCPKGDEST ]] && SRCDEST="$YSRCDEST" makepkg --allsource -p ./PKGBUILD
+	(( EXPORT && EXPORTSRC )) && [[ $SRCPKGDEST ]] && SRCDEST="$YSRCDEST" y_makepkg --allsource -p ./PKGBUILD
 	return 0
 }
 
@@ -252,13 +277,13 @@ build_package() {
 install_package() {
 	local _file failed=0
 	eval $PKGBUILD_VARS
-	# Install, export, copy package after build 
+	# Install, export, copy package after build
 	if (( EXPORT==2 )); then
 		msg $(_gettext 'Exporting %s to %s directory' "$pkgbase" "${P[cachedir]}")
-		launch_with_su cp -vf "$YPKGDEST/"* "${P[cachedir]}/" 
+		launch_with_su cp -vf "$YPKGDEST/"* "${P[cachedir]}/"
 	elif (( EXPORT )) && [[ $PKGDEST ]]; then
 		msg $(_gettext 'Exporting %s to %s directory' "$pkgbase" "$PKGDEST")
-		cp -vfp "$YPKGDEST/"* "$PKGDEST/" 
+		cp -vfp "$YPKGDEST/"* "$PKGDEST/"
 	fi
 
 	while true; do
@@ -357,9 +382,8 @@ sanitize_pkgbuild() {
 	sed -n -e '/\$(\|`\|[><](\|[&|]\|;/d' -e '/ *[a-zA-Z0-9_\-]\+ *( *)/q' -e 's/^ *[a-zA-Z0-9_]\+=/declare &/' -e 'p' "$file" > "$tmpfile"
 	sed -n -e '1,/^\r$/ { s/Last-Modified: \(.*\)\r/declare last_mod="\1"/p;d }' \
 	       -e '/^declare *[a-zA-Z0-9_]\+=(.*) *\(#.*\|$\)/{p;d}' \
+	       -e '/^declare *[a-zA-Z0-9_]\+=(.*$/ {:a;N;$bb;/.*) *\(#.*\|$\)/!ba;s/\n/ /g;p;d;:b}' \
 	       -e '/^declare *[a-zA-Z0-9_]\+=.*[^\\]$/{p;d}' "$tmpfile"
-	sed -n -e '/^declare *[a-zA-Z0-9_]\+=(.*) *\(#.*\|$\)/d' \
-	       -e '/^declare *[a-zA-Z0-9_]\+=(.*$/ {:a;N;$bb;/.*) *\(#.*\|$\)/!ba;s/\n/ /g;p;d;:b}' "$tmpfile"
 	sed -n -e '/^declare *[a-zA-Z0-9_]\+=.*\\$/ {:a;N;$bb;/.*[^\\]$/!ba;s/\n/ /g;p;d;:b}' "$tmpfile"
 	rm "$tmpfile"
 }
@@ -375,7 +399,7 @@ source_pkgbuild() {
 # get_pkgbuild ($pkgs)
 # Get each package source and decompress into pkg directory
 get_pkgbuild() {
-	local i pkgs repo pkg pkgbase pkgver arch deps cwd=$(pwd)
+	local i pkgs repo pkg pkgbase pkgver arch deps cwd=$(pwd) pkgdir
 	pkgs=("$@")
 	load_lib aur abs
 	declare -A pkgs_downloaded
@@ -386,13 +410,16 @@ get_pkgbuild() {
 		[[ $repo = "aur" ]] && pkgbase=$pkg || pkgbase=$(get_pkgbase $pkg $repo $pkgver)
 		[[ ${pkgs_downloaded[$pkgbase]} ]] && continue
 		pkgs_downloaded[${pkg}]=1
-		if [[ -d $pkgbase ]]; then
-			prompt2 "$(_gettext '%s directory already exist. Replace ?' "$pkgbase") $(yes_no 1)"
-			useragrees || continue
-		else
-			mkdir "$pkgbase"
+		pkgdir=$pkgbase
+		if [[ -d $pkgdir ]]; then
+			local newdir=$(mktemp --dry-run --tmpdir="." "$pkgdir.XXX")
+			prompt2 "$(_gettext '%s directory already exist. [R]eplace, [C]hange to %s, [S]kip ?' "$pkgdir" "$newdir")"
+			local answer=$(userinput "RCS" "R")
+			[[ $answer = "S" ]] && continue
+			[[ $answer = "C" ]] && pkgdir=$newdir
 		fi
-		cd "$pkgbase" || continue
+		mkdir -p "$pkgdir"
+		cd "$pkgdir" || continue
 		msg "$(_gettext 'Download %s sources' "$pkgbase")"
 		if [[ $repo = "aur" ]]; then
 			aur_get_pkgbuild "$pkg"
@@ -401,9 +428,17 @@ get_pkgbuild() {
 		fi
 		(($?)) && continue
 		if ((DEPENDS)); then
-			unset depends makedepends
-			. <( source_pkgbuild PKGBUILD depends makedepends ) || continue
-			deps=("${depends[@]}" "${makedepends[@]}")
+			unset depends makedepends checkdepends \
+			      depends_${CARCH} makedepends_${CARCH} checkdepends_${CARCH}
+			. <( source_pkgbuild PKGBUILD depends makedepends checkdepends \
+					depends_${CARCH} makedepends_${CARCH} checkdepends_${CARCH}) || continue
+
+			# Merge generic dependencies with architecture specific dependencies
+			eval depends+=(\"\${depends_${CARCH}[@]}\")
+			eval makedepends+=(\"\${makedepends_${CARCH}[@]}\")
+			eval checkdepends+=(\"\${checkdepends_${CARCH}[@]}\")
+
+			deps=("${depends[@]}" "${makedepends[@]}" "${checkdepends[@]}")
 			((DEPENDS>1)) || deps=($(pacman_parse -T "${deps[@]}"))
 			[[ $deps ]] || continue
 			pkgs+=($(pkgquery -Aif '%n' "${deps[@]}"))
@@ -415,4 +450,4 @@ get_pkgbuild() {
 # If we have to deal with PKGBUILD and makepkg, source makepkg conf(s)
 source_makepkg_conf
 
-# vim: set ts=4 sw=4 noet: 
+# vim: set ts=4 sw=4 noet:

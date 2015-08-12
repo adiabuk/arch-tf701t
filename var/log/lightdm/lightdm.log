@@ -1,78 +1,165 @@
-[+0.00s] DEBUG: Logging to /var/log/lightdm/lightdm.log
-[+0.00s] DEBUG: Starting Light Display Manager 1.14.0, UID=0 PID=1086
-[+0.00s] DEBUG: Loading configuration dirs from /usr/share/lightdm/lightdm.conf.d
-[+0.00s] DEBUG: Loading configuration dirs from /usr/local/share/lightdm/lightdm.conf.d
-[+0.00s] DEBUG: Loading configuration dirs from /etc/xdg/lightdm/lightdm.conf.d
-[+0.00s] DEBUG: Loading configuration from /etc/lightdm/lightdm.conf
-[+0.00s] DEBUG: Using D-Bus name org.freedesktop.DisplayManager
-[+0.00s] DEBUG: Registered seat module xlocal
-[+0.00s] DEBUG: Registered seat module xremote
-[+0.00s] DEBUG: Registered seat module unity
-[+0.18s] DEBUG: Monitoring logind for seats
-[+0.18s] DEBUG: New seat added from logind: seat0
-[+0.18s] DEBUG: Loading properties from config section SeatDefaults
-[+0.18s] DEBUG: Seat seat0: Starting
-[+0.18s] DEBUG: Seat seat0: Creating greeter session
-[+0.19s] DEBUG: Seat seat0: Creating display server of type x
-[+0.20s] DEBUG: Could not run plymouth --ping: Failed to execute child process "plymouth" (No such file or directory)
-[+0.20s] DEBUG: Using VT 1
-[+0.20s] DEBUG: Seat seat0: Starting local X display on VT 1
-[+0.20s] DEBUG: DisplayServer x-0: Logging to /var/log/lightdm/x-0.log
-[+0.20s] DEBUG: DisplayServer x-0: Writing X server authority to /run/lightdm/root/:0
-[+0.20s] DEBUG: DisplayServer x-0: Launching X Server
-[+0.20s] DEBUG: Launching process 1110: /usr/bin/X vt1 :0 -seat seat0 -auth /run/lightdm/root/:0 -nolisten tcp vt1 -novtswitch
-[+0.20s] DEBUG: DisplayServer x-0: Waiting for ready signal from X server :0
-[+0.20s] DEBUG: Acquired bus name org.freedesktop.DisplayManager
-[+0.20s] DEBUG: Registering seat with bus path /org/freedesktop/DisplayManager/Seat0
-[+0.25s] WARNING: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
-[+0.25s] DEBUG: Loading user config from /etc/lightdm/users.conf
-[+0.27s] DEBUG: User pulse added
-[+0.27s] DEBUG: User test added
-[+2.89s] DEBUG: Got signal 10 from process 1110
-[+2.89s] DEBUG: DisplayServer x-0: Got signal from X server :0
-[+2.89s] DEBUG: DisplayServer x-0: Connecting to XServer :0
-[+2.89s] DEBUG: Launching process 1220: myx
-[+2.98s] DEBUG: Process 1220 exited with return value 0
-[+2.98s] DEBUG: Seat seat0: Exit status of myx: 0
-[+2.99s] DEBUG: Seat seat0: Display server ready, starting session authentication
-[+2.99s] DEBUG: Session pid=1231: Started with service 'lightdm-greeter', username 'lightdm'
-[+3.08s] DEBUG: Session pid=1231: Authentication complete with return value 0: Success
-[+3.08s] DEBUG: Seat seat0: Session authenticated, running command
-[+3.09s] DEBUG: Launching process 1240: myx
-[+3.09s] DEBUG: Process 1240 exited with return value 0
-[+3.09s] DEBUG: Seat seat0: Exit status of myx: 0
-[+3.09s] DEBUG: Session pid=1231: Running command /usr/bin/lightdm-gtk-greeter
-[+3.09s] DEBUG: Creating shared data directory /var/lib/lightdm-data/lightdm
-[+3.09s] DEBUG: Session pid=1231: Logging to /var/log/lightdm/x-0-greeter.log
-[+3.21s] DEBUG: Activating VT 1
-[+3.21s] DEBUG: Activating login1 session c1
-[+3.21s] DEBUG: Seat seat0 changes active session to c1
-[+3.22s] DEBUG: Session c1 is already active
-[+3.59s] DEBUG: Session pid=1231: Greeter connected version=1.14.0 resettable=false
-[+4.64s] DEBUG: Session pid=1231: Greeter start authentication for test
-[+4.64s] DEBUG: Session pid=1364: Started with service 'lightdm', username 'test'
-[+4.67s] DEBUG: Session pid=1364: Got 1 message(s) from PAM
-[+4.67s] DEBUG: Session pid=1231: Prompt greeter with 1 message(s)
-[+8.16s] DEBUG: Session pid=1231: Continue authentication
-[+8.25s] DEBUG: Session pid=1364: Authentication complete with return value 0: Success
-[+8.25s] DEBUG: Session pid=1231: Authenticate result for user test: Success
-[+8.25s] DEBUG: Session pid=1231: User test authorized
-[+8.30s] DEBUG: Session pid=1231: Greeter sets language en_US.utf8
-[+9.12s] DEBUG: Session pid=1231: Greeter requests session xfce
-[+9.12s] DEBUG: Seat seat0: Stopping greeter; display server will be re-used for user session
-[+9.12s] DEBUG: Session pid=1231: Sending SIGTERM
-[+9.17s] DEBUG: Session pid=1231: Greeter closed communication channel
-[+9.17s] DEBUG: Session pid=1231: Exited with return value 0
-[+9.17s] DEBUG: Seat seat0: Session stopped
-[+9.17s] DEBUG: Seat seat0: Greeter stopped, running session
-[+9.17s] DEBUG: Launching process 1668: myx
-[+9.18s] DEBUG: Process 1668 exited with return value 0
-[+9.18s] DEBUG: Seat seat0: Exit status of myx: 0
-[+9.18s] DEBUG: Registering session with bus path /org/freedesktop/DisplayManager/Session0
-[+9.18s] DEBUG: Session pid=1364: Running command /etc/lightdm/Xsession startxfce4
-[+9.18s] DEBUG: Creating shared data directory /var/lib/lightdm-data/test
-[+9.18s] DEBUG: Session pid=1364: Logging to .xsession-errors
-[+9.29s] DEBUG: Activating VT 1
-[+9.29s] DEBUG: Activating login1 session 2
-[+9.29s] DEBUG: Seat seat0 changes active session to 2
-[+9.29s] DEBUG: Session 2 is already active
+[+0.01s] DEBUG: Logging to /var/log/lightdm/lightdm.log
+[+0.01s] DEBUG: Starting Light Display Manager 1.14.2, UID=0 PID=1378
+[+0.01s] DEBUG: Loading configuration dirs from /usr/share/lightdm/lightdm.conf.d
+[+0.01s] DEBUG: Loading configuration dirs from /usr/local/share/lightdm/lightdm.conf.d
+[+0.01s] DEBUG: Loading configuration dirs from /etc/xdg/lightdm/lightdm.conf.d
+[+0.01s] DEBUG: Loading configuration from /etc/lightdm/lightdm.conf
+[+0.01s] DEBUG: Using D-Bus name org.freedesktop.DisplayManager
+[+0.01s] DEBUG: Registered seat module xlocal
+[+0.01s] DEBUG: Registered seat module xremote
+[+0.01s] DEBUG: Registered seat module unity
+[+0.08s] DEBUG: Monitoring logind for seats
+[+0.08s] DEBUG: New seat added from logind: seat0
+[+0.08s] DEBUG: Loading properties from config section SeatDefaults
+[+0.08s] DEBUG: Seat seat0: Starting
+[+0.08s] DEBUG: Seat seat0: Creating greeter session
+[+0.08s] DEBUG: Seat seat0: Creating display server of type x
+[+0.09s] DEBUG: Could not run plymouth --ping: Failed to execute child process "plymouth" (No such file or directory)
+[+0.09s] DEBUG: Using VT 1
+[+0.09s] DEBUG: Seat seat0: Starting local X display on VT 1
+[+0.09s] DEBUG: DisplayServer x-0: Logging to /var/log/lightdm/x-0.log
+[+0.09s] DEBUG: DisplayServer x-0: Writing X server authority to /run/lightdm/root/:0
+[+0.09s] DEBUG: DisplayServer x-0: Launching X Server
+[+0.09s] DEBUG: Launching process 1398: /usr/bin/X vt1 :0 -seat seat0 -auth /run/lightdm/root/:0 -nolisten tcp vt1 -novtswitch
+[+0.09s] DEBUG: DisplayServer x-0: Waiting for ready signal from X server :0
+[+0.09s] DEBUG: Acquired bus name org.freedesktop.DisplayManager
+[+0.09s] DEBUG: Registering seat with bus path /org/freedesktop/DisplayManager/Seat0
+[+0.12s] WARNING: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+[+0.13s] DEBUG: Loading user config from /etc/lightdm/users.conf
+[+0.14s] DEBUG: User pulse added
+[+0.14s] DEBUG: User test added
+[+3.48s] DEBUG: Got signal 10 from process 1398
+[+3.48s] DEBUG: DisplayServer x-0: Got signal from X server :0
+[+3.48s] DEBUG: DisplayServer x-0: Connecting to XServer :0
+[+5.85s] DEBUG: Launching process 1596: myx
+[+5.95s] DEBUG: Process 1596 exited with return value 0
+[+5.95s] DEBUG: Seat seat0: Exit status of myx: 0
+[+5.95s] DEBUG: Seat seat0: Display server ready, starting session authentication
+[+5.95s] DEBUG: Session pid=1607: Started with service 'lightdm-greeter', username 'lightdm'
+[+5.95s] DEBUG: Got signal 10 from process 1398
+[+6.05s] DEBUG: Session pid=1607: Authentication complete with return value 0: Success
+[+6.05s] DEBUG: Seat seat0: Session authenticated, running command
+[+6.05s] DEBUG: Launching process 1618: myx
+[+6.05s] DEBUG: Process 1618 exited with return value 0
+[+6.05s] DEBUG: Seat seat0: Exit status of myx: 0
+[+6.05s] DEBUG: Session pid=1607: Running command /usr/bin/lightdm-gtk-greeter
+[+6.05s] DEBUG: Creating shared data directory /var/lib/lightdm-data/lightdm
+[+6.06s] DEBUG: Session pid=1607: Logging to /var/log/lightdm/x-0-greeter.log
+[+6.21s] DEBUG: Activating VT 1
+[+6.21s] DEBUG: Activating login1 session c1
+[+6.21s] DEBUG: Seat seat0 changes active session to c1
+[+6.21s] DEBUG: Session c1 is already active
+[+6.70s] DEBUG: Session pid=1607: Greeter connected version=1.14.2 resettable=false
+[+7.35s] DEBUG: Session pid=1607: Greeter start authentication for test
+[+7.35s] DEBUG: Session pid=1740: Started with service 'lightdm', username 'test'
+[+7.37s] DEBUG: Session pid=1740: Got 1 message(s) from PAM
+[+7.37s] DEBUG: Session pid=1607: Prompt greeter with 1 message(s)
+[+10.53s] DEBUG: Session pid=1607: Continue authentication
+[+12.24s] DEBUG: Session pid=1740: Authentication complete with return value 7: Authentication failure
+[+12.24s] DEBUG: Session pid=1607: Authenticate result for user test: Authentication failure
+[+12.25s] DEBUG: Session pid=1740: Exited with return value 1
+[+12.26s] DEBUG: Seat seat0: Session stopped
+[+12.26s] DEBUG: Launching process 2043: myx
+[+12.28s] DEBUG: Process 2043 exited with return value 0
+[+12.28s] DEBUG: Seat seat0: Exit status of myx: 0
+[+12.28s] DEBUG: Session pid=1607: Greeter start authentication for test
+[+12.28s] DEBUG: Session pid=2047: Started with service 'lightdm', username 'test'
+[+12.32s] DEBUG: Session pid=2047: Got 1 message(s) from PAM
+[+12.32s] DEBUG: Session pid=1607: Prompt greeter with 1 message(s)
+[+16.77s] DEBUG: Session pid=1607: Continue authentication
+[+16.95s] DEBUG: Session pid=2047: Authentication complete with return value 0: Success
+[+16.95s] DEBUG: Session pid=1607: Authenticate result for user test: Success
+[+16.95s] DEBUG: Session pid=1607: User test authorized
+[+17.01s] DEBUG: Session pid=1607: Greeter sets language en_US.utf8
+[+17.21s] DEBUG: Session pid=1607: Greeter requests session xfce
+[+17.22s] DEBUG: Seat seat0: Stopping greeter; display server will be re-used for user session
+[+17.22s] DEBUG: Session pid=1607: Sending SIGTERM
+[+17.29s] DEBUG: Session pid=1607: Greeter closed communication channel
+[+17.29s] DEBUG: Session pid=1607: Exited with return value 0
+[+17.29s] DEBUG: Seat seat0: Session stopped
+[+17.29s] DEBUG: Seat seat0: Greeter stopped, running session
+[+17.29s] DEBUG: Launching process 2359: myx
+[+17.30s] DEBUG: Process 2359 exited with return value 0
+[+17.30s] DEBUG: Seat seat0: Exit status of myx: 0
+[+17.30s] DEBUG: Registering session with bus path /org/freedesktop/DisplayManager/Session0
+[+17.31s] DEBUG: Session pid=2047: Running command /etc/lightdm/Xsession startxfce4
+[+17.31s] DEBUG: Creating shared data directory /var/lib/lightdm-data/test
+[+17.31s] DEBUG: Session pid=2047: Logging to .xsession-errors
+[+17.45s] DEBUG: Activating VT 1
+[+17.45s] DEBUG: Activating login1 session 2
+[+17.45s] DEBUG: Seat seat0 changes active session to 2
+[+17.45s] DEBUG: Session 2 is already active
+[+88.72s] DEBUG: Process 1398 terminated with signal 9
+[+88.72s] DEBUG: DisplayServer x-0: X server stopped
+[+88.72s] DEBUG: Releasing VT 1
+[+88.72s] DEBUG: DisplayServer x-0: Removing X server authority /run/lightdm/root/:0
+[+88.72s] DEBUG: Seat seat0: Display server stopped
+[+88.72s] DEBUG: Launching process 4421: myx
+[+88.73s] DEBUG: Process 4421 exited with return value 0
+[+88.73s] DEBUG: Seat seat0: Exit status of myx: 0
+[+88.73s] DEBUG: Seat seat0: Stopping session
+[+88.73s] DEBUG: Session pid=2047: Sending SIGTERM
+[+88.73s] DEBUG: Seat seat0: Active display server stopped, starting greeter
+[+88.73s] DEBUG: Seat seat0: Creating greeter session
+[+88.73s] DEBUG: Seat seat0: Creating display server of type x
+[+88.73s] DEBUG: Using VT 1
+[+88.73s] DEBUG: Seat seat0: Starting local X display on VT 1
+[+88.73s] DEBUG: DisplayServer x-0: Logging to /var/log/lightdm/x-0.log
+[+88.73s] DEBUG: DisplayServer x-0: Writing X server authority to /run/lightdm/root/:0
+[+88.73s] DEBUG: DisplayServer x-0: Launching X Server
+[+88.73s] DEBUG: Launching process 4425: /usr/bin/X vt1 :0 -seat seat0 -auth /run/lightdm/root/:0 -nolisten tcp vt1 -novtswitch
+[+88.73s] DEBUG: DisplayServer x-0: Waiting for ready signal from X server :0
+[+88.75s] DEBUG: Session pid=2047: Exited with return value 0
+[+88.75s] DEBUG: Seat seat0: Session stopped
+[+88.75s] DEBUG: Launching process 4431: myx
+[+88.76s] DEBUG: Process 4431 exited with return value 0
+[+88.76s] DEBUG: Seat seat0: Exit status of myx: 0
+[+88.76s] DEBUG: Seat seat0: Stopping display server, no sessions require it
+[+90.85s] DEBUG: Got signal 10 from process 4425
+[+90.85s] DEBUG: DisplayServer x-0: Got signal from X server :0
+[+90.85s] DEBUG: DisplayServer x-0: Connecting to XServer :0
+[+90.86s] DEBUG: Launching process 4471: myx
+[+90.95s] DEBUG: Process 4471 exited with return value 0
+[+90.95s] DEBUG: Seat seat0: Exit status of myx: 0
+[+90.95s] DEBUG: Seat seat0: Display server ready, starting session authentication
+[+90.95s] DEBUG: Session pid=4483: Started with service 'lightdm-greeter', username 'lightdm'
+[+90.98s] DEBUG: Session pid=4483: Authentication complete with return value 0: Success
+[+90.98s] DEBUG: Seat seat0: Session authenticated, running command
+[+90.98s] DEBUG: Launching process 4488: myx
+[+90.98s] DEBUG: Process 4488 exited with return value 0
+[+90.98s] DEBUG: Seat seat0: Exit status of myx: 0
+[+90.98s] DEBUG: Session pid=4483: Running command /usr/bin/lightdm-gtk-greeter
+[+90.98s] DEBUG: Creating shared data directory /var/lib/lightdm-data/lightdm
+[+90.98s] DEBUG: Session pid=4483: Logging to /var/log/lightdm/x-0-greeter.log
+[+91.00s] DEBUG: Activating VT 1
+[+91.00s] DEBUG: Activating login1 session c2
+[+91.01s] DEBUG: Seat seat0 changes active session to c2
+[+91.01s] DEBUG: Session c2 is already active
+[+91.29s] DEBUG: Session pid=4483: Greeter connected version=1.14.2 resettable=false
+[+91.81s] DEBUG: Session pid=4483: Greeter start authentication for test
+[+91.81s] DEBUG: Session pid=4567: Started with service 'lightdm', username 'test'
+[+91.82s] DEBUG: Session pid=4567: Got 1 message(s) from PAM
+[+91.82s] DEBUG: Session pid=4483: Prompt greeter with 1 message(s)
+[+95.66s] DEBUG: Session pid=4483: Continue authentication
+[+95.78s] DEBUG: Session pid=4567: Authentication complete with return value 0: Success
+[+95.78s] DEBUG: Session pid=4483: Authenticate result for user test: Success
+[+95.78s] DEBUG: Session pid=4483: User test authorized
+[+95.79s] DEBUG: Session pid=4483: Greeter sets language en_US.utf8
+[+95.98s] DEBUG: Session pid=4483: Greeter requests session xfce
+[+95.98s] DEBUG: Seat seat0: Stopping greeter; display server will be re-used for user session
+[+95.98s] DEBUG: Session pid=4483: Sending SIGTERM
+[+96.07s] DEBUG: Session pid=4483: Greeter closed communication channel
+[+96.07s] DEBUG: Session pid=4483: Exited with return value 0
+[+96.07s] DEBUG: Seat seat0: Session stopped
+[+96.07s] DEBUG: Seat seat0: Greeter stopped, running session
+[+96.07s] DEBUG: Launching process 4830: myx
+[+96.08s] DEBUG: Process 4830 exited with return value 0
+[+96.08s] DEBUG: Seat seat0: Exit status of myx: 0
+[+96.08s] DEBUG: Registering session with bus path /org/freedesktop/DisplayManager/Session1
+[+96.08s] DEBUG: Session pid=4567: Running command /etc/lightdm/Xsession startxfce4
+[+96.08s] DEBUG: Creating shared data directory /var/lib/lightdm-data/test
+[+96.08s] DEBUG: Session pid=4567: Logging to .xsession-errors
+[+96.10s] DEBUG: Activating VT 1
+[+96.10s] DEBUG: Activating login1 session 5
+[+96.10s] DEBUG: Seat seat0 changes active session to 5
+[+96.10s] DEBUG: Session 5 is already active

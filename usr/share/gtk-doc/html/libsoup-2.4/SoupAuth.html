@@ -234,7 +234,7 @@
 </div>
 <div class="refsect1">
 <a name="SoupAuth.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">╰──</span> SoupAuth
 </pre>
 </div>
@@ -254,7 +254,7 @@ given bit of web space. They are created automatically by
 <div class="refsect2">
 <a name="soup-auth-new"></a><h3>soup_auth_new ()</h3>
 <pre class="programlisting"><a class="link" href="SoupAuth.html" title="SoupAuth"><span class="returnvalue">SoupAuth</span></a> *
-soup_auth_new (<em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>,
+soup_auth_new (<em class="parameter"><code><span class="type">GType</span> type</code></em>,
                <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                <em class="parameter"><code>const <span class="type">char</span> *auth_header</code></em>);</pre>
 <p>Creates a new <a class="link" href="SoupAuth.html" title="SoupAuth"><span class="type">SoupAuth</span></a> of type <em class="parameter"><code>type</code></em>
@@ -354,7 +354,7 @@ at all.</p>
 <a name="SOUP-TYPE-AUTH-BASIC:CAPS"></a><h3>SOUP_TYPE_AUTH_BASIC</h3>
 <pre class="programlisting">#define SOUP_TYPE_AUTH_BASIC  (soup_auth_basic_get_type ())
 </pre>
-<p>A <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> corresponding to HTTP "Basic" authentication.
+<p>A <span class="type">GType</span> corresponding to HTTP "Basic" authentication.
 <a href="SoupSession.html"><span class="type">SoupSessions</span></a> support this by default; if you want to disable
 support for it, call <a class="link" href="SoupSession.html#soup-session-remove-feature-by-type" title="soup_session_remove_feature_by_type ()"><code class="function">soup_session_remove_feature_by_type()</code></a>,
 passing <a class="link" href="SoupAuth.html#SOUP-TYPE-AUTH-BASIC:CAPS" title="SOUP_TYPE_AUTH_BASIC"><code class="literal">SOUP_TYPE_AUTH_BASIC</code></a>.</p>
@@ -365,7 +365,7 @@ passing <a class="link" href="SoupAuth.html#SOUP-TYPE-AUTH-BASIC:CAPS" title="SO
 <a name="SOUP-TYPE-AUTH-DIGEST:CAPS"></a><h3>SOUP_TYPE_AUTH_DIGEST</h3>
 <pre class="programlisting">#define SOUP_TYPE_AUTH_DIGEST (soup_auth_digest_get_type ())
 </pre>
-<p>A <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> corresponding to HTTP "Digest" authentication.
+<p>A <span class="type">GType</span> corresponding to HTTP "Digest" authentication.
 <a href="SoupSession.html"><span class="type">SoupSessions</span></a> support this by default; if you want to disable
 support for it, call <a class="link" href="SoupSession.html#soup-session-remove-feature-by-type" title="soup_session_remove_feature_by_type ()"><code class="function">soup_session_remove_feature_by_type()</code></a>,
 passing <a class="link" href="SoupAuth.html#SOUP-TYPE-AUTH-DIGEST:CAPS" title="SOUP_TYPE_AUTH_DIGEST"><code class="literal">SOUP_TYPE_AUTH_DIGEST</code></a>.</p>
@@ -376,7 +376,7 @@ passing <a class="link" href="SoupAuth.html#SOUP-TYPE-AUTH-DIGEST:CAPS" title="S
 <a name="SOUP-TYPE-AUTH-NTLM:CAPS"></a><h3>SOUP_TYPE_AUTH_NTLM</h3>
 <pre class="programlisting">#define SOUP_TYPE_AUTH_NTLM   (soup_auth_ntlm_get_type ())
 </pre>
-<p>A <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> corresponding to HTTP-based NTLM authentication.
+<p>A <span class="type">GType</span> corresponding to HTTP-based NTLM authentication.
 <a href="SoupSession.html"><span class="type">SoupSessions</span></a> do not support this type by default; if you want to
 enable support for it, call <a class="link" href="SoupSession.html#soup-session-add-feature-by-type" title="soup_session_add_feature_by_type ()"><code class="function">soup_session_add_feature_by_type()</code></a>,
 passing <a class="link" href="SoupAuth.html#SOUP-TYPE-AUTH-NTLM:CAPS" title="SOUP_TYPE_AUTH_NTLM"><code class="literal">SOUP_TYPE_AUTH_NTLM</code></a>.</p>

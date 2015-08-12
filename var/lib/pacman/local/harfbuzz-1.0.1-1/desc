@@ -1,0 +1,44 @@
+%NAME%
+harfbuzz
+
+%VERSION%
+1.0.1-1
+
+%DESC%
+OpenType text shaping engine
+
+%URL%
+http://www.freedesktop.org/wiki/Software/HarfBuzz
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1438347778
+
+%INSTALLDATE%
+1439237010
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+1796096
+
+%REASON%
+1
+
+%LICENSE%
+MIT
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glib2
+freetype2
+graphite
+
+%OPTDEPENDS%
+cairo: hb-view program
+

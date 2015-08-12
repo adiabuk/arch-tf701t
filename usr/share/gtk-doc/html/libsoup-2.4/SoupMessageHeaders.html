@@ -119,6 +119,30 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersType" title="enum SoupMessageHeadersType"><span class="returnvalue">SoupMessageHeadersType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-headers-type" title="soup_message_headers_get_headers_type ()">soup_message_headers_get_headers_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="SoupMessageHeaders.html#soup-message-headers-header-contains" title="soup_message_headers_header_contains ()">soup_message_headers_header_contains</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="SoupMessageHeaders.html#soup-message-headers-header-equals" title="soup_message_headers_header_equals ()">soup_message_headers_header_equals</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -316,7 +340,7 @@
 </div>
 <div class="refsect1">
 <a name="SoupMessageHeaders.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GBoxed
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> SoupMessageHeaders
 </pre>
 </div>
@@ -704,6 +728,134 @@ explicitly state which behavior they are expecting.</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="soup-message-headers-get-headers-type"></a><h3>soup_message_headers_get_headers_type ()</h3>
+<pre class="programlisting"><a class="link" href="SoupMessageHeaders.html#SoupMessageHeadersType" title="enum SoupMessageHeadersType"><span class="returnvalue">SoupMessageHeadersType</span></a>
+soup_message_headers_get_headers_type (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>);</pre>
+<p>Gets the type of headers.</p>
+<div class="refsect3">
+<a name="id-1.3.9.8.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hdrs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.8.12.6"></a><h4>Returns</h4>
+<p> the header's type.</p>
+<p></p>
+</div>
+<p class="since">Since 2.50</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-message-headers-header-contains"></a><h3>soup_message_headers_header_contains ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+soup_message_headers_header_contains (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
+                                      <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
+                                      <em class="parameter"><code>const <span class="type">char</span> *token</code></em>);</pre>
+<p>Checks whether the list-valued header <em class="parameter"><code>name</code></em>
+ is present in <em class="parameter"><code>hdrs</code></em>
+,
+and contains a case-insensitive match for <em class="parameter"><code>token</code></em>
+.</p>
+<p>(If <em class="parameter"><code>name</code></em>
+ is present in <em class="parameter"><code>hdrs</code></em>
+, then this is equivalent to calling
+<a class="link" href="libsoup-2.4-Soup-Miscellaneous-Utilities.html#soup-header-contains" title="soup_header_contains ()"><code class="function">soup_header_contains()</code></a> on its value.)</p>
+<div class="refsect3">
+<a name="id-1.3.9.8.13.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>hdrs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>header name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>token</p></td>
+<td class="parameter_description"><p>token to look for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.8.13.7"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the header is present and contains <em class="parameter"><code>token</code></em>
+,
+<code class="literal">FALSE</code> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 2.50</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-message-headers-header-equals"></a><h3>soup_message_headers_header_equals ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+soup_message_headers_header_equals (<em class="parameter"><code><a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a> *hdrs</code></em>,
+                                    <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
+                                    <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
+<p>Checks whether the header <em class="parameter"><code>name</code></em>
+ is present in <em class="parameter"><code>hdrs</code></em>
+ and is
+(case-insensitively) equal to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.9.8.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>hdrs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupMessageHeaders.html" title="SoupMessageHeaders"><span class="type">SoupMessageHeaders</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>header name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>expected value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.8.14.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the header is present and its value is
+<em class="parameter"><code>value</code></em>
+, <code class="literal">FALSE</code> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 2.50</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="SoupMessageHeadersForeachFunc"></a><h3>SoupMessageHeadersForeachFunc ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*SoupMessageHeadersForeachFunc<span class="c_punctuation">)</span> (<em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
@@ -711,7 +863,7 @@ explicitly state which behavior they are expecting.</p>
                                   <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
 <p>The callback passed to <a class="link" href="SoupMessageHeaders.html#soup-message-headers-foreach" title="soup_message_headers_foreach ()"><code class="function">soup_message_headers_foreach()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.12.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -759,7 +911,7 @@ required for interoperability in some cases.)</p>
 <p>You may not modify the headers from <em class="parameter"><code>func</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.13.7"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.16.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -797,7 +949,7 @@ soup_message_headers_iter_init (<em class="parameter"><code><a class="link" href
  for iterating <em class="parameter"><code>hdrs</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.14.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.17.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -836,7 +988,7 @@ then <a class="link" href="SoupMessageHeaders.html#soup-message-headers-iter-nex
 and <em class="parameter"><code>value</code></em>
  will be unchanged.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.15.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.18.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -865,7 +1017,7 @@ the header value in. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.9.8.15.6"></a><h4>Returns</h4>
+<a name="id-1.3.9.8.18.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if another name and value were returned, <code class="literal">FALSE</code>
 if the end of the headers has been reached.</p>
 <p></p>
@@ -882,7 +1034,7 @@ always correspond to the encoding used on the wire; eg, a HEAD
 response may declare a Content-Length or Transfer-Encoding, but
 it will never actually include a body.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.16.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.19.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -897,7 +1049,7 @@ it will never actually include a body.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.9.8.16.6"></a><h4>Returns</h4>
+<a name="id-1.3.9.8.19.6"></a><h4>Returns</h4>
 <p> the encoding declared by <em class="parameter"><code>hdrs</code></em>
 .</p>
 <p></p>
@@ -914,7 +1066,7 @@ soup_message_headers_set_encoding (<em class="parameter"><code><a class="link" h
 you should use this if you are going to send a request or response in
 chunked encoding.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.17.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.20.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -947,7 +1099,7 @@ soup_message_headers_get_content_length
 be non-0 if <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-encoding" title="soup_message_headers_get_encoding ()"><code class="function">soup_message_headers_get_encoding()</code></a> returns
 <a class="link" href="SoupMessageHeaders.html#SOUP-ENCODING-CONTENT-LENGTH:CAPS"><code class="literal">SOUP_ENCODING_CONTENT_LENGTH</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.18.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.21.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -962,7 +1114,7 @@ be non-0 if <a class="link" href="SoupMessageHeaders.html#soup-message-headers-g
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.9.8.18.6"></a><h4>Returns</h4>
+<a name="id-1.3.9.8.21.6"></a><h4>Returns</h4>
 <p> the message body length declared by <em class="parameter"><code>hdrs</code></em>
 .</p>
 <p></p>
@@ -989,7 +1141,7 @@ generating the response to a HEAD request; Calling
 correct content length into the response without needing to waste
 memory by filling in a response body which won't actually be sent.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.19.6"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.22.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1021,7 +1173,7 @@ soup_message_headers_get_expectations (<em class="parameter"><code><a class="lin
 Currently this will either be <a class="link" href="SoupMessageHeaders.html#SOUP-EXPECTATION-CONTINUE:CAPS"><code class="literal">SOUP_EXPECTATION_CONTINUE</code></a> or
 <a class="link" href="SoupMessageHeaders.html#SOUP-EXPECTATION-UNRECOGNIZED:CAPS"><code class="literal">SOUP_EXPECTATION_UNRECOGNIZED</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.20.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.23.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1036,7 +1188,7 @@ Currently this will either be <a class="link" href="SoupMessageHeaders.html#SOUP
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.9.8.20.6"></a><h4>Returns</h4>
+<a name="id-1.3.9.8.23.6"></a><h4>Returns</h4>
 <p> the contents of <em class="parameter"><code>hdrs</code></em>
 's "Expect" header</p>
 <p></p>
@@ -1060,7 +1212,7 @@ post, or because you're POSTing to a URL that doesn't exist). This
 saves you from having to transmit the large request body when the
 server is just going to ignore it anyway.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.21.6"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.24.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1096,7 +1248,7 @@ its value in *<em class="parameter"><code>content_type</code></em>
  can be <code class="literal">NULL</code> if you
 are only interested in the content type itself.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.22.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.25.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1119,7 +1271,7 @@ are only interested in the content type itself.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.9.8.22.6"></a><h4>Returns</h4>
+<a name="id-1.3.9.8.25.6"></a><h4>Returns</h4>
 <p> a string with the value of the
 "Content-Type" header or <code class="literal">NULL</code> if <em class="parameter"><code>hdrs</code></em>
 does not contain that
@@ -1143,7 +1295,7 @@ soup_message_headers_set_content_type (<em class="parameter"><code><a class="lin
 optionally with additional parameters specified in <em class="parameter"><code>params</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.23.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.26.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1200,7 +1352,7 @@ test this yourself.)</p>
 this is handled automatically by <a class="link" href="SoupMultipart.html" title="SoupMultipart"><span class="type">SoupMultipart</span></a> and the associated
 form methods.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.24.7"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.27.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1229,7 +1381,7 @@ location for the Content-Disposition parameters, or <code class="literal">NULL</
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.9.8.24.8"></a><h4>Returns</h4>
+<a name="id-1.3.9.8.27.8"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if <em class="parameter"><code>hdrs</code></em>
 contains a "Content-Disposition"
 header, <code class="literal">FALSE</code> if not (in which case *<em class="parameter"><code>disposition</code></em>
@@ -1255,7 +1407,7 @@ optionally with additional parameters specified in <em class="parameter"><code>p
 <p>See <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-content-disposition" title="soup_message_headers_get_content_disposition ()"><code class="function">soup_message_headers_get_content_disposition()</code></a> for a discussion
 of how Content-Disposition is used in HTTP.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.25.6"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.28.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1323,7 +1475,7 @@ body available, and only want to generate the parts that were
 actually requested by the client.
 </p></div>
 <div class="refsect3">
-<a name="id-1.3.9.8.26.8"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.29.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1356,7 +1508,7 @@ of <a class="link" href="SoupMessageHeaders.html#SoupRange" title="SoupRange"><s
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.9.8.26.9"></a><h4>Returns</h4>
+<a name="id-1.3.9.8.29.9"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if <em class="parameter"><code>hdrs</code></em>
 contained a syntactically-valid
 "Range" header, <code class="literal">FALSE</code> otherwise (in which case <em class="parameter"><code>range</code></em>
@@ -1378,7 +1530,7 @@ soup_message_headers_set_ranges (<em class="parameter"><code><a class="link" hre
 only want to request a single range, you can use
 <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-range" title="soup_message_headers_set_range ()"><code class="function">soup_message_headers_set_range()</code></a>.)</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.27.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.30.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1422,7 +1574,7 @@ soup_message_headers_set_range (<em class="parameter"><code><a class="link" href
 <p>If you need to request multiple ranges, use
 <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-ranges" title="soup_message_headers_set_ranges ()"><code class="function">soup_message_headers_set_ranges()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.28.6"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.31.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1458,7 +1610,7 @@ soup_message_headers_free_ranges (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code><a class="link" href="SoupMessageHeaders.html#SoupRange" title="SoupRange"><span class="type">SoupRange</span></a> *ranges</code></em>);</pre>
 <p>Frees the array of ranges returned from <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-ranges" title="soup_message_headers_get_ranges ()"><code class="function">soup_message_headers_get_ranges()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.29.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.32.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1499,7 +1651,7 @@ soup_message_headers_get_content_range
 was specified as "*", then <em class="parameter"><code>total_length</code></em>
  will be set to -1.</p>
 <div class="refsect3">
-<a name="id-1.3.9.8.30.5"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.33.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1532,7 +1684,7 @@ or <code class="literal">NULL</code> if you don't care.</p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.9.8.30.6"></a><h4>Returns</h4>
+<a name="id-1.3.9.8.33.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if <em class="parameter"><code>hdrs</code></em>
 contained a "Content-Range" header
 containing a byte range which could be parsed, <code class="literal">FALSE</code> otherwise.</p>
@@ -1562,7 +1714,7 @@ not normally need to call this function youself. See
 <a class="link" href="SoupMessageHeaders.html#soup-message-headers-get-ranges" title="soup_message_headers_get_ranges ()"><code class="function">soup_message_headers_get_ranges()</code></a> for more details.
 </p></div>
 <div class="refsect3">
-<a name="id-1.3.9.8.31.6"></a><h4>Parameters</h4>
+<a name="id-1.3.9.8.34.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">

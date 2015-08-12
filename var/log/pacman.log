@@ -60,3 +60,366 @@
 [2015-04-09 17:12] [ALPM] transaction completed
 [2015-04-09 17:31] [PACMAN] Running 'pacman -Scc'
 [2015-04-09 17:31] [PACMAN] Running 'pacman -Scc'
+[2015-08-10 22:48] [PACMAN] Running 'pacman -S matchbox-keybard'
+[2015-08-10 22:49] [PACMAN] Running 'pacman -S matchbox-keyboard'
+[2015-08-10 22:49] [ALPM] transaction started
+[2015-08-10 22:49] [ALPM] reinstalled matchbox-keyboard (0.1-5)
+[2015-08-10 22:49] [ALPM] transaction completed
+[2015-08-10 22:52] [PACMAN] Running 'pacman -S firefox'
+[2015-08-10 22:54] [PACMAN] Running 'pacman -S'
+[2015-08-10 22:54] [PACMAN] Running 'pacman -Syu firefox'
+[2015-08-10 22:54] [PACMAN] synchronizing package lists
+[2015-08-10 22:55] [PACMAN] starting full system upgrade
+[2015-08-10 23:02] [ALPM] transaction started
+[2015-08-10 23:02] [ALPM] upgraded linux-api-headers (3.18.5-1 -> 4.0-1)
+[2015-08-10 23:03] [ALPM] upgraded tzdata (2015b-1 -> 2015e-1)
+[2015-08-10 23:03] [ALPM] upgraded iana-etc (2.30-4 -> 2.30-5)
+[2015-08-10 23:03] [ALPM] upgraded glibc (2.20-6 -> 2.21-4)
+[2015-08-10 23:03] [ALPM] upgraded gcc-libs (4.9.2-2 -> 5.2.0-1)
+[2015-08-10 23:03] [ALPM] upgraded bash (4.3.033-1 -> 4.3.039-1)
+[2015-08-10 23:03] [ALPM] upgraded readline (6.3.006-1 -> 6.3.008-1)
+[2015-08-10 23:03] [ALPM] upgraded zlib (1.2.8-3 -> 1.2.8-4)
+[2015-08-10 23:03] [ALPM] upgraded pcre (8.36-2 -> 8.37-2)
+[2015-08-10 23:03] [ALPM] upgraded glib2 (2.42.2-1 -> 2.44.1-1)
+[2015-08-10 23:03] [ALPM] upgraded atk (2.14.0-1 -> 2.16.0-1)
+[2015-08-10 23:03] [ALPM] upgraded kbproto (1.0.6-2 -> 1.0.7-1)
+[2015-08-10 23:03] [ALPM] upgraded xproto (7.0.27-1 -> 7.0.28-1)
+[2015-08-10 23:03] [ALPM] upgraded libxrender (0.9.8-1 -> 0.9.9-1)
+[2015-08-10 23:03] [ALPM] upgraded randrproto (1.4.1-1 -> 1.5.0-1)
+[2015-08-10 23:03] [ALPM] upgraded libxrandr (1.4.2-2 -> 1.5.0-1)
+[2015-08-10 23:03] [ALPM] upgraded perl (5.20.2-1 -> 5.22.0-1)
+[2015-08-10 23:03] [ALPM] upgraded less (471-1 -> 479-1)
+[2015-08-10 23:03] [ALPM] upgraded libtasn1 (4.4-1 -> 4.5-1)
+[2015-08-10 23:03] [ALPM] upgraded nettle (2.7.1-1 -> 3.1.1-1)
+[2015-08-10 23:03] [ALPM] upgraded gnutls (3.3.14-2 -> 3.4.3-1)
+[2015-08-10 23:03] [ALPM] upgraded libjpeg-turbo (1.4.0-1 -> 1.4.1-1)
+[2015-08-10 23:03] [ALPM] upgraded libtiff (4.0.3-5 -> 4.0.4-1)
+[2015-08-10 23:03] [ALPM] upgraded libpng (1.6.16-1 -> 1.6.18-1)
+[2015-08-10 23:03] [ALPM] upgraded libutil-linux (2.26.1-3 -> 2.26.2-1)
+[2015-08-10 23:03] [ALPM] upgraded openssl (1.0.2.a-1 -> 1.0.2.d-1)
+[2015-08-10 23:03] [ALPM] upgraded libldap (2.4.40-2 -> 2.4.41-1)
+[2015-08-10 23:03] [ALPM] upgraded krb5 (1.13.1-1 -> 1.13.2-1)
+[2015-08-10 23:03] [ALPM] upgraded libdbus (1.8.16-2 -> 1.8.20-1)
+[2015-08-10 23:03] [ALPM] upgraded dbus (1.8.16-2 -> 1.8.20-1)
+[2015-08-10 23:03] [ALPM] upgraded avahi (0.6.31-15 -> 0.6.31-16)
+[2015-08-10 23:03] [ALPM] upgraded kmod (20-1 -> 21-1)
+[2015-08-10 23:03] [ALPM] upgraded lz4 (128-1 -> 131-1)
+[2015-08-10 23:03] [ALPM] upgraded libgpg-error (1.18-1 -> 1.19-1)
+[2015-08-10 23:03] [ALPM] upgraded libsystemd (218-2 -> 224-1)
+[2015-08-10 23:03] [ALPM] upgraded cracklib (2.9.1-1 -> 2.9.4-1)
+[2015-08-10 23:03] [ALPM] upgraded libtirpc (0.2.5-1 -> 0.3.2-2)
+[2015-08-10 23:03] [ALPM] upgraded pam (1.1.8-5 -> 1.2.0-1)
+[2015-08-10 23:03] [ALPM] upgraded coreutils (8.23-1 -> 8.24-1)
+[2015-08-10 23:03] [ALPM] upgraded util-linux (2.26.1-3 -> 2.26.2-1)
+[2015-08-10 23:03] [ALPM] warning: directory permissions differ on /etc/systemd/user/
+filesystem: 777  package: 755
+[2015-08-10 23:03] [ALPM] upgraded systemd (218-2 -> 224-1)
+[2015-08-10 23:03] [ALPM] upgraded libcups (2.0.2-3 -> 2.0.4-1)
+[2015-08-10 23:03] [ALPM] upgraded gdk-pixbuf2 (2.31.3-1 -> 2.31.5-1)
+[2015-08-10 23:03] [ALPM] upgraded hicolor-icon-theme (0.13-1 -> 0.15-1)
+[2015-08-10 23:03] [ALPM] upgraded gtk-update-icon-cache (2.24.27-1 -> 3.16.6-1)
+[2015-08-10 23:03] [ALPM] upgraded freetype2 (2.5.5-1 -> 2.6-1)
+[2015-08-10 23:03] [ALPM] upgraded harfbuzz (0.9.40-1 -> 1.0.1-1)
+[2015-08-10 23:03] [ALPM] upgraded libdatrie (0.2.8-1 -> 0.2.9-1)
+[2015-08-10 23:03] [ALPM] upgraded libthai (0.1.21-1 -> 0.1.22-1)
+[2015-08-10 23:03] [ALPM] upgraded elfutils (0.161-3 -> 0.163-1)
+[2015-08-10 23:03] [ALPM] upgraded wayland (1.7.0-1 -> 1.8.1-1)
+[2015-08-10 23:03] [ALPM] upgraded libpciaccess (0.13.3-1 -> 0.13.4-1)
+[2015-08-10 23:03] [ALPM] upgraded libdrm (2.4.60-2 -> 2.4.62-1.1)
+[2015-08-10 23:03] [ALPM] upgraded libedit (20141030_3.1-1 -> 20150325_3.1-1)
+[2015-08-10 23:03] [ALPM] upgraded llvm-libs (3.6.0-4 -> 3.6.2-2)
+[2015-08-10 23:03] [ALPM] warning: directory permissions differ on /usr/lib/xorg/
+filesystem: 777  package: 755
+[2015-08-10 23:03] [ALPM] warning: directory permissions differ on /usr/lib/xorg/modules/
+filesystem: 777  package: 755
+[2015-08-10 23:03] [ALPM] upgraded mesa (10.5.2-1 -> 10.6.3-1)
+[2015-08-10 23:03] [ALPM] warning: directory permissions differ on /usr/lib/xorg/
+filesystem: 777  package: 755
+[2015-08-10 23:03] [ALPM] warning: directory permissions differ on /usr/lib/xorg/modules/
+filesystem: 777  package: 755
+[2015-08-10 23:03] [ALPM] upgraded mesa-libgl (10.5.2-1 -> 10.6.3-1)
+[2015-08-10 23:03] [ALPM] upgraded librsvg (1:2.40.9-1 -> 1:2.40.9-2)
+[2015-08-10 23:03] [ALPM] upgraded gtk2 (2.24.27-1 -> 2.24.28-1)
+[2015-08-10 23:03] [ALPM] installed mozilla-common (1.4-4)
+[2015-08-10 23:03] [ALPM-SCRIPTLET] relogin or source /etc/profile.d/mozilla-common.sh
+[2015-08-10 23:03] [ALPM] upgraded libxt (1.1.4-1 -> 1.1.5-1)
+[2015-08-10 23:03] [ALPM] installed mime-types (9-1)
+[2015-08-10 23:03] [ALPM] upgraded dbus-glib (0.102-2 -> 0.104-1)
+[2015-08-10 23:03] [ALPM] installed libvpx (1.4.0-2)
+[2015-08-10 23:03] [ALPM] upgraded icu (54.1-1 -> 55.1-1)
+[2015-08-10 23:03] [ALPM] upgraded sqlite (3.8.8.3-1 -> 3.8.11.1-1)
+[2015-08-10 23:03] [ALPM] upgraded nss (3.18-3 -> 3.19.2-2)
+[2015-08-10 23:03] [ALPM] installed hunspell (1.3.3-1)
+[2015-08-10 23:03] [ALPM] installed firefox (39.0.3-1)
+[2015-08-10 23:03] [ALPM] upgraded adwaita-icon-theme (3.14.1-1 -> 3.16.2.1-1)
+[2015-08-10 23:03] [ALPM] upgraded archlinux-keyring (20150212-1 -> 20150605-1)
+[2015-08-10 23:03] [ALPM] upgraded at-spi2-core (2.14.1-1 -> 2.16.0-1)
+[2015-08-10 23:03] [ALPM] upgraded at-spi2-atk (2.14.1-1 -> 2.16.0-1)
+[2015-08-10 23:03] [ALPM] upgraded audacious-plugins (3.5.2-2 -> 3.6.2-1)
+[2015-08-10 23:03] [ALPM] upgraded gnome-icon-theme-symbolic (3.12.0-2 -> 3.12.0-3)
+[2015-08-10 23:03] [ALPM] upgraded gnome-icon-theme (3.12.0-2 -> 3.12.0-3)
+[2015-08-10 23:03] [ALPM] upgraded audacious (3.5.2-2 -> 3.6.2-1)
+[2015-08-10 23:04] [ALPM] upgraded binutils (2.25-1 -> 2.25.1-1)
+[2015-08-10 23:04] [ALPM] upgraded ca-certificates-utils (20140923-9 -> 20150402-1)
+[2015-08-10 23:04] [ALPM] upgraded ca-certificates-mozilla (3.18-3 -> 3.19.2-2)
+[2015-08-10 23:04] [ALPM] upgraded ca-certificates (20140923-9 -> 20150402-1)
+[2015-08-10 23:04] [ALPM] upgraded libtool (2.4.6-1 -> 2.4.6-3)
+[2015-08-10 23:04] [ALPM] upgraded libvorbis (1.3.4-1 -> 1.3.5-1)
+[2015-08-10 23:04] [ALPM] upgraded libpulse (6.0-1 -> 6.0-2)
+[2015-08-10 23:04] [ALPM] upgraded speech-dispatcher (0.8.1-1 -> 0.8.3-5)
+[2015-08-10 23:04] [ALPM] upgraded pciutils (3.3.0-1 -> 3.3.1-1)
+[2015-08-10 23:04] [ALPM] upgraded libsecret (0.18-1 -> 0.18.3-1)
+[2015-08-10 23:04] [ALPM] installed perl-ipc-system-simple (1.25-1)
+[2015-08-10 23:04] [ALPM] installed perl-file-basedir (0.07-1)
+[2015-08-10 23:04] [ALPM] upgraded libfontenc (1.1.2-1 -> 1.1.3-1)
+[2015-08-10 23:04] [ALPM] warning: /etc/chromium/default saved as /etc/chromium/default.pacsave
+[2015-08-10 23:04] [ALPM] upgraded chromium (41.0.2272.118-1 -> 44.0.2403.130-1)
+[2015-08-10 23:04] [ALPM-SCRIPTLET] :: This Chromium package no longer supports custom flags passed via the
+[2015-08-10 23:04] [ALPM-SCRIPTLET]    /etc/chromium/default file (or any other files under /etc/chromium/).
+[2015-08-10 23:04] [ALPM-SCRIPTLET] 
+[2015-08-10 23:04] [ALPM-SCRIPTLET]    The new /usr/bin/chromium launcher script will automatically detect
+[2015-08-10 23:04] [ALPM-SCRIPTLET]    Pepper Flash (if installed) and pass the correct flags to Chromium.
+[2015-08-10 23:04] [ALPM-SCRIPTLET] 
+[2015-08-10 23:04] [ALPM-SCRIPTLET]    If you need to pass extra command-line arguments to Chromium, you
+[2015-08-10 23:04] [ALPM-SCRIPTLET]    can put them in a "chromium-flags.conf" file under $HOME/.config/
+[2015-08-10 23:04] [ALPM-SCRIPTLET]    (or $XDG_CONFIG_HOME). Arguments are split on whitespace and shell
+[2015-08-10 23:04] [ALPM-SCRIPTLET]    quoting rules apply but no further parsing is performed.
+[2015-08-10 23:04] [ALPM] upgraded lcms2 (2.6-1 -> 2.7-1)
+[2015-08-10 23:04] [ALPM] upgraded libgusb (0.2.4-1 -> 0.2.6-1)
+[2015-08-10 23:04] [ALPM] upgraded polkit (0.112-2 -> 0.112-4)
+[2015-08-10 23:04] [ALPM] upgraded dconf (0.22.0-1 -> 0.24.0-1)
+[2015-08-10 23:04] [ALPM] installed libgudev (230-1)
+[2015-08-10 23:04] [ALPM] upgraded colord (1.2.9-2 -> 1.2.11-1)
+[2015-08-10 23:04] [ALPM] upgraded device-mapper (2.02.116-1 -> 2.02.125-1)
+[2015-08-10 23:04] [ALPM] upgraded cryptsetup (1.6.6-1 -> 1.6.7-1)
+[2015-08-10 23:04] [ALPM] upgraded libssh2 (1.4.3-2 -> 1.6.0-1)
+[2015-08-10 23:04] [ALPM] upgraded curl (7.41.0-1 -> 7.43.0-1)
+[2015-08-10 23:04] [ALPM] upgraded iproute2 (3.19.0-1 -> 4.0.0-2)
+[2015-08-10 23:04] [ALPM] upgraded dhclient (4.3.2-1 -> 4.3.2-2)
+[2015-08-10 23:04] [ALPM] upgraded dhcpcd (6.8.1-1 -> 6.9.1-1)
+[2015-08-10 23:04] [ALPM] upgraded dialog (1:1.2_20150225-1 -> 1:1.2_20150528-1)
+[2015-08-10 23:04] [ALPM] upgraded dnssec-anchors (20140629-1 -> 20150403-1)
+[2015-08-10 23:04] [ALPM] upgraded poppler (0.31.0-1 -> 0.33.0-1)
+[2015-08-10 23:04] [ALPM] upgraded poppler-glib (0.31.0-1 -> 0.33.0-1)
+[2015-08-10 23:04] [ALPM] upgraded epdfview (0.1.8-5 -> 0.1.8-6)
+[2015-08-10 23:04] [ALPM] upgraded ethtool (1:3.18-1 -> 1:4.0-1)
+[2015-08-10 23:04] [ALPM] upgraded perl-uri (1.67-1 -> 1.69-1)
+[2015-08-10 23:04] [ALPM] installed libepoxy (1.3.1-1)
+[2015-08-10 23:04] [ALPM] upgraded libproxy (0.4.11-5 -> 0.4.11-6)
+[2015-08-10 23:04] [ALPM] upgraded gsettings-desktop-schemas (3.14.1-1 -> 3.16.1-1)
+[2015-08-10 23:04] [ALPM] upgraded glib-networking (2.42.1-1 -> 2.44.0-3)
+[2015-08-10 23:04] [ALPM] upgraded libsoup (2.48.1-1 -> 2.50.0-1)
+[2015-08-10 23:04] [ALPM] upgraded rest (0.7.92-1 -> 0.7.93-1)
+[2015-08-10 23:04] [ALPM] upgraded xkeyboard-config (2.14-1 -> 2.15-1)
+[2015-08-10 23:04] [ALPM] upgraded gtk3 (3.14.9-1 -> 3.16.6-1)
+[2015-08-10 23:04] [ALPM] upgraded xfconf (4.12.0-1 -> 4.12.0-2)
+[2015-08-10 23:04] [ALPM] upgraded exo (0.10.4-3 -> 0.10.6-1)
+[2015-08-10 23:04] [ALPM] upgraded file (5.22-1 -> 5.24-1)
+[2015-08-10 23:04] [ALPM] installed zip (3.0-6)
+[2015-08-10 23:04] [ALPM] installed unzip (6.0-10)
+[2015-08-10 23:04] [ALPM] upgraded file-roller (3.14.2-2 -> 3.16.3-1)
+[2015-08-10 23:04] [ALPM] upgraded fuse (2.9.3-2 -> 2.9.4-1)
+[2015-08-10 23:04] [ALPM] upgraded mpfr (3.1.2.p11-1 -> 3.1.3.p4-1)
+[2015-08-10 23:04] [ALPM] upgraded gawk (4.1.1-1 -> 4.1.3-1)
+[2015-08-10 23:04] [ALPM] upgraded gcc (4.9.2-2 -> 5.2.0-1)
+[2015-08-10 23:04] [ALPM] upgraded perl-error (0.17023-1 -> 0.17024-1)
+[2015-08-10 23:04] [ALPM] upgraded git (2.3.5-1 -> 2.5.0-1)
+[2015-08-10 23:04] [ALPM] upgraded gnome-themes-standard (3.14.2.3-1 -> 3.16.2-1)
+[2015-08-10 23:04] [ALPM] upgraded npth (1.1-1 -> 1.2-1)
+[2015-08-10 23:04] [ALPM] upgraded libksba (1.3.2-1 -> 1.3.3-1)
+[2015-08-10 23:04] [ALPM] upgraded libassuan (2.1.3-1 -> 2.2.0-1)
+[2015-08-10 23:04] [ALPM] upgraded pinentry (0.9.0-1 -> 0.9.1-1)
+[2015-08-10 23:04] [ALPM] upgraded gnupg (2.1.2-3 -> 2.1.6-1)
+[2015-08-10 23:04] [ALPM] installed gobject-introspection-runtime (1.44.0-1)
+[2015-08-10 23:04] [ALPM] upgraded python2 (2.7.9-1 -> 2.7.10-1)
+[2015-08-10 23:04] [ALPM] installed python2-markupsafe (0.23-2)
+[2015-08-10 23:04] [ALPM] installed python2-beaker (1.7.0-2)
+[2015-08-10 23:04] [ALPM] installed python2-mako (1.0.1-1)
+[2015-08-10 23:04] [ALPM] upgraded gobject-introspection (1.42.0-1 -> 1.44.0-1)
+[2015-08-10 23:04] [ALPM] upgraded gpgme (1.5.3-1 -> 1.5.4-1)
+[2015-08-10 23:04] [ALPM] upgraded gstreamer0.10-good (0.10.31-6 -> 0.10.31-8)
+[2015-08-10 23:04] [ALPM] upgraded wavpack (4.70.0-2 -> 4.75.0-1)
+[2015-08-10 23:04] [ALPM] upgraded v4l-utils (1.6.2-1 -> 1.6.3-1)
+[2015-08-10 23:04] [ALPM] upgraded libraw1394 (2.1.0-2 -> 2.1.1-1)
+[2015-08-10 23:04] [ALPM] upgraded imlib2 (1.4.6-3 -> 1.4.7-1)
+[2015-08-10 23:04] [ALPM] upgraded speexdsp (1.2rc3-1 -> 1.2rc3-2.1)
+[2015-08-10 23:04] [ALPM-SCRIPTLET] /tmp/alpm_7Xehn2/.INSTALL: line 18: usr/sbin/gconfpkg: No such file or directory
+[2015-08-10 23:05] [ALPM] upgraded gstreamer0.10-good-plugins (0.10.31-6 -> 0.10.31-8)
+[2015-08-10 23:05] [ALPM-SCRIPTLET] /tmp/alpm_sUa1B8/.INSTALL: line 4: usr/sbin/gconfpkg: No such file or directory
+[2015-08-10 23:05] [ALPM] upgraded udisks2 (2.1.5-1 -> 2.1.6-1)
+[2015-08-10 23:05] [ALPM] upgraded libbluray (0.7.0-1 -> 0.8.1-1)
+[2015-08-10 23:05] [ALPM] upgraded gvfs (1.22.3-2 -> 1.24.1-2)
+[2015-08-10 23:05] [ALPM] upgraded inetutils (1.9.2-2 -> 1.9.4-1)
+[2015-08-10 23:05] [ALPM] upgraded iputils (20121221-3 -> 20140519.fad11dc-1)
+[2015-08-10 23:05] [ALPM] upgraded iso-codes (3.57-1 -> 3.60-1)
+[2015-08-10 23:05] [ALPM] upgraded libevdev (1.4-1 -> 1.4.3-1)
+[2015-08-10 23:05] [ALPM] upgraded libplist (1.12-1 -> 1.12-2)
+[2015-08-10 23:05] [ALPM] upgraded libunistring (0.9.5-1 -> 0.9.6-1)
+[2015-08-10 23:05] [ALPM] upgraded libvisual (0.4.0-5 -> 0.4.0-6)
+[2015-08-10 23:05] [ALPM] upgraded libxaw (1.0.12-1 -> 1.0.13-1)
+[2015-08-10 23:05] [ALPM] upgraded libxkbfile (1.0.8-2 -> 1.0.9-1)
+[2015-08-10 23:05] [ALPM] warning: /etc/lightdm/lightdm.conf installed as /etc/lightdm/lightdm.conf.pacnew
+[2015-08-10 23:05] [ALPM] warning: directory permissions differ on /var/lib/lightdm/
+filesystem: 770  package: 1770
+[2015-08-10 23:05] [ALPM] warning: directory permissions differ on /var/lib/lightdm-data/
+filesystem: 770  package: 1770
+[2015-08-10 23:05] [ALPM] warning: directory permissions differ on /var/cache/lightdm/
+filesystem: 755  package: 1755
+[2015-08-10 23:05] [ALPM] upgraded lightdm (1:1.14.0-1 -> 1:1.14.2-1)
+[2015-08-10 23:05] [ALPM] warning: /etc/lightdm/lightdm-gtk-greeter.conf installed as /etc/lightdm/lightdm-gtk-greeter.conf.pacnew
+[2015-08-10 23:05] [ALPM] upgraded lightdm-gtk-greeter (1:2.0.0-2 -> 1:2.0.1-2)
+[2015-08-10 23:05] [ALPM] upgraded lm_sensors (3.3.5-1 -> 3.4.0-1)
+[2015-08-10 23:05] [ALPM] upgraded logrotate (3.8.9-1 -> 3.9.1-1)
+[2015-08-10 23:05] [ALPM] upgraded lvm2 (2.02.116-1 -> 2.02.125-1)
+[2015-08-10 23:05] [ALPM] upgraded man-pages (3.82-1 -> 4.01-1)
+[2015-08-10 23:05] [ALPM] upgraded mdadm (3.3.2-1 -> 3.3.2-2)
+[2015-08-10 23:05] [ALPM] upgraded nano (2.4.0-1 -> 2.4.2-1)
+[2015-08-10 23:05] [ALPM] upgraded openresolv (3.6.1-1 -> 3.7.0-1)
+[2015-08-10 23:05] [ALPM] upgraded netctl (1.10-1 -> 1.11-1)
+[2015-08-10 23:05] [ALPM] upgraded openssh (6.8p1-2 -> 6.9p1-2)
+[2015-08-10 23:05] [ALPM] upgraded orage (4.10.0-2 -> 4.12.1-1)
+[2015-08-10 23:05] [ALPM] upgraded p7zip (9.38.1-1 -> 9.38.1-3)
+[2015-08-10 23:05] [ALPM-SCRIPTLET] :: The 7zFM graphical frontend is no longer included in this package.
+[2015-08-10 23:05] [ALPM-SCRIPTLET]    If you used it, consider installing one of the following packages:
+[2015-08-10 23:05] [ALPM-SCRIPTLET]    1) file-roller, 2) engrampa, 3) kdeutils-ark.
+[2015-08-10 23:05] [ALPM] upgraded pacman-mirrorlist (20150331-1 -> 20150715-1)
+[2015-08-10 23:05] [ALPM] upgraded pacman (4.2.1-1 -> 4.2.1-2)
+[2015-08-10 23:05] [ALPM] upgraded ppp (2.4.7-1 -> 2.4.7-2)
+[2015-08-10 23:05] [ALPM] upgraded tdb (1.3.4-1 -> 1.3.6-1)
+[2015-08-10 23:05] [ALPM] upgraded pulseaudio (6.0-1 -> 6.0-2)
+[2015-08-10 23:05] [ALPM-SCRIPTLET] >>> Many PulseAudio modules with additional dependencies have been split into
+[2015-08-10 23:05] [ALPM-SCRIPTLET]     separate packages. Please check the pulseaudio-* packages and reinstall
+[2015-08-10 23:05] [ALPM-SCRIPTLET]     what you need.
+[2015-08-10 23:05] [ALPM] upgraded pygobject-devel (3.14.0-2 -> 3.16.2-1)
+[2015-08-10 23:05] [ALPM] upgraded python-gobject (3.14.0-2 -> 3.16.2-1)
+[2015-08-10 23:05] [ALPM] upgraded run-parts (4.4-1 -> 4.5.1-1)
+[2015-08-10 23:05] [ALPM] upgraded s-nail (14.7.11-1 -> 14.8.4-1)
+[2015-08-10 23:05] [ALPM] warning: /etc/sudoers installed as /etc/sudoers.pacnew
+[2015-08-10 23:05] [ALPM] upgraded sudo (1.8.13-1 -> 1.8.14.p3-2)
+[2015-08-10 23:05] [ALPM] upgraded systemd-sysvcompat (218-2 -> 224-1)
+[2015-08-10 23:05] [ALPM] upgraded thunar (1.6.6-2 -> 1.6.10-2)
+[2015-08-10 23:05] [ALPM] warning: directory permissions differ on /usr/lib/xorg/
+filesystem: 777  package: 755
+[2015-08-10 23:05] [ALPM] warning: directory permissions differ on /usr/lib/xorg/modules/
+filesystem: 777  package: 755
+[2015-08-10 23:05] [ALPM] upgraded tigervnc (1.4.2-1 -> 1.5.0-1)
+[2015-08-10 23:05] [ALPM] upgraded upower (0.99.2-2 -> 0.99.3-1)
+[2015-08-10 23:05] [ALPM] warning: directory permissions differ on /var/lib/ex/
+filesystem: 777  package: 1777
+[2015-08-10 23:05] [ALPM] upgraded vi (1:050325-4 -> 1:070224-1)
+[2015-08-10 23:05] [ALPM] upgraded vte-common (0.38.3-1 -> 0.40.2-1)
+[2015-08-10 23:05] [ALPM] upgraded wpa_supplicant (2.3-1 -> 1:2.3-1)
+[2015-08-10 23:05] [ALPM] upgraded xfce4-cpufreq-plugin (1.1.1-2 -> 1.1.2-1)
+[2015-08-10 23:05] [ALPM] upgraded xfce4-mailwatch-plugin (1.2.0-5 -> 1.2.0-6)
+[2015-08-10 23:05] [ALPM] upgraded xfce4-notes-plugin (1.7.7-7 -> 1.8.1-1)
+[2015-08-10 23:05] [ALPM] upgraded xfce4-verve-plugin (1.0.1-2 -> 1.1.0-1)
+[2015-08-10 23:05] [ALPM] upgraded xfce4-weather-plugin (0.8.5-2 -> 0.8.6-1)
+[2015-08-10 23:05] [ALPM] upgraded xfdesktop (4.12.1-2 -> 4.12.3-1)
+[2015-08-10 23:05] [ALPM] upgraded xorg-fonts-misc (1.0.3-3 -> 1.0.3-4)
+[2015-08-10 23:05] [ALPM-SCRIPTLET] Updating font cache... done.
+[2015-08-10 23:05] [ALPM] upgraded xorg-setxkbmap (1.3.0-2 -> 1.3.1-1)
+[2015-08-10 23:05] [ALPM] upgraded xorg-xdpyinfo (1.3.1-1 -> 1.3.2-1)
+[2015-08-10 23:05] [ALPM] upgraded xorg-xdriinfo (1.0.4-4 -> 1.0.5-1)
+[2015-08-10 23:05] [ALPM] upgraded xorg-xev (1.2.1-2 -> 1.2.2-1)
+[2015-08-10 23:05] [ALPM] upgraded xorg-xlsatoms (1.1.1-2 -> 1.1.2-1)
+[2015-08-10 23:05] [ALPM] upgraded xorg-xvinfo (1.1.2-2 -> 1.1.3-1)
+[2015-08-10 23:05] [ALPM] upgraded yaourt (1.5-1 -> 1.6-1)
+[2015-08-10 23:05] [ALPM-SCRIPTLET] ldconfig: libraries libjpeg.so and libjpeg.so_tegra in directory /usr/lib have same soname but different type.
+[2015-08-10 23:05] [ALPM] transaction completed
+[2015-08-10 23:45] [PACMAN] Running 'pacman -S emacs'
+[2015-08-10 23:46] [ALPM] transaction started
+[2015-08-10 23:46] [ALPM] installed libotf (0.9.13-2)
+[2015-08-10 23:46] [ALPM] installed m17n-db (1.7.0-1)
+[2015-08-10 23:46] [ALPM] installed fribidi (0.19.7-1)
+[2015-08-10 23:46] [ALPM] installed gd (2.1.1-2)
+[2015-08-10 23:46] [ALPM] installed m17n-lib (1.7.0-1)
+[2015-08-10 23:46] [ALPM] installed liblqr (0.4.2-1)
+[2015-08-10 23:46] [ALPM] installed imagemagick (6.9.1.10-1)
+[2015-08-10 23:46] [ALPM] installed emacs (24.5-1)
+[2015-08-10 23:46] [ALPM] transaction completed
+[2015-08-10 23:49] [PACMAN] Running 'pacman -Sy yaourt'
+[2015-08-10 23:49] [PACMAN] synchronizing package lists
+[2015-08-10 23:49] [ALPM] transaction started
+[2015-08-10 23:49] [ALPM] reinstalled yaourt (1.6-1)
+[2015-08-10 23:49] [ALPM] transaction completed
+[2015-08-10 23:49] [PACMAN] Running 'pacman -Sy yaourt-gui'
+[2015-08-10 23:49] [PACMAN] synchronizing package lists
+[2015-08-10 23:50] [PACMAN] Running 'pacman --color auto -Sy'
+[2015-08-10 23:50] [PACMAN] synchronizing package lists
+[2015-08-10 23:50] [PACMAN] Running 'pacman --color auto -S --asdeps --needed community/lsb-release'
+[2015-08-10 23:51] [ALPM] transaction started
+[2015-08-10 23:51] [ALPM] installed lsb-release (1.4-14)
+[2015-08-10 23:51] [ALPM] transaction completed
+[2015-08-10 23:51] [PACMAN] Running 'pacman --color auto -U /tmp/yaourt-tmp-test/PKGDEST.QYR/yaourt-gui-1.3-4-any.pkg.tar.xz'
+[2015-08-10 23:51] [ALPM] transaction started
+[2015-08-10 23:51] [ALPM] installed yaourt-gui (1.3-4)
+[2015-08-10 23:51] [ALPM-SCRIPTLET] 
+[2015-08-10 23:51] [ALPM-SCRIPTLET] ==> To modify Yaourt-Gui logo edit file: /usr/share/yaourt-gui/yglogo
+[2015-08-10 23:51] [ALPM-SCRIPTLET] ==> For Proxy settings add in your ~/.bashrc or /etc/bash.bashrc:
+[2015-08-10 23:51] [ALPM-SCRIPTLET] if [ -f /etc/profile.d/proxy.sh ]; then
+[2015-08-10 23:51] [ALPM-SCRIPTLET] 	source /etc/profile.d/proxy.sh
+[2015-08-10 23:51] [ALPM-SCRIPTLET] else
+[2015-08-10 23:51] [ALPM-SCRIPTLET] 	unset http_proxy
+[2015-08-10 23:51] [ALPM-SCRIPTLET] 	unset https_proxy
+[2015-08-10 23:51] [ALPM-SCRIPTLET] 	unset ftp_proxy
+[2015-08-10 23:51] [ALPM-SCRIPTLET] fi
+[2015-08-10 23:51] [ALPM-SCRIPTLET] 
+[2015-08-10 23:51] [ALPM-SCRIPTLET] ==> and add in /etc/sudoers:
+[2015-08-10 23:51] [ALPM-SCRIPTLET] Defaults env_keep = http_proxy https_proxy ftp_proxy
+[2015-08-10 23:51] [ALPM-SCRIPTLET] 
+[2015-08-10 23:51] [ALPM] transaction completed
+[2015-08-10 23:55] [PACMAN] Running 'pacman --color auto -S --asdeps --needed extra/qt4'
+[2015-08-10 23:56] [ALPM] transaction started
+[2015-08-10 23:56] [ALPM] installed libmng (2.0.3-1)
+[2015-08-10 23:56] [ALPM] installed qt4 (4.8.7-2)
+[2015-08-10 23:56] [ALPM] transaction completed
+[2015-08-10 23:58] [PACMAN] Running 'pacman --color auto -S --asdeps --needed community/asciidoc'
+[2015-08-10 23:58] [ALPM] transaction started
+[2015-08-10 23:58] [ALPM] installed libxslt (1.1.28-3.1)
+[2015-08-10 23:58] [ALPM] installed docbook-xml (4.5-6)
+[2015-08-10 23:58] [ALPM] installed docbook-xsl (1.78.1-1)
+[2015-08-10 23:58] [ALPM] installed asciidoc (8.6.9-2)
+[2015-08-10 23:58] [ALPM] transaction completed
+[2015-08-11 10:04] [PACMAN] Running 'pacman --color auto -S extra/network-manager-applet'
+[2015-08-11 10:06] [PACMAN] Running 'pacman --color auto -S extra/network-manager-applet'
+[2015-08-11 10:06] [ALPM] transaction started
+[2015-08-11 10:06] [ALPM] installed libnm-glib (1.0.4-1)
+[2015-08-11 10:06] [ALPM] installed mobile-broadband-provider-info (20120614-2)
+[2015-08-11 10:06] [ALPM] installed nm-connection-editor (1.0.4-1)
+[2015-08-11 10:06] [ALPM] installed libmm-glib (1.4.10-2)
+[2015-08-11 10:06] [ALPM] installed network-manager-applet (1.0.4-1)
+[2015-08-11 10:06] [ALPM] transaction completed
+[2015-08-11 10:08] [PACMAN] Running 'pacman --color auto -S extra/networkmanager'
+[2015-08-11 10:08] [PACMAN] Running 'pacman --color auto -S extra/networkmanager'
+[2015-08-11 10:08] [ALPM] transaction started
+[2015-08-11 10:08] [ALPM] installed slang (2.3.0-1)
+[2015-08-11 10:08] [ALPM] installed libnewt (0.52.18-2)
+[2015-08-11 10:08] [ALPM] installed libndp (1.5-1)
+[2015-08-11 10:08] [ALPM] installed jansson (2.7-1)
+[2015-08-11 10:08] [ALPM] installed libsodium (1.0.3-1)
+[2015-08-11 10:08] [ALPM] installed libpgm (5.2.122-2)
+[2015-08-11 10:08] [ALPM] installed zeromq (4.1.2-3)
+[2015-08-11 10:08] [ALPM] installed libteam (1.17-1)
+[2015-08-11 10:08] [ALPM] installed networkmanager (1.0.4-1)
+[2015-08-11 10:08] [ALPM] transaction completed
+[2015-08-11 13:28] [PACMAN] Running 'pacman --color auto -S extra/vim'
+[2015-08-11 13:29] [ALPM] transaction started
+[2015-08-11 13:29] [ALPM] installed vim-runtime (7.4.778-1)
+[2015-08-11 13:29] [ALPM] installed libyaml (0.1.6-1)
+[2015-08-11 13:29] [ALPM] installed ruby (2.2.2-1)
+[2015-08-11 13:29] [ALPM-SCRIPTLET] The default location of gem installs is $HOME/.gem/ruby
+[2015-08-11 13:29] [ALPM-SCRIPTLET] Add the following line to your PATH if you plan to install using gem
+[2015-08-11 13:29] [ALPM-SCRIPTLET] $(ruby -rubygems -e "puts Gem.user_dir")/bin
+[2015-08-11 13:29] [ALPM-SCRIPTLET] If you want to install to the system wide location, you must either:
+[2015-08-11 13:29] [ALPM-SCRIPTLET] edit /etc/gemrc or run gem with the --no-user-install flag.
+[2015-08-11 13:29] [ALPM] installed lua (5.3.1-1)
+[2015-08-11 13:29] [ALPM] installed vim (7.4.778-1)
+[2015-08-11 13:29] [ALPM] transaction completed
+[2015-08-11 13:33] [PACMAN] Running 'pacman --color auto -S extra/xorg-xmodmap'
+[2015-08-11 13:33] [ALPM] transaction started
+[2015-08-11 13:33] [ALPM] installed xorg-xmodmap (1.0.9-1)
+[2015-08-11 13:33] [ALPM] transaction completed
+[2015-08-11 13:33] [PACMAN] Running 'pacman --color auto -S community/xkeycaps'
+[2015-08-11 13:33] [ALPM] transaction started
+[2015-08-11 13:33] [ALPM] installed xkeycaps (2.46-7)
+[2015-08-11 13:33] [ALPM] transaction completed

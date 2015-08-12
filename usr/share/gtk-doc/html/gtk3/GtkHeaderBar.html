@@ -8,7 +8,7 @@
 <link rel="up" href="LayoutContainers.html" title="Layout Containers">
 <link rel="prev" href="GtkActionBar.html" title="GtkActionBar">
 <link rel="next" href="GtkOverlay.html" title="GtkOverlay">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -236,7 +236,7 @@
 <tr>
 <td class="property_type"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
 <td class="property_name"><a class="link" href="GtkHeaderBar.html#GtkHeaderBar--c-position" title="The “position” child property">position</a></td>
-<td class="property_flags">Read</td>
+<td class="property_flags">Read / Write</td>
 </tr>
 </tbody>
 </table></div>
@@ -295,11 +295,10 @@ maximize and close buttons, or the window icon.</p>
 gtk_header_bar_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Creates a new <a class="link" href="GtkHeaderBar.html" title="GtkHeaderBar"><span class="type">GtkHeaderBar</span></a> widget.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.2.5"></a><h4>Returns</h4>
+<a name="id-1.3.7.11.11.2.5"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkHeaderBar.html" title="GtkHeaderBar"><span class="type">GtkHeaderBar</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -311,7 +310,7 @@ gtk_header_bar_set_title (<em class="parameter"><code><a class="link" href="GtkH
 identify the current view. A good title should not include the
 application name.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.3.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.3.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -332,7 +331,7 @@ application name.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -341,7 +340,7 @@ application name.</p>
 gtk_header_bar_get_title (<em class="parameter"><code><a class="link" href="GtkHeaderBar.html" title="GtkHeaderBar"><span class="type">GtkHeaderBar</span></a> *bar</code></em>);</pre>
 <p>Retrieves the title of the header. See <a class="link" href="GtkHeaderBar.html#gtk-header-bar-set-title" title="gtk_header_bar_set_title ()"><code class="function">gtk_header_bar_set_title()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.4.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.4.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -356,13 +355,12 @@ gtk_header_bar_get_title (<em class="parameter"><code><a class="link" href="GtkH
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.4.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.11.11.4.6"></a><h4>Returns</h4>
 <p> the title of the header, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none has
 been set explicitly. The returned string is owned by the widget
 and must not be modified or freed.</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -376,7 +374,7 @@ an additional detail to help him identify the current view.</p>
 even if none is currently set. If this is not desired, set the
 <a class="link" href="GtkHeaderBar.html#GtkHeaderBar--has-subtitle" title="The “has-subtitle” property"><span class="type">“has-subtitle”</span></a> property to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.5.6"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.5.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -397,7 +395,7 @@ even if none is currently set. If this is not desired, set the
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -406,7 +404,7 @@ even if none is currently set. If this is not desired, set the
 gtk_header_bar_get_subtitle (<em class="parameter"><code><a class="link" href="GtkHeaderBar.html" title="GtkHeaderBar"><span class="type">GtkHeaderBar</span></a> *bar</code></em>);</pre>
 <p>Retrieves the subtitle of the header. See <a class="link" href="GtkHeaderBar.html#gtk-header-bar-set-subtitle" title="gtk_header_bar_set_subtitle ()"><code class="function">gtk_header_bar_set_subtitle()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.6.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.6.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -421,13 +419,12 @@ gtk_header_bar_get_subtitle (<em class="parameter"><code><a class="link" href="G
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.6.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.11.11.6.6"></a><h4>Returns</h4>
 <p> the subtitle of the header, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none has
 been set explicitly. The returned string is owned by the widget
 and must not be modified or freed.</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -438,7 +435,7 @@ gtk_header_bar_set_has_subtitle (<em class="parameter"><code><a class="link" hre
 <p>Sets whether the header bar should reserve space
 for a subtitle, even if none is currently set.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.7.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -459,7 +456,7 @@ for a subtitle, even if none is currently set.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -469,7 +466,7 @@ gtk_header_bar_get_has_subtitle (<em class="parameter"><code><a class="link" hre
 <p>Retrieves whether the header bar reserves space for
 a subtitle, regardless if one is currently set or not.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.8.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.8.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -484,12 +481,11 @@ a subtitle, regardless if one is currently set or not.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.8.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.11.11.8.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the header bar reserves space
 for a subtitle</p>
-<p></p>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -506,7 +502,7 @@ style classes.</p>
 <p>You should set the custom title to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, for the header title
 label to be visible again.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.9.7"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.9.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -527,7 +523,7 @@ label to be visible again.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -537,7 +533,7 @@ gtk_header_bar_get_custom_title (<em class="parameter"><code><a class="link" hre
 <p>Retrieves the custom title widget of the header. See
 <a class="link" href="GtkHeaderBar.html#gtk-header-bar-set-custom-title" title="gtk_header_bar_set_custom_title ()"><code class="function">gtk_header_bar_set_custom_title()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.10.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.10.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -552,12 +548,12 @@ gtk_header_bar_get_custom_title (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.10.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.11.11.10.6"></a><h4>Returns</h4>
 <p> the custom title widget
 of the header, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none has been set explicitly. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -571,7 +567,7 @@ gtk_header_bar_pack_start (<em class="parameter"><code><a class="link" href="Gtk
 start of the <em class="parameter"><code>bar</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.11.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -593,7 +589,7 @@ start of the <em class="parameter"><code>bar</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -607,7 +603,7 @@ gtk_header_bar_pack_end (<em class="parameter"><code><a class="link" href="GtkHe
 end of the <em class="parameter"><code>bar</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.12.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.12.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -629,7 +625,7 @@ end of the <em class="parameter"><code>bar</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -640,7 +636,7 @@ gtk_header_bar_set_show_close_button (<em class="parameter"><code><a class="link
 <p>Sets whether this header bar shows the standard window decorations,
 including close, maximize, and minimize.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.13.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.13.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -661,7 +657,7 @@ including close, maximize, and minimize.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -671,7 +667,7 @@ gtk_header_bar_get_show_close_button (<em class="parameter"><code><a class="link
 <p>Returns whether this header bar shows the standard window
 decorations.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.14.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.14.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -686,11 +682,10 @@ decorations.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.14.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.11.11.14.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the decorations are shown</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -713,7 +708,7 @@ for the fallback app menu).</p>
 <p>For example, “menu:minimize,maximize,close” specifies a menu
 on the left, and minimize, maximize and close buttons on the right.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.15.8"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.15.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -735,7 +730,7 @@ unset the layout. </p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -745,7 +740,7 @@ gtk_header_bar_get_decoration_layout (<em class="parameter"><code><a class="link
 <p>Gets the decoration layout set with
 <a class="link" href="GtkHeaderBar.html#gtk-header-bar-set-decoration-layout" title="gtk_header_bar_set_decoration_layout ()"><code class="function">gtk_header_bar_set_decoration_layout()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.16.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.11.11.16.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -760,11 +755,10 @@ gtk_header_bar_get_decoration_layout (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.10.11.16.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.11.11.16.6"></a><h4>Returns</h4>
 <p> the decoration layout</p>
-<p></p>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -793,7 +787,7 @@ is used.</p>
 about the format of this string.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -802,7 +796,7 @@ about the format of this string.</p>
 <p>Set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <a class="link" href="GtkHeaderBar.html#GtkHeaderBar--decoration-layout" title="The “decoration-layout” property"><span class="type">“decoration-layout”</span></a> is set.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -812,7 +806,7 @@ about the format of this string.</p>
 is currently set.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -866,7 +860,7 @@ shown if the window can't be closed).</p>
 <a name="GtkHeaderBar--c-position"></a><h3>The <code class="literal">“position”</code> child property</h3>
 <pre class="programlisting">  “position”                 <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
 <p>The index of the child in the parent.</p>
-<p>Flags: Read</p>
+<p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: 0</p>
 </div>
@@ -877,7 +871,6 @@ shown if the window can't be closed).</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

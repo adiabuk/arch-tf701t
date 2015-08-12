@@ -8,7 +8,7 @@
 <link rel="up" href="Printing.html" title="Printing">
 <link rel="prev" href="Printing.html" title="Printing">
 <link rel="next" href="GtkPrintContext.html" title="GtkPrintContext">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -566,7 +566,7 @@
 </div>
 <div class="refsect1">
 <a name="gtk3-High-level-Printing-API.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GInterface
+<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> GtkPrintOperationPreview
     <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
     <span class="lineart">╰──</span> GtkPrintOperation
@@ -702,9 +702,8 @@ gtk_print_operation_new (<em class="parameter"><code><span class="type">void</sp
 <div class="refsect3">
 <a name="id-1.3.17.2.15.2.5"></a><h4>Returns</h4>
 <p> a new <a class="link" href="gtk3-High-level-Printing-API.html#GtkPrintOperation"><span class="type">GtkPrintOperation</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -737,7 +736,7 @@ some platforms may not allow asynchronous operation.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -771,7 +770,7 @@ handler. The returned <a href="https://developer.gnome.org/glib/unstable/glib-Er
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -808,7 +807,7 @@ to the <a class="link" href="gtk3-High-level-Printing-API.html#GtkPrintOperation
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -838,7 +837,7 @@ gtk_print_operation_get_default_page_setup
 <p> the default page setup. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -873,7 +872,7 @@ see <a class="link" href="gtk3-High-level-Printing-API.html#gtk-print-operation-
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -906,7 +905,7 @@ gtk_print_operation_get_print_settings
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -940,7 +939,7 @@ numbering successive print jobs.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -980,7 +979,7 @@ will be for page <em class="parameter"><code>n_pages</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1014,9 +1013,8 @@ This is typically used to track the progress of print operation.</p>
 <div class="refsect3">
 <a name="id-1.3.17.2.15.11.7"></a><h4>Returns</h4>
 <p> the number of pages that will be printed</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1050,7 +1048,7 @@ the user will be able to select to print only the current page.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1087,7 +1085,7 @@ imageable area (i.e. inside the margins).</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1121,7 +1119,7 @@ units of <em class="parameter"><code>unit</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1159,7 +1157,7 @@ of printers in the print dialog.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1192,7 +1190,7 @@ progress dialog during the print operation.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1229,7 +1227,7 @@ not be enabled unless needed.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1261,7 +1259,7 @@ gtk_print_operation_set_custom_tab_label
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1409,9 +1407,8 @@ and store them for reuse with the next print operation. A value of
 <a class="link" href="gtk3-High-level-Printing-API.html#GTK-PRINT-OPERATION-RESULT-IN-PROGRESS:CAPS"><code class="literal">GTK_PRINT_OPERATION_RESULT_IN_PROGRESS</code></a> means the operation is running
 asynchronously, and will emit the <a class="link" href="gtk3-High-level-Printing-API.html#GtkPrintOperation-done" title="The “done” signal"><span class="type">“done”</span></a> signal when
 done.</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1438,7 +1435,7 @@ operation.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1466,7 +1463,7 @@ itself.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1492,7 +1489,7 @@ be used for drawing page in another thread.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1519,9 +1516,8 @@ Also see <a class="link" href="gtk3-High-level-Printing-API.html#gtk-print-opera
 <div class="refsect3">
 <a name="id-1.3.17.2.15.23.6"></a><h4>Returns</h4>
 <p> the status of the print operation</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1552,9 +1548,8 @@ value that is suitable for programmatic use.</p>
 <a name="id-1.3.17.2.15.24.7"></a><h4>Returns</h4>
 <p> a string representation of the status
 of the print operation</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1585,9 +1580,8 @@ the operation status then tracks the print job status on the printer.</p>
 <div class="refsect3">
 <a name="id-1.3.17.2.15.25.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, if the print operation is finished.</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1619,7 +1613,7 @@ gtk_print_operation_set_support_selection
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1646,9 +1640,8 @@ gtk_print_operation_get_support_selection
 <div class="refsect3">
 <a name="id-1.3.17.2.15.27.6"></a><h4>Returns</h4>
 <p> whether the application supports print of selection</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1682,7 +1675,7 @@ will draw by <a class="link" href="gtk3-High-level-Printing-API.html#gtk-print-o
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1708,9 +1701,8 @@ gtk_print_operation_get_has_selection (<em class="parameter"><code><a class="lin
 <div class="refsect3">
 <a name="id-1.3.17.2.15.29.6"></a><h4>Returns</h4>
 <p> whether there is a selection</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1743,7 +1735,7 @@ Selected page setup is stored as default page setup in <a class="link" href="gtk
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1770,9 +1762,8 @@ gtk_print_operation_get_embed_page_setup
 <div class="refsect3">
 <a name="id-1.3.17.2.15.31.6"></a><h4>Returns</h4>
 <p> whether page setup selection combos are embedded</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1822,7 +1813,7 @@ a problem.</p>
 <p> a new <a class="link" href="GtkPageSetup.html" title="GtkPageSetup"><span class="type">GtkPageSetup</span></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1913,7 +1904,7 @@ the modified page setup. </p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1938,7 +1929,7 @@ gtk_print_operation_preview_end_preview
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1974,9 +1965,8 @@ have been selected for printing.</p>
 <div class="refsect3">
 <a name="id-1.3.17.2.15.36.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the page has been selected for printing</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2015,7 +2005,7 @@ be associated with the print context.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 </div>
 <div class="refsect1">
@@ -2404,7 +2394,7 @@ is unlikely to change). On other platforms, all actions except for
 <a class="link" href="gtk3-High-level-Printing-API.html#GTK-PRINT-OPERATION-ACTION-EXPORT:CAPS"><code class="literal">GTK_PRINT_OPERATION_ACTION_EXPORT</code></a> support asynchronous operation.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2418,7 +2408,7 @@ the user will be able to select to print only the current page.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: -1</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2429,7 +2419,7 @@ Note that this property may be ignored on some platforms.</p>
 <p>If this is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, GTK+ uses a default label.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2440,7 +2430,7 @@ Note that this property may be ignored on some platforms.</p>
 but it can be overridden on a per-page basis by connecting
 to the <a class="link" href="gtk3-High-level-Printing-API.html#GtkPrintOperation-request-page-setup" title="The “request-page-setup” signal"><span class="type">“request-page-setup”</span></a> signal.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2449,7 +2439,7 @@ to the <a class="link" href="gtk3-High-level-Printing-API.html#GtkPrintOperation
 <p>If <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, page size combo box and orientation combo box are embedded into page setup page.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2467,7 +2457,7 @@ by letting the user pick the “Print to PDF” item from the
 list of printers in the print dialog.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2478,7 +2468,7 @@ This can allow your application to print the selection.
 This is typically used to make a "Selection" button sensitive.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2492,7 +2482,7 @@ applications like eggcups). </p>
 by numbering successive print jobs.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: ""</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2516,7 +2506,7 @@ will be for page <em class="parameter"><code>n_pages</code></em>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: -1</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2533,7 +2523,7 @@ This is typically used to track the progress of print operation.</p>
 <p>Flags: Read</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: -1</p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2546,7 +2536,7 @@ print settings from a previous print operation, see
 
 <a class="link" href="gtk3-High-level-Printing-API.html#gtk-print-operation-run" title="gtk_print_operation_run ()"><code class="function">gtk_print_operation_run()</code></a>.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2557,7 +2547,7 @@ print settings from a previous print operation, see
 print operation.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2566,7 +2556,7 @@ print operation.</p>
 <p>The status of the print operation.</p>
 <p>Flags: Read</p>
 <p>Default value: GTK_PRINT_STATUS_INITIAL</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2582,7 +2572,7 @@ status e.g. in a <a class="link" href="GtkStatusbar.html" title="GtkStatusbar"><
 is suitable for programmatic use.</p>
 <p>Flags: Read</p>
 <p>Default value: ""</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2592,7 +2582,7 @@ is suitable for programmatic use.</p>
 This allows the print dialog to show a "Selection" button.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2611,7 +2601,7 @@ However, this is often implemented using polling, and should
 not be enabled unless needed.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2624,7 +2614,7 @@ are measured in units of <em class="parameter"><code>unit</code></em>
 .</p>
 <p>Flags: Read / Write</p>
 <p>Default value: GTK_UNIT_NONE</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2643,7 +2633,7 @@ Otherwise, the origin is at the top left corner of the imageable
 area (i.e. inside the margins).</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 </div>
 <div class="refsect1">
@@ -2687,7 +2677,7 @@ set the number of pages with <a class="link" href="gtk3-High-level-Printing-API.
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2737,7 +2727,7 @@ the print dialog, or <a href="https://developer.gnome.org/glib/unstable/glib-Sta
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2782,7 +2772,7 @@ later time.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2832,7 +2822,7 @@ after <a class="link" href="gtk3-High-level-Printing-API.html#GtkPrintOperation-
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2971,7 +2961,7 @@ needs.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3012,7 +3002,7 @@ been allocated in the <a class="link" href="gtk3-High-level-Printing-API.html#Gt
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3064,10 +3054,9 @@ from there.</p>
 <div class="refsect3">
 <a name="id-1.3.17.2.18.8.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if pagination is complete</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3135,10 +3124,9 @@ finished by calling <a class="link" href="gtk3-High-level-Printing-API.html#gtk-
 <div class="refsect3">
 <a name="id-1.3.17.2.18.9.9"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the listener wants to take over control of the preview</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3192,7 +3180,7 @@ done to <em class="parameter"><code>setup</code></em>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3227,7 +3215,7 @@ status.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3279,7 +3267,7 @@ itself according to this change.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3376,7 +3364,6 @@ before the first page is rendered.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

@@ -103,6 +103,14 @@
 <span class="returnvalue">GSList</span> *
 </td>
 <td class="function_name">
+<a class="link" href="SoupServer.html#soup-server-get-listeners" title="soup_server_get_listeners ()">soup_server_get_listeners</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GSList</span> *
+</td>
+<td class="function_name">
 <a class="link" href="SoupServer.html#soup-server-get-uris" title="soup_server_get_uris ()">soup_server_get_uris</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -120,6 +128,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="SoupServer.html#soup-server-is-https" title="soup_server_is_https ()">soup_server_is_https</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="SoupServer.html#soup-server-accept-iostream" title="soup_server_accept_iostream ()">soup_server_accept_iostream</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -143,12 +159,36 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="SoupServer.html#soup-server-add-early-handler" title="soup_server_add_early_handler ()">soup_server_add_early_handler</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="SoupServer.html#soup-server-remove-handler" title="soup_server_remove_handler ()">soup_server_remove_handler</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="returnvalue">GSocketAddress</span></a> *
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="SoupServer.html#SoupServerWebsocketCallback" title="SoupServerWebsocketCallback ()">*SoupServerWebsocketCallback</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="SoupServer.html#soup-server-add-websocket-handler" title="soup_server_add_websocket_handler ()">soup_server_add_websocket_handler</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GSocketAddress</span> *
 </td>
 <td class="function_name">
 <a class="link" href="SoupServer.html#soup-client-context-get-local-address" title="soup_client_context_get_local_address ()">soup_client_context_get_local_address</a> <span class="c_punctuation">()</span>
@@ -156,7 +196,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="returnvalue">GSocketAddress</span></a> *
+<span class="returnvalue">GSocketAddress</span> *
 </td>
 <td class="function_name">
 <a class="link" href="SoupServer.html#soup-client-context-get-remote-address" title="soup_client_context_get_remote_address ()">soup_client_context_get_remote_address</a> <span class="c_punctuation">()</span>
@@ -186,10 +226,18 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GSocket.html"><span class="returnvalue">GSocket</span></a> *
+<span class="returnvalue">GSocket</span> *
 </td>
 <td class="function_name">
 <a class="link" href="SoupServer.html#soup-client-context-get-gsocket" title="soup_client_context_get_gsocket ()">soup_client_context_get_gsocket</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GIOStream</span> *
+</td>
+<td class="function_name">
+<a class="link" href="SoupServer.html#soup-client-context-steal-connection" title="soup_client_context_steal_connection ()">soup_client_context_steal_connection</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -242,12 +290,12 @@
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
-<td class="property_type"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></td>
+<td class="property_type"><span class="type">GStrv</span></td>
 <td class="property_name"><a class="link" href="SoupServer.html#SoupServer--http-aliases" title="The “http-aliases” property">http-aliases</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></td>
+<td class="property_type"><span class="type">GStrv</span></td>
 <td class="property_name"><a class="link" href="SoupServer.html#SoupServer--https-aliases" title="The “https-aliases” property">https-aliases</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -287,7 +335,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> *</td>
+<span class="type">GTlsCertificate</span> *</td>
 <td class="property_name"><a class="link" href="SoupServer.html#SoupServer--tls-certificate" title="The “tls-certificate” property">tls-certificate</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
@@ -371,9 +419,9 @@
 </div>
 <div class="refsect1">
 <a name="SoupServer.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GBoxed
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> SoupClientContext
-    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    GObject
     <span class="lineart">╰──</span> SoupServer
 </pre>
 </div>
@@ -391,25 +439,58 @@ the section "<a class="link" href="libsoup-server-howto.html#soup-server-old-api
 Listening API</a>" in the server how-to documentation for
 details on the older <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> API.)</p>
 <p>To begin, create a server using <a class="link" href="SoupServer.html#soup-server-new" title="soup_server_new ()"><code class="function">soup_server_new()</code></a>. Add at least one
-handler by calling <a class="link" href="SoupServer.html#soup-server-add-handler" title="soup_server_add_handler ()"><code class="function">soup_server_add_handler()</code></a>; the handler will be
-called to process any requests underneath the path passed to
-<a class="link" href="SoupServer.html#soup-server-add-handler" title="soup_server_add_handler ()"><code class="function">soup_server_add_handler()</code></a>. (If you want all requests to go to the
-same handler, just pass "/" (or <code class="literal">NULL</code>) for the path.) Any request
-that does not match any handler will automatically be returned to
-the client with a 404 (Not Found) status.</p>
+handler by calling <a class="link" href="SoupServer.html#soup-server-add-handler" title="soup_server_add_handler ()"><code class="function">soup_server_add_handler()</code></a> or
+<a class="link" href="SoupServer.html#soup-server-add-early-handler" title="soup_server_add_early_handler ()"><code class="function">soup_server_add_early_handler()</code></a>; the handler will be called to
+process any requests underneath the path you pass. (If you want all
+requests to go to the same handler, just pass "/" (or <code class="literal">NULL</code>) for
+the path.)</p>
+<p>When a new connection is accepted (or a new request is started on
+an existing persistent connection), the <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> will emit
+<a class="link" href="SoupServer.html#SoupServer-request-started" title="The “request-started” signal"><span class="type">“request-started”</span></a> and then begin processing the request
+as described below, but note that once the message is assigned a
+<a class="link" href="SoupMessage.html#SoupMessage--status-code" title="The “status-code” property"><span class="type">“status-code”</span></a>, then callbacks after that point will be
+skipped. Note also that it is not defined when the callbacks happen
+relative to various <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> signals.</p>
+<p>Once the headers have been read, <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> will check if there is
+a <a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> (qv) covering the Request-URI; if so, and if the
+message does not contain suitable authorization, then the
+<a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> will set a status of <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-UNAUTHORIZED:CAPS"><code class="literal">SOUP_STATUS_UNAUTHORIZED</code></a> on
+the message.</p>
+<p>After checking for authorization, <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> will look for "early"
+handlers (added with <a class="link" href="SoupServer.html#soup-server-add-early-handler" title="soup_server_add_early_handler ()"><code class="function">soup_server_add_early_handler()</code></a>) matching the
+Request-URI. If one is found, it will be run; in particular, this
+can be used to connect to signals to do a streaming read of the
+request body.</p>
+<p>(At this point, if the request headers contain "<code class="literal">Expect:
+100-continue</code>", and a status code has been set, then
+<a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> will skip the remaining steps and return the response.
+If the request headers contain "<code class="literal">Expect:
+100-continue</code>" and no status code has been set,
+<a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> will return a <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-CONTINUE:CAPS"><code class="literal">SOUP_STATUS_CONTINUE</code></a> status before
+continuing.)</p>
+<p>The server will then read in the response body (if present). At
+this point, if there are no handlers at all defined for the
+Request-URI, then the server will return <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-NOT-FOUND:CAPS"><code class="literal">SOUP_STATUS_NOT_FOUND</code></a> to
+the client.</p>
+<p>Otherwise (assuming no previous step assigned a status to the
+message) any "normal" handlers (added with
+<a class="link" href="SoupServer.html#soup-server-add-handler" title="soup_server_add_handler ()"><code class="function">soup_server_add_handler()</code></a>) for the message's Request-URI will be
+run.</p>
+<p>Then, if the path has a WebSocket handler registered (and has
+not yet been assigned a status), <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> will attempt to
+validate the WebSocket handshake, filling in the response and
+setting a status of <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-SWITCHING-PROTOCOLS:CAPS"><code class="literal">SOUP_STATUS_SWITCHING_PROTOCOLS</code></a> or
+<a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-BAD-REQUEST:CAPS"><code class="literal">SOUP_STATUS_BAD_REQUEST</code></a> accordingly.</p>
+<p>If the message still has no status code at this point (and has not
+been paused with <a class="link" href="SoupServer.html#soup-server-pause-message" title="soup_server_pause_message ()"><code class="function">soup_server_pause_message()</code></a>), then it will be
+given a status of <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-INTERNAL-SERVER-ERROR:CAPS"><code class="literal">SOUP_STATUS_INTERNAL_SERVER_ERROR</code></a> (because at
+least one handler ran, but returned without assigning a status).</p>
+<p>Finally, the server will emit <a class="link" href="SoupServer.html#SoupServer-request-finished" title="The “request-finished” signal"><span class="type">“request-finished”</span></a> (or
+<a class="link" href="SoupServer.html#SoupServer-request-aborted" title="The “request-aborted” signal"><span class="type">“request-aborted”</span></a> if an I/O error occurred before
+handling was completed).</p>
 <p>If you want to handle the special "*" URI (eg, "OPTIONS *"), you
 must explicitly register a handler for "*"; the default handler
 will not be used for that case.</p>
-<p>To add authentication to some or all paths, create an appropriate
-<a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> (qv), and add it to the server via
-<a class="link" href="SoupServer.html#soup-server-add-auth-domain" title="soup_server_add_auth_domain ()"><code class="function">soup_server_add_auth_domain()</code></a>. (As with handlers, you must
-explicitly add "*" to an auth domain if you want it to be covered.)</p>
-<p>Additional processing options are available via <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>'s
-signals; Connect to <a class="link" href="SoupServer.html#SoupServer-request-started" title="The “request-started” signal"><span class="type">“request-started”</span></a> to be notified
-every time a new request is being processed. (This gives you a
-chance to connect to the <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> "<code class="literal">got-</code>"
-signals in case you want to do processing before the body has been
-fully read.)</p>
 <p>If you want to process https connections in addition to (or instead
 of) http connections, you can either set the
 <a class="link" href="SoupServer.html#SOUP-SERVER-TLS-CERTIFICATE:CAPS" title="SOUP_SERVER_TLS_CERTIFICATE"><code class="literal">SOUP_SERVER_TLS_CERTIFICATE</code></a> property when creating the server, or
@@ -434,7 +515,7 @@ to (or start) the main loop for the current thread-default
 soup_server_new (<em class="parameter"><code>const <span class="type">char</span> *optname1</code></em>,
                  <em class="parameter"><code>...</code></em>);</pre>
 <p>Creates a new <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>. This is exactly equivalent to calling
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-new"><code class="function">g_object_new()</code></a> and specifying <code class="literal">SOUP_TYPE_SERVER</code> as the type.</p>
+<code class="function">g_object_new()</code> and specifying <code class="literal">SOUP_TYPE_SERVER</code> as the type.</p>
 <div class="refsect3">
 <a name="id-1.3.19.11.2.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -481,7 +562,7 @@ specified by <em class="parameter"><code>ssl_cert_file</code></em>
  (which may point to
 the same file).</p>
 <p>Alternatively, you can set the <a class="link" href="SoupServer.html#SoupServer--tls-certificate" title="The “tls-certificate” property"><span class="type">“tls-certificate”</span></a> property
-at construction time, if you already have a <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>.</p>
+at construction time, if you already have a <span class="type">GTlsCertificate</span>.</p>
 <div class="refsect3">
 <a name="id-1.3.19.11.3.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -527,7 +608,7 @@ certificate.</p></td>
 <a name="soup-server-listen"></a><h3>soup_server_listen ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 soup_server_listen (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
-                    <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="type">GSocketAddress</span></a> *address</code></em>,
+                    <em class="parameter"><code><span class="type">GSocketAddress</span> *address</code></em>,
                     <em class="parameter"><code><a class="link" href="SoupServer.html#SoupServerListenOptions" title="enum SoupServerListenOptions"><span class="type">SoupServerListenOptions</span></a> options</code></em>,
                     <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>This attempts to set up <em class="parameter"><code>server</code></em>
@@ -727,7 +808,7 @@ will be set).</p>
 <a name="soup-server-listen-socket"></a><h3>soup_server_listen_socket ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 soup_server_listen_socket (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
-                           <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GSocket.html"><span class="type">GSocket</span></a> *socket</code></em>,
+                           <em class="parameter"><code><span class="type">GSocket</span> *socket</code></em>,
                            <em class="parameter"><code><a class="link" href="SoupServer.html#SoupServerListenOptions" title="enum SoupServerListenOptions"><span class="type">SoupServerListenOptions</span></a> options</code></em>,
                            <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>This attempts to set up <em class="parameter"><code>server</code></em>
@@ -751,7 +832,7 @@ soup_server_listen_socket (<em class="parameter"><code><a class="link" href="Sou
 </tr>
 <tr>
 <td class="parameter_name"><p>socket</p></td>
-<td class="parameter_description"><p>a listening <a href="http://library.gnome.org/devel/gio/unstable/GSocket.html"><span class="type">GSocket</span></a></p></td>
+<td class="parameter_description"><p>a listening <span class="type">GSocket</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -836,19 +917,18 @@ will be set).</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="soup-server-get-uris"></a><h3>soup_server_get_uris ()</h3>
+<a name="soup-server-get-listeners"></a><h3>soup_server_get_listeners ()</h3>
 <pre class="programlisting"><span class="returnvalue">GSList</span> *
-soup_server_get_uris (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);</pre>
-<p>Gets a list of URIs corresponding to the interfaces <em class="parameter"><code>server</code></em>
- is
-listening on. These will contain IP addresses, not hostnames, and
-will also indicate whether the given listener is http or https.</p>
-<p>Note that if you used <a class="link" href="SoupServer.html#soup-server-listen-all" title="soup_server_listen_all ()"><code class="function">soup_server_listen_all()</code></a>, the returned URIs
-will use the addresses <code class="literal">0.0.0.0</code> and
-<code class="literal">::</code>, rather than actually returning separate URIs
-for each interface on the system.</p>
+soup_server_get_listeners (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);</pre>
+<p>Gets <em class="parameter"><code>server</code></em>
+'s list of listening sockets.</p>
+<p>You should treat these sockets as read-only; writing to or
+modifiying any of these sockets may cause <em class="parameter"><code>server</code></em>
+ to malfunction.</p>
+<p>(Beware that in contrast to the old <a class="link" href="libsoup-2.4-SoupServer-deprecated-API.html#soup-server-get-listener" title="soup_server_get_listener ()"><code class="function">soup_server_get_listener()</code></a>, this
+function returns <span class="type">GSockets</span>, not <a href="SoupSocket.html"><span class="type">SoupSockets</span></a>.)</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.9.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.9.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -863,7 +943,42 @@ for each interface on the system.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.11.9.7"></a><h4>Returns</h4>
+<a name="id-1.3.19.11.9.8"></a><h4>Returns</h4>
+<p> a
+list of listening sockets. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> Gio.Socket]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-server-get-uris"></a><h3>soup_server_get_uris ()</h3>
+<pre class="programlisting"><span class="returnvalue">GSList</span> *
+soup_server_get_uris (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>);</pre>
+<p>Gets a list of URIs corresponding to the interfaces <em class="parameter"><code>server</code></em>
+ is
+listening on. These will contain IP addresses, not hostnames, and
+will also indicate whether the given listener is http or https.</p>
+<p>Note that if you used <a class="link" href="SoupServer.html#soup-server-listen-all" title="soup_server_listen_all ()"><code class="function">soup_server_listen_all()</code></a>, the returned URIs
+will use the addresses <code class="literal">0.0.0.0</code> and
+<code class="literal">::</code>, rather than actually returning separate URIs
+for each interface on the system.</p>
+<div class="refsect3">
+<a name="id-1.3.19.11.10.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>server</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.19.11.10.7"></a><h4>Returns</h4>
 <p> a list of
 <a href="SoupURI.html"><span class="type">SoupURIs</span></a>, which you must free when you are done with it. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> Soup.URI]</span></p>
@@ -887,7 +1002,7 @@ is still running.</p>
 <p>You can call <a class="link" href="SoupServer.html#soup-server-listen" title="soup_server_listen ()"><code class="function">soup_server_listen()</code></a>, etc, after calling this function
 if you want to start listening again.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.10.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.11.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -921,7 +1036,7 @@ exclusively. If you are using <a class="link" href="SoupServer.html#soup-server-
 actually currently is or not. Use <a class="link" href="SoupServer.html#soup-server-get-uris" title="soup_server_get_uris ()"><code class="function">soup_server_get_uris()</code></a> to see if
 it currently has any https listeners.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.11.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.12.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -936,11 +1051,71 @@ it currently has any https listeners.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.11.11.8"></a><h4>Returns</h4>
+<a name="id-1.3.19.11.12.8"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if <em class="parameter"><code>server</code></em>
 is configured to serve https.</p>
 <p></p>
 </div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-server-accept-iostream"></a><h3>soup_server_accept_iostream ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+soup_server_accept_iostream (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
+                             <em class="parameter"><code><span class="type">GIOStream</span> *stream</code></em>,
+                             <em class="parameter"><code><span class="type">GSocketAddress</span> *local_addr</code></em>,
+                             <em class="parameter"><code><span class="type">GSocketAddress</span> *remote_addr</code></em>,
+                             <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Add a new client stream to the <em class="parameter"><code>server</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.19.11.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>server</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stream</p></td>
+<td class="parameter_description"><p>a <span class="type">GIOStream</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>local_addr</p></td>
+<td class="parameter_description"><p> the local <span class="type">GSocketAddress</span> associated with the <em class="parameter"><code>stream</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>remote_addr</p></td>
+<td class="parameter_description"><p> the remote <span class="type">GSocketAddress</span> associated with the <em class="parameter"><code>stream</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for a <span class="type">GError</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.19.11.13.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> on success, <code class="literal">FALSE</code> if the stream could not be
+accepted or any other error occurred (in which case <em class="parameter"><code>error</code></em>
+will be
+set).</p>
+<p></p>
+</div>
+<p class="since">Since 2.50</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -952,11 +1127,7 @@ is configured to serve https.</p>
                        <em class="parameter"><code><span class="type">GHashTable</span> *query</code></em>,
                        <em class="parameter"><code><a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client</code></em>,
                        <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
-<p>A callback used to handle requests to a <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>. The callback
-will be invoked after receiving the request body; <em class="parameter"><code>msg</code></em>
-'s
-<a class="link" href="SoupMessage.html#SoupMessage--method" title="The “method” property"><span class="type">“method”</span></a>, <a class="link" href="SoupMessage.html#SoupMessage--request-headers" title="The “request-headers” property"><span class="type">“request_headers”</span></a>, and
-<a class="link" href="SoupMessage.html#SoupMessage--request-body" title="The “request-body” property"><span class="type">“request_body”</span></a> fields will be filled in.</p>
+<p>A callback used to handle requests to a <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>.</p>
 <p><em class="parameter"><code>path</code></em>
  and <em class="parameter"><code>query</code></em>
  contain the likewise-named components of the
@@ -978,30 +1149,10 @@ server needs to use some other format, you can just ignore <em class="parameter"
 ,
 and call <a class="link" href="SoupMessage.html#soup-message-get-uri" title="soup_message_get_uri ()"><code class="function">soup_message_get_uri()</code></a> and parse the URI's query field
 yourself.</p>
-<p>After determining what to do with the request, the callback must at
-a minimum call <a class="link" href="SoupMessage.html#soup-message-set-status" title="soup_message_set_status ()"><code class="function">soup_message_set_status()</code></a> (or
-<a class="link" href="SoupMessage.html#soup-message-set-status-full" title="soup_message_set_status_full ()"><code class="function">soup_message_set_status_full()</code></a>) on <em class="parameter"><code>msg</code></em>
- to set the response status
-code. Additionally, it may set response headers and/or fill in the
-response body.</p>
-<p>If the callback cannot fully fill in the response before returning
-(eg, if it needs to wait for information from a database, or
-another network server), it should call <a class="link" href="SoupServer.html#soup-server-pause-message" title="soup_server_pause_message ()"><code class="function">soup_server_pause_message()</code></a>
-to tell <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> to not send the response right away. When the
-response is ready, call <a class="link" href="SoupServer.html#soup-server-unpause-message" title="soup_server_unpause_message ()"><code class="function">soup_server_unpause_message()</code></a> to cause it
-to be sent.</p>
-<p>To send the response body a bit at a time using "chunked" encoding,
-first call <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-encoding" title="soup_message_headers_set_encoding ()"><code class="function">soup_message_headers_set_encoding()</code></a> to set
-<a class="link" href="SoupMessageHeaders.html#SOUP-ENCODING-CHUNKED:CAPS"><code class="literal">SOUP_ENCODING_CHUNKED</code></a> on the <a class="link" href="SoupMessage.html#SoupMessage--response-headers" title="The “response-headers” property"><span class="type">“response_headers”</span></a>. Then call
-<a class="link" href="SoupMessageBody.html#soup-message-body-append" title="soup_message_body_append ()"><code class="function">soup_message_body_append()</code></a> (or <a class="link" href="SoupMessageBody.html#soup-message-body-append-buffer" title="soup_message_body_append_buffer ()"><code class="function">soup_message_body_append_buffer()</code></a>)
-to append each chunk as it becomes ready, and
-<a class="link" href="SoupServer.html#soup-server-unpause-message" title="soup_server_unpause_message ()"><code class="function">soup_server_unpause_message()</code></a> to make sure it's running. (The
-server will automatically pause the message if it is using chunked
-encoding but no more chunks are available.) When you are done, call
-<a class="link" href="SoupMessageBody.html#soup-message-body-complete" title="soup_message_body_complete ()"><code class="function">soup_message_body_complete()</code></a> to indicate that no more chunks are
-coming.</p>
+<p>See <a class="link" href="SoupServer.html#soup-server-add-handler" title="soup_server_add_handler ()"><code class="function">soup_server_add_handler()</code></a> and <a class="link" href="SoupServer.html#soup-server-add-early-handler" title="soup_server_add_early_handler ()"><code class="function">soup_server_add_early_handler()</code></a>
+for details of what handlers can/should do.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.12.10"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.14.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1039,8 +1190,8 @@ component of <em class="parameter"><code>msg</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p>the data passed to <em class="parameter"><code>soup_server_add_handler</code></em>
-</p></td>
+<td class="parameter_description"><p>the data passed to <a class="link" href="SoupServer.html#soup-server-add-handler" title="soup_server_add_handler ()"><code class="function">soup_server_add_handler()</code></a> or
+<a class="link" href="SoupServer.html#soup-server-add-early-handler" title="soup_server_add_early_handler ()"><code class="function">soup_server_add_early_handler()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1058,17 +1209,45 @@ soup_server_add_handler (<em class="parameter"><code><a class="link" href="SoupS
                          <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);</pre>
 <p>Adds a handler to <em class="parameter"><code>server</code></em>
  for requests under <em class="parameter"><code>path</code></em>
-. See the
-documentation for <a class="link" href="SoupServer.html#SoupServerCallback" title="SoupServerCallback ()"><span class="type">SoupServerCallback</span></a> for information about
-how callbacks should behave.</p>
-<p>If <em class="parameter"><code>path</code></em>
- is <code class="literal">NULL</code> or "/", then this will be the default handler for
-all requests that don't have a more specific handler. Note though
-that if you want to handle requests to the special "*" URI, you
-must explicitly register a handler for "*"; the default handler
-will not be used for that case.</p>
+. If <em class="parameter"><code>path</code></em>
+ is
+<code class="literal">NULL</code> or "/", then this will be the default handler for all
+requests that don't have a more specific handler. (Note though that
+if you want to handle requests to the special "*" URI, you must
+explicitly register a handler for "*"; the default handler will not
+be used for that case.)</p>
+<p>For requests under <em class="parameter"><code>path</code></em>
+ (that have not already been assigned a
+status code by a <a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a>, an early <span class="type">SoupServerHandler</span>, or a
+signal handler), <em class="parameter"><code>callback</code></em>
+ will be invoked after receiving the
+request body; the message's <a class="link" href="SoupMessage.html#SoupMessage--method" title="The “method” property"><span class="type">“method”</span></a>,
+<a class="link" href="SoupMessage.html#SoupMessage--request-headers" title="The “request-headers” property"><span class="type">“request-headers”</span></a>, and <a class="link" href="SoupMessage.html#SoupMessage--request-body" title="The “request-body” property"><span class="type">“request-body”</span></a> fields
+will be filled in.</p>
+<p>After determining what to do with the request, the callback must at
+a minimum call <a class="link" href="SoupMessage.html#soup-message-set-status" title="soup_message_set_status ()"><code class="function">soup_message_set_status()</code></a> (or
+<a class="link" href="SoupMessage.html#soup-message-set-status-full" title="soup_message_set_status_full ()"><code class="function">soup_message_set_status_full()</code></a>) on the message to set the response
+status code. Additionally, it may set response headers and/or fill
+in the response body.</p>
+<p>If the callback cannot fully fill in the response before returning
+(eg, if it needs to wait for information from a database, or
+another network server), it should call <a class="link" href="SoupServer.html#soup-server-pause-message" title="soup_server_pause_message ()"><code class="function">soup_server_pause_message()</code></a>
+to tell <em class="parameter"><code>server</code></em>
+ to not send the response right away. When the
+response is ready, call <a class="link" href="SoupServer.html#soup-server-unpause-message" title="soup_server_unpause_message ()"><code class="function">soup_server_unpause_message()</code></a> to cause it
+to be sent.</p>
+<p>To send the response body a bit at a time using "chunked" encoding,
+first call <a class="link" href="SoupMessageHeaders.html#soup-message-headers-set-encoding" title="soup_message_headers_set_encoding ()"><code class="function">soup_message_headers_set_encoding()</code></a> to set
+<a class="link" href="SoupMessageHeaders.html#SOUP-ENCODING-CHUNKED:CAPS"><code class="literal">SOUP_ENCODING_CHUNKED</code></a> on the <a class="link" href="SoupMessage.html#SoupMessage--response-headers" title="The “response-headers” property"><span class="type">“response-headers”</span></a>. Then call
+<a class="link" href="SoupMessageBody.html#soup-message-body-append" title="soup_message_body_append ()"><code class="function">soup_message_body_append()</code></a> (or <a class="link" href="SoupMessageBody.html#soup-message-body-append-buffer" title="soup_message_body_append_buffer ()"><code class="function">soup_message_body_append_buffer()</code></a>)
+to append each chunk as it becomes ready, and
+<a class="link" href="SoupServer.html#soup-server-unpause-message" title="soup_server_unpause_message ()"><code class="function">soup_server_unpause_message()</code></a> to make sure it's running. (The
+server will automatically pause the message if it is using chunked
+encoding but no more chunks are available.) When you are done, call
+<a class="link" href="SoupMessageBody.html#soup-message-body-complete" title="soup_message_body_complete ()"><code class="function">soup_message_body_complete()</code></a> to indicate that no more chunks are
+coming.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.13.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.15.9"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1110,14 +1289,94 @@ will not be used for that case.</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="soup-server-add-early-handler"></a><h3>soup_server_add_early_handler ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+soup_server_add_early_handler (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
+                               <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
+                               <em class="parameter"><code><a class="link" href="SoupServer.html#SoupServerCallback" title="SoupServerCallback ()"><span class="type">SoupServerCallback</span></a> callback</code></em>,
+                               <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
+                               <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);</pre>
+<p>Adds an "early" handler to <em class="parameter"><code>server</code></em>
+ for requests under <em class="parameter"><code>path</code></em>
+. Note
+that "normal" and "early" handlers are matched up together, so if
+you add a normal handler for "/foo" and an early handler for
+"/foo/bar", then a request to "/foo/bar" (or any path below it)
+will run only the early handler. (But if you add both handlers at
+the same path, then both will get run.)</p>
+<p>For requests under <em class="parameter"><code>path</code></em>
+ (that have not already been assigned a
+status code by a <a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> or a signal handler), <em class="parameter"><code>callback</code></em>
+
+will be invoked after receiving the request headers, but before
+receiving the request body; the message's <a class="link" href="SoupMessage.html#SoupMessage--method" title="The “method” property"><span class="type">“method”</span></a> and
+<a class="link" href="SoupMessage.html#SoupMessage--request-headers" title="The “request-headers” property"><span class="type">“request-headers”</span></a> fields will be filled in.</p>
+<p>Early handlers are generally used for processing requests with
+request bodies in a streaming fashion. If you determine that the
+request will contain a message body, normally you would call
+<a class="link" href="SoupMessageBody.html#soup-message-body-set-accumulate" title="soup_message_body_set_accumulate ()"><code class="function">soup_message_body_set_accumulate()</code></a> on the message's
+<a class="link" href="SoupMessage.html#SoupMessage--request-body" title="The “request-body” property"><span class="type">“request-body”</span></a> to turn off request-body accumulation,
+and connect to the message's <a class="link" href="SoupMessage.html#SoupMessage-got-chunk" title="The “got-chunk” signal"><span class="type">“got-chunk”</span></a> signal to
+process each chunk as it comes in.</p>
+<p>To complete the message processing after the full message body has
+been read, you can either also connect to <a class="link" href="SoupMessage.html#SoupMessage-got-body" title="The “got-body” signal"><span class="type">“got-body”</span></a>,
+or else you can register a non-early handler for <em class="parameter"><code>path</code></em>
+ as well. As
+long as you have not set the <a class="link" href="SoupMessage.html#SoupMessage--status-code" title="The “status-code” property"><span class="type">“status-code”</span></a> by the time
+<a class="link" href="SoupMessage.html#SoupMessage-got-body" title="The “got-body” signal"><span class="type">“got-body”</span></a> is emitted, the non-early handler will be
+run as well.</p>
+<div class="refsect3">
+<a name="id-1.3.19.11.16.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>server</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p> the toplevel path for the handler. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>callback to invoke for requests under <em class="parameter"><code>path</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>data for <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>destroy notifier to free <em class="parameter"><code>user_data</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.50</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="soup-server-remove-handler"></a><h3>soup_server_remove_handler ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 soup_server_remove_handler (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
                             <em class="parameter"><code>const <span class="type">char</span> *path</code></em>);</pre>
-<p>Removes the handler registered at <em class="parameter"><code>path</code></em>
+<p>Removes all handlers (early and normal) registered at <em class="parameter"><code>path</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.14.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.17.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1141,13 +1400,155 @@ soup_server_remove_handler (<em class="parameter"><code><a class="link" href="So
 </div>
 <hr>
 <div class="refsect2">
+<a name="SoupServerWebsocketCallback"></a><h3>SoupServerWebsocketCallback ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*SoupServerWebsocketCallback<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
+                                <em class="parameter"><code><a class="link" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection"><span class="type">SoupWebsocketConnection</span></a> *connection</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
+                                <em class="parameter"><code><a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client</code></em>,
+                                <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>A callback used to handle WebSocket requests to a <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>. The
+callback will be invoked after sending the handshake response back
+to the client (and is only invoked if the handshake was
+successful).</p>
+<p><em class="parameter"><code>path</code></em>
+ contains the path of the Request-URI, subject to the same
+rules as <a class="link" href="SoupServer.html#SoupServerCallback" title="SoupServerCallback ()"><span class="type">SoupServerCallback</span></a> (qv).</p>
+<div class="refsect3">
+<a name="id-1.3.19.11.18.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>server</p></td>
+<td class="parameter_description"><p>the <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>connection</p></td>
+<td class="parameter_description"><p>the newly created WebSocket connection</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>the path component of <em class="parameter"><code>msg</code></em>
+'s Request-URI</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>client</p></td>
+<td class="parameter_description"><p>additional contextual information about the client</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data passed to <em class="parameter"><code>soup_server_add_handler</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-server-add-websocket-handler"></a><h3>soup_server_add_websocket_handler ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+soup_server_add_websocket_handler (<em class="parameter"><code><a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> *server</code></em>,
+                                   <em class="parameter"><code>const <span class="type">char</span> *path</code></em>,
+                                   <em class="parameter"><code>const <span class="type">char</span> *origin</code></em>,
+                                   <em class="parameter"><code><span class="type">char</span> **protocols</code></em>,
+                                   <em class="parameter"><code><a class="link" href="SoupServer.html#SoupServerWebsocketCallback" title="SoupServerWebsocketCallback ()"><span class="type">SoupServerWebsocketCallback</span></a> callback</code></em>,
+                                   <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
+                                   <em class="parameter"><code><span class="type">GDestroyNotify</span> destroy</code></em>);</pre>
+<p>Adds a WebSocket handler to <em class="parameter"><code>server</code></em>
+ for requests under <em class="parameter"><code>path</code></em>
+. (If
+<em class="parameter"><code>path</code></em>
+ is <code class="literal">NULL</code> or "/", then this will be the default handler for
+all requests that don't have a more specific handler.)</p>
+<p>When a path has a WebSocket handler registered, <em class="parameter"><code>server</code></em>
+ will check
+incoming requests for WebSocket handshakes after all other handlers
+have run (unless some earlier handler has already set a status code
+on the message), and update the request's status, response headers,
+and response body accordingly.</p>
+<p>If <em class="parameter"><code>origin</code></em>
+ is non-<code class="literal">NULL</code>, then only requests containing a matching
+"Origin" header will be accepted. If <em class="parameter"><code>protocols</code></em>
+ is non-<code class="literal">NULL</code>, then
+only requests containing a compatible "Sec-WebSocket-Protocols"
+header will be accepted. More complicated requirements can be
+handled by adding a normal handler to <em class="parameter"><code>path</code></em>
+, and having it perform
+whatever checks are needed (possibly calling
+<code class="function">soup_server_check_websocket_handshake()</code> one or more times), and
+setting a failure status code if the handshake should be rejected.</p>
+<div class="refsect3">
+<a name="id-1.3.19.11.19.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>server</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p> the toplevel path for the handler. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>origin</p></td>
+<td class="parameter_description"><p> the origin of the connection. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>protocols</p></td>
+<td class="parameter_description"><p> the protocols
+supported by this handler. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>callback to invoke for successful WebSocket requests under <em class="parameter"><code>path</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>data for <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>destroy notifier to free <em class="parameter"><code>user_data</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="soup-client-context-get-local-address"></a><h3>soup_client_context_get_local_address ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="returnvalue">GSocketAddress</span></a> *
+<pre class="programlisting"><span class="returnvalue">GSocketAddress</span> *
 soup_client_context_get_local_address (<em class="parameter"><code><a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client</code></em>);</pre>
-<p>Retrieves the <a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="type">GSocketAddress</span></a> associated with the local end
+<p>Retrieves the <span class="type">GSocketAddress</span> associated with the local end
 of a connection.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.15.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.20.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1162,23 +1563,24 @@ of a connection.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.11.15.6"></a><h4>Returns</h4>
-<p> the <a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="type">GSocketAddress</span></a> associated with
-the local end of a connection. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<a name="id-1.3.19.11.20.6"></a><h4>Returns</h4>
+<p> the <span class="type">GSocketAddress</span>
+associated with the local end of a connection, it may be
+<code class="literal">NULL</code> if you used <a class="link" href="SoupServer.html#soup-server-accept-iostream" title="soup_server_accept_iostream ()"><code class="function">soup_server_accept_iostream()</code></a>. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since 2.48</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="soup-client-context-get-remote-address"></a><h3>soup_client_context_get_remote_address ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="returnvalue">GSocketAddress</span></a> *
+<pre class="programlisting"><span class="returnvalue">GSocketAddress</span> *
 soup_client_context_get_remote_address
                                (<em class="parameter"><code><a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client</code></em>);</pre>
-<p>Retrieves the <a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="type">GSocketAddress</span></a> associated with the remote end
+<p>Retrieves the <span class="type">GSocketAddress</span> associated with the remote end
 of a connection.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.16.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.21.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1193,10 +1595,11 @@ of a connection.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.11.16.6"></a><h4>Returns</h4>
-<p> the <a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="type">GSocketAddress</span></a> associated with
-the remote end of a connection. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<a name="id-1.3.19.11.21.6"></a><h4>Returns</h4>
+<p> the <span class="type">GSocketAddress</span>
+associated with the remote end of a connection, it may be
+<code class="literal">NULL</code> if you used <a class="link" href="SoupServer.html#soup-server-accept-iostream" title="soup_server_accept_iostream ()"><code class="function">soup_server_accept_iostream()</code></a>. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since 2.48</p>
 </div>
@@ -1208,7 +1611,7 @@ soup_client_context_get_host (<em class="parameter"><code><a class="link" href="
 <p>Retrieves the IP address associated with the remote end of a
 connection.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.17.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.22.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1223,10 +1626,11 @@ connection.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.11.17.6"></a><h4>Returns</h4>
-<p> the IP address associated with the remote end of a
-connection.</p>
-<p></p>
+<a name="id-1.3.19.11.22.6"></a><h4>Returns</h4>
+<p> the IP address associated with the remote
+end of a connection, it may be <code class="literal">NULL</code> if you used
+<a class="link" href="SoupServer.html#soup-server-accept-iostream" title="soup_server_accept_iostream ()"><code class="function">soup_server_accept_iostream()</code></a>. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -1239,7 +1643,7 @@ soup_client_context_get_auth_domain (<em class="parameter"><code><a class="link"
 authenticated, and if so returns the <a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a> that
 authenticated it.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.18.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.23.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1254,7 +1658,7 @@ authenticated it.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.11.18.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.11.23.6"></a><h4>Returns</h4>
 <p> a <a class="link" href="SoupAuthDomain.html" title="SoupAuthDomain"><span class="type">SoupAuthDomain</span></a>, or
 <code class="literal">NULL</code> if the request was not authenticated. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
@@ -1270,7 +1674,7 @@ soup_client_context_get_auth_user (<em class="parameter"><code><a class="link" h
 authenticated, and if so returns the username that the client
 authenticated as.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.19.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.24.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1285,7 +1689,7 @@ authenticated as.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.11.19.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.11.24.6"></a><h4>Returns</h4>
 <p> the authenticated-as user, or <code class="literal">NULL</code> if
 the request was not authenticated. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
@@ -1294,9 +1698,9 @@ the request was not authenticated. </p>
 <hr>
 <div class="refsect2">
 <a name="soup-client-context-get-gsocket"></a><h3>soup_client_context_get_gsocket ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GSocket.html"><span class="returnvalue">GSocket</span></a> *
+<pre class="programlisting"><span class="returnvalue">GSocket</span> *
 soup_client_context_get_gsocket (<em class="parameter"><code><a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client</code></em>);</pre>
-<p>Retrieves the <a href="http://library.gnome.org/devel/gio/unstable/GSocket.html"><span class="type">GSocket</span></a> that <em class="parameter"><code>client</code></em>
+<p>Retrieves the <span class="type">GSocket</span> that <em class="parameter"><code>client</code></em>
  is associated with.</p>
 <p>If you are using this method to observe when multiple requests are
 made on the same persistent HTTP connection (eg, as the ntlm-test
@@ -1305,7 +1709,7 @@ destruction as well (eg, by using weak references), so that you do
 not get fooled when the allocator reuses the memory address of a
 previously-destroyed socket to represent a new socket.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.20.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.25.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1320,13 +1724,57 @@ previously-destroyed socket to represent a new socket.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.11.20.7"></a><h4>Returns</h4>
-<p> the <a href="http://library.gnome.org/devel/gio/unstable/GSocket.html"><span class="type">GSocket</span></a> that <em class="parameter"><code>client</code></em>
+<a name="id-1.3.19.11.25.7"></a><h4>Returns</h4>
+<p> the <span class="type">GSocket</span> that <em class="parameter"><code>client</code></em>
 is
-associated with. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+associated with, <code class="literal">NULL</code> if you used <a class="link" href="SoupServer.html#soup-server-accept-iostream" title="soup_server_accept_iostream ()"><code class="function">soup_server_accept_iostream()</code></a>. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since 2.48</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-client-context-steal-connection"></a><h3>soup_client_context_steal_connection ()</h3>
+<pre class="programlisting"><span class="returnvalue">GIOStream</span> *
+soup_client_context_steal_connection (<em class="parameter"><code><a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a> *client</code></em>);</pre>
+<p>"Steals" the HTTP connection associated with <em class="parameter"><code>client</code></em>
+ from its
+<a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a>. This happens immediately, regardless of the current
+state of the connection; if the response to the current
+<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> has not yet finished being sent, then it will be
+discarded; you can steal the connection from a
+<span class="type">“wrote-informational”</span> or <span class="type">“wrote-body”</span> signal
+handler if you need to wait for part or all of the response to be
+sent.</p>
+<p>Note that when calling this function from C, <em class="parameter"><code>client</code></em>
+ will most
+likely be freed as a side effect.</p>
+<div class="refsect3">
+<a name="id-1.3.19.11.26.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>client</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupServer.html#SoupClientContext"><span class="type">SoupClientContext</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.19.11.26.7"></a><h4>Returns</h4>
+<p> the <span class="type">GIOStream</span> formerly associated
+with <em class="parameter"><code>client</code></em>
+(or <code class="literal">NULL</code> if <em class="parameter"><code>client</code></em>
+was no longer associated with a
+connection). No guarantees are made about what kind of <span class="type">GIOStream</span>
+is returned. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.50</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1349,7 +1797,7 @@ Proxy Authentication Required). If the request used the
  will reject it before the
 request body is sent.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.21.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.27.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1381,7 +1829,7 @@ soup_server_remove_auth_domain (<em class="parameter"><code><a class="link" href
  from <em class="parameter"><code>server</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.22.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.28.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1417,7 +1865,7 @@ the server handler without having the full response ready yet. Use
 <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> and are currently doing I/O, such as those passed into a
 <a class="link" href="SoupServer.html#SoupServerCallback" title="SoupServerCallback ()"><span class="type">SoupServerCallback</span></a> or emitted in a <a class="link" href="SoupServer.html#SoupServer-request-read" title="The “request-read” signal"><span class="type">“request-read”</span></a> signal.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.23.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.29.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1455,7 +1903,7 @@ chunked response.</p>
 <a class="link" href="SoupServer.html" title="SoupServer"><span class="type">SoupServer</span></a> and are currently doing I/O, such as those passed into a
 <a class="link" href="SoupServer.html#SoupServerCallback" title="SoupServerCallback ()"><span class="type">SoupServerCallback</span></a> or emitted in a <a class="link" href="SoupServer.html#SoupServer-request-read" title="The “request-read” signal"><span class="type">“request-read”</span></a> signal.</p>
 <div class="refsect3">
-<a name="id-1.3.19.11.24.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.11.30.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1577,8 +2025,8 @@ automatically decoded.)</p>
 <a name="SOUP-SERVER-HTTP-ALIASES:CAPS"></a><h3>SOUP_SERVER_HTTP_ALIASES</h3>
 <pre class="programlisting">#define SOUP_SERVER_HTTP_ALIASES    "http-aliases"
 </pre>
-<p>
-</p>
+<p>Alias for the <a class="link" href="SoupServer.html#SoupServer--http-aliases" title="The “http-aliases” property"><span class="type">“http-aliases”</span></a> property, qv.</p>
+<p class="since">Since 2.44</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1608,7 +2056,7 @@ rather than having an explicitly-specified one.</p>
 <hr>
 <div class="refsect2">
 <a name="SoupServer--http-aliases"></a><h3>The <code class="literal">“http-aliases”</code> property</h3>
-<pre class="programlisting">  “http-aliases”             <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></pre>
+<pre class="programlisting">  “http-aliases”             <span class="type">GStrv</span></pre>
 <p>A <code class="literal">NULL</code>-terminated array of URI schemes that should be
 considered to be aliases for "http". Eg, if this included
 <code class="literal">"dav"</code>, than a URI of
@@ -1628,7 +2076,7 @@ any scheme except "https" is considered to be an alias for
 <hr>
 <div class="refsect2">
 <a name="SoupServer--https-aliases"></a><h3>The <code class="literal">“https-aliases”</code> property</h3>
-<pre class="programlisting">  “https-aliases”            <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></pre>
+<pre class="programlisting">  “https-aliases”            <span class="type">GStrv</span></pre>
 <p>A comma-delimited list of URI schemes that should be
 considered to be aliases for "https". See
 <a class="link" href="SoupServer.html#SoupServer--http-aliases" title="The “http-aliases” property"><span class="type">“http-aliases”</span></a> for more information.</p>
@@ -1745,8 +2193,8 @@ is used.</p>
 <hr>
 <div class="refsect2">
 <a name="SoupServer--tls-certificate"></a><h3>The <code class="literal">“tls-certificate”</code> property</h3>
-<pre class="programlisting">  “tls-certificate”          <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> *</pre>
-<p>A <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> that has a <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html#GTlsCertificate--private-key"><span class="type">“private-key”</span></a>
+<pre class="programlisting">  “tls-certificate”          <span class="type">GTlsCertificate</span> *</pre>
+<p>A <span class="type">GTlsCertificate</span> that has a <span class="type">“private-key”</span>
 set. If this is set, then the server will be able to speak
 https in addition to (or instead of) plain http.</p>
 <p>Alternatively, you can call <a class="link" href="SoupServer.html#soup-server-set-ssl-cert-file" title="soup_server_set_ssl_cert_file ()"><code class="function">soup_server_set_ssl_cert_file()</code></a>
@@ -1867,9 +2315,9 @@ user_function (<a class="link" href="SoupServer.html" title="SoupServer"><span c
 filled in, and if the message was authenticated, <em class="parameter"><code>client</code></em>
 
 will have information about that. This signal is emitted
-before any handlers are called for the message, and if it
-sets the message's <span class="type">status_code</span>, then normal handler
-processing will be skipped.</p>
+before any (non-early) handlers are called for the message,
+and if it sets the message's <span class="type">status_code</span>, then normal
+handler processing will be skipped.</p>
 <div class="refsect3">
 <a name="id-1.3.19.14.4.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">

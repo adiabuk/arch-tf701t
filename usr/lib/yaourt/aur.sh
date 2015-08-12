@@ -4,6 +4,7 @@
 # This file is part of Yaourt (http://archlinux.fr/yaourt-en)
 
 AUR_PKG_URL="$AURURL/packages/"
+AUR_INSTALLED_PKGS=()
 
 load_lib abs
 load_lib pkgbuild
@@ -40,10 +41,16 @@ info_from_aur() {
 	curl_fetch -fis "$pkgbuild_url" -o "$tmpfile" || \
 		{ error $(_gettext '%s not found in AUR.' "$pkgname"); return 1; }
 	local vars=(pkgname pkgver pkgrel url license groups provides depends optdepends \
+		depends_${CARCH} optdepends_${CARCH} \
 		conflicts replaces arch last_mod pkgdesc)
 	unset ${vars[*]}
 	local ${vars[*]}
 	. <( source_pkgbuild "$tmpfile" ${vars[*]} )
+
+	# Merge generic dependencies with architecture specific dependencies
+	eval depends+=(\"\${depends_${CARCH}[@]}\")
+	eval optdepends+=(\"\${optdepends_${CARCH}[@]}\")
+
 	aur_show_info "Repository     " "${C[aur]:-${C[other]}}aur$C0"
 	aur_show_info "Name           " "$CBOLD$pkgname$C0"
 	aur_show_info "Version        " "$CGREEN$pkgver-$pkgrel$C0"
@@ -63,7 +70,7 @@ info_from_aur() {
 	aur_show_info "Last update    " "$(date +"%c" --date "$last_mod")"
 	aur_show_info "Description    " "$pkgdesc"
 	echo
-	rm "$tmpfile" 
+	rm "$tmpfile"
 }
 
 # scrap html page to show user's comments
@@ -153,8 +160,9 @@ vote_package() {
 # give to user all info to build and install Unsupported package from AUR
 install_from_aur() {
 	local cwd
-	declare -a pkginfo=($(pkgquery -1Aif "%n %i %v %w %o %u %m %l %S" "$1"))
+	declare -a pkginfo=($(pkgquery -1Aif "%n %i %v %w %o %u %m %l %L" "$1"))
 	[[ "${pkginfo[1]#-}" ]] || return 1
+	in_array ${pkginfo[0]} "${AUR_INSTALLED_PKGS[@]}" && return 0
 	title $(_gettext 'Installing %s from AUR' "${pkginfo[0]}")
 	cwd=$(pwd)
 	init_build_dir "$YAOURTTMPDIR/aur-${pkginfo[0]}" || return 1
@@ -163,7 +171,7 @@ install_from_aur() {
 	aur_get_pkgbuild "${pkginfo[0]}" "${pkginfo[5]}" ||
 	  { cd "$cwd"; return 1; }
 	aur_comments ${pkginfo[0]}
-	echo -e "$CBOLD${pkginfo[0]} ${pkginfo[2]} $C0 ($(date -d "@${pkginfo[8]}"))"
+	echo -e "$CBOLD${pkginfo[0]} ${pkginfo[2]} $C0 ($(date -u -d "@${pkginfo[8]}" "+%F %H:%M"))"
 	[[ ! ${pkginfo[6]#-} ]] && echo -e "$CBLINK$CRED$(gettext 'This package is orphaned')$C0"
 	echo -e "$CBLINK$CRED$(gettext '( Unsupported package: Potentially dangerous ! )')$C0"
 
@@ -177,6 +185,7 @@ install_from_aur() {
 		# Check if this package has been voted on AUR, and vote for it
 		vote_package "${pkginfo[0]}"
 	fi
+	AUR_INSTALLED_PKGS+=("${pkginfo[0]}")
 	return 0
 }
 
@@ -210,4 +219,4 @@ aur_update_exists() {
 	return 0
 }
 
-# vim: set ts=4 sw=4 noet: 
+# vim: set ts=4 sw=4 noet:

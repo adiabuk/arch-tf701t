@@ -8,7 +8,7 @@
 <link rel="up" href="TextWidgetObjects.html" title="Multiline Text Editor">
 <link rel="prev" href="TextWidget.html" title="Text Widget Overview">
 <link rel="next" href="GtkTextMark.html" title="GtkTextMark">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -162,7 +162,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GdkPixbuf</span> *
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="GtkTextIter.html#gtk-text-iter-get-pixbuf" title="gtk_text_iter_get_pixbuf ()">gtk_text_iter_get_pixbuf</a> <span class="c_punctuation">()</span>
@@ -800,7 +800,7 @@
 </div>
 <div class="refsect1">
 <a name="GtkTextIter.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GBoxed
+<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> GtkTextIter
 </pre>
 </div>
@@ -872,7 +872,6 @@ function is used by language bindings.</p>
 <a name="id-1.3.11.3.8.3.6"></a><h4>Returns</h4>
 <p> a copy of the <em class="parameter"><code>iter</code></em>
 , free with <a class="link" href="GtkTextIter.html#gtk-text-iter-free" title="gtk_text_iter_free ()"><code class="function">gtk_text_iter_free()</code></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -909,7 +908,7 @@ function is used by language bindings.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -964,7 +963,6 @@ offset back into an iterator.</p>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.6.6"></a><h4>Returns</h4>
 <p> a character offset</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -993,7 +991,6 @@ line in the buffer.</p>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.7.6"></a><h4>Returns</h4>
 <p> a line number</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1022,7 +1019,6 @@ The first character on the line has offset 0.</p>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.8.6"></a><h4>Returns</h4>
 <p> offset from start of line</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1053,7 +1049,6 @@ number of bytes to represent.</p>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.9.6"></a><h4>Returns</h4>
 <p> distance from start of line, in bytes</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1085,7 +1080,6 @@ toggled on.</p>
 <a name="id-1.3.11.3.8.10.6"></a><h4>Returns</h4>
 <p> byte index of <em class="parameter"><code>iter</code></em>
 with respect to the start of the line</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1116,7 +1110,6 @@ toggled on.</p>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.11.6"></a><h4>Returns</h4>
 <p> offset in visible characters from the start of the line </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1150,7 +1143,6 @@ returns 0.</p>
 <a name="id-1.3.11.3.8.12.6"></a><h4>Returns</h4>
 <p> a Unicode character, or 0 if <em class="parameter"><code>iter</code></em>
 is not dereferenceable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1312,7 +1304,7 @@ range. </p>
 <hr>
 <div class="refsect2">
 <a name="gtk-text-iter-get-pixbuf"></a><h3>gtk_text_iter_get_pixbuf ()</h3>
-<pre class="programlisting"><span class="returnvalue">GdkPixbuf</span> *
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 gtk_text_iter_get_pixbuf (<em class="parameter"><code>const <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>);</pre>
 <p>If the element at <em class="parameter"><code>iter</code></em>
  is a pixbuf, the pixbuf is returned
@@ -1491,7 +1483,6 @@ parameters.</p>
 <p> whether <em class="parameter"><code>iter</code></em>
 is the start of a range tagged with <em class="parameter"><code>tag</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1538,7 +1529,6 @@ unlike <a class="link" href="GtkTextIter.html#gtk-text-iter-begins-tag" title="g
 <p> whether <em class="parameter"><code>iter</code></em>
 is the end of a range tagged with <em class="parameter"><code>tag</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1579,7 +1569,6 @@ gtk_text_iter_toggles_tag (<em class="parameter"><code>const <a class="link" hre
 <p> whether <em class="parameter"><code>tag</code></em>
 is toggled on or off at <em class="parameter"><code>iter</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1619,7 +1608,6 @@ with <em class="parameter"><code>tag</code></em>
 <p> whether <em class="parameter"><code>iter</code></em>
 is tagged with <em class="parameter"><code>tag</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1701,7 +1689,6 @@ case.</p>
 <a name="id-1.3.11.3.8.26.7"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 is inside an editable range</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1745,7 +1732,6 @@ whether insertions are allowed at a given position.</p>
 <a name="id-1.3.11.3.8.27.6"></a><h4>Returns</h4>
 <p> whether text inserted at <em class="parameter"><code>iter</code></em>
 would be editable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1777,7 +1763,6 @@ algorithms).</p>
 <a name="id-1.3.11.3.8.28.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 is at the start of a word</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1809,7 +1794,6 @@ algorithms).</p>
 <a name="id-1.3.11.3.8.29.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 is at the end of a word</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1844,7 +1828,6 @@ returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.
 <a name="id-1.3.11.3.8.30.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 is inside a word</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1877,7 +1860,6 @@ the offset, it just has to see whether it’s 0.</p>
 <a name="id-1.3.11.3.8.31.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 begins a line</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1913,7 +1895,6 @@ paragraph delimiter chars there.</p>
 <a name="id-1.3.11.3.8.32.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 is at the end of a line</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1945,7 +1926,6 @@ algorithms).</p>
 <a name="id-1.3.11.3.8.33.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 is at the start of a sentence.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1977,7 +1957,6 @@ algorithms).</p>
 <a name="id-1.3.11.3.8.34.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 is at the end of a sentence.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2010,7 +1989,6 @@ correct fix would be to the Pango text boundary algorithms).</p>
 <a name="id-1.3.11.3.8.35.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 is inside a sentence.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2039,7 +2017,6 @@ gtk_text_iter_is_cursor_position (<em class="parameter"><code>const <a class="li
 <a name="id-1.3.11.3.8.36.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the cursor can be placed at <em class="parameter"><code>iter</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2068,7 +2045,6 @@ including the paragraph delimiters.</p>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.37.6"></a><h4>Returns</h4>
 <p> number of characters in the line</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2097,7 +2073,6 @@ including the paragraph delimiters.</p>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.38.6"></a><h4>Returns</h4>
 <p> number of bytes in the line</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2111,7 +2086,7 @@ text. The <em class="parameter"><code>values</code></em>
  parameter should be initialized to the default
 settings you wish to use if no tags are in effect. You’d typically
 obtain the defaults from <a class="link" href="GtkTextView.html#gtk-text-view-get-default-attributes" title="gtk_text_view_get_default_attributes ()"><code class="function">gtk_text_view_get_default_attributes()</code></a>.</p>
-<p>gtk_text_iter_get_attributes () will modify <em class="parameter"><code>values</code></em>
+<p>gtk_text_iter_get_attributes() will modify <em class="parameter"><code>values</code></em>
 , applying the
 effects of any tags present at <em class="parameter"><code>iter</code></em>
 . If any tags affected <em class="parameter"><code>values</code></em>
@@ -2143,7 +2118,6 @@ the function returns <a href="https://developer.gnome.org/glib/unstable/glib-Sta
 <a name="id-1.3.11.3.8.39.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>values</code></em>
 was modified</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2208,7 +2182,6 @@ iterator.</p>
 <a name="id-1.3.11.3.8.41.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 is the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2239,7 +2212,6 @@ if <em class="parameter"><code>iter</code></em>
 <a name="id-1.3.11.3.8.42.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 is the first in the buffer</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2276,7 +2248,6 @@ convenience when writing loops.</p>
 <a name="id-1.3.11.3.8.43.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 moved and is dereferenceable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2307,7 +2278,6 @@ writing loops.</p>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.44.6"></a><h4>Returns</h4>
 <p> whether movement was possible</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2352,7 +2322,6 @@ is 0, the function does nothing and returns <a href="https://developer.gnome.org
 <a name="id-1.3.11.3.8.45.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 moved and is dereferenceable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2396,7 +2365,6 @@ the function does nothing and returns <a href="https://developer.gnome.org/glib/
 <a name="id-1.3.11.3.8.46.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 moved and is dereferenceable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2428,7 +2396,6 @@ dereferencable, returns <a href="https://developer.gnome.org/glib/unstable/glib-
 <a name="id-1.3.11.3.8.47.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 can be dereferenced</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2467,7 +2434,6 @@ every iteration, if your first iteration is on line 0.)</p>
 <a name="id-1.3.11.3.8.48.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 moved</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2514,7 +2480,6 @@ moves backward by 0 - <em class="parameter"><code>count</code></em>
 <a name="id-1.3.11.3.8.49.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 moved and is dereferenceable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2561,7 +2526,6 @@ moves forward by 0 - <em class="parameter"><code>count</code></em>
 <a name="id-1.3.11.3.8.50.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 moved and is dereferenceable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2598,7 +2562,6 @@ gtk_text_iter_forward_word_ends (<em class="parameter"><code><a class="link" hre
 <a name="id-1.3.11.3.8.51.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2635,7 +2598,6 @@ gtk_text_iter_backward_word_starts (<em class="parameter"><code><a class="link" 
 <a name="id-1.3.11.3.8.52.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2668,7 +2630,6 @@ algorithms).</p>
 <a name="id-1.3.11.3.8.53.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2701,7 +2662,6 @@ algorithms).</p>
 <a name="id-1.3.11.3.8.54.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2738,7 +2698,6 @@ between those two characters. See also the <span class="type">PangoLogAttr</span
 <div class="refsect3">
 <a name="id-1.3.11.3.8.55.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if we moved and the new position is dereferenceable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2766,7 +2725,6 @@ gtk_text_iter_backward_cursor_position
 <div class="refsect3">
 <a name="id-1.3.11.3.8.56.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if we moved</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2804,7 +2762,6 @@ gtk_text_iter_forward_cursor_positions
 <div class="refsect3">
 <a name="id-1.3.11.3.8.57.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if we moved and the new position is dereferenceable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2842,7 +2799,6 @@ gtk_text_iter_backward_cursor_positions
 <div class="refsect3">
 <a name="id-1.3.11.3.8.58.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if we moved and the new position is dereferenceable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2875,7 +2831,6 @@ boundary algorithms).</p>
 <a name="id-1.3.11.3.8.59.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2916,7 +2871,6 @@ instead of backward.</p>
 <a name="id-1.3.11.3.8.60.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2949,7 +2903,6 @@ boundary algorithms).</p>
 <a name="id-1.3.11.3.8.61.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2989,7 +2942,6 @@ negative, moves backward instead of forward.</p>
 <a name="id-1.3.11.3.8.62.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3027,9 +2979,8 @@ gtk_text_iter_forward_visible_word_ends
 <a name="id-1.3.11.3.8.63.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator </p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3066,9 +3017,8 @@ gtk_text_iter_backward_visible_word_starts
 <a name="id-1.3.11.3.8.64.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator </p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3101,9 +3051,8 @@ algorithms).</p>
 <a name="id-1.3.11.3.8.65.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator </p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3136,9 +3085,8 @@ algorithms).</p>
 <a name="id-1.3.11.3.8.66.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not the end iterator </p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3167,9 +3115,8 @@ gtk_text_iter_forward_visible_cursor_position
 <div class="refsect3">
 <a name="id-1.3.11.3.8.67.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if we moved and the new position is dereferenceable</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3198,9 +3145,8 @@ gtk_text_iter_backward_visible_cursor_position
 <div class="refsect3">
 <a name="id-1.3.11.3.8.68.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if we moved and the new position is dereferenceable</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3237,9 +3183,8 @@ gtk_text_iter_forward_visible_cursor_positions
 <div class="refsect3">
 <a name="id-1.3.11.3.8.69.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if we moved and the new position is dereferenceable</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3276,9 +3221,8 @@ gtk_text_iter_backward_visible_cursor_positions
 <div class="refsect3">
 <a name="id-1.3.11.3.8.70.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if we moved and the new position is dereferenceable</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3311,9 +3255,8 @@ already at the end of the buffer.</p>
 <a name="id-1.3.11.3.8.71.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 can be dereferenced</p>
-<p></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3351,9 +3294,8 @@ every iteration, if your first iteration is on line 0.)</p>
 <a name="id-1.3.11.3.8.72.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 moved</p>
-<p></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3399,9 +3341,8 @@ moves backward by 0 - <em class="parameter"><code>count</code></em>
 <a name="id-1.3.11.3.8.73.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 moved and is dereferenceable</p>
-<p></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3447,9 +3388,8 @@ moves forward by 0 - <em class="parameter"><code>count</code></em>
 <a name="id-1.3.11.3.8.74.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>iter</code></em>
 moved and is dereferenceable</p>
-<p></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3714,7 +3654,6 @@ the last line), and returns <a href="https://developer.gnome.org/glib/unstable/g
 <div class="refsect3">
 <a name="id-1.3.11.3.8.82.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if we moved and the new location is not the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3761,7 +3700,6 @@ if no toggle is found.</p>
 <a name="id-1.3.11.3.8.83.6"></a><h4>Returns</h4>
 <p> whether we found a tag toggle after <em class="parameter"><code>iter</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3808,7 +3746,6 @@ if no toggle is found.</p>
 <a name="id-1.3.11.3.8.84.6"></a><h4>Returns</h4>
 <p> whether we found a tag toggle before <em class="parameter"><code>iter</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3873,7 +3810,6 @@ If <em class="parameter"><code>pred</code></em>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.86.6"></a><h4>Returns</h4>
 <p> whether a match was found</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3922,7 +3858,6 @@ gtk_text_iter_backward_find_char (<em class="parameter"><code><a class="link" hr
 <div class="refsect3">
 <a name="id-1.3.11.3.8.87.6"></a><h4>Returns</h4>
 <p> whether a match was found</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3998,7 +3933,6 @@ there is a possible <em class="parameter"><code>match_end</code></em>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.88.7"></a><h4>Returns</h4>
 <p> whether a match was found</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4064,7 +3998,6 @@ there is a possible <em class="parameter"><code>match_start</code></em>
 <div class="refsect3">
 <a name="id-1.3.11.3.8.89.7"></a><h4>Returns</h4>
 <p> whether a match was found</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4103,7 +4036,6 @@ comparing the offsets yourself. Also, it’s a bit faster than
 <div class="refsect3">
 <a name="id-1.3.11.3.8.90.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the iterators point to the same place in the buffer</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4148,7 +4080,6 @@ is less than the second character in the buffer.</p>
 is less than <em class="parameter"><code>rhs</code></em>
 , 1 if <em class="parameter"><code>lhs</code></em>
 is greater, 0 if they are equal</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4196,7 +4127,6 @@ gtk_text_iter_in_range (<em class="parameter"><code>const <a class="link" href="
 <a name="id-1.3.11.3.8.92.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 is in the range</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4300,7 +4230,6 @@ what case it is in.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

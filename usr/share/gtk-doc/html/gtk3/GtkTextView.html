@@ -8,7 +8,7 @@
 <link rel="up" href="TextWidgetObjects.html" title="Multiline Text Editor">
 <link rel="prev" href="GtkTextTagTable.html" title="GtkTextTagTable">
 <link rel="next" href="TreeWidgetObjects.html" title="Tree, List and Icon Grid Widgets">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -162,6 +162,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="GtkTextView.html#gtk-text-view-get-line-at-y" title="gtk_text_view_get_line_at_y ()">gtk_text_view_get_line_at_y</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkTextView.html#gtk-text-view-get-line-yrange" title="gtk_text_view_get_line_yrange ()">gtk_text_view_get_line_yrange</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -589,6 +597,22 @@
 </td>
 </tr>
 <tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkTextView.html#gtk-text-view-set-monospace" title="gtk_text_view_set_monospace ()">gtk_text_view_set_monospace</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkTextView.html#gtk-text-view-get-monospace" title="gtk_text_view_get_monospace ()">gtk_text_view_get_monospace</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="GtkTextView.html#GTK-TEXT-VIEW-PRIORITY-VALIDATE:CAPS" title="GTK_TEXT_VIEW_PRIORITY_VALIDATE">GTK_TEXT_VIEW_PRIORITY_VALIDATE</a></td>
 </tr>
@@ -654,6 +678,11 @@
 <tr>
 <td class="property_type"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
 <td class="property_name"><a class="link" href="GtkTextView.html#GtkTextView--left-margin" title="The “left-margin” property">left-margin</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkTextView.html#GtkTextView--monospace" title="The “monospace” property">monospace</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
@@ -746,6 +775,11 @@
 <td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></td>
 </tr>
 <tr>
+<td class="signal_type"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="GtkTextView.html#GtkTextView-extend-selection" title="The “extend-selection” signal">extend-selection</a></td>
+<td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="GtkTextView.html#GtkTextView-insert-at-cursor" title="The “insert-at-cursor” signal">insert-at-cursor</a></td>
 <td class="signal_flags"><a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></td>
@@ -824,6 +858,10 @@
 </tr>
 <tr>
 <td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GtkTextView.html#GtkTextExtendSelection" title="enum GtkTextExtendSelection">GtkTextExtendSelection</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="GtkTextView.html#GtkWrapMode" title="enum GtkWrapMode">GtkWrapMode</a></td>
 </tr>
 <tr>
@@ -874,7 +912,6 @@ to specify your own buffer, consider <a class="link" href="GtkTextView.html#gtk-
 <div class="refsect3">
 <a name="id-1.3.11.8.13.2.5"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -908,7 +945,6 @@ take over an existing reference.</p>
 <div class="refsect3">
 <a name="id-1.3.11.8.13.3.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1008,7 +1044,7 @@ gtk_text_view_get_hadjustment (<em class="parameter"><code><a class="link" href=
 <p> pointer to the horizontal <a class="link" href="GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1040,7 +1076,7 @@ gtk_text_view_get_vadjustment (<em class="parameter"><code><a class="link" href=
 <p> pointer to the vertical <a class="link" href="GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1184,7 +1220,6 @@ just get the mark onscreen)</p></td>
 <div class="refsect3">
 <a name="id-1.3.11.8.13.9.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if scrolling occurred</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1254,7 +1289,6 @@ located within the currently-visible text area.</p>
 <div class="refsect3">
 <a name="id-1.3.11.8.13.11.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the mark moved (wasn’t already onscreen)</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1282,7 +1316,6 @@ buffer, it it isn’t there already.</p>
 <div class="refsect3">
 <a name="id-1.3.11.8.13.12.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the cursor had to be moved.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1420,7 +1453,7 @@ cursor position (may be <a href="https://developer.gnome.org/glib/unstable/glib-
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1473,6 +1506,51 @@ edge of the line.</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="gtk-text-view-get-line-yrange"></a><h3>gtk_text_view_get_line_yrange ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_text_view_get_line_yrange (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
+                               <em class="parameter"><code>const <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *y</code></em>,
+                               <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *height</code></em>);</pre>
+<p>Gets the y coordinate of the top of the line containing <em class="parameter"><code>iter</code></em>
+,
+and the height of the line. The coordinate is a buffer coordinate;
+convert to window coordinates with <a class="link" href="GtkTextView.html#gtk-text-view-buffer-to-window-coords" title="gtk_text_view_buffer_to_window_coords ()"><code class="function">gtk_text_view_buffer_to_window_coords()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.11.8.13.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>text_view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>iter</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y</p></td>
+<td class="parameter_description"><p> return location for a y coordinate. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p> return location for a height. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="gtk-text-view-get-iter-at-location"></a><h3>gtk_text_view_get_iter_at_location ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_text_view_get_iter_at_location (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
@@ -1487,7 +1565,7 @@ currently-displayed portion.  If you have coordinates from an
 event, you have to convert those to buffer coordinates with
 <a class="link" href="GtkTextView.html#gtk-text-view-window-to-buffer-coords" title="gtk_text_view_window_to_buffer_coords ()"><code class="function">gtk_text_view_window_to_buffer_coords()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.17.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.18.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1540,7 +1618,7 @@ those to buffer coordinates with
 which returns cursor locations, i.e. positions between
 characters.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.18.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.19.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1579,7 +1657,7 @@ zero, or the number of characters in the grapheme.
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1601,7 +1679,7 @@ gtk_text_view_buffer_to_window_coords (<em class="parameter"><code><a class="lin
 <p>Note that you can’t convert coordinates for a nonexisting window (see 
 <a class="link" href="GtkTextView.html#gtk-text-view-set-border-window-size" title="gtk_text_view_set_border_window_size ()"><code class="function">gtk_text_view_set_border_window_size()</code></a>).</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.19.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.20.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1616,7 +1694,7 @@ gtk_text_view_buffer_to_window_coords (<em class="parameter"><code><a class="lin
 </tr>
 <tr>
 <td class="parameter_name"><p>win</p></td>
-<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html#GtkTextWindowType" title="enum GtkTextWindowType"><span class="type">GtkTextWindowType</span></a> except <span class="type">GTK_TEXT_WINDOW_PRIVATE</span></p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html#GtkTextWindowType" title="enum GtkTextWindowType"><span class="type">GtkTextWindowType</span></a> except <a href="http://library.gnome.org/devel/gtk3/GtkTextView.html#GTK-TEXT-WINDOW-PRIVATE:CAPS"><span class="type">GTK_TEXT_WINDOW_PRIVATE</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1661,7 +1739,7 @@ coordinates, storing the result in (<em class="parameter"><code>buffer_x</code><
 <p>Note that you can’t convert coordinates for a nonexisting window (see 
 <a class="link" href="GtkTextView.html#gtk-text-view-set-border-window-size" title="gtk_text_view_set_border_window_size ()"><code class="function">gtk_text_view_set_border_window_size()</code></a>).</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.20.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.21.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1676,7 +1754,7 @@ coordinates, storing the result in (<em class="parameter"><code>buffer_x</code><
 </tr>
 <tr>
 <td class="parameter_name"><p>win</p></td>
-<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html#GtkTextWindowType" title="enum GtkTextWindowType"><span class="type">GtkTextWindowType</span></a> except <span class="type">GTK_TEXT_WINDOW_PRIVATE</span></p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html#GtkTextWindowType" title="enum GtkTextWindowType"><span class="type">GtkTextWindowType</span></a> except <a href="http://library.gnome.org/devel/gtk3/GtkTextView.html#GTK-TEXT-WINDOW-PRIVATE:CAPS"><span class="type">GTK_TEXT_WINDOW_PRIVATE</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1716,7 +1794,7 @@ text buffer. Windows are <a href="https://developer.gnome.org/glib/unstable/glib
 height is 0, and are nonexistent before the widget has been
 realized.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.21.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.22.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1738,7 +1816,7 @@ realized.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.21.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.22.6"></a><h4>Returns</h4>
 <p> a <a href="http://developer.gnome.org/gdk2/gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -1755,7 +1833,7 @@ If you connect to an event signal on <em class="parameter"><code>text_view</code
 should be called on <code class="literal">event-&gt;window</code> to
 see which window it was.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.22.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.23.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1777,9 +1855,8 @@ see which window it was.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.22.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.23.6"></a><h4>Returns</h4>
 <p> the window type.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1795,9 +1872,9 @@ Automatically destroys the corresponding window if the size is set
 to 0, and creates the window if the size is set to non-zero.  This
 function can only be used for the “border windows,” it doesn’t work
 with <a class="link" href="GtkTextView.html#GTK-TEXT-WINDOW-WIDGET:CAPS"><span class="type">GTK_TEXT_WINDOW_WIDGET</span></a>, <a class="link" href="GtkTextView.html#GTK-TEXT-WINDOW-TEXT:CAPS"><span class="type">GTK_TEXT_WINDOW_TEXT</span></a>, or
-<span class="type">GTK_TEXT_WINDOW_PRIVATE</span>.</p>
+<a href="http://library.gnome.org/devel/gtk3/GtkTextView.html#GTK-TEXT-WINDOW-PRIVATE:CAPS"><span class="type">GTK_TEXT_WINDOW_PRIVATE</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.23.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.24.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1833,7 +1910,7 @@ gtk_text_view_get_border_window_size (<em class="parameter"><code><a class="link
 <p>Gets the width of the specified border window. See
 <a class="link" href="GtkTextView.html#gtk-text-view-set-border-window-size" title="gtk_text_view_set_border_window_size ()"><code class="function">gtk_text_view_set_border_window_size()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.24.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.25.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1855,9 +1932,8 @@ gtk_text_view_get_border_window_size (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.24.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.25.6"></a><h4>Returns</h4>
 <p> width of window</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1868,50 +1944,6 @@ gtk_text_view_forward_display_line (<em class="parameter"><code><a class="link" 
                                     <em class="parameter"><code><a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>);</pre>
 <p>Moves the given <em class="parameter"><code>iter</code></em>
  forward by one display (wrapped) line.
-A display line is different from a paragraph. Paragraphs are
-separated by newlines or other paragraph separator characters.
-Display lines are created by line-wrapping a paragraph. If
-wrapping is turned off, display lines and paragraphs will be the
-same. Display lines are divided differently for each view, since
-they depend on the view’s width; paragraphs are the same in all
-views, since they depend on the contents of the <a class="link" href="GtkTextBuffer.html" title="GtkTextBuffer"><span class="type">GtkTextBuffer</span></a>.</p>
-<div class="refsect3">
-<a name="id-1.3.11.8.13.25.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>text_view</p></td>
-<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>iter</p></td>
-<td class="parameter_description"><p>a <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="id-1.3.11.8.13.25.6"></a><h4>Returns</h4>
-<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
-was moved and is not on the end iterator</p>
-<p></p>
-</div>
-</div>
-<hr>
-<div class="refsect2">
-<a name="gtk-text-view-backward-display-line"></a><h3>gtk_text_view_backward_display_line ()</h3>
-<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gtk_text_view_backward_display_line (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
-                                     <em class="parameter"><code><a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>);</pre>
-<p>Moves the given <em class="parameter"><code>iter</code></em>
- backward by one display (wrapped) line.
 A display line is different from a paragraph. Paragraphs are
 separated by newlines or other paragraph separator characters.
 Display lines are created by line-wrapping a paragraph. If
@@ -1945,18 +1977,16 @@ views, since they depend on the contents of the <a class="link" href="GtkTextBuf
 <a name="id-1.3.11.8.13.26.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 was moved and is not on the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="gtk-text-view-forward-display-line-end"></a><h3>gtk_text_view_forward_display_line_end ()</h3>
+<a name="gtk-text-view-backward-display-line"></a><h3>gtk_text_view_backward_display_line ()</h3>
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gtk_text_view_forward_display_line_end
-                               (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
-                                <em class="parameter"><code><a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>);</pre>
+gtk_text_view_backward_display_line (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
+                                     <em class="parameter"><code><a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>);</pre>
 <p>Moves the given <em class="parameter"><code>iter</code></em>
- forward to the next display line end.
+ backward by one display (wrapped) line.
 A display line is different from a paragraph. Paragraphs are
 separated by newlines or other paragraph separator characters.
 Display lines are created by line-wrapping a paragraph. If
@@ -1990,18 +2020,17 @@ views, since they depend on the contents of the <a class="link" href="GtkTextBuf
 <a name="id-1.3.11.8.13.27.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 was moved and is not on the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="gtk-text-view-backward-display-line-start"></a><h3>gtk_text_view_backward_display_line_start ()</h3>
+<a name="gtk-text-view-forward-display-line-end"></a><h3>gtk_text_view_forward_display_line_end ()</h3>
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gtk_text_view_backward_display_line_start
+gtk_text_view_forward_display_line_end
                                (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
                                 <em class="parameter"><code><a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>);</pre>
 <p>Moves the given <em class="parameter"><code>iter</code></em>
- backward to the next display line start.
+ forward to the next display line end.
 A display line is different from a paragraph. Paragraphs are
 separated by newlines or other paragraph separator characters.
 Display lines are created by line-wrapping a paragraph. If
@@ -2035,19 +2064,24 @@ views, since they depend on the contents of the <a class="link" href="GtkTextBuf
 <a name="id-1.3.11.8.13.28.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 was moved and is not on the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
-<a name="gtk-text-view-starts-display-line"></a><h3>gtk_text_view_starts_display_line ()</h3>
+<a name="gtk-text-view-backward-display-line-start"></a><h3>gtk_text_view_backward_display_line_start ()</h3>
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gtk_text_view_starts_display_line (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
-                                   <em class="parameter"><code>const <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>);</pre>
-<p>Determines whether <em class="parameter"><code>iter</code></em>
- is at the start of a display line.
-See <a class="link" href="GtkTextView.html#gtk-text-view-forward-display-line" title="gtk_text_view_forward_display_line ()"><code class="function">gtk_text_view_forward_display_line()</code></a> for an explanation of
-display lines vs. paragraphs.</p>
+gtk_text_view_backward_display_line_start
+                               (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
+                                <em class="parameter"><code><a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>);</pre>
+<p>Moves the given <em class="parameter"><code>iter</code></em>
+ backward to the next display line start.
+A display line is different from a paragraph. Paragraphs are
+separated by newlines or other paragraph separator characters.
+Display lines are created by line-wrapping a paragraph. If
+wrapping is turned off, display lines and paragraphs will be the
+same. Display lines are divided differently for each view, since
+they depend on the view’s width; paragraphs are the same in all
+views, since they depend on the contents of the <a class="link" href="GtkTextBuffer.html" title="GtkTextBuffer"><span class="type">GtkTextBuffer</span></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.11.8.13.29.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -2073,8 +2107,45 @@ display lines vs. paragraphs.</p>
 <div class="refsect3">
 <a name="id-1.3.11.8.13.29.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
+was moved and is not on the end iterator</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-text-view-starts-display-line"></a><h3>gtk_text_view_starts_display_line ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_text_view_starts_display_line (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
+                                   <em class="parameter"><code>const <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a> *iter</code></em>);</pre>
+<p>Determines whether <em class="parameter"><code>iter</code></em>
+ is at the start of a display line.
+See <a class="link" href="GtkTextView.html#gtk-text-view-forward-display-line" title="gtk_text_view_forward_display_line ()"><code class="function">gtk_text_view_forward_display_line()</code></a> for an explanation of
+display lines vs. paragraphs.</p>
+<div class="refsect3">
+<a name="id-1.3.11.8.13.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>text_view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>iter</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.8.13.30.6"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 begins a wrapped line</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2099,7 +2170,7 @@ between logical and visual order will depend on the direction
 of the current run, and there may be jumps when the cursor
 is moved off of the end of a run.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.30.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.31.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2127,10 +2198,9 @@ positive moves right)</p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.30.7"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.31.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>iter</code></em>
 moved and is not on the end iterator</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2143,7 +2213,7 @@ gtk_text_view_add_child_at_anchor (<em class="parameter"><code><a class="link" h
 <p>Adds a child widget in the text buffer, at the given <em class="parameter"><code>anchor</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.31.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.32.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2181,9 +2251,8 @@ it into a <a class="link" href="GtkTextBuffer.html" title="GtkTextBuffer"><span 
 To perform the creation and insertion in one step, use the
 convenience function <a class="link" href="GtkTextBuffer.html#gtk-text-buffer-create-child-anchor" title="gtk_text_buffer_create_child_anchor ()"><code class="function">gtk_text_buffer_create_child_anchor()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.32.5"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.33.5"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkTextView.html#GtkTextChildAnchor"><span class="type">GtkTextChildAnchor</span></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2193,39 +2262,6 @@ convenience function <a class="link" href="GtkTextBuffer.html#gtk-text-buffer-cr
 gtk_text_child_anchor_get_widgets (<em class="parameter"><code><a class="link" href="GtkTextView.html#GtkTextChildAnchor"><span class="type">GtkTextChildAnchor</span></a> *anchor</code></em>);</pre>
 <p>Gets a list of all widgets anchored at this child anchor.
 The returned list should be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a>.</p>
-<div class="refsect3">
-<a name="id-1.3.11.8.13.33.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>anchor</p></td>
-<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html#GtkTextChildAnchor"><span class="type">GtkTextChildAnchor</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="id-1.3.11.8.13.33.6"></a><h4>Returns</h4>
-<p> list of widgets anchored at <em class="parameter"><code>anchor</code></em>
-. </p>
-<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkWidget][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
-</div>
-</div>
-<hr>
-<div class="refsect2">
-<a name="gtk-text-child-anchor-get-deleted"></a><h3>gtk_text_child_anchor_get_deleted ()</h3>
-<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gtk_text_child_anchor_get_deleted (<em class="parameter"><code><a class="link" href="GtkTextView.html#GtkTextChildAnchor"><span class="type">GtkTextChildAnchor</span></a> *anchor</code></em>);</pre>
-<p>Determines whether a child anchor has been deleted from
-the buffer. Keep in mind that the child anchor will be
-unreferenced when removed from the buffer, so you need to
-hold your own reference (with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref"><code class="function">g_object_ref()</code></a>) if you plan
-to use this function — otherwise all deleted child anchors
-will also be finalized.</p>
 <div class="refsect3">
 <a name="id-1.3.11.8.13.34.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -2243,8 +2279,40 @@ will also be finalized.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.11.8.13.34.6"></a><h4>Returns</h4>
+<p> list of widgets anchored at <em class="parameter"><code>anchor</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkWidget][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-text-child-anchor-get-deleted"></a><h3>gtk_text_child_anchor_get_deleted ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_text_child_anchor_get_deleted (<em class="parameter"><code><a class="link" href="GtkTextView.html#GtkTextChildAnchor"><span class="type">GtkTextChildAnchor</span></a> *anchor</code></em>);</pre>
+<p>Determines whether a child anchor has been deleted from
+the buffer. Keep in mind that the child anchor will be
+unreferenced when removed from the buffer, so you need to
+hold your own reference (with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref"><code class="function">g_object_ref()</code></a>) if you plan
+to use this function — otherwise all deleted child anchors
+will also be finalized.</p>
+<div class="refsect3">
+<a name="id-1.3.11.8.13.35.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>anchor</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html#GtkTextChildAnchor"><span class="type">GtkTextChildAnchor</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.8.13.35.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the child anchor has been deleted from its buffer</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2266,7 +2334,7 @@ irrelevant, the child floats above all scrollable areas. But when
 placing a child in one of the scrollable windows (border windows or
 text window) it will move with the scrolling as needed.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.35.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.36.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2313,7 +2381,7 @@ gtk_text_view_move_child (<em class="parameter"><code><a class="link" href="GtkT
                           <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> ypos</code></em>);</pre>
 <p>Updates the position of a child, as for <a class="link" href="GtkTextView.html#gtk-text-view-add-child-in-window" title="gtk_text_view_add_child_in_window ()"><code class="function">gtk_text_view_add_child_in_window()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.36.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.37.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2353,7 +2421,7 @@ gtk_text_view_set_wrap_mode (<em class="parameter"><code><a class="link" href="G
                              <em class="parameter"><code><a class="link" href="GtkTextView.html#GtkWrapMode" title="enum GtkWrapMode"><span class="type">GtkWrapMode</span></a> wrap_mode</code></em>);</pre>
 <p>Sets the line wrapping for the view.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.37.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.38.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2382,7 +2450,7 @@ gtk_text_view_set_wrap_mode (<em class="parameter"><code><a class="link" href="G
 gtk_text_view_get_wrap_mode (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>);</pre>
 <p>Gets the line wrapping for the view.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.38.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.39.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2397,9 +2465,8 @@ gtk_text_view_get_wrap_mode (<em class="parameter"><code><a class="link" href="G
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.38.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.39.6"></a><h4>Returns</h4>
 <p> the line wrap setting</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2412,7 +2479,7 @@ gtk_text_view_set_editable (<em class="parameter"><code><a class="link" href="Gt
 this default setting with tags in the buffer, using the “editable”
 attribute of tags.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.39.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.40.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2442,7 +2509,7 @@ gtk_text_view_get_editable (<em class="parameter"><code><a class="link" href="Gt
 <p>Returns the default editability of the <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a>. Tags in the
 buffer may override this setting for some ranges of text.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.40.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.41.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2457,9 +2524,8 @@ buffer may override this setting for some ranges of text.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.40.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.41.6"></a><h4>Returns</h4>
 <p> whether text is editable by default</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2472,7 +2538,7 @@ gtk_text_view_set_cursor_visible (<em class="parameter"><code><a class="link" hr
 text probably shouldn’t have a visible cursor, so you may want to turn
 the cursor off.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.41.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.42.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2501,7 +2567,7 @@ the cursor off.</p>
 gtk_text_view_get_cursor_visible (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>);</pre>
 <p>Find out whether the cursor is being displayed.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.42.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.43.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2516,9 +2582,8 @@ gtk_text_view_get_cursor_visible (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.42.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.43.6"></a><h4>Returns</h4>
 <p> whether the insertion mark is visible</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2529,7 +2594,7 @@ gtk_text_view_set_overwrite (<em class="parameter"><code><a class="link" href="G
                              <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> overwrite</code></em>);</pre>
 <p>Changes the <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> overwrite mode.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.43.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.44.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2550,7 +2615,7 @@ gtk_text_view_set_overwrite (<em class="parameter"><code><a class="link" href="G
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2559,7 +2624,7 @@ gtk_text_view_set_overwrite (<em class="parameter"><code><a class="link" href="G
 gtk_text_view_get_overwrite (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>);</pre>
 <p>Returns whether the <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> is in overwrite mode or not.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.44.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.45.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2574,12 +2639,11 @@ gtk_text_view_get_overwrite (<em class="parameter"><code><a class="link" href="G
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.44.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.45.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>text_view</code></em>
 is in overwrite mode or not.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2592,7 +2656,7 @@ gtk_text_view_set_pixels_above_lines (<em class="parameter"><code><a class="link
 Tags in the buffer for <em class="parameter"><code>text_view</code></em>
  may override the defaults.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.45.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.46.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2621,7 +2685,7 @@ Tags in the buffer for <em class="parameter"><code>text_view</code></em>
 gtk_text_view_get_pixels_above_lines (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>);</pre>
 <p>Gets the default number of pixels to put above paragraphs.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.46.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.47.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2636,9 +2700,8 @@ gtk_text_view_get_pixels_above_lines (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.46.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.47.6"></a><h4>Returns</h4>
 <p> default number of pixels above paragraphs</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2653,7 +2716,7 @@ to put below paragraphs in <em class="parameter"><code>text_view</code></em>
 by tags applied to <em class="parameter"><code>text_view</code></em>
 ’s buffer.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.47.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.48.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2682,7 +2745,7 @@ by tags applied to <em class="parameter"><code>text_view</code></em>
 gtk_text_view_get_pixels_below_lines (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>);</pre>
 <p>Gets the value set by <a class="link" href="GtkTextView.html#gtk-text-view-set-pixels-below-lines" title="gtk_text_view_set_pixels_below_lines ()"><code class="function">gtk_text_view_set_pixels_below_lines()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.48.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.49.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2697,9 +2760,8 @@ gtk_text_view_get_pixels_below_lines (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.48.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.49.6"></a><h4>Returns</h4>
 <p> default number of blank pixels below paragraphs</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2713,7 +2775,7 @@ display/wrapped lines within a paragraph. May be overridden by
 tags in <em class="parameter"><code>text_view</code></em>
 ’s buffer.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.49.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.50.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2742,7 +2804,7 @@ tags in <em class="parameter"><code>text_view</code></em>
 gtk_text_view_get_pixels_inside_wrap (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>);</pre>
 <p>Gets the value set by <a class="link" href="GtkTextView.html#gtk-text-view-set-pixels-inside-wrap" title="gtk_text_view_set_pixels_inside_wrap ()"><code class="function">gtk_text_view_set_pixels_inside_wrap()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.50.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.51.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2757,9 +2819,8 @@ gtk_text_view_get_pixels_inside_wrap (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.50.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.51.6"></a><h4>Returns</h4>
 <p> default number of pixels of blank space between wrapped lines</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2772,7 +2833,7 @@ gtk_text_view_set_justification (<em class="parameter"><code><a class="link" hre
 .
 Tags in the view’s buffer may override the default.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.51.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.52.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2803,7 +2864,7 @@ gtk_text_view_get_justification (<em class="parameter"><code><a class="link" hre
 .
 Tags in the buffer may override the default.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.52.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.53.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2818,9 +2879,8 @@ Tags in the buffer may override the default.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.52.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.53.6"></a><h4>Returns</h4>
 <p> default justification</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2833,7 +2893,7 @@ gtk_text_view_set_left_margin (<em class="parameter"><code><a class="link" href=
 .
 Tags in the buffer may override the default.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.53.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.54.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2864,7 +2924,7 @@ gtk_text_view_get_left_margin (<em class="parameter"><code><a class="link" href=
 .
 Tags in the buffer may override the default.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.54.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.55.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2879,9 +2939,8 @@ Tags in the buffer may override the default.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.54.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.55.6"></a><h4>Returns</h4>
 <p> left margin in pixels</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2893,7 +2952,7 @@ gtk_text_view_set_right_margin (<em class="parameter"><code><a class="link" href
 <p>Sets the default right margin for text in the text view.
 Tags in the buffer may override the default.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.55.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.56.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2924,7 +2983,7 @@ gtk_text_view_get_right_margin (<em class="parameter"><code><a class="link" href
 . Tags
 in the buffer may override the default.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.56.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.57.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2939,9 +2998,8 @@ in the buffer may override the default.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.56.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.57.6"></a><h4>Returns</h4>
 <p> right margin in pixels</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2954,7 +3012,7 @@ gtk_text_view_set_indent (<em class="parameter"><code><a class="link" href="GtkT
 .
 Tags in the buffer may override the default.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.57.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.58.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2986,7 +3044,7 @@ gtk_text_view_get_indent (<em class="parameter"><code><a class="link" href="GtkT
 Tags in the view’s buffer may override the default.
 The indentation may be negative.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.58.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.59.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3001,9 +3059,8 @@ The indentation may be negative.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.58.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.59.6"></a><h4>Returns</h4>
 <p> number of pixels of indentation</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3016,7 +3073,7 @@ gtk_text_view_set_tabs (<em class="parameter"><code><a class="link" href="GtkTex
 .
 Tags in the buffer may override the default.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.59.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.60.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3049,7 +3106,7 @@ override the defaults. The returned array will be <a href="https://developer.gno
 “standard” (8-space) tabs are used. Free the return value
 with <code class="function">pango_tab_array_free()</code>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.60.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.61.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3064,10 +3121,9 @@ with <code class="function">pango_tab_array_free()</code>.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.60.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.61.6"></a><h4>Returns</h4>
 <p> copy of default tab array, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if “standard”
 tabs are used; must be freed with <code class="function">pango_tab_array_free()</code>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3083,7 +3139,7 @@ If <em class="parameter"><code>accepts_tab</code></em>
 is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> the keyboard focus is moved to the next widget in the focus 
 chain.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.61.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.62.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3106,7 +3162,7 @@ keyboard focus.</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3116,7 +3172,7 @@ gtk_text_view_get_accepts_tab (<em class="parameter"><code><a class="link" href=
 <p>Returns whether pressing the Tab key inserts a tab characters.
 <a class="link" href="GtkTextView.html#gtk-text-view-set-accepts-tab" title="gtk_text_view_set_accepts_tab ()"><code class="function">gtk_text_view_set_accepts_tab()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.62.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.63.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3131,12 +3187,11 @@ gtk_text_view_get_accepts_tab (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.62.6"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.63.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if pressing the Tab key inserts a tab character,
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if pressing the Tab key moves the keyboard focus.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3149,9 +3204,9 @@ You’d typically pass the default attributes in to
 <a class="link" href="GtkTextIter.html#gtk-text-iter-get-attributes" title="gtk_text_iter_get_attributes ()"><code class="function">gtk_text_iter_get_attributes()</code></a> in order to get the
 attributes in effect at a given text position.</p>
 <p>The return value is a copy owned by the caller of this function,
-and should be freed.</p>
+and should be freed with <a class="link" href="GtkTextTag.html#gtk-text-attributes-unref" title="gtk_text_attributes_unref ()"><code class="function">gtk_text_attributes_unref()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.63.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.64.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3166,9 +3221,8 @@ and should be freed.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.63.7"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.64.7"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkTextTag.html#GtkTextAttributes" title="struct GtkTextAttributes"><span class="type">GtkTextAttributes</span></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3225,7 +3279,7 @@ and the default key event handling of the <a class="link" href="GtkTextView.html
 
 <p></p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.64.8"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.65.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3247,11 +3301,10 @@ and the default key event handling of the <a class="link" href="GtkTextView.html
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.64.9"></a><h4>Returns</h4>
+<a name="id-1.3.11.8.13.65.9"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the input method handled the key event.</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3262,7 +3315,7 @@ gtk_text_view_reset_im_context (<em class="parameter"><code><a class="link" href
 <p>This can be necessary in the case where modifying the buffer
 would confuse on-going input method behavior.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.65.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.66.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3276,7 +3329,7 @@ would confuse on-going input method behavior.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3288,7 +3341,7 @@ gtk_text_view_set_input_purpose (<em class="parameter"><code><a class="link" hre
 can be used by on-screen keyboards and other input
 methods to adjust their behaviour.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.66.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.67.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3309,7 +3362,7 @@ methods to adjust their behaviour.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3318,7 +3371,7 @@ methods to adjust their behaviour.</p>
 gtk_text_view_get_input_purpose (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>);</pre>
 <p>Gets the value of the <a class="link" href="GtkTextView.html#GtkTextView--input-purpose" title="The “input-purpose” property"><span class="type">“input-purpose”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.67.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.68.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3332,7 +3385,7 @@ gtk_text_view_get_input_purpose (<em class="parameter"><code><a class="link" hre
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3343,7 +3396,7 @@ gtk_text_view_set_input_hints (<em class="parameter"><code><a class="link" href=
 <p>Sets the <a class="link" href="GtkTextView.html#GtkTextView--input-hints" title="The “input-hints” property"><span class="type">“input-hints”</span></a> property, which
 allows input methods to fine-tune their behaviour.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.68.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.69.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3364,7 +3417,7 @@ allows input methods to fine-tune their behaviour.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3373,7 +3426,7 @@ allows input methods to fine-tune their behaviour.</p>
 gtk_text_view_get_input_hints (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>);</pre>
 <p>Gets the value of the <a class="link" href="GtkTextView.html#GtkTextView--input-hints" title="The “input-hints” property"><span class="type">“input-hints”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.13.69.5"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.13.70.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3387,7 +3440,64 @@ gtk_text_view_get_input_hints (<em class="parameter"><code><a class="link" href=
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-text-view-set-monospace"></a><h3>gtk_text_view_set_monospace ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_text_view_set_monospace (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>,
+                             <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> monospace</code></em>);</pre>
+<p>Sets the <a class="link" href="GtkTextView.html#GtkTextView--monospace" title="The “monospace” property"><span class="type">“monospace”</span></a> property, which
+indicates that the text view should use monospace
+fonts.</p>
+<div class="refsect3">
+<a name="id-1.3.11.8.13.71.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>text_view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>monospace</p></td>
+<td class="parameter_description"><p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to request monospace styling</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-text-view-get-monospace"></a><h3>gtk_text_view_get_monospace ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_text_view_get_monospace (<em class="parameter"><code><a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="GtkTextView.html#GtkTextView--monospace" title="The “monospace” property"><span class="type">“monospace”</span></a> property.</p>
+<p>Return: <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if monospace fonts are desired</p>
+<div class="refsect3">
+<a name="id-1.3.11.8.13.72.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>text_view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3433,6 +3543,11 @@ in an idle job in the background.</p>
   void (* draw_layer)            (GtkTextView      *text_view,
 			          GtkTextViewLayer  layer,
 			          cairo_t          *cr);
+  gboolean (* extend_selection)  (GtkTextView            *text_view,
+                                  GtkTextExtendSelection  granularity,
+                                  const GtkTextIter      *location,
+                                  GtkTextIter            *start,
+                                  GtkTextIter            *end);
 };
 </pre>
 <div class="refsect3">
@@ -3523,6 +3638,11 @@ view is drawing its own text. Applications can override this vfunc
 in a subclass to draw customized content underneath or above the
 text. Since: 3.14</p></td>
 <td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkTextViewClass.extend-selection"></a>extend_selection</code></em> ()</p></td>
+<td> </td>
+<td> </td>
 </tr>
 </tbody>
 </table></div>
@@ -3621,10 +3741,45 @@ drawing with the ::draw_layer vfunc.</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="GtkTextExtendSelection"></a><h3>enum GtkTextExtendSelection</h3>
+<p>Granularity types that extend the text selection. Use the
+<a class="link" href="GtkTextView.html#GtkTextView-extend-selection" title="The “extend-selection” signal"><span class="type">“extend-selection”</span></a> signal to customize the selection.</p>
+<div class="refsect3">
+<a name="id-1.3.11.8.14.6.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-TEXT-EXTEND-SELECTION-WORD:CAPS"></a>GTK_TEXT_EXTEND_SELECTION_WORD</p></td>
+<td class="enum_member_description">
+<p>Selects the current word. It is triggered by
+  a double-click for example.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-TEXT-EXTEND-SELECTION-LINE:CAPS"></a>GTK_TEXT_EXTEND_SELECTION_LINE</p></td>
+<td class="enum_member_description">
+<p>Selects the current line. It is triggered by
+  a triple-click for example.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="GtkWrapMode"></a><h3>enum GtkWrapMode</h3>
 <p>Describes a type of line wrapping.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.14.6.4"></a><h4>Members</h4>
+<a name="id-1.3.11.8.14.7.4"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -3721,7 +3876,7 @@ system-wide IM module setting. See the GtkSettings
 <a class="link" href="GtkSettings.html#GtkSettings--gtk-im-module" title="The “gtk-im-module” property"><span class="type">“gtk-im-module”</span></a> property.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3738,7 +3893,7 @@ system-wide IM module setting. See the GtkSettings
 <p>Additional hints (beyond <a class="link" href="GtkTextView.html#GtkTextView--input-purpose" title="The “input-purpose” property"><span class="type">“input-purpose”</span></a>) that
 allow input methods to fine-tune their behaviour.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3749,7 +3904,7 @@ allow input methods to fine-tune their behaviour.</p>
 methods to adjust their behaviour.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: GTK_INPUT_PURPOSE_FREE_FORM</p>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3767,6 +3922,14 @@ methods to adjust their behaviour.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GtkTextView--monospace"></a><h3>The <code class="literal">“monospace”</code> property</h3>
+<pre class="programlisting">  “monospace”                <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether to use a monospace font.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3811,7 +3974,7 @@ methods to adjust their behaviour.</p>
 signal is also emitted for touch popups.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4019,6 +4182,69 @@ units to delete</p></td>
 </div>
 <hr>
 <div class="refsect2">
+<a name="GtkTextView-extend-selection"></a><h3>The <code class="literal">“extend-selection”</code> signal</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a>           *text_view,
+               <a class="link" href="GtkTextView.html#GtkTextExtendSelection" title="enum GtkTextExtendSelection"><span class="type">GtkTextExtendSelection</span></a> granularity,
+               <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a>           *location,
+               <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a>           *start,
+               <a class="link" href="GtkTextIter.html" title="GtkTextIter"><span class="type">GtkTextIter</span></a>           *end,
+               <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>The ::extend-selection signal is emitted when the selection needs to be
+extended at <em class="parameter"><code>location</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.11.8.17.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>text_view</p></td>
+<td class="parameter_description"><p>the object which received the signal</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>granularity</p></td>
+<td class="parameter_description"><p>the granularity type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location</p></td>
+<td class="parameter_description"><p>the location where to extend the selection</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start</p></td>
+<td class="parameter_description"><p>where the selection should start</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>end</p></td>
+<td class="parameter_description"><p>where the selection should end</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.8.17.6.6"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GDK-EVENT-STOP:CAPS"><code class="literal">GDK_EVENT_STOP</code></a> to stop other handlers from being invoked for the
+event. <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GDK-EVENT-PROPAGATE:CAPS"><code class="literal">GDK_EVENT_PROPAGATE</code></a> to propagate the event further.</p>
+</div>
+<p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="GtkTextView-insert-at-cursor"></a><h3>The <code class="literal">“insert-at-cursor”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a> *text_view,
@@ -4031,7 +4257,7 @@ which gets emitted when the user initiates the insertion of a
 fixed string at the cursor.</p>
 <p>This signal has no default bindings.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.6.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.7.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4093,7 +4319,7 @@ There are too many key combinations to list them all here.</p>
 <li class="listitem"><p>Ctrl-PageUp/PageDown keys move horizontally by pages</p></li>
 </ul></div>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.7.8"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.8.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4149,7 +4375,7 @@ to move the viewport, i.e. change what part of the text view
 is visible in a containing scrolled window.</p>
 <p>There are no default bindings for this signal.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.8.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.9.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4199,7 +4425,7 @@ into the text view.</p>
 <p>The default bindings for this signal are
 Ctrl-v and Shift-Insert.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.9.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.10.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4245,7 +4471,7 @@ type of <em class="parameter"><code>widget</code></em>
  is a <a class="link" href="GtkMenu.html" title="GtkMenu"><span class="type">GtkMenu</span></a>
 or <a class="link" href="GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> or another kind of container.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.10.8"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.11.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4286,7 +4512,7 @@ connect to this signal.</p>
 <p>This signal is only emitted if the text at the given position
 is actually editable.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.11.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.12.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4313,7 +4539,7 @@ is actually editable.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></p>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4332,7 +4558,7 @@ contents of the text view.</p>
 
 for selecting and Shift-Ctrl-a and Ctrl-\ for unselecting.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.12.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.13.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4374,7 +4600,7 @@ mark. The "anchor" mark gets placed at the same position as the
 "insert" mark.</p>
 <p>This signal has no default bindings.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.13.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.14.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4410,7 +4636,7 @@ user_function (<a class="link" href="GtkTextView.html" title="GtkTextView"><span
 which gets emitted to toggle the visibility of the cursor.</p>
 <p>The default binding for this signal is F7.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.14.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.15.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4446,7 +4672,7 @@ user_function (<a class="link" href="GtkTextView.html" title="GtkTextView"><span
 which gets emitted to toggle the overwrite mode of the text view.</p>
 <p>The default bindings for this signal is Insert.</p>
 <div class="refsect3">
-<a name="id-1.3.11.8.17.15.6"></a><h4>Parameters</h4>
+<a name="id-1.3.11.8.17.16.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4476,7 +4702,6 @@ which gets emitted to toggle the overwrite mode of the text view.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

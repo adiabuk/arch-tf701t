@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ATK - Accessibility Toolkit: AtkUtil</title>
+<title>AtkUtil: ATK - Accessibility Toolkit</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="ATK - Accessibility Toolkit">
 <link rel="up" href="toolkit.html" title="Event and toolkit support">
@@ -249,10 +249,9 @@ and toolkit version.</p>
 <pre class="programlisting"><span class="returnvalue">guint</span>
 atk_add_focus_tracker (<em class="parameter"><code><a class="link" href="AtkUtil.html#AtkEventListener" title="AtkEventListener ()"><span class="type">AtkEventListener</span></a> focus_tracker</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_add_focus_tracker</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version
-2.9.4. Focus tracking has been dropped as a feature to be
-implemented by ATK itself. If you need focus tracking on your
+<p><code class="literal">atk_add_focus_tracker</code> has been deprecated since version 2.9.4 and should not be used in newly-written code.</p>
+<p>Focus tracking has been dropped as a feature
+to be implemented by ATK itself. If you need focus tracking on your
 implementation, subscribe to the state-changed:focused signal.</p>
 </div>
 <p>Adds the specified function to the list of functions to be called
@@ -285,10 +284,9 @@ when an object receives focus.</p></td>
 <pre class="programlisting"><span class="returnvalue">void</span>
 atk_remove_focus_tracker (<em class="parameter"><code><span class="type">guint</span> tracker_id</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_remove_focus_tracker</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version
-2.9.4. Focus tracking has been dropped as a feature to be
-implemented by ATK itself. If you need focus tracking on your
+<p><code class="literal">atk_remove_focus_tracker</code> has been deprecated since version 2.9.4 and should not be used in newly-written code.</p>
+<p>Focus tracking has been dropped as a feature
+to be implemented by ATK itself. If you need focus tracking on your
 implementation, subscribe to the state-changed:focused signal.</p>
 <p>Removes the specified focus tracker from the list of functions
 to be called when any object receives focus.</p>
@@ -315,10 +313,9 @@ to be called when any object receives focus.</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 atk_focus_tracker_init (<em class="parameter"><code><a class="link" href="AtkUtil.html#AtkEventListenerInit" title="AtkEventListenerInit ()"><span class="type">AtkEventListenerInit</span></a> init</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_focus_tracker_init</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version
-2.9.4. Focus tracking has been dropped as a feature to be
-implemented by ATK itself.</p>
+<p><code class="literal">atk_focus_tracker_init</code> has been deprecated since version 2.9.4 and should not be used in newly-written code.</p>
+<p>Focus tracking has been dropped as a feature
+to be implemented by ATK itself.</p>
 </div>
 <p>Specifies the function to be called for focus tracker initialization.
 This function should be called by an implementation of the
@@ -346,10 +343,12 @@ focus tracking.</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 atk_focus_tracker_notify (<em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *object</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_focus_tracker_notify</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version
-2.9.4. Focus tracking has been dropped as a feature to be
-implemented by ATK itself.</p>
+<p><code class="literal">atk_focus_tracker_notify</code> has been deprecated since version 2.9.4 and should not be used in newly-written code.</p>
+<p>Focus tracking has been dropped as a feature
+to be implemented by ATK itself. As <a class="link" href="AtkObject.html#AtkObject-focus-event" title="The “focus-event” signal"><span class="type">“focus-event”</span></a> was
+deprecated in favor of a <a class="link" href="AtkObject.html#AtkObject-state-change" title="The “state-change” signal"><span class="type">“state-change”</span></a> signal, in order
+to notify a focus change on your implementation, you can use
+<a class="link" href="AtkObject.html#atk-object-notify-state-change" title="atk_object_notify_state_change ()"><code class="function">atk_object_notify_state_change()</code></a> instead.</p>
 </div>
 <p>Cause the focus tracker functions which have been specified to be
 executed for the object.</p>

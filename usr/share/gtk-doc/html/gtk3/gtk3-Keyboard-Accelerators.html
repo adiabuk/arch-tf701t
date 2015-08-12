@@ -8,7 +8,7 @@
 <link rel="up" href="gtkbase.html" title="Part III. GTK+ Core Reference">
 <link rel="prev" href="gtk3-Feature-Test-Macros.html" title="Version Information">
 <link rel="next" href="gtk3-Accelerator-Maps.html" title="Accelerator Maps">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -355,7 +355,6 @@ gtk_accel_group_new (<em class="parameter"><code><span class="type">void</span><
 <div class="refsect3">
 <a name="id-1.4.4.11.2.5"></a><h4>Returns</h4>
 <p> a new <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> object</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -499,7 +498,7 @@ first with <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -537,7 +536,6 @@ group, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macro
 <div class="refsect3">
 <a name="id-1.4.4.11.7.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the closure was found and got disconnected</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -580,7 +578,6 @@ gtk_accel_group_disconnect_key (<em class="parameter"><code><a class="link" href
 <a name="id-1.4.4.11.8.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there was an accelerator which could be
 removed, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -639,7 +636,6 @@ to activate the accelerator</p></td>
 <a name="id-1.4.4.11.9.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if an accelerator was activated and handled
 this keypress</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -721,9 +717,8 @@ gtk_accel_group_get_is_locked (<em class="parameter"><code><a class="link" href=
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there are 1 or more locks on the <em class="parameter"><code>accel_group</code></em>
 ,
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -781,9 +776,8 @@ gtk_accel_group_get_modifier_mask (<em class="parameter"><code><a class="link" h
 <div class="refsect3">
 <a name="id-1.4.4.11.14.6"></a><h4>Returns</h4>
 <p> the modifier mask for this accel group.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -830,7 +824,6 @@ to activate the accelerator</p></td>
 <a name="id-1.4.4.11.15.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if an accelerator was activated and handled
 this keypress</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -947,7 +940,6 @@ as an accelerator.</p>
 <div class="refsect3">
 <a name="id-1.4.4.11.18.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the accelerator is valid</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1035,7 +1027,6 @@ see <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-la
 <div class="refsect3">
 <a name="id-1.4.4.11.20.7"></a><h4>Returns</h4>
 <p> a newly-allocated accelerator name</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1071,9 +1062,8 @@ which can be used to represent the accelerator to the user.</p>
 <div class="refsect3">
 <a name="id-1.4.4.11.21.6"></a><h4>Returns</h4>
 <p> a newly-allocated string representing the accelerator.</p>
-<p></p>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1132,7 +1122,7 @@ modifier mask, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1182,9 +1172,8 @@ should use <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator
 <div class="refsect3">
 <a name="id-1.4.4.11.23.6"></a><h4>Returns</h4>
 <p> a newly allocated accelerator name.</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1236,9 +1225,8 @@ should use <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator
 <div class="refsect3">
 <a name="id-1.4.4.11.24.7"></a><h4>Returns</h4>
 <p> a newly-allocated string representing the accelerator.</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1280,7 +1268,6 @@ gtk_accelerator_get_default_mod_mask (<em class="parameter"><code><span class="t
 <div class="refsect3">
 <a name="id-1.4.4.11.26.5"></a><h4>Returns</h4>
 <p> the default accelerator modifier mask</p>
-<p></p>
 </div>
 </div>
 </div>
@@ -1474,7 +1461,6 @@ user_function (<a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGro
 <div class="refsect3">
 <a name="id-1.4.4.14.2.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the accelerator was activated</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-DETAILED:CAPS">Has Details</a></p>
 </div>
@@ -1540,7 +1526,6 @@ their visual representation if the <em class="parameter"><code>accel_closure</co
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ATK - Accessibility Toolkit: AtkComponent</title>
+<title>AtkComponent: ATK - Accessibility Toolkit</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="ATK - Accessibility Toolkit">
 <link rel="up" href="interfaces.html" title="ATK Interfaces">
@@ -207,7 +207,7 @@ which the user can activate/interact with.</p>
 </div>
 <div class="refsect1">
 <a name="AtkComponent.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GInterface
+<pre class="screen">    <a href="/opt/gnome3/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> AtkComponent
 </pre>
 </div>
@@ -237,10 +237,9 @@ information is provided by <a class="link" href="AtkText.html" title="AtkText"><
 <span class="c_punctuation">(</span>*AtkFocusHandler<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *object</code></em>,
                     <em class="parameter"><code><span class="type">gboolean</span> focus_in</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">AtkFocusHandler</code> is deprecated and should not be used in newly-written code.</p>
-<p>This type is deprecated since ATK version 2.9.4. as
-<a class="link" href="AtkComponent.html#atk-component-add-focus-handler" title="atk_component_add_focus_handler ()"><code class="function">atk_component_add_focus_handler()</code></a> and
-<a class="link" href="AtkComponent.html#atk-component-remove-focus-handler" title="atk_component_remove_focus_handler ()"><code class="function">atk_component_remove_focus_handler()</code></a> are deprecated. See those
+<p><code class="literal">AtkFocusHandler</code> has been deprecated since version 2.9.4 and should not be used in newly-written code.</p>
+<p>Deprecated with <a class="link" href="AtkComponent.html#atk-component-add-focus-handler" title="atk_component_add_focus_handler ()"><code class="function">atk_component_add_focus_handler()</code></a>
+and <a class="link" href="AtkComponent.html#atk-component-remove-focus-handler" title="atk_component_remove_focus_handler ()"><code class="function">atk_component_remove_focus_handler()</code></a>. See those
 methods for more information.</p>
 </div>
 <p>The type of callback function used for
@@ -276,10 +275,9 @@ methods for more information.</p>
 atk_component_add_focus_handler (<em class="parameter"><code><a class="link" href="AtkComponent.html" title="AtkComponent"><span class="type">AtkComponent</span></a> *component</code></em>,
                                  <em class="parameter"><code><a class="link" href="AtkComponent.html#AtkFocusHandler" title="AtkFocusHandler ()"><span class="type">AtkFocusHandler</span></a> handler</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_component_add_focus_handler</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version 2.9.4. If
-you need to track when an object gains or lose the focus, use
-state-changed:focused notification instead.</p>
+<p><code class="literal">atk_component_add_focus_handler</code> has been deprecated since version 2.9.4 and should not be used in newly-written code.</p>
+<p>If you need to track when an object gains or
+lose the focus, use state-changed:focused notification instead.</p>
 </div>
 <p>Add the specified handler to the set of functions to be called 
 when this object receives focus events (in or out). If the handler is
@@ -662,10 +660,9 @@ child, if one exists. </p>
 atk_component_remove_focus_handler (<em class="parameter"><code><a class="link" href="AtkComponent.html" title="AtkComponent"><span class="type">AtkComponent</span></a> *component</code></em>,
                                     <em class="parameter"><code><span class="type">guint</span> handler_id</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_component_remove_focus_handler</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version 2.9.4. If
-you need to track when an object gains or lose the focus, use
-state-changed:focused notification instead.</p>
+<p><code class="literal">atk_component_remove_focus_handler</code> has been deprecated since version 2.9.4 and should not be used in newly-written code.</p>
+<p>If you need to track when an object gains or
+lose the focus, use state-changed:focused notification instead.</p>
 </div>
 <p>Remove the handler specified by <em class="parameter"><code>handler_id</code></em>
  from the list of

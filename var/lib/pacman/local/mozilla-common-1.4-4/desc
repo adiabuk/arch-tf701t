@@ -1,0 +1,36 @@
+%NAME%
+mozilla-common
+
+%VERSION%
+1.4-4
+
+%DESC%
+Common Initialization Profile for Mozilla.org products
+
+%URL%
+http://www.mozilla.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1404213624
+
+%INSTALLDATE%
+1439237019
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu5@archlinuxarm.org>
+
+%SIZE%
+13312
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+

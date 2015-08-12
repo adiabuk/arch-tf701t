@@ -8,7 +8,7 @@
 <link rel="up" href="NumericEntry.html" title="Numeric and Text Data Entry">
 <link rel="prev" href="NumericEntry.html" title="Numeric and Text Data Entry">
 <link rel="next" href="GtkEntryBuffer.html" title="GtkEntryBuffer">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -483,7 +483,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GdkPixbuf</span> *
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="GtkEntry.html#gtk-entry-get-icon-pixbuf" title="gtk_entry_get_icon_pixbuf ()">gtk_entry_get_icon_pixbuf</a> <span class="c_punctuation">()</span>
@@ -639,6 +639,14 @@
 <a class="link" href="GtkEntry.html#gtk-entry-get-input-hints" title="gtk_entry_get_input_hints ()">gtk_entry_get_input_hints</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkEntry.html#gtk-entry-grab-focus-without-selecting" title="gtk_entry_grab_focus_without_selecting ()">gtk_entry_grab_focus_without_selecting</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -771,7 +779,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<span class="type">GdkPixbuf</span> *</td>
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *</td>
 <td class="property_name"><a class="link" href="GtkEntry.html#GtkEntry--primary-icon-pixbuf" title="The “primary-icon-pixbuf” property">primary-icon-pixbuf</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -837,7 +845,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<span class="type">GdkPixbuf</span> *</td>
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *</td>
 <td class="property_name"><a class="link" href="GtkEntry.html#GtkEntry--secondary-icon-pixbuf" title="The “secondary-icon-pixbuf” property">secondary-icon-pixbuf</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -1043,6 +1051,10 @@
 <td class="function_name"><a class="link" href="GtkEntry.html#GtkEntry-struct" title="struct GtkEntry">GtkEntry</a></td>
 </tr>
 <tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkEntry.html#GtkEntryClass" title="struct GtkEntryClass">GtkEntryClass</a></td>
+</tr>
+<tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="GtkEntry.html#GtkEntryIconPosition" title="enum GtkEntryIconPosition">GtkEntryIconPosition</a></td>
 </tr>
@@ -1122,7 +1134,6 @@ gtk_entry_new (<em class="parameter"><code><span class="type">void</span></code>
 <div class="refsect3">
 <a name="id-1.3.10.2.12.2.5"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1149,9 +1160,8 @@ gtk_entry_new_with_buffer (<em class="parameter"><code><a class="link" href="Gtk
 <div class="refsect3">
 <a name="id-1.3.10.2.12.3.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1180,7 +1190,7 @@ this widget.</p>
 <p> A <a class="link" href="GtkEntryBuffer.html" title="GtkEntryBuffer"><span class="type">GtkEntryBuffer</span></a> object. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1212,7 +1222,7 @@ this widget.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1291,7 +1301,6 @@ See also <a class="link" href="GtkEditable.html#gtk-editable-get-chars" title="g
 string. This string points to internally allocated
 storage in the widget and must not be freed, modified or
 stored.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1338,9 +1347,8 @@ gtk_entry_get_text_length (<em class="parameter"><code><a class="link" href="Gtk
 <a name="id-1.3.10.2.12.8.9"></a><h4>Returns</h4>
 <p> the current number of characters
 in <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a>, or 0 if there are none.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1375,7 +1383,7 @@ useful when drawing something to the entry in a draw callback.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1477,7 +1485,7 @@ default invisible char is used again.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1554,7 +1562,6 @@ gtk_entry_get_activates_default (<em class="parameter"><code><a class="link" hre
 <div class="refsect3">
 <a name="id-1.3.10.2.12.14.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the entry will activate the default widget</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1581,7 +1588,6 @@ gtk_entry_get_has_frame (<em class="parameter"><code><a class="link" href="GtkEn
 <div class="refsect3">
 <a name="id-1.3.10.2.12.15.6"></a><h4>Returns</h4>
 <p> whether the entry has a beveled frame</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1618,7 +1624,7 @@ gtk_entry_get_inner_border (<em class="parameter"><code><a class="link" href="Gt
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none was set. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1644,7 +1650,6 @@ gtk_entry_get_width_chars (<em class="parameter"><code><a class="link" href="Gtk
 <div class="refsect3">
 <a name="id-1.3.10.2.12.17.6"></a><h4>Returns</h4>
 <p> number of chars to request space for, or negative if unset</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1673,9 +1678,8 @@ See <a class="link" href="GtkEntry.html#gtk-entry-set-max-width-chars" title="gt
 <div class="refsect3">
 <a name="id-1.3.10.2.12.18.6"></a><h4>Returns</h4>
 <p> the maximum width of the entry, in characters</p>
-<p></p>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1788,7 +1792,7 @@ pixel-exact positioning of the entry is important.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1856,7 +1860,7 @@ gtk_entry_set_max_width_chars (<em class="parameter"><code><a class="link" href=
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1884,7 +1888,6 @@ for entries with visibility set to false. See <a class="link" href="GtkEntry.htm
 <a name="id-1.3.10.2.12.24.6"></a><h4>Returns</h4>
 <p> the current invisible char, or 0, if the entry does not
 show invisible text at all. </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1919,7 +1922,7 @@ Reversed for RTL layouts</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1945,9 +1948,8 @@ gtk_entry_get_alignment (<em class="parameter"><code><a class="link" href="GtkEn
 <div class="refsect3">
 <a name="id-1.3.10.2.12.26.6"></a><h4>Returns</h4>
 <p> the alignment</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1987,7 +1989,7 @@ is empty an unfocused, or <a href="https://developer.gnome.org/glib/unstable/gli
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2015,9 +2017,8 @@ gtk_entry_get_placeholder_text (<em class="parameter"><code><a class="link" href
 <a name="id-1.3.10.2.12.28.6"></a><h4>Returns</h4>
 <p> a pointer to the placeholder text as a string. This string points to internally allocated
 storage in the widget and must not be freed, modified or stored.</p>
-<p></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2048,7 +2049,7 @@ gtk_entry_set_overwrite_mode (<em class="parameter"><code><a class="link" href="
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2074,9 +2075,8 @@ gtk_entry_get_overwrite_mode (<em class="parameter"><code><a class="link" href="
 <div class="refsect3">
 <a name="id-1.3.10.2.12.30.6"></a><h4>Returns</h4>
 <p> whether the text is overwritten when typing.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2199,7 +2199,6 @@ with text retrieved via <code class="function">pango_layout_get_text()</code>).<
 <div class="refsect3">
 <a name="id-1.3.10.2.12.33.6"></a><h4>Returns</h4>
 <p> byte index into the entry contents</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2236,7 +2235,6 @@ gtk_entry_text_index_to_layout_index (<em class="parameter"><code><a class="link
 <div class="refsect3">
 <a name="id-1.3.10.2.12.34.6"></a><h4>Returns</h4>
 <p> byte index into the entry layout text</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2269,7 +2267,7 @@ entry text.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2299,7 +2297,7 @@ gtk_entry_get_attributes (<em class="parameter"><code><a class="link" href="GtkE
 if none was set. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2345,7 +2343,6 @@ gtk_entry_get_max_length (<em class="parameter"><code><a class="link" href="GtkE
 <a name="id-1.3.10.2.12.37.9"></a><h4>Returns</h4>
 <p> the maximum allowed number of characters
 in <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a>, or 0 if there is no maximum.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2374,7 +2371,6 @@ gtk_entry_get_visibility (<em class="parameter"><code><a class="link" href="GtkE
 <div class="refsect3">
 <a name="id-1.3.10.2.12.38.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the text is currently visible</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2413,7 +2409,7 @@ All further configuration of the completion mechanism is done on
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2444,7 +2440,7 @@ in use by <em class="parameter"><code>entry</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2481,7 +2477,7 @@ is moved, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Ma
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2511,7 +2507,7 @@ See <a class="link" href="GtkEntry.html#gtk-entry-set-cursor-hadjustment" title=
 if none has been set. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2544,7 +2540,7 @@ inclusive.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2571,9 +2567,8 @@ See <a class="link" href="GtkEntry.html#gtk-entry-set-progress-fraction" title="
 <div class="refsect3">
 <a name="id-1.3.10.2.12.44.6"></a><h4>Returns</h4>
 <p> a fraction from 0.0 to 1.0</p>
-<p></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2605,7 +2600,7 @@ bouncing block for each call to <a class="link" href="GtkEntry.html#gtk-entry-pr
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2631,9 +2626,8 @@ gtk_entry_get_progress_pulse_step (<em class="parameter"><code><a class="link" h
 <div class="refsect3">
 <a name="id-1.3.10.2.12.46.6"></a><h4>Returns</h4>
 <p> a fraction from 0.0 to 1.0</p>
-<p></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2661,7 +2655,7 @@ where a block bounces back and forth. Each call to
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2703,9 +2697,8 @@ See <a class="link" href="GtkTextView.html#gtk-text-view-reset-im-context" title
 <div class="refsect3">
 <a name="id-1.3.10.2.12.48.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the input method handled the key event.</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2730,7 +2723,7 @@ would confuse on-going input method behavior.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2759,7 +2752,7 @@ any.</p>
 <p> the tabstops, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none was set. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2791,7 +2784,7 @@ text.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2799,7 +2792,7 @@ text.</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_entry_set_icon_from_pixbuf (<em class="parameter"><code><a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a> *entry</code></em>,
                                 <em class="parameter"><code><a class="link" href="GtkEntry.html#GtkEntryIconPosition" title="enum GtkEntryIconPosition"><span class="type">GtkEntryIconPosition</span></a> icon_pos</code></em>,
-                                <em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>);</pre>
+                                <em class="parameter"><code><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *pixbuf</code></em>);</pre>
 <p>Sets the icon shown in the specified position using a pixbuf.</p>
 <p>If <em class="parameter"><code>pixbuf</code></em>
  is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, no icon will be shown in the specified position.</p>
@@ -2824,13 +2817,13 @@ gtk_entry_set_icon_from_pixbuf (<em class="parameter"><code><a class="link" href
 </tr>
 <tr>
 <td class="parameter_name"><p>pixbuf</p></td>
-<td class="parameter_description"><p> A <span class="type">GdkPixbuf</span>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_description"><p> A <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2874,7 +2867,7 @@ a stock image.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2916,7 +2909,7 @@ instead.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2958,7 +2951,7 @@ instead.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2994,20 +2987,19 @@ the return value will be <a class="link" href="GtkImage.html#GTK-IMAGE-EMPTY:CAP
 <div class="refsect3">
 <a name="id-1.3.10.2.12.56.6"></a><h4>Returns</h4>
 <p> image representation being used</p>
-<p></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-entry-get-icon-pixbuf"></a><h3>gtk_entry_get_icon_pixbuf ()</h3>
-<pre class="programlisting"><span class="returnvalue">GdkPixbuf</span> *
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 gtk_entry_get_icon_pixbuf (<em class="parameter"><code><a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a> *entry</code></em>,
                            <em class="parameter"><code><a class="link" href="GtkEntry.html#GtkEntryIconPosition" title="enum GtkEntryIconPosition"><span class="type">GtkEntryIconPosition</span></a> icon_pos</code></em>);</pre>
 <p>Retrieves the image used for the icon.</p>
 <p>Unlike the other methods of setting and getting icon data, this
 method will work regardless of whether the icon was set using a
-<span class="type">GdkPixbuf</span>, a <a href="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="type">GIcon</span></a>, a stock item, or an icon name.</p>
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a>, a <a href="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="type">GIcon</span></a>, a stock item, or an icon name.</p>
 <div class="refsect3">
 <a name="id-1.3.10.2.12.57.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -3032,11 +3024,11 @@ method will work regardless of whether the icon was set using a
 </div>
 <div class="refsect3">
 <a name="id-1.3.10.2.12.57.7"></a><h4>Returns</h4>
-<p> A <span class="type">GdkPixbuf</span>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no icon is
+<p> A <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no icon is
 set for this position. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3077,9 +3069,8 @@ pixbuf, icon name or gicon).</p>
 <a name="id-1.3.10.2.12.58.8"></a><h4>Returns</h4>
 <p> A stock id, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no icon is set or if the icon
 wasn’t set from a stock id</p>
-<p></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3116,9 +3107,8 @@ pixbuf, stock or gicon).</p>
 <a name="id-1.3.10.2.12.59.6"></a><h4>Returns</h4>
 <p> An icon name, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no icon is set or if the icon
 wasn’t set from an icon name</p>
-<p></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3157,7 +3147,7 @@ stock, pixbuf, or icon name).</p>
 or if the icon is not a <a href="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="type">GIcon</span></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3194,7 +3184,7 @@ gtk_entry_set_icon_activatable (<em class="parameter"><code><a class="link" href
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3228,9 +3218,8 @@ gtk_entry_get_icon_activatable (<em class="parameter"><code><a class="link" href
 <div class="refsect3">
 <a name="id-1.3.10.2.12.62.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the icon is activatable.</p>
-<p></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3268,7 +3257,7 @@ sensitive or insensitive</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3302,9 +3291,8 @@ gtk_entry_get_icon_sensitive (<em class="parameter"><code><a class="link" href="
 <div class="refsect3">
 <a name="id-1.3.10.2.12.64.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the icon is sensitive.</p>
-<p></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3351,9 +3339,8 @@ signal handler.</p>
 <div class="refsect3">
 <a name="id-1.3.10.2.12.65.6"></a><h4>Returns</h4>
 <p> the index of the icon at the given position, or -1</p>
-<p></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3396,7 +3383,7 @@ at the specified position.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3435,7 +3422,7 @@ position in <em class="parameter"><code>entry</code></em>
 string with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when done. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3480,7 +3467,7 @@ the Pango text markup language.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3519,7 +3506,7 @@ position in <em class="parameter"><code>entry</code></em>
 string with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when done. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3572,7 +3559,7 @@ gets executed after the default handler.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3603,9 +3590,8 @@ callback.</p>
 <a name="id-1.3.10.2.12.71.7"></a><h4>Returns</h4>
 <p> index of the icon which is the source of the current
 DND operation, or -1.</p>
-<p></p>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3649,7 +3635,7 @@ entry in a draw callback.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3682,7 +3668,7 @@ methods to adjust their behaviour.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3705,7 +3691,7 @@ gtk_entry_get_input_purpose (<em class="parameter"><code><a class="link" href="G
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3737,7 +3723,7 @@ allows input methods to fine-tune their behaviour.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3760,7 +3746,37 @@ gtk_entry_get_input_hints (<em class="parameter"><code><a class="link" href="Gtk
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-entry-grab-focus-without-selecting"></a><h3>gtk_entry_grab_focus_without_selecting ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_entry_grab_focus_without_selecting
+                               (<em class="parameter"><code><a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a> *entry</code></em>);</pre>
+<p>Causes <em class="parameter"><code>entry</code></em>
+ to have keyboard focus.</p>
+<p>It behaves like <a class="link" href="GtkWidget.html#gtk-widget-grab-focus" title="gtk_widget_grab_focus ()"><code class="function">gtk_widget_grab_focus()</code></a>,
+except that it doesn't select the contents of the entry.
+You only want to call this on some special entries
+which the user usually doesn't want to replace all text in,
+such as search-as-you-type entries.</p>
+<div class="refsect3">
+<a name="id-1.3.10.2.12.77.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>entry</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -3771,10 +3787,156 @@ gtk_entry_get_input_hints (<em class="parameter"><code><a class="link" href="Gtk
 </div>
 <hr>
 <div class="refsect2">
+<a name="GtkEntryClass"></a><h3>struct GtkEntryClass</h3>
+<pre class="programlisting">struct GtkEntryClass {
+  GtkWidgetClass parent_class;
+
+  /* Hook to customize right-click popup */
+  void (* populate_popup)   (GtkEntry       *entry,
+                             GtkWidget      *popup);
+
+  /* Action signals
+   */
+  void (* activate)           (GtkEntry             *entry);
+  void (* move_cursor)        (GtkEntry             *entry,
+			       GtkMovementStep       step,
+			       gint                  count,
+			       gboolean              extend_selection);
+  void (* insert_at_cursor)   (GtkEntry             *entry,
+			       const gchar          *str);
+  void (* delete_from_cursor) (GtkEntry             *entry,
+			       GtkDeleteType         type,
+			       gint                  count);
+  void (* backspace)          (GtkEntry             *entry);
+  void (* cut_clipboard)      (GtkEntry             *entry);
+  void (* copy_clipboard)     (GtkEntry             *entry);
+  void (* paste_clipboard)    (GtkEntry             *entry);
+  void (* toggle_overwrite)   (GtkEntry             *entry);
+
+  /* hooks to add other objects beside the entry (like in GtkSpinButton) */
+  void (* get_text_area_size) (GtkEntry       *entry,
+			       gint           *x,
+			       gint           *y,
+			       gint           *width,
+			       gint           *height);
+  void (* get_frame_size)     (GtkEntry       *entry,
+                               gint           *x,
+                               gint           *y,
+			       gint           *width,
+			       gint           *height);
+};
+</pre>
+<p>Class structure for <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a>. All virtual functions have a default
+implementation. Derived classes may set the virtual function pointers for the
+signal handlers to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, but must keep <em class="parameter"><code>get_text_area_size</code></em>
+ and
+<em class="parameter"><code>get_frame_size</code></em>
+ non-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>; either use the default implementation, or provide
+a custom one.</p>
+<div class="refsect3">
+<a name="id-1.3.10.2.13.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GtkWidget.html#GtkWidgetClass" title="struct GtkWidgetClass"><span class="type">GtkWidgetClass</span></a> <em class="structfield"><code><a name="GtkEntryClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent class.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.populate-popup"></a>populate_popup</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-populate-popup" title="The “populate-popup” signal"><span class="type">“populate-popup”</span></a> signal. If
+non-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, this will be called to add additional entries to the context
+menu when it is displayed.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.activate"></a>activate</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-activate" title="The “activate” signal"><span class="type">“activate”</span></a> signal. The default
+implementation calls <a class="link" href="GtkWindow.html#gtk-window-activate-default" title="gtk_window_activate_default ()"><code class="function">gtk_window_activate_default()</code></a> on the entry’s top-level
+window.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.move-cursor"></a>move_cursor</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-move-cursor" title="The “move-cursor” signal"><span class="type">“move-cursor”</span></a> signal. The
+default implementation specifies the standard <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a> cursor movement
+behavior.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.insert-at-cursor"></a>insert_at_cursor</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-insert-at-cursor" title="The “insert-at-cursor” signal"><span class="type">“insert-at-cursor”</span></a> signal.
+The default implementation inserts text at the cursor.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.delete-from-cursor"></a>delete_from_cursor</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-delete-from-cursor" title="The “delete-from-cursor” signal"><span class="type">“delete-from-cursor”</span></a>
+signal. The default implementation deletes the selection or the specified
+number of characters or words.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.backspace"></a>backspace</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-backspace" title="The “backspace” signal"><span class="type">“backspace”</span></a> signal. The default
+implementation deletes the selection or a single character or word.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.cut-clipboard"></a>cut_clipboard</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-cut-clipboard" title="The “cut-clipboard” signal"><span class="type">“cut-clipboard”</span></a> signal. The
+default implementation cuts the selection, if one exists.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.copy-clipboard"></a>copy_clipboard</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-copy-clipboard" title="The “copy-clipboard” signal"><span class="type">“copy-clipboard”</span></a> signal. The
+default implementation copies the selection, if one exists.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.paste-clipboard"></a>paste_clipboard</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-paste-clipboard" title="The “paste-clipboard” signal"><span class="type">“paste-clipboard”</span></a> signal.
+The default implementation pastes at the current cursor position or over
+the current selection if one exists.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.toggle-overwrite"></a>toggle_overwrite</code></em> ()</p></td>
+<td class="struct_member_description"><p>Class handler for the <a class="link" href="GtkEntry.html#GtkEntry-toggle-overwrite" title="The “toggle-overwrite” signal"><span class="type">“toggle-overwrite”</span></a> signal.
+The default implementation toggles overwrite mode and blinks the cursor.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.get-text-area-size"></a>get_text_area_size</code></em> ()</p></td>
+<td class="struct_member_description"><p>Calculate the size of the text area, which is its
+allocated width and requested height, minus space for margins and borders.
+This virtual function must be non-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkEntryClass.get-frame-size"></a>get_frame_size</code></em> ()</p></td>
+<td class="struct_member_description"><p>Calculate the size of the text area frame, which is its
+allocated width and requested height, minus space for margins and borders,
+and taking baseline and text height into account. This virtual function
+must be non-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="GtkEntryIconPosition"></a><h3>enum GtkEntryIconPosition</h3>
 <p>Specifies the side of the entry at which an icon is placed.</p>
 <div class="refsect3">
-<a name="id-1.3.10.2.13.3.4"></a><h4>Members</h4>
+<a name="id-1.3.10.2.13.4.4"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -3799,7 +3961,7 @@ gtk_entry_get_input_hints (<em class="parameter"><code><a class="link" href="Gtk
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3822,7 +3984,7 @@ minus) and “e” or “E” as in 3.14E+000.</p>
 <p>This enumeration may be extended in the future; input methods should
 interpret unknown values as “free form”.</p>
 <div class="refsect3">
-<a name="id-1.3.10.2.13.4.7"></a><h4>Members</h4>
+<a name="id-1.3.10.2.13.5.7"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -3905,7 +4067,7 @@ interpret unknown values as “free form”.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3919,7 +4081,7 @@ behaviour according to the <a class="link" href="GtkEntry.html#GtkInputPurpose" 
 <p>This enumeration may be extended in the future; input methods should
 ignore unknown values.</p>
 <div class="refsect3">
-<a name="id-1.3.10.2.13.5.6"></a><h4>Members</h4>
+<a name="id-1.3.10.2.13.6.6"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -3996,7 +4158,7 @@ ignore unknown values.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -4015,7 +4177,7 @@ ignore unknown values.</p>
 <p>A list of Pango attributes to apply to the text of the entry.</p>
 <p>This is mainly useful to change the size or weight of the text.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4035,7 +4197,7 @@ does not work if you are using the secondary icon position for some
 other purpose.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4043,7 +4205,7 @@ other purpose.</p>
 <pre class="programlisting">  “completion”               <a class="link" href="GtkEntryCompletion.html" title="GtkEntryCompletion"><span class="type">GtkEntryCompletion</span></a> *</pre>
 <p>The auxiliary completion object to use with the entry.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4083,7 +4245,7 @@ system-wide IM module setting. See the GtkSettings
 <a class="link" href="GtkSettings.html#GtkSettings--gtk-im-module" title="The “gtk-im-module” property"><span class="type">“gtk-im-module”</span></a> property.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4097,7 +4259,7 @@ system-wide IM module setting. See the GtkSettings
   of this style property is ignored.</p>
 </div>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4106,7 +4268,7 @@ system-wide IM module setting. See the GtkSettings
 <p>Additional hints (beyond <a class="link" href="GtkEntry.html#GtkEntry--input-purpose" title="The “input-purpose” property"><span class="type">“input-purpose”</span></a>) that
 allow input methods to fine-tune their behaviour.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4120,7 +4282,7 @@ methods to adjust their behaviour.</p>
 <a class="link" href="GtkEntry.html#GtkEntry--visibility" title="The “visibility” property"><span class="type">“visibility”</span></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: GTK_INPUT_PURPOSE_FREE_FORM</p>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4135,7 +4297,7 @@ in the current font.</p>
 to the list of candidates.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: '*'</p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4144,7 +4306,7 @@ to the list of candidates.</p>
 <p>Whether the invisible char has been set for the <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4165,7 +4327,7 @@ automatically.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: -1</p>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4174,7 +4336,7 @@ automatically.</p>
 <p>If text is overwritten when typing in the <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4184,7 +4346,7 @@ automatically.</p>
 and unfocused.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4194,7 +4356,7 @@ and unfocused.</p>
 signal is also emitted for touch popups.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4209,7 +4371,7 @@ signals only on sensitive, activatable icons. </p>
 informational purposes.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4217,7 +4379,7 @@ informational purposes.</p>
 <pre class="programlisting">  “primary-icon-gicon”       <a href="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="type">GIcon</span></a> *</pre>
 <p>The <a href="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="type">GIcon</span></a> to use for the primary icon for the entry.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4226,15 +4388,15 @@ informational purposes.</p>
 <p>The icon name to use for the primary icon for the entry.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="GtkEntry--primary-icon-pixbuf"></a><h3>The <code class="literal">“primary-icon-pixbuf”</code> property</h3>
-<pre class="programlisting">  “primary-icon-pixbuf”      <span class="type">GdkPixbuf</span> *</pre>
+<pre class="programlisting">  “primary-icon-pixbuf”      <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *</pre>
 <p>A pixbuf to use as the primary icon for the entry.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4250,7 +4412,7 @@ does not allow DND from insensitive icons.</p>
 when clicked is currently not available.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4263,7 +4425,7 @@ when clicked is currently not available.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4272,7 +4434,7 @@ when clicked is currently not available.</p>
 <p>The representation which is used for the primary icon of the entry.</p>
 <p>Flags: Read</p>
 <p>Default value: GTK_IMAGE_EMPTY</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4283,7 +4445,7 @@ with the Pango text markup language.</p>
 <p>Also see <a class="link" href="GtkEntry.html#gtk-entry-set-icon-tooltip-markup" title="gtk_entry_set_icon_tooltip_markup ()"><code class="function">gtk_entry_set_icon_tooltip_markup()</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4293,7 +4455,7 @@ with the Pango text markup language.</p>
 <p>Also see <a class="link" href="GtkEntry.html#gtk-entry-set-icon-tooltip-text" title="gtk_entry_set_icon_tooltip_text ()"><code class="function">gtk_entry_set_icon_tooltip_text()</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4303,7 +4465,7 @@ with the Pango text markup language.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,1]</p>
 <p>Default value: 0</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4314,7 +4476,7 @@ bouncing block for each call to <a class="link" href="GtkEntry.html#gtk-entry-pr
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,1]</p>
 <p>Default value: 0.1</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4338,7 +4500,7 @@ signals only on sensitive, activatable icons.</p>
 informational purposes.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4346,7 +4508,7 @@ informational purposes.</p>
 <pre class="programlisting">  “secondary-icon-gicon”     <a href="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="type">GIcon</span></a> *</pre>
 <p>The <a href="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="type">GIcon</span></a> to use for the secondary icon for the entry.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4355,15 +4517,15 @@ informational purposes.</p>
 <p>The icon name to use for the secondary icon for the entry.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="GtkEntry--secondary-icon-pixbuf"></a><h3>The <code class="literal">“secondary-icon-pixbuf”</code> property</h3>
-<pre class="programlisting">  “secondary-icon-pixbuf”    <span class="type">GdkPixbuf</span> *</pre>
+<pre class="programlisting">  “secondary-icon-pixbuf”    <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *</pre>
 <p>An pixbuf to use as the secondary icon for the entry.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4379,7 +4541,7 @@ does not allow DND from insensitive icons.</p>
 when clicked is currently not available.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4392,7 +4554,7 @@ when clicked is currently not available.</p>
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4401,7 +4563,7 @@ when clicked is currently not available.</p>
 <p>The representation which is used for the secondary icon of the entry.</p>
 <p>Flags: Read</p>
 <p>Default value: GTK_IMAGE_EMPTY</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4412,7 +4574,7 @@ with the Pango text markup language.</p>
 <p>Also see <a class="link" href="GtkEntry.html#gtk-entry-set-icon-tooltip-markup" title="gtk_entry_set_icon_tooltip_markup ()"><code class="function">gtk_entry_set_icon_tooltip_markup()</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4422,7 +4584,7 @@ with the Pango text markup language.</p>
 <p>Also see <a class="link" href="GtkEntry.html#gtk-entry-set-icon-tooltip-text" title="gtk_entry_set_icon_tooltip_text ()"><code class="function">gtk_entry_set_icon_tooltip_text()</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4442,7 +4604,7 @@ with the Pango text markup language.</p>
 <a class="link" href="GtkEntry.html#GtkEntry--has-frame" title="The “has-frame” property"><span class="type">“has-frame”</span></a> is set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: GTK_SHADOW_IN</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4467,7 +4629,7 @@ with the Pango text markup language.</p>
 <p>Flags: Read</p>
 <p>Allowed values: &lt;= 65535</p>
 <p>Default value: 0</p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4476,7 +4638,7 @@ with the Pango text markup language.</p>
 <p>When <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, pasted multi-line text is truncated to the first line.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4505,7 +4667,7 @@ Reversed for RTL layouts.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,1]</p>
 <p>Default value: 0</p>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 </div>
 <div class="refsect1">
@@ -4517,7 +4679,7 @@ Reversed for RTL layouts.</p>
 icons prelight on mouseover.</p>
 <p>Flags: Read</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4531,7 +4693,7 @@ icons prelight on mouseover.</p>
   of this style property is ignored.</p>
 </div>
 <p>Flags: Read</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4546,7 +4708,7 @@ in the current font.</p>
 to the list of candidates.</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4560,7 +4722,7 @@ to the list of candidates.</p>
   property is ignored.</p>
 </div>
 <p>Flags: Read</p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 </div>
 <div class="refsect1">
@@ -4802,7 +4964,7 @@ is clicked.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4847,7 +5009,7 @@ mouse click over an activatable icon.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.16</p>
+<p class="since">Since: 2.16</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5080,7 +5242,7 @@ connect to this signal.</p>
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></p>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5123,7 +5285,6 @@ which gets emitted to toggle the overwrite mode of the entry.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

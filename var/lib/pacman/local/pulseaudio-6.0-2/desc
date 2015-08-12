@@ -1,0 +1,46 @@
+%NAME%
+pulseaudio
+
+%VERSION%
+6.0-2
+
+%DESC%
+A featureful, general-purpose sound server
+
+%URL%
+http://www.freedesktop.org/wiki/Software/PulseAudio
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1431666309
+
+%INSTALLDATE%
+1439237112
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+5329920
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libpulse=6.0-2
+rtkit
+libltdl
+speexdsp
+tdb
+orc
+webrtc-audio-processing
+sbc
+
+%OPTDEPENDS%
+pulseaudio-alsa: ALSA configuration (recommended)
+

@@ -39,28 +39,28 @@ extern "C" {
 struct wl_client;
 struct wl_resource;
 
-struct wl_display;
-struct wl_registry;
+struct wl_buffer;
 struct wl_callback;
 struct wl_compositor;
-struct wl_shm_pool;
-struct wl_shm;
-struct wl_buffer;
-struct wl_data_offer;
-struct wl_data_source;
 struct wl_data_device;
 struct wl_data_device_manager;
+struct wl_data_offer;
+struct wl_data_source;
+struct wl_display;
+struct wl_keyboard;
+struct wl_output;
+struct wl_pointer;
+struct wl_region;
+struct wl_registry;
+struct wl_seat;
 struct wl_shell;
 struct wl_shell_surface;
-struct wl_surface;
-struct wl_seat;
-struct wl_pointer;
-struct wl_keyboard;
-struct wl_touch;
-struct wl_output;
-struct wl_region;
+struct wl_shm;
+struct wl_shm_pool;
 struct wl_subcompositor;
 struct wl_subsurface;
+struct wl_surface;
+struct wl_touch;
 
 extern const struct wl_interface wl_display_interface;
 extern const struct wl_interface wl_registry_interface;
@@ -1769,7 +1769,11 @@ struct wl_pointer_interface {
 	/**
 	 * release - release the pointer object
 	 *
-	 * 
+	 * Using this request client can tell the server that it is not
+	 * going to use the pointer object anymore.
+	 *
+	 * This request destroys the pointer proxy object, so user must not
+	 * call wl_pointer_destroy() after using this request.
 	 * @since: 3
 	 */
 	void (*release)(struct wl_client *client,
@@ -1997,7 +2001,7 @@ wl_touch_send_cancel(struct wl_resource *resource_)
  * @WL_OUTPUT_SUBPIXEL_VERTICAL_BGR: (none)
  *
  * This enumeration describes how the physical pixels on an output are
- * layed out.
+ * laid out.
  */
 enum wl_output_subpixel {
 	WL_OUTPUT_SUBPIXEL_UNKNOWN = 0,
@@ -2296,8 +2300,10 @@ struct wl_subsurface_interface {
 	 * The coordinates are not restricted to the parent surface area.
 	 * Negative values are allowed.
 	 *
-	 * The next wl_surface.commit on the parent surface will reset the
-	 * sub-surface's position to the scheduled coordinates.
+	 * The scheduled coordinates will take effect whenever the state of
+	 * the parent surface is applied. When this happens depends on
+	 * whether the parent surface is in synchronized mode or not. See
+	 * wl_subsurface.set_sync and wl_subsurface.set_desync for details.
 	 *
 	 * If more than one set_position request is invoked by the client
 	 * before the commit of the parent surface, the position of a new
@@ -2321,9 +2327,11 @@ struct wl_subsurface_interface {
 	 * including this sub-surface, will cause a protocol error.
 	 *
 	 * The z-order is double-buffered. Requests are handled in order
-	 * and applied immediately to a pending state, then committed to
-	 * the active state on the next commit of the parent surface. See
-	 * wl_surface.commit and wl_subcompositor.get_subsurface.
+	 * and applied immediately to a pending state. The final pending
+	 * state is copied to the active state the next time the state of
+	 * the parent surface is applied. When this happens depends on
+	 * whether the parent surface is in synchronized mode or not. See
+	 * wl_subsurface.set_sync and wl_subsurface.set_desync for details.
 	 *
 	 * A new sub-surface is initially added as the top-most in the
 	 * stack of its siblings and parent.
@@ -2345,7 +2353,7 @@ struct wl_subsurface_interface {
 	 * set_sync - set sub-surface to synchronized mode
 	 *
 	 * Change the commit behaviour of the sub-surface to synchronized
-	 * mode, also described as the parent dependant mode.
+	 * mode, also described as the parent dependent mode.
 	 *
 	 * In synchronized mode, wl_surface.commit on a sub-surface will
 	 * accumulate the committed state in a cache, but the state will

@@ -343,12 +343,12 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> *</td>
+<span class="type">GTlsCertificate</span> *</td>
 <td class="property_name"><a class="link" href="SoupMessage.html#SoupMessage--tls-certificate" title="The “tls-certificate” property">tls-certificate</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a></td>
+<td class="property_type"><span class="type">GTlsCertificateFlags</span></td>
 <td class="property_name"><a class="link" href="SoupMessage.html#SoupMessage--tls-errors" title="The “tls-errors” property">tls-errors</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -408,6 +408,11 @@
 <tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="SoupMessage.html#SoupMessage-restarted" title="The “restarted” signal">restarted</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="SoupMessage.html#SoupMessage-starting" title="The “starting” signal">starting</a></td>
 <td class="signal_flags">Run First</td>
 </tr>
 <tr>
@@ -535,7 +540,7 @@
 </div>
 <div class="refsect1">
 <a name="SoupMessage.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">╰──</span> SoupMessage
 </pre>
 </div>
@@ -1061,12 +1066,12 @@ Connection header, etc.</p>
 <a name="soup-message-get-https-status"></a><h3>soup_message_get_https_status ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 soup_message_get_https_status (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                               <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> **certificate</code></em>,
-                               <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a> *errors</code></em>);</pre>
+                               <em class="parameter"><code><span class="type">GTlsCertificate</span> **certificate</code></em>,
+                               <em class="parameter"><code><span class="type">GTlsCertificateFlags</span> *errors</code></em>);</pre>
 <p>If <em class="parameter"><code>msg</code></em>
  is using https (or attempted to use https but got
-<a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-SSL-FAILED:CAPS"><code class="literal">SOUP_STATUS_SSL_FAILED</code></a>), this retrieves the <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>
-associated with its connection, and the <a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a>
+<a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-SSL-FAILED:CAPS"><code class="literal">SOUP_STATUS_SSL_FAILED</code></a>), this retrieves the <span class="type">GTlsCertificate</span>
+associated with its connection, and the <span class="type">GTlsCertificateFlags</span>
 showing what problems, if any, have been found with that
 certificate.</p>
 <div class="note"><p>This is only meaningful with messages processed by a <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> and is
@@ -1181,12 +1186,12 @@ soup_message_get_first_party (<em class="parameter"><code><a class="link" href="
 soup_message_add_header_handler (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                  <em class="parameter"><code>const <span class="type">char</span> *signal</code></em>,
                                  <em class="parameter"><code>const <span class="type">char</span> *header</code></em>,
-                                 <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> callback</code></em>,
+                                 <em class="parameter"><code><span class="type">GCallback</span> callback</code></em>,
                                  <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
 <p>Adds a signal handler to <em class="parameter"><code>msg</code></em>
  for <em class="parameter"><code>signal</code></em>
 , as with
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect"><code class="function">g_signal_connect()</code></a>, but the <em class="parameter"><code>callback</code></em>
+<code class="function">g_signal_connect()</code>, but the <em class="parameter"><code>callback</code></em>
  will only be run if <em class="parameter"><code>msg</code></em>
 's
 incoming messages headers (that is, the
@@ -1234,7 +1239,7 @@ contain a header named <em class="parameter"><code>header</code></em>
 </div>
 <div class="refsect3">
 <a name="id-1.3.8.10.18.6"></a><h4>Returns</h4>
-<p> the handler ID from <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect"><code class="function">g_signal_connect()</code></a></p>
+<p> the handler ID from <code class="function">g_signal_connect()</code></p>
 <p></p>
 </div>
 </div>
@@ -1245,12 +1250,12 @@ contain a header named <em class="parameter"><code>header</code></em>
 soup_message_add_status_code_handler (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
                                       <em class="parameter"><code>const <span class="type">char</span> *signal</code></em>,
                                       <em class="parameter"><code><span class="type">guint</span> status_code</code></em>,
-                                      <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> callback</code></em>,
+                                      <em class="parameter"><code><span class="type">GCallback</span> callback</code></em>,
                                       <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
 <p>Adds a signal handler to <em class="parameter"><code>msg</code></em>
  for <em class="parameter"><code>signal</code></em>
 , as with
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect"><code class="function">g_signal_connect()</code></a>, but the <em class="parameter"><code>callback</code></em>
+<code class="function">g_signal_connect()</code>, but the <em class="parameter"><code>callback</code></em>
  will only be run if <em class="parameter"><code>msg</code></em>
  has
 the status <em class="parameter"><code>status_code</code></em>
@@ -1301,7 +1306,7 @@ signal.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.8.10.19.7"></a><h4>Returns</h4>
-<p> the handler ID from <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#g-signal-connect"><code class="function">g_signal_connect()</code></a></p>
+<p> the handler ID from <code class="function">g_signal_connect()</code></p>
 <p></p>
 </div>
 </div>
@@ -1508,7 +1513,7 @@ destroyed</p></td>
 <a name="soup-message-disable-feature"></a><h3>soup_message_disable_feature ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 soup_message_disable_feature (<em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                              <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> feature_type</code></em>);</pre>
+                              <em class="parameter"><code><span class="type">GType</span> feature_type</code></em>);</pre>
 <p>This disables the actions of <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>s with the
 given <em class="parameter"><code>feature_type</code></em>
  (or a subclass of that type) on <em class="parameter"><code>msg</code></em>
@@ -1539,7 +1544,7 @@ redirect or authentication.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_type</p></td>
-<td class="parameter_description"><p>the <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a></p></td>
+<td class="parameter_description"><p>the <span class="type">GType</span> of a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1874,6 +1879,18 @@ behavior.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
+<tr>
+<td class="enum_member_name"><p><a name="SOUP-MESSAGE-IGNORE-CONNECTION-LIMITS:CAPS"></a>SOUP_MESSAGE_IGNORE_CONNECTION_LIMITS</p></td>
+<td class="enum_member_description">
+<p>Request that a new connection is
+  created for the message if there aren't idle connections available
+  and it's not possible to create new connections due to any of the
+  connection limits has been reached. If a dedicated connection is
+  eventually created for this message, it will be dropped when the
+  message finishes. Since 2.50</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -2196,15 +2213,15 @@ queued.</p>
 <hr>
 <div class="refsect2">
 <a name="SoupMessage--tls-certificate"></a><h3>The <code class="literal">“tls-certificate”</code> property</h3>
-<pre class="programlisting">  “tls-certificate”          <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> *</pre>
-<p>The <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> associated with the message</p>
+<pre class="programlisting">  “tls-certificate”          <span class="type">GTlsCertificate</span> *</pre>
+<p>The <span class="type">GTlsCertificate</span> associated with the message</p>
 <p>Flags: Read / Write</p>
 <p class="since">Since 2.34</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupMessage--tls-errors"></a><h3>The <code class="literal">“tls-errors”</code> property</h3>
-<pre class="programlisting">  “tls-errors”               <a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a></pre>
+<pre class="programlisting">  “tls-errors”               <span class="type">GTlsCertificateFlags</span></pre>
 <p>The verification errors on <a class="link" href="SoupMessage.html#SoupMessage--tls-certificate" title="The “tls-certificate” property"><span class="type">“tls-certificate”</span></a></p>
 <p>Flags: Read / Write</p>
 <p class="since">Since 2.34</p>
@@ -2487,13 +2504,13 @@ emission finished, and <em class="parameter"><code>msg</code></em>
 <a name="SoupMessage-network-event"></a><h3>The <code class="literal">“network-event”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a>       *msg,
-               <a href="http://library.gnome.org/devel/gio/unstable/GSocketClient.html#GSocketClientEvent"><span class="type">GSocketClientEvent</span></a> event,
-               <a href="http://library.gnome.org/devel/gio/unstable/GIOStream.html"><span class="type">GIOStream</span></a>         *connection,
+               <span class="type">GSocketClientEvent</span> event,
+               <span class="type">GIOStream</span>         *connection,
                <span class="type">gpointer</span>           user_data)</pre>
 <p>Emitted to indicate that some network-related event
 related to <em class="parameter"><code>msg</code></em>
  has occurred. This essentially proxies the
-<a href="http://library.gnome.org/devel/gio/unstable/GSocketClient.html#GSocketClient-event"><span class="type">“event”</span></a> signal, but only for events that
+<span class="type">“event”</span> signal, but only for events that
 occur while <em class="parameter"><code>msg</code></em>
  "owns" the connection; if <em class="parameter"><code>msg</code></em>
  is sent on
@@ -2501,7 +2518,7 @@ an existing persistent connection, then this signal will
 not be emitted. (If you want to force the message to be
 sent on a new connection, set the
 <a class="link" href="SoupMessage.html#SOUP-MESSAGE-NEW-CONNECTION:CAPS"><code class="literal">SOUP_MESSAGE_NEW_CONNECTION</code></a> flag on it.)</p>
-<p>See <a href="http://library.gnome.org/devel/gio/unstable/GSocketClient.html#GSocketClient-event"><span class="type">“event”</span></a> for more information on what
+<p>See <span class="type">“event”</span> for more information on what
 the different values of <em class="parameter"><code>event</code></em>
  correspond to, and what
 <em class="parameter"><code>connection</code></em>
@@ -2577,6 +2594,38 @@ authentication).</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="SoupMessage-starting"></a><h3>The <code class="literal">“starting”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
+               <span class="type">gpointer</span>     user_data)</pre>
+<p>Emitted just before a message is sent.</p>
+<div class="refsect3">
+<a name="id-1.3.8.13.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>msg</p></td>
+<td class="parameter_description"><p>the message</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+<p class="since">Since 2.50</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="SoupMessage-wrote-body"></a><h3>The <code class="literal">“wrote-body”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg,
@@ -2588,7 +2637,7 @@ from the server. For a server-side message, this means that
 libsoup has finished writing the response and is nearly
 done with the message.)</p>
 <div class="refsect3">
-<a name="id-1.3.8.13.10.5"></a><h4>Parameters</h4>
+<a name="id-1.3.8.13.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2624,7 +2673,7 @@ body to the network.</p>
 every successful <code class="function">write()</code> call, not only after finishing a
 complete "chunk".</p>
 <div class="refsect3">
-<a name="id-1.3.8.13.11.6"></a><h4>Parameters</h4>
+<a name="id-1.3.8.13.12.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2667,7 +2716,7 @@ chunk (added with <a class="link" href="SoupMessageBody.html#soup-message-body-a
 more useful continuous progress information, use
 <a class="link" href="SoupMessage.html#SoupMessage-wrote-body-data" title="The “wrote-body-data” signal"><span class="type">“wrote_body_data”</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.8.13.12.6"></a><h4>Parameters</h4>
+<a name="id-1.3.8.13.13.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2701,7 +2750,7 @@ message. (For a client-side message, this is after writing
 the request headers; for a server-side message, it is after
 writing the response headers.)</p>
 <div class="refsect3">
-<a name="id-1.3.8.13.13.5"></a><h4>Parameters</h4>
+<a name="id-1.3.8.13.14.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2733,7 +2782,7 @@ user_function (<a class="link" href="SoupMessage.html" title="SoupMessage"><span
 <p>Emitted immediately after writing a 1xx (Informational)
 response for a (server-side) message.</p>
 <div class="refsect3">
-<a name="id-1.3.8.13.14.5"></a><h4>Parameters</h4>
+<a name="id-1.3.8.13.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">

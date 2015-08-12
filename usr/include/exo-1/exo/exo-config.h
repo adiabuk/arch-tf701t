@@ -55,7 +55,7 @@ G_BEGIN_DECLS
  * compile time, rather than from the library linked against at
  * application run time.
  **/
-#define EXO_MICRO_VERSION 4
+#define EXO_MICRO_VERSION 6
 
 /**
  * EXO_CHECK_VERSION:

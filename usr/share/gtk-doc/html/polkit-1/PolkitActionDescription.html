@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>polkit Reference Manual: PolkitActionDescription</title>
+<title>PolkitActionDescription: polkit Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="polkit Reference Manual">
 <link rel="up" href="ref-api.html" title="Part III. Library API Reference">
 <link rel="prev" href="polkit-1-PolkitError.html" title="PolkitError">
 <link rel="next" href="PolkitTemporaryAuthorization.html" title="PolkitTemporaryAuthorization">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#PolkitActionDescription.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#PolkitActionDescription.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#PolkitActionDescription.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -197,7 +197,6 @@ polkit_action_description_get_action_id
 <a name="id-1.4.6.7.2.6"></a><h4>Returns</h4>
 <p> A string owned by <em class="parameter"><code>action_description</code></em>
 . Do not free.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -227,7 +226,6 @@ polkit_action_description_get_description
 <a name="id-1.4.6.7.3.6"></a><h4>Returns</h4>
 <p> A string owned by <em class="parameter"><code>action_description</code></em>
 . Do not free.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -256,7 +254,6 @@ polkit_action_description_get_message (<em class="parameter"><code><a class="lin
 <a name="id-1.4.6.7.4.6"></a><h4>Returns</h4>
 <p> A string owned by <em class="parameter"><code>action_description</code></em>
 . Do not free.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -286,7 +283,6 @@ polkit_action_description_get_vendor_name
 <a name="id-1.4.6.7.5.6"></a><h4>Returns</h4>
 <p> A string owned by <em class="parameter"><code>action_description</code></em>
 . Do not free.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -316,7 +312,6 @@ polkit_action_description_get_vendor_url
 <a name="id-1.4.6.7.6.6"></a><h4>Returns</h4>
 <p> A string owned by <em class="parameter"><code>action_description</code></em>
 . Do not free.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -346,7 +341,6 @@ polkit_action_description_get_icon_name
 <a name="id-1.4.6.7.7.6"></a><h4>Returns</h4>
 <p> A string owned by <em class="parameter"><code>action_description</code></em>
 . Do not free.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -376,7 +370,6 @@ any subject.</p>
 <div class="refsect3">
 <a name="id-1.4.6.7.8.6"></a><h4>Returns</h4>
 <p> A value from the <a class="link" href="PolkitActionDescription.html#PolkitImplicitAuthorization" title="enum PolkitImplicitAuthorization"><span class="type">PolkitImplicitAuthorization</span></a> enumeration.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -406,7 +399,6 @@ subjects in inactive sessions on a local console.</p>
 <div class="refsect3">
 <a name="id-1.4.6.7.9.6"></a><h4>Returns</h4>
 <p> A value from the <a class="link" href="PolkitActionDescription.html#PolkitImplicitAuthorization" title="enum PolkitImplicitAuthorization"><span class="type">PolkitImplicitAuthorization</span></a> enumeration.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -436,7 +428,6 @@ subjects in active sessions on a local console.</p>
 <div class="refsect3">
 <a name="id-1.4.6.7.10.6"></a><h4>Returns</h4>
 <p> A value from the <a class="link" href="PolkitActionDescription.html#PolkitImplicitAuthorization" title="enum PolkitImplicitAuthorization"><span class="type">PolkitImplicitAuthorization</span></a> enumeration.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -477,7 +468,7 @@ polkit_action_description_get_annotation
 otherwise the annotation value owned by <em class="parameter"><code>action_description</code></em>
 . Do not
 free. </p>
-<p><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -602,7 +593,6 @@ polkit_implicit_authorization_from_string
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

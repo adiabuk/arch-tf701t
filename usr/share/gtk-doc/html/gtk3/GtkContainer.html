@@ -8,7 +8,7 @@
 <link rel="up" href="AbstractObjects.html" title="Abstract Base Classes">
 <link rel="prev" href="GtkWidget.html" title="GtkWidget">
 <link rel="next" href="GtkBin.html" title="GtkBin">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -679,7 +679,13 @@ changes, use <a class="link" href="GtkWidget.html#gtk-widget-child-notify" title
 <p>The GtkContainer implementation of the GtkBuildable interface supports
 a &lt;packing&gt; element for children, which can contain multiple &lt;property&gt;
 elements that specify child properties for the child.</p>
-<p>An example of child properties in UI definitions:</p>
+<p>Since 2.16, child properties can also be marked as translatable using
+the same “translatable”, “comments” and “context” attributes that are used
+for regular properties.</p>
+<p>Since 3.16, containers can have a &lt;focus-chain&gt; element containing multiple
+&lt;widget&gt; elements, one for each child that should be added to the focus
+chain. The ”name” attribute gives the id of the widget.</p>
+<p>An example of these properties in UI definitions:</p>
 <div class="informalexample">
   <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
     <tbody>
@@ -691,14 +697,28 @@ elements that specify child properties for the child.</p>
 5
 6
 7
-8</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkVBox"</span><span class="symbol">&gt;</span>
+8
+9
+10
+11
+12
+13
+14
+15</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkBox"</span><span class="symbol">&gt;</span>
 <span class="normal">  </span><span class="symbol">&lt;</span><span class="normal">child</span><span class="symbol">&gt;</span>
-<span class="normal">    </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkLabel"</span><span class="symbol">/&gt;</span>
+<span class="normal">    </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkEntry"</span><span class="normal"> id</span><span class="symbol">=</span><span class="string">"entry1"</span><span class="symbol">/&gt;</span>
 <span class="normal">    </span><span class="symbol">&lt;</span><span class="normal">packing</span><span class="symbol">&gt;</span>
 <span class="normal">      </span><span class="symbol">&lt;</span><span class="usertype">property</span><span class="normal"> name</span><span class="symbol">=</span><span class="string">"pack-type"</span><span class="symbol">&gt;</span><span class="normal">start</span><span class="symbol">&lt;/</span><span class="normal">property</span><span class="symbol">&gt;</span>
 <span class="normal">    </span><span class="symbol">&lt;/</span><span class="normal">packing</span><span class="symbol">&gt;</span>
 <span class="normal">  </span><span class="symbol">&lt;/</span><span class="normal">child</span><span class="symbol">&gt;</span>
+<span class="normal">  </span><span class="symbol">&lt;</span><span class="normal">child</span><span class="symbol">&gt;</span>
+<span class="normal">    </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkEntry"</span><span class="normal"> id</span><span class="symbol">=</span><span class="string">"entry2"</span><span class="symbol">/&gt;</span>
+<span class="normal">  </span><span class="symbol">&lt;/</span><span class="normal">child</span><span class="symbol">&gt;</span>
+<span class="normal">  </span><span class="symbol">&lt;</span><span class="normal">focus</span><span class="symbol">-</span><span class="normal">chain</span><span class="symbol">&gt;</span>
+<span class="normal">    </span><span class="symbol">&lt;</span><span class="usertype">widget</span><span class="normal"> name</span><span class="symbol">=</span><span class="string">"entry1"</span><span class="symbol">/&gt;</span>
+<span class="normal">    </span><span class="symbol">&lt;</span><span class="usertype">widget</span><span class="normal"> name</span><span class="symbol">=</span><span class="string">"entry2"</span><span class="symbol">/&gt;</span>
+<span class="normal">  </span><span class="symbol">&lt;/</span><span class="normal">focus</span><span class="symbol">-</span><span class="normal">chain</span><span class="symbol">&gt;</span>
 <span class="symbol">&lt;/</span><span class="normal">object</span><span class="symbol">&gt;</span></pre></td>
       </tr>
     </tbody>
@@ -706,9 +726,6 @@ elements that specify child properties for the child.</p>
 </div>
 
 <p></p>
-<p>Since 2.16, child properties can also be marked as translatable using
-the same “translatable”, “comments” and “context” attributes that are used
-for regular properties.</p>
 </div>
 </div>
 <div class="refsect1">
@@ -921,7 +938,6 @@ gtk_container_get_resize_mode (<em class="parameter"><code><a class="link" href=
 <div class="refsect3">
 <a name="id-1.3.19.3.11.7.7"></a><h4>Returns</h4>
 <p> the current resize mode</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1073,7 +1089,6 @@ from the toplevel down to and including <em class="parameter"><code>child</code>
 <div class="refsect3">
 <a name="id-1.3.19.3.11.12.6"></a><h4>Returns</h4>
 <p> A newly created <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1147,7 +1162,7 @@ is focussed,
 or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none is set. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1163,7 +1178,7 @@ gtk_container_set_focus_child (<em class="parameter"><code><a class="link" href=
 . Implementations of <a class="link" href="GtkContainer.html" title="GtkContainer"><span class="type">GtkContainer</span></a> can override the
 default behaviour by overriding the class closure of this signal.</p>
 <p>This is function is mostly meant to be used by widgets. Applications can use
-<a class="link" href="GtkWidget.html#gtk-widget-grab-focus" title="gtk_widget_grab_focus ()"><code class="function">gtk_widget_grab_focus()</code></a> to manualy set the focus to a specific widget.</p>
+<a class="link" href="GtkWidget.html#gtk-widget-grab-focus" title="gtk_widget_grab_focus ()"><code class="function">gtk_widget_grab_focus()</code></a> to manually set the focus to a specific widget.</p>
 <div class="refsect3">
 <a name="id-1.3.19.3.11.15.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -1372,7 +1387,6 @@ children.</p>
 <div class="refsect3">
 <a name="id-1.3.19.3.11.21.7"></a><h4>Returns</h4>
 <p> a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1693,7 +1707,7 @@ the class of <em class="parameter"><code>container</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1710,8 +1724,9 @@ container). “Internal” children generally weren’t added by the user
 of the container, but were added by the container implementation
 itself.  Most applications should use <a class="link" href="GtkContainer.html#gtk-container-foreach" title="gtk_container_foreach ()"><code class="function">gtk_container_foreach()</code></a>,
 rather than <a class="link" href="GtkContainer.html#gtk-container-forall" title="gtk_container_forall ()"><code class="function">gtk_container_forall()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> forall]</span></p>
 <div class="refsect3">
-<a name="id-1.3.19.3.11.29.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.3.11.29.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1763,7 +1778,6 @@ gtk_container_get_border_width (<em class="parameter"><code><a class="link" href
 <div class="refsect3">
 <a name="id-1.3.19.3.11.30.6"></a><h4>Returns</h4>
 <p> the current border width</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1900,7 +1914,6 @@ individual widgets in the focus chain. </p></td>
 <a name="id-1.3.19.3.11.33.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the focus chain of the container
 has been set explicitly.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2320,7 +2333,6 @@ user_function (<a class="link" href="GtkContainer.html" title="GtkContainer"><sp
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

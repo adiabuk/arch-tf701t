@@ -53,6 +53,16 @@ GType soup_known_status_code_get_type (void) G_GNUC_CONST;
 #define SOUP_TYPE_KNOWN_STATUS_CODE (soup_known_status_code_get_type ())
 GType soup_tld_error_get_type (void) G_GNUC_CONST;
 #define SOUP_TYPE_TLD_ERROR (soup_tld_error_get_type ())
+GType soup_websocket_error_get_type (void) G_GNUC_CONST;
+#define SOUP_TYPE_WEBSOCKET_ERROR (soup_websocket_error_get_type ())
+GType soup_websocket_connection_type_get_type (void) G_GNUC_CONST;
+#define SOUP_TYPE_WEBSOCKET_CONNECTION_TYPE (soup_websocket_connection_type_get_type ())
+GType soup_websocket_data_type_get_type (void) G_GNUC_CONST;
+#define SOUP_TYPE_WEBSOCKET_DATA_TYPE (soup_websocket_data_type_get_type ())
+GType soup_websocket_close_code_get_type (void) G_GNUC_CONST;
+#define SOUP_TYPE_WEBSOCKET_CLOSE_CODE (soup_websocket_close_code_get_type ())
+GType soup_websocket_state_get_type (void) G_GNUC_CONST;
+#define SOUP_TYPE_WEBSOCKET_STATE (soup_websocket_state_get_type ())
 GType soup_xmlrpc_error_get_type (void) G_GNUC_CONST;
 #define SOUP_TYPE_XMLRPC_ERROR (soup_xmlrpc_error_get_type ())
 GType soup_xmlrpc_fault_get_type (void) G_GNUC_CONST;

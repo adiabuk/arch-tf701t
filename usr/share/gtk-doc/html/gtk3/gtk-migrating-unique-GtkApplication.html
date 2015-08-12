@@ -8,7 +8,7 @@
 <link rel="up" href="migrating.html" title="Part V. Migrating from Previous Versions of GTK+">
 <link rel="prev" href="gtk-migrating-GtkStyleContext-bonus-points.html" title="Bonus points">
 <link rel="next" href="ch27s02.html" title="Commands and Messages">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -85,21 +85,21 @@
 
 <span class="normal">  </span><span class="function"><a href="gtk3-General.html#gtk-init">gtk_init</a></span><span class="normal"> </span><span class="symbol">(&amp;</span><span class="normal">argc</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">argv</span><span class="symbol">);</span>
 
-<span class="normal">  app </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="../unique/UniqueApp.html#unique-app-new">unique_app_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"org.gtk.TestApplication"</span><span class="symbol">,</span><span class="normal"> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
+<span class="normal">  app </span><span class="symbol">=</span><span class="normal"> </span><span class="function">unique_app_new</span><span class="normal"> </span><span class="symbol">(</span><span class="string">"org.gtk.TestApplication"</span><span class="symbol">,</span><span class="normal"> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 
-<span class="normal">  </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="../unique/UniqueApp.html#unique-app-is-running">unique_app_is_running</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">app</span><span class="symbol">))</span>
+<span class="normal">  </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function">unique_app_is_running</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">app</span><span class="symbol">))</span>
 <span class="normal">    </span><span class="cbracket">{</span>
 <span class="normal">      </span><span class="usertype">UniqueResponse</span><span class="normal"> response</span><span class="symbol">;</span>
 
-<span class="normal">      response </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="../unique/UniqueApp.html#unique-app-send-message">unique_app_send_message</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">app</span><span class="symbol">,</span><span class="normal"> <a href="../unique/UniqueApp.html#UNIQUE-ACTIVATE:CAPS">UNIQUE_ACTIVATE</a></span><span class="symbol">,</span><span class="normal"> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
+<span class="normal">      response </span><span class="symbol">=</span><span class="normal"> </span><span class="function">unique_app_send_message</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">app</span><span class="symbol">,</span><span class="normal"> UNIQUE_ACTIVATE</span><span class="symbol">,</span><span class="normal"> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">);</span>
 <span class="normal">      </span><span class="function"><a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">app</span><span class="symbol">);</span>
 
-<span class="normal">      </span><span class="keyword">return</span><span class="normal"> response </span><span class="symbol">==</span><span class="normal"> <a href="../unique/UniqueApp.html#UNIQUE-RESPONSE-OK:CAPS">UNIQUE_RESPONSE_OK</a> </span><span class="symbol">?</span><span class="normal"> </span><span class="number">0</span><span class="normal"> </span><span class="symbol">:</span><span class="normal"> </span><span class="number">1</span><span class="symbol">;</span>
+<span class="normal">      </span><span class="keyword">return</span><span class="normal"> response </span><span class="symbol">==</span><span class="normal"> UNIQUE_RESPONSE_OK </span><span class="symbol">?</span><span class="normal"> </span><span class="number">0</span><span class="normal"> </span><span class="symbol">:</span><span class="normal"> </span><span class="number">1</span><span class="symbol">;</span>
 <span class="normal">    </span><span class="cbracket">}</span>
 
 <span class="normal">  window </span><span class="symbol">=</span><span class="normal"> </span><span class="function">create_my_window</span><span class="normal"> </span><span class="symbol">();</span>
 
-<span class="normal">  </span><span class="function"><a href="../unique/UniqueApp.html#unique-app-watch-window">unique_app_watch_window</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">app</span><span class="symbol">,</span><span class="normal"> </span><span class="function">GTK_WINDOW</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">window</span><span class="symbol">));</span>
+<span class="normal">  </span><span class="function">unique_app_watch_window</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">app</span><span class="symbol">,</span><span class="normal"> </span><span class="function">GTK_WINDOW</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">window</span><span class="symbol">));</span>
 
 <span class="normal">  </span><span class="function"><a href="GtkWidget.html#gtk-widget-show">gtk_widget_show</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">window</span><span class="symbol">);</span>
 
@@ -207,7 +207,7 @@ The same application using GtkApplication:
       Instead of creating a UniqueApp with unique_app_new(), create
       a <a href="https://developer.gnome.org/gio/unstable/GApplication.html"><span class="type">GApplication</span></a> with <a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-new"><code class="function">g_application_new()</code></a> or a <a class="link" href="GtkApplication.html" title="GtkApplication"><span class="type">GtkApplication</span></a>
       with <a class="link" href="GtkApplication.html#gtk-application-new" title="gtk_application_new ()"><code class="function">gtk_application_new()</code></a>. The <em class="parameter"><code>name</code></em> that was used with
-      <a href="../unique/UniqueApp.html#unique-app-new"><code class="function">unique_app_new()</code></a> is very likely usable as the <em class="parameter"><code>application_id</code></em> for
+      <code class="function">unique_app_new()</code> is very likely usable as the <em class="parameter"><code>application_id</code></em> for
       <a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-new"><code class="function">g_application_new()</code></a> without any changes, and GtkApplication passes
       the <code class="envar">DESKTOP_STARTUP_ID</code> environment variable
       automatically.
@@ -217,12 +217,11 @@ The same application using GtkApplication:
       yourself and activate it manually, GApplication handles all this on
       its own in <a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-run"><code class="function">g_application_run()</code></a>. If you still need to find out if there
       is a running instance of your application, use
-      <a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-get-is-remote"><code class="function">g_application_get_is_remote()</code></a> instead of <a href="../unique/UniqueApp.html#unique-app-is-running"><code class="function">unique_app_is_running()</code></a>.
+      <a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-get-is-remote"><code class="function">g_application_get_is_remote()</code></a> instead of <code class="function">unique_app_is_running()</code>.
     </p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

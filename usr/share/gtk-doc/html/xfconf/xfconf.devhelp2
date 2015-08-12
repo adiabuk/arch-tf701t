@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
 <book xmlns="http://www.devhelp.net/book" title="Xfconf Reference Manual" link="index.html" author="" name="xfconf" version="2" language="c">
   <chapters>
     <sub name="Xfconf Core Functionality" link="ch01.html">
@@ -83,5 +82,15 @@
     <keyword type="function" name="xfconf_g_property_unbind ()" link="xfconf-xfconf-binding.html#xfconf-g-property-unbind"/>
     <keyword type="function" name="xfconf_g_property_unbind_by_property ()" link="xfconf-xfconf-binding.html#xfconf-g-property-unbind-by-property"/>
     <keyword type="function" name="xfconf_g_property_unbind_all ()" link="xfconf-xfconf-binding.html#xfconf-g-property-unbind-all"/>
+    <keyword type="constant" name="XFCONF_ERROR_UNKNOWN" link="xfconf-xfconf-errors.html#XFCONF-ERROR-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="XFCONF_ERROR_CHANNEL_NOT_FOUND" link="xfconf-xfconf-errors.html#XFCONF-ERROR-CHANNEL-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="XFCONF_ERROR_PROPERTY_NOT_FOUND" link="xfconf-xfconf-errors.html#XFCONF-ERROR-PROPERTY-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="XFCONF_ERROR_READ_FAILURE" link="xfconf-xfconf-errors.html#XFCONF-ERROR-READ-FAILURE:CAPS"/>
+    <keyword type="constant" name="XFCONF_ERROR_WRITE_FAILURE" link="xfconf-xfconf-errors.html#XFCONF-ERROR-WRITE-FAILURE:CAPS"/>
+    <keyword type="constant" name="XFCONF_ERROR_PERMISSION_DENIED" link="xfconf-xfconf-errors.html#XFCONF-ERROR-PERMISSION-DENIED:CAPS"/>
+    <keyword type="constant" name="XFCONF_ERROR_INTERNAL_ERROR" link="xfconf-xfconf-errors.html#XFCONF-ERROR-INTERNAL-ERROR:CAPS"/>
+    <keyword type="constant" name="XFCONF_ERROR_NO_BACKEND" link="xfconf-xfconf-errors.html#XFCONF-ERROR-NO-BACKEND:CAPS"/>
+    <keyword type="constant" name="XFCONF_ERROR_INVALID_PROPERTY" link="xfconf-xfconf-errors.html#XFCONF-ERROR-INVALID-PROPERTY:CAPS"/>
+    <keyword type="constant" name="XFCONF_ERROR_INVALID_CHANNEL" link="xfconf-xfconf-errors.html#XFCONF-ERROR-INVALID-CHANNEL:CAPS"/>
   </functions>
 </book>

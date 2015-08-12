@@ -8,7 +8,7 @@
 <link rel="up" href="gtkbase.html" title="Part III. GTK+ Core Reference">
 <link rel="prev" href="gtk3-Clipboards.html" title="Clipboards">
 <link rel="next" href="GtkSettings.html" title="Settings">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -392,8 +392,9 @@ gtk_drag_dest_set (<em class="parameter"><code><a class="link" href="GtkWidget.h
                    <em class="parameter"><code>const <a class="link" href="gtk3-Selections.html#GtkTargetEntry" title="struct GtkTargetEntry"><span class="type">GtkTargetEntry</span></a> *targets</code></em>,
                    <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_targets</code></em>,
                    <em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragAction"><span class="type">GdkDragAction</span></a> actions</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.2.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.2.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -444,8 +445,9 @@ gtk_drag_dest_set_proxy (<em class="parameter"><code><a class="link" href="GtkWi
                          <em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *proxy_window</code></em>,
                          <em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragProtocol"><span class="type">GdkDragProtocol</span></a> protocol</code></em>,
                          <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_coordinates</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.3.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.3.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -486,8 +488,9 @@ subwindow.</p></td>
 <a name="gtk-drag-dest-unset"></a><h3>gtk_drag_dest_unset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_dest_unset (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.4.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.4.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -509,8 +512,9 @@ gtk_drag_dest_unset (<em class="parameter"><code><a class="link" href="GtkWidget
 gtk_drag_dest_find_target (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                            <em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragContext"><span class="type">GdkDragContext</span></a> *context</code></em>,
                            <em class="parameter"><code><a class="link" href="gtk3-Selections.html#GtkTargetList"><span class="type">GtkTargetList</span></a> *target_list</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.5.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.5.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -538,14 +542,20 @@ gtk_drag_dest_get_target_list (<em class="parameter"><code>widget</code></em>
 </tbody>
 </table></div>
 </div>
+<div class="refsect3">
+<a name="id-1.4.7.7.5.6"></a><h4>Returns</h4>
+<p>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-dest-get-target-list"></a><h3>gtk_drag_dest_get_target_list ()</h3>
 <pre class="programlisting"><a class="link" href="gtk3-Selections.html#GtkTargetList"><span class="returnvalue">GtkTargetList</span></a> *
 gtk_drag_dest_get_target_list (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.6.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.6.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -566,8 +576,9 @@ gtk_drag_dest_get_target_list (<em class="parameter"><code><a class="link" href=
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_dest_set_target_list (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                                <em class="parameter"><code><a class="link" href="gtk3-Selections.html#GtkTargetList"><span class="type">GtkTargetList</span></a> *target_list</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.7.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -594,8 +605,9 @@ gtk_drag_dest_set_target_list (<em class="parameter"><code><a class="link" href=
 <a name="gtk-drag-dest-add-text-targets"></a><h3>gtk_drag_dest_add_text_targets ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_dest_add_text_targets (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.8.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.8.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -609,15 +621,16 @@ gtk_drag_dest_add_text_targets (<em class="parameter"><code><a class="link" href
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-dest-add-image-targets"></a><h3>gtk_drag_dest_add_image_targets ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_dest_add_image_targets (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.9.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.9.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -631,15 +644,16 @@ gtk_drag_dest_add_image_targets (<em class="parameter"><code><a class="link" hre
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-dest-add-uri-targets"></a><h3>gtk_drag_dest_add_uri_targets ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_dest_add_uri_targets (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.10.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.10.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -653,7 +667,7 @@ gtk_drag_dest_add_uri_targets (<em class="parameter"><code><a class="link" href=
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -661,8 +675,9 @@ gtk_drag_dest_add_uri_targets (<em class="parameter"><code><a class="link" href=
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_dest_set_track_motion (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> track_motion</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.11.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -683,15 +698,16 @@ gtk_drag_dest_set_track_motion (<em class="parameter"><code><a class="link" href
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-dest-get-track-motion"></a><h3>gtk_drag_dest_get_track_motion ()</h3>
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gtk_drag_dest_get_track_motion (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.12.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.12.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -705,7 +721,7 @@ gtk_drag_dest_get_track_motion (<em class="parameter"><code><a class="link" href
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -715,8 +731,9 @@ gtk_drag_finish (<em class="parameter"><code><a href="http://developer.gnome.org
                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> success</code></em>,
                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> del</code></em>,
                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> time_</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.13.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.13.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -757,8 +774,9 @@ gtk_drag_get_data (<em class="parameter"><code><a class="link" href="GtkWidget.h
                    <em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragContext"><span class="type">GdkDragContext</span></a> *context</code></em>,
                    <em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Properties-and-Atoms.html#GdkAtom"><span class="type">GdkAtom</span></a> target</code></em>,
                    <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> time_</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.14.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.14.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -798,8 +816,9 @@ or <a class="link" href="GtkWidget.html#GtkWidget-drag-drop" title="The “drag-
 <a name="gtk-drag-get-source-widget"></a><h3>gtk_drag_get_source_widget ()</h3>
 <pre class="programlisting"><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a> *
 gtk_drag_get_source_widget (<em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragContext"><span class="type">GdkDragContext</span></a> *context</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.15.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -813,14 +832,20 @@ gtk_drag_get_source_widget (<em class="parameter"><code><a href="http://develope
 </tr></tbody>
 </table></div>
 </div>
+<div class="refsect3">
+<a name="id-1.4.7.7.15.6"></a><h4>Returns</h4>
+<p>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-highlight"></a><h3>gtk_drag_highlight ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_highlight (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.16.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.16.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -840,8 +865,9 @@ gtk_drag_highlight (<em class="parameter"><code><a class="link" href="GtkWidget.
 <a name="gtk-drag-unhighlight"></a><h3>gtk_drag_unhighlight ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_unhighlight (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.17.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.17.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -869,8 +895,9 @@ gtk_drag_begin (<em class="parameter"><code><a class="link" href="GtkWidget.html
 <p><code class="literal">gtk_drag_begin</code> has been deprecated since version 3.10 and should not be used in newly-written code.</p>
 <p>Use <a class="link" href="gtk3-Drag-and-Drop.html#gtk-drag-begin-with-coordinates" title="gtk_drag_begin_with_coordinates ()"><code class="function">gtk_drag_begin_with_coordinates()</code></a> instead</p>
 </div>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.18.5"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.18.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -907,6 +934,11 @@ source can provide the data.</p></td>
 </tbody>
 </table></div>
 </div>
+<div class="refsect3">
+<a name="id-1.4.7.7.18.7"></a><h4>Returns</h4>
+<p>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -919,100 +951,36 @@ gtk_drag_begin_with_coordinates (<em class="parameter"><code><a class="link" hre
                                  <em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Event-Structures.html#GdkEvent"><span class="type">GdkEvent</span></a> *event</code></em>,
                                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> x</code></em>,
                                  <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> y</code></em>);</pre>
-<p>Initiates a drag on the source side. The function only needs to be used
-when the application is starting drags itself, and is not needed when
-<a class="link" href="gtk3-Drag-and-Drop.html#gtk-drag-source-set" title="gtk_drag_source_set ()"><code class="function">gtk_drag_source_set()</code></a> is used.</p>
-<p>The <em class="parameter"><code>event</code></em>
- is used to retrieve the timestamp that will be used internally to
-grab the pointer.  If <em class="parameter"><code>event</code></em>
- is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, then <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GDK-CURRENT-TIME:CAPS"><code class="literal">GDK_CURRENT_TIME</code></a> will be used.
-However, you should try to pass a real event in all cases, since that can be
-used to get information about the drag.</p>
-<p>Generally there are three cases when you want to start a drag by hand by
-calling this function:</p>
-<div class="orderedlist"><ol class="orderedlist" type="1">
-<li class="listitem"><p>During a <a class="link" href="GtkWidget.html#GtkWidget-button-press-event" title="The “button-press-event” signal"><span class="type">“button-press-event”</span></a> handler, if you want to start a drag
-immediately when the user presses the mouse button.  Pass the <em class="parameter"><code>event</code></em>
-
-that you have in your <a class="link" href="GtkWidget.html#GtkWidget-button-press-event" title="The “button-press-event” signal"><span class="type">“button-press-event”</span></a> handler.</p></li>
-<li class="listitem"><p>During a <a class="link" href="GtkWidget.html#GtkWidget-motion-notify-event" title="The “motion-notify-event” signal"><span class="type">“motion-notify-event”</span></a> handler, if you want to start a drag
-when the mouse moves past a certain threshold distance after a button-press.
-Pass the <em class="parameter"><code>event</code></em>
- that you have in your <a class="link" href="GtkWidget.html#GtkWidget-motion-notify-event" title="The “motion-notify-event” signal"><span class="type">“motion-notify-event”</span></a> handler.</p></li>
-<li class="listitem"><p>During a timeout handler, if you want to start a drag after the mouse
-button is held down for some time.  Try to save the last event that you got
-from the mouse, using <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#gdk-event-copy"><code class="function">gdk_event_copy()</code></a>, and pass it to this function
-(remember to free the event with <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#gdk-event-free"><code class="function">gdk_event_free()</code></a> when you are done).
-If you can really not pass a real event, pass <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> instead.</p></li>
-</ol></div>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.19.8"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>widget</p></td>
-<td class="parameter_description"><p>the source widget</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>targets</p></td>
-<td class="parameter_description"><p>The targets (data formats) in which the
-source can provide the data</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>actions</p></td>
-<td class="parameter_description"><p>A bitmask of the allowed drag actions for this drag</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>button</p></td>
-<td class="parameter_description"><p>The button the user clicked to start the drag</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>event</p></td>
-<td class="parameter_description"><p>The event that triggered the start of the drag</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>The initial x coordinate to start dragging from, in the coordinate space
-of <em class="parameter"><code>widget</code></em>
-. If -1 is passed, the coordinates are retrieved from <em class="parameter"><code>event</code></em>
-or
-the current pointer position</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>y</p></td>
-<td class="parameter_description"><p>The initial y coordinate to start dragging from, in the coordinate space
-of <em class="parameter"><code>widget</code></em>
-. If -1 is passed, the coordinates are retrieved from <em class="parameter"><code>event</code></em>
-or
-the current pointer position</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="id-1.4.7.7.19.9"></a><h4>Returns</h4>
-<p> the context for this drag. </p>
+<a name="id-1.4.7.7.19.5"></a><h4>Returns</h4>
+<p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-cancel"></a><h3>gtk_drag_cancel ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_cancel (<em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragContext"><span class="type">GdkDragContext</span></a> *context</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="id-1.4.7.7.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>context</p></td>
+<td class="parameter_description"><p>a <a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragContext"><span class="type">GdkDragContext</span></a>, as e.g. returned by <a class="link" href="gtk3-Drag-and-Drop.html#gtk-drag-begin-with-coordinates" title="gtk_drag_begin_with_coordinates ()"><code class="function">gtk_drag_begin_with_coordinates()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1026,8 +994,9 @@ gtk_drag_set_icon_widget (<em class="parameter"><code><a href="http://developer.
 will not destroy the icon, so if you don’t want
 it to persist, you should connect to the “drag-end” 
 signal and destroy it yourself.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.21.5"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.21.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1067,13 +1036,14 @@ of the hotspot.</p></td>
 <a name="gtk-drag-set-icon-pixbuf"></a><h3>gtk_drag_set_icon_pixbuf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_set_icon_pixbuf (<em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragContext"><span class="type">GdkDragContext</span></a> *context</code></em>,
-                          <em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>,
+                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *pixbuf</code></em>,
                           <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> hot_x</code></em>,
                           <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> hot_y</code></em>);</pre>
 <p>Sets <em class="parameter"><code>pixbuf</code></em>
  as the icon for a given drag.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.22.5"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.22.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1089,7 +1059,7 @@ with a  context for the source side of a drag)</p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>pixbuf</p></td>
-<td class="parameter_description"><p>the <span class="type">GdkPixbuf</span> to use as the drag icon.</p></td>
+<td class="parameter_description"><p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> to use as the drag icon.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1121,8 +1091,9 @@ gtk_drag_set_icon_stock (<em class="parameter"><code><a href="http://developer.g
 <p>Use <a class="link" href="gtk3-Drag-and-Drop.html#gtk-drag-set-icon-name" title="gtk_drag_set_icon_name ()"><code class="function">gtk_drag_set_icon_name()</code></a> instead.</p>
 </div>
 <p>Sets the icon for a given drag from a stock ID.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.23.6"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.23.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1170,8 +1141,9 @@ they are no longer needed.</p>
 . The mouse
 cursor will be positioned at the (0,0) coordinate of the
 surface.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.24.6"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.24.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1209,8 +1181,9 @@ loaded at the symbolic size <a class="link" href="gtk3-Themeable-Stock-Images.ht
 <em class="parameter"><code>hot_x</code></em>
  and <em class="parameter"><code>hot_y</code></em>
  have to be used with care.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.25.5"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.25.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1242,7 +1215,7 @@ with a context for the source side of a drag)</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1256,8 +1229,9 @@ gtk_drag_set_icon_gicon (<em class="parameter"><code><a href="http://developer.g
 .
 See the documentation for <a class="link" href="gtk3-Drag-and-Drop.html#gtk-drag-set-icon-name" title="gtk_drag_set_icon_name ()"><code class="function">gtk_drag_set_icon_name()</code></a>
 for more details about using icons in drag and drop.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.26.5"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.26.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1289,7 +1263,7 @@ with a context for the source side of a drag)</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1298,8 +1272,9 @@ with a context for the source side of a drag)</p></td>
 gtk_drag_set_icon_default (<em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragContext"><span class="type">GdkDragContext</span></a> *context</code></em>);</pre>
 <p>Sets the icon for a particular drag to the default
 icon.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.27.5"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.27.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1324,8 +1299,9 @@ gtk_drag_check_threshold (<em class="parameter"><code><a class="link" href="GtkW
                           <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> start_y</code></em>,
                           <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> current_x</code></em>,
                           <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> current_y</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.28.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.28.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1371,8 +1347,9 @@ gtk_drag_source_set (<em class="parameter"><code><a class="link" href="GtkWidget
                      <em class="parameter"><code>const <a class="link" href="gtk3-Selections.html#GtkTargetEntry" title="struct GtkTargetEntry"><span class="type">GtkTargetEntry</span></a> *targets</code></em>,
                      <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n_targets</code></em>,
                      <em class="parameter"><code><a href="http://developer.gnome.org/gdk2/gdk3-Drag-and-Drop.html#GdkDragAction"><span class="type">GdkDragAction</span></a> actions</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.29.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.29.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1416,9 +1393,10 @@ may be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.h
 <a name="gtk-drag-source-set-icon-pixbuf"></a><h3>gtk_drag_source_set_icon_pixbuf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_source_set_icon_pixbuf (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
-                                 <em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>);</pre>
+                                 <em class="parameter"><code><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *pixbuf</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.30.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.30.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1433,7 +1411,7 @@ gtk_drag_source_set_icon_pixbuf (<em class="parameter"><code><a class="link" hre
 </tr>
 <tr>
 <td class="parameter_name"><p>pixbuf</p></td>
-<td class="parameter_description"><p>the <span class="type">GdkPixbuf</span> for the drag icon</p></td>
+<td class="parameter_description"><p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> for the drag icon</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1452,8 +1430,9 @@ gtk_drag_source_set_icon_stock (<em class="parameter"><code><a class="link" href
 </div>
 <p>Sets the icon that will be used for drags from a particular source
 to a stock icon.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.31.6"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.31.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1483,8 +1462,9 @@ gtk_drag_source_set_icon_name (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *icon_name</code></em>);</pre>
 <p>Sets the icon that will be used for drags from a particular source
 to a themed icon. See the docs for <a class="link" href="GtkIconTheme.html" title="GtkIconTheme"><span class="type">GtkIconTheme</span></a> for more details.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.32.5"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.32.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1505,7 +1485,7 @@ to a themed icon. See the docs for <a class="link" href="GtkIconTheme.html" titl
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1516,8 +1496,9 @@ gtk_drag_source_set_icon_gicon (<em class="parameter"><code><a class="link" href
 <p>Sets the icon that will be used for drags from a particular source
 to <em class="parameter"><code>icon</code></em>
 . See the docs for <a class="link" href="GtkIconTheme.html" title="GtkIconTheme"><span class="type">GtkIconTheme</span></a> for more details.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.33.5"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.33.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1538,15 +1519,16 @@ to <em class="parameter"><code>icon</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-source-unset"></a><h3>gtk_drag_source_unset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_source_unset (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.34.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.34.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1567,8 +1549,9 @@ gtk_drag_source_unset (<em class="parameter"><code><a class="link" href="GtkWidg
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_source_set_target_list (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                                  <em class="parameter"><code><a class="link" href="gtk3-Selections.html#GtkTargetList"><span class="type">GtkTargetList</span></a> *target_list</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.35.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.35.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1589,15 +1572,16 @@ gtk_drag_source_set_target_list (<em class="parameter"><code><a class="link" hre
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-source-get-target-list"></a><h3>gtk_drag_source_get_target_list ()</h3>
 <pre class="programlisting"><a class="link" href="gtk3-Selections.html#GtkTargetList"><span class="returnvalue">GtkTargetList</span></a> *
 gtk_drag_source_get_target_list (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.36.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.36.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1611,7 +1595,12 @@ gtk_drag_source_get_target_list (<em class="parameter"><code><a class="link" hre
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<div class="refsect3">
+<a name="id-1.4.7.7.36.6"></a><h4>Returns</h4>
+<p>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1624,8 +1613,9 @@ are added with <em class="parameter"><code>info</code></em>
  = 0. If you need another value, 
 use <a class="link" href="gtk3-Selections.html#gtk-target-list-add-text-targets" title="gtk_target_list_add_text_targets ()"><code class="function">gtk_target_list_add_text_targets()</code></a> and
 <a class="link" href="gtk3-Drag-and-Drop.html#gtk-drag-source-set-target-list" title="gtk_drag_source_set_target_list ()"><code class="function">gtk_drag_source_set_target_list()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.37.5"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.37.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1639,15 +1629,16 @@ use <a class="link" href="gtk3-Selections.html#gtk-target-list-add-text-targets"
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-source-add-image-targets"></a><h3>gtk_drag_source_add_image_targets ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_source_add_image_targets (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.38.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.38.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1661,15 +1652,16 @@ gtk_drag_source_add_image_targets (<em class="parameter"><code><a class="link" h
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-drag-source-add-uri-targets"></a><h3>gtk_drag_source_add_uri_targets ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_drag_source_add_uri_targets (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is a method"><span class="acronym">method</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.7.7.39.4"></a><h4>Parameters</h4>
+<a name="id-1.4.7.7.39.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1683,7 +1675,7 @@ gtk_drag_source_add_uri_targets (<em class="parameter"><code><a class="link" hre
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 </div>
 <div class="refsect1">
@@ -1862,7 +1854,6 @@ The value can by obtained by connecting to the
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>polkit Reference Manual: PolkitAgentListener</title>
+<title>PolkitAgentListener: polkit Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="polkit Reference Manual">
 <link rel="up" href="ref-authentication-agent-api.html" title="Part IV. Authentication Agent API Reference">
 <link rel="prev" href="ref-authentication-agent-api.html" title="Part IV. Authentication Agent API Reference">
 <link rel="next" href="PolkitAgentTextListener.html" title="PolkitAgentTextListener">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#PolkitAgentListener.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#PolkitAgentListener.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#PolkitAgentListener.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -34,7 +34,20 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="PolkitAgentListener.stability-level"></a><h2>Stability Level</h2>
-Unstable, unless otherwise indicated
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
 <a name="PolkitAgentListener.functions"></a><h2>Functions</h2>
@@ -134,10 +147,7 @@ implement the <em class="parameter"><code>initiate_authentication</code></em>
  methods.</p>
 <p>Typically authentication agents use <a class="link" href="PolkitAgentSession.html" title="PolkitAgentSession"><span class="type">PolkitAgentSession</span></a> to
 authenticate users (via passwords) and communicate back the
-authentication result to the PolicyKit daemon.  This is however not
-requirement. Depending on the system an authentication agent may
-use other means (such as a Yes/No dialog) to obtain sufficient
-evidence that the user is one of the requested identities.</p>
+authentication result to the PolicyKit daemon.</p>
 <p>To register a <a class="link" href="PolkitAgentListener.html" title="PolkitAgentListener"><span class="type">PolkitAgentListener</span></a> with the PolicyKit daemon, use
 <a class="link" href="PolkitAgentListener.html#polkit-agent-listener-register" title="polkit_agent_listener_register ()"><code class="function">polkit_agent_listener_register()</code></a> or
 <a class="link" href="PolkitAgentListener.html#polkit-agent-listener-register-with-options" title="polkit_agent_listener_register_with_options ()"><code class="function">polkit_agent_listener_register_with_options()</code></a>.</p>
@@ -282,7 +292,6 @@ polkit_agent_listener_initiate_authentication_finish
 <a name="id-1.5.2.8.3.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if <em class="parameter"><code>error</code></em>
 is set.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -411,7 +420,7 @@ polkit_agent_listener_register_with_options
 <tr>
 <td class="parameter_name"><p>options</p></td>
 <td class="parameter_description"><p> A <span class="type">GVariant</span> with options or <code class="literal">NULL</code>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
@@ -595,7 +604,6 @@ polkit_agent_register_listener (<em class="parameter"><code><a class="link" href
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

@@ -99,8 +99,8 @@ state.tegrart5639 {
 	control.2 {
 		iface MIXER
 		name 'Speaker Playback Volume'
-		value.0 31
-		value.1 31
+		value.0 27
+		value.1 27
 		comment {
 			access 'read write'
 			type INTEGER
@@ -108,8 +108,8 @@ state.tegrart5639 {
 			range '0 - 31'
 			dbmin -4650
 			dbmax 0
-			dbvalue.0 0
-			dbvalue.1 0
+			dbvalue.0 -600
+			dbvalue.1 -600
 		}
 	}
 	control.3 {

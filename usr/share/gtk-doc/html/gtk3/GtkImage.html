@@ -8,7 +8,7 @@
 <link rel="up" href="DisplayWidgets.html" title="Display Widgets">
 <link rel="prev" href="GtkLabel.html" title="GtkLabel">
 <link rel="next" href="GtkSpinner.html" title="GtkSpinner">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -52,7 +52,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GdkPixbuf</span> *
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="GtkImage.html#gtk-image-get-pixbuf" title="gtk_image_get_pixbuf ()">gtk_image_get_pixbuf</a> <span class="c_punctuation">()</span>
@@ -68,7 +68,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GdkPixbufAnimation</span> *
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="returnvalue">GdkPixbufAnimation</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="GtkImage.html#gtk-image-get-animation" title="gtk_image_get_animation ()">gtk_image_get_animation</a> <span class="c_punctuation">()</span>
@@ -317,13 +317,13 @@
 </tr>
 <tr>
 <td class="property_type">
-<span class="type">GdkPixbuf</span> *</td>
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *</td>
 <td class="property_name"><a class="link" href="GtkImage.html#GtkImage--pixbuf" title="The “pixbuf” property">pixbuf</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
 <td class="property_type">
-<span class="type">GdkPixbufAnimation</span> *</td>
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a> *</td>
 <td class="property_name"><a class="link" href="GtkImage.html#GtkImage--pixbuf-animation" title="The “pixbuf-animation” property">pixbuf-animation</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -406,7 +406,7 @@ GtkImage implements
 <a name="GtkImage.description"></a><h2>Description</h2>
 <p>The <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> widget displays an image. Various kinds of object
 can be displayed as an image; most typically, you would load a
-<span class="type">GdkPixbuf</span> ("pixel buffer") from a file, and then display that.
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> ("pixel buffer") from a file, and then display that.
 There’s a convenience function to do this, <a class="link" href="GtkImage.html#gtk-image-new-from-file" title="gtk_image_new_from_file ()"><code class="function">gtk_image_new_from_file()</code></a>,
 used as follows:</p>
 <div class="informalexample">
@@ -427,10 +427,10 @@ If the file isn’t loaded successfully, the image will contain a
 “broken image” icon similar to that used in many web browsers.
 If you want to handle errors in loading the file yourself,
 for example by displaying an error message, then load the image with
-<code class="function">gdk_pixbuf_new_from_file()</code>, then create the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> with
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file"><code class="function">gdk_pixbuf_new_from_file()</code></a>, then create the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> with
 <a class="link" href="GtkImage.html#gtk-image-new-from-pixbuf" title="gtk_image_new_from_pixbuf ()"><code class="function">gtk_image_new_from_pixbuf()</code></a>.</p>
 <p>The image file may contain an animation, if so the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> will
-display an animation (<span class="type">GdkPixbufAnimation</span>) instead of a static image.</p>
+display an animation (<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a>) instead of a static image.</p>
 <p><a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> is a subclass of <a class="link" href="GtkMisc.html" title="GtkMisc"><span class="type">GtkMisc</span></a>, which implies that you can
 align it (center, left, right) and add padding to it, using
 <a class="link" href="GtkMisc.html" title="GtkMisc"><span class="type">GtkMisc</span></a> methods.</p>
@@ -526,8 +526,8 @@ the image will be the same as the origin of the event box.</p>
 files, such as image files. GTK+ comes with a program to avoid this,
 called “gdk-pixbuf-csource”. This library
 allows you to convert an image into a C variable declaration, which
-can then be loaded into a <span class="type">GdkPixbuf</span> using
-<code class="function">gdk_pixbuf_new_from_inline()</code>.</p>
+can then be loaded into a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> using
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Image-Data-in-Memory.html#gdk-pixbuf-new-from-inline"><code class="function">gdk_pixbuf_new_from_inline()</code></a>.</p>
 </div>
 </div>
 <div class="refsect1">
@@ -578,9 +578,9 @@ icon size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-M
 <hr>
 <div class="refsect2">
 <a name="gtk-image-get-pixbuf"></a><h3>gtk_image_get_pixbuf ()</h3>
-<pre class="programlisting"><span class="returnvalue">GdkPixbuf</span> *
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 gtk_image_get_pixbuf (<em class="parameter"><code><a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> *image</code></em>);</pre>
-<p>Gets the <span class="type">GdkPixbuf</span> being displayed by the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a>.
+<p>Gets the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> being displayed by the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a>.
 The storage type of the image must be <a class="link" href="GtkImage.html#GTK-IMAGE-EMPTY:CAPS"><code class="literal">GTK_IMAGE_EMPTY</code></a> or
 <a class="link" href="GtkImage.html#GTK-IMAGE-PIXBUF:CAPS"><code class="literal">GTK_IMAGE_PIXBUF</code></a> (see <a class="link" href="GtkImage.html#gtk-image-get-storage-type" title="gtk_image_get_storage_type ()"><code class="function">gtk_image_get_storage_type()</code></a>).
 The caller of this function does not own a reference to the
@@ -656,9 +656,9 @@ size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros
 <hr>
 <div class="refsect2">
 <a name="gtk-image-get-animation"></a><h3>gtk_image_get_animation ()</h3>
-<pre class="programlisting"><span class="returnvalue">GdkPixbufAnimation</span> *
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="returnvalue">GdkPixbufAnimation</span></a> *
 gtk_image_get_animation (<em class="parameter"><code><a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> *image</code></em>);</pre>
-<p>Gets the <span class="type">GdkPixbufAnimation</span> being displayed by the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a>.
+<p>Gets the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a> being displayed by the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a>.
 The storage type of the image must be <a class="link" href="GtkImage.html#GTK-IMAGE-EMPTY:CAPS"><code class="literal">GTK_IMAGE_EMPTY</code></a> or
 <a class="link" href="GtkImage.html#GTK-IMAGE-ANIMATION:CAPS"><code class="literal">GTK_IMAGE_ANIMATION</code></a> (see <a class="link" href="GtkImage.html#gtk-image-get-storage-type" title="gtk_image_get_storage_type ()"><code class="function">gtk_image_get_storage_type()</code></a>).
 The caller of this function does not own a reference to the
@@ -726,7 +726,7 @@ or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -769,7 +769,7 @@ or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -797,7 +797,6 @@ the return value will be <a class="link" href="GtkImage.html#GTK-IMAGE-EMPTY:CAP
 <div class="refsect3">
 <a name="id-1.3.8.3.10.8.6"></a><h4>Returns</h4>
 <p> image representation being used</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -813,9 +812,9 @@ it always returns a valid <a class="link" href="GtkImage.html" title="GtkImage">
 <p>If the file contains an animation, the image will contain an
 animation.</p>
 <p>If you need to detect failures to load the file, use
-<code class="function">gdk_pixbuf_new_from_file()</code> to load the file yourself, then create
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file"><code class="function">gdk_pixbuf_new_from_file()</code></a> to load the file yourself, then create
 the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> from the pixbuf. (Or for animations, use
-<code class="function">gdk_pixbuf_animation_new_from_file()</code>).</p>
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file"><code class="function">gdk_pixbuf_animation_new_from_file()</code></a>).</p>
 <p>The storage type (<a class="link" href="GtkImage.html#gtk-image-get-storage-type" title="gtk_image_get_storage_type ()"><code class="function">gtk_image_get_storage_type()</code></a>) of the returned
 image is not defined, it will be whatever is appropriate for
 displaying the file.</p>
@@ -837,7 +836,6 @@ displaying the file.</p>
 <div class="refsect3">
 <a name="id-1.3.8.3.10.9.9"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -885,14 +883,13 @@ icon set; you still need to unref it if you own references.
 <div class="refsect3">
 <a name="id-1.3.8.3.10.10.8"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a></p>
-<p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-image-new-from-pixbuf"></a><h3>gtk_image_new_from_pixbuf ()</h3>
 <pre class="programlisting"><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a> *
-gtk_image_new_from_pixbuf (<em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>);</pre>
+gtk_image_new_from_pixbuf (<em class="parameter"><code><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *pixbuf</code></em>);</pre>
 <p>Creates a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> displaying <em class="parameter"><code>pixbuf</code></em>
 .
 The <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> does not assume a reference to the
@@ -911,7 +908,7 @@ you should use <a class="link" href="GtkImage.html#gtk-image-new-from-icon-name"
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pixbuf</p></td>
-<td class="parameter_description"><p> a <span class="type">GdkPixbuf</span>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_description"><p> a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr></tbody>
 </table></div>
@@ -919,7 +916,6 @@ you should use <a class="link" href="GtkImage.html#gtk-image-new-from-icon-name"
 <div class="refsect3">
 <a name="id-1.3.8.3.10.11.7"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -963,14 +959,13 @@ You can register your own stock icon names, see
 <div class="refsect3">
 <a name="id-1.3.8.3.10.12.7"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> displaying the stock icon</p>
-<p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="gtk-image-new-from-animation"></a><h3>gtk_image_new_from_animation ()</h3>
 <pre class="programlisting"><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a> *
-gtk_image_new_from_animation (<em class="parameter"><code><span class="type">GdkPixbufAnimation</span> *animation</code></em>);</pre>
+gtk_image_new_from_animation (<em class="parameter"><code><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a> *animation</code></em>);</pre>
 <p>Creates a <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> displaying the given animation.
 The <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> does not assume a reference to the
 animation; you still need to unref it if you own references.
@@ -997,7 +992,6 @@ is not busy with something that has a higher priority.</p>
 <div class="refsect3">
 <a name="id-1.3.8.3.10.13.7"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> widget</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1035,9 +1029,8 @@ will be updated appropriately.</p>
 <div class="refsect3">
 <a name="id-1.3.8.3.10.14.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> displaying the themed icon</p>
-<p></p>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1074,9 +1067,8 @@ will be updated appropriately.</p>
 <div class="refsect3">
 <a name="id-1.3.8.3.10.15.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> displaying the themed icon</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1091,9 +1083,9 @@ it always returns a valid <a class="link" href="GtkImage.html" title="GtkImage">
 <p>If the file contains an animation, the image will contain an
 animation.</p>
 <p>If you need to detect failures to load the file, use
-<code class="function">gdk_pixbuf_new_from_file()</code> to load the file yourself, then create
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file"><code class="function">gdk_pixbuf_new_from_file()</code></a> to load the file yourself, then create
 the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> from the pixbuf. (Or for animations, use
-<code class="function">gdk_pixbuf_animation_new_from_file()</code>).</p>
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file"><code class="function">gdk_pixbuf_animation_new_from_file()</code></a>).</p>
 <p>The storage type (<a class="link" href="GtkImage.html#gtk-image-get-storage-type" title="gtk_image_get_storage_type ()"><code class="function">gtk_image_get_storage_type()</code></a>) of the returned
 image is not defined, it will be whatever is appropriate for
 displaying the file.</p>
@@ -1115,9 +1107,8 @@ displaying the file.</p>
 <div class="refsect3">
 <a name="id-1.3.8.3.10.16.9"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1147,9 +1138,8 @@ surface; you still need to unref it if you own references.
 <div class="refsect3">
 <a name="id-1.3.8.3.10.17.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1226,7 +1216,7 @@ gtk_image_set_from_icon_set (<em class="parameter"><code><a class="link" href="G
 <a name="gtk-image-set-from-pixbuf"></a><h3>gtk_image_set_from_pixbuf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_image_set_from_pixbuf (<em class="parameter"><code><a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> *image</code></em>,
-                           <em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>);</pre>
+                           <em class="parameter"><code><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *pixbuf</code></em>);</pre>
 <p>See <a class="link" href="GtkImage.html#gtk-image-new-from-pixbuf" title="gtk_image_new_from_pixbuf ()"><code class="function">gtk_image_new_from_pixbuf()</code></a> for details.</p>
 <div class="refsect3">
 <a name="id-1.3.8.3.10.20.5"></a><h4>Parameters</h4>
@@ -1244,7 +1234,7 @@ gtk_image_set_from_pixbuf (<em class="parameter"><code><a class="link" href="Gtk
 </tr>
 <tr>
 <td class="parameter_name"><p>pixbuf</p></td>
-<td class="parameter_description"><p> a <span class="type">GdkPixbuf</span> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_description"><p> a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1296,7 +1286,7 @@ gtk_image_set_from_stock (<em class="parameter"><code><a class="link" href="GtkI
 <a name="gtk-image-set-from-animation"></a><h3>gtk_image_set_from_animation ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_image_set_from_animation (<em class="parameter"><code><a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> *image</code></em>,
-                              <em class="parameter"><code><span class="type">GdkPixbufAnimation</span> *animation</code></em>);</pre>
+                              <em class="parameter"><code><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a> *animation</code></em>);</pre>
 <p>Causes the <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> to display the given animation (or display
 nothing, if you set the animation to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>).</p>
 <div class="refsect3">
@@ -1315,7 +1305,7 @@ nothing, if you set the animation to <a href="https://developer.gnome.org/glib/u
 </tr>
 <tr>
 <td class="parameter_name"><p>animation</p></td>
-<td class="parameter_description"><p>the <span class="type">GdkPixbufAnimation</span></p></td>
+<td class="parameter_description"><p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1357,7 +1347,7 @@ gtk_image_set_from_icon_name (<em class="parameter"><code><a class="link" href="
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1394,7 +1384,7 @@ gtk_image_set_from_gicon (<em class="parameter"><code><a class="link" href="GtkI
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1455,7 +1445,7 @@ gtk_image_set_from_surface (<em class="parameter"><code><a class="link" href="Gt
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1478,7 +1468,7 @@ gtk_image_clear (<em class="parameter"><code><a class="link" href="GtkImage.html
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1489,7 +1479,6 @@ gtk_image_new (<em class="parameter"><code><span class="type">void</span></code>
 <div class="refsect3">
 <a name="id-1.3.8.3.10.28.5"></a><h4>Returns</h4>
 <p> a newly created <a class="link" href="GtkImage.html" title="GtkImage"><span class="type">GtkImage</span></a> widget. </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1523,7 +1512,7 @@ to a value != -1, it is used instead of the icon size set by
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1549,9 +1538,8 @@ gtk_image_get_pixel_size (<em class="parameter"><code><a class="link" href="GtkI
 <div class="refsect3">
 <a name="id-1.3.8.3.10.30.6"></a><h4>Returns</h4>
 <p> the pixel size used for named icons.</p>
-<p></p>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 </div>
 <div class="refsect1">
@@ -1591,7 +1579,7 @@ functions), but they will all return <a href="https://developer.gnome.org/glib/u
 <tr>
 <td class="enum_member_name"><p><a name="GTK-IMAGE-PIXBUF:CAPS"></a>GTK_IMAGE_PIXBUF</p></td>
 <td class="enum_member_description">
-<p>the widget contains a <span class="type">GdkPixbuf</span></p>
+<p>the widget contains a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a></p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1612,7 +1600,7 @@ functions), but they will all return <a href="https://developer.gnome.org/glib/u
 <tr>
 <td class="enum_member_name"><p><a name="GTK-IMAGE-ANIMATION:CAPS"></a>GTK_IMAGE_ANIMATION</p></td>
 <td class="enum_member_description">
-<p>the widget contains a <span class="type">GdkPixbufAnimation</span></p>
+<p>the widget contains a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a></p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1662,7 +1650,7 @@ functions), but they will all return <a href="https://developer.gnome.org/glib/u
 If the icon theme is changed, the image will be updated
 automatically.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1672,7 +1660,7 @@ automatically.</p>
 changed, the image will be updated automatically.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1697,14 +1685,14 @@ changed, the image will be updated automatically.</p>
 <hr>
 <div class="refsect2">
 <a name="GtkImage--pixbuf"></a><h3>The <code class="literal">“pixbuf”</code> property</h3>
-<pre class="programlisting">  “pixbuf”                   <span class="type">GdkPixbuf</span> *</pre>
+<pre class="programlisting">  “pixbuf”                   <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> *</pre>
 <p>A GdkPixbuf to display.</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="GtkImage--pixbuf-animation"></a><h3>The <code class="literal">“pixbuf-animation”</code> property</h3>
-<pre class="programlisting">  “pixbuf-animation”         <span class="type">GdkPixbufAnimation</span> *</pre>
+<pre class="programlisting">  “pixbuf-animation”         <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation"><span class="type">GdkPixbufAnimation</span></a> *</pre>
 <p>GdkPixbufAnimation to display.</p>
 <p>Flags: Read / Write</p>
 </div>
@@ -1719,7 +1707,7 @@ overriding the <a class="link" href="GtkImage.html#GtkImage--icon-size" title="T
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: -1</p>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1728,7 +1716,7 @@ overriding the <a class="link" href="GtkImage.html#GtkImage--icon-size" title="T
 <p>A path to a resource file to display.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1767,16 +1755,15 @@ is only relevant for images of type <a class="link" href="GtkImage.html#GTK-IMAG
 and <a class="link" href="GtkImage.html#GTK-IMAGE-GICON:CAPS"><code class="literal">GTK_IMAGE_GICON</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 </div>
 <div class="refsect1">
 <a name="GtkImage.see-also"></a><h2>See Also</h2>
-<p><span class="type">GdkPixbuf</span></p>
+<p><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a></p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

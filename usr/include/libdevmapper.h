@@ -151,6 +151,7 @@ struct dm_info {
 	int32_t target_count;
 
 	int deferred_remove;
+	int internal_suspend;
 };
 
 struct dm_deps {
@@ -174,8 +175,6 @@ struct dm_versions {
 
 int dm_get_library_version(char *version, size_t size);
 int dm_task_get_driver_version(struct dm_task *dmt, char *version, size_t size);
-
-#define dm_task_get_info dm_task_get_info_with_deferred_remove
 int dm_task_get_info(struct dm_task *dmt, struct dm_info *dmi);
 
 /*
@@ -392,6 +391,11 @@ int dm_get_status_thin(struct dm_pool *mem, const char *params,
  * Call this to actually run the ioctl.
  */
 int dm_task_run(struct dm_task *dmt);
+
+/*
+ * The errno from the last device-mapper ioctl performed by dm_task_run.
+ */
+int dm_task_get_errno(struct dm_task *dmt);
 
 /*
  * Call this to make or remove the device nodes associated with previously
@@ -730,7 +734,7 @@ int dm_tree_node_add_raid_target(struct dm_tree_node *node,
 				 uint64_t flags);
 
 /*
- * Defines bellow are based on kernel's dm-cache.c defines
+ * Defines below are based on kernel's dm-cache.c defines
  * DM_CACHE_MIN_DATA_BLOCK_SIZE (32 * 1024 >> SECTOR_SHIFT)
  * DM_CACHE_MAX_DATA_BLOCK_SIZE (1024 * 1024 * 1024 >> SECTOR_SHIFT)
  */
@@ -895,6 +899,9 @@ int dm_tree_node_set_thin_pool_discard(struct dm_tree_node *node,
  */
 int dm_tree_node_set_thin_pool_error_if_no_space(struct dm_tree_node *node,
 						 unsigned error_if_no_space);
+/* Start thin pool with metadata in read-only mode */
+int dm_tree_node_set_thin_pool_read_only(struct dm_tree_node *node,
+					 unsigned read_only);
 /*
  * FIXME: Defines bellow are based on kernel's dm-thin.c defines
  * MAX_DEV_ID ((1 << 24) - 1)
@@ -1664,17 +1671,25 @@ struct dm_report_field;
 /*
  * dm_report_field_type flags
  */
-#define DM_REPORT_FIELD_MASK			0x00000FFF
-#define DM_REPORT_FIELD_ALIGN_MASK		0x0000000F
-#define DM_REPORT_FIELD_ALIGN_LEFT		0x00000001
-#define DM_REPORT_FIELD_ALIGN_RIGHT		0x00000002
-#define DM_REPORT_FIELD_TYPE_MASK		0x00000FF0
-#define DM_REPORT_FIELD_TYPE_NONE		0x00000000
-#define DM_REPORT_FIELD_TYPE_STRING		0x00000010
-#define DM_REPORT_FIELD_TYPE_NUMBER		0x00000020
-#define DM_REPORT_FIELD_TYPE_SIZE		0x00000040
-#define DM_REPORT_FIELD_TYPE_PERCENT		0x00000080
-#define DM_REPORT_FIELD_TYPE_STRING_LIST	0x00000100
+#define DM_REPORT_FIELD_MASK				0x00000FFF
+#define DM_REPORT_FIELD_ALIGN_MASK			0x0000000F
+#define DM_REPORT_FIELD_ALIGN_LEFT			0x00000001
+#define DM_REPORT_FIELD_ALIGN_RIGHT			0x00000002
+#define DM_REPORT_FIELD_TYPE_MASK			0x00000FF0
+#define DM_REPORT_FIELD_TYPE_NONE			0x00000000
+#define DM_REPORT_FIELD_TYPE_STRING			0x00000010
+#define DM_REPORT_FIELD_TYPE_NUMBER			0x00000020
+#define DM_REPORT_FIELD_TYPE_SIZE			0x00000040
+#define DM_REPORT_FIELD_TYPE_PERCENT			0x00000080
+#define DM_REPORT_FIELD_TYPE_STRING_LIST		0x00000100
+#define DM_REPORT_FIELD_TYPE_TIME			0x00000200
+
+/* For use with reserved values only! */
+#define DM_REPORT_FIELD_RESERVED_VALUE_MASK		0x0000000F
+#define DM_REPORT_FIELD_RESERVED_VALUE_NAMED		0x00000001 /* only named value, less strict form of reservation */
+#define DM_REPORT_FIELD_RESERVED_VALUE_RANGE		0x00000002 /* value is range - low and high value defined */
+#define DM_REPORT_FIELD_RESERVED_VALUE_DYNAMIC_VALUE	0x00000004 /* value is computed in runtime */
+#define DM_REPORT_FIELD_RESERVED_VALUE_FUZZY_NAMES	0x00000008 /* value names are recognized in runtime */
 
 #define DM_REPORT_FIELD_TYPE_ID_LEN 32
 #define DM_REPORT_FIELD_TYPE_HEADING_LEN 32
@@ -1708,7 +1723,8 @@ struct dm_report_field_reserved_value {
 };
 
 /*
- * Reserved value is a 'value' that is used directly if any of the 'names' is hit.
+ * Reserved value is a 'value' that is used directly if any of the 'names' is hit
+ * or in case of fuzzy names, if such fuzzy name matches.
  *
  * If type is any of DM_REPORT_FIELD_TYPE_*, the reserved value is recognized
  * for all fields of that type.
@@ -1721,17 +1737,60 @@ struct dm_report_field_reserved_value {
  * selection enabled (see also dm_report_init_with_selection function).
  */
 struct dm_report_reserved_value {
-	const unsigned type;		/* DM_REPORT_FIELD_TYPE_* */
+	const uint32_t type;		/* DM_REPORT_FIELD_RESERVED_VALUE_* and DM_REPORT_FIELD_TYPE_*  */
 	const void *value;		/* reserved value:
-						struct dm_report_field_reserved_value for DM_REPORT_FIELD_TYPE_NONE
 						uint64_t for DM_REPORT_FIELD_TYPE_NUMBER
 						uint64_t for DM_REPORT_FIELD_TYPE_SIZE (number of 512-byte sectors)
 						uint64_t for DM_REPORT_FIELD_TYPE_PERCENT
-						const char * for DM_REPORT_FIELD_TYPE_STRING */
-	const char **names;		/* null-terminated array of names for this reserved value */
+						const char* for DM_REPORT_FIELD_TYPE_STRING
+						struct dm_report_field_reserved_value for DM_REPORT_FIELD_TYPE_NONE
+						dm_report_reserved_handler* if DM_REPORT_FIELD_RESERVED_VALUE_{DYNAMIC_VALUE,FUZZY_NAMES} is used */
+	const char **names;		/* null-terminated array of static names for this reserved value */
 	const char *description;	/* description of the reserved value */
 };
 
+/*
+ * Available actions for dm_report_reserved_value_handler.
+ */
+typedef enum {
+	DM_REPORT_RESERVED_PARSE_FUZZY_NAME,
+	DM_REPORT_RESERVED_GET_DYNAMIC_VALUE,
+} dm_report_reserved_action_t;
+
+/*
+ * Generic reserved value handler to process reserved value names and/or values.
+ *
+ * Actions and their input/output:
+ *
+ * 	DM_REPORT_RESERVED_PARSE_FUZZY_NAME
+ *		data_in:  const char *fuzzy_name
+ *		data_out: const char *canonical_name, NULL if fuzzy_name not recognized
+ *
+ * 	DM_REPORT_RESERVED_GET_DYNAMIC_VALUE
+ * 		data_in:  const char *canonical_name
+ * 		data_out: void *value, NULL if canonical_name not recognized
+ *
+ * All actions return:
+ *
+ *	-1 if action not implemented
+ * 	0 on error
+ * 	1 on success
+ */
+typedef int (*dm_report_reserved_handler) (struct dm_report *rh,
+					   struct dm_pool *mem,
+					   uint32_t field_num,
+					   dm_report_reserved_action_t action,
+					   const void *data_in,
+					   const void **data_out);
+
+/*
+ * The dm_report_value_cache_{set,get} are helper functions to store and retrieve
+ * various values used during reporting (dm_report_field_type.report_fn) and/or
+ * selection processing (dm_report_reserved_handler instances) to avoid
+ * recalculation of these values or to share values among calls.
+ */
+int dm_report_value_cache_set(struct dm_report *rh, const char *name, const void *data);
+const void *dm_report_value_cache_get(struct dm_report *rh, const char *name);
 /*
  * dm_report_init output_flags
  */
@@ -1761,7 +1820,17 @@ struct dm_report *dm_report_init_with_selection(uint32_t *report_types,
 						const char *selection,
 						const struct dm_report_reserved_value reserved_values[],
 						void *private_data);
+/*
+ * Report an object, pass it through the selection criteria if they
+ * are present and display the result on output if it passes the criteria.
+ */
 int dm_report_object(struct dm_report *rh, void *object);
+/*
+ * The same as dm_report_object, but display the result on output only if
+ * 'do_output' arg is set. Also, save the result of selection in 'selected'
+ * arg if it's not NULL (either 1 if the object passes, otherwise 0).
+ */
+int dm_report_object_is_selected(struct dm_report *rh, void *object, int do_output, int *selected);
 
 /*
  * Compact report output so that if field value is empty for all rows in
@@ -1830,6 +1899,7 @@ struct dm_config_value {
 	} v;
 
 	struct dm_config_value *next;	/* For arrays */
+	uint32_t format_flags;
 };
 
 struct dm_config_node {
@@ -1931,6 +2001,24 @@ struct dm_config_node *dm_config_clone_node_with_mem(struct dm_pool *mem, const 
 struct dm_config_node *dm_config_create_node(struct dm_config_tree *cft, const char *key);
 struct dm_config_value *dm_config_create_value(struct dm_config_tree *cft);
 struct dm_config_node *dm_config_clone_node(struct dm_config_tree *cft, const struct dm_config_node *cn, int siblings);
+
+/*
+ * Common formatting flags applicable to all config node types (lower 16 bits).
+ */
+#define DM_CONFIG_VALUE_FMT_COMMON_ARRAY             0x00000001 /* value is array */
+#define DM_CONFIG_VALUE_FMT_COMMON_EXTRA_SPACES      0x00000002 /* add spaces in "key = value" pairs in constrast to "key=value" for better readability */
+
+/*
+ * Type-related config node formatting flags (higher 16 bits).
+ */
+/* int-related formatting flags */
+#define DM_CONFIG_VALUE_FMT_INT_OCTAL                0x00010000 /* print number in octal form */
+
+/* string-related formatting flags */
+#define DM_CONFIG_VALUE_FMT_STRING_NO_QUOTES         0x00010000 /* do not print quotes around string value */
+
+void dm_config_value_set_format_flags(struct dm_config_value *cv, uint32_t format_flags);
+uint32_t dm_config_value_get_format_flags(struct dm_config_value *cv);
 
 struct dm_pool *dm_config_memory(struct dm_config_tree *cft);
 

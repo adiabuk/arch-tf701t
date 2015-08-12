@@ -8,7 +8,7 @@
 <link rel="up" href="reference.html" title="API Reference">
 <link rel="prev" href="gdk3-Cairo-Interaction.html" title="Cairo Interaction">
 <link rel="next" href="gdk3-Wayland-Interaction.html" title="Wayland Interaction">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -222,6 +222,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-display-set-window-scale" title="gdk_x11_display_set_window_scale ()">gdk_x11_display_set_window_scale</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-display-get-glx-version" title="gdk_x11_display_get_glx_version ()">gdk_x11_display_get_glx_version</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -654,7 +662,7 @@ using the <code class="function">GDK_IS_X11_DISPLAY()</code> macro).</p>
 <pre class="programlisting">#define             GDK_WINDOW_XID(win)</pre>
 <p>Returns the X window belonging to a <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.3.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.3.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -669,10 +677,9 @@ using the <code class="function">GDK_IS_X11_DISPLAY()</code> macro).</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.3.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.3.6"></a><h4>Returns</h4>
 <p> the Xlib Window of <em class="parameter"><code>win</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -686,7 +693,7 @@ using the <code class="function">GDK_IS_X11_DISPLAY()</code> macro).</p>
 <pre class="programlisting">#define             GDK_SCREEN_XDISPLAY(screen)</pre>
 <p>Returns the display of a X11 <a class="link" href="GdkScreen.html" title="GdkScreen"><span class="type">GdkScreen</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.5.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.5.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -701,9 +708,8 @@ using the <code class="function">GDK_IS_X11_DISPLAY()</code> macro).</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.5.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.5.6"></a><h4>Returns</h4>
 <p> an Xlib Display*.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -713,7 +719,7 @@ using the <code class="function">GDK_IS_X11_DISPLAY()</code> macro).</p>
 </pre>
 <p>Returns the index of a X11 <a class="link" href="GdkScreen.html" title="GdkScreen"><span class="type">GdkScreen</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.6.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.6.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -728,10 +734,9 @@ using the <code class="function">GDK_IS_X11_DISPLAY()</code> macro).</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.6.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.6.6"></a><h4>Returns</h4>
 <p> the position of <em class="parameter"><code>screen</code></em>
 among the screens of its display</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -741,7 +746,7 @@ among the screens of its display</p>
 </pre>
 <p>Returns the screen of a X11 <a class="link" href="GdkScreen.html" title="GdkScreen"><span class="type">GdkScreen</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.7.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -756,9 +761,8 @@ among the screens of its display</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.7.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.7.6"></a><h4>Returns</h4>
 <p> an Xlib Screen*</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -768,7 +772,7 @@ among the screens of its display</p>
 </pre>
 <p>Returns the X cursor belonging to a <a class="link" href="gdk3-Cursors.html#GdkCursor"><span class="type">GdkCursor</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.8.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.8.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -783,9 +787,8 @@ among the screens of its display</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.8.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.8.6"></a><h4>Returns</h4>
 <p> an Xlib Cursor.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -795,7 +798,7 @@ among the screens of its display</p>
 </pre>
 <p>Returns the display of a <a class="link" href="gdk3-Cursors.html#GdkCursor"><span class="type">GdkCursor</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.9.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.9.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -810,9 +813,8 @@ among the screens of its display</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.9.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.9.6"></a><h4>Returns</h4>
 <p> an Xlib Display*.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -824,7 +826,7 @@ among the screens of its display</p>
  back to an XID that was previously converted
 using <a class="link" href="gdk3-X-Window-System-Interaction.html#GDK-XID-TO-POINTER:CAPS" title="GDK_XID_TO_POINTER()"><code class="function">GDK_XID_TO_POINTER()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.10.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.10.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -849,7 +851,7 @@ using <a class="link" href="gdk3-X-Window-System-Interaction.html#GDK-XID-TO-POI
 that use pointer arguments such as <a href="https://developer.gnome.org/glib/unstable/glib-Hash-Tables.html#GHashTable"><span class="type">GHashTable</span></a>. Use <a class="link" href="gdk3-X-Window-System-Interaction.html#GDK-POINTER-TO-XID:CAPS" title="GDK_POINTER_TO_XID()"><code class="function">GDK_POINTER_TO_XID()</code></a>
 to convert the argument back to an XID.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.11.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -872,7 +874,7 @@ gdk_x11_lookup_xdisplay (<em class="parameter"><code><span class="type">Display<
 <p>Find the <a class="link" href="GdkDisplay.html" title="GdkDisplay"><span class="type">GdkDisplay</span></a> corresponding to <em class="parameter"><code>xdisplay</code></em>
 , if any exists.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.12.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.12.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -887,11 +889,11 @@ gdk_x11_lookup_xdisplay (<em class="parameter"><code><span class="type">Display<
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.12.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.12.6"></a><h4>Returns</h4>
 <p> the <a class="link" href="GdkDisplay.html" title="GdkDisplay"><span class="type">GdkDisplay</span></a>, if found, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GdkX11Display]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -900,7 +902,7 @@ gdk_x11_lookup_xdisplay (<em class="parameter"><code><span class="type">Display<
 gdk_x11_get_server_time (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>);</pre>
 <p>Routine to get the current X server time stamp.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.13.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.13.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -918,9 +920,8 @@ result. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.13.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.13.6"></a><h4>Returns</h4>
 <p> the time stamp.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -935,7 +936,7 @@ will respectively return 2/3 for the core pointer and keyboard,
 XInput 2), but calling this function on any slave devices (i.e.
 those managed via XInput 1.x), will return 0.</p></blockquote></div>
 <div class="refsect3">
-<a name="id-1.2.25.6.14.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.14.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -950,11 +951,10 @@ those managed via XInput 1.x), will return 0.</p></blockquote></div>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.14.7"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.14.7"></a><h4>Returns</h4>
 <p> the XInput2 device ID.</p>
-<p></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -964,7 +964,7 @@ gdk_x11_device_manager_lookup (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> device_id</code></em>);</pre>
 <p>Returns the <a class="link" href="GdkDevice.html" title="GdkDevice"><span class="type">GdkDevice</span></a> that wraps the given device ID.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.15.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -986,12 +986,12 @@ gdk_x11_device_manager_lookup (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.15.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.15.6"></a><h4>Returns</h4>
 <p> The <a class="link" href="GdkDevice.html" title="GdkDevice"><span class="type">GdkDevice</span></a> wrapping the device ID,
 or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the given ID doesn’t currently represent a device. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GdkX11DeviceCore]</span></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1004,7 +1004,7 @@ gdk_x11_display_get_user_time (<em class="parameter"><code><a class="link" href=
 by user interaction such as key presses or pointer 
 movements. See <a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-window-set-user-time" title="gdk_x11_window_set_user_time ()"><code class="function">gdk_x11_window_set_user_time()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.16.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.16.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1019,11 +1019,10 @@ movements. See <a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.16.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.16.6"></a><h4>Returns</h4>
 <p> the timestamp of the last user interaction </p>
-<p></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1043,7 +1042,7 @@ not normally need to call it directly. See the
 <a class="ulink" href="http://standards.freedesktop.org/startup-notification-spec/startup-notification-latest.txt" target="_top">Startup Notification Protocol specification</a>
 for definitions of the message types and keys that can be used.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.17.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.17.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1072,7 +1071,7 @@ skipped in the output.)</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1082,7 +1081,7 @@ gdk_x11_display_get_startup_notification_id
                                (<em class="parameter"><code><a class="link" href="GdkDisplay.html" title="GdkDisplay"><span class="type">GdkDisplay</span></a> *display</code></em>);</pre>
 <p>Gets the startup notification ID for a display.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.18.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.18.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1097,12 +1096,11 @@ gdk_x11_display_get_startup_notification_id
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.18.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.18.6"></a><h4>Returns</h4>
 <p> the startup notification ID for <em class="parameter"><code>display</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1123,7 +1121,7 @@ accordingly.</p>
 complete (for example, when opening a window or when calling
 <a class="link" href="gdk3-General.html#gdk-notify-startup-complete" title="gdk_notify_startup_complete ()"><code class="function">gdk_notify_startup_complete()</code></a>).</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.19.8"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.19.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1144,7 +1142,7 @@ complete (for example, when opening a window or when calling
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1153,7 +1151,7 @@ complete (for example, when opening a window or when calling
 gdk_x11_display_get_xdisplay (<em class="parameter"><code><a class="link" href="GdkDisplay.html" title="GdkDisplay"><span class="type">GdkDisplay</span></a> *display</code></em>);</pre>
 <p>Returns the X display of a <a class="link" href="GdkDisplay.html" title="GdkDisplay"><span class="type">GdkDisplay</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.20.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.20.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1168,11 +1166,11 @@ gdk_x11_display_get_xdisplay (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.20.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.20.6"></a><h4>Returns</h4>
 <p> an X display. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1184,7 +1182,7 @@ gdk_x11_display_grab (<em class="parameter"><code><a class="link" href="GdkDispl
 To ungrab the display again, use <a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-display-ungrab" title="gdk_x11_display_ungrab ()"><code class="function">gdk_x11_display_ungrab()</code></a>. </p>
 <p>gdk_x11_display_grab()/<a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-display-ungrab" title="gdk_x11_display_ungrab ()"><code class="function">gdk_x11_display_ungrab()</code></a> calls can be nested.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.21.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.21.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1198,7 +1196,7 @@ To ungrab the display again, use <a class="link" href="gdk3-X-Window-System-Inte
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1209,7 +1207,7 @@ gdk_x11_display_ungrab (<em class="parameter"><code><a class="link" href="GdkDis
  after it has been grabbed with 
 <a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-display-grab" title="gdk_x11_display_grab ()"><code class="function">gdk_x11_display_grab()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.22.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.22.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1223,7 +1221,7 @@ gdk_x11_display_ungrab (<em class="parameter"><code><a class="link" href="GdkDis
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1238,7 +1236,7 @@ the application. Use <a class="link" href="gdk3-X-Window-System-Interaction.html
 with this function.</p>
 <p>See also <a class="link" href="gdk3-General.html#gdk-error-trap-push" title="gdk_error_trap_push ()"><code class="function">gdk_error_trap_push()</code></a> to push a trap on all displays.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.23.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.23.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1252,7 +1250,7 @@ with this function.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1268,7 +1266,7 @@ so the error code can be returned.</p>
 <p>See <a class="link" href="gdk3-General.html#gdk-error-trap-pop" title="gdk_error_trap_pop ()"><code class="function">gdk_error_trap_pop()</code></a> for the all-displays-at-once
 equivalent.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.24.7"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.24.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1283,11 +1281,10 @@ equivalent.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.24.8"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.24.8"></a><h4>Returns</h4>
 <p> X error code or 0 on success</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1302,7 +1299,7 @@ if they arrive asynchronously.</p>
 <p>See <a class="link" href="gdk3-General.html#gdk-error-trap-pop-ignored" title="gdk_error_trap_pop_ignored ()"><code class="function">gdk_error_trap_pop_ignored()</code></a> for the all-displays-at-once
 equivalent.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.25.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.25.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1316,7 +1313,7 @@ equivalent.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1336,7 +1333,7 @@ by the application (GTK+ applications can learn about
 cursor theme changes by listening for change notification
 for the corresponding <span class="type">GtkSetting</span>).</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.26.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.26.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1363,7 +1360,7 @@ a previously set value</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1379,7 +1376,7 @@ is can be used to disable scaling support by setting <em class="parameter"><code
 <p>Once the scale is set by this call it will not change in response
 to later user configuration changes.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.27.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.27.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1400,7 +1397,48 @@ to later user configuration changes.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdk-x11-display-get-glx-version"></a><h3>gdk_x11_display_get_glx_version ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gdk_x11_display_get_glx_version (<em class="parameter"><code><a class="link" href="GdkDisplay.html" title="GdkDisplay"><span class="type">GdkDisplay</span></a> *display</code></em>,
+                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *major</code></em>,
+                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *minor</code></em>);</pre>
+<p>Retrieves the version of the GLX implementation.</p>
+<div class="refsect3">
+<a name="id-1.2.26.6.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>display</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GdkDisplay.html" title="GdkDisplay"><span class="type">GdkDisplay</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>major</p></td>
+<td class="parameter_description"><p> return location for the GLX major version. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minor</p></td>
+<td class="parameter_description"><p> return location for the GLX minor version. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.26.6.28.6"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if GLX is available</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1421,7 +1459,7 @@ GDK may register the events of some X extensions on its own.</p>
 <p>This function should only be needed in unusual circumstances, e.g.
 when filtering XInput extension events on the root window.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.28.7"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.29.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1447,7 +1485,7 @@ when filtering XInput extension events on the root window.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1456,7 +1494,7 @@ when filtering XInput extension events on the root window.</p>
 gdk_x11_screen_get_screen_number (<em class="parameter"><code><a class="link" href="GdkScreen.html" title="GdkScreen"><span class="type">GdkScreen</span></a> *screen</code></em>);</pre>
 <p>Returns the index of a <a class="link" href="GdkScreen.html" title="GdkScreen"><span class="type">GdkScreen</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.29.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.30.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1471,13 +1509,12 @@ gdk_x11_screen_get_screen_number (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.29.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.30.6"></a><h4>Returns</h4>
 <p> the position of <em class="parameter"><code>screen</code></em>
 among the screens
 of its display</p>
-<p></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1486,7 +1523,7 @@ of its display</p>
 gdk_x11_screen_get_xscreen (<em class="parameter"><code><a class="link" href="GdkScreen.html" title="GdkScreen"><span class="type">GdkScreen</span></a> *screen</code></em>);</pre>
 <p>Returns the screen of a <a class="link" href="GdkScreen.html" title="GdkScreen"><span class="type">GdkScreen</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.30.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.31.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1501,11 +1538,11 @@ gdk_x11_screen_get_xscreen (<em class="parameter"><code><a class="link" href="Gd
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.30.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.31.6"></a><h4>Returns</h4>
 <p> an Xlib Screen*. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1516,7 +1553,7 @@ gdk_x11_screen_get_window_manager_name
 <p>Returns the name of the window manager for <em class="parameter"><code>screen</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.31.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.32.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1531,14 +1568,13 @@ gdk_x11_screen_get_window_manager_name
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.31.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.32.6"></a><h4>Returns</h4>
 <p> the name of the window manager screen <em class="parameter"><code>screen</code></em>
 , or
 "unknown" if the window manager is unknown. The string is owned by GDK
 and should not be freed.</p>
-<p></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1550,7 +1586,7 @@ gdk_x11_screen_get_monitor_output (<em class="parameter"><code><a class="link" h
 If the X server does not support version 1.2 of the RANDR
 extension, 0 is returned.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.32.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.33.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1572,11 +1608,10 @@ extension, 0 is returned.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.32.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.33.6"></a><h4>Returns</h4>
 <p> the XID of the monitor</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1586,7 +1621,7 @@ gdk_x11_screen_lookup_visual (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><span class="type">VisualID</span> xvisualid</code></em>);</pre>
 <p>Looks up the <a class="link" href="gdk3-Visuals.html#GdkVisual"><span class="type">GdkVisual</span></a> for a particular screen and X Visual ID.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.33.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.34.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1608,12 +1643,12 @@ gdk_x11_screen_lookup_visual (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.33.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.34.6"></a><h4>Returns</h4>
 <p> the <a class="link" href="gdk3-Visuals.html#GdkVisual"><span class="type">GdkVisual</span></a> (owned by the screen
 object), or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the visual ID wasn’t found. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GdkX11Visual]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1633,7 +1668,7 @@ does when the user logs in, and before the window manager starts
 You can monitor the window_manager_changed signal on <a class="link" href="GdkScreen.html" title="GdkScreen"><span class="type">GdkScreen</span></a> to detect
 a window manager change.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.34.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.35.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1655,12 +1690,11 @@ a window manager change.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.34.7"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.35.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the window manager supports <em class="parameter"><code>property</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1673,7 +1707,7 @@ window manager that supports multiple workspaces, as described
 in the
 <a class="ulink" href="http://www.freedesktop.org/Standards/wm-spec" target="_top">Extended Window Manager Hints</a> specification.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.35.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.36.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1688,11 +1722,10 @@ in the
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.35.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.36.6"></a><h4>Returns</h4>
 <p> the number of workspaces, or 0 if workspaces are not supported</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1705,7 +1738,7 @@ window manager that supports multiple workspaces, as described
 in the
 <a class="ulink" href="http://www.freedesktop.org/Standards/wm-spec" target="_top">Extended Window Manager Hints</a> specification.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.36.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.37.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1720,11 +1753,10 @@ in the
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.36.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.37.6"></a><h4>Returns</h4>
 <p> the current workspace, or 0 if workspaces are not supported</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1740,7 +1772,7 @@ If it does not find it there, it will create a new window.</p>
 was already known to GDK, a new reference to the existing
 <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> is returned.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.37.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.38.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1762,13 +1794,13 @@ was already known to GDK, a new reference to the existing
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.37.7"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.38.7"></a><h4>Returns</h4>
 <p> a <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> wrapper for the native
 window, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the window has been destroyed. The wrapper
 will be newly created, if one doesn’t exist already. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1778,7 +1810,7 @@ gdk_x11_window_lookup_for_display (<em class="parameter"><code><a class="link" h
                                    <em class="parameter"><code><span class="type">Window</span> window</code></em>);</pre>
 <p>Looks up the <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> that wraps the given native window handle.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.38.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.39.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1801,12 +1833,12 @@ window handle. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.38.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.39.6"></a><h4>Returns</h4>
 <p> the <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> wrapper for the native
 window, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there is none. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GdkX11Window]</span></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1815,7 +1847,7 @@ window, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macr
 gdk_x11_window_get_xid (<em class="parameter"><code><a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *window</code></em>);</pre>
 <p>Returns the X resource (window) belonging to a <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.39.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.40.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1830,10 +1862,9 @@ gdk_x11_window_get_xid (<em class="parameter"><code><a class="link" href="gdk3-W
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.39.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.40.6"></a><h4>Returns</h4>
 <p> the ID of <em class="parameter"><code>drawable</code></em>
 ’s X resource.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1849,7 +1880,7 @@ should be hidden when the window is maximized.</p>
 function should only be used by applications which do not use GTK+
 to create toplevel windows.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.40.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.41.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1871,7 +1902,7 @@ maximized</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1888,7 +1919,7 @@ on toplevel windows.</p>
 function should only be used by applications which do not use GTK+
 to create toplevel windows.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.41.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.42.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1909,7 +1940,7 @@ to create toplevel windows.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1929,7 +1960,7 @@ timer or some other event.</p>
 function should only be used by applications which handle input
 events bypassing GDK.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.42.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.43.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1950,7 +1981,7 @@ events bypassing GDK.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.6</p>
+<p class="since">Since: 2.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1963,7 +1994,7 @@ window manager that supports multiple workspaces, as described
 in the <a class="ulink" href="http://www.freedesktop.org/Standards/wm-spec" target="_top">Extended Window Manager Hints</a> specification.
 Will not do anything if the window is already on all workspaces.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.43.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.44.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1977,7 +2008,7 @@ Will not do anything if the window is already on all workspaces.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1989,7 +2020,7 @@ gdk_x11_window_move_to_desktop (<em class="parameter"><code><a class="link" href
 window manager that supports multiple workspaces, as described
 in the <a class="ulink" href="http://www.freedesktop.org/Standards/wm-spec" target="_top">Extended Window Manager Hints</a> specification.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.44.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.45.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2010,7 +2041,7 @@ in the <a class="ulink" href="http://www.freedesktop.org/Standards/wm-spec" targ
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2020,7 +2051,7 @@ gdk_x11_window_get_desktop (<em class="parameter"><code><a class="link" href="gd
 <p>Gets the number of the workspace <em class="parameter"><code>window</code></em>
  is on.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.45.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.46.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2035,12 +2066,11 @@ gdk_x11_window_get_desktop (<em class="parameter"><code><a class="link" href="gd
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.45.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.46.6"></a><h4>Returns</h4>
 <p> the current workspace of <em class="parameter"><code>window</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2054,7 +2084,7 @@ property of type UTF8_STRING.  If the given <em class="parameter"><code>window</
  is
 not a toplevel window, it is ignored.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.46.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.47.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2080,7 +2110,7 @@ not a toplevel window, it is ignored.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2098,7 +2128,7 @@ gdk_x11_window_set_frame_extents (<em class="parameter"><code><a class="link" hr
 <p>This is the same as <a class="link" href="gdk3-Windows.html#gdk-window-set-shadow-width" title="gdk_window_set_shadow_width ()"><code class="function">gdk_window_set_shadow_width()</code></a> but it only works
 on GdkX11Window.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.47.7"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.48.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2134,7 +2164,7 @@ on GdkX11Window.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2149,7 +2179,7 @@ the window is not directly managed by the window manager, then frame
 synchronziation may need to be disabled. This is the case for a window
 embedded via the XEMBED protocol.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.48.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.49.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2170,7 +2200,7 @@ embedded via the XEMBED protocol.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2180,9 +2210,8 @@ gdk_x11_get_default_root_xwindow (<em class="parameter"><code><span class="type"
 <p>Gets the root window of the default screen 
 (see <a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-get-default-screen" title="gdk_x11_get_default_screen ()"><code class="function">gdk_x11_get_default_screen()</code></a>).</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.49.5"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.50.5"></a><h4>Returns</h4>
 <p> an Xlib Window.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2192,11 +2221,10 @@ gdk_x11_get_default_root_xwindow (<em class="parameter"><code><span class="type"
 gdk_x11_get_default_screen (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Gets the default GTK+ screen number.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.50.5"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.51.5"></a><h4>Returns</h4>
 <p> returns the screen number specified by
 the --display command line option or the DISPLAY environment
 variable when <a class="link" href="gdk3-General.html#gdk-init" title="gdk_init ()"><code class="function">gdk_init()</code></a> calls <code class="function">XOpenDisplay()</code>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2206,7 +2234,7 @@ variable when <a class="link" href="gdk3-General.html#gdk-init" title="gdk_init�
 gdk_x11_get_default_xdisplay (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Gets the default GTK+ display.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.51.5"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.52.5"></a><h4>Returns</h4>
 <p> the Xlib Display* for
 the display specified in the <code class="literal">--display</code> command
 line option or the <code class="literal">DISPLAY</code> environment variable. </p>
@@ -2237,7 +2265,7 @@ gdk_x11_ungrab_server (<em class="parameter"><code><span class="type">void</span
 gdk_x11_cursor_get_xcursor (<em class="parameter"><code><a class="link" href="gdk3-Cursors.html#GdkCursor"><span class="type">GdkCursor</span></a> *cursor</code></em>);</pre>
 <p>Returns the X cursor belonging to a <a class="link" href="gdk3-Cursors.html#GdkCursor"><span class="type">GdkCursor</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.54.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.55.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2252,9 +2280,8 @@ gdk_x11_cursor_get_xcursor (<em class="parameter"><code><a class="link" href="gd
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.54.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.55.6"></a><h4>Returns</h4>
 <p> an Xlib Cursor.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2264,7 +2291,7 @@ gdk_x11_cursor_get_xcursor (<em class="parameter"><code><a class="link" href="gd
 gdk_x11_cursor_get_xdisplay (<em class="parameter"><code><a class="link" href="gdk3-Cursors.html#GdkCursor"><span class="type">GdkCursor</span></a> *cursor</code></em>);</pre>
 <p>Returns the display of a <a class="link" href="gdk3-Cursors.html#GdkCursor"><span class="type">GdkCursor</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.55.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.56.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2279,7 +2306,7 @@ gdk_x11_cursor_get_xdisplay (<em class="parameter"><code><a class="link" href="g
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.55.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.56.6"></a><h4>Returns</h4>
 <p> an Xlib Display*. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -2294,7 +2321,7 @@ gdk_x11_keymap_get_group_for_state (<em class="parameter"><code><a class="link" 
 This is only needed for code processing raw X events, since <a class="link" href="gdk3-Event-Structures.html#GdkEventKey" title="struct GdkEventKey"><span class="type">GdkEventKey</span></a>
 directly includes an is_modifier field.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.56.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.57.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2316,11 +2343,10 @@ directly includes an is_modifier field.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.56.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.57.6"></a><h4>Returns</h4>
 <p> the index of the active keyboard group for the event</p>
-<p></p>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2335,7 +2361,7 @@ producing a direct effect itself. This is only needed for code
 processing raw X events, since <a class="link" href="gdk3-Event-Structures.html#GdkEventKey" title="struct GdkEventKey"><span class="type">GdkEventKey</span></a> directly includes
 an is_modifier field.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.57.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.58.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2357,11 +2383,10 @@ an is_modifier field.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.57.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.58.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the hardware keycode is a modifier key</p>
-<p></p>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2370,7 +2395,7 @@ an is_modifier field.</p>
 gdk_x11_visual_get_xvisual (<em class="parameter"><code><a class="link" href="gdk3-Visuals.html#GdkVisual"><span class="type">GdkVisual</span></a> *visual</code></em>);</pre>
 <p>Returns the X visual belonging to a <a class="link" href="gdk3-Visuals.html#GdkVisual"><span class="type">GdkVisual</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.58.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.59.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2385,7 +2410,7 @@ gdk_x11_visual_get_xvisual (<em class="parameter"><code><a class="link" href="gd
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.58.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.59.6"></a><h4>Returns</h4>
 <p> an Xlib Visual*. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -2398,7 +2423,7 @@ gdk_x11_atom_to_xatom (<em class="parameter"><code><a class="link" href="gdk3-Pr
 <p>Converts from a <a class="link" href="gdk3-Properties-and-Atoms.html#GdkAtom" title="GdkAtom"><span class="type">GdkAtom</span></a> to the X atom for the default GDK display
 with the same string value.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.59.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.60.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2413,10 +2438,9 @@ with the same string value.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.59.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.60.6"></a><h4>Returns</h4>
 <p> the X atom corresponding to <em class="parameter"><code>atom</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2429,7 +2453,7 @@ gdk_x11_atom_to_xatom_for_display (<em class="parameter"><code><a class="link" h
 with the same string value. The special value <a class="link" href="gdk3-Properties-and-Atoms.html#GDK-NONE:CAPS" title="GDK_NONE"><code class="literal">GDK_NONE</code></a>
 is converted to <code class="literal">None</code>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.60.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.61.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2451,12 +2475,11 @@ is converted to <code class="literal">None</code>.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.60.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.61.6"></a><h4>Returns</h4>
 <p> the X atom corresponding to <em class="parameter"><code>atom</code></em>
 , or <code class="literal">None</code></p>
-<p></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2466,7 +2489,7 @@ gdk_x11_xatom_to_atom (<em class="parameter"><code><span class="type">Atom</span
 <p>Convert from an X atom for the default display to the corresponding
 <a class="link" href="gdk3-Properties-and-Atoms.html#GdkAtom" title="GdkAtom"><span class="type">GdkAtom</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.61.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.62.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2481,7 +2504,7 @@ gdk_x11_xatom_to_atom (<em class="parameter"><code><span class="type">Atom</span
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.61.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.62.6"></a><h4>Returns</h4>
 <p> the corresponding G<span class="type">dkAtom</span>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -2495,7 +2518,7 @@ gdk_x11_xatom_to_atom_for_display (<em class="parameter"><code><a class="link" h
 <p>Convert from an X atom for a <a class="link" href="GdkDisplay.html" title="GdkDisplay"><span class="type">GdkDisplay</span></a> to the corresponding
 <a class="link" href="gdk3-Properties-and-Atoms.html#GdkAtom" title="GdkAtom"><span class="type">GdkAtom</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.62.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.63.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2517,11 +2540,11 @@ gdk_x11_xatom_to_atom_for_display (<em class="parameter"><code><a class="link" h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.62.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.63.6"></a><h4>Returns</h4>
 <p> the corresponding <a class="link" href="gdk3-Properties-and-Atoms.html#GdkAtom" title="GdkAtom"><span class="type">GdkAtom</span></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2533,7 +2556,7 @@ gdk_x11_get_xatom_by_name (<em class="parameter"><code>const <a href="https://de
 This function caches the result, so if called repeatedly it is much
 faster than <code class="function">XInternAtom()</code>, which is a round trip to the server each time.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.63.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.64.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2548,9 +2571,8 @@ faster than <code class="function">XInternAtom()</code>, which is a round trip t
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.63.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.64.6"></a><h4>Returns</h4>
 <p> a X atom for GDK’s default display.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2564,7 +2586,7 @@ gdk_x11_get_xatom_by_name_for_display (<em class="parameter"><code><a class="lin
 This function caches the result, so if called repeatedly it is much
 faster than <code class="function">XInternAtom()</code>, which is a round trip to the server each time.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.64.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.65.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2586,11 +2608,10 @@ faster than <code class="function">XInternAtom()</code>, which is a round trip t
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.64.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.65.6"></a><h4>Returns</h4>
 <p> a X atom for a <a class="link" href="GdkDisplay.html" title="GdkDisplay"><span class="type">GdkDisplay</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2604,7 +2625,7 @@ doesn’t need to be freed. Also, this function will never return <a href="https
 even if <em class="parameter"><code>xatom</code></em>
  is invalid.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.65.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.66.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2619,10 +2640,9 @@ even if <em class="parameter"><code>xatom</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.65.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.66.6"></a><h4>Returns</h4>
 <p> name of the X atom; this string is owned by GTK+,
 so it shouldn’t be modifed or freed. </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2636,7 +2656,7 @@ function is meant mainly for debugging, so for convenience, unlike
 <code class="function">XAtomName()</code> and <a class="link" href="gdk3-Properties-and-Atoms.html#gdk-atom-name" title="gdk_atom_name ()"><code class="function">gdk_atom_name()</code></a>, the result doesn’t need to
 be freed.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.66.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.67.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2659,12 +2679,11 @@ is defined. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.66.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.67.6"></a><h4>Returns</h4>
 <p> name of the X atom; this string is owned by GDK,
 so it shouldn’t be modifed or freed. </p>
-<p></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2677,7 +2696,7 @@ session management protocol.</p>
 <p>See the X Session Management Library documentation for more information on
 session management and the Inter-Client Communication Conventions Manual</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.67.6"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.68.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2692,7 +2711,7 @@ connection was opened, or <a href="https://developer.gnome.org/glib/unstable/gli
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2710,7 +2729,7 @@ in a property into an array of strings in the encoding of
 the current locale. (The elements of the array represent the
 nul-separated elements of the original text string.)</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.68.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.69.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2756,12 +2775,11 @@ freed using <a href="http://library.gnome.org/devel/gdk3/gdk2-Properties-and-Ato
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.68.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.69.6"></a><h4>Returns</h4>
 <p> the number of strings stored in list, or 0,
 if the conversion failed</p>
-<p></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2771,7 +2789,7 @@ gdk_x11_free_text_list (<em class="parameter"><code><a href="https://developer.g
 <p>Frees the array of strings created by
 <a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-display-text-property-to-text-list" title="gdk_x11_display_text_property_to_text_list ()"><code class="function">gdk_x11_display_text_property_to_text_list()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.69.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.70.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2787,7 +2805,7 @@ a call to <a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-di
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2803,7 +2821,7 @@ gdk_x11_display_string_to_compound_text
 <p>Convert a string from the encoding of the current
 locale into a form suitable for storing in a window property.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.70.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.71.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2848,11 +2866,10 @@ allocated data for the property. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.70.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.71.6"></a><h4>Returns</h4>
 <p> 0 upon success, non-zero upon failure</p>
-<p></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2866,7 +2883,7 @@ gdk_x11_display_utf8_to_compound_text (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *length</code></em>);</pre>
 <p>Converts from UTF-8 to compound text.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.71.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.72.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2910,12 +2927,11 @@ stored in <em class="parameter"><code>ctext</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.25.6.71.6"></a><h4>Returns</h4>
+<a name="id-1.2.26.6.72.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the conversion succeeded,
 otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a></p>
-<p></p>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2924,7 +2940,7 @@ otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macro
 gdk_x11_free_compound_text (<em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guchar"><span class="type">guchar</span></a> *ctext</code></em>);</pre>
 <p>Frees the data returned from <a class="link" href="gdk3-X-Window-System-Interaction.html#gdk-x11-display-string-to-compound-text" title="gdk_x11_display_string_to_compound_text ()"><code class="function">gdk_x11_display_string_to_compound_text()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.25.6.72.5"></a><h4>Parameters</h4>
+<a name="id-1.2.26.6.73.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2940,7 +2956,7 @@ from a call to
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.24</p>
+<p class="since">Since: 2.24</p>
 </div>
 </div>
 <div class="refsect1">
@@ -2948,7 +2964,6 @@ from a call to
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

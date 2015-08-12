@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ATK - Accessibility Toolkit: AtkDocument</title>
+<title>AtkDocument: ATK - Accessibility Toolkit</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="ATK - Accessibility Toolkit">
 <link rel="up" href="interfaces.html" title="ATK Interfaces">
@@ -160,7 +160,7 @@
 </div>
 <div class="refsect1">
 <a name="AtkDocument.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GInterface
+<pre class="screen">    <a href="/opt/gnome3/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> AtkDocument
 </pre>
 </div>
@@ -368,9 +368,8 @@ as a whole. </p>
 <pre class="programlisting">const <span class="returnvalue">gchar</span> *
 atk_document_get_locale (<em class="parameter"><code><a class="link" href="AtkDocument.html" title="AtkDocument"><span class="type">AtkDocument</span></a> *document</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_document_get_locale</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version
-2.7.90. Please use <a class="link" href="AtkObject.html#atk-object-get-object-locale" title="atk_object_get_object_locale ()"><code class="function">atk_object_get_object_locale()</code></a> instead.</p>
+<p><code class="literal">atk_document_get_locale</code> has been deprecated since version 2.7.90 and should not be used in newly-written code.</p>
+<p>Please use <a class="link" href="AtkObject.html#atk-object-get-object-locale" title="atk_object_get_object_locale ()"><code class="function">atk_object_get_object_locale()</code></a> instead.</p>
 </div>
 <p>Gets a UTF-8 string indicating the POSIX-style LC_MESSAGES locale
          of the content of this document instance.  Individual

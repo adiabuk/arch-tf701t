@@ -7,7 +7,7 @@
 <link rel="home" href="index.html" title="libsoup Reference Manual">
 <link rel="up" href="ch04.html" title="Web Services APIs">
 <link rel="prev" href="libsoup-2.4-XMLRPC-Support.html" title="XMLRPC Support">
-<link rel="next" href="ch05.html" title="Low-level Networking API">
+<link rel="next" href="libsoup-2.4-WebSockets.html" title="WebSockets">
 <meta name="generator" content="GTK-Doc V1.21 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -20,7 +20,7 @@
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ch04.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
 <td><a accesskey="p" href="libsoup-2.4-XMLRPC-Support.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ch05.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="n" href="libsoup-2.4-WebSockets.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
 <a name="libsoup-2.4-GValue-Support"></a><div class="titlepage"></div>
@@ -97,7 +97,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
+<span class="returnvalue">GValueArray</span> *
 </td>
 <td class="function_name">
 <a class="link" href="libsoup-2.4-GValue-Support.html#soup-value-array-from-args" title="soup_value_array_from_args ()">soup_value_array_from_args</a> <span class="c_punctuation">()</span>
@@ -113,7 +113,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
+<span class="returnvalue">GValueArray</span> *
 </td>
 <td class="function_name">
 <a class="link" href="libsoup-2.4-GValue-Support.html#soup-value-array-new" title="soup_value_array_new ()">soup_value_array_new</a> <span class="c_punctuation">()</span>
@@ -121,7 +121,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
+<span class="returnvalue">GValueArray</span> *
 </td>
 <td class="function_name">
 <a class="link" href="libsoup-2.4-GValue-Support.html#soup-value-array-new-with-vals" title="soup_value_array_new_with_vals ()">soup_value_array_new_with_vals</a> <span class="c_punctuation">()</span>
@@ -185,9 +185,9 @@
 </div>
 <div class="refsect1">
 <a name="libsoup-2.4-GValue-Support.description"></a><h2>Description</h2>
-<p>These methods are useful for manipulating <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a>s, and in
-particular, arrays and hash tables of <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a>s, in a
-slightly nicer way than the standard <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> API.</p>
+<p>These methods are useful for manipulating <span class="type">GValue</span>s, and in
+particular, arrays and hash tables of <span class="type">GValue</span>s, in a
+slightly nicer way than the standard <span class="type">GValue</span> API.</p>
 <p>They are written for use with soup-xmlrpc, but they also work with
 types not used by XML-RPC.</p>
 </div>
@@ -198,7 +198,7 @@ types not used by XML-RPC.</p>
 <pre class="programlisting"><span class="returnvalue">GHashTable</span> *
 soup_value_hash_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Creates a <span class="type">GHashTable</span> whose keys are strings and whose values
-are <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a>.</p>
+are <span class="type">GValue</span>.</p>
 <div class="refsect3">
 <a name="id-1.5.4.6.2.5"></a><h4>Returns</h4>
 <p> a new
@@ -213,7 +213,7 @@ empty <span class="type">GHashTable</span>. </p>
 soup_value_hash_new_with_vals (<em class="parameter"><code>const <span class="type">char</span> *first_key</code></em>,
                                <em class="parameter"><code>...</code></em>);</pre>
 <p>Creates a <span class="type">GHashTable</span> whose keys are strings and whose values
-are <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a>, and initializes it with the provided data. As
+are <span class="type">GValue</span>, and initializes it with the provided data. As
 with <a class="link" href="libsoup-2.4-GValue-Support.html#soup-value-hash-insert" title="soup_value_hash_insert ()"><code class="function">soup_value_hash_insert()</code></a>, the keys and values are copied
 rather than being inserted directly.</p>
 <div class="refsect3">
@@ -253,7 +253,7 @@ by additional key/type/value triplets, terminated by <code class="literal">NULL<
 <pre class="programlisting"><span class="returnvalue">void</span>
 soup_value_hash_insert_value (<em class="parameter"><code><span class="type">GHashTable</span> *hash</code></em>,
                               <em class="parameter"><code>const <span class="type">char</span> *key</code></em>,
-                              <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+                              <em class="parameter"><code><span class="type">GValue</span> *value</code></em>);</pre>
 <p>Inserts <em class="parameter"><code>value</code></em>
  into <em class="parameter"><code>hash</code></em>
 . (Unlike with <code class="function">g_hash_table_insert()</code>, both
@@ -292,7 +292,7 @@ the key and the value are copied).</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 soup_value_hash_insert (<em class="parameter"><code><span class="type">GHashTable</span> *hash</code></em>,
                         <em class="parameter"><code>const <span class="type">char</span> *key</code></em>,
-                        <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>,
+                        <em class="parameter"><code><span class="type">GType</span> type</code></em>,
                         <em class="parameter"><code>...</code></em>);</pre>
 <p>Inserts the provided value of type <em class="parameter"><code>type</code></em>
  into <em class="parameter"><code>hash</code></em>
@@ -319,7 +319,7 @@ soup_value_hash_insert (<em class="parameter"><code><span class="type">GHashTabl
 </tr>
 <tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -379,7 +379,7 @@ by additional key/type/value triplets, terminated by <code class="literal">NULL<
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 soup_value_hash_lookup (<em class="parameter"><code><span class="type">GHashTable</span> *hash</code></em>,
                         <em class="parameter"><code>const <span class="type">char</span> *key</code></em>,
-                        <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>,
+                        <em class="parameter"><code><span class="type">GType</span> type</code></em>,
                         <em class="parameter"><code>...</code></em>);</pre>
 <p>Looks up <em class="parameter"><code>key</code></em>
  in <em class="parameter"><code>hash</code></em>
@@ -406,7 +406,7 @@ location.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -480,11 +480,11 @@ and which were not.</p>
 <hr>
 <div class="refsect2">
 <a name="soup-value-array-from-args"></a><h3>soup_value_array_from_args ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
+<pre class="programlisting"><span class="returnvalue">GValueArray</span> *
 soup_value_array_from_args (<em class="parameter"><code><span class="type">va_list</span> args</code></em>);</pre>
-<p>Creates a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> from the provided arguments, which must
-consist of pairs of a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> and a value of that type, terminated
-by <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-INVALID:CAPS"><code class="literal">G_TYPE_INVALID</code></a>. (The array will contain copies of the provided
+<p>Creates a <span class="type">GValueArray</span> from the provided arguments, which must
+consist of pairs of a <span class="type">GType</span> and a value of that type, terminated
+by <code class="literal">G_TYPE_INVALID</code>. (The array will contain copies of the provided
 data rather than pointing to the passed-in data directly.)</p>
 <div class="refsect3">
 <a name="id-1.5.4.6.9.5"></a><h4>Parameters</h4>
@@ -496,14 +496,14 @@ data rather than pointing to the passed-in data directly.)</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>args</p></td>
-<td class="parameter_description"><p>arguments to create a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> from</p></td>
+<td class="parameter_description"><p>arguments to create a <span class="type">GValueArray</span> from</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="id-1.5.4.6.9.6"></a><h4>Returns</h4>
-<p> a new <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a>, or <code class="literal">NULL</code> if an error
+<p> a new <span class="type">GValueArray</span>, or <code class="literal">NULL</code> if an error
 occurred. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
@@ -512,11 +512,11 @@ occurred. </p>
 <div class="refsect2">
 <a name="soup-value-array-to-args"></a><h3>soup_value_array_to_args ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
-soup_value_array_to_args (<em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> *array</code></em>,
+soup_value_array_to_args (<em class="parameter"><code><span class="type">GValueArray</span> *array</code></em>,
                           <em class="parameter"><code><span class="type">va_list</span> args</code></em>);</pre>
-<p>Extracts a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> into the provided arguments, which must
-consist of pairs of a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> and a value of pointer-to-that-type,
-terminated by <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-INVALID:CAPS"><code class="literal">G_TYPE_INVALID</code></a>. The returned values will point to the
+<p>Extracts a <span class="type">GValueArray</span> into the provided arguments, which must
+consist of pairs of a <span class="type">GType</span> and a value of pointer-to-that-type,
+terminated by <code class="literal">G_TYPE_INVALID</code>. The returned values will point to the
 same memory as the values in the array.</p>
 <div class="refsect3">
 <a name="id-1.5.4.6.10.5"></a><h4>Parameters</h4>
@@ -529,7 +529,7 @@ same memory as the values in the array.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>array</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GValueArray</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -550,23 +550,23 @@ into</p></td>
 <hr>
 <div class="refsect2">
 <a name="soup-value-array-new"></a><h3>soup_value_array_new ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
+<pre class="programlisting"><span class="returnvalue">GValueArray</span> *
 soup_value_array_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>Creates a new <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><code class="literal">GValueArray</code></a>. (This is just a wrapper around
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#g-value-array-new"><code class="function">g_value_array_new()</code></a>, for naming consistency purposes.)</p>
+<p>Creates a new <code class="literal">GValueArray</code>. (This is just a wrapper around
+<code class="function">g_value_array_new()</code>, for naming consistency purposes.)</p>
 <div class="refsect3">
 <a name="id-1.5.4.6.11.5"></a><h4>Returns</h4>
-<p> a new <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><code class="literal">GValueArray</code></a></p>
+<p> a new <code class="literal">GValueArray</code></p>
 <p></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="soup-value-array-new-with-vals"></a><h3>soup_value_array_new_with_vals ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
-soup_value_array_new_with_vals (<em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> first_type</code></em>,
+<pre class="programlisting"><span class="returnvalue">GValueArray</span> *
+soup_value_array_new_with_vals (<em class="parameter"><code><span class="type">GType</span> first_type</code></em>,
                                 <em class="parameter"><code>...</code></em>);</pre>
-<p>Creates a new <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><code class="literal">GValueArray</code></a> and copies the provided values
+<p>Creates a new <code class="literal">GValueArray</code> and copies the provided values
 into it.</p>
 <div class="refsect3">
 <a name="id-1.5.4.6.12.5"></a><h4>Parameters</h4>
@@ -585,7 +585,7 @@ into it.</p>
 <tr>
 <td class="parameter_name"><p>...</p></td>
 <td class="parameter_description"><p>the first value to add, followed by other type/value
-pairs, terminated by <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-INVALID:CAPS"><code class="literal">G_TYPE_INVALID</code></a></p></td>
+pairs, terminated by <code class="literal">G_TYPE_INVALID</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -593,7 +593,7 @@ pairs, terminated by <a href="http://library.gnome.org/devel/gobject/unstable/go
 </div>
 <div class="refsect3">
 <a name="id-1.5.4.6.12.6"></a><h4>Returns</h4>
-<p> a new <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><code class="literal">GValueArray</code></a></p>
+<p> a new <code class="literal">GValueArray</code></p>
 <p></p>
 </div>
 </div>
@@ -601,14 +601,14 @@ pairs, terminated by <a href="http://library.gnome.org/devel/gobject/unstable/go
 <div class="refsect2">
 <a name="soup-value-array-insert"></a><h3>soup_value_array_insert ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-soup_value_array_insert (<em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> *array</code></em>,
+soup_value_array_insert (<em class="parameter"><code><span class="type">GValueArray</span> *array</code></em>,
                          <em class="parameter"><code><span class="type">guint</span> index_</code></em>,
-                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>,
+                         <em class="parameter"><code><span class="type">GType</span> type</code></em>,
                          <em class="parameter"><code>...</code></em>);</pre>
 <p>Inserts the provided value of type <em class="parameter"><code>type</code></em>
  into <em class="parameter"><code>array</code></em>
  as with
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#g-value-array-insert"><code class="function">g_value_array_insert()</code></a>. (The provided data is copied rather than
+<code class="function">g_value_array_insert()</code>. (The provided data is copied rather than
 being inserted directly.)</p>
 <div class="refsect3">
 <a name="id-1.5.4.6.13.5"></a><h4>Parameters</h4>
@@ -621,7 +621,7 @@ being inserted directly.)</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>array</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GValueArray</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -631,7 +631,7 @@ being inserted directly.)</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -648,13 +648,13 @@ being inserted directly.)</p>
 <div class="refsect2">
 <a name="soup-value-array-append"></a><h3>soup_value_array_append ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-soup_value_array_append (<em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> *array</code></em>,
-                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>,
+soup_value_array_append (<em class="parameter"><code><span class="type">GValueArray</span> *array</code></em>,
+                         <em class="parameter"><code><span class="type">GType</span> type</code></em>,
                          <em class="parameter"><code>...</code></em>);</pre>
 <p>Appends the provided value of type <em class="parameter"><code>type</code></em>
  to <em class="parameter"><code>array</code></em>
  as with
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#g-value-array-append"><code class="function">g_value_array_append()</code></a>. (The provided data is copied rather than
+<code class="function">g_value_array_append()</code>. (The provided data is copied rather than
 being inserted directly.)</p>
 <div class="refsect3">
 <a name="id-1.5.4.6.14.5"></a><h4>Parameters</h4>
@@ -667,12 +667,12 @@ being inserted directly.)</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>array</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GValueArray</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -689,12 +689,12 @@ being inserted directly.)</p>
 <div class="refsect2">
 <a name="soup-value-array-append-vals"></a><h3>soup_value_array_append_vals ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-soup_value_array_append_vals (<em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> *array</code></em>,
-                              <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> first_type</code></em>,
+soup_value_array_append_vals (<em class="parameter"><code><span class="type">GValueArray</span> *array</code></em>,
+                              <em class="parameter"><code><span class="type">GType</span> first_type</code></em>,
                               <em class="parameter"><code>...</code></em>);</pre>
 <p>Appends the provided values into <em class="parameter"><code>array</code></em>
  as with
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#g-value-array-append"><code class="function">g_value_array_append()</code></a>. (The provided data is copied rather than
+<code class="function">g_value_array_append()</code>. (The provided data is copied rather than
 being inserted directly.)</p>
 <div class="refsect3">
 <a name="id-1.5.4.6.15.5"></a><h4>Parameters</h4>
@@ -707,7 +707,7 @@ being inserted directly.)</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>array</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GValueArray</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -718,7 +718,7 @@ being inserted directly.)</p>
 <tr>
 <td class="parameter_name"><p>...</p></td>
 <td class="parameter_description"><p>the first value to add, followed by other type/value
-pairs, terminated by <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#G-TYPE-INVALID:CAPS"><code class="literal">G_TYPE_INVALID</code></a></p></td>
+pairs, terminated by <code class="literal">G_TYPE_INVALID</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -729,9 +729,9 @@ pairs, terminated by <a href="http://library.gnome.org/devel/gobject/unstable/go
 <div class="refsect2">
 <a name="soup-value-array-get-nth"></a><h3>soup_value_array_get_nth ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
-soup_value_array_get_nth (<em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> *array</code></em>,
+soup_value_array_get_nth (<em class="parameter"><code><span class="type">GValueArray</span> *array</code></em>,
                           <em class="parameter"><code><span class="type">guint</span> index_</code></em>,
-                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>,
+                          <em class="parameter"><code><span class="type">GType</span> type</code></em>,
                           <em class="parameter"><code>...</code></em>);</pre>
 <p>Gets the <em class="parameter"><code>index_</code></em>
  element of <em class="parameter"><code>array</code></em>
@@ -748,7 +748,7 @@ provided location.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>array</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GValueArray</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -758,7 +758,7 @@ provided location.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -790,7 +790,7 @@ and type <em class="parameter"><code>type</code></em>
  will
 point directly to the value in <em class="parameter"><code>args</code></em>
  rather than copying it, so you
-must <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-values.html#g-value-copy"><code class="function">g_value_copy()</code></a> it if you want it to remain valid.</p>
+must <code class="function">g_value_copy()</code> it if you want it to remain valid.</p>
 <div class="refsect3">
 <a name="id-1.5.4.6.17.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -802,12 +802,12 @@ must <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-va
 <tbody>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GValue</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -842,12 +842,12 @@ of it.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GValue</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -865,7 +865,7 @@ of it.</p>
 <a name="SOUP-TYPE-BYTE-ARRAY:CAPS"></a><h3>SOUP_TYPE_BYTE_ARRAY</h3>
 <pre class="programlisting">#define SOUP_TYPE_BYTE_ARRAY (soup_byte_array_get_type ())
 </pre>
-<p>glib did not used to define a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> for <span class="type">GByteArray</span>, so libsoup
+<p>glib did not used to define a <span class="type">GType</span> for <span class="type">GByteArray</span>, so libsoup
 defines this one itself.</p>
 </div>
 </div>

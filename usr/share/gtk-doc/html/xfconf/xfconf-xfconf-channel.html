@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Xfconf Reference Manual: XfconfChannel</title>
+<title>XfconfChannel: Xfconf Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Xfconf Reference Manual">
 <link rel="up" href="ch03.html" title="Xfconf Client Library">
 <link rel="prev" href="xfconf-xfconf.html" title="Xfconf Library Core">
 <link rel="next" href="xfconf-xfconf-binding.html" title="Xfconf-GObject Binding">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -442,9 +442,8 @@ checking is done to see if the channel exists or has a valid name.</p>
 <div class="refsect3">
 <a name="id-1.4.3.10.2.7"></a><h4>Returns</h4>
 <p> An <a class="link" href="xfconf-xfconf-channel.html#XfconfChannel"><span class="type">XfconfChannel</span></a> singleton.</p>
-<p></p>
 </div>
-<p class="since">Since 4.5.91</p>
+<p class="since">Since: 4.5.91</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -483,7 +482,6 @@ so in this cases it is highly recommended to use <a class="link" href="xfconf-xf
 <a name="id-1.4.3.10.3.8"></a><h4>Returns</h4>
 <p> A new <a class="link" href="xfconf-xfconf-channel.html#XfconfChannel"><span class="type">XfconfChannel</span></a>.  Release with <code class="function">g_object_unref()</code>
 when no longer needed.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -525,9 +523,8 @@ name.</p>
 <a name="id-1.4.3.10.4.6"></a><h4>Returns</h4>
 <p> A new <a class="link" href="xfconf-xfconf-channel.html#XfconfChannel"><span class="type">XfconfChannel</span></a>.  Release with <code class="function">g_object_unref()</code>
 when no longer needed.</p>
-<p></p>
 </div>
-<p class="since">Since 4.5.92</p>
+<p class="since">Since: 4.5.92</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -564,7 +561,6 @@ xfconf_channel_has_property (<em class="parameter"><code><a class="link" href="x
 <a name="id-1.4.3.10.5.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if <em class="parameter"><code>property</code></em>
 exists, <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -604,9 +600,8 @@ or <a class="link" href="xfconf-xfconf-channel.html#xfconf-channel-reset-propert
 <div class="refsect3">
 <a name="id-1.4.3.10.6.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property is locked, <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 4.5.91</p>
+<p class="since">Since: 4.5.91</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -659,7 +654,7 @@ in which case the channel root ("/") will be assumed.  Of course,
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 4.5.91</p>
+<p class="since">Since: 4.5.91</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -705,7 +700,6 @@ specify "/" or <code class="literal">NULL</code> for <em class="parameter"><code
 <a name="id-1.4.3.10.8.6"></a><h4>Returns</h4>
 <p> A newly-allocated <span class="type">GHashTable</span>, which should be freed with
 <code class="function">g_hash_table_destroy()</code> when no longer needed.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -753,7 +747,6 @@ is not in <em class="parameter"><code>channel</code></em>
 ,
 a <code class="function">g_strdup()</code>ed copy of <em class="parameter"><code>default_value</code></em>
 is returned.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -794,7 +787,6 @@ xfconf_channel_get_string_list (<em class="parameter"><code><a class="link" href
 is not in
 <em class="parameter"><code>channel</code></em>
 , <code class="literal">NULL</code> is returned.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -841,7 +833,6 @@ is not in <em class="parameter"><code>channel</code></em>
 ,
 <em class="parameter"><code>default_value</code></em>
 is returned.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -888,7 +879,6 @@ is not in <em class="parameter"><code>channel</code></em>
 ,
 <em class="parameter"><code>default_value</code></em>
 is returned.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -935,7 +925,6 @@ is not in <em class="parameter"><code>channel</code></em>
 ,
 <em class="parameter"><code>default_value</code></em>
 is returned.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -982,7 +971,6 @@ is not in <em class="parameter"><code>channel</code></em>
 ,
 <em class="parameter"><code>default_value</code></em>
 is returned.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1029,7 +1017,6 @@ is not in <em class="parameter"><code>channel</code></em>
 ,
 <em class="parameter"><code>default_value</code></em>
 is returned.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1073,7 +1060,6 @@ xfconf_channel_set_string (<em class="parameter"><code><a class="link" href="xfc
 <div class="refsect3">
 <a name="id-1.4.3.10.16.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> on success, <code class="literal">FALSE</code> if an error occured.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1117,7 +1103,6 @@ xfconf_channel_set_string_list (<em class="parameter"><code><a class="link" href
 <div class="refsect3">
 <a name="id-1.4.3.10.17.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> on success, <code class="literal">FALSE</code> if an error occured.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1161,7 +1146,6 @@ xfconf_channel_set_int (<em class="parameter"><code><a class="link" href="xfconf
 <div class="refsect3">
 <a name="id-1.4.3.10.18.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> on success, <code class="literal">FALSE</code> if an error occured.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1205,7 +1189,6 @@ xfconf_channel_set_uint (<em class="parameter"><code><a class="link" href="xfcon
 <div class="refsect3">
 <a name="id-1.4.3.10.19.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> on success, <code class="literal">FALSE</code> if an error occured.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1249,7 +1232,6 @@ xfconf_channel_set_uint64 (<em class="parameter"><code><a class="link" href="xfc
 <div class="refsect3">
 <a name="id-1.4.3.10.20.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> on success, <code class="literal">FALSE</code> if an error occured.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1293,7 +1275,6 @@ xfconf_channel_set_double (<em class="parameter"><code><a class="link" href="xfc
 <div class="refsect3">
 <a name="id-1.4.3.10.21.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> on success, <code class="literal">FALSE</code> if an error occured.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1337,7 +1318,6 @@ xfconf_channel_set_bool (<em class="parameter"><code><a class="link" href="xfcon
 <div class="refsect3">
 <a name="id-1.4.3.10.22.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> on success, <code class="literal">FALSE</code> if an error occured.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1395,7 +1375,6 @@ in its native type.</p>
 <a name="id-1.4.3.10.23.7"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was retrieved successfully,
 <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1440,7 +1419,6 @@ only a restricted set of value types.</p>
 <div class="refsect3">
 <a name="id-1.4.3.10.24.7"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was set successfully, <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1497,7 +1475,6 @@ only a restricted set of value types.</p>
 <a name="id-1.4.3.10.25.7"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was retrieved successfully,
 <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1547,7 +1524,6 @@ for details.</p>
 <a name="id-1.4.3.10.26.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was retrieved successfully,
 <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1586,7 +1562,6 @@ when no longer needed.</p>
 <a name="id-1.4.3.10.27.6"></a><h4>Returns</h4>
 <p> A newly-allocated <span class="type">GPtrArray</span> on success, or <code class="literal">NULL</code>
 on failure.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1642,7 +1617,6 @@ only a restricted set of value types.</p>
 <div class="refsect3">
 <a name="id-1.4.3.10.28.7"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was set successfully, <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1691,7 +1665,6 @@ for details.</p>
 <div class="refsect3">
 <a name="id-1.4.3.10.29.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was set successfully, <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1735,7 +1708,6 @@ provided <em class="parameter"><code>values</code></em>
 <div class="refsect3">
 <a name="id-1.4.3.10.30.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was set successfully, <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1789,7 +1761,6 @@ with <a class="link" href="xfconf-xfconf.html#xfconf-named-struct-register" titl
 <a name="id-1.4.3.10.31.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was retrieved successfully,
 <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1843,7 +1814,6 @@ with <a class="link" href="xfconf-xfconf.html#xfconf-named-struct-register" titl
 <a name="id-1.4.3.10.32.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was set successfully,
 <code class="literal">FALSE</code> otherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1914,7 +1884,6 @@ boolean, double, etc.</p>
 <a name="id-1.4.3.10.33.8"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was retrieved successfully,
 <code class="literal">FALSE</code> oherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1974,7 +1943,6 @@ boolean, double, etc.</p>
 <a name="id-1.4.3.10.34.7"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was retrieved successfully,
 <code class="literal">FALSE</code> oherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2036,7 +2004,6 @@ boolean, double, etc.</p>
 <a name="id-1.4.3.10.35.7"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was retrieved successfully,
 <code class="literal">FALSE</code> oherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2104,7 +2071,6 @@ by the compiler.</p>
 <a name="id-1.4.3.10.36.7"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was set successfully,
 <code class="literal">FALSE</code> oherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2162,7 +2128,6 @@ as a value array.  See <a class="link" href="xfconf-xfconf-channel.html#xfconf-c
 <a name="id-1.4.3.10.37.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was set successfully,
 <code class="literal">FALSE</code> oherwise.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2222,7 +2187,6 @@ for each member of the struct.</p>
 <a name="id-1.4.3.10.38.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the property was set successfully,
 <code class="literal">FALSE</code> oherwise.</p>
-<p></p>
 </div>
 </div>
 </div>
@@ -2323,7 +2287,6 @@ will be unset; you should test this with</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

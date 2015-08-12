@@ -1,0 +1,73 @@
+%NAME%
+qt4
+
+%VERSION%
+4.8.7-2
+
+%DESC%
+A cross-platform application and UI framework
+
+%URL%
+http://qt-project.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1437583381
+
+%INSTALLDATE%
+1439240185
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+76637184
+
+%REASON%
+1
+
+%LICENSE%
+GPL3
+LGPL
+FDL
+custom
+
+%VALIDATION%
+sha256
+
+%REPLACES%
+qt<=4.8.4
+
+%DEPENDS%
+libtiff
+libpng
+sqlite
+ca-certificates
+dbus
+fontconfig
+libgl
+libxrandr
+libxv
+libxi
+alsa-lib
+xdg-utils
+hicolor-icon-theme
+desktop-file-utils
+libmng
+
+%OPTDEPENDS%
+qtchooser: set the default Qt toolkit
+postgresql-libs: PostgreSQL driver
+libmariadbclient: MariaDB driver
+unixodbc: ODBC driver
+libxinerama: Xinerama support
+libxcursor: Xcursor support
+libxfixes: Xfixes support
+icu: Unicode support
+sni-qt: StatusNotifierItem (AppIndicators) support
+
+%CONFLICTS%
+qt
+

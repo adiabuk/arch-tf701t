@@ -1868,7 +1868,6 @@
     <message xml:lang="gl">Requírese autenticación para reanalizar un dispositivo</message>
     <message xml:lang="hr">Potrebna je provjera za ponovno pregledavanje uređaja</message>
     <message xml:lang="hu">Hitelesítés szükséges egy eszköz ismételt vizsgálatához</message>
-    <message xml:lang="id">Perlu otentikasi untuk memindai ulang perangkat</message>
     <message xml:lang="it">È richiesto autenticarsi per rianalizzare un dispositivo</message>
     <message xml:lang="ja">デバイスを再スキャンするには、認証が必要です。</message>
     <message xml:lang="ko">장치를 다시 검색하려면 인증이 필요합니다</message>
@@ -2465,6 +2464,7 @@
   
   <action id="org.freedesktop.udisks2.ata-smart-enable-disable">
     <description>Enable/Disable SMART</description>
+    <description xml:lang="cs">Povolit/Zakázat SMART</description>
     <description xml:lang="da">Aktiver/deaktiver SMART</description>
     <description xml:lang="de">SMART aktivieren/deaktivieren</description>
     <description xml:lang="el">Ενεργοποίηση/απενεργοποίηση SMART</description>

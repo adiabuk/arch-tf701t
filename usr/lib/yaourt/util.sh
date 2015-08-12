@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# util.sh: common functions 
+# util.sh: common functions
 # This file is part of Yaourt (http://archlinux.fr/yaourt-en)
 
 # Since we use some associated arrays, this file should be included from
@@ -26,7 +26,7 @@ unset PACMAN_S_ARG MAKEPKG_ARG PACMAN_Q_ARG PACMAN_C_ARG PKGQUERY_C_ARG \
 
 _gettext() {
 	local str=$1; shift
-	printf "$(gettext "$str")" "$@" 
+	printf "$(gettext "$str")" "$@"
 }
 
 die() {	exit ${1:-0}; }
@@ -132,8 +132,8 @@ in_array() {
 # check_dir ($var)
 #   $var : name of variable containing directory
 check_dir() {
-	[[ ! -d "${!1}" ]] && { error "${!1} $(gettext 'is not a directory')"; return 1; }	
-	[[ ! -w "${!1}" ]] && { error "${!1} $(gettext 'is not writable')"; return 1; }	
+	[[ ! -d "${!1}" ]] && { error "${!1} $(gettext 'is not a directory')"; return 1; }
+	[[ ! -w "${!1}" ]] && { error "${!1} $(gettext 'is not writable')"; return 1; }
 	eval $1'="$(readlink -e "${!1}")"'	# get cannonical name
 	return 0
 }
@@ -164,11 +164,12 @@ program_arg() {
 pacman_parse() { LC_ALL=C pacman --color never "${PACMAN_C_ARG[@]}" "$@"; }
 pacman_out()   { $PACMAN "${PACMAN_C_ARG[@]}" "${PACMAN_O_ARG[@]}" "$@"; }
 pkgquery()     { package-query "${PKGQUERY_C_ARG[@]}" "$@"; }
+y_makepkg() { $MAKEPKG "${MAKEPKG_ARG[@]}" "$@"; }
 curl_fetch()   { curl "${CURL_C_ARG[@]}" "$@"; }
 
 # Run editor
 # Usage: run_editor ($file, $default_answer)
-# 	$file: file to edit 
+# 	$file: file to edit
 # 	$default_answer: 0: don't ask	1 (default): Y	2: N
 run_editor() {
 	local edit_cmd
@@ -183,22 +184,28 @@ run_editor() {
 		[[ "$answer" = "A" ]] && msg "$(gettext 'Aborted...')" && return 2
 		[[ "$answer" = "N" ]] && return 1
 	fi
-	if [[ ! "$EDITOR" ]]; then
-		echo -e "$CRED$(gettext 'Please add $EDITOR to your environment variables')"
-		echo -e "$C0$(gettext 'for example:')"
-		echo -e "${CBLUE}export EDITOR=\"vim\"$C0 $(gettext '(in ~/.bashrc)')"
-		echo "$(gettext '(replace vim with your favorite editor)')"
-		echo
-		prompt2 "$(_gettext 'Edit %s with: ' "$file")"
-		read -e EDITOR
-		echo
+
+	if [[ ! "$VISUAL" ]]; then
+		if [[ ! "$EDITOR" ]]; then
+			echo -e "$CRED$(gettext 'Please add $VISUAL to your environment variables')"
+			echo -e "$C0$(gettext 'for example:')"
+			echo -e "${CBLUE}export VISUAL=\"vim\"$C0 $(gettext '(in ~/.bashrc)')"
+			echo "$(gettext '(replace vim with your favorite editor)')"
+			echo
+			prompt2 "$(_gettext 'Edit %s with: ' "$file")"
+			read -e VISUAL
+			echo
+		else
+            VISUAL="$EDITOR"
+        fi
 	fi
-	[[ "$(basename "$EDITOR")" = "gvim" ]] && edit_cmd="$EDITOR --nofork" || edit_cmd="$EDITOR"
+	[[ "$(basename "$VISUAL")" = "gvim" ]] && edit_cmd="$VISUAL --nofork" || edit_cmd="$VISUAL"
 	( $edit_cmd "$file" )
 	wait
 }
 
 # Main init
+umask 0022
 . '/usr/lib/yaourt/io.sh'
 . '/usr/lib/yaourt/pacman.sh'
 DBPATH='/var/lib/pacman/'
@@ -244,15 +251,34 @@ TERMINALTITLE=1
 # Command
 DIFFEDITCMD="vimdiff"
 
-[[ -r '/etc/yaourtrc' ]] && source '/etc/yaourtrc'
-[[ -r ~/.yaourtrc ]] && source ~/.yaourtrc
+source_config() {
+	local env_EDITOR="$EDITOR"
+	local env_VISUAL="$VISUAL"
+
+	[[ -r '/etc/yaourtrc' ]] && source '/etc/yaourtrc'
+	XDG_YAOURT_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/yaourt"
+	if [[ -r $XDG_YAOURT_DIR/yaourtrc ]]; then
+		source "$XDG_YAOURT_DIR/yaourtrc"
+	elif [[ -r ~/.yaourtrc ]]; then
+		source ~/.yaourtrc
+	fi
+
+	if [[ "$env_EDITOR" ]]; then
+		EDITOR="$env_EDITOR"
+	fi
+	if [[ "$env_VISUAL" ]]; then
+		VISUAL="$env_VISUAL"
+	fi
+}
+
+source_config
+
 TMPDIR=${TMPDIR:-/tmp}
 check_dir TMPDIR || die 1
 YAOURTTMPDIR="$TMPDIR/yaourt-tmp-$(id -un)"
 export PACMAN=${PACMAN:-pacman}
-# Add --aur-url option to package-query args
-program_arg $A_PKC --aur-url "$AURURL"
+export MAKEPKG=${MAKEPKG:-makepkg}
 
 # DEVELBUILDDIR is depreceated
 DEVELSRCDIR=${DEVELSRCDIR:-$DEVELBUILDDIR}
-# vim: set ts=4 sw=4 noet: 
+# vim: set ts=4 sw=4 noet:

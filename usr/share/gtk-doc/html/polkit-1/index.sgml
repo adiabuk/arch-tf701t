@@ -37,6 +37,7 @@
 <ANCHOR id="eggdbus-method-org.freedesktop.PolicyKit1.Authority.RegisterAuthenticationAgentWithOptions" href="polkit-1/eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.RegisterAuthenticationAgentWithOptions">
 <ANCHOR id="eggdbus-method-org.freedesktop.PolicyKit1.Authority.UnregisterAuthenticationAgent" href="polkit-1/eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.UnregisterAuthenticationAgent">
 <ANCHOR id="eggdbus-method-org.freedesktop.PolicyKit1.Authority.AuthenticationAgentResponse" href="polkit-1/eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.AuthenticationAgentResponse">
+<ANCHOR id="eggdbus-method-org.freedesktop.PolicyKit1.Authority.AuthenticationAgentResponse2" href="polkit-1/eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.AuthenticationAgentResponse2">
 <ANCHOR id="eggdbus-method-org.freedesktop.PolicyKit1.Authority.EnumerateTemporaryAuthorizations" href="polkit-1/eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.EnumerateTemporaryAuthorizations">
 <ANCHOR id="eggdbus-method-org.freedesktop.PolicyKit1.Authority.RevokeTemporaryAuthorizations" href="polkit-1/eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.RevokeTemporaryAuthorizations">
 <ANCHOR id="eggdbus-method-org.freedesktop.PolicyKit1.Authority.RevokeTemporaryAuthorizationById" href="polkit-1/eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.RevokeTemporaryAuthorizationById">
@@ -99,7 +100,11 @@
 <ANCHOR id="PolkitAuthority.other_details" href="polkit-1/PolkitAuthority.html#PolkitAuthority.other_details">
 <ANCHOR id="PolkitAuthority-struct" href="polkit-1/PolkitAuthority.html#PolkitAuthority-struct">
 <ANCHOR id="PolkitAuthorityFeatures" href="polkit-1/PolkitAuthority.html#PolkitAuthorityFeatures">
+<ANCHOR id="POLKIT-AUTHORITY-FEATURES-NONE:CAPS" href="polkit-1/PolkitAuthority.html#POLKIT-AUTHORITY-FEATURES-NONE:CAPS">
+<ANCHOR id="POLKIT-AUTHORITY-FEATURES-TEMPORARY-AUTHORIZATION:CAPS" href="polkit-1/PolkitAuthority.html#POLKIT-AUTHORITY-FEATURES-TEMPORARY-AUTHORIZATION:CAPS">
 <ANCHOR id="PolkitCheckAuthorizationFlags" href="polkit-1/PolkitAuthority.html#PolkitCheckAuthorizationFlags">
+<ANCHOR id="POLKIT-CHECK-AUTHORIZATION-FLAGS-NONE:CAPS" href="polkit-1/PolkitAuthority.html#POLKIT-CHECK-AUTHORIZATION-FLAGS-NONE:CAPS">
+<ANCHOR id="POLKIT-CHECK-AUTHORIZATION-FLAGS-ALLOW-USER-INTERACTION:CAPS" href="polkit-1/PolkitAuthority.html#POLKIT-CHECK-AUTHORIZATION-FLAGS-ALLOW-USER-INTERACTION:CAPS">
 <ANCHOR id="PolkitAuthority.property-details" href="polkit-1/PolkitAuthority.html#PolkitAuthority.property-details">
 <ANCHOR id="PolkitAuthority--backend-features" href="polkit-1/PolkitAuthority.html#PolkitAuthority--backend-features">
 <ANCHOR id="PolkitAuthority--backend-name" href="polkit-1/PolkitAuthority.html#PolkitAuthority--backend-name">
@@ -145,6 +150,10 @@
 <ANCHOR id="POLKIT-ERROR:CAPS" href="polkit-1/polkit-1-PolkitError.html#POLKIT-ERROR:CAPS">
 <ANCHOR id="polkit-1-PolkitError.other_details" href="polkit-1/polkit-1-PolkitError.html#polkit-1-PolkitError.other_details">
 <ANCHOR id="PolkitError" href="polkit-1/polkit-1-PolkitError.html#PolkitError">
+<ANCHOR id="POLKIT-ERROR-FAILED:CAPS" href="polkit-1/polkit-1-PolkitError.html#POLKIT-ERROR-FAILED:CAPS">
+<ANCHOR id="POLKIT-ERROR-CANCELLED:CAPS" href="polkit-1/polkit-1-PolkitError.html#POLKIT-ERROR-CANCELLED:CAPS">
+<ANCHOR id="POLKIT-ERROR-NOT-SUPPORTED:CAPS" href="polkit-1/polkit-1-PolkitError.html#POLKIT-ERROR-NOT-SUPPORTED:CAPS">
+<ANCHOR id="POLKIT-ERROR-NOT-AUTHORIZED:CAPS" href="polkit-1/polkit-1-PolkitError.html#POLKIT-ERROR-NOT-AUTHORIZED:CAPS">
 <ANCHOR id="PolkitActionDescription" href="polkit-1/PolkitActionDescription.html">
 <ANCHOR id="PolkitActionDescription.functions" href="polkit-1/PolkitActionDescription.html#PolkitActionDescription.functions">
 <ANCHOR id="PolkitActionDescription.other" href="polkit-1/PolkitActionDescription.html#PolkitActionDescription.other">
@@ -167,6 +176,13 @@
 <ANCHOR id="PolkitActionDescription.other_details" href="polkit-1/PolkitActionDescription.html#PolkitActionDescription.other_details">
 <ANCHOR id="PolkitActionDescription-struct" href="polkit-1/PolkitActionDescription.html#PolkitActionDescription-struct">
 <ANCHOR id="PolkitImplicitAuthorization" href="polkit-1/PolkitActionDescription.html#PolkitImplicitAuthorization">
+<ANCHOR id="POLKIT-IMPLICIT-AUTHORIZATION-UNKNOWN:CAPS" href="polkit-1/PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-UNKNOWN:CAPS">
+<ANCHOR id="POLKIT-IMPLICIT-AUTHORIZATION-NOT-AUTHORIZED:CAPS" href="polkit-1/PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-NOT-AUTHORIZED:CAPS">
+<ANCHOR id="POLKIT-IMPLICIT-AUTHORIZATION-AUTHENTICATION-REQUIRED:CAPS" href="polkit-1/PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-AUTHENTICATION-REQUIRED:CAPS">
+<ANCHOR id="POLKIT-IMPLICIT-AUTHORIZATION-ADMINISTRATOR-AUTHENTICATION-REQUIRED:CAPS" href="polkit-1/PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-ADMINISTRATOR-AUTHENTICATION-REQUIRED:CAPS">
+<ANCHOR id="POLKIT-IMPLICIT-AUTHORIZATION-AUTHENTICATION-REQUIRED-RETAINED:CAPS" href="polkit-1/PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-AUTHENTICATION-REQUIRED-RETAINED:CAPS">
+<ANCHOR id="POLKIT-IMPLICIT-AUTHORIZATION-ADMINISTRATOR-AUTHENTICATION-REQUIRED-RETAINED:CAPS" href="polkit-1/PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-ADMINISTRATOR-AUTHENTICATION-REQUIRED-RETAINED:CAPS">
+<ANCHOR id="POLKIT-IMPLICIT-AUTHORIZATION-AUTHORIZED:CAPS" href="polkit-1/PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-AUTHORIZED:CAPS">
 <ANCHOR id="PolkitTemporaryAuthorization" href="polkit-1/PolkitTemporaryAuthorization.html">
 <ANCHOR id="PolkitTemporaryAuthorization.functions" href="polkit-1/PolkitTemporaryAuthorization.html#PolkitTemporaryAuthorization.functions">
 <ANCHOR id="PolkitTemporaryAuthorization.other" href="polkit-1/PolkitTemporaryAuthorization.html#PolkitTemporaryAuthorization.other">
@@ -356,6 +372,8 @@
 <ANCHOR id="PolkitAgentListener-struct" href="polkit-1/PolkitAgentListener.html#PolkitAgentListener-struct">
 <ANCHOR id="PolkitAgentListenerClass" href="polkit-1/PolkitAgentListener.html#PolkitAgentListenerClass">
 <ANCHOR id="PolkitAgentRegisterFlags" href="polkit-1/PolkitAgentListener.html#PolkitAgentRegisterFlags">
+<ANCHOR id="POLKIT-AGENT-REGISTER-FLAGS-NONE:CAPS" href="polkit-1/PolkitAgentListener.html#POLKIT-AGENT-REGISTER-FLAGS-NONE:CAPS">
+<ANCHOR id="POLKIT-AGENT-REGISTER-FLAGS-RUN-IN-THREAD:CAPS" href="polkit-1/PolkitAgentListener.html#POLKIT-AGENT-REGISTER-FLAGS-RUN-IN-THREAD:CAPS">
 <ANCHOR id="PolkitAgentTextListener" href="polkit-1/PolkitAgentTextListener.html">
 <ANCHOR id="PolkitAgentTextListener.stability-level" href="polkit-1/PolkitAgentTextListener.html#PolkitAgentTextListener.stability-level">
 <ANCHOR id="PolkitAgentTextListener.functions" href="polkit-1/PolkitAgentTextListener.html#PolkitAgentTextListener.functions">
@@ -442,5 +460,7 @@
 <ANCHOR id="pkttyagent-see-also" href="polkit-1/pkttyagent.1.html#pkttyagent-see-also">
 <ANCHOR id="annotation-glossterm-allow-none" href="polkit-1/annotation-glossary.html#annotation-glossterm-allow-none">
 <ANCHOR id="annotation-glossterm-element-type" href="polkit-1/annotation-glossary.html#annotation-glossterm-element-type">
+<ANCHOR id="annotation-glossterm-Stable" href="polkit-1/annotation-glossary.html#annotation-glossterm-Stable">
 <ANCHOR id="annotation-glossterm-transfer full" href="polkit-1/annotation-glossary.html#annotation-glossterm-transfer full">
 <ANCHOR id="annotation-glossterm-transfer none" href="polkit-1/annotation-glossary.html#annotation-glossterm-transfer none">
+<ANCHOR id="annotation-glossterm-Unstable" href="polkit-1/annotation-glossary.html#annotation-glossterm-Unstable">

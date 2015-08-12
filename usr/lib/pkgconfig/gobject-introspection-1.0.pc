@@ -21,4 +21,4 @@ Libs.private:
 
 Name: gobject-introspection
 Description: GObject Introspection
-Version: 1.42.0
+Version: 1.44.0

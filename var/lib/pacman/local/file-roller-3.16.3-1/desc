@@ -1,0 +1,55 @@
+%NAME%
+file-roller
+
+%VERSION%
+3.16.3-1
+
+%DESC%
+Create and modify archives
+
+%URL%
+http://www.gnome.org
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1435922275
+
+%INSTALLDATE%
+1439237078
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+4919296
+
+%GROUPS%
+gnome-extra
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+desktop-file-utils
+gtk3
+hicolor-icon-theme
+dconf
+libarchive
+file
+json-glib
+libnotify
+zip
+unzip
+
+%OPTDEPENDS%
+p7zip: 7z, arj, exe and encrypted zip files support
+unrar: better RAR archive support
+unace: ACE archive support
+lrzip: lrzip archive support
+cdrkit: ISO image support
+

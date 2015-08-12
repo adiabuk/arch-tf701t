@@ -78,11 +78,11 @@ typedef ssize_t gpgme_ssize_t;
    instead.  The purpose of this macro is to let autoconf (using the
    AM_PATH_GPGME macro) check that this header matches the installed
    library.  */
-#define GPGME_VERSION "1.5.3"
+#define GPGME_VERSION "1.5.4"
 
 /* The version number of this header.  It may be used to handle minor
    API incompatibilities.  */
-#define GPGME_VERSION_NUMBER 0x010503
+#define GPGME_VERSION_NUMBER 0x010504
 
 /* Check for a matching _FILE_OFFSET_BITS definition.  */
 #if 64

@@ -2,22 +2,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>polkit Reference Manual: PolkitPermission</title>
+<title>PolkitPermission: polkit Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="polkit Reference Manual">
 <link rel="up" href="ref-api.html" title="Part III. Library API Reference">
 <link rel="prev" href="PolkitTemporaryAuthorization.html" title="PolkitTemporaryAuthorization">
 <link rel="next" href="subjects.html" title="Subjects">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#PolkitPermission.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
-                  <a href="#PolkitPermission.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces"> <span class="dim">|</span> 
-                  <a href="#PolkitPermission.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#PolkitPermission.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#PolkitPermission.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#PolkitPermission.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#PolkitPermission.properties" class="shortcut">Properties</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -36,7 +36,13 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="PolkitPermission.stability-level"></a><h2>Stability Level</h2>
-Stable, unless otherwise indicated
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
 <a name="PolkitPermission.functions"></a><h2>Functions</h2>
@@ -180,12 +186,12 @@ operation.</p>
 <tr>
 <td class="parameter_name"><p>subject</p></td>
 <td class="parameter_description"><p> A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> or <code class="literal">NULL</code> for the current process. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
 <td class="parameter_description"><p> A <span class="type">GCancellable</span> or <code class="literal">NULL</code>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>callback</p></td>
@@ -226,7 +232,7 @@ polkit_permission_new_finish (<em class="parameter"><code><span class="type">GAs
 <tr>
 <td class="parameter_name"><p>error</p></td>
 <td class="parameter_description"><p> Return location for error or <code class="literal">NULL</code>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -235,7 +241,6 @@ polkit_permission_new_finish (<em class="parameter"><code><span class="type">GAs
 <a name="id-1.4.8.10.3.6"></a><h4>Returns</h4>
 <p> A <span class="type">GPermission</span> or <code class="literal">NULL</code> if <em class="parameter"><code>error</code></em>
 is set.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -268,17 +273,17 @@ polkit_permission_new_sync (<em class="parameter"><code>const <span class="type"
 <tr>
 <td class="parameter_name"><p>subject</p></td>
 <td class="parameter_description"><p> A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> or <code class="literal">NULL</code> for the current process. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
 <td class="parameter_description"><p> A <span class="type">GCancellable</span> or <code class="literal">NULL</code>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
 <td class="parameter_description"><p> Return location for error or <code class="literal">NULL</code>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -287,7 +292,6 @@ polkit_permission_new_sync (<em class="parameter"><code>const <span class="type"
 <a name="id-1.4.8.10.4.7"></a><h4>Returns</h4>
 <p> A <span class="type">GPermission</span> or <code class="literal">NULL</code> if <em class="parameter"><code>error</code></em>
 is set.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -316,7 +320,6 @@ polkit_permission_get_action_id (<em class="parameter"><code><a class="link" hre
 <a name="id-1.4.8.10.5.6"></a><h4>Returns</h4>
 <p> A string owned by <em class="parameter"><code>permission</code></em>
 . Do not free.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -377,7 +380,6 @@ construction, it will be set to match the current process.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

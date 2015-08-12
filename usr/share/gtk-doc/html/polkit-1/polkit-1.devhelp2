@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
 <book xmlns="http://www.devhelp.net/book" title="polkit Reference Manual" link="index.html" author="" name="polkit-1" version="2" language="c">
   <chapters>
     <sub name="polkit Overview" link="overview.html">
@@ -67,6 +66,7 @@
     <keyword type="function" name="RegisterAuthenticationAgentWithOptions ()" link="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.RegisterAuthenticationAgentWithOptions"/>
     <keyword type="function" name="UnregisterAuthenticationAgent ()" link="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.UnregisterAuthenticationAgent"/>
     <keyword type="function" name="AuthenticationAgentResponse ()" link="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.AuthenticationAgentResponse"/>
+    <keyword type="function" name="AuthenticationAgentResponse2 ()" link="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.AuthenticationAgentResponse2"/>
     <keyword type="function" name="EnumerateTemporaryAuthorizations ()" link="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.EnumerateTemporaryAuthorizations"/>
     <keyword type="function" name="RevokeTemporaryAuthorizations ()" link="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.RevokeTemporaryAuthorizations"/>
     <keyword type="function" name="RevokeTemporaryAuthorizationById ()" link="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.RevokeTemporaryAuthorizationById"/>
@@ -247,10 +247,22 @@
     <keyword type="signal" name="The “request” signal" link="PolkitAgentSession.html#PolkitAgentSession-request"/>
     <keyword type="signal" name="The “show-error” signal" link="PolkitAgentSession.html#PolkitAgentSession-show-error"/>
     <keyword type="signal" name="The “show-info” signal" link="PolkitAgentSession.html#PolkitAgentSession-show-info"/>
-    <keyword type="" name="Known annotations" link="polkit.8.html#id-1.6.2.7.12"/>
-    <keyword type="" name="The Polkit type" link="polkit.8.html#polkit-rules-polkit"/>
-    <keyword type="" name="The Action type" link="polkit.8.html#polkit-rules-actions"/>
-    <keyword type="" name="The Subject type" link="polkit.8.html#polkit-rules-subject"/>
-    <keyword type="" name="Authorization Rules Examples" link="polkit.8.html#polkit-rules-examples"/>
+    <keyword type="constant" name="POLKIT_AUTHORITY_FEATURES_NONE" link="PolkitAuthority.html#POLKIT-AUTHORITY-FEATURES-NONE:CAPS"/>
+    <keyword type="constant" name="POLKIT_AUTHORITY_FEATURES_TEMPORARY_AUTHORIZATION" link="PolkitAuthority.html#POLKIT-AUTHORITY-FEATURES-TEMPORARY-AUTHORIZATION:CAPS"/>
+    <keyword type="constant" name="POLKIT_CHECK_AUTHORIZATION_FLAGS_NONE" link="PolkitAuthority.html#POLKIT-CHECK-AUTHORIZATION-FLAGS-NONE:CAPS"/>
+    <keyword type="constant" name="POLKIT_CHECK_AUTHORIZATION_FLAGS_ALLOW_USER_INTERACTION" link="PolkitAuthority.html#POLKIT-CHECK-AUTHORIZATION-FLAGS-ALLOW-USER-INTERACTION:CAPS"/>
+    <keyword type="constant" name="POLKIT_ERROR_FAILED" link="polkit-1-PolkitError.html#POLKIT-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="POLKIT_ERROR_CANCELLED" link="polkit-1-PolkitError.html#POLKIT-ERROR-CANCELLED:CAPS"/>
+    <keyword type="constant" name="POLKIT_ERROR_NOT_SUPPORTED" link="polkit-1-PolkitError.html#POLKIT-ERROR-NOT-SUPPORTED:CAPS"/>
+    <keyword type="constant" name="POLKIT_ERROR_NOT_AUTHORIZED" link="polkit-1-PolkitError.html#POLKIT-ERROR-NOT-AUTHORIZED:CAPS"/>
+    <keyword type="constant" name="POLKIT_IMPLICIT_AUTHORIZATION_UNKNOWN" link="PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="POLKIT_IMPLICIT_AUTHORIZATION_NOT_AUTHORIZED" link="PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-NOT-AUTHORIZED:CAPS"/>
+    <keyword type="constant" name="POLKIT_IMPLICIT_AUTHORIZATION_AUTHENTICATION_REQUIRED" link="PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-AUTHENTICATION-REQUIRED:CAPS"/>
+    <keyword type="constant" name="POLKIT_IMPLICIT_AUTHORIZATION_ADMINISTRATOR_AUTHENTICATION_REQUIRED" link="PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-ADMINISTRATOR-AUTHENTICATION-REQUIRED:CAPS"/>
+    <keyword type="constant" name="POLKIT_IMPLICIT_AUTHORIZATION_AUTHENTICATION_REQUIRED_RETAINED" link="PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-AUTHENTICATION-REQUIRED-RETAINED:CAPS"/>
+    <keyword type="constant" name="POLKIT_IMPLICIT_AUTHORIZATION_ADMINISTRATOR_AUTHENTICATION_REQUIRED_RETAINED" link="PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-ADMINISTRATOR-AUTHENTICATION-REQUIRED-RETAINED:CAPS"/>
+    <keyword type="constant" name="POLKIT_IMPLICIT_AUTHORIZATION_AUTHORIZED" link="PolkitActionDescription.html#POLKIT-IMPLICIT-AUTHORIZATION-AUTHORIZED:CAPS"/>
+    <keyword type="constant" name="POLKIT_AGENT_REGISTER_FLAGS_NONE" link="PolkitAgentListener.html#POLKIT-AGENT-REGISTER-FLAGS-NONE:CAPS"/>
+    <keyword type="constant" name="POLKIT_AGENT_REGISTER_FLAGS_RUN_IN_THREAD" link="PolkitAgentListener.html#POLKIT-AGENT-REGISTER-FLAGS-RUN-IN-THREAD:CAPS"/>
   </functions>
 </book>

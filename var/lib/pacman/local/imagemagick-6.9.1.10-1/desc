@@ -1,0 +1,57 @@
+%NAME%
+imagemagick
+
+%VERSION%
+6.9.1.10-1
+
+%DESC%
+An image viewing/manipulation program
+
+%URL%
+http://www.imagemagick.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1438835632
+
+%INSTALLDATE%
+1439239585
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+9063424
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libltdl
+lcms2
+libxt
+fontconfig
+libxext
+liblqr
+perl>=5.22
+perl<5.23
+
+%OPTDEPENDS%
+imagemagick-doc: for additional information
+ghostscript: for Ghostscript support
+openexr: for OpenEXR support
+openjpeg2: for JP2 support
+libwmf: for WMF support
+librsvg: for SVG support
+libxml2: for XML support
+libpng: for PNG support
+libwebp: for WEBP support
+

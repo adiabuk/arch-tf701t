@@ -129,7 +129,7 @@
 </div>
 <div class="refsect1">
 <a name="SoupLogger.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">╰──</span> SoupLogger
 </pre>
 </div>
@@ -186,7 +186,7 @@ used to identify when multiple messages are sent across the same
 connection.</p>
 <p>Currently, the request half of the message is logged just before
 the first byte of the request gets written to the network (from the
-<a class="link" href="SoupSession.html#SoupSession-request-started" title="The “request-started” signal"><span class="type">“request_started”</span></a> signal), which means that if you have
+<a class="link" href="SoupMessage.html#SoupMessage-starting" title="The “starting” signal"><span class="type">“starting”</span></a> signal), which means that if you have
 not made the complete request body available at that point, it will
 not be logged.</p>
 <p>The response is logged just after the last byte of the response

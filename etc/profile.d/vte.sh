@@ -46,7 +46,7 @@ __vte_ps1() {
 }
 
 __vte_osc7 () {
-  printf "\033]7;file://%s%s\a" "${HOSTNAME:-}" "$(__vte_urlencode "${PWD}")"
+  printf "\033]7;file://%s%s\007" "${HOSTNAME:-}" "$(__vte_urlencode "${PWD}")"
 }
 
 __vte_prompt_command() {
@@ -57,7 +57,7 @@ __vte_prompt_command() {
 
 case "$TERM" in
   xterm*|vte*)
-    [ -n "$BASH_VERSION" ] && PROMPT_COMMAND="__vte_prompt_command" 
+    [ -n "$BASH_VERSION" ] && PROMPT_COMMAND="__vte_prompt_command"
     [ -n "$ZSH_VERSION"  ] && precmd_functions+=(__vte_osc7)
     ;;
 esac

@@ -100,6 +100,35 @@ typedef enum {
 	G_USB_DEVICE_CLAIM_INTERFACE_BIND_KERNEL_DRIVER		= 1 << 0,
 } GUsbDeviceClaimInterfaceFlags;
 
+/**
+ * GUsbDeviceClassCode:
+ *
+ * The USB device class.
+ **/
+typedef enum {
+	G_USB_DEVICE_CLASS_INTERFACE_DESC		= 0x00,
+	G_USB_DEVICE_CLASS_AUDIO			= 0x01,
+	G_USB_DEVICE_CLASS_COMMUNICATIONS		= 0x02,
+	G_USB_DEVICE_CLASS_HID				= 0x03,
+	G_USB_DEVICE_CLASS_PHYSICAL			= 0x05,
+	G_USB_DEVICE_CLASS_IMAGE			= 0x06,
+	G_USB_DEVICE_CLASS_PRINTER			= 0x07,
+	G_USB_DEVICE_CLASS_MASS_STORAGE			= 0x08,
+	G_USB_DEVICE_CLASS_HUB				= 0x09,
+	G_USB_DEVICE_CLASS_CDC_DATA			= 0x0a,
+	G_USB_DEVICE_CLASS_SMART_CARD			= 0x0b,
+	G_USB_DEVICE_CLASS_CONTENT_SECURITY		= 0x0d,
+	G_USB_DEVICE_CLASS_VIDEO			= 0x0e,
+	G_USB_DEVICE_CLASS_PERSONAL_HEALTHCARE		= 0x0f,
+	G_USB_DEVICE_CLASS_AUDIO_VIDEO			= 0x10,
+	G_USB_DEVICE_CLASS_BILLBOARD			= 0x11,
+	G_USB_DEVICE_CLASS_DIAGNOSTIC			= 0xdc,
+	G_USB_DEVICE_CLASS_WIRELESS_CONTROLLER		= 0xe0,
+	G_USB_DEVICE_CLASS_MISCELLANEOUS		= 0xef,
+	G_USB_DEVICE_CLASS_APPLICATION_SPECIFIC		= 0xfe,
+	G_USB_DEVICE_CLASS_VENDOR_SPECIFIC		= 0xff
+} GUsbDeviceClassCode;
+
 struct _GUsbDevice
 {
 	 GObject			 parent;
@@ -139,6 +168,11 @@ guint8                   g_usb_device_get_device_protocol       (GUsbDevice *dev
 guint8			 g_usb_device_get_manufacturer_index	(GUsbDevice *device);
 guint8			 g_usb_device_get_product_index		(GUsbDevice *device);
 guint8			 g_usb_device_get_serial_number_index	(GUsbDevice *device);
+guint8			 g_usb_device_get_custom_index	(GUsbDevice	*device,
+							 guint8		 class_id,
+							 guint8		 subclass_id,
+							 guint8		 protocol_id,
+							 GError		**error);
 
 gboolean		 g_usb_device_open		(GUsbDevice	*device,
 							 GError		**error);

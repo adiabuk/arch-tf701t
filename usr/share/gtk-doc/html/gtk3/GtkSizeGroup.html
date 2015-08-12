@@ -8,7 +8,7 @@
 <link rel="up" href="MiscObjects.html" title="Miscellaneous">
 <link rel="prev" href="GtkIMMulticontext.html" title="GtkIMMulticontext">
 <link rel="next" href="GtkTooltip.html" title="GtkTooltip">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -210,7 +210,7 @@ width for height widgets.</p>
 by way of <a class="link" href="GtkLabel.html#GtkLabel--width-chars" title="The “width-chars” property"><span class="type">“width-chars”</span></a> for instance. Widgets with static sizes as well
 as widgets that grow (such as ellipsizing text) need no such considerations.</p>
 <div class="refsect2">
-<a name="id-1.3.18.9.9.9"></a><h3>GtkSizeGroup as GtkBuildable</h3>
+<a name="id-1.3.18.10.9.9"></a><h3>GtkSizeGroup as GtkBuildable</h3>
 <p>Size groups can be specified in a UI definition by placing an &lt;object&gt;
 element with <code class="literal">class="GtkSizeGroup"</code> somewhere in the UI definition. The
 widgets that belong to the size group are specified by a &lt;widgets&gt; element
@@ -251,7 +251,7 @@ size group. The ”name” attribute gives the id of the widget.</p>
 gtk_size_group_new (<em class="parameter"><code><a class="link" href="GtkSizeGroup.html#GtkSizeGroupMode" title="enum GtkSizeGroupMode"><span class="type">GtkSizeGroupMode</span></a> mode</code></em>);</pre>
 <p>Create a new <a class="link" href="GtkSizeGroup.html" title="GtkSizeGroup"><span class="type">GtkSizeGroup</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.2.5"></a><h4>Parameters</h4>
+<a name="id-1.3.18.10.10.2.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -266,9 +266,8 @@ gtk_size_group_new (<em class="parameter"><code><a class="link" href="GtkSizeGro
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.2.6"></a><h4>Returns</h4>
+<a name="id-1.3.18.10.10.2.6"></a><h4>Returns</h4>
 <p> a newly created <a class="link" href="GtkSizeGroup.html" title="GtkSizeGroup"><span class="type">GtkSizeGroup</span></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -284,7 +283,7 @@ all have the same vertical requisition (<a class="link" href="GtkSizeGroup.html#
 or should all have the same requisition in both directions
 (<a class="link" href="GtkSizeGroup.html#GTK-SIZE-GROUP-BOTH:CAPS"><code class="literal">GTK_SIZE_GROUP_BOTH</code></a>).</p>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.3.5"></a><h4>Parameters</h4>
+<a name="id-1.3.18.10.10.3.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -313,7 +312,7 @@ or should all have the same requisition in both directions
 gtk_size_group_get_mode (<em class="parameter"><code><a class="link" href="GtkSizeGroup.html" title="GtkSizeGroup"><span class="type">GtkSizeGroup</span></a> *size_group</code></em>);</pre>
 <p>Gets the current mode of the size group. See <a class="link" href="GtkSizeGroup.html#gtk-size-group-set-mode" title="gtk_size_group_set_mode ()"><code class="function">gtk_size_group_set_mode()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.4.5"></a><h4>Parameters</h4>
+<a name="id-1.3.18.10.10.4.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -328,9 +327,8 @@ gtk_size_group_get_mode (<em class="parameter"><code><a class="link" href="GtkSi
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.4.6"></a><h4>Returns</h4>
+<a name="id-1.3.18.10.10.4.6"></a><h4>Returns</h4>
 <p> the current mode of the size group.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -342,7 +340,7 @@ gtk_size_group_set_ignore_hidden (<em class="parameter"><code><a class="link" hr
 <p>Sets whether unmapped widgets should be ignored when
 calculating the size.</p>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.5.5"></a><h4>Parameters</h4>
+<a name="id-1.3.18.10.10.5.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -364,7 +362,7 @@ when calculating the size</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -373,7 +371,7 @@ when calculating the size</p></td>
 gtk_size_group_get_ignore_hidden (<em class="parameter"><code><a class="link" href="GtkSizeGroup.html" title="GtkSizeGroup"><span class="type">GtkSizeGroup</span></a> *size_group</code></em>);</pre>
 <p>Returns if invisible widgets are ignored when calculating the size.</p>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.6.5"></a><h4>Parameters</h4>
+<a name="id-1.3.18.10.10.6.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -388,11 +386,10 @@ gtk_size_group_get_ignore_hidden (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.6.6"></a><h4>Returns</h4>
+<a name="id-1.3.18.10.10.6.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if invisible widgets are ignored.</p>
-<p></p>
 </div>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -408,7 +405,7 @@ depends on the mode of the size group. See <a class="link" href="GtkSizeGroup.ht
 <p>When the widget is destroyed or no longer referenced elsewhere, it will 
 be removed from the size group.</p>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.7.6"></a><h4>Parameters</h4>
+<a name="id-1.3.18.10.10.7.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -438,7 +435,7 @@ gtk_size_group_remove_widget (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
 <p>Removes a widget from a <a class="link" href="GtkSizeGroup.html" title="GtkSizeGroup"><span class="type">GtkSizeGroup</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.8.5"></a><h4>Parameters</h4>
+<a name="id-1.3.18.10.10.8.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -468,7 +465,7 @@ gtk_size_group_get_widgets (<em class="parameter"><code><a class="link" href="Gt
 <p>Returns the list of widgets associated with <em class="parameter"><code>size_group</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.9.5"></a><h4>Parameters</h4>
+<a name="id-1.3.18.10.10.9.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -483,12 +480,12 @@ gtk_size_group_get_widgets (<em class="parameter"><code><a class="link" href="Gt
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.18.9.10.9.6"></a><h4>Returns</h4>
+<a name="id-1.3.18.10.10.9.6"></a><h4>Returns</h4>
 <p> a <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> of
 widgets. The list is owned by GTK+ and should not be modified. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkWidget][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 </div>
 <div class="refsect1">
@@ -503,7 +500,7 @@ widgets. The list is owned by GTK+ and should not be modified. </p>
 <p>The mode of the size group determines the directions in which the size
 group affects the requested sizes of its component widgets.</p>
 <div class="refsect3">
-<a name="id-1.3.18.9.11.3.4"></a><h4>Members</h4>
+<a name="id-1.3.18.10.11.3.4"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -554,7 +551,7 @@ group affects the requested sizes of its component widgets.</p>
 the size of the group.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -567,7 +564,6 @@ the size of the group.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

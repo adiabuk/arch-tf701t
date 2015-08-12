@@ -1,0 +1,50 @@
+%NAME%
+asciidoc
+
+%VERSION%
+8.6.9-2
+
+%DESC%
+Text document format for short documents, articles, books and UNIX man pages.
+
+%URL%
+http://www.methods.co.nz/asciidoc/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1410714878
+
+%INSTALLDATE%
+1439240313
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+889856
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+python2
+libxslt
+docbook-xsl
+
+%OPTDEPENDS%
+lilypond: music-filter
+imagemagick: music-filter (used in conjunction with lilypond)
+source-highlight: source-highlight-filter
+dblatex: pdf generation
+fop: alternative pdf generation
+lynx: text generation
+w3m: text generation (alternative to lynx)
+

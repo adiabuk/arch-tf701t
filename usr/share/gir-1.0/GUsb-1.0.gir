@@ -170,6 +170,22 @@ are silently ignored.</doc>
           </instance-parameter>
         </parameters>
       </method>
+      <method name="get_main_context"
+              c:identifier="g_usb_context_get_main_context"
+              version="0.2.5">
+        <doc xml:space="preserve">Gets the internal GMainContext to use for syncronous methods.
+By default the value is set to the value of g_main_context_default()</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">the #GMainContext</doc>
+          <type name="GLib.MainContext" c:type="GMainContext*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="context" transfer-ownership="none">
+            <doc xml:space="preserve">a #GUsbContext</doc>
+            <type name="Context" c:type="GUsbContext*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
       <method name="get_source"
               c:identifier="g_usb_context_get_source"
               version="0.1.0">
@@ -207,6 +223,23 @@ else logs to standard error.</doc>
           <parameter name="flags" transfer-ownership="none">
             <doc xml:space="preserve">a GLogLevelFlags such as %G_LOG_LEVEL_ERROR | %G_LOG_LEVEL_INFO, or 0</doc>
             <type name="GLib.LogLevelFlags" c:type="GLogLevelFlags"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="set_main_context"
+              c:identifier="g_usb_context_set_main_context"
+              version="0.2.5">
+        <doc xml:space="preserve">Sets the internal GMainContext to use for syncronous methods.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="context" transfer-ownership="none">
+            <doc xml:space="preserve">a #GUsbContext</doc>
+            <type name="Context" c:type="GUsbContext*"/>
+          </instance-parameter>
+          <parameter name="main_ctx" transfer-ownership="none">
+            <type name="GLib.MainContext" c:type="GMainContext*"/>
           </parameter>
         </parameters>
       </method>
@@ -700,10 +733,38 @@ Warning: this function is synchronous.</doc>
           </instance-parameter>
         </parameters>
       </method>
+      <method name="get_custom_index"
+              c:identifier="g_usb_device_get_custom_index"
+              version="0.2.5"
+              throws="1">
+        <doc xml:space="preserve">Gets the string index from the vendor class interface descriptor.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">a non-zero index, or 0x00 for failure</doc>
+          <type name="guint8" c:type="guint8"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="device" transfer-ownership="none">
+            <doc xml:space="preserve">a #GUsbDevice</doc>
+            <type name="Device" c:type="GUsbDevice*"/>
+          </instance-parameter>
+          <parameter name="class_id" transfer-ownership="none">
+            <doc xml:space="preserve">a device class, e.g. 0xff for VENDOR</doc>
+            <type name="guint8" c:type="guint8"/>
+          </parameter>
+          <parameter name="subclass_id" transfer-ownership="none">
+            <doc xml:space="preserve">a device subclass</doc>
+            <type name="guint8" c:type="guint8"/>
+          </parameter>
+          <parameter name="protocol_id" transfer-ownership="none">
+            <doc xml:space="preserve">a protocol number</doc>
+            <type name="guint8" c:type="guint8"/>
+          </parameter>
+        </parameters>
+      </method>
       <method name="get_device_class"
               c:identifier="g_usb_device_get_device_class"
               version="0.1.7">
-        <doc xml:space="preserve">Gets the device class.</doc>
+        <doc xml:space="preserve">Gets the device class, typically a #GUsbDeviceClassCode.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">a device class number, e.g. 0x09 is a USB hub.</doc>
           <type name="guint8" c:type="guint8"/>
@@ -1178,6 +1239,83 @@ g_usb_device_release_interface methods flags parameters.</doc>
         </array>
       </field>
     </record>
+    <enumeration name="DeviceClassCode" c:type="GUsbDeviceClassCode">
+      <doc xml:space="preserve">The USB device class.</doc>
+      <member name="interface_desc"
+              value="0"
+              c:identifier="G_USB_DEVICE_CLASS_INTERFACE_DESC">
+      </member>
+      <member name="audio" value="1" c:identifier="G_USB_DEVICE_CLASS_AUDIO">
+      </member>
+      <member name="communications"
+              value="2"
+              c:identifier="G_USB_DEVICE_CLASS_COMMUNICATIONS">
+      </member>
+      <member name="hid" value="3" c:identifier="G_USB_DEVICE_CLASS_HID">
+      </member>
+      <member name="physical"
+              value="5"
+              c:identifier="G_USB_DEVICE_CLASS_PHYSICAL">
+      </member>
+      <member name="image" value="6" c:identifier="G_USB_DEVICE_CLASS_IMAGE">
+      </member>
+      <member name="printer"
+              value="7"
+              c:identifier="G_USB_DEVICE_CLASS_PRINTER">
+      </member>
+      <member name="mass_storage"
+              value="8"
+              c:identifier="G_USB_DEVICE_CLASS_MASS_STORAGE">
+      </member>
+      <member name="hub" value="9" c:identifier="G_USB_DEVICE_CLASS_HUB">
+      </member>
+      <member name="cdc_data"
+              value="10"
+              c:identifier="G_USB_DEVICE_CLASS_CDC_DATA">
+      </member>
+      <member name="smart_card"
+              value="11"
+              c:identifier="G_USB_DEVICE_CLASS_SMART_CARD">
+      </member>
+      <member name="content_security"
+              value="13"
+              c:identifier="G_USB_DEVICE_CLASS_CONTENT_SECURITY">
+      </member>
+      <member name="video" value="14" c:identifier="G_USB_DEVICE_CLASS_VIDEO">
+      </member>
+      <member name="personal_healthcare"
+              value="15"
+              c:identifier="G_USB_DEVICE_CLASS_PERSONAL_HEALTHCARE">
+      </member>
+      <member name="audio_video"
+              value="16"
+              c:identifier="G_USB_DEVICE_CLASS_AUDIO_VIDEO">
+      </member>
+      <member name="billboard"
+              value="17"
+              c:identifier="G_USB_DEVICE_CLASS_BILLBOARD">
+      </member>
+      <member name="diagnostic"
+              value="220"
+              c:identifier="G_USB_DEVICE_CLASS_DIAGNOSTIC">
+      </member>
+      <member name="wireless_controller"
+              value="224"
+              c:identifier="G_USB_DEVICE_CLASS_WIRELESS_CONTROLLER">
+      </member>
+      <member name="miscellaneous"
+              value="239"
+              c:identifier="G_USB_DEVICE_CLASS_MISCELLANEOUS">
+      </member>
+      <member name="application_specific"
+              value="254"
+              c:identifier="G_USB_DEVICE_CLASS_APPLICATION_SPECIFIC">
+      </member>
+      <member name="vendor_specific"
+              value="255"
+              c:identifier="G_USB_DEVICE_CLASS_VENDOR_SPECIFIC">
+      </member>
+    </enumeration>
     <enumeration name="DeviceDirection" c:type="GUsbDeviceDirection">
       <doc xml:space="preserve">The message direction.</doc>
       <member name="device_to_host"
@@ -1484,7 +1622,7 @@ list of devices after creating a device list.</doc>
       <doc xml:space="preserve">The compile-time major version</doc>
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="MICRO_VERSION" value="4" c:type="G_USB_MICRO_VERSION">
+    <constant name="MICRO_VERSION" value="6" c:type="G_USB_MICRO_VERSION">
       <doc xml:space="preserve">The compile-time micro version</doc>
       <type name="gint" c:type="gint"/>
     </constant>

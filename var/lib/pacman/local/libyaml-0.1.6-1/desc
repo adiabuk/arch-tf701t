@@ -1,0 +1,36 @@
+%NAME%
+libyaml
+
+%VERSION%
+0.1.6-1
+
+%DESC%
+YAML 1.1 library
+
+%URL%
+http://pyyaml.org/wiki/LibYAML
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1396125694
+
+%INSTALLDATE%
+1439288964
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+odroid1@archlinuxarm.org>
+
+%SIZE%
+190464
+
+%REASON%
+1
+
+%LICENSE%
+MIT
+
+%VALIDATION%
+sha256
+

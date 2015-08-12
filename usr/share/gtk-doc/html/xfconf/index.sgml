@@ -15,6 +15,16 @@
 <ANCHOR id="XFCONF-ERROR:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR:CAPS">
 <ANCHOR id="xfconf-xfconf-errors.other_details" href="xfconf/xfconf-xfconf-errors.html#xfconf-xfconf-errors.other_details">
 <ANCHOR id="XfconfError" href="xfconf/xfconf-xfconf-errors.html#XfconfError">
+<ANCHOR id="XFCONF-ERROR-UNKNOWN:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-UNKNOWN:CAPS">
+<ANCHOR id="XFCONF-ERROR-CHANNEL-NOT-FOUND:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-CHANNEL-NOT-FOUND:CAPS">
+<ANCHOR id="XFCONF-ERROR-PROPERTY-NOT-FOUND:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-PROPERTY-NOT-FOUND:CAPS">
+<ANCHOR id="XFCONF-ERROR-READ-FAILURE:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-READ-FAILURE:CAPS">
+<ANCHOR id="XFCONF-ERROR-WRITE-FAILURE:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-WRITE-FAILURE:CAPS">
+<ANCHOR id="XFCONF-ERROR-PERMISSION-DENIED:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-PERMISSION-DENIED:CAPS">
+<ANCHOR id="XFCONF-ERROR-INTERNAL-ERROR:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-INTERNAL-ERROR:CAPS">
+<ANCHOR id="XFCONF-ERROR-NO-BACKEND:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-NO-BACKEND:CAPS">
+<ANCHOR id="XFCONF-ERROR-INVALID-PROPERTY:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-INVALID-PROPERTY:CAPS">
+<ANCHOR id="XFCONF-ERROR-INVALID-CHANNEL:CAPS" href="xfconf/xfconf-xfconf-errors.html#XFCONF-ERROR-INVALID-CHANNEL:CAPS">
 <ANCHOR id="xfconf-xfconf-backend" href="xfconf/xfconf-xfconf-backend.html">
 <ANCHOR id="xfconf-xfconf-backend.functions" href="xfconf/xfconf-xfconf-backend.html#xfconf-xfconf-backend.functions">
 <ANCHOR id="XfconfBackend" href="xfconf/xfconf-xfconf-backend.html#XfconfBackend">

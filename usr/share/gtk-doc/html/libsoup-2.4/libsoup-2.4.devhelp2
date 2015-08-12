@@ -52,6 +52,7 @@
       <sub name="HTML Form Support" link="libsoup-2.4-HTML-Form-Support.html"/>
       <sub name="XMLRPC Support" link="libsoup-2.4-XMLRPC-Support.html"/>
       <sub name="GValue Support" link="libsoup-2.4-GValue-Support.html"/>
+      <sub name="WebSockets" link="libsoup-2.4-WebSockets.html"/>
     </sub>
     <sub name="Low-level Networking API" link="ch05.html">
       <sub name="SoupAddress" link="SoupAddress.html"/>
@@ -276,6 +277,7 @@
     <keyword type="signal" name="The “got-informational” signal" link="SoupMessage.html#SoupMessage-got-informational"/>
     <keyword type="signal" name="The “network-event” signal" link="SoupMessage.html#SoupMessage-network-event"/>
     <keyword type="signal" name="The “restarted” signal" link="SoupMessage.html#SoupMessage-restarted"/>
+    <keyword type="signal" name="The “starting” signal" link="SoupMessage.html#SoupMessage-starting"/>
     <keyword type="signal" name="The “wrote-body” signal" link="SoupMessage.html#SoupMessage-wrote-body"/>
     <keyword type="signal" name="The “wrote-body-data” signal" link="SoupMessage.html#SoupMessage-wrote-body-data"/>
     <keyword type="signal" name="The “wrote-chunk” signal" link="SoupMessage.html#SoupMessage-wrote-chunk"/>
@@ -291,6 +293,9 @@
     <keyword type="function" name="soup_message_headers_get_one ()" link="SoupMessageHeaders.html#soup-message-headers-get-one" since="2.28"/>
     <keyword type="function" name="soup_message_headers_get_list ()" link="SoupMessageHeaders.html#soup-message-headers-get-list" since="2.28"/>
     <keyword type="function" name="soup_message_headers_get ()" link="SoupMessageHeaders.html#soup-message-headers-get" deprecated=""/>
+    <keyword type="function" name="soup_message_headers_get_headers_type ()" link="SoupMessageHeaders.html#soup-message-headers-get-headers-type" since="2.50"/>
+    <keyword type="function" name="soup_message_headers_header_contains ()" link="SoupMessageHeaders.html#soup-message-headers-header-contains" since="2.50"/>
+    <keyword type="function" name="soup_message_headers_header_equals ()" link="SoupMessageHeaders.html#soup-message-headers-header-equals" since="2.50"/>
     <keyword type="function" name="SoupMessageHeadersForeachFunc ()" link="SoupMessageHeaders.html#SoupMessageHeadersForeachFunc"/>
     <keyword type="function" name="soup_message_headers_foreach ()" link="SoupMessageHeaders.html#soup-message-headers-foreach"/>
     <keyword type="function" name="soup_message_headers_iter_init ()" link="SoupMessageHeaders.html#soup-message-headers-iter-init"/>
@@ -436,18 +441,24 @@
     <keyword type="function" name="soup_server_listen_local ()" link="SoupServer.html#soup-server-listen-local" since="2.48"/>
     <keyword type="function" name="soup_server_listen_socket ()" link="SoupServer.html#soup-server-listen-socket" since="2.48"/>
     <keyword type="function" name="soup_server_listen_fd ()" link="SoupServer.html#soup-server-listen-fd" since="2.48"/>
+    <keyword type="function" name="soup_server_get_listeners ()" link="SoupServer.html#soup-server-get-listeners"/>
     <keyword type="function" name="soup_server_get_uris ()" link="SoupServer.html#soup-server-get-uris" since="2.48"/>
     <keyword type="function" name="soup_server_disconnect ()" link="SoupServer.html#soup-server-disconnect"/>
     <keyword type="function" name="soup_server_is_https ()" link="SoupServer.html#soup-server-is-https"/>
+    <keyword type="function" name="soup_server_accept_iostream ()" link="SoupServer.html#soup-server-accept-iostream" since="2.50"/>
     <keyword type="function" name="SoupServerCallback ()" link="SoupServer.html#SoupServerCallback"/>
     <keyword type="function" name="soup_server_add_handler ()" link="SoupServer.html#soup-server-add-handler"/>
+    <keyword type="function" name="soup_server_add_early_handler ()" link="SoupServer.html#soup-server-add-early-handler" since="2.50"/>
     <keyword type="function" name="soup_server_remove_handler ()" link="SoupServer.html#soup-server-remove-handler"/>
+    <keyword type="function" name="SoupServerWebsocketCallback ()" link="SoupServer.html#SoupServerWebsocketCallback"/>
+    <keyword type="function" name="soup_server_add_websocket_handler ()" link="SoupServer.html#soup-server-add-websocket-handler"/>
     <keyword type="function" name="soup_client_context_get_local_address ()" link="SoupServer.html#soup-client-context-get-local-address" since="2.48"/>
     <keyword type="function" name="soup_client_context_get_remote_address ()" link="SoupServer.html#soup-client-context-get-remote-address" since="2.48"/>
     <keyword type="function" name="soup_client_context_get_host ()" link="SoupServer.html#soup-client-context-get-host"/>
     <keyword type="function" name="soup_client_context_get_auth_domain ()" link="SoupServer.html#soup-client-context-get-auth-domain"/>
     <keyword type="function" name="soup_client_context_get_auth_user ()" link="SoupServer.html#soup-client-context-get-auth-user"/>
     <keyword type="function" name="soup_client_context_get_gsocket ()" link="SoupServer.html#soup-client-context-get-gsocket" since="2.48"/>
+    <keyword type="function" name="soup_client_context_steal_connection ()" link="SoupServer.html#soup-client-context-steal-connection" since="2.50"/>
     <keyword type="function" name="soup_server_add_auth_domain ()" link="SoupServer.html#soup-server-add-auth-domain"/>
     <keyword type="function" name="soup_server_remove_auth_domain ()" link="SoupServer.html#soup-server-remove-auth-domain"/>
     <keyword type="function" name="soup_server_pause_message ()" link="SoupServer.html#soup-server-pause-message"/>
@@ -458,7 +469,7 @@
     <keyword type="macro" name="SOUP_SERVER_TLS_CERTIFICATE" link="SoupServer.html#SOUP-SERVER-TLS-CERTIFICATE:CAPS" since="2.38"/>
     <keyword type="macro" name="SOUP_SERVER_RAW_PATHS" link="SoupServer.html#SOUP-SERVER-RAW-PATHS:CAPS"/>
     <keyword type="macro" name="SOUP_SERVER_SERVER_HEADER" link="SoupServer.html#SOUP-SERVER-SERVER-HEADER:CAPS"/>
-    <keyword type="macro" name="SOUP_SERVER_HTTP_ALIASES" link="SoupServer.html#SOUP-SERVER-HTTP-ALIASES:CAPS"/>
+    <keyword type="macro" name="SOUP_SERVER_HTTP_ALIASES" link="SoupServer.html#SOUP-SERVER-HTTP-ALIASES:CAPS" since="2.44"/>
     <keyword type="macro" name="SOUP_SERVER_HTTPS_ALIASES" link="SoupServer.html#SOUP-SERVER-HTTPS-ALIASES:CAPS" since="2.44"/>
     <keyword type="property" name="The “async-context” property" link="SoupServer.html#SoupServer--async-context"/>
     <keyword type="property" name="The “http-aliases” property" link="SoupServer.html#SoupServer--http-aliases"/>
@@ -501,6 +512,8 @@
     <keyword type="function" name="soup_session_send ()" link="SoupSession.html#soup-session-send" since="2.42"/>
     <keyword type="function" name="soup_session_send_async ()" link="SoupSession.html#soup-session-send-async" since="2.42"/>
     <keyword type="function" name="soup_session_send_finish ()" link="SoupSession.html#soup-session-send-finish" since="2.42"/>
+    <keyword type="function" name="soup_session_websocket_connect_async ()" link="SoupSession.html#soup-session-websocket-connect-async" since="2.50"/>
+    <keyword type="function" name="soup_session_websocket_connect_finish ()" link="SoupSession.html#soup-session-websocket-connect-finish" since="2.50"/>
     <keyword type="function" name="soup_session_prefetch_dns ()" link="SoupSession.html#soup-session-prefetch-dns" since="2.38"/>
     <keyword type="function" name="soup_session_prepare_for_uri ()" link="SoupSession.html#soup-session-prepare-for-uri" deprecated="2.38: use soup_session_prefetch_dns() instead" since="2.30"/>
     <keyword type="function" name="soup_session_abort ()" link="SoupSession.html#soup-session-abort"/>
@@ -517,6 +530,7 @@
     <keyword type="function" name="soup_session_get_feature ()" link="SoupSession.html#soup-session-get-feature" since="2.26"/>
     <keyword type="function" name="soup_session_get_feature_for_message ()" link="SoupSession.html#soup-session-get-feature-for-message" since="2.28"/>
     <keyword type="function" name="soup_session_has_feature ()" link="SoupSession.html#soup-session-has-feature" since="2.42"/>
+    <keyword type="function" name="soup_session_steal_connection ()" link="SoupSession.html#soup-session-steal-connection" since="2.50"/>
     <keyword type="struct" name="SoupSession" link="SoupSession.html#SoupSession-struct"/>
     <keyword type="enum" name="enum SoupRequestError" link="SoupSession.html#SoupRequestError" since="2.42"/>
     <keyword type="macro" name="SOUP_REQUEST_ERROR" link="SoupSession.html#SOUP-REQUEST-ERROR:CAPS" since="2.42"/>
@@ -528,6 +542,7 @@
     <keyword type="macro" name="SOUP_SESSION_SSL_USE_SYSTEM_CA_FILE" link="SoupSession.html#SOUP-SESSION-SSL-USE-SYSTEM-CA-FILE:CAPS" since="2.38"/>
     <keyword type="macro" name="SOUP_SESSION_SSL_CA_FILE" link="SoupSession.html#SOUP-SESSION-SSL-CA-FILE:CAPS"/>
     <keyword type="macro" name="SOUP_SESSION_SSL_STRICT" link="SoupSession.html#SOUP-SESSION-SSL-STRICT:CAPS" since="2.30"/>
+    <keyword type="macro" name="SOUP_SESSION_TLS_INTERACTION" link="SoupSession.html#SOUP-SESSION-TLS-INTERACTION:CAPS" since="2.48"/>
     <keyword type="macro" name="SOUP_SESSION_ASYNC_CONTEXT" link="SoupSession.html#SOUP-SESSION-ASYNC-CONTEXT:CAPS"/>
     <keyword type="macro" name="SOUP_SESSION_USE_THREAD_CONTEXT" link="SoupSession.html#SOUP-SESSION-USE-THREAD-CONTEXT:CAPS" since="2.38"/>
     <keyword type="macro" name="SOUP_SESSION_TIMEOUT" link="SoupSession.html#SOUP-SESSION-TIMEOUT:CAPS"/>
@@ -630,6 +645,8 @@
     <keyword type="macro" name="SOUP_URI_SCHEME_FILE" link="SoupURI.html#SOUP-URI-SCHEME-FILE:CAPS" since="2.30"/>
     <keyword type="macro" name="SOUP_URI_SCHEME_FTP" link="SoupURI.html#SOUP-URI-SCHEME-FTP:CAPS" since="2.30"/>
     <keyword type="macro" name="SOUP_URI_SCHEME_RESOURCE" link="SoupURI.html#SOUP-URI-SCHEME-RESOURCE:CAPS" since="2.42"/>
+    <keyword type="macro" name="SOUP_URI_SCHEME_WS" link="SoupURI.html#SOUP-URI-SCHEME-WS:CAPS" since="2.50"/>
+    <keyword type="macro" name="SOUP_URI_SCHEME_WSS" link="SoupURI.html#SOUP-URI-SCHEME-WSS:CAPS" since="2.50"/>
     <keyword type="function" name="soup_get_major_version ()" link="libsoup-2.4-Version-Information.html#soup-get-major-version" since="2.42"/>
     <keyword type="function" name="soup_get_minor_version ()" link="libsoup-2.4-Version-Information.html#soup-get-minor-version" since="2.42"/>
     <keyword type="function" name="soup_get_micro_version ()" link="libsoup-2.4-Version-Information.html#soup-get-micro-version" since="2.42"/>
@@ -652,6 +669,8 @@
     <keyword type="macro" name="SOUP_VERSION_2_42" link="libsoup-2.4-Version-Information.html#SOUP-VERSION-2-42:CAPS" since="2.42"/>
     <keyword type="macro" name="SOUP_VERSION_2_44" link="libsoup-2.4-Version-Information.html#SOUP-VERSION-2-44:CAPS" since="2.44"/>
     <keyword type="macro" name="SOUP_VERSION_2_46" link="libsoup-2.4-Version-Information.html#SOUP-VERSION-2-46:CAPS" since="2.46"/>
+    <keyword type="macro" name="SOUP_VERSION_2_48" link="libsoup-2.4-Version-Information.html#SOUP-VERSION-2-48:CAPS" since="2.48"/>
+    <keyword type="macro" name="SOUP_VERSION_2_50" link="libsoup-2.4-Version-Information.html#SOUP-VERSION-2-50:CAPS" since="2.50"/>
     <keyword type="struct" name="SoupSessionFeature" link="SoupSessionFeature.html#SoupSessionFeature-struct"/>
     <keyword type="struct" name="SoupSessionFeatureInterface" link="SoupSessionFeature.html#SoupSessionFeatureInterface" since="2.24"/>
     <keyword type="macro" name="SOUP_TYPE_AUTH_MANAGER" link="SoupAuthManager.html#SOUP-TYPE-AUTH-MANAGER:CAPS" since="2.42"/>
@@ -744,6 +763,39 @@
     <keyword type="macro" name="SOUP_VALUE_SETV()" link="libsoup-2.4-GValue-Support.html#SOUP-VALUE-SETV:CAPS"/>
     <keyword type="macro" name="SOUP_VALUE_GETV()" link="libsoup-2.4-GValue-Support.html#SOUP-VALUE-GETV:CAPS"/>
     <keyword type="macro" name="SOUP_TYPE_BYTE_ARRAY" link="libsoup-2.4-GValue-Support.html#SOUP-TYPE-BYTE-ARRAY:CAPS"/>
+    <keyword type="function" name="soup_websocket_client_prepare_handshake ()" link="libsoup-2.4-WebSockets.html#soup-websocket-client-prepare-handshake" since="2.50"/>
+    <keyword type="function" name="soup_websocket_client_verify_handshake ()" link="libsoup-2.4-WebSockets.html#soup-websocket-client-verify-handshake" since="2.50"/>
+    <keyword type="function" name="soup_websocket_server_check_handshake ()" link="libsoup-2.4-WebSockets.html#soup-websocket-server-check-handshake" since="2.50"/>
+    <keyword type="function" name="soup_websocket_server_process_handshake ()" link="libsoup-2.4-WebSockets.html#soup-websocket-server-process-handshake" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_new ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-new" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_get_io_stream ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-io-stream" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_get_connection_type ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-connection-type" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_get_uri ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-uri" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_get_origin ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-origin" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_get_protocol ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-protocol" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_get_state ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-state" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_send_text ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-send-text" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_send_binary ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-send-binary" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_close ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-close" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_get_close_code ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-close-code" since="2.50"/>
+    <keyword type="function" name="soup_websocket_connection_get_close_data ()" link="libsoup-2.4-WebSockets.html#soup-websocket-connection-get-close-data" since="2.50"/>
+    <keyword type="macro" name="SOUP_WEBSOCKET_ERROR" link="libsoup-2.4-WebSockets.html#SOUP-WEBSOCKET-ERROR:CAPS" since="2.50"/>
+    <keyword type="struct" name="SoupWebsocketConnection" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-struct"/>
+    <keyword type="enum" name="enum SoupWebsocketConnectionType" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnectionType" since="2.50"/>
+    <keyword type="enum" name="enum SoupWebsocketState" link="libsoup-2.4-WebSockets.html#SoupWebsocketState" since="2.50"/>
+    <keyword type="enum" name="enum SoupWebsocketDataType" link="libsoup-2.4-WebSockets.html#SoupWebsocketDataType" since="2.50"/>
+    <keyword type="enum" name="enum SoupWebsocketCloseCode" link="libsoup-2.4-WebSockets.html#SoupWebsocketCloseCode" since="2.50"/>
+    <keyword type="enum" name="enum SoupWebsocketError" link="libsoup-2.4-WebSockets.html#SoupWebsocketError" since="2.50"/>
+    <keyword type="property" name="The “connection-type” property" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--connection-type"/>
+    <keyword type="property" name="The “io-stream” property" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--io-stream"/>
+    <keyword type="property" name="The “origin” property" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--origin"/>
+    <keyword type="property" name="The “protocol” property" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--protocol"/>
+    <keyword type="property" name="The “state” property" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--state"/>
+    <keyword type="property" name="The “uri” property" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection--uri"/>
+    <keyword type="signal" name="The “closed” signal" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-closed"/>
+    <keyword type="signal" name="The “closing” signal" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-closing"/>
+    <keyword type="signal" name="The “error” signal" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-error"/>
+    <keyword type="signal" name="The “message” signal" link="libsoup-2.4-WebSockets.html#SoupWebsocketConnection-message"/>
     <keyword type="function" name="soup_address_new ()" link="SoupAddress.html#soup-address-new"/>
     <keyword type="function" name="soup_address_new_from_sockaddr ()" link="SoupAddress.html#soup-address-new-from-sockaddr"/>
     <keyword type="function" name="soup_address_new_any ()" link="SoupAddress.html#soup-address-new-any"/>
@@ -807,9 +859,9 @@
     <keyword type="macro" name="SOUP_SOCKET_TRUSTED_CERTIFICATE" link="SoupSocket.html#SOUP-SOCKET-TRUSTED-CERTIFICATE:CAPS"/>
     <keyword type="macro" name="SOUP_SOCKET_USE_THREAD_CONTEXT" link="SoupSocket.html#SOUP-SOCKET-USE-THREAD-CONTEXT:CAPS" since="2.38"/>
     <keyword type="property" name="The “async-context” property" link="SoupSocket.html#SoupSocket--async-context"/>
-    <keyword type="property" name="The “close-on-dispose” property" link="SoupSocket.html#SoupSocket--close-on-dispose"/>
     <keyword type="property" name="The “fd” property" link="SoupSocket.html#SoupSocket--fd"/>
     <keyword type="property" name="The “gsocket” property" link="SoupSocket.html#SoupSocket--gsocket"/>
+    <keyword type="property" name="The “iostream” property" link="SoupSocket.html#SoupSocket--iostream"/>
     <keyword type="property" name="The “ipv6-only” property" link="SoupSocket.html#SoupSocket--ipv6-only"/>
     <keyword type="property" name="The “is-server” property" link="SoupSocket.html#SoupSocket--is-server"/>
     <keyword type="property" name="The “local-address” property" link="SoupSocket.html#SoupSocket--local-address"/>

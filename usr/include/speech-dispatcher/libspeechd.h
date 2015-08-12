@@ -4,16 +4,16 @@
  * Copyright (C) 2001, 2002, 2003, 2004 Brailcom, o.p.s.
  *
  * This is free software; you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2, or (at your option)
+ * under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation; either version 2.1, or (at your option)
  * any later version.
  *
  * This software is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
+ * Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
+ * You should have received a copy of the GNU Lesser General Public License
  * along with this package; see the file COPYING.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
@@ -28,6 +28,8 @@
 #include <stddef.h>
 #include <pthread.h>
 
+#include "libspeechd_version.h"
+
 /*
  * Since the API includes speechd_types.h directly, we only need this
  * include if we are not being included by the API.
@@ -41,14 +43,14 @@
 extern "C" {
 #endif
 /* *INDENT-ON* */
-/* Speech Dispatcher's default port for inet communication */
+    /* Speech Dispatcher's default port for inet communication */
 #define SPEECHD_DEFAULT_PORT 6560
 
-/* Arguments for spd_send_data() */
+    /* Arguments for spd_send_data() */
 #define SPD_WAIT_REPLY 1	/* Wait for reply */
 #define SPD_NO_REPLY 0		/* No reply requested */
 
-/* --------------------- Public data types ------------------------ */
+    /* --------------------- Public data types ------------------------ */
 
 typedef enum {
 	SPD_MODE_SINGLE = 0,
@@ -68,7 +70,7 @@ typedef struct {
 	char *dbus_bus;
 } SPDConnectionAddress;
 
-void SPDConnectionAddress__free(SPDConnectionAddress *address);
+void SPDConnectionAddress__free(SPDConnectionAddress * address);
 
 typedef void (*SPDCallback) (size_t msg_id, size_t client_id,
 			     SPDNotificationType state);
@@ -155,6 +157,7 @@ int spd_set_voice_type(SPDConnection *, SPDVoiceType type);
 int spd_set_voice_type_all(SPDConnection *, SPDVoiceType type);
 int spd_set_voice_type_uid(SPDConnection *, SPDVoiceType type,
 			   unsigned int uid);
+SPDVoiceType spd_get_voice_type(SPDConnection *);
 
 int spd_set_synthesis_voice(SPDConnection *, const char *voice_name);
 int spd_set_synthesis_voice_all(SPDConnection *, const char *voice_name);
@@ -174,16 +177,19 @@ int spd_set_voice_rate(SPDConnection * connection, signed int rate);
 int spd_set_voice_rate_all(SPDConnection * connection, signed int rate);
 int spd_set_voice_rate_uid(SPDConnection * connection, signed int rate,
 			   unsigned int uid);
+int spd_get_voice_rate(SPDConnection * connection);
 
 int spd_set_voice_pitch(SPDConnection * connection, signed int pitch);
 int spd_set_voice_pitch_all(SPDConnection * connection, signed int pitch);
 int spd_set_voice_pitch_uid(SPDConnection * connection, signed int pitch,
 			    unsigned int uid);
+int spd_get_voice_pitch(SPDConnection * connection);
 
 int spd_set_volume(SPDConnection * connection, signed int volume);
 int spd_set_volume_all(SPDConnection * connection, signed int volume);
 int spd_set_volume_uid(SPDConnection * connection, signed int volume,
 		       unsigned int uid);
+int spd_get_volume(SPDConnection * connection);
 
 int spd_set_punctuation(SPDConnection * connection, SPDPunctuation type);
 int spd_set_punctuation_all(SPDConnection * connection, SPDPunctuation type);
@@ -205,6 +211,7 @@ int spd_set_language(SPDConnection * connection, const char *language);
 int spd_set_language_all(SPDConnection * connection, const char *language);
 int spd_set_language_uid(SPDConnection * connection, const char *language,
 			 unsigned int uid);
+char *spd_get_language(SPDConnection * connection);
 
 int spd_set_output_module(SPDConnection * connection,
 			  const char *output_module);
@@ -219,8 +226,12 @@ int spd_get_message_list_fd(SPDConnection * connection, int target,
 			    int *msg_ids, char **client_names);
 
 char **spd_list_modules(SPDConnection * connection);
+void free_spd_modules(char **);
+char *spd_get_output_module(SPDConnection * connection);
+
 char **spd_list_voices(SPDConnection * connection);
 SPDVoice **spd_list_synthesis_voices(SPDConnection * connection);
+void free_spd_voices(SPDVoice ** voices);
 char **spd_execute_command_with_list_reply(SPDConnection * connection,
 					   char *command);
 

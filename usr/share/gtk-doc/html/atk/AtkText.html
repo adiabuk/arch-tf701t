@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ATK - Accessibility Toolkit: AtkText</title>
+<title>AtkText: ATK - Accessibility Toolkit</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="ATK - Accessibility Toolkit">
 <link rel="up" href="interfaces.html" title="ATK Interfaces">
@@ -339,7 +339,7 @@
 </div>
 <div class="refsect1">
 <a name="AtkText.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GInterface
+<pre class="screen">    <a href="/opt/gnome3/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> AtkText
 </pre>
 </div>
@@ -461,9 +461,8 @@ atk_text_get_text_after_offset (<em class="parameter"><code><a class="link" href
                                 <em class="parameter"><code><span class="type">gint</span> *start_offset</code></em>,
                                 <em class="parameter"><code><span class="type">gint</span> *end_offset</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_text_get_text_after_offset</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version
-2.9.3. Please use <a class="link" href="AtkText.html#atk-text-get-string-at-offset" title="atk_text_get_string_at_offset ()"><code class="function">atk_text_get_string_at_offset()</code></a> instead.</p>
+<p><code class="literal">atk_text_get_text_after_offset</code> has been deprecated since version 2.9.3 and should not be used in newly-written code.</p>
+<p>Please use <a class="link" href="AtkText.html#atk-text-get-string-at-offset" title="atk_text_get_string_at_offset ()"><code class="function">atk_text_get_string_at_offset()</code></a> instead.</p>
 </div>
 <p>Gets the specified text.</p>
 <div class="refsect3">
@@ -602,9 +601,8 @@ atk_text_get_text_before_offset (<em class="parameter"><code><a class="link" hre
                                  <em class="parameter"><code><span class="type">gint</span> *start_offset</code></em>,
                                  <em class="parameter"><code><span class="type">gint</span> *end_offset</code></em>);</pre>
 <div class="warning">
-<p><code class="literal">atk_text_get_text_before_offset</code> is deprecated and should not be used in newly-written code.</p>
-<p>This method is deprecated since ATK version
-2.9.3. Please use <a class="link" href="AtkText.html#atk-text-get-string-at-offset" title="atk_text_get_string_at_offset ()"><code class="function">atk_text_get_string_at_offset()</code></a> instead.</p>
+<p><code class="literal">atk_text_get_text_before_offset</code> has been deprecated since version 2.9.3 and should not be used in newly-written code.</p>
+<p>Please use <a class="link" href="AtkText.html#atk-text-get-string-at-offset" title="atk_text_get_string_at_offset ()"><code class="function">atk_text_get_string_at_offset()</code></a> instead.</p>
 </div>
 <p>Gets the specified text.</p>
 <div class="refsect3">
@@ -2364,8 +2362,8 @@ signal will have a detail which is either "insert" or
 "delete" which identifies whether the text change was an
 insertion or a deletion.</p>
 <div class="warning">
-<p><code class="literal">AtkText::text-changed</code> is deprecated and should not be used in newly-written code.</p>
-<p>Since 2.9.4. Use <span class="type">“text-insert”</span> or
+<p><code class="literal">AtkText::text-changed</code> has been deprecated since version 2.9.4 and should not be used in newly-written code.</p>
+<p>Use <span class="type">“text-insert”</span> or
 <span class="type">“text-remove”</span> instead.</p>
 </div>
 <div class="refsect3">

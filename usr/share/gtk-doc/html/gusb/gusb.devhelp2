@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
-<book xmlns="http://www.devhelp.net/book" title="GUsb Reference Manual" link="index.html" author="Richard Hughes" name="gusb" version="2" language="c">
+<book xmlns="" title="GUsb Reference Manual" link="index.html" author="Richard Hughes" name="gusb" version="2" language="c">
   <chapters>
     <sub name="GUSB Specification" link="specification.html">
       <sub name="GUSB Introduction" link="introduction.html">
@@ -63,6 +62,7 @@
     <keyword type="function" name="g_usb_device_get_manufacturer_index ()" link="GUsbDevice.html#g-usb-device-get-manufacturer-index" since="0.1.0"/>
     <keyword type="function" name="g_usb_device_get_product_index ()" link="GUsbDevice.html#g-usb-device-get-product-index" since="0.1.0"/>
     <keyword type="function" name="g_usb_device_get_serial_number_index ()" link="GUsbDevice.html#g-usb-device-get-serial-number-index" since="0.1.0"/>
+    <keyword type="function" name="g_usb_device_get_custom_index ()" link="GUsbDevice.html#g-usb-device-get-custom-index" since="0.2.5"/>
     <keyword type="function" name="g_usb_device_open ()" link="GUsbDevice.html#g-usb-device-open" since="0.1.0"/>
     <keyword type="function" name="g_usb_device_close ()" link="GUsbDevice.html#g-usb-device-close"/>
     <keyword type="function" name="g_usb_device_reset ()" link="GUsbDevice.html#g-usb-device-reset"/>
@@ -86,6 +86,7 @@
     <keyword type="enum" name="enum GUsbDeviceRecipient" link="GUsbDevice.html#GUsbDeviceRecipient"/>
     <keyword type="enum" name="enum GUsbDeviceError" link="GUsbDevice.html#GUsbDeviceError"/>
     <keyword type="enum" name="enum GUsbDeviceClaimInterfaceFlags" link="GUsbDevice.html#GUsbDeviceClaimInterfaceFlags"/>
+    <keyword type="enum" name="enum GUsbDeviceClassCode" link="GUsbDevice.html#GUsbDeviceClassCode"/>
     <keyword type="struct" name="struct GUsbDevice" link="GUsbDevice.html#GUsbDevice-struct"/>
     <keyword type="struct" name="struct GUsbDeviceClass" link="GUsbDevice.html#GUsbDeviceClass"/>
     <keyword type="struct" name="GUsbDevicePrivate" link="GUsbDevice.html#GUsbDevicePrivate"/>
@@ -107,5 +108,49 @@
     <keyword type="macro" name="G_USB_MAJOR_VERSION" link="gusb-gusb-version.html#G-USB-MAJOR-VERSION:CAPS"/>
     <keyword type="macro" name="G_USB_MINOR_VERSION" link="gusb-gusb-version.html#G-USB-MINOR-VERSION:CAPS"/>
     <keyword type="macro" name="G_USB_MICRO_VERSION" link="gusb-gusb-version.html#G-USB-MICRO-VERSION:CAPS"/>
+    <keyword type="constant" name="G_USB_CONTEXT_ERROR_INTERNAL" link="GUsbContext.html#G-USB-CONTEXT-ERROR-INTERNAL:CAPS"/>
+    <keyword type="constant" name="G_USB_SOURCE_ERROR_INTERNAL" link="gusb-gusb-source.html#G-USB-SOURCE-ERROR-INTERNAL:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_DIRECTION_DEVICE_TO_HOST" link="GUsbDevice.html#G-USB-DEVICE-DIRECTION-DEVICE-TO-HOST:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_DIRECTION_HOST_TO_DEVICE" link="GUsbDevice.html#G-USB-DEVICE-DIRECTION-HOST-TO-DEVICE:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_REQUEST_TYPE_STANDARD" link="GUsbDevice.html#G-USB-DEVICE-REQUEST-TYPE-STANDARD:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_REQUEST_TYPE_CLASS" link="GUsbDevice.html#G-USB-DEVICE-REQUEST-TYPE-CLASS:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_REQUEST_TYPE_VENDOR" link="GUsbDevice.html#G-USB-DEVICE-REQUEST-TYPE-VENDOR:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_REQUEST_TYPE_RESERVED" link="GUsbDevice.html#G-USB-DEVICE-REQUEST-TYPE-RESERVED:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_RECIPIENT_DEVICE" link="GUsbDevice.html#G-USB-DEVICE-RECIPIENT-DEVICE:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_RECIPIENT_INTERFACE" link="GUsbDevice.html#G-USB-DEVICE-RECIPIENT-INTERFACE:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_RECIPIENT_ENDPOINT" link="GUsbDevice.html#G-USB-DEVICE-RECIPIENT-ENDPOINT:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_RECIPIENT_OTHER" link="GUsbDevice.html#G-USB-DEVICE-RECIPIENT-OTHER:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_INTERNAL" link="GUsbDevice.html#G-USB-DEVICE-ERROR-INTERNAL:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_IO" link="GUsbDevice.html#G-USB-DEVICE-ERROR-IO:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_TIMED_OUT" link="GUsbDevice.html#G-USB-DEVICE-ERROR-TIMED-OUT:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_NOT_SUPPORTED" link="GUsbDevice.html#G-USB-DEVICE-ERROR-NOT-SUPPORTED:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_NO_DEVICE" link="GUsbDevice.html#G-USB-DEVICE-ERROR-NO-DEVICE:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_NOT_OPEN" link="GUsbDevice.html#G-USB-DEVICE-ERROR-NOT-OPEN:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_ALREADY_OPEN" link="GUsbDevice.html#G-USB-DEVICE-ERROR-ALREADY-OPEN:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_CANCELLED" link="GUsbDevice.html#G-USB-DEVICE-ERROR-CANCELLED:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_FAILED" link="GUsbDevice.html#G-USB-DEVICE-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_ERROR_LAST" link="GUsbDevice.html#G-USB-DEVICE-ERROR-LAST:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLAIM_INTERFACE_BIND_KERNEL_DRIVER" link="GUsbDevice.html#G-USB-DEVICE-CLAIM-INTERFACE-BIND-KERNEL-DRIVER:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_INTERFACE_DESC" link="GUsbDevice.html#G-USB-DEVICE-CLASS-INTERFACE-DESC:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_AUDIO" link="GUsbDevice.html#G-USB-DEVICE-CLASS-AUDIO:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_COMMUNICATIONS" link="GUsbDevice.html#G-USB-DEVICE-CLASS-COMMUNICATIONS:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_HID" link="GUsbDevice.html#G-USB-DEVICE-CLASS-HID:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_PHYSICAL" link="GUsbDevice.html#G-USB-DEVICE-CLASS-PHYSICAL:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_IMAGE" link="GUsbDevice.html#G-USB-DEVICE-CLASS-IMAGE:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_PRINTER" link="GUsbDevice.html#G-USB-DEVICE-CLASS-PRINTER:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_MASS_STORAGE" link="GUsbDevice.html#G-USB-DEVICE-CLASS-MASS-STORAGE:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_HUB" link="GUsbDevice.html#G-USB-DEVICE-CLASS-HUB:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_CDC_DATA" link="GUsbDevice.html#G-USB-DEVICE-CLASS-CDC-DATA:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_SMART_CARD" link="GUsbDevice.html#G-USB-DEVICE-CLASS-SMART-CARD:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_CONTENT_SECURITY" link="GUsbDevice.html#G-USB-DEVICE-CLASS-CONTENT-SECURITY:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_VIDEO" link="GUsbDevice.html#G-USB-DEVICE-CLASS-VIDEO:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_PERSONAL_HEALTHCARE" link="GUsbDevice.html#G-USB-DEVICE-CLASS-PERSONAL-HEALTHCARE:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_AUDIO_VIDEO" link="GUsbDevice.html#G-USB-DEVICE-CLASS-AUDIO-VIDEO:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_BILLBOARD" link="GUsbDevice.html#G-USB-DEVICE-CLASS-BILLBOARD:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_DIAGNOSTIC" link="GUsbDevice.html#G-USB-DEVICE-CLASS-DIAGNOSTIC:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_WIRELESS_CONTROLLER" link="GUsbDevice.html#G-USB-DEVICE-CLASS-WIRELESS-CONTROLLER:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_MISCELLANEOUS" link="GUsbDevice.html#G-USB-DEVICE-CLASS-MISCELLANEOUS:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_APPLICATION_SPECIFIC" link="GUsbDevice.html#G-USB-DEVICE-CLASS-APPLICATION-SPECIFIC:CAPS"/>
+    <keyword type="constant" name="G_USB_DEVICE_CLASS_VENDOR_SPECIFIC" link="GUsbDevice.html#G-USB-DEVICE-CLASS-VENDOR-SPECIFIC:CAPS"/>
   </functions>
 </book>

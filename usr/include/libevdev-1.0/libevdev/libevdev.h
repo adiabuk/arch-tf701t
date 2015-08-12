@@ -1032,7 +1032,6 @@ int libevdev_change_fd(struct libevdev* dev, int fd);
  */
 int libevdev_get_fd(const struct libevdev* dev);
 
-
 /**
  * @ingroup events
  */
@@ -1856,7 +1855,6 @@ int libevdev_disable_event_code(struct libevdev *dev, unsigned int type, unsigne
  */
 int libevdev_kernel_set_abs_info(struct libevdev *dev, unsigned int code, const struct input_absinfo *abs);
 
-
 /**
  * @ingroup kernel
  */
@@ -2151,7 +2149,6 @@ int libevdev_property_from_name_n(const char *name, size_t len);
  * @see libevdev_get_event_value
  */
 int libevdev_get_repeat(const struct libevdev *dev, int *delay, int *period);
-
 
 /********* DEPRECATED SECTION *********/
 #if defined(__GNUC__) && __GNUC__ >= 4

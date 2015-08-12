@@ -6,9 +6,9 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="GDK 3 Reference Manual">
 <link rel="up" href="reference.html" title="API Reference">
-<link rel="prev" href="gdk3-GdkFrameTimings.html" title="Frame timings">
+<link rel="prev" href="GdkGLContext.html" title="GdkGLContext">
 <link rel="next" href="gdk3-Event-Structures.html" title="Event Structures">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -19,7 +19,7 @@
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="reference.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="gdk3-GdkFrameTimings.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="GdkGLContext.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="gdk3-Event-Structures.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
@@ -431,7 +431,7 @@ is given in the
 </pre>
 <p>Use this macro as the return value for continuing the propagation of
 an event handler.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -440,7 +440,7 @@ an event handler.</p>
 </pre>
 <p>Use this macro as the return value for stopping the propagation of
 an event handler.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -449,7 +449,7 @@ an event handler.</p>
 </pre>
 <p>The primary button. This is typically the left mouse button, or the
 right button in a left-handed setup.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -457,7 +457,7 @@ right button in a left-handed setup.</p>
 <pre class="programlisting">#define GDK_BUTTON_MIDDLE       (2)
 </pre>
 <p>The middle button.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -466,7 +466,7 @@ right button in a left-handed setup.</p>
 </pre>
 <p>The secondary button. This is typically the right mouse button, or the
 left button in a left-handed setup.</p>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -475,9 +475,8 @@ left button in a left-handed setup.</p>
 gdk_events_pending (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Checks if any events are ready to be processed for any display.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.9.5"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.9.5"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if any events are pending.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -488,7 +487,7 @@ gdk_event_peek (<em class="parameter"><code><span class="type">void</span></code
 <p>If there is an event waiting in the event queue of some open
 display, returns a copy of it. See <a class="link" href="GdkDisplay.html#gdk-display-peek-event" title="gdk_display_peek_event ()"><code class="function">gdk_display_peek_event()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.10.5"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.10.5"></a><h4>Returns</h4>
 <p> a copy of the first <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a> on some event
 queue, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no events are in any queues. The returned
 <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a> should be freed with <a class="link" href="gdk3-Events.html#gdk-event-free" title="gdk_event_free ()"><code class="function">gdk_event_free()</code></a>. </p>
@@ -504,7 +503,7 @@ gdk_event_get (<em class="parameter"><code><span class="type">void</span></code>
 on, fetching events from the windowing system if necessary.
 See <a class="link" href="GdkDisplay.html#gdk-display-get-event" title="gdk_display_get_event ()"><code class="function">gdk_display_get_event()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.11.5"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.11.5"></a><h4>Returns</h4>
 <p> the next <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a> to be processed, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
 if no events are pending. The returned <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a> should be freed
 with <a class="link" href="gdk3-Events.html#gdk-event-free" title="gdk_event_free ()"><code class="function">gdk_event_free()</code></a>. </p>
@@ -520,7 +519,7 @@ gdk_event_put (<em class="parameter"><code>const <a class="link" href="gdk3-Even
 queue for event-&gt;any.window’s display, or the default event
 queue if event-&gt;any.window is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. See <a class="link" href="GdkDisplay.html#gdk-display-put-event" title="gdk_display_put_event ()"><code class="function">gdk_display_put_event()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.12.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.12.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -542,7 +541,7 @@ queue if event-&gt;any.window is <a href="https://developer.gnome.org/glib/unsta
 gdk_event_new (<em class="parameter"><code><a class="link" href="gdk3-Events.html#GdkEventType" title="enum GdkEventType"><span class="type">GdkEventType</span></a> type</code></em>);</pre>
 <p>Creates a new event of the given type. All fields are set to 0.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.13.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.13.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -557,12 +556,11 @@ gdk_event_new (<em class="parameter"><code><a class="link" href="gdk3-Events.htm
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.13.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.13.6"></a><h4>Returns</h4>
 <p> a newly-allocated <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a>. The returned <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a>
 should be freed with <a class="link" href="gdk3-Events.html#gdk-event-free" title="gdk_event_free ()"><code class="function">gdk_event_free()</code></a>.</p>
-<p></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -572,7 +570,7 @@ gdk_event_copy (<em class="parameter"><code>const <a class="link" href="gdk3-Eve
 <p>Copies a <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a>, copying or incrementing the reference count of the
 resources associated with it (e.g. <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>’s and strings).</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.14.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.14.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -587,11 +585,10 @@ resources associated with it (e.g. <a class="link" href="gdk3-Windows.html#GdkWi
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.14.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.14.6"></a><h4>Returns</h4>
 <p> a copy of <em class="parameter"><code>event</code></em>
 . The returned <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a> should be freed with
 <a class="link" href="gdk3-Events.html#gdk-event-free" title="gdk_event_free ()"><code class="function">gdk_event_free()</code></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -604,7 +601,7 @@ Note that this function should only be called with events returned from
 functions such as <a class="link" href="gdk3-Events.html#gdk-event-peek" title="gdk_event_peek ()"><code class="function">gdk_event_peek()</code></a>, <a class="link" href="gdk3-Events.html#gdk-event-get" title="gdk_event_get ()"><code class="function">gdk_event_get()</code></a>, <a class="link" href="gdk3-Events.html#gdk-event-copy" title="gdk_event_copy ()"><code class="function">gdk_event_copy()</code></a>
 and <a class="link" href="gdk3-Events.html#gdk-event-new" title="gdk_event_new ()"><code class="function">gdk_event_new()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.15.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -629,7 +626,7 @@ gdk_event_get_axis (<em class="parameter"><code>const <a class="link" href="gdk3
 <p>Extract the axis value for a particular axis use from
 an event structure.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.16.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.16.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -656,9 +653,8 @@ an event structure.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.16.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.16.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the specified axis was found, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -669,7 +665,7 @@ gdk_event_get_button (<em class="parameter"><code>const <a class="link" href="gd
                       <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *button</code></em>);</pre>
 <p>Extract the button number from an event.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.17.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.17.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -691,11 +687,10 @@ gdk_event_get_button (<em class="parameter"><code>const <a class="link" href="gd
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.17.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.17.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event delivered a button number</p>
-<p></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -705,7 +700,7 @@ gdk_event_get_click_count (<em class="parameter"><code>const <a class="link" hre
                            <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *click_count</code></em>);</pre>
 <p>Extracts the click count from an event.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.18.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.18.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -727,11 +722,10 @@ gdk_event_get_click_count (<em class="parameter"><code>const <a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.18.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.18.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event delivered a click count</p>
-<p></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -742,7 +736,7 @@ gdk_event_get_coords (<em class="parameter"><code>const <a class="link" href="gd
                       <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *y_win</code></em>);</pre>
 <p>Extract the event window relative x/y coordinates from an event.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.19.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.19.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -769,9 +763,8 @@ gdk_event_get_coords (<em class="parameter"><code>const <a class="link" href="gd
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.19.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.19.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event delivered event window coordinates</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -782,7 +775,7 @@ gdk_event_get_keycode (<em class="parameter"><code>const <a class="link" href="g
                        <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> *keycode</code></em>);</pre>
 <p>Extracts the hardware keycode from an event.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.20.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.20.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -804,11 +797,10 @@ gdk_event_get_keycode (<em class="parameter"><code>const <a class="link" href="g
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.20.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.20.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event delivered a hardware keycode</p>
-<p></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -818,7 +810,7 @@ gdk_event_get_keyval (<em class="parameter"><code>const <a class="link" href="gd
                       <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *keyval</code></em>);</pre>
 <p>Extracts the keyval from an event.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.21.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.21.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -840,11 +832,10 @@ gdk_event_get_keyval (<em class="parameter"><code>const <a class="link" href="gd
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.21.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.21.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event delivered a key symbol</p>
-<p></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -855,7 +846,7 @@ gdk_event_get_root_coords (<em class="parameter"><code>const <a class="link" hre
                            <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *y_root</code></em>);</pre>
 <p>Extract the root window relative x/y coordinates from an event.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.22.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.22.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -882,9 +873,8 @@ gdk_event_get_root_coords (<em class="parameter"><code>const <a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.22.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.22.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event delivered root window coordinates</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -895,7 +885,7 @@ gdk_event_get_scroll_direction (<em class="parameter"><code>const <a class="link
                                 <em class="parameter"><code><a class="link" href="gdk3-Event-Structures.html#GdkScrollDirection" title="enum GdkScrollDirection"><span class="type">GdkScrollDirection</span></a> *direction</code></em>);</pre>
 <p>Extracts the scroll direction from an event.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.23.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.23.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -917,11 +907,10 @@ gdk_event_get_scroll_direction (<em class="parameter"><code>const <a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.23.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.23.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event delivered a scroll direction</p>
-<p></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -932,7 +921,7 @@ gdk_event_get_scroll_deltas (<em class="parameter"><code>const <a class="link" h
                              <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *delta_y</code></em>);</pre>
 <p>Retrieves the scroll deltas from a <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a></p>
 <div class="refsect3">
-<a name="id-1.2.16.7.24.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.24.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -959,11 +948,10 @@ gdk_event_get_scroll_deltas (<em class="parameter"><code>const <a class="link" h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.24.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.24.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event contains smooth scroll information</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -978,7 +966,7 @@ in the event. <em class="parameter"><code>event</code></em>
  may be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, in which case it’s treated
 as if the event had no state field.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.25.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.25.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1000,9 +988,8 @@ as if the event had no state field.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.25.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.25.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there was a state field in the event </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1015,7 +1002,7 @@ gdk_event_get_time (<em class="parameter"><code>const <a class="link" href="gdk3
 returns <a class="link" href="gdk3-Events.html#GDK-CURRENT-TIME:CAPS" title="GDK_CURRENT_TIME"><span class="type">GDK_CURRENT_TIME</span></a>. If <em class="parameter"><code>event</code></em>
  is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, returns <a class="link" href="gdk3-Events.html#GDK-CURRENT-TIME:CAPS" title="GDK_CURRENT_TIME"><span class="type">GDK_CURRENT_TIME</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.26.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.26.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1030,10 +1017,9 @@ returns <a class="link" href="gdk3-Events.html#GDK-CURRENT-TIME:CAPS" title="GDK
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.26.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.26.6"></a><h4>Returns</h4>
 <p> time stamp field from <em class="parameter"><code>event</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1043,7 +1029,7 @@ returns <a class="link" href="gdk3-Events.html#GDK-CURRENT-TIME:CAPS" title="GDK
 gdk_event_get_window (<em class="parameter"><code>const <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a> *event</code></em>);</pre>
 <p>Extracts the <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> associated with an event.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.27.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.27.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1058,11 +1044,11 @@ gdk_event_get_window (<em class="parameter"><code>const <a class="link" href="gd
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.27.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.27.6"></a><h4>Returns</h4>
 <p> The <a class="link" href="gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> associated with the event. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1071,7 +1057,7 @@ gdk_event_get_window (<em class="parameter"><code>const <a class="link" href="gd
 gdk_event_get_event_type (<em class="parameter"><code>const <a class="link" href="gdk3-Event-Structures.html#GdkEvent" title="union GdkEvent"><span class="type">GdkEvent</span></a> *event</code></em>);</pre>
 <p>Retrieves the type of the event.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.28.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.28.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1086,11 +1072,10 @@ gdk_event_get_event_type (<em class="parameter"><code>const <a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.28.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.28.6"></a><h4>Returns</h4>
 <p> a <a class="link" href="gdk3-Events.html#GdkEventType" title="enum GdkEventType"><span class="type">GdkEventType</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1102,7 +1087,7 @@ gdk_event_get_event_sequence (<em class="parameter"><code>const <a class="link" 
 <a class="link" href="gdk3-Events.html#GDK-TOUCH-END:CAPS"><code class="literal">GDK_TOUCH_END</code></a> or <a class="link" href="gdk3-Events.html#GDK-TOUCH-CANCEL:CAPS"><code class="literal">GDK_TOUCH_CANCEL</code></a>, returns the <a class="link" href="gdk3-Events.html#GdkEventSequence" title="GdkEventSequence"><span class="type">GdkEventSequence</span></a>
 to which the event belongs. Otherwise, return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.29.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.29.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1117,11 +1102,11 @@ to which the event belongs. Otherwise, return <a href="https://developer.gnome.o
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.29.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.29.6"></a><h4>Returns</h4>
 <p> the event sequence that the event belongs to. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1160,7 +1145,7 @@ motion events from a <a class="link" href="gdk3-Events.html#GDK-MOTION-NOTIFY:CA
 
 <p></p>
 <div class="refsect3">
-<a name="id-1.2.16.7.30.8"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.30.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1174,7 +1159,7 @@ motion events from a <a class="link" href="gdk3-Events.html#GDK-MOTION-NOTIFY:CA
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1191,7 +1176,7 @@ and return in <em class="parameter"><code>angle</code></em>
 direction for positive angles is from the positive X axis towards the positive
 Y axis.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.31.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.31.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1218,11 +1203,10 @@ Y axis.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.31.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.31.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the angle could be calculated.</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1237,7 +1221,7 @@ will be returned in <em class="parameter"><code>x</code></em>
  and <em class="parameter"><code>y</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.32.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.32.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1269,11 +1253,10 @@ will be returned in <em class="parameter"><code>x</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.32.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.32.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the center could be calculated.</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1287,7 +1270,7 @@ gdk_events_get_distance (<em class="parameter"><code><a class="link" href="gdk3-
  to <em class="parameter"><code>event2</code></em>
 ) will be returned.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.33.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.33.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1314,11 +1297,10 @@ gdk_events_get_distance (<em class="parameter"><code><a class="link" href="gdk3-
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.33.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.33.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the distance could be calculated.</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1334,7 +1316,7 @@ also trigger a context menu if this modifier is pressed.</p>
 <p>This function should always be used instead of simply checking for
 event-&gt;button == <a class="link" href="gdk3-Events.html#GDK-BUTTON-SECONDARY:CAPS" title="GDK_BUTTON_SECONDARY"><code class="literal">GDK_BUTTON_SECONDARY</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.34.6"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.34.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1349,11 +1331,10 @@ event-&gt;button == <a class="link" href="gdk3-Events.html#GDK-BUTTON-SECONDARY:
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.34.7"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.34.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event should trigger a context menu.</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1368,7 +1349,7 @@ usually not useful for GTK+ applications. (Although an application
 can call this function then call <a href="http://developer.gnome.org/gtk2/gtk3-General.html#gtk-main-do-event"><code class="function">gtk_main_do_event()</code></a> to pass
 events to GTK+.)</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.35.6"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.35.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1405,7 +1386,7 @@ events to GTK+.)</p>
 <p>Specifies the type of function passed to <a class="link" href="gdk3-Events.html#gdk-event-handler-set" title="gdk_event_handler_set ()"><code class="function">gdk_event_handler_set()</code></a> to
 handle all GDK events.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.36.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.36.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1435,9 +1416,8 @@ handle all GDK events.</p>
 gdk_get_show_events (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Gets whether event debugging output is enabled.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.37.5"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.37.5"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if event debugging output is enabled.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1450,7 +1430,7 @@ Note that GTK+ must be compiled with debugging (that is,
 configured using the <code class="literal">--enable-debug</code> option)
 to use this option.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.38.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.38.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1477,7 +1457,7 @@ gdk_event_set_screen (<em class="parameter"><code><a class="link" href="gdk3-Eve
 have been allocated by GTK+, for instance, by
 <a class="link" href="gdk3-Events.html#gdk-event-copy" title="gdk_event_copy ()"><code class="function">gdk_event_copy()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.39.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.39.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1498,7 +1478,7 @@ have been allocated by GTK+, for instance, by
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1513,7 +1493,7 @@ that is, the screen which has the root window
 to which <code class="literal">event-&gt;motion.x_root</code> and
 <code class="literal">event-&gt;motion.y_root</code> are relative.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.40.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.40.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1528,11 +1508,11 @@ to which <code class="literal">event-&gt;motion.x_root</code> and
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.40.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.40.6"></a><h4>Returns</h4>
 <p> the screen for the event. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1542,7 +1522,7 @@ gdk_event_get_device (<em class="parameter"><code>const <a class="link" href="gd
 <p>If the event contains a “device” field, this function will return
 it, else it will return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.41.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.41.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1557,11 +1537,11 @@ it, else it will return <a href="https://developer.gnome.org/glib/unstable/glib-
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.41.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.41.6"></a><h4>Returns</h4>
 <p> a <a class="link" href="GdkDevice.html" title="GdkDevice"><span class="type">GdkDevice</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1575,7 +1555,7 @@ gdk_event_set_device (<em class="parameter"><code><a class="link" href="gdk3-Eve
 have been allocated by GTK+, for instance, by
 <a class="link" href="gdk3-Events.html#gdk-event-copy" title="gdk_event_copy ()"><code class="function">gdk_event_copy()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.42.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.42.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1596,7 +1576,7 @@ have been allocated by GTK+, for instance, by
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1612,7 +1592,7 @@ geometry or a grab is acquired/released.</p>
 <p>If the event does not contain a device field, this function will
 return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.43.6"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.43.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1627,11 +1607,11 @@ return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.43.7"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.43.7"></a><h4>Returns</h4>
 <p> a <a class="link" href="GdkDevice.html" title="GdkDevice"><span class="type">GdkDevice</span></a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
 <p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1645,7 +1625,7 @@ gdk_event_set_source_device (<em class="parameter"><code><a class="link" href="g
 <p>The event must have been allocated by GTK+,
 for instance by <a class="link" href="gdk3-Events.html#gdk-event-copy" title="gdk_event_copy ()"><code class="function">gdk_event_copy()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.44.6"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.44.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1666,7 +1646,7 @@ for instance by <a class="link" href="gdk3-Events.html#gdk-event-copy" title="gd
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1677,7 +1657,7 @@ gdk_setting_get (<em class="parameter"><code>const <a href="https://developer.gn
 <p>Obtains a desktop-wide setting, such as the double-click time,
 for the default screen. See <a class="link" href="GdkScreen.html#gdk-screen-get-setting" title="gdk_screen_get_setting ()"><code class="function">gdk_screen_get_setting()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.2.16.7.45.5"></a><h4>Parameters</h4>
+<a name="id-1.2.17.7.45.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1699,11 +1679,10 @@ for the default screen. See <a class="link" href="GdkScreen.html#gdk-screen-get-
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.2.16.7.45.6"></a><h4>Returns</h4>
+<a name="id-1.2.17.7.45.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the setting existed and a value was stored
 in <em class="parameter"><code>value</code></em>
 , <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
 </div>
 </div>
@@ -1722,7 +1701,7 @@ symbol is not allowed to start with a number). In that case, the
 aliases <a class="link" href="gdk3-Events.html#GDK-DOUBLE-BUTTON-PRESS:CAPS"><code class="literal">GDK_DOUBLE_BUTTON_PRESS</code></a> and <a class="link" href="gdk3-Events.html#GDK-TRIPLE-BUTTON-PRESS:CAPS"><code class="literal">GDK_TRIPLE_BUTTON_PRESS</code></a> can
 be used instead.</p>
 <div class="refsect3">
-<a name="id-1.2.16.8.2.6"></a><h4>Members</h4>
+<a name="id-1.2.17.8.2.6"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -2067,6 +2046,8 @@ be used instead.</p>
 <p>A set of bit-flags to indicate which events a window is to receive.
 Most of these masks map onto one or more of the <a class="link" href="gdk3-Events.html#GdkEventType" title="enum GdkEventType"><span class="type">GdkEventType</span></a> event types
 above.</p>
+<p>See the <a href="http://developer.gnome.org/gtk2/chap-input-handling.html">input handling overview</a> for details of
+<a href="http://developer.gnome.org/gtk2/chap-input-handling.html#event-masks">event masks</a> and <a href="http://developer.gnome.org/gtk2/chap-input-handling.html#event-propagation">event propagation</a>.</p>
 <p><a class="link" href="gdk3-Events.html#GDK-POINTER-MOTION-HINT-MASK:CAPS"><code class="literal">GDK_POINTER_MOTION_HINT_MASK</code></a> is deprecated. It is a special mask
 to reduce the number of <a class="link" href="gdk3-Events.html#GDK-MOTION-NOTIFY:CAPS"><code class="literal">GDK_MOTION_NOTIFY</code></a> events received. When using
 <a class="link" href="gdk3-Events.html#GDK-POINTER-MOTION-HINT-MASK:CAPS"><code class="literal">GDK_POINTER_MOTION_HINT_MASK</code></a>, fewer <a class="link" href="gdk3-Events.html#GDK-MOTION-NOTIFY:CAPS"><code class="literal">GDK_MOTION_NOTIFY</code></a> events will
@@ -2085,7 +2066,7 @@ type <a class="link" href="gdk3-Events.html#GDK-TOUCH-BEGIN:CAPS"><code class="l
 <a class="link" href="gdk3-Events.html#gdk-event-get-event-sequence" title="gdk_event_get_event_sequence ()"><code class="function">gdk_event_get_event_sequence()</code></a> returns the event sequence for these
 events, so different sequences may be distinguished.</p>
 <div class="refsect3">
-<a name="id-1.2.16.8.3.7"></a><h4>Members</h4>
+<a name="id-1.2.17.8.3.8"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -2285,7 +2266,6 @@ events, so different sequences may be distinguished.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

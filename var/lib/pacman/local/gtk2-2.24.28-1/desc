@@ -1,0 +1,55 @@
+%NAME%
+gtk2
+
+%VERSION%
+2.24.28-1
+
+%DESC%
+GObject-based multi-platform GUI toolkit (legacy)
+
+%URL%
+http://www.gtk.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1431540590
+
+%INSTALLDATE%
+1439237018
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+57220096
+
+%REASON%
+1
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+atk
+pango
+libxcursor
+libxinerama
+libxrandr
+libxi
+libxcomposite
+libxdamage
+shared-mime-info
+cairo
+libcups
+gtk-update-icon-cache
+librsvg
+
+%OPTDEPENDS%
+gnome-themes-standard: Default widget theme
+adwaita-icon-theme: Default icon theme
+

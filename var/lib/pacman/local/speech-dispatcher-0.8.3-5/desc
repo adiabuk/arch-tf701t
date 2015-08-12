@@ -1,0 +1,48 @@
+%NAME%
+speech-dispatcher
+
+%VERSION%
+0.8.3-5
+
+%DESC%
+High-level device independent layer for speech synthesis interface
+
+%URL%
+http://www.freebsoft.org/speechd
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1437629294
+
+%INSTALLDATE%
+1439237054
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+1404928
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+FDL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libltdl
+python-xdg
+dotconf
+libpulse
+
+%OPTDEPENDS%
+festival: Speech output using Festival
+espeak: Speech output using ESpeak
+pulseaudio: PulseAudio support
+

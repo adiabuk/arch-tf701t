@@ -48,7 +48,7 @@ a few additional options:
 <tr>
 <td><p><span class="term"><a class="link" href="SoupServer.html#SOUP-SERVER-TLS-CERTIFICATE:CAPS" title="SOUP_SERVER_TLS_CERTIFICATE"><code class="literal">SOUP_SERVER_TLS_CERTIFICATE</code></a></span></p></td>
 <td><p>
-	    A <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a>
+	    A <span class="type">GTlsCertificate</span>
 	    (containing a private key) that will be used when handling
 	    HTTPS requests on the server.
 	</p></td>
@@ -89,7 +89,7 @@ a few additional options:
 <a name="id-1.2.6.4"></a><h3>Adding Listening Sockets</h3>
 <p>
   To tell the server where to listen, call <a class="link" href="SoupServer.html#soup-server-listen" title="soup_server_listen ()"><code class="function">soup_server_listen</code></a>
-  (to listen on a specific <a href="http://library.gnome.org/devel/gio/unstable/GSocketAddress.html"><span class="type">GSocketAddress</span></a>), <a class="link" href="SoupServer.html#soup-server-listen-all" title="soup_server_listen_all ()"><code class="function">soup_server_listen_all</code></a>
+  (to listen on a specific <span class="type">GSocketAddress</span>), <a class="link" href="SoupServer.html#soup-server-listen-all" title="soup_server_listen_all ()"><code class="function">soup_server_listen_all</code></a>
   (to listen on a given port on all network interfaces), or <a class="link" href="SoupServer.html#soup-server-listen-local" title="soup_server_listen_local ()"><code class="function">soup_server_listen_local</code></a>
   (to listen to a given port on the loopback interface only). You can
   call any of these functions multiple times, to set up multiple
@@ -390,7 +390,7 @@ and pass it to <a class="link" href="SoupServer.html#soup-server-add-auth-domain
 <span class="normal">    <a href="SoupAuthDomain.html#SOUP-AUTH-DOMAIN-ADD-PATH:CAPS">SOUP_AUTH_DOMAIN_ADD_PATH</a></span><span class="symbol">,</span><span class="normal"> </span><span class="string">"/bar/private"</span><span class="symbol">,</span>
 <span class="normal">    NULL</span><span class="symbol">);</span>
 <span class="function"><a href="SoupServer.html#soup-server-add-auth-domain">soup_server_add_auth_domain</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">server</span><span class="symbol">,</span><span class="normal"> domain</span><span class="symbol">);</span>
-<span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">domain</span><span class="symbol">);</span></pre></td>
+<span class="function">g_object_unref</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">domain</span><span class="symbol">);</span></pre></td>
       </tr>
     </tbody>
   </table>

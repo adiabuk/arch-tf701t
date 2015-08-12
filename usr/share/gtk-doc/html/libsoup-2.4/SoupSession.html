@@ -132,7 +132,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *
+<span class="returnvalue">GInputStream</span> *
 </td>
 <td class="function_name">
 <a class="link" href="SoupSession.html#soup-session-send" title="soup_session_send ()">soup_session_send</a> <span class="c_punctuation">()</span>
@@ -148,10 +148,26 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *
+<span class="returnvalue">GInputStream</span> *
 </td>
 <td class="function_name">
 <a class="link" href="SoupSession.html#soup-session-send-finish" title="soup_session_send_finish ()">soup_session_send_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="SoupSession.html#soup-session-websocket-connect-async" title="soup_session_websocket_connect_async ()">soup_session_websocket_connect_async</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection"><span class="returnvalue">SoupWebsocketConnection</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="SoupSession.html#soup-session-websocket-connect-finish" title="soup_session_websocket_connect_finish ()">soup_session_websocket_connect_finish</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -282,6 +298,14 @@
 <a class="link" href="SoupSession.html#soup-session-has-feature" title="soup_session_has_feature ()">soup_session_has_feature</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GIOStream</span> *
+</td>
+<td class="function_name">
+<a class="link" href="SoupSession.html#soup-session-steal-connection" title="soup_session_steal_connection ()">soup_session_steal_connection</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -313,7 +337,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> *</td>
+<span class="type">GType</span> *</td>
 <td class="property_name"><a class="link" href="SoupSession.html#SoupSession--add-feature-by-type" title="The “add-feature-by-type” property">add-feature-by-type</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -323,12 +347,12 @@
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
-<td class="property_type"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></td>
+<td class="property_type"><span class="type">GStrv</span></td>
 <td class="property_name"><a class="link" href="SoupSession.html#SoupSession--http-aliases" title="The “http-aliases” property">http-aliases</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></td>
+<td class="property_type"><span class="type">GStrv</span></td>
 <td class="property_name"><a class="link" href="SoupSession.html#SoupSession--https-aliases" title="The “https-aliases” property">https-aliases</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -355,7 +379,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GProxyResolver.html"><span class="type">GProxyResolver</span></a> *</td>
+<span class="type">GProxyResolver</span> *</td>
 <td class="property_name"><a class="link" href="SoupSession.html#SoupSession--proxy-resolver" title="The “proxy-resolver” property">proxy-resolver</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -367,7 +391,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> *</td>
+<span class="type">GType</span> *</td>
 <td class="property_name"><a class="link" href="SoupSession.html#SoupSession--remove-feature-by-type" title="The “remove-feature-by-type” property">remove-feature-by-type</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -394,13 +418,13 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GTlsDatabase.html"><span class="type">GTlsDatabase</span></a> *</td>
+<span class="type">GTlsDatabase</span> *</td>
 <td class="property_name"><a class="link" href="SoupSession.html#SoupSession--tls-database" title="The “tls-database” property">tls-database</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GTlsInteraction.html"><span class="type">GTlsInteraction</span></a> *</td>
+<span class="type">GTlsInteraction</span> *</td>
 <td class="property_name"><a class="link" href="SoupSession.html#SoupSession--tls-interaction" title="The “tls-interaction” property">tls-interaction</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -519,6 +543,10 @@
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="SoupSession.html#SOUP-SESSION-TLS-INTERACTION:CAPS" title="SOUP_SESSION_TLS_INTERACTION">SOUP_SESSION_TLS_INTERACTION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="SoupSession.html#SOUP-SESSION-ASYNC-CONTEXT:CAPS" title="SOUP_SESSION_ASYNC_CONTEXT">SOUP_SESSION_ASYNC_CONTEXT</a></td>
 </tr>
 <tr>
@@ -574,7 +602,7 @@
 </div>
 <div class="refsect1">
 <a name="SoupSession.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">╰──</span> SoupSession
         <span class="lineart">├──</span> <a class="link" href="SoupSessionAsync.html" title="SoupSessionAsync">SoupSessionAsync</a>
         <span class="lineart">╰──</span> <a class="link" href="SoupSessionSync.html" title="SoupSessionSync">SoupSessionSync</a>
@@ -938,7 +966,7 @@ only the final callback occurring in the indicated <span class="type">GMainConte
 <p>Contrast this method with <a class="link" href="SoupSession.html#soup-session-send-async" title="soup_session_send_async ()"><code class="function">soup_session_send_async()</code></a>, which also
 asynchronously sends a message, but returns before reading the
 response body, and allows you to read the response via a
-<a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a>.</p>
+<span class="type">GInputStream</span>.</p>
 <div class="refsect3">
 <a name="id-1.3.21.10.9.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -1026,7 +1054,7 @@ processed.)</p>
 <p>Contrast this method with <a class="link" href="SoupSession.html#soup-session-send" title="soup_session_send ()"><code class="function">soup_session_send()</code></a>, which also
 synchronously sends a message, but returns before reading the
 response body, and allows you to read the response via a
-<a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a>.</p>
+<span class="type">GInputStream</span>.</p>
 <div class="refsect3">
 <a name="id-1.3.21.10.11.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -1122,14 +1150,14 @@ returning to the main loop.</p>
 <hr>
 <div class="refsect2">
 <a name="soup-session-send"></a><h3>soup_session_send ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *
+<pre class="programlisting"><span class="returnvalue">GInputStream</span> *
 soup_session_send (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
                    <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                   <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                   <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                    <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>Synchronously sends <em class="parameter"><code>msg</code></em>
  and waits for the beginning of a response.
-On success, a <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> will be returned which you can use to
+On success, a <span class="type">GInputStream</span> will be returned which you can use to
 read the response body. ("Success" here means only that an HTTP
 response was received and understood; it does not necessarily mean
 that a 2xx class status code was received.)</p>
@@ -1172,7 +1200,7 @@ response has been completely read.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1185,7 +1213,7 @@ response has been completely read.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.21.10.13.10"></a><h4>Returns</h4>
-<p> a <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> for reading the
+<p> a <span class="type">GInputStream</span> for reading the
 response body, or <code class="literal">NULL</code> on error. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -1197,8 +1225,8 @@ response body, or <code class="literal">NULL</code> on error. </p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 soup_session_send_async (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
                          <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
-                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
-                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                         <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                         <em class="parameter"><code><span class="type">GAsyncReadyCallback</span> callback</code></em>,
                          <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
 <p>Asynchronously sends <em class="parameter"><code>msg</code></em>
  and waits for the beginning of a
@@ -1206,7 +1234,7 @@ response. When <em class="parameter"><code>callback</code></em>
  is called, then either <em class="parameter"><code>msg</code></em>
  has been sent,
 and its response headers received, or else an error has occurred.
-Call <a class="link" href="SoupSession.html#soup-session-send-finish" title="soup_session_send_finish ()"><code class="function">soup_session_send_finish()</code></a> to get a <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> for reading
+Call <a class="link" href="SoupSession.html#soup-session-send-finish" title="soup_session_send_finish ()"><code class="function">soup_session_send_finish()</code></a> to get a <span class="type">GInputStream</span> for reading
 the response body.</p>
 <p>See <a class="link" href="SoupSession.html#soup-session-send" title="soup_session_send ()"><code class="function">soup_session_send()</code></a> for more details on the general semantics.</p>
 <p>Contrast this method with <a class="link" href="SoupSession.html#soup-session-queue-message" title="soup_session_queue_message ()"><code class="function">soup_session_queue_message()</code></a>, which also
@@ -1237,7 +1265,7 @@ callback until the response has been completely read.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1259,12 +1287,12 @@ callback until the response has been completely read.</p>
 <hr>
 <div class="refsect2">
 <a name="soup-session-send-finish"></a><h3>soup_session_send_finish ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *
+<pre class="programlisting"><span class="returnvalue">GInputStream</span> *
 soup_session_send_finish (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
-                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                          <em class="parameter"><code><span class="type">GAsyncResult</span> *result</code></em>,
                           <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>Gets the response to a <a class="link" href="SoupSession.html#soup-session-send-async" title="soup_session_send_async ()"><code class="function">soup_session_send_async()</code></a> call and (if
-successful), returns a <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> that can be used to read the
+successful), returns a <span class="type">GInputStream</span> that can be used to read the
 response body.</p>
 <div class="refsect3">
 <a name="id-1.3.21.10.15.5"></a><h4>Parameters</h4>
@@ -1282,7 +1310,7 @@ response body.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>result</p></td>
-<td class="parameter_description"><p>the <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> passed to your callback</p></td>
+<td class="parameter_description"><p>the <span class="type">GAsyncResult</span> passed to your callback</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1295,7 +1323,7 @@ response body.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.21.10.15.6"></a><h4>Returns</h4>
-<p> a <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> for reading the
+<p> a <span class="type">GInputStream</span> for reading the
 response body, or <code class="literal">NULL</code> on error. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -1303,11 +1331,137 @@ response body, or <code class="literal">NULL</code> on error. </p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="soup-session-websocket-connect-async"></a><h3>soup_session_websocket_connect_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+soup_session_websocket_connect_async (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
+                                      <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>,
+                                      <em class="parameter"><code>const <span class="type">char</span> *origin</code></em>,
+                                      <em class="parameter"><code><span class="type">char</span> **protocols</code></em>,
+                                      <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                                      <em class="parameter"><code><span class="type">GAsyncReadyCallback</span> callback</code></em>,
+                                      <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>Asynchronously creates a <a class="link" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection"><span class="type">SoupWebsocketConnection</span></a> to communicate
+with a remote server.</p>
+<p>All necessary WebSocket-related headers will be added to <em class="parameter"><code>msg</code></em>
+, and
+it will then be sent and asynchronously processed normally
+(including handling of redirection and HTTP authentication).</p>
+<p>If the server returns "101 Switching Protocols", then <em class="parameter"><code>msg</code></em>
+'s status
+code and response headers will be updated, and then the WebSocket
+handshake will be completed. On success,
+<code class="function">soup_websocket_connect_finish()</code> will return a new
+<a class="link" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection"><span class="type">SoupWebsocketConnection</span></a>. On failure it will return a <span class="type">GError</span>.</p>
+<p>If the server returns a status other than "101 Switching
+Protocols", then <em class="parameter"><code>msg</code></em>
+ will contain the complete response headers
+and body from the server's response, and
+<code class="function">soup_websocket_connect_finish()</code> will return
+<a class="link" href="libsoup-2.4-WebSockets.html#SOUP-WEBSOCKET-ERROR-NOT-WEBSOCKET:CAPS"><code class="literal">SOUP_WEBSOCKET_ERROR_NOT_WEBSOCKET</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.21.10.16.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>msg</p></td>
+<td class="parameter_description"><p><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> indicating the WebSocket server to connect to</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>origin</p></td>
+<td class="parameter_description"><p> origin of the connection. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>protocols</p></td>
+<td class="parameter_description"><p> a
+<code class="literal">NULL</code>-terminated array of protocols supported. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>the callback to invoke</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>data for <em class="parameter"><code>callback</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.50</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-session-websocket-connect-finish"></a><h3>soup_session_websocket_connect_finish ()</h3>
+<pre class="programlisting"><a class="link" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection"><span class="returnvalue">SoupWebsocketConnection</span></a> *
+soup_session_websocket_connect_finish (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
+                                       <em class="parameter"><code><span class="type">GAsyncResult</span> *result</code></em>,
+                                       <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Gets the <a class="link" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection"><span class="type">SoupWebsocketConnection</span></a> response to a
+<a class="link" href="SoupSession.html#soup-session-websocket-connect-async" title="soup_session_websocket_connect_async ()"><code class="function">soup_session_websocket_connect_async()</code></a> call and (if successful),
+returns a <span class="type">SoupWebsockConnection</span> that can be used to communicate
+with the server.</p>
+<div class="refsect3">
+<a name="id-1.3.21.10.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>result</p></td>
+<td class="parameter_description"><p>the <span class="type">GAsyncResult</span> passed to your callback</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for a <span class="type">GError</span>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.10.17.6"></a><h4>Returns</h4>
+<p> a new <a class="link" href="libsoup-2.4-WebSockets.html#SoupWebsocketConnection"><span class="type">SoupWebsocketConnection</span></a>, or
+<code class="literal">NULL</code> on error. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.50</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="soup-session-prefetch-dns"></a><h3>soup_session_prefetch_dns ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 soup_session_prefetch_dns (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
                            <em class="parameter"><code>const <span class="type">char</span> *hostname</code></em>,
-                           <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                           <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                            <em class="parameter"><code><a class="link" href="SoupAddress.html#SoupAddressCallback" title="SoupAddressCallback ()"><span class="type">SoupAddressCallback</span></a> callback</code></em>,
                            <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
 <p>Tells <em class="parameter"><code>session</code></em>
@@ -1322,7 +1476,7 @@ resolution. <em class="parameter"><code>callback</code></em>
  will still be invoked in this case, with a
 status of <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-CANCELLED:CAPS"><code class="literal">SOUP_STATUS_CANCELLED</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.16.6"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.18.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1342,7 +1496,7 @@ status of <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-CANCELL
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p> a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_description"><p> a <span class="type">GCancellable</span> object, or <code class="literal">NULL</code>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -1379,7 +1533,7 @@ session can try to prepare (resolving the domain name, obtaining
 proxy address, etc.) in order to work more quickly once the URI is
 actually requested.</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.17.7"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.19.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1416,7 +1570,7 @@ persistent connections.</p>
 <a class="link" href="SoupSession.html#soup-session-abort" title="soup_session_abort ()"><code class="function">soup_session_abort()</code></a> returns. Requests on a plain <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> will
 not.</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.18.6"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.20.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1444,7 +1598,7 @@ redirect it to a new URL (ignoring <em class="parameter"><code>msg</code></em>
 's <a class="link" href="SoupMessage.html#SOUP-MESSAGE-NO-REDIRECT:CAPS"><code class="literal">SOUP_MESSAGE_NO_REDIRECT</code></a>
 flag, and the number of times it has already been redirected).</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.19.5"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.21.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1466,7 +1620,7 @@ flag, and the number of times it has already been redirected).</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.21.10.19.6"></a><h4>Returns</h4>
+<a name="id-1.3.21.10.21.6"></a><h4>Returns</h4>
 <p> whether <em class="parameter"><code>msg</code></em>
 would be redirected</p>
 <p></p>
@@ -1495,7 +1649,7 @@ request, then <em class="parameter"><code>msg</code></em>
  has already been redirected too many times, this will
 cause it to fail with <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-TOO-MANY-REDIRECTS:CAPS"><code class="literal">SOUP_STATUS_TOO_MANY_REDIRECTS</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.20.7"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.22.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1517,7 +1671,7 @@ cause it to fail with <a class="link" href="libsoup-2.4-soup-status.html#SOUP-ST
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.21.10.20.8"></a><h4>Returns</h4>
+<a name="id-1.3.21.10.22.8"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if a redirection was applied, <code class="literal">FALSE</code> if not
 (eg, because there was no Location header, or it could not be
 parsed).</p>
@@ -1537,7 +1691,7 @@ resume I/O.</p>
 <p>This may only be called for asynchronous messages (those sent on a
 <a class="link" href="SoupSessionAsync.html" title="SoupSessionAsync"><span class="type">SoupSessionAsync</span></a> or using <a class="link" href="SoupSession.html#soup-session-queue-message" title="soup_session_queue_message ()"><code class="function">soup_session_queue_message()</code></a>).</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.21.6"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.23.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1577,7 +1731,7 @@ reading or writing won't resume until you return to the main loop.</p>
 <p>This may only be called for asynchronous messages (those sent on a
 <a class="link" href="SoupSessionAsync.html" title="SoupSessionAsync"><span class="type">SoupSessionAsync</span></a> or using <a class="link" href="SoupSession.html#soup-session-queue-message" title="soup_session_queue_message ()"><code class="function">soup_session_queue_message()</code></a>).</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.22.7"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.24.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1612,7 +1766,7 @@ to outlive its session.</p>
 <p>For a modern <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a>, this will always just return the
 thread-default <span class="type">GMainContext</span>, and so is not especially useful.</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.23.6"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.25.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1627,7 +1781,7 @@ thread-default <span class="type">GMainContext</span>, and so is not especially 
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.21.10.23.7"></a><h4>Returns</h4>
+<a name="id-1.3.21.10.25.7"></a><h4>Returns</h4>
 <p> <em class="parameter"><code>session</code></em>
 's <span class="type">GMainContext</span>,
 which may be <code class="literal">NULL</code>. </p>
@@ -1648,7 +1802,7 @@ feature to the session at construct time by using the
 <p>See the main <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> documentation for information on what
 features are present in sessions by default.</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.24.6"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.26.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1676,7 +1830,7 @@ features are present in sessions by default.</p>
 <a name="soup-session-add-feature-by-type"></a><h3>soup_session_add_feature_by_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 soup_session_add_feature_by_type (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
-                                  <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> feature_type</code></em>);</pre>
+                                  <em class="parameter"><code><span class="type">GType</span> feature_type</code></em>);</pre>
 <p>If <em class="parameter"><code>feature_type</code></em>
  is the type of a class that implements
 <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>, this creates a new feature of that type and
@@ -1695,7 +1849,7 @@ using the <a class="link" href="SoupSession.html#SOUP-SESSION-ADD-FEATURE-BY-TYP
 <p>See the main <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> documentation for information on what
 features are present in sessions by default.</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.25.8"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.27.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1710,7 +1864,7 @@ features are present in sessions by default.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_type</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1728,7 +1882,7 @@ soup_session_remove_feature (<em class="parameter"><code><a class="link" href="S
 's functionality from <em class="parameter"><code>session</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.21.10.26.5"></a><h4>Parameters</h4>
+<a name="id-1.3.21.10.28.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1757,7 +1911,7 @@ soup_session_remove_feature (<em class="parameter"><code><a class="link" href="S
 <a name="soup-session-remove-feature-by-type"></a><h3>soup_session_remove_feature_by_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 soup_session_remove_feature_by_type (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
-                                     <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> feature_type</code></em>);</pre>
+                                     <em class="parameter"><code><span class="type">GType</span> feature_type</code></em>);</pre>
 <p>Removes all features of type <em class="parameter"><code>feature_type</code></em>
  (or any subclass of
 <em class="parameter"><code>feature_type</code></em>
@@ -1765,82 +1919,6 @@ soup_session_remove_feature_by_type (<em class="parameter"><code><a class="link"
 . You can also remove standard features
 from the session at construct time by using the
 <a class="link" href="SoupSession.html#SOUP-SESSION-REMOVE-FEATURE-BY-TYPE:CAPS" title="SOUP_SESSION_REMOVE_FEATURE_BY_TYPE"><code class="literal">SOUP_SESSION_REMOVE_FEATURE_BY_TYPE</code></a> property.</p>
-<div class="refsect3">
-<a name="id-1.3.21.10.27.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>session</p></td>
-<td class="parameter_description"><p>a <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>feature_type</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since 2.24</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="soup-session-get-features"></a><h3>soup_session_get_features ()</h3>
-<pre class="programlisting"><span class="returnvalue">GSList</span> *
-soup_session_get_features (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
-                           <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> feature_type</code></em>);</pre>
-<p>Generates a list of <em class="parameter"><code>session</code></em>
-'s features of type <em class="parameter"><code>feature_type</code></em>
-. (If
-you want to see all features, you can pass <code class="literal">SOUP_TYPE_SESSION_FEATURE</code>
-for <em class="parameter"><code>feature_type</code></em>
-.)</p>
-<div class="refsect3">
-<a name="id-1.3.21.10.28.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>session</p></td>
-<td class="parameter_description"><p>a <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>feature_type</p></td>
-<td class="parameter_description"><p>the <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of the class of features to get</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="id-1.3.21.10.28.6"></a><h4>Returns</h4>
-<p>a list of features. You must free the list, but not its contents. </p>
-<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> Soup.SessionFeature]</span></p>
-</div>
-<p class="since">Since 2.26</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="soup-session-get-feature"></a><h3>soup_session_get_feature ()</h3>
-<pre class="programlisting"><a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="returnvalue">SoupSessionFeature</span></a> *
-soup_session_get_feature (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
-                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> feature_type</code></em>);</pre>
-<p>Gets the first feature in <em class="parameter"><code>session</code></em>
- of type <em class="parameter"><code>feature_type</code></em>
-. For
-features where there may be more than one feature of a given type,
-use <a class="link" href="SoupSession.html#soup-session-get-features" title="soup_session_get_features ()"><code class="function">soup_session_get_features()</code></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.21.10.29.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -1857,40 +1935,26 @@ use <a class="link" href="SoupSession.html#soup-session-get-features" title="sou
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_type</p></td>
-<td class="parameter_description"><p>the <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of the feature to get</p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<div class="refsect3">
-<a name="id-1.3.21.10.29.6"></a><h4>Returns</h4>
-<p> a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>, or
-<code class="literal">NULL</code>. The feature is owned by <em class="parameter"><code>session</code></em>
-. </p>
-<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
-</div>
-<p class="since">Since 2.26</p>
+<p class="since">Since 2.24</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="soup-session-get-feature-for-message"></a><h3>soup_session_get_feature_for_message ()</h3>
-<pre class="programlisting"><a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="returnvalue">SoupSessionFeature</span></a> *
-soup_session_get_feature_for_message (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
-                                      <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> feature_type</code></em>,
-                                      <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);</pre>
-<p>Gets the first feature in <em class="parameter"><code>session</code></em>
- of type <em class="parameter"><code>feature_type</code></em>
-, provided
-that it is not disabled for <em class="parameter"><code>msg</code></em>
-. As with
-<a class="link" href="SoupSession.html#soup-session-get-feature" title="soup_session_get_feature ()"><code class="function">soup_session_get_feature()</code></a>, this should only be used for features
-where <em class="parameter"><code>feature_type</code></em>
- is only expected to match a single feature. In
-particular, if there are two matching features, and the first is
-disabled on <em class="parameter"><code>msg</code></em>
-, and the second is not, then this will return
-<code class="literal">NULL</code>, not the second feature.</p>
+<a name="soup-session-get-features"></a><h3>soup_session_get_features ()</h3>
+<pre class="programlisting"><span class="returnvalue">GSList</span> *
+soup_session_get_features (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
+                           <em class="parameter"><code><span class="type">GType</span> feature_type</code></em>);</pre>
+<p>Generates a list of <em class="parameter"><code>session</code></em>
+'s features of type <em class="parameter"><code>feature_type</code></em>
+. (If
+you want to see all features, you can pass <code class="literal">SOUP_TYPE_SESSION_FEATURE</code>
+for <em class="parameter"><code>feature_type</code></em>
+.)</p>
 <div class="refsect3">
 <a name="id-1.3.21.10.30.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -1907,12 +1971,7 @@ disabled on <em class="parameter"><code>msg</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_type</p></td>
-<td class="parameter_description"><p>the <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of the feature to get</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>msg</p></td>
-<td class="parameter_description"><p>a <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a></p></td>
+<td class="parameter_description"><p>the <span class="type">GType</span> of the class of features to get</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1920,25 +1979,22 @@ disabled on <em class="parameter"><code>msg</code></em>
 </div>
 <div class="refsect3">
 <a name="id-1.3.21.10.30.6"></a><h4>Returns</h4>
-<p> a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>, or <code class="literal">NULL</code>. The
-feature is owned by <em class="parameter"><code>session</code></em>
-. </p>
-<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p>a list of features. You must free the list, but not its contents. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> Soup.SessionFeature]</span></p>
 </div>
-<p class="since">Since 2.28</p>
+<p class="since">Since 2.26</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="soup-session-has-feature"></a><h3>soup_session_has_feature ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
-soup_session_has_feature (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
-                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> feature_type</code></em>);</pre>
-<p>Tests if <em class="parameter"><code>session</code></em>
- has at a feature of type <em class="parameter"><code>feature_type</code></em>
- (which can
-be the type of either a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>, or else a subtype of
-some class managed by another feature, such as <a class="link" href="SoupAuth.html" title="SoupAuth"><span class="type">SoupAuth</span></a> or
-<a class="link" href="SoupRequest.html" title="SoupRequest"><span class="type">SoupRequest</span></a>).</p>
+<a name="soup-session-get-feature"></a><h3>soup_session_get_feature ()</h3>
+<pre class="programlisting"><a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="returnvalue">SoupSessionFeature</span></a> *
+soup_session_get_feature (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
+                          <em class="parameter"><code><span class="type">GType</span> feature_type</code></em>);</pre>
+<p>Gets the first feature in <em class="parameter"><code>session</code></em>
+ of type <em class="parameter"><code>feature_type</code></em>
+. For
+features where there may be more than one feature of a given type,
+use <a class="link" href="SoupSession.html#soup-session-get-features" title="soup_session_get_features ()"><code class="function">soup_session_get_features()</code></a>.</p>
 <div class="refsect3">
 <a name="id-1.3.21.10.31.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -1955,7 +2011,7 @@ some class managed by another feature, such as <a class="link" href="SoupAuth.ht
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_type</p></td>
-<td class="parameter_description"><p>the <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of the class of features to check for</p></td>
+<td class="parameter_description"><p>the <span class="type">GType</span> of the feature to get</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1963,10 +2019,159 @@ some class managed by another feature, such as <a class="link" href="SoupAuth.ht
 </div>
 <div class="refsect3">
 <a name="id-1.3.21.10.31.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>, or
+<code class="literal">NULL</code>. The feature is owned by <em class="parameter"><code>session</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.26</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-session-get-feature-for-message"></a><h3>soup_session_get_feature_for_message ()</h3>
+<pre class="programlisting"><a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="returnvalue">SoupSessionFeature</span></a> *
+soup_session_get_feature_for_message (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
+                                      <em class="parameter"><code><span class="type">GType</span> feature_type</code></em>,
+                                      <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);</pre>
+<p>Gets the first feature in <em class="parameter"><code>session</code></em>
+ of type <em class="parameter"><code>feature_type</code></em>
+, provided
+that it is not disabled for <em class="parameter"><code>msg</code></em>
+. As with
+<a class="link" href="SoupSession.html#soup-session-get-feature" title="soup_session_get_feature ()"><code class="function">soup_session_get_feature()</code></a>, this should only be used for features
+where <em class="parameter"><code>feature_type</code></em>
+ is only expected to match a single feature. In
+particular, if there are two matching features, and the first is
+disabled on <em class="parameter"><code>msg</code></em>
+, and the second is not, then this will return
+<code class="literal">NULL</code>, not the second feature.</p>
+<div class="refsect3">
+<a name="id-1.3.21.10.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>feature_type</p></td>
+<td class="parameter_description"><p>the <span class="type">GType</span> of the feature to get</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>msg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.10.32.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>, or <code class="literal">NULL</code>. The
+feature is owned by <em class="parameter"><code>session</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.28</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-session-has-feature"></a><h3>soup_session_has_feature ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+soup_session_has_feature (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
+                          <em class="parameter"><code><span class="type">GType</span> feature_type</code></em>);</pre>
+<p>Tests if <em class="parameter"><code>session</code></em>
+ has at a feature of type <em class="parameter"><code>feature_type</code></em>
+ (which can
+be the type of either a <a class="link" href="SoupSessionFeature.html" title="SoupSessionFeature"><span class="type">SoupSessionFeature</span></a>, or else a subtype of
+some class managed by another feature, such as <a class="link" href="SoupAuth.html" title="SoupAuth"><span class="type">SoupAuth</span></a> or
+<a class="link" href="SoupRequest.html" title="SoupRequest"><span class="type">SoupRequest</span></a>).</p>
+<div class="refsect3">
+<a name="id-1.3.21.10.33.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>feature_type</p></td>
+<td class="parameter_description"><p>the <span class="type">GType</span> of the class of features to check for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.10.33.6"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> or <code class="literal">FALSE</code></p>
 <p></p>
 </div>
 <p class="since">Since 2.42</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="soup-session-steal-connection"></a><h3>soup_session_steal_connection ()</h3>
+<pre class="programlisting"><span class="returnvalue">GIOStream</span> *
+soup_session_steal_connection (<em class="parameter"><code><a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session</code></em>,
+                               <em class="parameter"><code><a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> *msg</code></em>);</pre>
+<p>"Steals" the HTTP connection associated with <em class="parameter"><code>msg</code></em>
+ from <em class="parameter"><code>session</code></em>
+.
+This happens immediately, regardless of the current state of the
+connection, and <em class="parameter"><code>msg</code></em>
+'s callback will not be called. You can steal
+the connection from a <a class="link" href="SoupMessage.html" title="SoupMessage"><span class="type">SoupMessage</span></a> signal handler if you need to
+wait for part or all of the response to be received first.</p>
+<p>Calling this function may cause <em class="parameter"><code>msg</code></em>
+ to be freed if you are not
+holding any other reference to it.</p>
+<div class="refsect3">
+<a name="id-1.3.21.10.34.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>msg</p></td>
+<td class="parameter_description"><p>the message whose connection is to be stolen</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.10.34.7"></a><h4>Returns</h4>
+<p> the <span class="type">GIOStream</span> formerly associated
+with <em class="parameter"><code>msg</code></em>
+(or <code class="literal">NULL</code> if <em class="parameter"><code>msg</code></em>
+was no longer associated with a
+connection). No guarantees are made about what kind of <span class="type">GIOStream</span>
+is returned. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.50</p>
 </div>
 </div>
 <div class="refsect1">
@@ -2094,6 +2299,14 @@ qv.</p>
 </pre>
 <p>Alias for the <a class="link" href="SoupSession.html#SoupSession--ssl-strict" title="The “ssl-strict” property"><span class="type">“ssl-strict”</span></a> property, qv.</p>
 <p class="since">Since 2.30</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="SOUP-SESSION-TLS-INTERACTION:CAPS"></a><h3>SOUP_SESSION_TLS_INTERACTION</h3>
+<pre class="programlisting">#define SOUP_SESSION_TLS_INTERACTION        "tls-interaction"
+</pre>
+<p>Alias for the <a class="link" href="SoupSession.html#SoupSession--tls-interaction" title="The “tls-interaction” property"><span class="type">“tls-interaction”</span></a> property, qv.</p>
+<p class="since">Since 2.48</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2236,7 +2449,7 @@ sent, based on the return value of <code class="function">g_get_language_names()
 <hr>
 <div class="refsect2">
 <a name="SoupSession--add-feature-by-type"></a><h3>The <code class="literal">“add-feature-by-type”</code> property</h3>
-<pre class="programlisting">  “add-feature-by-type”      <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> *</pre>
+<pre class="programlisting">  “add-feature-by-type”      <span class="type">GType</span> *</pre>
 <p>Add a feature object of the given type to the session.
 (Shortcut for calling <a class="link" href="SoupSession.html#soup-session-add-feature-by-type" title="soup_session_add_feature_by_type ()"><code class="function">soup_session_add_feature_by_type()</code></a>.)</p>
 <p>Flags: Read / Write</p>
@@ -2263,7 +2476,7 @@ will also be used for asynchronous HTTP I/O.</p>
 <hr>
 <div class="refsect2">
 <a name="SoupSession--http-aliases"></a><h3>The <code class="literal">“http-aliases”</code> property</h3>
-<pre class="programlisting">  “http-aliases”             <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></pre>
+<pre class="programlisting">  “http-aliases”             <span class="type">GStrv</span></pre>
 <p>A <code class="literal">NULL</code>-terminated array of URI schemes that should be
 considered to be aliases for "http". Eg, if this included
 <code class="literal">"dav"</code>, than a URI of
@@ -2283,7 +2496,7 @@ be an alias for "http".</p>
 <hr>
 <div class="refsect2">
 <a name="SoupSession--https-aliases"></a><h3>The <code class="literal">“https-aliases”</code> property</h3>
-<pre class="programlisting">  “https-aliases”            <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></pre>
+<pre class="programlisting">  “https-aliases”            <span class="type">GStrv</span></pre>
 <p>A comma-delimited list of URI schemes that should be
 considered to be aliases for "https". See
 <a class="link" href="SoupSession.html#SoupSession--http-aliases" title="The “http-aliases” property"><span class="type">“http-aliases”</span></a> for more information.</p>
@@ -2343,15 +2556,15 @@ local socket to a specific IP address.</p>
 <hr>
 <div class="refsect2">
 <a name="SoupSession--proxy-resolver"></a><h3>The <code class="literal">“proxy-resolver”</code> property</h3>
-<pre class="programlisting">  “proxy-resolver”           <a href="http://library.gnome.org/devel/gio/unstable/GProxyResolver.html"><span class="type">GProxyResolver</span></a> *</pre>
-<p>A <a href="http://library.gnome.org/devel/gio/unstable/GProxyResolver.html"><span class="type">GProxyResolver</span></a> to use with this session. Setting this
+<pre class="programlisting">  “proxy-resolver”           <span class="type">GProxyResolver</span> *</pre>
+<p>A <span class="type">GProxyResolver</span> to use with this session. Setting this
 will clear the <a class="link" href="SoupSession.html#SoupSession--proxy-uri" title="The “proxy-uri” property"><span class="type">“proxy-uri”</span></a> property, and remove
 any <span class="type">SoupProxyURIResolver</span> features that have
 been added to the session.</p>
 <p>By default, in a plain <a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a>, this is set to the
-default <a href="http://library.gnome.org/devel/gio/unstable/GProxyResolver.html"><span class="type">GProxyResolver</span></a>, but you can set it to <code class="literal">NULL</code> if you
+default <span class="type">GProxyResolver</span>, but you can set it to <code class="literal">NULL</code> if you
 don't want to use proxies, or set it to your own
-<a href="http://library.gnome.org/devel/gio/unstable/GProxyResolver.html"><span class="type">GProxyResolver</span></a> if you want to control what proxies get
+<span class="type">GProxyResolver</span> if you want to control what proxies get
 used.</p>
 <p>Flags: Read / Write</p>
 <p class="since">Since 2.42</p>
@@ -2373,14 +2586,14 @@ normal proxy settings.</p>
 <p>Also note that this proxy will be used for
 <span class="emphasis"><em>all</em></span> requests; even requests to
 <code class="literal">localhost</code>. If you need more control over
-proxies, you can create a <a href="http://library.gnome.org/devel/gio/unstable/GSimpleProxyResolver.html"><span class="type">GSimpleProxyResolver</span></a> and set the
+proxies, you can create a <span class="type">GSimpleProxyResolver</span> and set the
 <a class="link" href="SoupSession.html#SoupSession--proxy-resolver" title="The “proxy-resolver” property"><span class="type">“proxy-resolver”</span></a> property.</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupSession--remove-feature-by-type"></a><h3>The <code class="literal">“remove-feature-by-type”</code> property</h3>
-<pre class="programlisting">  “remove-feature-by-type”   <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> *</pre>
+<pre class="programlisting">  “remove-feature-by-type”   <span class="type">GType</span> *</pre>
 <p>Remove feature objects from the session. (Shortcut for
 calling <a class="link" href="SoupSession.html#soup-session-remove-feature-by-type" title="soup_session_remove_feature_by_type ()"><code class="function">soup_session_remove_feature_by_type()</code></a>.)</p>
 <p>Flags: Read / Write</p>
@@ -2399,7 +2612,7 @@ certificates will be considered invalid.</p>
 <div class="warning">
 <p><code class="literal">SoupSession:ssl-ca-file</code> is deprecated and should not be used in newly-written code.</p>
 <p>use <a class="link" href="SoupSession.html#SoupSession--ssl-use-system-ca-file" title="The “ssl-use-system-ca-file” property"><span class="type">“ssl-use-system-ca-file”</span></a>, or
-else <a class="link" href="SoupSession.html#SoupSession--tls-database" title="The “tls-database” property"><span class="type">“tls-database”</span></a> with a <a href="http://library.gnome.org/devel/gio/unstable/GTlsFileDatabase.html"><span class="type">GTlsFileDatabase</span></a>
+else <a class="link" href="SoupSession.html#SoupSession--tls-database" title="The “tls-database” property"><span class="type">“tls-database”</span></a> with a <span class="type">GTlsFileDatabase</span>
 (which allows you to do explicit error handling).</p>
 </div>
 <p>Flags: Read / Write</p>
@@ -2479,12 +2692,12 @@ kept open).</p>
 <hr>
 <div class="refsect2">
 <a name="SoupSession--tls-database"></a><h3>The <code class="literal">“tls-database”</code> property</h3>
-<pre class="programlisting">  “tls-database”             <a href="http://library.gnome.org/devel/gio/unstable/GTlsDatabase.html"><span class="type">GTlsDatabase</span></a> *</pre>
-<p>Sets the <a href="http://library.gnome.org/devel/gio/unstable/GTlsDatabase.html"><span class="type">GTlsDatabase</span></a> to use for validating SSL/TLS
+<pre class="programlisting">  “tls-database”             <span class="type">GTlsDatabase</span> *</pre>
+<p>Sets the <span class="type">GTlsDatabase</span> to use for validating SSL/TLS
 certificates.</p>
 <p>Note that setting the <a class="link" href="SoupSession.html#SoupSession--ssl-ca-file" title="The “ssl-ca-file” property"><span class="type">“ssl-ca-file”</span></a> or
 <a class="link" href="SoupSession.html#SoupSession--ssl-use-system-ca-file" title="The “ssl-use-system-ca-file” property"><span class="type">“ssl-use-system-ca-file”</span></a> property will cause
-this property to be set to a <a href="http://library.gnome.org/devel/gio/unstable/GTlsDatabase.html"><span class="type">GTlsDatabase</span></a> corresponding to
+this property to be set to a <span class="type">GTlsDatabase</span> corresponding to
 the indicated file or system default.</p>
 <p>See <a class="link" href="SoupSession.html#SoupSession--ssl-strict" title="The “ssl-strict” property"><span class="type">“ssl-strict”</span></a> for more information on how
 https certificate validation is handled.</p>
@@ -2499,9 +2712,9 @@ CA database. If you are using <a class="link" href="SoupSessionAsync.html" title
 <hr>
 <div class="refsect2">
 <a name="SoupSession--tls-interaction"></a><h3>The <code class="literal">“tls-interaction”</code> property</h3>
-<pre class="programlisting">  “tls-interaction”          <a href="http://library.gnome.org/devel/gio/unstable/GTlsInteraction.html"><span class="type">GTlsInteraction</span></a> *</pre>
-<p>A <a href="http://library.gnome.org/devel/gio/unstable/GTlsInteraction.html"><span class="type">GTlsInteraction</span></a> object that will be passed on to any
-<a href="http://library.gnome.org/devel/gio/unstable/GTlsConnection.html"><span class="type">GTlsConnections</span></a> created by the session. (This can be used to
+<pre class="programlisting">  “tls-interaction”          <span class="type">GTlsInteraction</span> *</pre>
+<p>A <span class="type">GTlsInteraction</span> object that will be passed on to any
+<span class="type">GTlsConnections</span> created by the session. (This can be used to
 provide client-side certificates, for example.)</p>
 <p>Flags: Read / Write</p>
 <p class="since">Since 2.48</p>
@@ -2586,7 +2799,7 @@ fully read.</p>
  before
 returning, then you can authenticate <em class="parameter"><code>auth</code></em>
  asynchronously
-(as long as you <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref"><code class="function">g_object_ref()</code></a> it to make sure it doesn't
+(as long as you <code class="function">g_object_ref()</code> it to make sure it doesn't
 get destroyed), and then unpause <em class="parameter"><code>msg</code></em>
  when you are ready
 for it to continue.</p>
@@ -2634,7 +2847,7 @@ for it to continue.</p>
 <a name="SoupSession-connection-created"></a><h3>The <code class="literal">“connection-created”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session,
-               <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>     *connection,
+               <span class="type">GObject</span>     *connection,
                <span class="type">gpointer</span>     user_data)</pre>
 <p>Emitted when a new connection is created. This is an
 internal signal intended only to be used for debugging
@@ -2748,8 +2961,12 @@ user_function (<a class="link" href="SoupSession.html" title="SoupSession"><span
 <p>Emitted just before a request is sent. See
 <a class="link" href="SoupSession.html#SoupSession-request-queued" title="The “request-queued” signal"><span class="type">“request_queued”</span></a> for a detailed description of
 the message lifecycle within a session.</p>
+<div class="warning">
+<p><code class="literal">SoupSession::request-started</code> has been deprecated since version 2.50. and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="SoupMessage.html#SoupMessage-starting" title="The “starting” signal"><span class="type">“starting”</span></a> instead.</p>
+</div>
 <div class="refsect3">
-<a name="id-1.3.21.13.5.5"></a><h4>Parameters</h4>
+<a name="id-1.3.21.13.5.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2830,7 +3047,7 @@ message lifecycle within a session.</p>
 <a name="SoupSession-tunneling"></a><h3>The <code class="literal">“tunneling”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="SoupSession.html" title="SoupSession"><span class="type">SoupSession</span></a> *session,
-               <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>     *connection,
+               <span class="type">GObject</span>     *connection,
                <span class="type">gpointer</span>     user_data)</pre>
 <p>Emitted when an SSL tunnel is being created on a proxy
 connection. This is an internal signal intended only to be

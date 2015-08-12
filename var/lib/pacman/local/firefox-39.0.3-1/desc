@@ -1,0 +1,58 @@
+%NAME%
+firefox
+
+%VERSION%
+39.0.3-1
+
+%DESC%
+Standalone web browser from mozilla.org
+
+%URL%
+https://www.mozilla.org/firefox/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1439094490
+
+%INSTALLDATE%
+1439237031
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+91281408
+
+%LICENSE%
+MPL
+GPL
+LGPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+gtk2
+mozilla-common
+libxt
+startup-notification
+mime-types
+dbus-glib
+alsa-lib
+desktop-file-utils
+hicolor-icon-theme
+libvpx
+icu
+libevent
+nss
+hunspell
+sqlite
+
+%OPTDEPENDS%
+networkmanager: Location detection via available WiFi networks
+gst-plugins-good: h.264 video
+gst-libav: h.264 video
+upower: Battery API
+

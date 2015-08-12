@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ATK - Accessibility Toolkit: AtkObject</title>
+<title>AtkObject: ATK - Accessibility Toolkit</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="ATK - Accessibility Toolkit">
 <link rel="up" href="atkobject.html" title="Base accessibility object">
@@ -155,7 +155,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="AtkObject.html#AtkStateSet"><span class="returnvalue">AtkStateSet</span></a> *
+<a class="link" href="AtkStateSet.html" title="AtkStateSet"><span class="returnvalue">AtkStateSet</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="AtkObject.html#atk-object-ref-state-set" title="atk_object_ref_state_set ()">atk_object_ref_state_set</a> <span class="c_punctuation">()</span>
@@ -428,7 +428,7 @@
 </tbody>
 </table></div>
 </div>
-<a name="AtkImplementorIface"></a><a name="AtkStateSet"></a><div class="refsect1">
+<a name="AtkImplementorIface"></a><div class="refsect1">
 <a name="AtkObject.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
@@ -469,13 +469,12 @@
 </div>
 <div class="refsect1">
 <a name="AtkObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GInterface
+<pre class="screen">    <a href="/opt/gnome3/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> AtkImplementorIface
     GObject
-    <span class="lineart">├──</span> AtkObject
-    <span class="lineart">│</span>   <span class="lineart">├──</span> <a class="link" href="AtkGObjectAccessible.html" title="AtkGObjectAccessible">AtkGObjectAccessible</a>
-    <span class="lineart">│</span>   <span class="lineart">╰──</span> <a class="link" href="AtkNoOpObject.html" title="AtkNoOpObject">AtkNoOpObject</a>
-    <span class="lineart">╰──</span> AtkStateSet
+    <span class="lineart">╰──</span> AtkObject
+        <span class="lineart">├──</span> <a class="link" href="AtkGObjectAccessible.html" title="AtkGObjectAccessible">AtkGObjectAccessible</a>
+        <span class="lineart">╰──</span> <a class="link" href="AtkNoOpObject.html" title="AtkNoOpObject">AtkNoOpObject</a>
 </pre>
 </div>
 <div class="refsect1">
@@ -522,7 +521,7 @@ submit a bug in order to add a new role to the specification.</p>
  must be a meaningful
 name. So it should not be empty, or consisting on whitespaces.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.2.6"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.2.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -537,7 +536,7 @@ name. So it should not be empty, or consisting on whitespaces.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.2.7"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.2.7"></a><h4>Returns</h4>
 <p> an <a class="link" href="AtkObject.html#AtkRole" title="enum AtkRole"><span class="type">AtkRole</span></a> for the new role if added
 properly. ATK_ROLE_INVALID in case of error.</p>
 <p></p>
@@ -552,7 +551,7 @@ properly. ATK_ROLE_INVALID in case of error.</p>
 been added to class and interface structures to allow for expansion
 in the future.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.3.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.3.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -567,7 +566,7 @@ in the future.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.3.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.3.6"></a><h4>Returns</h4>
 <p> not used</p>
 <p></p>
 </div>
@@ -586,7 +585,7 @@ in the future.</p>
 AtkObject's property changes value. It is specified in a call to
 <a class="link" href="AtkObject.html#atk-object-connect-property-change-handler" title="atk_object_connect_property_change_handler ()"><code class="function">atk_object_connect_property_change_handler()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.4.6"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.4.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -616,7 +615,7 @@ atk_implementor_ref_accessible (<em class="parameter"><code><a class="link" href
 <p>Gets a reference to an object's <a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> implementation, if
 the object implements <span class="type">AtkObjectIface</span></p>
 <div class="refsect3">
-<a name="id-1.3.2.12.5.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.5.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -632,7 +631,7 @@ if a non-null return value is required.</p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.5.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.5.6"></a><h4>Returns</h4>
 <p> a reference to an object's <a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a>
 implementation. </p>
 <p><span class="annotation">[<a href="http://foldoc.org/transfer%20full"><span class="acronym">transfer full</span></a>]</span></p>
@@ -645,7 +644,7 @@ implementation. </p>
 atk_object_get_name (<em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *accessible</code></em>);</pre>
 <p>Gets the accessible name of the accessible.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.6.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.6.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -660,7 +659,7 @@ atk_object_get_name (<em class="parameter"><code><a class="link" href="AtkObject
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.6.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.6.6"></a><h4>Returns</h4>
 <p> a character string representing the accessible name of the object.</p>
 <p></p>
 </div>
@@ -672,7 +671,7 @@ atk_object_get_name (<em class="parameter"><code><a class="link" href="AtkObject
 atk_object_get_description (<em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *accessible</code></em>);</pre>
 <p>Gets the accessible description of the accessible.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.7.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -687,7 +686,7 @@ atk_object_get_description (<em class="parameter"><code><a class="link" href="At
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.7.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.7.6"></a><h4>Returns</h4>
 <p> a character string representing the accessible description
 of the accessible.</p>
 <p></p>
@@ -706,7 +705,7 @@ without the need of assigning it manually with
 <p>If you are only interested on the parent assigned with
 <a class="link" href="AtkObject.html#atk-object-set-parent" title="atk_object_set_parent ()"><code class="function">atk_object_set_parent()</code></a>, use <a class="link" href="AtkObject.html#atk-object-peek-parent" title="atk_object_peek_parent ()"><code class="function">atk_object_peek_parent()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.8.6"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.8.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -721,7 +720,7 @@ without the need of assigning it manually with
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.8.7"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.8.7"></a><h4>Returns</h4>
 <p> an <a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> representing the accessible
 parent of the accessible. </p>
 <p><span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span></p>
@@ -739,7 +738,7 @@ function returns <code class="literal">NULL</code>.</p>
 to be exposed to accessible tools. See <a class="link" href="AtkObject.html#atk-object-get-parent" title="atk_object_get_parent ()"><code class="function">atk_object_get_parent()</code></a> for
 further reference.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.9.6"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.9.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -754,7 +753,7 @@ further reference.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.9.7"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.9.7"></a><h4>Returns</h4>
 <p> an <a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> representing the accessible
 parent of the accessible if assigned. </p>
 <p><span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span></p>
@@ -767,7 +766,7 @@ parent of the accessible if assigned. </p>
 atk_object_get_n_accessible_children (<em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *accessible</code></em>);</pre>
 <p>Gets the number of accessible children of the accessible.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.10.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.10.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -782,7 +781,7 @@ atk_object_get_n_accessible_children (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.10.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.10.6"></a><h4>Returns</h4>
 <p> an integer representing the number of accessible children
 of the accessible.</p>
 <p></p>
@@ -798,7 +797,7 @@ atk_object_ref_accessible_child (<em class="parameter"><code><a class="link" hre
 The accessible children are 0-based so the first accessible child is
 at index 0, the second at index 1 and so on.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.11.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -820,7 +819,7 @@ at index 0, the second at index 1 and so on.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.11.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.11.6"></a><h4>Returns</h4>
 <p> an <a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> representing the specified
 accessible child of the accessible. </p>
 <p><span class="annotation">[<a href="http://foldoc.org/transfer%20full"><span class="acronym">transfer full</span></a>]</span></p>
@@ -833,7 +832,7 @@ accessible child of the accessible. </p>
 atk_object_ref_relation_set (<em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *accessible</code></em>);</pre>
 <p>Gets the <a class="link" href="AtkRelationSet.html" title="AtkRelationSet"><span class="type">AtkRelationSet</span></a> associated with the object.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.12.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.12.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -848,7 +847,7 @@ atk_object_ref_relation_set (<em class="parameter"><code><a class="link" href="A
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.12.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.12.6"></a><h4>Returns</h4>
 <p> an <a class="link" href="AtkRelationSet.html" title="AtkRelationSet"><span class="type">AtkRelationSet</span></a> representing the relation set
 of the object. </p>
 <p><span class="annotation">[<a href="http://foldoc.org/transfer%20full"><span class="acronym">transfer full</span></a>]</span></p>
@@ -865,7 +864,7 @@ atk_object_get_layer (<em class="parameter"><code><a class="link" href="AtkObjec
 </div>
 <p>Gets the layer of the accessible.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.13.6"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.13.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -880,7 +879,7 @@ atk_object_get_layer (<em class="parameter"><code><a class="link" href="AtkObjec
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.13.7"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.13.7"></a><h4>Returns</h4>
 <p> an <a class="link" href="AtkObject.html#AtkLayer" title="enum AtkLayer"><span class="type">AtkLayer</span></a> which is the layer of the accessible</p>
 <p></p>
 </div>
@@ -897,7 +896,7 @@ atk_object_get_mdi_zorder (<em class="parameter"><code><a class="link" href="Atk
 <p>Gets the zorder of the accessible. The value G_MININT will be returned 
 if the layer of the accessible is not ATK_LAYER_MDI.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.14.6"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.14.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -912,7 +911,7 @@ if the layer of the accessible is not ATK_LAYER_MDI.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.14.7"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.14.7"></a><h4>Returns</h4>
 <p> a gint which is the zorder of the accessible, i.e. the depth at
 which the component is shown in relation to other components in the same
 container.</p>
@@ -926,7 +925,7 @@ container.</p>
 atk_object_get_role (<em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *accessible</code></em>);</pre>
 <p>Gets the role of the accessible.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.15.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -941,7 +940,7 @@ atk_object_get_role (<em class="parameter"><code><a class="link" href="AtkObject
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.15.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.15.6"></a><h4>Returns</h4>
 <p> an <a class="link" href="AtkObject.html#AtkRole" title="enum AtkRole"><span class="type">AtkRole</span></a> which is the role of the accessible</p>
 <p></p>
 </div>
@@ -949,12 +948,12 @@ atk_object_get_role (<em class="parameter"><code><a class="link" href="AtkObject
 <hr>
 <div class="refsect2">
 <a name="atk-object-ref-state-set"></a><h3>atk_object_ref_state_set ()</h3>
-<pre class="programlisting"><a class="link" href="AtkObject.html#AtkStateSet"><span class="returnvalue">AtkStateSet</span></a> *
+<pre class="programlisting"><a class="link" href="AtkStateSet.html" title="AtkStateSet"><span class="returnvalue">AtkStateSet</span></a> *
 atk_object_ref_state_set (<em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *accessible</code></em>);</pre>
 <p>Gets a reference to the state set of the accessible; the caller must
 unreference it when it is no longer needed.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.16.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.16.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -969,8 +968,8 @@ unreference it when it is no longer needed.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.16.6"></a><h4>Returns</h4>
-<p> a reference to an <a class="link" href="AtkObject.html#AtkStateSet"><span class="type">AtkStateSet</span></a> which is the state
+<a name="id-1.3.2.11.16.6"></a><h4>Returns</h4>
+<p> a reference to an <a class="link" href="AtkStateSet.html" title="AtkStateSet"><span class="type">AtkStateSet</span></a> which is the state
 set of the accessible. </p>
 <p><span class="annotation">[<a href="http://foldoc.org/transfer%20full"><span class="acronym">transfer full</span></a>]</span></p>
 </div>
@@ -983,7 +982,7 @@ atk_object_get_index_in_parent (<em class="parameter"><code><a class="link" href
 <p>Gets the 0-based index of this accessible in its parent; returns -1 if the
 accessible does not have an accessible parent.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.17.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.17.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -998,7 +997,7 @@ accessible does not have an accessible parent.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.17.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.17.6"></a><h4>Returns</h4>
 <p> an integer which is the index of the accessible in its parent</p>
 <p></p>
 </div>
@@ -1014,7 +1013,7 @@ to NULL. This is reserved for the initial value. In this aspect
 NULL is similar to ATK_ROLE_UNKNOWN. If you want to set the name to
 a empty value you can use "".</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.18.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.18.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1047,7 +1046,7 @@ the description to NULL. This is reserved for the initial value. In
 this aspect NULL is similar to ATK_ROLE_UNKNOWN. If you want to set
 the name to a empty value you can use "".</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.19.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.19.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1078,7 +1077,7 @@ atk_object_set_parent (<em class="parameter"><code><a class="link" href="AtkObje
 <p>Sets the accessible parent of the accessible. <em class="parameter"><code>parent</code></em>
  can be NULL.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.20.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.20.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1108,7 +1107,7 @@ atk_object_set_role (<em class="parameter"><code><a class="link" href="AtkObject
                      <em class="parameter"><code><a class="link" href="AtkObject.html#AtkRole" title="enum AtkRole"><span class="type">AtkRole</span></a> role</code></em>);</pre>
 <p>Sets the role of the accessible.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.21.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.21.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1143,7 +1142,7 @@ atk_object_connect_property_change_handler
 notify signals.</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.22.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.22.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1165,7 +1164,7 @@ notify signals.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.22.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.22.6"></a><h4>Returns</h4>
 <p> a <span class="type">guint</span> which is the handler id used in
 <a class="link" href="AtkObject.html#atk-object-remove-property-change-handler" title="atk_object_remove_property_change_handler ()"><code class="function">atk_object_remove_property_change_handler()</code></a></p>
 <p></p>
@@ -1184,7 +1183,7 @@ atk_object_remove_property_change_handler
 <p>Removes a property change handler.</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.23.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.23.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1214,8 +1213,10 @@ atk_object_notify_state_change (<em class="parameter"><code><a class="link" href
                                 <em class="parameter"><code><a class="link" href="atk-AtkState.html#AtkState" title="AtkState"><span class="type">AtkState</span></a> state</code></em>,
                                 <em class="parameter"><code><span class="type">gboolean</span> value</code></em>);</pre>
 <p>Emits a state-change signal for the specified state.</p>
+<p>Note that as a general rule when the state of an existing object changes,
+emitting a notification is expected.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.24.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.24.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1253,7 +1254,7 @@ It does initialization required for the new object. It is intended
 that this function should called only in the ..._new() functions used
 to create an instance of a subclass of <a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a></p>
 <div class="refsect3">
-<a name="id-1.3.2.12.25.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.25.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1284,7 +1285,7 @@ atk_object_add_relationship (<em class="parameter"><code><a class="link" href="A
                              <em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *target</code></em>);</pre>
 <p>Adds a relationship of the specified type with the specified target.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.26.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.26.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1311,7 +1312,7 @@ atk_object_add_relationship (<em class="parameter"><code><a class="link" href="A
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.26.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.26.6"></a><h4>Returns</h4>
 <p> TRUE if the relationship is added.</p>
 <p></p>
 </div>
@@ -1325,7 +1326,7 @@ atk_object_remove_relationship (<em class="parameter"><code><a class="link" href
                                 <em class="parameter"><code><a class="link" href="AtkObject.html" title="AtkObject"><span class="type">AtkObject</span></a> *target</code></em>);</pre>
 <p>Removes a relationship of the specified type with the specified target.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.27.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.27.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1352,7 +1353,7 @@ atk_object_remove_relationship (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.27.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.27.6"></a><h4>Returns</h4>
 <p> TRUE if the relationship is removed.</p>
 <p></p>
 </div>
@@ -1367,7 +1368,7 @@ name-value pairs. As such these attributes may be considered weakly-typed proper
 as distinct from strongly-typed object data available via other get/set methods.
 Not all objects have explicit "name-value pair" <a class="link" href="AtkObject.html#AtkAttributeSet" title="AtkAttributeSet"><span class="type">AtkAttributeSet</span></a> properties.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.28.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.28.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1382,7 +1383,7 @@ Not all objects have explicit "name-value pair" <a class="link" href="AtkObject.
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.28.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.28.6"></a><h4>Returns</h4>
 <p> an <a class="link" href="AtkObject.html#AtkAttributeSet" title="AtkAttributeSet"><span class="type">AtkAttributeSet</span></a> consisting of all
 explicit properties/annotations applied to the object, or an empty
 set if the object has no name-value pair attributes assigned to
@@ -1401,7 +1402,7 @@ atk_object_get_object_locale (<em class="parameter"><code><a class="link" href="
 of <em class="parameter"><code>accessible</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.29.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.29.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1416,7 +1417,7 @@ of <em class="parameter"><code>accessible</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.29.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.29.6"></a><h4>Returns</h4>
 <p> a UTF-8 string indicating the POSIX-style LC_MESSAGES
 locale of <em class="parameter"><code>accessible</code></em>
 .</p>
@@ -1432,7 +1433,7 @@ atk_role_get_name (<em class="parameter"><code><a class="link" href="AtkObject.h
 <p>Gets the description string describing the <a class="link" href="AtkObject.html#AtkRole" title="enum AtkRole"><span class="type">AtkRole</span></a> <em class="parameter"><code>role</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.30.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.30.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1447,7 +1448,7 @@ atk_role_get_name (<em class="parameter"><code><a class="link" href="AtkObject.h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.30.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.30.6"></a><h4>Returns</h4>
 <p> the string describing the AtkRole</p>
 <p></p>
 </div>
@@ -1460,7 +1461,7 @@ atk_role_get_localized_name (<em class="parameter"><code><a class="link" href="A
 <p>Gets the localized description string describing the <a class="link" href="AtkObject.html#AtkRole" title="enum AtkRole"><span class="type">AtkRole</span></a> <em class="parameter"><code>role</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.31.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.31.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1475,7 +1476,7 @@ atk_role_get_localized_name (<em class="parameter"><code><a class="link" href="A
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.31.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.31.6"></a><h4>Returns</h4>
 <p> the localized string describing the AtkRole</p>
 <p></p>
 </div>
@@ -1487,7 +1488,7 @@ atk_role_get_localized_name (<em class="parameter"><code><a class="link" href="A
 atk_role_for_name (<em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);</pre>
 <p>Get the <a class="link" href="AtkObject.html#AtkRole" title="enum AtkRole"><span class="type">AtkRole</span></a> type corresponding to a rolew name.</p>
 <div class="refsect3">
-<a name="id-1.3.2.12.32.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.11.32.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1502,7 +1503,7 @@ atk_role_for_name (<em class="parameter"><code>const <span class="type">gchar</s
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.12.32.6"></a><h4>Returns</h4>
+<a name="id-1.3.2.11.32.6"></a><h4>Returns</h4>
 <p> the <a class="link" href="AtkObject.html#AtkRole" title="enum AtkRole"><span class="type">AtkRole</span></a> enumerated type corresponding to the specified name,
 or <a class="link" href="AtkObject.html#ATK-ROLE-INVALID:CAPS"><span class="type">ATK_ROLE_INVALID</span></a> if no matching role is found.</p>
 <p></p>
@@ -1525,7 +1526,7 @@ or <a class="link" href="AtkObject.html#ATK-ROLE-INVALID:CAPS"><span class="type
 ATK.  Other roles may be added at runtime, so an AtkRole &gt;=
 ATK_ROLE_LAST_DEFINED is not necessarily an error.</p>
 <div class="refsect3">
-<a name="id-1.3.2.13.3.5"></a><h4>Members</h4>
+<a name="id-1.3.2.12.3.5"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -1957,7 +1958,13 @@ ATK_ROLE_LAST_DEFINED is not necessarily an error.</p>
 <tr>
 <td class="enum_member_name"><p><a name="ATK-ROLE-TEXT:CAPS"></a>ATK_ROLE_TEXT</p></td>
 <td class="enum_member_description">
-<p>An object that presents text to the user</p>
+<p>An interactive widget that supports multiple lines of text and
+optionally accepts user input, but whose purpose is not to solicit user input.
+Thus ATK_ROLE_TEXT is appropriate for the text view in a plain text editor
+but inappropriate for an input field in a dialog box or web form. For widgets
+whose purpose is to solicit input from the user, see ATK_ROLE_ENTRY and
+ATK_ROLE_PASSWORD_TEXT. For generic objects which display a brief amount of
+textual information, see ATK_ROLE_STATIC.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2448,6 +2455,60 @@ given ATK_ROLE_DESCRIPTION_TERM. <em class="parameter"><code>Since</code></em>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
+<td class="enum_member_name"><p><a name="ATK-ROLE-STATIC:CAPS"></a>ATK_ROLE_STATIC</p></td>
+<td class="enum_member_description">
+<p>A generic non-container object whose purpose is to display a
+brief amount of information to the user and whose role is known by the
+implementor but lacks semantic value for the user. Examples in which
+ATK_ROLE_STATIC is appropriate include the message displayed in a message box
+and an image used as an alternative means to display text. ATK_ROLE_STATIC
+should not be applied to widgets which are traditionally interactive, objects
+which display a significant amount of content, or any object which has an
+accessible relation pointing to another object. Implementors should expose the
+displayed information through the accessible name of the object. If doing so seems
+inappropriate, it may indicate that a different role should be used. For
+labels which describe another widget, see ATK_ROLE_LABEL. For text views, see
+ATK_ROLE_TEXT. For generic containers, see ATK_ROLE_PANEL. For objects whose
+role is not known by the implementor, see ATK_ROLE_UNKNOWN. <em class="parameter"><code>Since</code></em>
+: ATK-2.16.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ATK-ROLE-MATH-FRACTION:CAPS"></a>ATK_ROLE_MATH_FRACTION</p></td>
+<td class="enum_member_description">
+<p>An object that represents a mathematical fraction.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ATK-ROLE-MATH-ROOT:CAPS"></a>ATK_ROLE_MATH_ROOT</p></td>
+<td class="enum_member_description">
+<p>An object that represents a mathematical expression
+displayed with a radical. <em class="parameter"><code>Since</code></em>
+: ATK-2.16.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ATK-ROLE-SUBSCRIPT:CAPS"></a>ATK_ROLE_SUBSCRIPT</p></td>
+<td class="enum_member_description">
+<p>An object that contains text that is displayed as a
+subscript. <em class="parameter"><code>Since</code></em>
+: ATK-2.16.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ATK-ROLE-SUPERSCRIPT:CAPS"></a>ATK_ROLE_SUPERSCRIPT</p></td>
+<td class="enum_member_description">
+<p>An object that contains text that is displayed as a
+superscript. <em class="parameter"><code>Since</code></em>
+: ATK-2.16.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
 <td class="enum_member_name"><p><a name="ATK-ROLE-LAST-DEFINED:CAPS"></a>ATK_ROLE_LAST_DEFINED</p></td>
 <td class="enum_member_description">
 <p>not a valid role, used for finding end of the enumeration</p>
@@ -2466,7 +2527,7 @@ given ATK_ROLE_DESCRIPTION_TERM. <em class="parameter"><code>Since</code></em>
 rendering layer a component is drawn into, which can help in making
 determinations of when components occlude one another.</p>
 <div class="refsect3">
-<a name="id-1.3.2.13.4.5"></a><h4>Members</h4>
+<a name="id-1.3.2.12.4.5"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -2560,7 +2621,7 @@ name from the enum value. See also <a class="link" href="AtkText.html#atk-text-a
 and <a class="link" href="AtkText.html#atk-text-attribute-get-value" title="atk_text_attribute_get_value ()"><code class="function">atk_text_attribute_get_value()</code></a> for more information.</p>
 <p>A string name/value pair representing a generic attribute.</p>
 <div class="refsect3">
-<a name="id-1.3.2.13.6.6"></a><h4>Members</h4>
+<a name="id-1.3.2.12.6.6"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">
@@ -2607,7 +2668,7 @@ used by <a class="link" href="AtkText.html#atk-text-get-run-attributes" title="a
 valid value. This is a field defined with the purpose of contain
 the previous value of the property, but is not used anymore.</p>
 <div class="refsect3">
-<a name="id-1.3.2.13.8.5"></a><h4>Members</h4>
+<a name="id-1.3.2.12.8.5"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">
@@ -2799,7 +2860,7 @@ which has the state ATK_STATE_MANAGES_DESCENDANTS when the focus
 object in the object changes. For instance, a table will emit the
 signal when the cell in the table which has focus changes.</p>
 <div class="refsect3">
-<a name="id-1.3.2.15.2.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.14.2.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2839,7 +2900,7 @@ user_function (<a class="link" href="AtkObject.html" title="AtkObject"><span cla
 removed form an object. It supports two details: "add" and
 "remove"</p>
 <div class="refsect3">
-<a name="id-1.3.2.15.3.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.14.3.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2887,11 +2948,11 @@ user_function (<a class="link" href="AtkObject.html" title="AtkObject"><span cla
 <p>The signal "focus-event" is emitted when an object gained or lost
 focus.</p>
 <div class="warning">
-<p><code class="literal">AtkObject::focus-event</code> is deprecated and should not be used in newly-written code.</p>
-<p>Since 2.9.4. Use <a class="link" href="AtkObject.html#AtkObject-state-change" title="The “state-change” signal"><span class="type">“state-change”</span></a> signal instead.</p>
+<p><code class="literal">AtkObject::focus-event</code> has been deprecated since version 2.9.4 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="AtkObject.html#AtkObject-state-change" title="The “state-change” signal"><span class="type">“state-change”</span></a> signal instead.</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.15.4.6"></a><h4>Parameters</h4>
+<a name="id-1.3.2.14.4.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2941,7 +3002,7 @@ notifications. <span class="type">“property-changed”</span> is needed by the
 implementation of <a class="link" href="AtkUtil.html#atk-add-global-event-listener" title="atk_add_global_event_listener ()"><code class="function">atk_add_global_event_listener()</code></a> because GObject
 notify doesn't support emission hooks.</p>
 <div class="refsect3">
-<a name="id-1.3.2.15.5.6"></a><h4>Parameters</h4>
+<a name="id-1.3.2.14.5.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2982,7 +3043,7 @@ user_function (<a class="link" href="AtkObject.html" title="AtkObject"><span cla
 changes.  The detail value identifies the state type which has
 changed.</p>
 <div class="refsect3">
-<a name="id-1.3.2.15.6.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.14.6.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3024,7 +3085,7 @@ user_function (<a class="link" href="AtkObject.html" title="AtkObject"><span cla
 <p>The "visible-data-changed" signal is emitted when the visual
 appearance of the object changed.</p>
 <div class="refsect3">
-<a name="id-1.3.2.15.7.5"></a><h4>Parameters</h4>
+<a name="id-1.3.2.14.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">

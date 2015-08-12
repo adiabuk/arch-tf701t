@@ -189,19 +189,20 @@
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
-<td class="property_type"><span class="type">gboolean</span></td>
-<td class="property_name"><a class="link" href="SoupSocket.html#SoupSocket--close-on-dispose" title="The “close-on-dispose” property">close-on-dispose</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-<tr>
 <td class="property_type"><span class="type">gint</span></td>
 <td class="property_name"><a class="link" href="SoupSocket.html#SoupSocket--fd" title="The “fd” property">fd</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GSocket.html"><span class="type">GSocket</span></a> *</td>
+<span class="type">GSocket</span> *</td>
 <td class="property_name"><a class="link" href="SoupSocket.html#SoupSocket--gsocket" title="The “gsocket” property">gsocket</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">GIOStream</span> *</td>
+<td class="property_name"><a class="link" href="SoupSocket.html#SoupSocket--iostream" title="The “iostream” property">iostream</a></td>
 <td class="property_flags">Write / Construct Only</td>
 </tr>
 <tr>
@@ -259,12 +260,12 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> *</td>
+<span class="type">GTlsCertificate</span> *</td>
 <td class="property_name"><a class="link" href="SoupSocket.html#SoupSocket--tls-certificate" title="The “tls-certificate” property">tls-certificate</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a></td>
+<td class="property_type"><span class="type">GTlsCertificateFlags</span></td>
 <td class="property_name"><a class="link" href="SoupSocket.html#SoupSocket--tls-errors" title="The “tls-errors” property">tls-errors</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -391,7 +392,7 @@
 </div>
 <div class="refsect1">
 <a name="SoupSocket.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">╰──</span> SoupSocket
 </pre>
 </div>
@@ -399,7 +400,7 @@
 <a name="SoupSocket.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 SoupSocket implements
- <a href="http://library.gnome.org/devel/gio/unstable/GInitable.html">GInitable</a>.</p>
+ GInitable.</p>
 </div>
 <div class="refsect1">
 <a name="SoupSocket.includes"></a><h2>Includes</h2>
@@ -491,7 +492,7 @@ soup_socket_new (<em class="parameter"><code>const <span class="type">char</span
 <a name="soup-socket-connect-async"></a><h3>soup_socket_connect_async ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 soup_socket_connect_async (<em class="parameter"><code><a class="link" href="SoupSocket.html" title="SoupSocket"><span class="type">SoupSocket</span></a> *sock</code></em>,
-                           <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                           <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                            <em class="parameter"><code><a class="link" href="SoupSocket.html#SoupSocketCallback" title="SoupSocketCallback ()"><span class="type">SoupSocketCallback</span></a> callback</code></em>,
                            <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
 <p>Begins asynchronously connecting to <em class="parameter"><code>sock</code></em>
@@ -520,7 +521,7 @@ status of <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-CANCELL
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span>, or <code class="literal">NULL</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -543,7 +544,7 @@ status of <a class="link" href="libsoup-2.4-soup-status.html#SOUP-STATUS-CANCELL
 <a name="soup-socket-connect-sync"></a><h3>soup_socket_connect_sync ()</h3>
 <pre class="programlisting"><span class="returnvalue">guint</span>
 soup_socket_connect_sync (<em class="parameter"><code><a class="link" href="SoupSocket.html" title="SoupSocket"><span class="type">SoupSocket</span></a> *sock</code></em>,
-                          <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>);</pre>
+                          <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>);</pre>
 <p>Attempt to synchronously connect <em class="parameter"><code>sock</code></em>
  to its remote address.</p>
 <p>If <em class="parameter"><code>cancellable</code></em>
@@ -566,7 +567,7 @@ connection, in which case <a class="link" href="SoupSocket.html#soup-socket-conn
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span>, or <code class="literal">NULL</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -615,7 +616,7 @@ is now listening.</p>
 <a name="soup-socket-start-ssl"></a><h3>soup_socket_start_ssl ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 soup_socket_start_ssl (<em class="parameter"><code><a class="link" href="SoupSocket.html" title="SoupSocket"><span class="type">SoupSocket</span></a> *sock</code></em>,
-                       <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>);</pre>
+                       <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>);</pre>
 <p>Starts using SSL on <em class="parameter"><code>socket</code></em>
 .</p>
 <div class="refsect3">
@@ -634,7 +635,7 @@ soup_socket_start_ssl (<em class="parameter"><code><a class="link" href="SoupSoc
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -652,7 +653,7 @@ soup_socket_start_ssl (<em class="parameter"><code><a class="link" href="SoupSoc
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 soup_socket_start_proxy_ssl (<em class="parameter"><code><a class="link" href="SoupSocket.html" title="SoupSocket"><span class="type">SoupSocket</span></a> *sock</code></em>,
                              <em class="parameter"><code>const <span class="type">char</span> *ssl_host</code></em>,
-                             <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>);</pre>
+                             <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>);</pre>
 <p>Starts using SSL on <em class="parameter"><code>socket</code></em>
 , expecting to find a host named
 <em class="parameter"><code>ssl_host</code></em>
@@ -678,7 +679,7 @@ soup_socket_start_proxy_ssl (<em class="parameter"><code><a class="link" href="S
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -870,7 +871,7 @@ soup_socket_read (<em class="parameter"><code><a class="link" href="SoupSocket.h
                   <em class="parameter"><code><span class="type">gpointer</span> buffer</code></em>,
                   <em class="parameter"><code><span class="type">gsize</span> len</code></em>,
                   <em class="parameter"><code><span class="type">gsize</span> *nread</code></em>,
-                  <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                  <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                   <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>Attempts to read up to <em class="parameter"><code>len</code></em>
  bytes from <em class="parameter"><code>sock</code></em>
@@ -923,7 +924,7 @@ in bytes</p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span>, or <code class="literal">NULL</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -955,7 +956,7 @@ soup_socket_read_until (<em class="parameter"><code><a class="link" href="SoupSo
                         <em class="parameter"><code><span class="type">gsize</span> boundary_len</code></em>,
                         <em class="parameter"><code><span class="type">gsize</span> *nread</code></em>,
                         <em class="parameter"><code><span class="type">gboolean</span> *got_boundary</code></em>,
-                        <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                        <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>Like <a class="link" href="SoupSocket.html#soup-socket-read" title="soup_socket_read ()"><code class="function">soup_socket_read()</code></a>, but reads no further than the first
 occurrence of <em class="parameter"><code>boundary</code></em>
@@ -1024,7 +1025,7 @@ ends with the boundary string</p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span>, or <code class="literal">NULL</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1049,7 +1050,7 @@ soup_socket_write (<em class="parameter"><code><a class="link" href="SoupSocket.
                    <em class="parameter"><code><span class="type">gconstpointer</span> buffer</code></em>,
                    <em class="parameter"><code><span class="type">gsize</span> len</code></em>,
                    <em class="parameter"><code><span class="type">gsize</span> *nwrote</code></em>,
-                   <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                   <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                    <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>Attempts to write <em class="parameter"><code>len</code></em>
  bytes from <em class="parameter"><code>buffer</code></em>
@@ -1100,7 +1101,7 @@ and it is only emitted once. See the documentation for
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a>, or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>a <span class="type">GCancellable</span>, or <code class="literal">NULL</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1293,14 +1294,6 @@ property.</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="SoupSocket--close-on-dispose"></a><h3>The <code class="literal">“close-on-dispose”</code> property</h3>
-<pre class="programlisting">  “close-on-dispose”         <span class="type">gboolean</span></pre>
-<p>Whether the socket is closed on disposal.</p>
-<p>Flags: Read / Write / Construct</p>
-<p>Default value: TRUE</p>
-</div>
-<hr>
-<div class="refsect2">
 <a name="SoupSocket--fd"></a><h3>The <code class="literal">“fd”</code> property</h3>
 <pre class="programlisting">  “fd”                       <span class="type">gint</span></pre>
 <p>The socket's file descriptor.</p>
@@ -1311,8 +1304,15 @@ property.</p>
 <hr>
 <div class="refsect2">
 <a name="SoupSocket--gsocket"></a><h3>The <code class="literal">“gsocket”</code> property</h3>
-<pre class="programlisting">  “gsocket”                  <a href="http://library.gnome.org/devel/gio/unstable/GSocket.html"><span class="type">GSocket</span></a> *</pre>
+<pre class="programlisting">  “gsocket”                  <span class="type">GSocket</span> *</pre>
 <p>The socket's underlying GSocket.</p>
+<p>Flags: Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="SoupSocket--iostream"></a><h3>The <code class="literal">“iostream”</code> property</h3>
+<pre class="programlisting">  “iostream”                 <span class="type">GIOStream</span> *</pre>
+<p>The socket's underlying GIOStream.</p>
 <p>Flags: Write / Construct Only</p>
 </div>
 <hr>
@@ -1416,14 +1416,14 @@ code that handles that case just won't get used for them.</p>
 <hr>
 <div class="refsect2">
 <a name="SoupSocket--tls-certificate"></a><h3>The <code class="literal">“tls-certificate”</code> property</h3>
-<pre class="programlisting">  “tls-certificate”          <a href="http://library.gnome.org/devel/gio/unstable/GTlsCertificate.html"><span class="type">GTlsCertificate</span></a> *</pre>
+<pre class="programlisting">  “tls-certificate”          <span class="type">GTlsCertificate</span> *</pre>
 <p>The peer's TLS certificate.</p>
 <p>Flags: Read</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="SoupSocket--tls-errors"></a><h3>The <code class="literal">“tls-errors”</code> property</h3>
-<pre class="programlisting">  “tls-errors”               <a href="http://library.gnome.org/devel/gio/unstable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a></pre>
+<pre class="programlisting">  “tls-errors”               <span class="type">GTlsCertificateFlags</span></pre>
 <p>Errors with the peer's TLS certificate.</p>
 <p>Flags: Read</p>
 </div>
@@ -1483,11 +1483,11 @@ reason.</p>
 <a name="SoupSocket-event"></a><h3>The <code class="literal">“event”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="SoupSocket.html" title="SoupSocket"><span class="type">SoupSocket</span></a>        *sock,
-               <a href="http://library.gnome.org/devel/gio/unstable/GSocketClient.html#GSocketClientEvent"><span class="type">GSocketClientEvent</span></a> event,
-               <a href="http://library.gnome.org/devel/gio/unstable/GIOStream.html"><span class="type">GIOStream</span></a>         *connection,
+               <span class="type">GSocketClientEvent</span> event,
+               <span class="type">GIOStream</span>         *connection,
                <span class="type">gpointer</span>           user_data)</pre>
 <p>Emitted when a network-related event occurs. See
-<a href="http://library.gnome.org/devel/gio/unstable/GSocketClient.html#GSocketClient-event"><span class="type">“event”</span></a> for more details.</p>
+<span class="type">“event”</span> for more details.</p>
 <div class="refsect3">
 <a name="id-1.6.3.14.3.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">

@@ -8,7 +8,7 @@
 <link rel="up" href="LayoutContainers.html" title="Layout Containers">
 <link rel="prev" href="GtkNotebook.html" title="GtkNotebook">
 <link rel="next" href="gtk3-Orientable.html" title="GtkOrientable">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -330,7 +330,7 @@ of <a class="link" href="GtkBin.html" title="GtkBin"><span class="type">GtkBin</
 to add it to the expander. When the expander is toggled, it will take
 care of showing and hiding the child automatically.</p>
 <div class="refsect2">
-<a name="id-1.3.7.16.11.4"></a><h3>Special Usage</h3>
+<a name="id-1.3.7.17.11.4"></a><h3>Special Usage</h3>
 <p>There are situations in which you may prefer to show and hide the
 expanded widget yourself, such as when you want to actually create
 the widget at expansion time. In this case, create a <a class="link" href="GtkExpander.html" title="GtkExpander"><span class="type">GtkExpander</span></a>
@@ -399,7 +399,7 @@ connection as follows:</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="id-1.3.7.16.11.5"></a><h3>GtkExpander as GtkBuildable</h3>
+<a name="id-1.3.7.17.11.5"></a><h3>GtkExpander as GtkBuildable</h3>
 <p>The GtkExpander implementation of the GtkBuildable interface supports
 placing a child in the label position by specifying “label” as the
 “type” attribute of a &lt;child&gt; element. A normal content child can be
@@ -442,7 +442,7 @@ gtk_expander_new (<em class="parameter"><code>const <a href="https://developer.g
 <p>Creates a new expander using <em class="parameter"><code>label</code></em>
  as the text of the label.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.2.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.2.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -457,11 +457,10 @@ gtk_expander_new (<em class="parameter"><code>const <a href="https://developer.g
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.2.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.2.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkExpander.html" title="GtkExpander"><span class="type">GtkExpander</span></a> widget.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -477,7 +476,7 @@ underscores). The first underlined character represents a keyboard
 accelerator called a mnemonic.
 Pressing Alt and that key activates the button.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.3.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.3.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -493,11 +492,10 @@ in front of the mnemonic character. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.3.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.3.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkExpander.html" title="GtkExpander"><span class="type">GtkExpander</span></a> widget.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -509,7 +507,7 @@ gtk_expander_set_expanded (<em class="parameter"><code><a class="link" href="Gtk
 the child widget to be revealed, and <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if you want the
 child widget to be hidden.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.4.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.4.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -530,7 +528,7 @@ child widget to be hidden.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -541,7 +539,7 @@ gtk_expander_get_expanded (<em class="parameter"><code><a class="link" href="Gtk
 if the child widget is revealed.</p>
 <p>See <a class="link" href="GtkExpander.html#gtk-expander-set-expanded" title="gtk_expander_set_expanded ()"><code class="function">gtk_expander_set_expanded()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.5.6"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.5.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -556,11 +554,10 @@ if the child widget is revealed.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.5.7"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.5.7"></a><h4>Returns</h4>
 <p> the current state of the expander</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -572,7 +569,7 @@ gtk_expander_set_spacing (<em class="parameter"><code><a class="link" href="GtkE
 , which is the number of
 pixels to place between expander and the child.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.6.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.6.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -593,7 +590,7 @@ pixels to place between expander and the child.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -602,7 +599,7 @@ pixels to place between expander and the child.</p>
 gtk_expander_get_spacing (<em class="parameter"><code><a class="link" href="GtkExpander.html" title="GtkExpander"><span class="type">GtkExpander</span></a> *expander</code></em>);</pre>
 <p>Gets the value set by <a class="link" href="GtkExpander.html#gtk-expander-set-spacing" title="gtk_expander_set_spacing ()"><code class="function">gtk_expander_set_spacing()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.7.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -617,11 +614,10 @@ gtk_expander_get_spacing (<em class="parameter"><code><a class="link" href="GtkE
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.7.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.7.6"></a><h4>Returns</h4>
 <p> spacing between the expander and child</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -633,7 +629,7 @@ gtk_expander_set_label (<em class="parameter"><code><a class="link" href="GtkExp
 .</p>
 <p>This will also clear any previously set labels.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.8.6"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.8.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -654,7 +650,7 @@ gtk_expander_set_label (<em class="parameter"><code><a class="link" href="GtkExp
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -672,7 +668,7 @@ underlines indicating mnemonics and Pango markup. This problem can
 be avoided by fetching the label text directly from the label
 widget.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.9.6"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.9.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -687,12 +683,11 @@ widget.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.9.7"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.9.7"></a><h4>Returns</h4>
 <p> The text of the label widget. This string is owned
 by the widget and must not be modified or freed.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -703,7 +698,7 @@ gtk_expander_set_use_underline (<em class="parameter"><code><a class="link" href
 <p>If true, an underline in the text of the expander label indicates
 the next character should be used for the mnemonic accelerator key.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.10.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.10.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -724,7 +719,7 @@ the next character should be used for the mnemonic accelerator key.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -734,7 +729,7 @@ gtk_expander_get_use_underline (<em class="parameter"><code><a class="link" href
 <p>Returns whether an embedded underline in the expander label
 indicates a mnemonic. See <a class="link" href="GtkExpander.html#gtk-expander-set-use-underline" title="gtk_expander_set_use_underline ()"><code class="function">gtk_expander_set_use_underline()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.11.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -749,12 +744,11 @@ indicates a mnemonic. See <a class="link" href="GtkExpander.html#gtk-expander-se
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.11.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.11.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if an embedded underline in the expander
 label indicates the mnemonic accelerator keys</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -766,7 +760,7 @@ gtk_expander_set_use_markup (<em class="parameter"><code><a class="link" href="G
 Pango’s text markup language.
 See <a class="link" href="GtkLabel.html#gtk-label-set-markup" title="gtk_label_set_markup ()"><code class="function">gtk_label_set_markup()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.12.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.12.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -787,7 +781,7 @@ See <a class="link" href="GtkLabel.html#gtk-label-set-markup" title="gtk_label_s
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -798,7 +792,7 @@ gtk_expander_get_use_markup (<em class="parameter"><code><a class="link" href="G
 the Pango text markup language.
 See <a class="link" href="GtkExpander.html#gtk-expander-set-use-markup" title="gtk_expander_set_use_markup ()"><code class="function">gtk_expander_set_use_markup()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.13.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.13.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -813,11 +807,10 @@ See <a class="link" href="GtkExpander.html#gtk-expander-set-use-markup" title="g
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.13.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.13.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the label’s text will be parsed for markup</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -828,7 +821,7 @@ gtk_expander_set_label_widget (<em class="parameter"><code><a class="link" href=
 <p>Set the label widget for the expander. This is the widget
 that will appear embedded alongside the expander arrow.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.14.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.14.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -849,7 +842,7 @@ that will appear embedded alongside the expander arrow.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -859,7 +852,7 @@ gtk_expander_get_label_widget (<em class="parameter"><code><a class="link" href=
 <p>Retrieves the label widget for the frame. See
 <a class="link" href="GtkExpander.html#gtk-expander-set-label-widget" title="gtk_expander_set_label_widget ()"><code class="function">gtk_expander_set_label_widget()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.15.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -874,12 +867,12 @@ gtk_expander_get_label_widget (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.15.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.15.6"></a><h4>Returns</h4>
 <p> the label widget,
 or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there is none. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -891,7 +884,7 @@ gtk_expander_set_label_fill (<em class="parameter"><code><a class="link" href="G
 horizontal space allocated to <em class="parameter"><code>expander</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.16.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.16.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -913,7 +906,7 @@ all available horizontal space</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -924,7 +917,7 @@ gtk_expander_get_label_fill (<em class="parameter"><code><a class="link" href="G
 horizontal space allocated to <em class="parameter"><code>expander</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.17.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.17.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -939,12 +932,11 @@ horizontal space allocated to <em class="parameter"><code>expander</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.17.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.17.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the label widget will fill all
 available horizontal space</p>
-<p></p>
 </div>
-<p class="since">Since 2.22</p>
+<p class="since">Since: 2.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -955,7 +947,7 @@ gtk_expander_set_resize_toplevel (<em class="parameter"><code><a class="link" hr
 <p>Sets whether the expander will resize the toplevel widget
 containing the expander upon resizing and collpasing.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.18.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.18.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -976,7 +968,7 @@ containing the expander upon resizing and collpasing.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -986,7 +978,7 @@ gtk_expander_get_resize_toplevel (<em class="parameter"><code><a class="link" hr
 <p>Returns whether the expander will resize the toplevel widget
 containing the expander upon resizing and collpasing.</p>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.19.5"></a><h4>Parameters</h4>
+<a name="id-1.3.7.17.12.19.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1001,11 +993,10 @@ containing the expander upon resizing and collpasing.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.16.12.19.6"></a><h4>Returns</h4>
+<a name="id-1.3.7.17.12.19.6"></a><h4>Returns</h4>
 <p> the “resize toplevel” setting.</p>
-<p></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -1028,7 +1019,7 @@ containing the expander upon resizing and collpasing.</p>
 };
 </pre>
 <div class="refsect3">
-<a name="id-1.3.7.16.13.3.4"></a><h4>Members</h4>
+<a name="id-1.3.7.17.13.3.4"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">
@@ -1091,7 +1082,7 @@ containing the expander upon resizing and collpasing.</p>
 widget containing the expander upon expanding and collapsing.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1151,7 +1142,6 @@ user_function (<a class="link" href="GtkExpander.html" title="GtkExpander"><span
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

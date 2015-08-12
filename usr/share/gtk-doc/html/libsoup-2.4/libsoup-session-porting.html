@@ -98,7 +98,7 @@ has different (and hopefully better) defaults than <a class="link" href="SoupSes
       The new
       <a class="link" href="SoupSession.html#SoupSession--proxy-resolver" title="The “proxy-resolver” property"><span class="type">"proxy-resolver"</span></a>
       property is now initialized to the default
-      <a href="http://library.gnome.org/devel/gio/unstable/GProxyResolver.html"><span class="type">GProxyResolver</span></a>,
+      <span class="type">GProxyResolver</span>,
       meaning that it will automatically use the user's system proxy
       configuration. This replaces the use of the
       <a class="link" href="SoupProxyResolverDefault.html" title="SoupProxyResolverDefault"><span class="type">SoupProxyResolverDefault</span></a>,
@@ -158,10 +158,10 @@ for each host to "preload" the NTLM authentication:
 <span class="usertype">SoupURI</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">uri</span><span class="symbol">;</span>
 
 <span class="normal">auth_manager </span><span class="symbol">=</span><span class="normal"> </span><span class="function">SOUP_AUTH_MANAGER</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="SoupSession.html#soup-session-get-feature">soup_session_get_feature</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">session</span><span class="symbol">,</span><span class="normal"> <a href="SoupAuthManager.html#SOUP-TYPE-AUTH-MANAGER:CAPS">SOUP_TYPE_AUTH_MANAGER</a></span><span class="symbol">));</span>
-<span class="normal">auth </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-new">g_object_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal"><a href="SoupAuth.html#SOUP-TYPE-AUTH-NTLM:CAPS">SOUP_TYPE_AUTH_NTLM</a></span><span class="symbol">,</span><span class="normal"> NULL</span><span class="symbol">);</span>
+<span class="normal">auth </span><span class="symbol">=</span><span class="normal"> </span><span class="function">g_object_new</span><span class="normal"> </span><span class="symbol">(</span><span class="normal"><a href="SoupAuth.html#SOUP-TYPE-AUTH-NTLM:CAPS">SOUP_TYPE_AUTH_NTLM</a></span><span class="symbol">,</span><span class="normal"> NULL</span><span class="symbol">);</span>
 <span class="normal">uri </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="SoupURI.html#soup-uri-new">soup_uri_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"http://ntlm-using-host.example.com/"</span><span class="symbol">);</span>
 <span class="function"><a href="SoupAuthManager.html#soup-auth-manager-use-auth">soup_auth_manager_use_auth</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">auth_manager</span><span class="symbol">,</span><span class="normal"> uri</span><span class="symbol">,</span><span class="normal"> auth</span><span class="symbol">);</span>
-<span class="function"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">auth</span><span class="symbol">);</span>
+<span class="function">g_object_unref</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">auth</span><span class="symbol">);</span>
 <span class="function"><a href="SoupURI.html#soup-uri-free">soup_uri_free</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">auth</span><span class="symbol">);</span></pre></td>
       </tr>
     </tbody>

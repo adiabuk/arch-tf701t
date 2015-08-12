@@ -5,5 +5,5 @@ includedir=${prefix}/include
 
 Name: poppler-splash
 Description: Splash backend for Poppler PDF rendering library
-Version: 0.31.0
-Requires: poppler = 0.31.0
+Version: 0.33.0
+Requires: poppler = 0.33.0

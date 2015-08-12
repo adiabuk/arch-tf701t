@@ -1,0 +1,11 @@
+ap_scan=1
+ctrl_interface=/var/run/wpa_supplicant
+network={
+       ssid="fbshuttle"
+       scan_ssid=1
+       proto=WPA RSN
+       key_mgmt=WPA-PSK
+       pairwise=CCMP TKIP
+       group=CCMP TKIP
+       psk=ffad537c8b9450bebbe1d349de6c708cc7c21c3cb7758f97c8207aa594f6504f
+}

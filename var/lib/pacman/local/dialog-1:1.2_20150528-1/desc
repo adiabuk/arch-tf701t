@@ -1,0 +1,37 @@
+%NAME%
+dialog
+
+%VERSION%
+1:1.2_20150528-1
+
+%DESC%
+A tool to display dialog boxes from shell scripts
+
+%URL%
+http://invisible-island.net/dialog/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1432953984
+
+%INSTALLDATE%
+1439237068
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+874496
+
+%LICENSE%
+LGPL2.1
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+sh
+ncurses
+

@@ -47,6 +47,7 @@
 <ANCHOR id="GDK-GRAB-INVALID-TIME:CAPS" href="gdk3/gdk3-General.html#GDK-GRAB-INVALID-TIME:CAPS">
 <ANCHOR id="GDK-GRAB-NOT-VIEWABLE:CAPS" href="gdk3/gdk3-General.html#GDK-GRAB-NOT-VIEWABLE:CAPS">
 <ANCHOR id="GDK-GRAB-FROZEN:CAPS" href="gdk3/gdk3-General.html#GDK-GRAB-FROZEN:CAPS">
+<ANCHOR id="GDK-GRAB-FAILED:CAPS" href="gdk3/gdk3-General.html#GDK-GRAB-FAILED:CAPS">
 <ANCHOR id="GDK-WINDOWING-X11:CAPS" href="gdk3/gdk3-General.html#GDK-WINDOWING-X11:CAPS">
 <ANCHOR id="GDK-WINDOWING-WIN32:CAPS" href="gdk3/gdk3-General.html#GDK-WINDOWING-WIN32:CAPS">
 <ANCHOR id="GDK-WINDOWING-QUARTZ:CAPS" href="gdk3/gdk3-General.html#GDK-WINDOWING-QUARTZ:CAPS">
@@ -207,6 +208,8 @@
 <ANCHOR id="GdkDevice.description" href="gdk3/GdkDevice.html#GdkDevice.description">
 <ANCHOR id="GdkDevice.functions_details" href="gdk3/GdkDevice.html#GdkDevice.functions_details">
 <ANCHOR id="gdk-device-get-name" href="gdk3/GdkDevice.html#gdk-device-get-name">
+<ANCHOR id="gdk-device-get-vendor-id" href="gdk3/GdkDevice.html#gdk-device-get-vendor-id">
+<ANCHOR id="gdk-device-get-product-id" href="gdk3/GdkDevice.html#gdk-device-get-product-id">
 <ANCHOR id="gdk-device-get-source" href="gdk3/GdkDevice.html#gdk-device-get-source">
 <ANCHOR id="gdk-device-set-mode" href="gdk3/GdkDevice.html#gdk-device-set-mode">
 <ANCHOR id="gdk-device-get-mode" href="gdk3/GdkDevice.html#gdk-device-get-mode">
@@ -276,7 +279,9 @@
 <ANCHOR id="GdkDevice--input-source" href="gdk3/GdkDevice.html#GdkDevice--input-source">
 <ANCHOR id="GdkDevice--n-axes" href="gdk3/GdkDevice.html#GdkDevice--n-axes">
 <ANCHOR id="GdkDevice--name" href="gdk3/GdkDevice.html#GdkDevice--name">
+<ANCHOR id="GdkDevice--product-id" href="gdk3/GdkDevice.html#GdkDevice--product-id">
 <ANCHOR id="GdkDevice--type" href="gdk3/GdkDevice.html#GdkDevice--type">
+<ANCHOR id="GdkDevice--vendor-id" href="gdk3/GdkDevice.html#GdkDevice--vendor-id">
 <ANCHOR id="GdkDevice.signal-details" href="gdk3/GdkDevice.html#GdkDevice.signal-details">
 <ANCHOR id="GdkDevice-changed" href="gdk3/GdkDevice.html#GdkDevice-changed">
 <ANCHOR id="GdkDevice.see-also" href="gdk3/GdkDevice.html#GdkDevice.see-also">
@@ -525,6 +530,8 @@
 <ANCHOR id="gdk-window-beep" href="gdk3/gdk3-Windows.html#gdk-window-beep">
 <ANCHOR id="gdk-window-get-scale-factor" href="gdk3/gdk3-Windows.html#gdk-window-get-scale-factor">
 <ANCHOR id="gdk-window-set-opaque-region" href="gdk3/gdk3-Windows.html#gdk-window-set-opaque-region">
+<ANCHOR id="gdk-window-create-gl-context" href="gdk3/gdk3-Windows.html#gdk-window-create-gl-context">
+<ANCHOR id="gdk-window-mark-paint-from-clip" href="gdk3/gdk3-Windows.html#gdk-window-mark-paint-from-clip">
 <ANCHOR id="gdk-window-get-clip-region" href="gdk3/gdk3-Windows.html#gdk-window-get-clip-region">
 <ANCHOR id="gdk-window-begin-paint-rect" href="gdk3/gdk3-Windows.html#gdk-window-begin-paint-rect">
 <ANCHOR id="gdk-window-begin-paint-region" href="gdk3/gdk3-Windows.html#gdk-window-begin-paint-region">
@@ -817,6 +824,38 @@
 <ANCHOR id="gdk-frame-timings-get-predicted-presentation-time" href="gdk3/gdk3-GdkFrameTimings.html#gdk-frame-timings-get-predicted-presentation-time">
 <ANCHOR id="gdk3-GdkFrameTimings.other_details" href="gdk3/gdk3-GdkFrameTimings.html#gdk3-GdkFrameTimings.other_details">
 <ANCHOR id="GdkFrameTimings" href="gdk3/gdk3-GdkFrameTimings.html#GdkFrameTimings">
+<ANCHOR id="GdkGLContext" href="gdk3/GdkGLContext.html">
+<ANCHOR id="GdkGLContext.functions" href="gdk3/GdkGLContext.html#GdkGLContext.functions">
+<ANCHOR id="GdkGLContext.properties" href="gdk3/GdkGLContext.html#GdkGLContext.properties">
+<ANCHOR id="GdkGLContext.other" href="gdk3/GdkGLContext.html#GdkGLContext.other">
+<ANCHOR id="GdkGLContext.object-hierarchy" href="gdk3/GdkGLContext.html#GdkGLContext.object-hierarchy">
+<ANCHOR id="GdkGLContext.includes" href="gdk3/GdkGLContext.html#GdkGLContext.includes">
+<ANCHOR id="GdkGLContext.description" href="gdk3/GdkGLContext.html#GdkGLContext.description">
+<ANCHOR id="GdkGLContext.functions_details" href="gdk3/GdkGLContext.html#GdkGLContext.functions_details">
+<ANCHOR id="gdk-gl-context-get-display" href="gdk3/GdkGLContext.html#gdk-gl-context-get-display">
+<ANCHOR id="gdk-gl-context-get-window" href="gdk3/GdkGLContext.html#gdk-gl-context-get-window">
+<ANCHOR id="gdk-gl-context-get-shared-context" href="gdk3/GdkGLContext.html#gdk-gl-context-get-shared-context">
+<ANCHOR id="gdk-gl-context-get-version" href="gdk3/GdkGLContext.html#gdk-gl-context-get-version">
+<ANCHOR id="gdk-gl-context-set-required-version" href="gdk3/GdkGLContext.html#gdk-gl-context-set-required-version">
+<ANCHOR id="gdk-gl-context-get-required-version" href="gdk3/GdkGLContext.html#gdk-gl-context-get-required-version">
+<ANCHOR id="gdk-gl-context-set-debug-enabled" href="gdk3/GdkGLContext.html#gdk-gl-context-set-debug-enabled">
+<ANCHOR id="gdk-gl-context-get-debug-enabled" href="gdk3/GdkGLContext.html#gdk-gl-context-get-debug-enabled">
+<ANCHOR id="gdk-gl-context-set-forward-compatible" href="gdk3/GdkGLContext.html#gdk-gl-context-set-forward-compatible">
+<ANCHOR id="gdk-gl-context-get-forward-compatible" href="gdk3/GdkGLContext.html#gdk-gl-context-get-forward-compatible">
+<ANCHOR id="gdk-gl-context-realize" href="gdk3/GdkGLContext.html#gdk-gl-context-realize">
+<ANCHOR id="gdk-gl-context-make-current" href="gdk3/GdkGLContext.html#gdk-gl-context-make-current">
+<ANCHOR id="gdk-gl-context-get-current" href="gdk3/GdkGLContext.html#gdk-gl-context-get-current">
+<ANCHOR id="gdk-gl-context-clear-current" href="gdk3/GdkGLContext.html#gdk-gl-context-clear-current">
+<ANCHOR id="GdkGLContext.other_details" href="gdk3/GdkGLContext.html#GdkGLContext.other_details">
+<ANCHOR id="GdkGLContext-struct" href="gdk3/GdkGLContext.html#GdkGLContext-struct">
+<ANCHOR id="GdkGLError" href="gdk3/GdkGLContext.html#GdkGLError">
+<ANCHOR id="GDK-GL-ERROR-NOT-AVAILABLE:CAPS" href="gdk3/GdkGLContext.html#GDK-GL-ERROR-NOT-AVAILABLE:CAPS">
+<ANCHOR id="GDK-GL-ERROR-UNSUPPORTED-FORMAT:CAPS" href="gdk3/GdkGLContext.html#GDK-GL-ERROR-UNSUPPORTED-FORMAT:CAPS">
+<ANCHOR id="GDK-GL-ERROR-UNSUPPORTED-PROFILE:CAPS" href="gdk3/GdkGLContext.html#GDK-GL-ERROR-UNSUPPORTED-PROFILE:CAPS">
+<ANCHOR id="GdkGLContext.property-details" href="gdk3/GdkGLContext.html#GdkGLContext.property-details">
+<ANCHOR id="GdkGLContext--display" href="gdk3/GdkGLContext.html#GdkGLContext--display">
+<ANCHOR id="GdkGLContext--shared-context" href="gdk3/GdkGLContext.html#GdkGLContext--shared-context">
+<ANCHOR id="GdkGLContext--window" href="gdk3/GdkGLContext.html#GdkGLContext--window">
 <ANCHOR id="gdk3-Events" href="gdk3/gdk3-Events.html">
 <ANCHOR id="gdk3-Events.functions" href="gdk3/gdk3-Events.html#gdk3-Events.functions">
 <ANCHOR id="gdk3-Events.other" href="gdk3/gdk3-Events.html#gdk3-Events.other">
@@ -1201,6 +1240,7 @@
 <ANCHOR id="gdk-cairo-region" href="gdk3/gdk3-Cairo-Interaction.html#gdk-cairo-region">
 <ANCHOR id="gdk-cairo-region-create-from-surface" href="gdk3/gdk3-Cairo-Interaction.html#gdk-cairo-region-create-from-surface">
 <ANCHOR id="gdk-cairo-surface-create-from-pixbuf" href="gdk3/gdk3-Cairo-Interaction.html#gdk-cairo-surface-create-from-pixbuf">
+<ANCHOR id="gdk-cairo-draw-from-gl" href="gdk3/gdk3-Cairo-Interaction.html#gdk-cairo-draw-from-gl">
 <ANCHOR id="gdk3-Cairo-Interaction.other_details" href="gdk3/gdk3-Cairo-Interaction.html#gdk3-Cairo-Interaction.other_details">
 <ANCHOR id="gdk3-X-Window-System-Interaction" href="gdk3/gdk3-X-Window-System-Interaction.html">
 <ANCHOR id="gdk3-X-Window-System-Interaction.functions" href="gdk3/gdk3-X-Window-System-Interaction.html#gdk3-X-Window-System-Interaction.functions">
@@ -1233,6 +1273,7 @@
 <ANCHOR id="gdk-x11-display-error-trap-pop-ignored" href="gdk3/gdk3-X-Window-System-Interaction.html#gdk-x11-display-error-trap-pop-ignored">
 <ANCHOR id="gdk-x11-display-set-cursor-theme" href="gdk3/gdk3-X-Window-System-Interaction.html#gdk-x11-display-set-cursor-theme">
 <ANCHOR id="gdk-x11-display-set-window-scale" href="gdk3/gdk3-X-Window-System-Interaction.html#gdk-x11-display-set-window-scale">
+<ANCHOR id="gdk-x11-display-get-glx-version" href="gdk3/gdk3-X-Window-System-Interaction.html#gdk-x11-display-get-glx-version">
 <ANCHOR id="gdk-x11-register-standard-event-type" href="gdk3/gdk3-X-Window-System-Interaction.html#gdk-x11-register-standard-event-type">
 <ANCHOR id="gdk-x11-screen-get-screen-number" href="gdk3/gdk3-X-Window-System-Interaction.html#gdk-x11-screen-get-screen-number">
 <ANCHOR id="gdk-x11-screen-get-xscreen" href="gdk3/gdk3-X-Window-System-Interaction.html#gdk-x11-screen-get-xscreen">
@@ -1339,13 +1380,16 @@
 <ANCHOR id="annotation-glossterm-allow-none" href="gdk3/annotation-glossary.html#annotation-glossterm-allow-none">
 <ANCHOR id="annotation-glossterm-array" href="gdk3/annotation-glossary.html#annotation-glossterm-array">
 <ANCHOR id="annotation-glossterm-closure" href="gdk3/annotation-glossary.html#annotation-glossterm-closure">
+<ANCHOR id="annotation-glossterm-constructor" href="gdk3/annotation-glossary.html#annotation-glossterm-constructor">
 <ANCHOR id="annotation-glossterm-element-type" href="gdk3/annotation-glossary.html#annotation-glossterm-element-type">
 <ANCHOR id="annotation-glossterm-inout" href="gdk3/annotation-glossary.html#annotation-glossterm-inout">
 <ANCHOR id="annotation-glossterm-nullable" href="gdk3/annotation-glossary.html#annotation-glossterm-nullable">
 <ANCHOR id="annotation-glossterm-optional" href="gdk3/annotation-glossary.html#annotation-glossterm-optional">
 <ANCHOR id="annotation-glossterm-out" href="gdk3/annotation-glossary.html#annotation-glossterm-out">
 <ANCHOR id="annotation-glossterm-out caller-allocates" href="gdk3/annotation-glossary.html#annotation-glossterm-out caller-allocates">
+<ANCHOR id="annotation-glossterm-rename-to" href="gdk3/annotation-glossary.html#annotation-glossterm-rename-to">
 <ANCHOR id="annotation-glossterm-scope call" href="gdk3/annotation-glossary.html#annotation-glossterm-scope call">
+<ANCHOR id="annotation-glossterm-skip" href="gdk3/annotation-glossary.html#annotation-glossterm-skip">
 <ANCHOR id="annotation-glossterm-transfer container" href="gdk3/annotation-glossary.html#annotation-glossterm-transfer container">
 <ANCHOR id="annotation-glossterm-transfer full" href="gdk3/annotation-glossary.html#annotation-glossterm-transfer full">
 <ANCHOR id="annotation-glossterm-transfer none" href="gdk3/annotation-glossary.html#annotation-glossterm-transfer none">

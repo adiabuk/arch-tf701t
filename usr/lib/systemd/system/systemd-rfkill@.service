@@ -20,3 +20,4 @@ Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/lib/systemd/systemd-rfkill load %I
 ExecStop=/usr/lib/systemd/systemd-rfkill save %I
+TimeoutSec=30s

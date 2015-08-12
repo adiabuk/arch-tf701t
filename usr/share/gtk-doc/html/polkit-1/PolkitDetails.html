@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>polkit Reference Manual: PolkitDetails</title>
+<title>PolkitDetails: polkit Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="polkit Reference Manual">
 <link rel="up" href="ref-api.html" title="Part III. Library API Reference">
 <link rel="prev" href="PolkitAuthorizationResult.html" title="PolkitAuthorizationResult">
 <link rel="next" href="polkit-1-PolkitError.html" title="PolkitError">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#PolkitDetails.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#PolkitDetails.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#PolkitDetails.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -34,7 +34,13 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="PolkitDetails.stability-level"></a><h2>Stability Level</h2>
-Stable, unless otherwise indicated
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
 <a name="PolkitDetails.functions"></a><h2>Functions</h2>
@@ -111,7 +117,6 @@ polkit_details_new (<em class="parameter"><code><span class="type">void</span></
 <div class="refsect3">
 <a name="id-1.4.4.8.2.5"></a><h4>Returns</h4>
 <p> A <a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a> object. Free with <code class="function">g_object_unref()</code>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -150,7 +155,7 @@ polkit_details_lookup (<em class="parameter"><code><a class="link" href="PolkitD
 <p> <code class="literal">NULL</code> if there is no value for <em class="parameter"><code>key</code></em>
 , otherwise a string owned by <em class="parameter"><code>details</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -188,7 +193,7 @@ polkit_details_insert (<em class="parameter"><code><a class="link" href="PolkitD
 <tr>
 <td class="parameter_name"><p>value</p></td>
 <td class="parameter_description"><p> A value. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -221,7 +226,7 @@ polkit_details_get_keys (<em class="parameter"><code><a class="link" href="Polki
 <p> <code class="literal">NULL</code> if there are no keys
 otherwise an array of strings that should be freed with
 <code class="function">g_strfreev()</code>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
 </div>
 </div>
 </div>
@@ -235,7 +240,6 @@ otherwise an array of strings that should be freed with
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

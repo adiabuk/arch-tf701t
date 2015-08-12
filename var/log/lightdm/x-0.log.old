@@ -4,7 +4,7 @@ Release Date: 2012-08-27
 X Protocol Version 11, Revision 0
 Build Operating System: Linux 3.4.104-cyanogenmod armv7l 
 Current Operating System: Linux localhost 3.4.105-cmaalx-15 #25 SMP PREEMPT Wed Apr 8 11:50:43 CDT 2015 armv7l
-Kernel command line: console=tty1 loglevel=3 fbcon=vc:1-6 tegraid=35.1.2.0.0 mem=1942M@2048M memtype=0 vpr=96M@3997M tsec=4M@3993M otf_key=2ee97c154d7ae11569533c2e91804950 commchip_id=0 usb_port_owner_info=2 emc_max_dvfs=0 androidboot.serialno=15C3E10091000000017FD8540 androidboot.commchip_id=0 androidboot.modem=none video=tegrafb no_console_suspend=1 debug_uartport=lsport,3 usbcore.old_scheme_first=1 lp0_vec=2656@0xf96ff000 tegra_fbmem=32778244@0xace23000 core_edp_mv=1250 core_edp_ma=8000 pmuboard=0x801a:0xe534:0x2c:0x80:0xd0 display_panel=0 power_supply=Adapter audio_codec=rt5640 board_info=621:3ea:0:43:3 tegraboot=sdmmc gpt gpt_sector=73727 modem_id=0 androidboot.mode=normal power-config=0x00 pmic_rst_reason=0x00000001 android.kerneltype=recovery asustek.hw_rev=rev_b androidboot.productid=mozart androidboot.hardware=macallan fuse_info=y unlocked=y granted=n 
+Kernel command line: console=tty1 loglevel=3 fbcon=vc:1-6 tegraid=35.1.2.0.0 mem=1942M@2048M memtype=0 vpr=96M@3997M tsec=4M@3993M otf_key=cbb6d3b8a9884e4720519ba38fa77dc6 commchip_id=0 usb_port_owner_info=2 emc_max_dvfs=0 androidboot.serialno=15C3E10091000000017FD8540 androidboot.commchip_id=0 androidboot.modem=none video=tegrafb no_console_suspend=1 debug_uartport=lsport,3 usbcore.old_scheme_first=1 lp0_vec=2656@0xf96ff000 tegra_fbmem=32778244@0xace23000 core_edp_mv=1250 core_edp_ma=8000 pmuboard=0x801a:0xe534:0x2c:0x80:0xd0 display_panel=0 power_supply=Adapter audio_codec=rt5640 board_info=621:3ea:0:43:3 tegraboot=sdmmc gpt gpt_sector=73727 modem_id=0 androidboot.mode=normal power-config=0x00 pmic_rst_reason=0x00000001 android.kerneltype=recovery asustek.hw_rev=rev_b androidboot.productid=mozart androidboot.hardware=macallan fuse_info=y unlocked=y granted=n 
 Build Date: 06 April 2015  11:53:51PM
  
 Current version of pixman: 0.32.6
@@ -13,6 +13,6 @@ Current version of pixman: 0.32.6
 Markers: (--) probed, (**) from config file, (==) default setting,
 	(++) from command line, (!!) notice, (II) informational,
 	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
-(==) Log file: "/var/log/Xorg.0.log", Time: Sat Aug  8 20:31:12 2015
+(==) Log file: "/var/log/Xorg.0.log", Time: Wed Aug 12 14:29:15 2015
 (==) Using config file: "/etc/X11/xorg.conf"
 (==) Using config directory: "/etc/X11/xorg.conf.d"

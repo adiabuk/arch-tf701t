@@ -3833,6 +3833,12 @@
             <description>Spanish (Latin American, Sun dead keys)</description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>dvorak</name>
+            <description>Spanish (Latin American, Dvorak)</description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -4930,6 +4936,13 @@
             <languageList>
               <iso639Id>tam</iso639Id>
             </languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>us</name>
+            <shortDescription>us</shortDescription>
+            <description>Sinhala (US keyboard with Sinhala letters)</description>
           </configItem>
         </variant>
       </variantList>

@@ -3,7 +3,7 @@
 # pacdiffviewer : manage/backup/clean/merge pac* files
 #
 # Copyright (c) 2008-2010 Julien MISCHKOWITZ <wain@archlinux.fr>
-# Copyright (c) 2010-2012 tuxce <tuxce.net@gmail.com>
+# Copyright (c) 2010-2014 tuxce <tuxce.net@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU Library General Public License as published
@@ -22,7 +22,7 @@ export TEXTDOMAINDIR='/usr/share/locale'
 export TEXTDOMAIN=yaourt
 
 NAME='pacdiffviewer'
-VERSION='1.5'
+VERSION='1.6'
 
 P_LOCATE=0
 P_SEARCHDIR=(/etc/ /boot/)
@@ -65,7 +65,7 @@ backup_files() {
 		[[ -f "$backupdir/$_file" ]] && continue
 		currentfile="$_file.pacnew"
 		[[ -f "$ROOTDIR/$currentfile" ]] || currentfile="$_file"
-		if echo "$_md5sum  $ROOTDIR/$currentfile" | 
+		if echo "$_md5sum  $ROOTDIR/$currentfile" |
 			md5sum --status -c - &>/dev/null; then
 			(( ! QUIET )) && echo "-> $(gettext 'saving') $ROOTDIR/$currentfile"
 			mkdir -p "$(dirname "$backupdir/$_file")" || return 1
@@ -110,11 +110,11 @@ create_db() {
 # usage: previous_version ($file)
 # return previous file or ""
 previous_version() {
-	[[ $1 ]] || return 
+	[[ $1 ]] || return
 	local file=$1 pkgname pkgver
 	read pkgname pkgver < <(pacman_parse -Qo "$file" |
 		awk '{print $(NF-1)" "$NF}' 2>/dev/null)
-	[[ $pkgname ]] || return 
+	[[ $pkgname ]] || return
 	[[ -d "$P_SAVEDIR/$pkgname/" ]] || return
 	pushd "$P_SAVEDIR/$pkgname/" &> /dev/null
 	local pkgver_prev="" _rep
@@ -127,7 +127,7 @@ previous_version() {
 		fi
 	done
 	popd &> /dev/null
-	[[ ! "$pkgver_prev" ]] && return 
+	[[ ! "$pkgver_prev" ]] && return
 	echo "$P_SAVEDIR/$pkgname/$pkgname-$pkgver_prev/$file"
 }
 
@@ -170,8 +170,7 @@ suppress() {
 # Called by manage()
 manage_file() {
 	local ext=$1; shift
-	local _time=${1%%  *}
-	local _file="${1#*  }"
+	local _file=$1
 	local same loop=0
 	while true; do
 		local _msg="$ext: ${_file%$ext}"
@@ -198,7 +197,7 @@ manage_file() {
 			E) $DIFFEDITCMD "${_file%$ext}" "$_file" ;;
 			R) mv "$_file" "${_file%$ext}"; return 1;;
 			S) rm "$_file"; return 1 ;;
-			M)	echo 
+			M)	echo
 				msg "$(gettext 'Patch: ')"
 				cat "$tmp_file"
 				echo
@@ -210,38 +209,40 @@ manage_file() {
 				break;;
 		esac
 	done
-}	
+}
 
 # Manage list of .pac* files
 manage() {
 	echo
 	local ext=$1; shift
 	[[ $@ ]] || return
-	local pacfiles i _line
-	readarray -t pacfiles < <(stat -c "%Y %n" "$@" |
+	local pacdata pacfiles i _line
+	readarray -t pacdata < <(stat -c "%Y %n" "$@" |
 		sort |
 		awk '{printf ("%s %s\n", strftime("%x %X",$1), substr ($0, length($1)+1))}')
+	readarray -t pacfiles < <(stat -c "%Y %n" "$@" | sort)
+	pacfiles=("${pacfiles[@]#* }")
 	if (( ! SEQUENTIAL )); then
 		while true; do
 			echo
-			list_select "${pacfiles[@]}"
+			list_select "${pacdata[@]}"
 			prompt2 "$(gettext 'Enter n° : ')"
 			read -e i
 			(( ! i )) && break
-			(( --i>=0 && i < ${#pacfiles[@]} )) || continue
+			(( --i>=0 && i < ${#pacdata[@]} )) || continue
 			manage_file "$ext" "${pacfiles[$i]}"
 			if (( $? )); then
-				unset pacfiles[$i]
-				pacfiles=("${pacfiles[@]}")
-				(( ${#pacfiles[@]} )) || break;
+				unset pacdata[$i]; pacdata=("${pacdata[@]}")
+				unset pacfiles[$i]; pacfiles=("${pacfiles[@]}")
+				(( ${#pacdata[@]} )) || break;
 			fi
 		done
 	else
 		i=0
-		for _line in "${pacfiles[@]}"; do
+		for _line in "${pacdata[@]}"; do
 			(( i++ ))
-			msg "$i/${#pacfiles[@]}:"
-			manage_file "$ext" "$_line"
+			msg "$i/${#pacdata[@]}:"
+			manage_file "$ext" "${pacfiles[$i-1]}"
 		done
 	fi
 }
@@ -252,12 +253,12 @@ explode_args "$@"
 set -- "${OPTS[@]}"
 unset OPTS
 while [[ $1 ]]; do
-	case "$1" in 
+	case "$1" in
 		-q) QUIET=1;;
 		-s) SEQUENTIAL=1;;
 		-d) DIFF=1;;
 		--backup|-b) action=backup;;
-		-c)	action=clean;; 
+		-c)	action=clean;;
 		-*) usage $1;;
 	esac
 	shift
@@ -273,4 +274,4 @@ case "$action" in
 		suppress
 		;;
 esac
-# vim: set ts=4 sw=4 noet: 
+# vim: set ts=4 sw=4 noet:

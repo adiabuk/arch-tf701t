@@ -1,0 +1,36 @@
+%NAME%
+xkeycaps
+
+%VERSION%
+2.46-7
+
+%DESC%
+XKeyCaps is a graphical front-end to xmodmap.
+
+%URL%
+http://www.jwz.org/xkeycaps/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1404279999
+
+%INSTALLDATE%
+1439289225
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+1075200
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libxaw
+

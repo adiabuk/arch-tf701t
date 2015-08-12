@@ -1,0 +1,36 @@
+%NAME%
+run-parts
+
+%VERSION%
+4.5.1-1
+
+%DESC%
+run scripts or programs in a directory
+
+%URL%
+http://packages.qa.debian.org/d/debianutils.html
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1436479673
+
+%INSTALLDATE%
+1439237112
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu9@archlinuxarm.org>
+
+%SIZE%
+113664
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+

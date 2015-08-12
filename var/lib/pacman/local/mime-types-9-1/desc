@@ -1,0 +1,36 @@
+%NAME%
+mime-types
+
+%VERSION%
+9-1
+
+%DESC%
+Provides /etc/mime.types
+
+%URL%
+http://packages.gentoo.org/package/app-misc/mime-types
+
+%ARCH%
+any
+
+%BUILDDATE%
+1371258054
+
+%INSTALLDATE%
+1439237020
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+73728
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+

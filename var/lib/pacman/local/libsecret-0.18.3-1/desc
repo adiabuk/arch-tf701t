@@ -1,0 +1,43 @@
+%NAME%
+libsecret
+
+%VERSION%
+0.18.3-1
+
+%DESC%
+Library for storing and retrieving passwords and other secrets.
+
+%URL%
+https://wiki.gnome.org/Projects/Libsecret
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1438613903
+
+%INSTALLDATE%
+1439237054
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+2249728
+
+%REASON%
+1
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glib2
+libgcrypt
+
+%OPTDEPENDS%
+gnome-keyring: key storage service (or use any other service implementing org.freedesktop.secrets)
+

@@ -8,7 +8,7 @@
 <link rel="up" href="TreeWidgetObjects.html" title="Tree, List and Icon Grid Widgets">
 <link rel="prev" href="GtkTreeModel.html" title="GtkTreeModel">
 <link rel="next" href="GtkTreeViewColumn.html" title="GtkTreeViewColumn">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -360,7 +360,6 @@ that it is okay to change the selection.</p>
 <div class="refsect3">
 <a name="id-1.3.12.4.10.2.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, if the selection state of the row can be toggled</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -465,7 +464,6 @@ gtk_tree_selection_get_mode (<em class="parameter"><code><a class="link" href="G
 <div class="refsect3">
 <a name="id-1.3.12.4.10.5.6"></a><h4>Returns</h4>
 <p> the current selection mode</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -522,8 +520,9 @@ if the state of the node should be left unchanged.</p>
 gtk_tree_selection_get_select_function
                                (<em class="parameter"><code><a class="link" href="GtkTreeSelection.html" title="GtkTreeSelection"><span class="type">GtkTreeSelection</span></a> *selection</code></em>);</pre>
 <p>Returns the current selection function.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.3.12.4.10.7.5"></a><h4>Parameters</h4>
+<a name="id-1.3.12.4.10.7.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -538,11 +537,10 @@ gtk_tree_selection_get_select_function
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.12.4.10.7.6"></a><h4>Returns</h4>
+<a name="id-1.3.12.4.10.7.7"></a><h4>Returns</h4>
 <p> The function.</p>
-<p></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -550,8 +548,9 @@ gtk_tree_selection_get_select_function
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
 gtk_tree_selection_get_user_data (<em class="parameter"><code><a class="link" href="GtkTreeSelection.html" title="GtkTreeSelection"><span class="type">GtkTreeSelection</span></a> *selection</code></em>);</pre>
 <p>Returns the user data for the selection function.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.3.12.4.10.8.5"></a><h4>Parameters</h4>
+<a name="id-1.3.12.4.10.8.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -566,9 +565,8 @@ gtk_tree_selection_get_user_data (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.12.4.10.8.6"></a><h4>Returns</h4>
+<a name="id-1.3.12.4.10.8.7"></a><h4>Returns</h4>
 <p> The user data.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -647,7 +645,6 @@ use <em class="parameter"><code>selection</code></em>
 <div class="refsect3">
 <a name="id-1.3.12.4.10.10.6"></a><h4>Returns</h4>
 <p> TRUE, if there is a selected node.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -738,7 +735,7 @@ To do this, you can use <a class="link" href="GtkTreeModel.html#gtk-tree-row-ref
 <p> A <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> containing a <a class="link" href="GtkTreeModel.html#GtkTreePath"><span class="type">GtkTreePath</span></a> for each selected row. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkTreePath][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -766,9 +763,8 @@ gtk_tree_selection_count_selected_rows
 <div class="refsect3">
 <a name="id-1.3.12.4.10.13.6"></a><h4>Returns</h4>
 <p> The number of rows selected.</p>
-<p></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -868,7 +864,6 @@ does not point to a valid location, <a href="https://developer.gnome.org/glib/un
 <a name="id-1.3.12.4.10.16.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>path</code></em>
 is selected.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -965,7 +960,6 @@ gtk_tree_selection_iter_is_selected (<em class="parameter"><code><a class="link"
 <a name="id-1.3.12.4.10.19.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, if <em class="parameter"><code>iter</code></em>
 is selected</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1092,7 +1086,7 @@ inclusive.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 </div>
 <div class="refsect1">
@@ -1144,7 +1138,7 @@ inclusive.</p>
 See <a class="link" href="GtkTreeSelection.html#gtk-tree-selection-set-mode" title="gtk_tree_selection_set_mode ()"><code class="function">gtk_tree_selection_set_mode()</code></a> for more information on this property.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: GTK_SELECTION_SINGLE</p>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -1192,7 +1186,6 @@ has happened.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

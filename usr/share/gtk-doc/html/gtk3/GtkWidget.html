@@ -8,7 +8,7 @@
 <link rel="up" href="AbstractObjects.html" title="Abstract Base Classes">
 <link rel="prev" href="AbstractObjects.html" title="Abstract Base Classes">
 <link rel="next" href="GtkContainer.html" title="GtkContainer">
-<meta name="generator" content="GTK-Doc V1.21.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -782,7 +782,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GdkPixbuf</span> *
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="GtkWidget.html#gtk-widget-render-icon" title="gtk_widget_render_icon ()">gtk_widget_render_icon</a> <span class="c_punctuation">()</span>
@@ -790,7 +790,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GdkPixbuf</span> *
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="GtkWidget.html#gtk-widget-render-icon-pixbuf" title="gtk_widget_render_icon_pixbuf ()">gtk_widget_render_icon_pixbuf</a> <span class="c_punctuation">()</span>
@@ -1642,6 +1642,21 @@
 </td>
 <td class="function_name">
 <a class="link" href="GtkWidget.html#gtk-widget-set-opacity" title="gtk_widget_set_opacity ()">gtk_widget_set_opacity</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="GtkWidget.html#gtk-widget-list-action-prefixes" title="gtk_widget_list_action_prefixes ()">gtk_widget_list_action_prefixes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/gio/unstable/GActionGroup.html"><span class="returnvalue">GActionGroup</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GtkWidget.html#gtk-widget-get-action-group" title="gtk_widget_get_action_group ()">gtk_widget_get_action_group</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -2785,7 +2800,7 @@
 </div>
 <div class="refsect1">
 <a name="GtkWidget.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GBoxed
+<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> GtkRequisition
     <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
     <span class="lineart">╰──</span> <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
@@ -2796,6 +2811,7 @@
             <span class="lineart">├──</span> <a class="link" href="GtkCellView.html" title="GtkCellView">GtkCellView</a>
             <span class="lineart">├──</span> <a class="link" href="GtkDrawingArea.html" title="GtkDrawingArea">GtkDrawingArea</a>
             <span class="lineart">├──</span> <a class="link" href="GtkEntry.html" title="GtkEntry">GtkEntry</a>
+            <span class="lineart">├──</span> <a class="link" href="GtkGLArea.html" title="GtkGLArea">GtkGLArea</a>
             <span class="lineart">├──</span> <a class="link" href="GtkRange.html" title="GtkRange">GtkRange</a>
             <span class="lineart">├──</span> <a class="link" href="GtkSeparator.html" title="GtkSeparator">GtkSeparator</a>
             <span class="lineart">├──</span> <a class="link" href="GtkHSV.html" title="GtkHSV">GtkHSV</a>
@@ -3165,7 +3181,7 @@ be associated with widgets, using the custom &lt;style&gt; element:</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="id-1.3.19.2.13.6"></a><h3>Building composite widgets from template XML</h3>
+<a name="composite-templates"></a><h3>Building composite widgets from template XML</h3>
 <p>GtkWidget exposes some facilities to automate the proceedure
 of creating composite widgets using <a class="link" href="GtkBuilder.html" title="GtkBuilder"><span class="type">GtkBuilder</span></a> interface description
 language.</p>
@@ -3470,7 +3486,6 @@ cast the object yourself.</p>
 <a name="id-1.3.19.2.14.3.6"></a><h4>Returns</h4>
 <p> a new <a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> of type <em class="parameter"><code>widget_type</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3534,7 +3549,6 @@ unnecessary work.</p>
 <a name="id-1.3.19.2.14.5.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 is being destroyed</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -3860,7 +3874,7 @@ and when rendered using <a class="link" href="GtkWidget.html#gtk-widget-draw" ti
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3937,7 +3951,7 @@ except that the widget is not invalidated.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3982,7 +3996,7 @@ change the widget’s frame clock.</p>
 <p> a <a href="http://developer.gnome.org/gdk2/GdkFrameClock.html"><span class="type">GdkFrameClock</span></a> (or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if widget is unrealized). </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4012,9 +4026,8 @@ high density outputs, it can be a higher value (typically 2).</p>
 <a name="id-1.3.19.2.14.21.7"></a><h4>Returns</h4>
 <p> the scale factor for <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4055,9 +4068,8 @@ high density outputs, it can be a higher value (typically 2).</p>
 <a name="id-1.3.19.2.14.22.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-The-Main-Event-Loop.html#G-SOURCE-CONTINUE:CAPS"><code class="literal">G_SOURCE_CONTINUE</code></a> if the tick callback should continue to be called,
 <a href="https://developer.gnome.org/glib/unstable/glib-The-Main-Event-Loop.html#G-SOURCE-REMOVE:CAPS"><code class="literal">G_SOURCE_REMOVE</code></a> if the tick callback should be removed.</p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4123,9 +4135,8 @@ when the callback is removed.</p></td>
 <a name="id-1.3.19.2.14.23.8"></a><h4>Returns</h4>
 <p> an id for the connection of this callback. Remove the callback
 by passing it to <a class="link" href="GtkWidget.html#gtk-widget-remove-tick-callback" title="gtk_widget_remove_tick_callback ()"><code class="function">gtk_widget_remove_tick_callback()</code></a></p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4157,7 +4168,7 @@ gtk_widget_remove_tick_callback (<em class="parameter"><code><a class="link" hre
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4343,7 +4354,7 @@ baseline argument is ignored and -1 is used instead.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4456,7 +4467,6 @@ gtk_widget_remove_accelerator (<em class="parameter"><code><a class="link" href=
 <div class="refsect3">
 <a name="id-1.3.19.2.14.30.6"></a><h4>Returns</h4>
 <p> whether an accelerator was installed and could be removed</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4594,9 +4604,8 @@ its ancestors mapped.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.33.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the accelerator can be activated.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4638,7 +4647,6 @@ window.</p>
 <a name="id-1.3.19.2.14.34.6"></a><h4>Returns</h4>
 <p> return from the event signal emission (<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if
 the event was handled)</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4669,7 +4677,6 @@ activatable, the function returns <a href="https://developer.gnome.org/glib/unst
 <div class="refsect3">
 <a name="id-1.3.19.2.14.35.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget was activatable</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4754,7 +4761,6 @@ and <em class="parameter"><code>area</code></em>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.37.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there was an intersection</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4784,7 +4790,6 @@ toplevel widget additionally has the global input focus.)</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.38.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget is the focus widget.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -4797,7 +4802,7 @@ gtk_widget_grab_focus (<em class="parameter"><code><a class="link" href="GtkWidg
 inside. <em class="parameter"><code>widget</code></em>
  must be a focusable widget, such as a <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a>;
 something like <a class="link" href="GtkFrame.html" title="GtkFrame"><span class="type">GtkFrame</span></a> won’t work.</p>
-<p>More precisely, it must have the <code class="literal">GTK_CAN_FOCUS</code> flag set. Use
+<p>More precisely, it must have the <a href="http://library.gnome.org/devel/gtk3/GtkWidget.html#GTK-CAN-FOCUS:CAPS"><code class="literal">GTK_CAN_FOCUS</code></a> flag set. Use
 <a class="link" href="GtkWidget.html#gtk-widget-set-can-focus" title="gtk_widget_set_can_focus ()"><code class="function">gtk_widget_set_can_focus()</code></a> to modify that flag.</p>
 <p>The widget also needs to be realized and mapped. This is indicated by the
 related signals. Grabbing the focus immediately after creating the widget
@@ -4913,7 +4918,6 @@ significance of widget names.</p>
 <a name="id-1.3.19.2.14.42.6"></a><h4>Returns</h4>
 <p> name of the widget. This string is owned by GTK+ and
 should not be modified or freed</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -5133,9 +5137,8 @@ box.</p>
 <a name="gtk-widget-get-events"></a><h3>gtk_widget_get_events ()</h3>
 <pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 gtk_widget_get_events (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
-<p>Returns the event mask for the widget (a bitfield containing flags
-from the <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GdkEventMask"><span class="type">GdkEventMask</span></a> enumeration). These are the events that the widget
-will receive.</p>
+<p>Returns the event mask (see <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GdkEventMask"><span class="type">GdkEventMask</span></a>) for the widget. These are the
+events that the widget will receive.</p>
 <p>Note: Internally, the widget event mask will be the logical OR of the event
 mask set through <a class="link" href="GtkWidget.html#gtk-widget-set-events" title="gtk_widget_set_events ()"><code class="function">gtk_widget_set_events()</code></a> or <a class="link" href="GtkWidget.html#gtk-widget-add-events" title="gtk_widget_add_events ()"><code class="function">gtk_widget_add_events()</code></a>, and the
 event mask necessary to cater for every <a class="link" href="GtkEventController.html" title="GtkEventController"><span class="type">GtkEventController</span></a> created for the
@@ -5159,7 +5162,6 @@ widget.</p>
 <a name="id-1.3.19.2.14.49.7"></a><h4>Returns</h4>
 <p> event mask for <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -5171,7 +5173,8 @@ gtk_widget_add_events (<em class="parameter"><code><a class="link" href="GtkWidg
 <p>Adds the events in the bitfield <em class="parameter"><code>events</code></em>
  to the event mask for
 <em class="parameter"><code>widget</code></em>
-. See <a class="link" href="GtkWidget.html#gtk-widget-set-events" title="gtk_widget_set_events ()"><code class="function">gtk_widget_set_events()</code></a> for details.</p>
+. See <a class="link" href="GtkWidget.html#gtk-widget-set-events" title="gtk_widget_set_events ()"><code class="function">gtk_widget_set_events()</code></a> and the
+<a class="link" href="chap-input-handling.html#event-masks" title="Event masks">input handling overview</a> for details.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.50.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -5210,7 +5213,8 @@ changing the event mask you may disrupt a widget’s functionality,
 so be careful. This function must be called while a widget is
 unrealized. Consider <a class="link" href="GtkWidget.html#gtk-widget-add-device-events" title="gtk_widget_add_device_events ()"><code class="function">gtk_widget_add_device_events()</code></a> for widgets that are
 already realized, or if you want to preserve the existing event
-mask. This function can’t be used with <span class="type">GTK_NO_WINDOW</span> widgets;
+mask. This function can’t be used with windowless widgets (which return
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> from <a class="link" href="GtkWidget.html#gtk-widget-get-has-window" title="gtk_widget_get_has_window ()"><code class="function">gtk_widget_get_has_window()</code></a>);
 to get events on those widgets, place them inside a <a class="link" href="GtkEventBox.html" title="GtkEventBox"><span class="type">GtkEventBox</span></a>
 and receive events on the event box.</p>
 <div class="refsect3">
@@ -5240,7 +5244,7 @@ and receive events on the event box.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5277,9 +5281,8 @@ are the events that the widget will receive when <em class="parameter"><code>dev
 <a name="id-1.3.19.2.14.52.6"></a><h4>Returns</h4>
 <p> device event mask for <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5319,7 +5322,7 @@ gtk_widget_add_device_events (<em class="parameter"><code><a class="link" href="
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5361,7 +5364,7 @@ and enabling the same mask that is has for core events
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5400,9 +5403,8 @@ children. See <a class="link" href="GtkWidget.html#gtk-widget-set-device-enabled
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> is <em class="parameter"><code>device</code></em>
 is enabled for <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5577,8 +5579,8 @@ so you should call this function before <em class="parameter"><code>widget</code
 </tr>
 <tr>
 <td class="parameter_name"><p>visual</p></td>
-<td class="parameter_description"><p>visual to be used or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to unset a previous one</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p> visual to be used or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to unset a previous one. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -5598,11 +5600,11 @@ gtk_widget_get_pointer (<em class="parameter"><code><a class="link" href="GtkWid
 <p>Obtains the location of the mouse pointer in widget coordinates.
 Widget coordinates are a bit odd; for historical reasons, they are
 defined as <em class="parameter"><code>widget-&gt;window</code></em>
- coordinates for widgets that are not
-<span class="type">GTK_NO_WINDOW</span> widgets, and are relative to <em class="parameter"><code>widget-&gt;allocation.x</code></em>
+ coordinates for widgets that return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for
+<a class="link" href="GtkWidget.html#gtk-widget-get-has-window" title="gtk_widget_get_has_window ()"><code class="function">gtk_widget_get_has_window()</code></a>; and are relative to <em class="parameter"><code>widget-&gt;allocation.x</code></em>
 ,
 <em class="parameter"><code>widget-&gt;allocation.y</code></em>
- for widgets that are <span class="type">GTK_NO_WINDOW</span> widgets.</p>
+ otherwise.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.60.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -5669,7 +5671,6 @@ intermediate containers.</p>
 contains <em class="parameter"><code>widget</code></em>
 as a child,
 grandchild, great grandchild, etc.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -5741,7 +5742,6 @@ was no common ancestor. In this case, nothing is stored in
 *<em class="parameter"><code>dest_x</code></em>
 and *<em class="parameter"><code>dest_y</code></em>
 . Otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -5774,7 +5774,6 @@ is received.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.63.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a></p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -5992,7 +5991,6 @@ gtk_widget_get_direction (<em class="parameter"><code><a class="link" href="GtkW
 <div class="refsect3">
 <a name="id-1.3.19.2.14.70.6"></a><h4>Returns</h4>
 <p> the reading direction for the widget.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -6029,7 +6027,6 @@ gtk_widget_get_default_direction (<em class="parameter"><code><span class="type"
 <div class="refsect3">
 <a name="id-1.3.19.2.14.72.5"></a><h4>Returns</h4>
 <p> the current default direction.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -6063,7 +6060,7 @@ for more information.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6096,7 +6093,7 @@ windows which react to mouse click in a nonrectangular region, see
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6244,7 +6241,6 @@ gtk_widget_get_composite_name (<em class="parameter"><code><a class="link" href=
 is not
 a composite child. The string should be freed when it is no
 longer needed.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -6254,11 +6250,20 @@ longer needed.</p>
 gtk_widget_override_background_color (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                                       <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
                                       <em class="parameter"><code>const <a href="http://developer.gnome.org/gdk2/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *color</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_widget_override_background_color</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>This function is not useful in the context of CSS-based
+  rendering. If you wish to change the way a widget renders its background
+  you should use a custom CSS style, through an application-specific
+  <a class="link" href="GtkStyleProvider.html" title="GtkStyleProvider"><span class="type">GtkStyleProvider</span></a> and a CSS style class. You can also override the default
+  drawing of a widget through the <a class="link" href="GtkWidget.html#GtkWidget-draw" title="The “draw” signal"><span class="type">“draw”</span></a> signal, and use Cairo to
+  draw a specific color, regardless of the CSS style.</p>
+</div>
 <p>Sets the background color to use for a widget.</p>
 <p>All other style values are left untouched.
 See <a class="link" href="GtkWidget.html#gtk-widget-override-color" title="gtk_widget_override_color ()"><code class="function">gtk_widget_override_color()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.78.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.78.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6285,7 +6290,7 @@ of previous calls to <a class="link" href="GtkWidget.html#gtk-widget-override-ba
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6294,6 +6299,10 @@ of previous calls to <a class="link" href="GtkWidget.html#gtk-widget-override-ba
 gtk_widget_override_color (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                            <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
                            <em class="parameter"><code>const <a href="http://developer.gnome.org/gdk2/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *color</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_widget_override_color</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>Use a custom style provider and style classes instead</p>
+</div>
 <p>Sets the color to use for a widget.</p>
 <p>All other style values are left untouched.</p>
 <p>This function does not act recursively. Setting the color of a
@@ -6316,7 +6325,7 @@ these cases it is better to fully style such widgets through a
 <a class="link" href="GtkCssProvider.html" title="GtkCssProvider"><span class="type">GtkCssProvider</span></a> with the <a class="link" href="GtkStyleProvider.html#GTK-STYLE-PROVIDER-PRIORITY-APPLICATION:CAPS" title="GTK_STYLE_PROVIDER_PRIORITY_APPLICATION"><code class="literal">GTK_STYLE_PROVIDER_PRIORITY_APPLICATION</code></a>
 priority.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.79.10"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.79.12"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6343,7 +6352,7 @@ of previous calls to <a class="link" href="GtkWidget.html#gtk-widget-override-co
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6351,10 +6360,17 @@ of previous calls to <a class="link" href="GtkWidget.html#gtk-widget-override-co
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_widget_override_font (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                           <em class="parameter"><code>const <span class="type">PangoFontDescription</span> *font_desc</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_widget_override_font</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>This function is not useful in the context of CSS-based
+  rendering. If you wish to change the font a widget uses to render its text
+  you should use a custom CSS style, through an application-specific
+  <a class="link" href="GtkStyleProvider.html" title="GtkStyleProvider"><span class="type">GtkStyleProvider</span></a> and a CSS style class.</p>
+</div>
 <p>Sets the font to use for a widget. All other style values are
 left untouched. See <a class="link" href="GtkWidget.html#gtk-widget-override-color" title="gtk_widget_override_color ()"><code class="function">gtk_widget_override_color()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.80.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.80.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6376,7 +6392,7 @@ the effect of previous calls to <a class="link" href="GtkWidget.html#gtk-widget-
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6385,12 +6401,19 @@ the effect of previous calls to <a class="link" href="GtkWidget.html#gtk-widget-
 gtk_widget_override_symbolic_color (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                                     <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
                                     <em class="parameter"><code>const <a href="http://developer.gnome.org/gdk2/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *color</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_widget_override_symbolic_color</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>This function is not useful in the context of CSS-based
+  rendering. If you wish to change the color used to render symbolic icons
+  you should use a custom CSS style, through an application-specific
+  <a class="link" href="GtkStyleProvider.html" title="GtkStyleProvider"><span class="type">GtkStyleProvider</span></a> and a CSS style class.</p>
+</div>
 <p>Sets a symbolic color for a widget.</p>
 <p>All other style values are left untouched.
 See <a class="link" href="GtkWidget.html#gtk-widget-override-color" title="gtk_widget_override_color ()"><code class="function">gtk_widget_override_color()</code></a> for overriding the foreground
 or background color.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.81.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.81.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6418,7 +6441,7 @@ calls to <a class="link" href="GtkWidget.html#gtk-widget-override-symbolic-color
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6427,6 +6450,13 @@ calls to <a class="link" href="GtkWidget.html#gtk-widget-override-symbolic-color
 gtk_widget_override_cursor (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                             <em class="parameter"><code>const <a href="http://developer.gnome.org/gdk2/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *cursor</code></em>,
                             <em class="parameter"><code>const <a href="http://developer.gnome.org/gdk2/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *secondary_cursor</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_widget_override_cursor</code> has been deprecated since version 3.16 and should not be used in newly-written code.</p>
+<p>This function is not useful in the context of CSS-based
+  rendering. If you wish to change the color used to render the primary
+  and seconday cursors you should use a custom CSS style, through an
+  application-specific <a class="link" href="GtkStyleProvider.html" title="GtkStyleProvider"><span class="type">GtkStyleProvider</span></a> and a CSS style class.</p>
+</div>
 <p>Sets the cursor color to use in a widget, overriding the
 cursor-color and secondary-cursor-color
 style properties. All other style values are left untouched.
@@ -6436,7 +6466,7 @@ so the alpha value in <em class="parameter"><code>primary</code></em>
  and <em class="parameter"><code>secondary</code></em>
  will be ignored.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.82.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.82.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -6466,7 +6496,7 @@ calls to of <a class="link" href="GtkWidget.html#gtk-widget-override-cursor" tit
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6620,7 +6650,7 @@ gtk_widget_modify_bg (<em class="parameter"><code><a class="link" href="GtkWidge
 <p>All other style values are left untouched.
 See also <a class="link" href="GtkWidget.html#gtk-widget-modify-style" title="gtk_widget_modify_style ()"><code class="function">gtk_widget_modify_style()</code></a>.</p>
 <div class="blockquote"><blockquote class="blockquote">
-<p>Note that “no window” widgets (which have the <code class="literal">GTK_NO_WINDOW</code>
+<p>Note that “no window” widgets (which have the <a href="http://library.gnome.org/devel/gtk3/GtkWidget.html#GTK-NO-WINDOW:CAPS"><code class="literal">GTK_NO_WINDOW</code></a>
 flag set) draw on their parent container’s window and thus may
 not draw any background themselves. This is the case for e.g.
 <a class="link" href="GtkLabel.html" title="GtkLabel"><span class="type">GtkLabel</span></a>.</p>
@@ -6723,7 +6753,7 @@ is the background color used along with the text color
 (see <a class="link" href="GtkWidget.html#gtk-widget-modify-text" title="gtk_widget_modify_text ()"><code class="function">gtk_widget_modify_text()</code></a>) for widgets such as <a class="link" href="GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a>
 and <a class="link" href="GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a>. See also <a class="link" href="GtkWidget.html#gtk-widget-modify-style" title="gtk_widget_modify_style ()"><code class="function">gtk_widget_modify_style()</code></a>.</p>
 <div class="blockquote"><blockquote class="blockquote">
-<p>Note that “no window” widgets (which have the <code class="literal">GTK_NO_WINDOW</code>
+<p>Note that “no window” widgets (which have the <a href="http://library.gnome.org/devel/gtk3/GtkWidget.html#GTK-NO-WINDOW:CAPS"><code class="literal">GTK_NO_WINDOW</code></a>
 flag set) draw on their parent container’s window and thus may
 not draw any background themselves. This is the case for e.g.
 <a class="link" href="GtkLabel.html" title="GtkLabel"><span class="type">GtkLabel</span></a>.</p>
@@ -6846,7 +6876,7 @@ previous calls to of <a class="link" href="GtkWidget.html#gtk-widget-modify-curs
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6954,7 +6984,7 @@ on the widget.</p>
 <hr>
 <div class="refsect2">
 <a name="gtk-widget-render-icon"></a><h3>gtk_widget_render_icon ()</h3>
-<pre class="programlisting"><span class="returnvalue">GdkPixbuf</span> *
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 gtk_widget_render_icon (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                         <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *stock_id</code></em>,
                         <em class="parameter"><code><a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a> size</code></em>,
@@ -6975,7 +7005,7 @@ should be a size such as <a class="link" href="gtk3-Themeable-Stock-Images.html#
 string that identifies the widget or code doing the rendering, so
 that theme engines can special-case rendering for that widget or
 code.</p>
-<p>The pixels in the returned <span class="type">GdkPixbuf</span> are shared with the rest of
+<p>The pixels in the returned <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> are shared with the rest of
 the application and should not be modified. The pixbuf should be
 freed after use with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
 <div class="refsect3">
@@ -7022,7 +7052,7 @@ stock ID wasn’t known. </p>
 <hr>
 <div class="refsect2">
 <a name="gtk-widget-render-icon-pixbuf"></a><h3>gtk_widget_render_icon_pixbuf ()</h3>
-<pre class="programlisting"><span class="returnvalue">GdkPixbuf</span> *
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a> *
 gtk_widget_render_icon_pixbuf (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                                <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *stock_id</code></em>,
                                <em class="parameter"><code><a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a> size</code></em>);</pre>
@@ -7039,7 +7069,7 @@ a pixbuf. <em class="parameter"><code>stock_id</code></em>
 <a class="link" href="gtk3-Stock-Items.html#GTK-STOCK-OPEN:CAPS" title="GTK_STOCK_OPEN"><span class="type">GTK_STOCK_OPEN</span></a> or <a class="link" href="gtk3-Stock-Items.html#GTK-STOCK-OK:CAPS" title="GTK_STOCK_OK"><span class="type">GTK_STOCK_OK</span></a>. <em class="parameter"><code>size</code></em>
  should be a size
 such as <a class="link" href="gtk3-Themeable-Stock-Images.html#GTK-ICON-SIZE-MENU:CAPS"><span class="type">GTK_ICON_SIZE_MENU</span></a>.</p>
-<p>The pixels in the returned <span class="type">GdkPixbuf</span> are shared with the rest of
+<p>The pixels in the returned <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> are shared with the rest of
 the application and should not be modified. The pixbuf should be freed
 after use with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
 <div class="refsect3">
@@ -7077,7 +7107,7 @@ multiple source sizes, GTK+ picks one of the available sizes). </p></td>
 stock ID wasn’t known. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7122,13 +7152,19 @@ the region created from the given coordinates.</p>
 <p>The region here is specified in widget coordinates.
 Widget coordinates are a bit odd; for historical reasons, they are
 defined as <em class="parameter"><code>widget-&gt;window</code></em>
- coordinates for widgets that are not
-<span class="type">GTK_NO_WINDOW</span> widgets, and are relative to <em class="parameter"><code>widget-&gt;allocation.x</code></em>
+ coordinates for widgets that return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for
+<a class="link" href="GtkWidget.html#gtk-widget-get-has-window" title="gtk_widget_get_has_window ()"><code class="function">gtk_widget_get_has_window()</code></a>, and are relative to <em class="parameter"><code>widget-&gt;allocation.x</code></em>
 ,
 <em class="parameter"><code>widget-&gt;allocation.y</code></em>
- for widgets that are <span class="type">GTK_NO_WINDOW</span> widgets.</p>
+ otherwise.</p>
+<p><em class="parameter"><code>width</code></em>
+ or <em class="parameter"><code>height</code></em>
+ may be 0, in this case this function does
+nothing. Negative values for <em class="parameter"><code>width</code></em>
+ and <em class="parameter"><code>height</code></em>
+ are not allowed.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.98.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.98.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -7204,7 +7240,7 @@ implementations. You might also use it to schedule a redraw of a
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7252,8 +7288,9 @@ gtk_widget_set_double_buffered (<em class="parameter"><code><a class="link" href
                                 <em class="parameter"><code><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> double_buffered</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">gtk_widget_set_double_buffered</code> has been deprecated since version 3.14 and should not be used in newly-written code.</p>
-<p>This does not work under non-X11 backends,
-and it should not be used in newly written code.</p>
+<p>This function does not work under non-X11 backends or with
+non-native windows.
+It should not be used in newly written code.</p>
 </div>
 <p>Widgets are double buffered by default; you can use this function
 to turn off the buffering. “Double buffered” simply means that
@@ -7271,8 +7308,12 @@ if you had special needs and really knew what you were doing.</p>
 expose events, since even the clearing to the background color or
 pixmap will not happen automatically (as it is done in
 <a href="http://developer.gnome.org/gdk2/gdk3-Windows.html#gdk-window-begin-paint-region"><code class="function">gdk_window_begin_paint_region()</code></a>).</p>
-<p>Since 3.10 this function only works for widgets with native
-windows.</p>
+<p>In 3.10 GTK and GDK have been restructured for translucent drawing. Since
+then expose events for double-buffered widgets are culled into a single
+event to the toplevel GDK window. If you now unset double buffering, you
+will cause a separate rendering pass for every widget. This will likely
+cause rendering problems - in particular related to stacking - and usually
+increases rrendering times significantly.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.101.9"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -7415,7 +7456,6 @@ is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#
 <div class="refsect3">
 <a name="id-1.3.19.2.14.104.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the signal has been handled</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -7460,8 +7500,9 @@ gtk_widget_class_install_style_property_parser
                                 <em class="parameter"><code><a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec"><span class="type">GParamSpec</span></a> *pspec</code></em>,
                                 <em class="parameter"><code><a class="link" href="GtkStyle.html#GtkRcPropertyParser" title="GtkRcPropertyParser ()"><span class="type">GtkRcPropertyParser</span></a> parser</code></em>);</pre>
 <p>Installs a style property on a widget class.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.106.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.106.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -7524,7 +7565,7 @@ gtk_widget_class_find_style_property (<em class="parameter"><code><a class="link
 has no style property with that name. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7563,7 +7604,7 @@ newly allocated array of <a href="https://developer.gnome.org/gobject/unstable/g
 freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_properties][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7600,9 +7641,9 @@ check.</p>
 <td class="parameter_description"><p>a <span class="type">cairo_region_t</span>, in the same coordinate system as
 <em class="parameter"><code>widget-&gt;allocation</code></em>
 . That is, relative to <em class="parameter"><code>widget-&gt;window</code></em>
-for <code class="literal">NO_WINDOW</code> widgets; relative to the parent window
-of <em class="parameter"><code>widget-&gt;window</code></em>
-for widgets with their own window.</p></td>
+for widgets which return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> from <a class="link" href="GtkWidget.html#gtk-widget-get-has-window" title="gtk_widget_get_has_window ()"><code class="function">gtk_widget_get_has_window()</code></a>;
+relative to the parent window of <em class="parameter"><code>widget-&gt;window</code></em>
+otherwise.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -7612,12 +7653,7 @@ for widgets with their own window.</p></td>
 <a name="id-1.3.19.2.14.109.7"></a><h4>Returns</h4>
 <p> A newly allocated region holding the intersection of <em class="parameter"><code>widget</code></em>
 and <em class="parameter"><code>region</code></em>
-. The coordinates of the return value are relative to
-<em class="parameter"><code>widget-&gt;window</code></em>
-for <code class="literal">NO_WINDOW</code> widgets, and relative to the parent
-window of <em class="parameter"><code>widget-&gt;window</code></em>
-for widgets with their own window.</p>
-<p></p>
+.</p>
 </div>
 </div>
 <hr>
@@ -7629,8 +7665,8 @@ gtk_widget_send_expose (<em class="parameter"><code><a class="link" href="GtkWid
 <p>Very rarely-used function. This function is used to emit
 an expose event on a widget. This function is not normally used
 directly. The only time it is used is when propagating an expose
-event to a child <code class="literal">NO_WINDOW</code> widget, and that is normally done
-using <a class="link" href="GtkContainer.html#gtk-container-propagate-draw" title="gtk_container_propagate_draw ()"><code class="function">gtk_container_propagate_draw()</code></a>.</p>
+event to a windowless child widget (<a class="link" href="GtkWidget.html#gtk-widget-get-has-window" title="gtk_widget_get_has_window ()"><code class="function">gtk_widget_get_has_window()</code></a> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>),
+and that is normally done using <a class="link" href="GtkContainer.html#gtk-container-propagate-draw" title="gtk_container_propagate_draw ()"><code class="function">gtk_container_propagate_draw()</code></a>.</p>
 <p>If you want to force an area of a window to be redrawn,
 use <a href="http://developer.gnome.org/gdk2/gdk3-Windows.html#gdk-window-invalidate-rect"><code class="function">gdk_window_invalidate_rect()</code></a> or <a href="http://developer.gnome.org/gdk2/gdk3-Windows.html#gdk-window-invalidate-region"><code class="function">gdk_window_invalidate_region()</code></a>.
 To cause the redraw to be done immediately, follow that call
@@ -7661,7 +7697,6 @@ with a call to <a href="http://developer.gnome.org/gdk2/gdk3-Windows.html#gdk-wi
 <a name="id-1.3.19.2.14.110.7"></a><h4>Returns</h4>
 <p> return from the event signal emission (<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if
 the event was handled)</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -7737,9 +7772,8 @@ window similar to the quick search in <a class="link" href="GtkTreeView.html" ti
 <a name="id-1.3.19.2.14.111.10"></a><h4>Returns</h4>
 <p> the return value from the event signal emission: <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>
 if the event was handled, and <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7900,7 +7934,7 @@ implementation which does not chain up to its parent class'
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7937,7 +7971,7 @@ accessibles of the parent class.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -7982,7 +8016,7 @@ and the accessible’s default role will be used instead.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8073,7 +8107,6 @@ if returning <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Ma
 <a name="id-1.3.19.2.14.119.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if focus ended up inside <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -8169,7 +8202,6 @@ never should be called by an application.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.122.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget is mapped with the parent.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -8277,7 +8309,7 @@ be created. Once a clipboard object has
 been created, it is persistent for all time. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8310,7 +8342,7 @@ free those resources when the widget is unrealized.</p>
 <p> the <a href="http://developer.gnome.org/gdk2/GdkDisplay.html"><span class="type">GdkDisplay</span></a> for the toplevel for this widget. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8348,7 +8380,7 @@ and you should free those resources when the widget is unrealized.</p>
 <p> the <a href="http://developer.gnome.org/gdk2/gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> root window for the toplevel for this widget. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8382,7 +8414,7 @@ free those resources when the widget is unrealized.</p>
 <p> the <a href="http://developer.gnome.org/gdk2/GdkScreen.html"><span class="type">GdkScreen</span></a> for the toplevel for this widget. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8412,9 +8444,8 @@ window at the top.</p>
 <a name="id-1.3.19.2.14.129.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there is a <a href="http://developer.gnome.org/gdk2/GdkScreen.html"><span class="type">GdkScreen</span></a> associcated
 with the widget.</p>
-<p></p>
 </div>
-<p class="since">Since 2.2</p>
+<p class="since">Since: 2.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8627,7 +8658,7 @@ controlled visibility, see <a class="link" href="GtkUIManager.html" title="GtkUI
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8655,9 +8686,8 @@ will affect this widget.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.135.6"></a><h4>Returns</h4>
 <p> the current value of the “no-show-all” property.</p>
-<p></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8695,7 +8725,7 @@ mnemonic labels; free this list
 with <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a> when you are done with it. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkWidget][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8732,7 +8762,7 @@ to the <a class="link" href="GtkWidget.html#GtkWidget-destroy" title="The “des
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8768,7 +8798,7 @@ with <a class="link" href="GtkWidget.html#gtk-widget-add-mnemonic-label" title="
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.4</p>
+<p class="since">Since: 2.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8802,9 +8832,8 @@ window in its hierarchy (as set by <a href="http://developer.gnome.org/gdk2/gdk3
 <a name="id-1.3.19.2.14.139.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget can rely on its alpha
 channel being drawn correctly.</p>
-<p></p>
 </div>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8832,7 +8861,7 @@ or window manager that is used.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8889,9 +8918,8 @@ that require entering license keys.</p>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if stopping keyboard navigation is fine, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>
 if the emitting widget should try to handle the keyboard
 navigation attempt in its parent container(s).</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8919,9 +8947,8 @@ gtk_widget_get_tooltip_markup (<em class="parameter"><code><a class="link" href=
 <a name="id-1.3.19.2.14.142.6"></a><h4>Returns</h4>
 <p> the tooltip text, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. You should free the
 returned string with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when done.</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8959,7 +8986,7 @@ and of the default handler for the <a class="link" href="GtkWidget.html#GtkWidge
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -8987,9 +9014,8 @@ gtk_widget_get_tooltip_text (<em class="parameter"><code><a class="link" href="G
 <a name="id-1.3.19.2.14.144.6"></a><h4>Returns</h4>
 <p> the tooltip text, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. You should free the
 returned string with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when done.</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9025,7 +9051,7 @@ handler for the <a class="link" href="GtkWidget.html#GtkWidget-query-tooltip" ti
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9055,7 +9081,7 @@ using <a class="link" href="GtkWidget.html#gtk-widget-set-tooltip-window" title=
 <p> The <a class="link" href="GtkWindow.html" title="GtkWindow"><span class="type">GtkWindow</span></a> of the current tooltip. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9095,7 +9121,7 @@ have the name “gtk-tooltip”, see <a class="link" href="GtkWidget.html#gtk-wi
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9123,9 +9149,8 @@ gtk_widget_get_has_tooltip (<em class="parameter"><code><a class="link" href="Gt
 <a name="id-1.3.19.2.14.148.6"></a><h4>Returns</h4>
 <p> current value of has-tooltip on <em class="parameter"><code>widget</code></em>
 .</p>
-<p></p>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9160,7 +9185,7 @@ has a tooltip.</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9186,7 +9211,7 @@ information.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9215,7 +9240,7 @@ gtk_widget_get_window (<em class="parameter"><code><a class="link" href="GtkWidg
 ’s window. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9252,7 +9277,7 @@ transparency might not work perfectly.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9285,7 +9310,7 @@ no longer used by the widget, such as when you destroy it.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9332,9 +9357,8 @@ window.</p></td>
 <a name="id-1.3.19.2.14.154.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>window</code></em>
 should be drawn</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9383,7 +9407,7 @@ GTK+ 2 to the rendering architecture of GTK+ 3.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9413,7 +9437,6 @@ for the <a class="link" href="GtkWidget.html#GtkWidget-draw" title="The “draw�
 <a name="id-1.3.19.2.14.156.6"></a><h4>Returns</h4>
 <p> the width of the <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -9444,7 +9467,6 @@ for the <a class="link" href="GtkWidget.html#GtkWidget-draw" title="The “draw�
 <a name="id-1.3.19.2.14.157.6"></a><h4>Returns</h4>
 <p> the height of the <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -9490,7 +9512,7 @@ implementation needs that information it will have to track it itself.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9528,7 +9550,7 @@ allocation.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9559,9 +9581,8 @@ widgets in <a class="link" href="GtkWidget.html#GtkWidget-size-allocate" title="
 <a name="id-1.3.19.2.14.160.6"></a><h4>Returns</h4>
 <p> the baseline of the <em class="parameter"><code>widget</code></em>
 , or -1 if none</p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9597,7 +9618,7 @@ retrieved via <a class="link" href="GtkWidget.html#gtk-widget-get-allocation" ti
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.14</p>
+<p class="since">Since: <a class="link" href="api-index-3-14.html#api-index-3.14">3.14</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9605,26 +9626,20 @@ retrieved via <a class="link" href="GtkWidget.html#gtk-widget-get-allocation" ti
 <pre class="programlisting"><span class="returnvalue">void</span>
 gtk_widget_set_clip (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
                      <em class="parameter"><code>const <a class="link" href="GtkWidget.html#GtkAllocation" title="GtkAllocation"><span class="type">GtkAllocation</span></a> *clip</code></em>);</pre>
-<p>Sets the widget’s clip.  This must not be used
-directly, but from within a widget’s size_allocate method.</p>
+<p>Sets the widget’s clip.  This must not be used directly,
+but from within a widget’s size_allocate method.
+It must be called after <a class="link" href="GtkWidget.html#gtk-widget-set-allocation" title="gtk_widget_set_allocation ()"><code class="function">gtk_widget_set_allocation()</code></a> (or after chaning up
+to the parent class), because that function resets the clip.</p>
 <p>The clip set should be the area that <em class="parameter"><code>widget</code></em>
  draws on. If <em class="parameter"><code>widget</code></em>
  is a
 <a class="link" href="GtkContainer.html" title="GtkContainer"><span class="type">GtkContainer</span></a>, the area must contain all children's clips.</p>
 <p>If this function is not called by <em class="parameter"><code>widget</code></em>
  during a ::size-allocate handler,
-it is assumed to be equal to the allocation. However, if the function is
-not called, certain features that might extend a widget's allocation will
-not be available:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>The <a class="link" href="GtkWidget.html#GtkWidget-draw" title="The “draw” signal"><span class="type">“draw”</span></a> signal will be clipped to the widget's allocation
-to avoid overdraw.</p></li>
-<li class="listitem"><p>Calling <a class="link" href="GtkStyleContext.html#gtk-render-background" title="gtk_render_background ()"><code class="function">gtk_render_background()</code></a> will not draw outset shadows.</p></li>
-</ul></div>
-<p>It is therefore suggested that you always call <a class="link" href="GtkWidget.html#gtk-widget-set-clip" title="gtk_widget_set_clip ()"><code class="function">gtk_widget_set_clip()</code></a> during
-a ::size-allocate handler.</p>
+the clip will be set to <em class="parameter"><code>widget</code></em>
+'s allocation.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.162.9"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.162.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -9645,7 +9660,7 @@ a ::size-allocate handler.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.14</p>
+<p class="since">Since: <a class="link" href="api-index-3-14.html#api-index-3.14">3.14</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9673,9 +9688,8 @@ an <a class="link" href="GtkWidget.html#GtkWidget-draw" title="The “draw” si
 <div class="refsect3">
 <a name="id-1.3.19.2.14.163.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget is app paintable</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9704,9 +9718,8 @@ gtk_widget_get_can_default (<em class="parameter"><code><a class="link" href="Gt
 <a name="id-1.3.19.2.14.164.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 can be a default widget, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9741,7 +9754,7 @@ can be a default widget.</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9770,9 +9783,8 @@ gtk_widget_get_can_focus (<em class="parameter"><code><a class="link" href="GtkW
 <a name="id-1.3.19.2.14.166.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 can own the input focus, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9807,7 +9819,7 @@ can own the input focus.</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9835,9 +9847,8 @@ gtk_widget_get_double_buffered (<em class="parameter"><code><a class="link" href
 <div class="refsect3">
 <a name="id-1.3.19.2.14.168.9"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget is double buffered</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9866,9 +9877,8 @@ gtk_widget_get_has_window (<em class="parameter"><code><a class="link" href="Gtk
 <a name="id-1.3.19.2.14.169.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 has a window, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9910,7 +9920,7 @@ has a window.</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9939,9 +9949,8 @@ own and its parent widget’s sensitivity. See <a class="link" href="GtkWidget.h
 <div class="refsect3">
 <a name="id-1.3.19.2.14.171.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget is sensitive</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -9968,9 +9977,8 @@ it is sensitive itself and also its parent widget is sensitive</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.172.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget is effectively sensitive</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10001,9 +10009,8 @@ gtk_widget_get_state (<em class="parameter"><code><a class="link" href="GtkWidge
 <a name="id-1.3.19.2.14.173.8"></a><h4>Returns</h4>
 <p> the state of <em class="parameter"><code>widget</code></em>
 .</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10033,9 +10040,8 @@ visible, use <a class="link" href="GtkWidget.html#gtk-widget-is-visible" title="
 <div class="refsect3">
 <a name="id-1.3.19.2.14.174.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget is visible</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10064,9 +10070,8 @@ visible.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.175.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget and all its parents are visible</p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10103,7 +10108,7 @@ some condition.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10152,7 +10157,7 @@ state flag down the hierarchy, both <a class="link" href="GtkWidget.html#gtk-wid
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10185,7 +10190,7 @@ See <a class="link" href="GtkWidget.html#gtk-widget-set-state-flags" title="gtk_
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10215,9 +10220,8 @@ returned, that is, also based on parent insensitivity, even if
 <div class="refsect3">
 <a name="id-1.3.19.2.14.179.6"></a><h4>Returns</h4>
 <p> The state flags for widget</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10247,9 +10251,8 @@ toplevel. See <a class="link" href="GtkWidget.html#gtk-widget-set-can-default" t
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 is the current default widget within
 its toplevel, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10277,9 +10280,8 @@ input focus, and only having the focus within a toplevel.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.181.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget has the global input focus.</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10313,9 +10315,8 @@ about focus indication.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.182.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget should display a “focus rectangle”</p>
-<p></p>
 </div>
-<p class="since">Since 3.2</p>
+<p class="since">Since: <a class="link" href="api-index-3-2.html#api-index-3.2">3.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10343,9 +10344,8 @@ is the only widget receiving input events (keyboard and mouse).</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.14.183.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget is in the grab_widgets stack</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10376,9 +10376,8 @@ gtk_widget_has_rc_style (<em class="parameter"><code><a class="link" href="GtkWi
 <a name="id-1.3.19.2.14.184.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget has been looked up through the rc
 mechanism, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10407,9 +10406,8 @@ to if it is mapped and visible.</p>
 <a name="id-1.3.19.2.14.185.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 is drawable, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10440,9 +10438,8 @@ widget.</p>
 <a name="id-1.3.19.2.14.186.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 is a toplevel, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10482,7 +10479,7 @@ widget’s <code class="function">init()</code> function.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10519,7 +10516,7 @@ can be a default widget.</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10551,9 +10548,8 @@ is the default.</p>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 acts as the default widget when focussed,
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10588,7 +10584,7 @@ that if custom <a href="http://developer.gnome.org/gdk2/gdk3-Windows.html#GdkWin
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10617,7 +10613,6 @@ gtk_widget_get_support_multidevice (<em class="parameter"><code><a class="link" 
 <a name="id-1.3.19.2.14.191.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 is multidevice aware.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -10654,7 +10649,7 @@ and registered.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10682,9 +10677,8 @@ gtk_widget_get_realized (<em class="parameter"><code><a class="link" href="GtkWi
 <a name="id-1.3.19.2.14.193.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>widget</code></em>
 is realized, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
-<p></p>
 </div>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10717,7 +10711,7 @@ gtk_widget_set_mapped (<em class="parameter"><code><a class="link" href="GtkWidg
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10743,9 +10737,8 @@ gtk_widget_get_mapped (<em class="parameter"><code><a class="link" href="GtkWidg
 <div class="refsect3">
 <a name="id-1.3.19.2.14.195.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget is mapped, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10787,7 +10780,7 @@ changed after some internal state change (so that they can call
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.20</p>
+<p class="since">Since: 2.20</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10829,9 +10822,8 @@ devices. See <a class="link" href="gtk3-General.html#gtk-device-grab-add" title=
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there is an ongoing grab on <em class="parameter"><code>device</code></em>
 by another <a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> than <em class="parameter"><code>widget</code></em>
 .</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10869,9 +10861,8 @@ uses for a particular purpose.</p>
 <a name="id-1.3.19.2.14.198.7"></a><h4>Returns</h4>
 <p> the modifier mask used for <em class="parameter"><code>intent</code></em>
 .</p>
-<p></p>
 </div>
-<p class="since">Since 3.4</p>
+<p class="since">Since: <a class="link" href="api-index-3-4.html#api-index-3.4">3.4</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10922,7 +10913,7 @@ from <em class="parameter"><code>widget</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.6</p>
+<p class="since">Since: <a class="link" href="api-index-3-6.html#api-index-3.6">3.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10949,9 +10940,8 @@ See <a class="link" href="GtkWidget.html#gtk-widget-set-opacity" title="gtk_widg
 <div class="refsect3">
 <a name="id-1.3.19.2.14.200.6"></a><h4>Returns</h4>
 <p> the requested opacity for this widget.</p>
-<p></p>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -10994,7 +10984,79 @@ disables double buffering.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-widget-list-action-prefixes"></a><h3>gtk_widget_list_action_prefixes ()</h3>
+<pre class="programlisting">const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+gtk_widget_list_action_prefixes (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p>Retrieves a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of strings containing the prefixes of
+<a href="https://developer.gnome.org/gio/unstable/GActionGroup.html"><span class="type">GActionGroup</span></a>'s available to <em class="parameter"><code>widget</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.19.2.14.202.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.19.2.14.202.6"></a><h4>Returns</h4>
+<p> a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of strings. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gtk-widget-get-action-group"></a><h3>gtk_widget_get_action_group ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/gio/unstable/GActionGroup.html"><span class="returnvalue">GActionGroup</span></a> *
+gtk_widget_get_action_group (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                             <em class="parameter"><code>const <a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prefix</code></em>);</pre>
+<p>Retrieves the <a href="https://developer.gnome.org/gio/unstable/GActionGroup.html"><span class="type">GActionGroup</span></a> that was registered using <em class="parameter"><code>prefix</code></em>
+. The resulting
+<a href="https://developer.gnome.org/gio/unstable/GActionGroup.html"><span class="type">GActionGroup</span></a> may have been registered to <em class="parameter"><code>widget</code></em>
+ or any <a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> in its
+ancestry.</p>
+<p>If no action group was found matching <em class="parameter"><code>prefix</code></em>
+, then <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned.</p>
+<div class="refsect3">
+<a name="id-1.3.19.2.14.203.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prefix</p></td>
+<td class="parameter_description"><p>The “prefix” of the action group.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.19.2.14.203.7"></a><h4>Returns</h4>
+<p> A <a href="https://developer.gnome.org/gio/unstable/GActionGroup.html"><span class="type">GActionGroup</span></a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-16.html#api-index-3.16">3.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11006,7 +11068,7 @@ gtk_widget_get_path (<em class="parameter"><code><a class="link" href="GtkWidget
 is not connected to a toplevel widget, a partial path will be
 created.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.202.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.204.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11021,7 +11083,7 @@ created.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.202.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.204.6"></a><h4>Returns</h4>
 <p> The <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> representing <em class="parameter"><code>widget</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -11035,7 +11097,7 @@ gtk_widget_get_style_context (<em class="parameter"><code><a class="link" href="
 <p>Returns the style context associated to <em class="parameter"><code>widget</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.203.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.205.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11050,7 +11112,7 @@ gtk_widget_get_style_context (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.203.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.205.6"></a><h4>Returns</h4>
 <p> a <a class="link" href="GtkStyleContext.html" title="GtkStyleContext"><span class="type">GtkStyleContext</span></a>. This memory is owned by <em class="parameter"><code>widget</code></em>
 and
 must not be freed. </p>
@@ -11068,7 +11130,7 @@ by updating its widget path. <a href="GtkContainer.html"><span class="type">GtkC
 to use this on a child when reordering it in a way that a different
 style might apply to it. See also <a class="link" href="GtkContainer.html#gtk-container-get-path-for-child" title="gtk_container_get_path_for_child ()"><code class="function">gtk_container_get_path_for_child()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.204.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.206.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11082,7 +11144,7 @@ style might apply to it. See also <a class="link" href="GtkContainer.html#gtk-co
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11091,12 +11153,11 @@ style might apply to it. See also <a class="link" href="GtkContainer.html#gtk-co
 gtk_requisition_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Allocates a new <a class="link" href="GtkWidget.html#GtkRequisition-struct" title="GtkRequisition"><span class="type">GtkRequisition</span></a> and initializes its elements to zero.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.205.5"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.207.5"></a><h4>Returns</h4>
 <p> a new empty <a class="link" href="GtkWidget.html#GtkRequisition"><span class="type">GtkRequisition</span></a>. The newly allocated <a class="link" href="GtkWidget.html#GtkRequisition"><span class="type">GtkRequisition</span></a> should
 be freed with <a class="link" href="GtkWidget.html#gtk-requisition-free" title="gtk_requisition_free ()"><code class="function">gtk_requisition_free()</code></a>.</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11105,7 +11166,7 @@ be freed with <a class="link" href="GtkWidget.html#gtk-requisition-free" title="
 gtk_requisition_copy (<em class="parameter"><code>const <a class="link" href="GtkWidget.html#GtkRequisition"><span class="type">GtkRequisition</span></a> *requisition</code></em>);</pre>
 <p>Copies a <a class="link" href="GtkWidget.html#GtkRequisition"><span class="type">GtkRequisition</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.206.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.208.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11120,10 +11181,9 @@ gtk_requisition_copy (<em class="parameter"><code>const <a class="link" href="Gt
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.206.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.208.6"></a><h4>Returns</h4>
 <p> a copy of <em class="parameter"><code>requisition</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -11133,7 +11193,7 @@ gtk_requisition_copy (<em class="parameter"><code>const <a class="link" href="Gt
 gtk_requisition_free (<em class="parameter"><code><a class="link" href="GtkWidget.html#GtkRequisition"><span class="type">GtkRequisition</span></a> *requisition</code></em>);</pre>
 <p>Frees a <a class="link" href="GtkWidget.html#GtkRequisition"><span class="type">GtkRequisition</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.207.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.209.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11163,7 +11223,7 @@ GtkWidgetClass::adjust_size_request virtual method and by any
 is the one that should be used for layout, not necessarily the one
 returned by the widget itself.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.208.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.210.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11189,7 +11249,7 @@ returned by the widget itself.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11206,7 +11266,7 @@ GtkWidgetClass::adjust_size_request virtual method and by any
 is the one that should be used for layout, not necessarily the one
 returned by the widget itself.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.209.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.211.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11232,7 +11292,7 @@ returned by the widget itself.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11252,7 +11312,7 @@ GtkWidgetClass::adjust_size_request virtual method and by any
 is the one that should be used for layout, not necessarily the one
 returned by the widget itself.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.210.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.212.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11283,7 +11343,7 @@ returned by the widget itself.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11303,7 +11363,7 @@ GtkWidgetClass::adjust_size_request virtual method and by any
 is the one that should be used for layout, not necessarily the one
 returned by the widget itself.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.211.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.213.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11334,7 +11394,7 @@ returned by the widget itself.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11358,7 +11418,7 @@ and by any <a href="GtkSizeGroup.html"><span class="type">GtkSizeGroups</span></
 is the one that should be used for layout, not necessarily the one
 returned by the widget itself.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.212.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.214.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11399,7 +11459,7 @@ returned by the widget itself.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11413,7 +11473,7 @@ their child, container widgets need to request something either in
 context of their children or in context of their allocation
 capabilities.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.213.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.215.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11428,12 +11488,11 @@ capabilities.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.213.7"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.215.7"></a><h4>Returns</h4>
 <p> The <a class="link" href="GtkWidget.html#GtkSizeRequestMode" title="enum GtkSizeRequestMode"><span class="type">GtkSizeRequestMode</span></a> preferred by <em class="parameter"><code>widget</code></em>
 .</p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11455,7 +11514,7 @@ the minimum width.</p>
 <p>Use <a class="link" href="GtkWidget.html#gtk-widget-get-preferred-height-and-baseline-for-width" title="gtk_widget_get_preferred_height_and_baseline_for_width ()"><code class="function">gtk_widget_get_preferred_height_and_baseline_for_width()</code></a> if you want to support
 baseline alignment.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.214.8"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.216.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11481,7 +11540,7 @@ baseline alignment.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11499,7 +11558,7 @@ children up to natural size first.</p>
 GtkRequestedSize struct. If all sizes reach their natural size then
 the remaining space is returned.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.215.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.217.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11528,12 +11587,11 @@ in the orientation of the allocation.</p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.215.7"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.217.7"></a><h4>Returns</h4>
 <p> The remainder of <em class="parameter"><code>extra_space</code></em>
 after redistributing space
 to <em class="parameter"><code>sizes</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -11547,7 +11605,7 @@ gtk_widget_get_halign (<em class="parameter"><code><a class="link" href="GtkWidg
 <a class="link" href="GtkWidget.html#GTK-ALIGN-FILL:CAPS"><code class="literal">GTK_ALIGN_FILL</code></a>. Baselines are not supported for horizontal
 alignment.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.216.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.218.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11562,10 +11620,9 @@ alignment.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.216.7"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.218.7"></a><h4>Returns</h4>
 <p> the horizontal alignment of <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -11578,7 +11635,7 @@ gtk_widget_set_halign (<em class="parameter"><code><a class="link" href="GtkWidg
 .
 See the <a class="link" href="GtkWidget.html#GtkWidget--halign" title="The “halign” property"><span class="type">“halign”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.217.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.219.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11613,7 +11670,7 @@ children it must use <a class="link" href="GtkWidget.html#gtk-widget-get-valign-
 <code class="literal">g_object_get (widget, "valign", &amp;value, NULL)</code>, which will
 also report the true value.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.218.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.220.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11628,10 +11685,9 @@ also report the true value.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.218.7"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.220.7"></a><h4>Returns</h4>
 <p> the vertical alignment of <em class="parameter"><code>widget</code></em>
 , ignoring baseline alignment</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -11642,7 +11698,7 @@ gtk_widget_get_valign_with_baseline (<em class="parameter"><code><a class="link"
 <p>Gets the value of the <a class="link" href="GtkWidget.html#GtkWidget--valign" title="The “valign” property"><span class="type">“valign”</span></a> property, including
 <a class="link" href="GtkWidget.html#GTK-ALIGN-BASELINE:CAPS"><code class="literal">GTK_ALIGN_BASELINE</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.219.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.221.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11657,12 +11713,11 @@ gtk_widget_get_valign_with_baseline (<em class="parameter"><code><a class="link"
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.219.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.221.6"></a><h4>Returns</h4>
 <p> the vertical alignment of <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11674,7 +11729,7 @@ gtk_widget_set_valign (<em class="parameter"><code><a class="link" href="GtkWidg
 .
 See the <a class="link" href="GtkWidget.html#GtkWidget--valign" title="The “valign” property"><span class="type">“valign”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.220.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.222.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11707,7 +11762,7 @@ gtk_widget_get_margin_left (<em class="parameter"><code><a class="link" href="Gt
 </div>
 <p>Gets the value of the <a class="link" href="GtkWidget.html#GtkWidget--margin-left" title="The “margin-left” property"><span class="type">“margin-left”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.221.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.223.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11722,12 +11777,11 @@ gtk_widget_get_margin_left (<em class="parameter"><code><a class="link" href="Gt
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.221.8"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.223.8"></a><h4>Returns</h4>
 <p> The left margin of <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11743,7 +11797,7 @@ gtk_widget_set_margin_left (<em class="parameter"><code><a class="link" href="Gt
 .
 See the <a class="link" href="GtkWidget.html#GtkWidget--margin-left" title="The “margin-left” property"><span class="type">“margin-left”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.222.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.224.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11764,7 +11818,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-left" title="The 
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11777,7 +11831,7 @@ gtk_widget_get_margin_right (<em class="parameter"><code><a class="link" href="G
 </div>
 <p>Gets the value of the <a class="link" href="GtkWidget.html#GtkWidget--margin-right" title="The “margin-right” property"><span class="type">“margin-right”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.223.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.225.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11792,12 +11846,11 @@ gtk_widget_get_margin_right (<em class="parameter"><code><a class="link" href="G
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.223.8"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.225.8"></a><h4>Returns</h4>
 <p> The right margin of <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11813,7 +11866,7 @@ gtk_widget_set_margin_right (<em class="parameter"><code><a class="link" href="G
 .
 See the <a class="link" href="GtkWidget.html#GtkWidget--margin-right" title="The “margin-right” property"><span class="type">“margin-right”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.224.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.226.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11834,7 +11887,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-right" title="The
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11843,7 +11896,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-right" title="The
 gtk_widget_get_margin_start (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
 <p>Gets the value of the <a class="link" href="GtkWidget.html#GtkWidget--margin-start" title="The “margin-start” property"><span class="type">“margin-start”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.225.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.227.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11858,12 +11911,11 @@ gtk_widget_get_margin_start (<em class="parameter"><code><a class="link" href="G
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.225.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.227.6"></a><h4>Returns</h4>
 <p> The start margin of <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11875,7 +11927,7 @@ gtk_widget_set_margin_start (<em class="parameter"><code><a class="link" href="G
 .
 See the <a class="link" href="GtkWidget.html#GtkWidget--margin-start" title="The “margin-start” property"><span class="type">“margin-start”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.226.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.228.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11896,7 +11948,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-start" title="The
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11905,7 +11957,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-start" title="The
 gtk_widget_get_margin_end (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
 <p>Gets the value of the <a class="link" href="GtkWidget.html#GtkWidget--margin-end" title="The “margin-end” property"><span class="type">“margin-end”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.227.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.229.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11920,12 +11972,11 @@ gtk_widget_get_margin_end (<em class="parameter"><code><a class="link" href="Gtk
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.227.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.229.6"></a><h4>Returns</h4>
 <p> The end margin of <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11937,7 +11988,7 @@ gtk_widget_set_margin_end (<em class="parameter"><code><a class="link" href="Gtk
 .
 See the <a class="link" href="GtkWidget.html#GtkWidget--margin-end" title="The “margin-end” property"><span class="type">“margin-end”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.228.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.230.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11958,7 +12009,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-end" title="The �
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11967,7 +12018,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-end" title="The �
 gtk_widget_get_margin_top (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
 <p>Gets the value of the <a class="link" href="GtkWidget.html#GtkWidget--margin-top" title="The “margin-top” property"><span class="type">“margin-top”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.229.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.231.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -11982,12 +12033,11 @@ gtk_widget_get_margin_top (<em class="parameter"><code><a class="link" href="Gtk
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.229.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.231.6"></a><h4>Returns</h4>
 <p> The top margin of <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -11999,7 +12049,7 @@ gtk_widget_set_margin_top (<em class="parameter"><code><a class="link" href="Gtk
 .
 See the <a class="link" href="GtkWidget.html#GtkWidget--margin-top" title="The “margin-top” property"><span class="type">“margin-top”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.230.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.232.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12020,7 +12070,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-top" title="The �
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12029,7 +12079,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-top" title="The �
 gtk_widget_get_margin_bottom (<em class="parameter"><code><a class="link" href="GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
 <p>Gets the value of the <a class="link" href="GtkWidget.html#GtkWidget--margin-bottom" title="The “margin-bottom” property"><span class="type">“margin-bottom”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.231.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.233.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12044,12 +12094,11 @@ gtk_widget_get_margin_bottom (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.231.6"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.233.6"></a><h4>Returns</h4>
 <p> The bottom margin of <em class="parameter"><code>widget</code></em>
 </p>
-<p></p>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12061,7 +12110,7 @@ gtk_widget_set_margin_bottom (<em class="parameter"><code><a class="link" href="
 .
 See the <a class="link" href="GtkWidget.html#GtkWidget--margin-bottom" title="The “margin-bottom” property"><span class="type">“margin-bottom”</span></a> property.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.232.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.234.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12082,7 +12131,7 @@ See the <a class="link" href="GtkWidget.html#GtkWidget--margin-bottom" title="Th
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12102,7 +12151,7 @@ expand, the parent may ask to expand also.</p>
 than computing whether the entire widget tree rooted at this widget
 wants to expand.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.233.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.235.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12117,9 +12166,8 @@ wants to expand.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.233.8"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.235.8"></a><h4>Returns</h4>
 <p> whether hexpand flag is set</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -12150,7 +12198,7 @@ regardless of children.  The override occurs because
 <a class="link" href="GtkWidget.html#gtk-widget-set-hexpand-set" title="gtk_widget_set_hexpand_set ()"><code class="function">gtk_widget_set_hexpand_set()</code></a>) which causes the widget’s hexpand
 value to be used, rather than looking at children and widget state.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.234.9"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.236.9"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12186,7 +12234,7 @@ children of the widget would like to expand.</p>
 <p>There are few reasons to use this function, but it’s here
 for completeness and consistency.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.235.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.237.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12201,9 +12249,8 @@ for completeness and consistency.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.235.8"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.237.8"></a><h4>Returns</h4>
 <p> whether hexpand has been explicitly set</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -12225,7 +12272,7 @@ children of the widget would like to expand.</p>
 <p>There are few reasons to use this function, but it’s here
 for completeness and consistency.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.236.8"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.238.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12256,7 +12303,7 @@ gtk_widget_get_vexpand (<em class="parameter"><code><a class="link" href="GtkWid
 space.</p>
 <p>See <a class="link" href="GtkWidget.html#gtk-widget-get-hexpand" title="gtk_widget_get_hexpand ()"><code class="function">gtk_widget_get_hexpand()</code></a> for more detail.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.237.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.239.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12271,9 +12318,8 @@ space.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.237.7"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.239.7"></a><h4>Returns</h4>
 <p> whether vexpand flag is set</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -12286,7 +12332,7 @@ gtk_widget_set_vexpand (<em class="parameter"><code><a class="link" href="GtkWid
 space.</p>
 <p>See <a class="link" href="GtkWidget.html#gtk-widget-set-hexpand" title="gtk_widget_set_hexpand ()"><code class="function">gtk_widget_set_hexpand()</code></a> for more detail.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.238.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.240.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12317,7 +12363,7 @@ gtk_widget_get_vexpand_set (<em class="parameter"><code><a class="link" href="Gt
 explicitly set the expand flag on this widget.</p>
 <p>See <a class="link" href="GtkWidget.html#gtk-widget-get-hexpand-set" title="gtk_widget_get_hexpand_set ()"><code class="function">gtk_widget_get_hexpand_set()</code></a> for more detail.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.239.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.241.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12332,9 +12378,8 @@ explicitly set the expand flag on this widget.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.239.7"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.241.7"></a><h4>Returns</h4>
 <p> whether vexpand has been explicitly set</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -12347,7 +12392,7 @@ gtk_widget_set_vexpand_set (<em class="parameter"><code><a class="link" href="Gt
 be used.</p>
 <p>See <a class="link" href="GtkWidget.html#gtk-widget-set-hexpand-set" title="gtk_widget_set_hexpand_set ()"><code class="function">gtk_widget_set_hexpand_set()</code></a> for more detail.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.240.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.242.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12380,7 +12425,7 @@ this function when setting legacy expand child properties
 on the child of a container.</p>
 <p>See <a class="link" href="GtkWidget.html#gtk-widget-compute-expand" title="gtk_widget_compute_expand ()"><code class="function">gtk_widget_compute_expand()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.241.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.243.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12411,7 +12456,7 @@ widgets are not expanded.</p>
 set on the widget itself, or, if none has been explicitly set,
 the widget may expand if some of its children do.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.242.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.244.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12433,9 +12478,8 @@ the widget may expand if some of its children do.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.242.8"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.244.8"></a><h4>Returns</h4>
 <p> whether widget tree rooted here should be expanded</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -12457,7 +12501,7 @@ composite templates, it’s important to build the composite widgets
 before the construct properties are set. Properties passed to <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-new"><code class="function">g_object_new()</code></a>
 should take precedence over properties set in the private template XML.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.243.8"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.245.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12471,7 +12515,7 @@ should take precedence over properties set in the private template XML.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12485,7 +12529,7 @@ the GtkBuilder XML to be used to extend a widget.</p>
 <p>Note that any class that installs templates must call <a class="link" href="GtkWidget.html#gtk-widget-init-template" title="gtk_widget_init_template ()"><code class="function">gtk_widget_init_template()</code></a>
 in the widget’s instance initializer.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.244.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.246.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12506,7 +12550,7 @@ in the widget’s instance initializer.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12519,7 +12563,7 @@ gtk_widget_class_set_template_from_resource
 <p>Note that any class that installs templates must call <a class="link" href="GtkWidget.html#gtk-widget-init-template" title="gtk_widget_init_template ()"><code class="function">gtk_widget_init_template()</code></a>
 in the widget’s instance initializer.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.245.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.247.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12540,7 +12584,7 @@ in the widget’s instance initializer.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12560,7 +12604,7 @@ variants.</p>
 declared the child and is meant for language bindings which cannot easily make use
 of the GObject structure offsets.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.246.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.248.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12587,7 +12631,7 @@ of the GObject structure offsets.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.246.8"></a><h4>Returns</h4>
+<a name="id-1.3.19.2.14.248.8"></a><h4>Returns</h4>
 <p> The object built in the template XML with the id <em class="parameter"><code>name</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -12606,7 +12650,7 @@ of the GObject structure offsets.</p>
 
 instance structure.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.247.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.249.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12633,7 +12677,7 @@ instance structure.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12651,7 +12695,7 @@ name <em class="parameter"><code>member_name</code></em>
 
 instance structure.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.248.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.250.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12678,7 +12722,7 @@ instance structure.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12694,7 +12738,7 @@ instance structure.</p>
 private data structure (it uses <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-PRIVATE-OFFSET:CAPS"><code class="function">G_PRIVATE_OFFSET()</code></a>, so the private struct
 must be added with <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-ADD-PRIVATE:CAPS"><code class="function">G_ADD_PRIVATE()</code></a>).</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.249.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.251.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12721,7 +12765,7 @@ must be added with <a href="https://developer.gnome.org/gobject/unstable/gobject
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12739,7 +12783,7 @@ name <em class="parameter"><code>member_name</code></em>
 
 private data structure.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.250.7"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.252.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12766,7 +12810,7 @@ private data structure.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12798,7 +12842,7 @@ might be more convenient to use.</p>
 <p>Note that this must be called from a composite widget classes class
 initializer after calling <a class="link" href="GtkWidget.html#gtk-widget-class-set-template" title="gtk_widget_class_set_template ()"><code class="function">gtk_widget_class_set_template()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.251.10"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.253.10"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12831,7 +12875,7 @@ where the automated child pointer should be set, or 0 to not assign the pointer.
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12842,7 +12886,7 @@ where the automated child pointer should be set, or 0 to not assign the pointer.
 <p>This macro is a convenience wrapper around the
 <a class="link" href="GtkWidget.html#gtk-widget-class-bind-template-callback-full" title="gtk_widget_class_bind_template_callback_full ()"><code class="function">gtk_widget_class_bind_template_callback_full()</code></a> function.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.252.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.254.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12863,7 +12907,7 @@ where the automated child pointer should be set, or 0 to not assign the pointer.
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12881,7 +12925,7 @@ defined for <em class="parameter"><code>widget_type</code></em>
 <p>Note that this must be called from a composite widget classes class
 initializer after calling <a class="link" href="GtkWidget.html#gtk-widget-class-set-template" title="gtk_widget_class_set_template ()"><code class="function">gtk_widget_class_set_template()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.253.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.255.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12907,7 +12951,7 @@ initializer after calling <a class="link" href="GtkWidget.html#gtk-widget-class-
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -12922,7 +12966,7 @@ used when parsing GtkBuilder xml from this class’s template data.</p>
 <p>Note that this must be called from a composite widget classes class
 initializer after calling <a class="link" href="GtkWidget.html#gtk-widget-class-set-template" title="gtk_widget_class_set_template ()"><code class="function">gtk_widget_class_set_template()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.14.254.6"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.14.256.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -12957,7 +13001,7 @@ are in use anymore.</p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -14218,7 +14262,7 @@ a child or a container it is treated as <em class="parameter"><code>GTK_ALIGN_FI
 </div>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
-<p class="since">Since 2.18</p>
+<p class="since">Since: 2.18</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14235,7 +14279,7 @@ a child or a container it is treated as <em class="parameter"><code>GTK_ALIGN_FI
 <p>Whether to expand in both directions. Setting this sets both <a class="link" href="GtkWidget.html#GtkWidget--hexpand" title="The “hexpand” property"><span class="type">“hexpand”</span></a> and <a class="link" href="GtkWidget.html#GtkWidget--vexpand" title="The “vexpand” property"><span class="type">“vexpand”</span></a></p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14244,7 +14288,7 @@ a child or a container it is treated as <em class="parameter"><code>GTK_ALIGN_FI
 <p>How to distribute horizontal space if widget gets extra space, see <a class="link" href="GtkWidget.html#GtkAlign" title="enum GtkAlign"><span class="type">GtkAlign</span></a></p>
 <p>Flags: Read / Write</p>
 <p>Default value: GTK_ALIGN_FILL</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14278,7 +14322,7 @@ and motion-notify events.  This cannot and will not be undone when the
 property is set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> again.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14296,7 +14340,7 @@ property is set to <a href="https://developer.gnome.org/glib/unstable/glib-Stand
 <p>Whether to expand horizontally. See <a class="link" href="GtkWidget.html#gtk-widget-set-hexpand" title="gtk_widget_set_hexpand ()"><code class="function">gtk_widget_set_hexpand()</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14305,7 +14349,7 @@ property is set to <a href="https://developer.gnome.org/glib/unstable/glib-Stand
 <p>Whether to use the <a class="link" href="GtkWidget.html#GtkWidget--hexpand" title="The “hexpand” property"><span class="type">“hexpand”</span></a> property. See <a class="link" href="GtkWidget.html#gtk-widget-get-hexpand-set" title="gtk_widget_get_hexpand_set ()"><code class="function">gtk_widget_get_hexpand_set()</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14324,7 +14368,7 @@ margin on any side.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,32767]</p>
 <p>Default value: 0</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14337,7 +14381,7 @@ request, the margin will be added in addition to the size from
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,32767]</p>
 <p>Default value: 0</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14351,7 +14395,7 @@ request, the margin will be added in addition to the size from
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,32767]</p>
 <p>Default value: 0</p>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14368,7 +14412,7 @@ request, the margin will be added in addition to the size from
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,32767]</p>
 <p>Default value: 0</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14385,7 +14429,7 @@ request, the margin will be added in addition to the size from
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,32767]</p>
 <p>Default value: 0</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14399,7 +14443,7 @@ request, the margin will be added in addition to the size from
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,32767]</p>
 <p>Default value: 0</p>
-<p class="since">Since 3.12</p>
+<p class="since">Since: <a class="link" href="api-index-3-12.html#api-index-3.12">3.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14412,7 +14456,7 @@ request, the margin will be added in addition to the size from
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,32767]</p>
 <p>Default value: 0</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14440,7 +14484,7 @@ more details about window opacity.</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,1]</p>
 <p>Default value: 1</p>
-<p class="since">Since 3.8</p>
+<p class="since">Since: <a class="link" href="api-index-3-8.html#api-index-3.8">3.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14466,7 +14510,7 @@ more details about widget scaling.</p>
 <p>Flags: Read</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 1</p>
-<p class="since">Since 3.10</p>
+<p class="since">Since: <a class="link" href="api-index-3-10.html#api-index-3.10">3.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14494,9 +14538,11 @@ Also see <a class="link" href="GtkTooltip.html#gtk-tooltip-set-markup" title="gt
 tooltip shown if the given string is not <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>: <a class="link" href="GtkWidget.html#GtkWidget--has-tooltip" title="The “has-tooltip” property"><span class="type">“has-tooltip”</span></a>
 will automatically be set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> and there will be taken care of
 <a class="link" href="GtkWidget.html#GtkWidget-query-tooltip" title="The “query-tooltip” signal"><span class="type">“query-tooltip”</span></a> in the default signal handler.</p>
+<p>Note that if both <a class="link" href="GtkWidget.html#GtkWidget--tooltip-text" title="The “tooltip-text” property"><span class="type">“tooltip-text”</span></a> and <a class="link" href="GtkWidget.html#GtkWidget--tooltip-markup" title="The “tooltip-markup” property"><span class="type">“tooltip-markup”</span></a>
+are set, the last one wins.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14508,9 +14554,11 @@ will automatically be set to <a href="https://developer.gnome.org/glib/unstable/
 tooltip shown if the given string is not <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>: <a class="link" href="GtkWidget.html#GtkWidget--has-tooltip" title="The “has-tooltip” property"><span class="type">“has-tooltip”</span></a>
 will automatically be set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> and there will be taken care of
 <a class="link" href="GtkWidget.html#GtkWidget-query-tooltip" title="The “query-tooltip” signal"><span class="type">“query-tooltip”</span></a> in the default signal handler.</p>
+<p>Note that if both <a class="link" href="GtkWidget.html#GtkWidget--tooltip-text" title="The “tooltip-text” property"><span class="type">“tooltip-text”</span></a> and <a class="link" href="GtkWidget.html#GtkWidget--tooltip-markup" title="The “tooltip-markup” property"><span class="type">“tooltip-markup”</span></a>
+are set, the last one wins.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14519,7 +14567,7 @@ will automatically be set to <a href="https://developer.gnome.org/glib/unstable/
 <p>How to distribute vertical space if widget gets extra space, see <a class="link" href="GtkWidget.html#GtkAlign" title="enum GtkAlign"><span class="type">GtkAlign</span></a></p>
 <p>Flags: Read / Write</p>
 <p>Default value: GTK_ALIGN_FILL</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14528,7 +14576,7 @@ will automatically be set to <a href="https://developer.gnome.org/glib/unstable/
 <p>Whether to expand vertically. See <a class="link" href="GtkWidget.html#gtk-widget-set-vexpand" title="gtk_widget_set_vexpand ()"><code class="function">gtk_widget_set_vexpand()</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14537,7 +14585,7 @@ will automatically be set to <a href="https://developer.gnome.org/glib/unstable/
 <p>Whether to use the <a class="link" href="GtkWidget.html#GtkWidget--vexpand" title="The “vexpand” property"><span class="type">“vexpand”</span></a> property. See <a class="link" href="GtkWidget.html#gtk-widget-get-vexpand-set" title="gtk_widget_get_vexpand_set ()"><code class="function">gtk_widget_get_vexpand_set()</code></a>.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14562,7 +14610,7 @@ will automatically be set to <a href="https://developer.gnome.org/glib/unstable/
 <pre class="programlisting">  “window”                   <a href="http://developer.gnome.org/gdk2/gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a> *</pre>
 <p>The widget's window if it is realized, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> otherwise.</p>
 <p>Flags: Read</p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 </div>
 <div class="refsect1">
@@ -14648,7 +14696,7 @@ to draw the focus indicator inside widgets.</p>
     different theming, this style property is ignored</p>
 </div>
 <p>Flags: Read</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14659,7 +14707,7 @@ horizontal scroll arrows.</p>
 <p>Flags: Read</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 16</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14670,7 +14718,7 @@ vertical scroll arrows.</p>
 <p>Flags: Read</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 16</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14688,7 +14736,7 @@ This property only takes effect if the "wide-separators" style property is <a hr
 <p>Flags: Read</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14699,7 +14747,7 @@ This property only takes effect if the "wide-separators" style property is <a hr
 <p>Flags: Read</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14730,7 +14778,7 @@ This property only takes effect if the "wide-separators" style property is <a hr
     different theming, this style property is ignored</p>
 </div>
 <p>Flags: Read</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14740,7 +14788,7 @@ This property only takes effect if the "wide-separators" style property is <a hr
 configurable width and should be drawn using a box instead of a line.</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
-<p class="since">Since 2.10</p>
+<p class="since">Since: 2.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -14825,7 +14873,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.3.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -14873,7 +14920,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.4.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -14921,7 +14967,6 @@ for determining whether an accelerator can be activated.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.18.5.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the signal can be activated.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -15043,7 +15088,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.8.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -15089,10 +15133,9 @@ drawable was drawn into.</p>
 <a name="id-1.3.19.2.18.9.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.14</p>
+<p class="since">Since: 2.14</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -15137,7 +15180,6 @@ it can later be shown again without reconstructing it.</p>
 <a name="id-1.3.19.2.18.10.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -15150,8 +15192,9 @@ user_function (<a class="link" href="GtkWidget.html" title="GtkWidget"><span cla
 <p>Signals that all holders of a reference to the widget should release
 the reference that they hold. May result in finalization of the widget
 if all references are released.</p>
+<p>This signal is not suitable for saving widget state.</p>
 <div class="refsect3">
-<a name="id-1.3.19.2.18.11.5"></a><h4>Parameters</h4>
+<a name="id-1.3.19.2.18.11.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -15219,7 +15262,6 @@ automatically for all new windows.</p>
 <a name="id-1.3.19.2.18.12.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -15647,7 +15689,6 @@ or more of the supported targets.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.18.18.6"></a><h4>Returns</h4>
 <p> whether the cursor position is in a drop zone</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -15738,10 +15779,9 @@ animation), otherwise it returns <a href="https://developer.gnome.org/glib/unsta
 <div class="refsect3">
 <a name="id-1.3.19.2.18.20.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the failed drag operation has been already handled.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -16004,7 +16044,6 @@ the drop site with <a class="link" href="gtk3-Drag-and-Drop.html#gtk-drag-highli
 <div class="refsect3">
 <a name="id-1.3.19.2.18.22.10"></a><h4>Returns</h4>
 <p> whether the cursor position is in a drop zone</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16064,10 +16103,9 @@ get a finer-grained representation of the dirty region with
 <a name="id-1.3.19.2.18.23.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 % <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -16114,7 +16152,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.24.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16164,7 +16201,6 @@ and to cancel the emission of the second specific ::event signal.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further and to allow the emission of
 the second signal. The ::event-after signal is emitted regardless of
 the return value.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16238,7 +16274,6 @@ user_function (<a class="link" href="GtkWidget.html" title="GtkWidget"><span cla
 <div class="refsect3">
 <a name="id-1.3.19.2.18.27.5"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event. <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16286,7 +16321,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.28.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16334,7 +16368,6 @@ signal. </p></td>
 <a name="id-1.3.19.2.18.29.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16382,10 +16415,9 @@ application grabs the pointer or keyboard again.</p>
 <a name="id-1.3.19.2.18.30.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for
 the event. <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.8</p>
+<p class="since">Since: 2.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -16579,7 +16611,6 @@ to enable the <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GDK-KEY-
 <a name="id-1.3.19.2.18.35.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16625,7 +16656,6 @@ to enable the <a href="http://developer.gnome.org/gdk2/gdk3-Events.html#GDK-KEY-
 <a name="id-1.3.19.2.18.36.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16670,10 +16700,9 @@ See <a class="link" href="GtkWidget.html#gtk-widget-keynav-failed" title="gtk_wi
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if stopping keyboard navigation is fine, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>
 if the emitting widget should try to handle the keyboard
 navigation attempt in its parent container(s).</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -16720,7 +16749,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.38.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16807,7 +16835,6 @@ automatically for all new windows.</p>
 <a name="id-1.3.19.2.18.40.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16844,7 +16871,6 @@ user_function (<a class="link" href="GtkWidget.html" title="GtkWidget"><span cla
 <a name="id-1.3.19.2.18.41.5"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -16892,7 +16918,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.42.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -17004,7 +17029,6 @@ for an example of how to use this signal.</p>
 <div class="refsect3">
 <a name="id-1.3.19.2.18.45.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if a menu was activated</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></p>
 </div>
@@ -17052,7 +17076,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.46.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -17098,7 +17121,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.47.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -17144,7 +17166,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.48.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -17225,10 +17246,9 @@ been emitted, relative to <em class="parameter"><code>widget</code></em>
 <a name="id-1.3.19.2.18.49.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>tooltip</code></em>
 should be shown right now, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.12</p>
+<p class="since">Since: 2.12</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -17348,7 +17368,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.52.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -17394,7 +17413,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.53.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -17468,7 +17486,6 @@ user_function (<a class="link" href="GtkWidget.html" title="GtkWidget"><span cla
 <div class="refsect3">
 <a name="id-1.3.19.2.18.55.5"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event. <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -17547,7 +17564,6 @@ this signal. </p></td>
 <a name="id-1.3.19.2.18.57.6"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -17617,7 +17633,6 @@ user_function (<a class="link" href="GtkWidget.html" title="GtkWidget"><span cla
 <a name="id-1.3.19.2.18.59.5"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-ACTION:CAPS">Action</a></p>
 </div>
@@ -17737,7 +17752,7 @@ changes, see <a class="link" href="GtkWidget.html#gtk-widget-get-state-flags" ti
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -17818,7 +17833,7 @@ of a widget is changed. Note that style-modifying functions like
 </table></div>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
-<p class="since">Since 3.0</p>
+<p class="since">Since: <a class="link" href="api-index-3-0.html#api-index-3.0">3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -17909,7 +17924,6 @@ automatically for all new windows.</p>
 <a name="id-1.3.19.2.18.67.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -17999,7 +18013,6 @@ triggered this signal. </p></td>
 <a name="id-1.3.19.2.18.69.8"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -18048,14 +18061,12 @@ triggered this signal. </p></td>
 <a name="id-1.3.19.2.18.70.7"></a><h4>Returns</h4>
 <p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the
 event. <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</p>
-<p></p>
 </div>
 <p>Flags: <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21.1</div>
+<hr>Generated by GTK-Doc V1.24.1</div>
 </body>
 </html>

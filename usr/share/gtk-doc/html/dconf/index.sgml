@@ -8,6 +8,9 @@
 <ANCHOR id="DCONF-ERROR:CAPS" href="dconf/dconf-DConfError.html#DCONF-ERROR:CAPS">
 <ANCHOR id="dconf-DConfError.other_details" href="dconf/dconf-DConfError.html#dconf-DConfError.other_details">
 <ANCHOR id="DConfError" href="dconf/dconf-DConfError.html#DConfError">
+<ANCHOR id="DCONF-ERROR-FAILED:CAPS" href="dconf/dconf-DConfError.html#DCONF-ERROR-FAILED:CAPS">
+<ANCHOR id="DCONF-ERROR-PATH:CAPS" href="dconf/dconf-DConfError.html#DCONF-ERROR-PATH:CAPS">
+<ANCHOR id="DCONF-ERROR-NOT-WRITABLE:CAPS" href="dconf/dconf-DConfError.html#DCONF-ERROR-NOT-WRITABLE:CAPS">
 <ANCHOR id="dconf-dconf-Paths" href="dconf/dconf-dconf-Paths.html">
 <ANCHOR id="dconf-dconf-Paths.functions" href="dconf/dconf-dconf-Paths.html#dconf-dconf-Paths.functions">
 <ANCHOR id="dconf-dconf-Paths.description" href="dconf/dconf-dconf-Paths.html#dconf-dconf-Paths.description">
@@ -68,7 +71,6 @@
 <ANCHOR id="DConfClient.signal-details" href="dconf/DConfClient.html#DConfClient.signal-details">
 <ANCHOR id="DConfClient-changed" href="dconf/DConfClient.html#DConfClient-changed">
 <ANCHOR id="dconf-service" href="dconf/dconf-service.html">
-<ANCHOR id="dconf-editor" href="dconf/dconf-editor.html">
 <ANCHOR id="dconf-tool" href="dconf/dconf-tool.html">
 <ANCHOR id="annotation-glossterm-allow-none" href="dconf/annotation-glossary.html#annotation-glossterm-allow-none">
 <ANCHOR id="annotation-glossterm-out" href="dconf/annotation-glossary.html#annotation-glossterm-out">

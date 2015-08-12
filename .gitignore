@@ -7,3 +7,7 @@ run
 proc
 tmp
 sys
+/etc/passwd
+/etc/groups
+/etc/shadow
+/etc/ca-certificates/*

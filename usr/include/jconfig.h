@@ -5,7 +5,7 @@
 #define JPEG_LIB_VERSION 80
 
 /* libjpeg-turbo version */
-#define LIBJPEG_TURBO_VERSION 1.4.0
+#define LIBJPEG_TURBO_VERSION 1.4.1
 
 /* Support arithmetic encoding */
 #define C_ARITH_CODING_SUPPORTED 1
@@ -69,3 +69,6 @@
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 /* #undef size_t */
+
+/* The size of `size_t', as computed by sizeof. */
+#define SIZEOF_SIZE_T 4

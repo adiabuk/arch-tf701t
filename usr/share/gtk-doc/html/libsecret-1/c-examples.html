@@ -2,17 +2,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Libsecret Library Reference Manual: C examples</title>
+<title>C examples: Libsecret Library Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Libsecret Library Reference Manual">
 <link rel="up" href="examples.html" title="Part II. Examples">
 <link rel="prev" href="examples.html" title="Part II. Examples">
 <link rel="next" href="c-store-example.html" title="C example: Store a password">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts"></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="examples.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
@@ -64,7 +64,7 @@
 23</pre></td>
         <td class="listing_code"><pre class="programlisting"><span class="comment">/* in a header: */</span>
 
-<span class="keyword">const</span><span class="normal"> <a href="libsecret-SecretSchema.html#SecretSchema">SecretSchema</a> </span><span class="symbol">*</span><span class="normal"> </span><span class="function">example_get_schema</span><span class="normal"> </span><span class="symbol">(</span><span class="type">void</span><span class="symbol">)</span><span class="normal"> <a href="http://library.gnome.org/devel/glib/unstable/glib-Miscellaneous-Macros.html#G-GNUC-CONST:CAPS">G_GNUC_CONST</a></span><span class="symbol">;</span>
+<span class="keyword">const</span><span class="normal"> <a href="libsecret-SecretSchema.html#SecretSchema">SecretSchema</a> </span><span class="symbol">*</span><span class="normal"> </span><span class="function">example_get_schema</span><span class="normal"> </span><span class="symbol">(</span><span class="type">void</span><span class="symbol">)</span><span class="normal"> G_GNUC_CONST</span><span class="symbol">;</span>
 
 <span class="preproc">#define</span><span class="normal"> </span><span class="usertype">EXAMPLE_SCHEMA</span><span class="normal">  </span><span class="function">example_get_schema</span><span class="normal"> </span><span class="symbol">()</span>
 
@@ -75,11 +75,11 @@
 <span class="function">example_get_schema</span><span class="normal"> </span><span class="symbol">(</span><span class="type">void</span><span class="symbol">)</span>
 <span class="cbracket">{</span>
 <span class="normal">    </span><span class="keyword">static</span><span class="normal"> </span><span class="keyword">const</span><span class="normal"> </span><span class="usertype">SecretSchema</span><span class="normal"> the_schema </span><span class="symbol">=</span><span class="normal"> </span><span class="cbracket">{</span>
-<span class="normal">        </span><span class="string">"org.example.Password"</span><span class="symbol">,</span><span class="normal"> SECRET_SCHEMA_NONE</span><span class="symbol">,</span>
+<span class="normal">        </span><span class="string">"org.example.Password"</span><span class="symbol">,</span><span class="normal"> <a href="libsecret-SecretSchema.html#SECRET-SCHEMA-NONE:CAPS">SECRET_SCHEMA_NONE</a></span><span class="symbol">,</span>
 <span class="normal">        </span><span class="cbracket">{</span>
-<span class="normal">            </span><span class="cbracket">{</span><span class="normal">  </span><span class="string">"number"</span><span class="symbol">,</span><span class="normal"> SECRET_SCHEMA_ATTRIBUTE_INTEGER </span><span class="cbracket">}</span><span class="symbol">,</span>
-<span class="normal">            </span><span class="cbracket">{</span><span class="normal">  </span><span class="string">"string"</span><span class="symbol">,</span><span class="normal"> SECRET_SCHEMA_ATTRIBUTE_STRING </span><span class="cbracket">}</span><span class="symbol">,</span>
-<span class="normal">            </span><span class="cbracket">{</span><span class="normal">  </span><span class="string">"even"</span><span class="symbol">,</span><span class="normal"> SECRET_SCHEMA_ATTRIBUTE_BOOLEAN </span><span class="cbracket">}</span><span class="symbol">,</span>
+<span class="normal">            </span><span class="cbracket">{</span><span class="normal">  </span><span class="string">"number"</span><span class="symbol">,</span><span class="normal"> <a href="libsecret-SecretSchema.html#SECRET-SCHEMA-ATTRIBUTE-INTEGER:CAPS">SECRET_SCHEMA_ATTRIBUTE_INTEGER</a> </span><span class="cbracket">}</span><span class="symbol">,</span>
+<span class="normal">            </span><span class="cbracket">{</span><span class="normal">  </span><span class="string">"string"</span><span class="symbol">,</span><span class="normal"> <a href="libsecret-SecretSchema.html#SECRET-SCHEMA-ATTRIBUTE-STRING:CAPS">SECRET_SCHEMA_ATTRIBUTE_STRING</a> </span><span class="cbracket">}</span><span class="symbol">,</span>
+<span class="normal">            </span><span class="cbracket">{</span><span class="normal">  </span><span class="string">"even"</span><span class="symbol">,</span><span class="normal"> <a href="libsecret-SecretSchema.html#SECRET-SCHEMA-ATTRIBUTE-BOOLEAN:CAPS">SECRET_SCHEMA_ATTRIBUTE_BOOLEAN</a> </span><span class="cbracket">}</span><span class="symbol">,</span>
 <span class="normal">            </span><span class="cbracket">{</span><span class="normal">  </span><span class="string">"NULL"</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="normal"> </span><span class="cbracket">}</span><span class="symbol">,</span>
 <span class="normal">        </span><span class="cbracket">}</span>
 <span class="normal">    </span><span class="cbracket">}</span><span class="symbol">;</span>
@@ -95,7 +95,6 @@
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>
