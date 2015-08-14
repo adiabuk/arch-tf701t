@@ -1,635 +1,340 @@
-[   106.851] 
+[    23.633] 
 X.Org X Server 1.12.4
 Release Date: 2012-08-27
-[   106.851] X Protocol Version 11, Revision 0
-[   106.851] Build Operating System: Linux 3.4.104-cyanogenmod armv7l 
-[   106.851] Current Operating System: Linux localhost 3.4.105-cmaalx-15 #25 SMP PREEMPT Wed Apr 8 11:50:43 CDT 2015 armv7l
-[   106.851] Kernel command line: console=tty1 loglevel=3 fbcon=vc:1-6 tegraid=35.1.2.0.0 mem=1942M@2048M memtype=0 vpr=96M@3997M tsec=4M@3993M otf_key=cbb6d3b8a9884e4720519ba38fa77dc6 commchip_id=0 usb_port_owner_info=2 emc_max_dvfs=0 androidboot.serialno=15C3E10091000000017FD8540 androidboot.commchip_id=0 androidboot.modem=none video=tegrafb no_console_suspend=1 debug_uartport=lsport,3 usbcore.old_scheme_first=1 lp0_vec=2656@0xf96ff000 tegra_fbmem=32778244@0xace23000 core_edp_mv=1250 core_edp_ma=8000 pmuboard=0x801a:0xe534:0x2c:0x80:0xd0 display_panel=0 power_supply=Adapter audio_codec=rt5640 board_info=621:3ea:0:43:3 tegraboot=sdmmc gpt gpt_sector=73727 modem_id=0 androidboot.mode=normal power-config=0x00 pmic_rst_reason=0x00000001 android.kerneltype=recovery asustek.hw_rev=rev_b androidboot.productid=mozart androidboot.hardware=macallan fuse_info=y unlocked=y granted=n 
-[   106.852] Build Date: 06 April 2015  11:53:51PM
-[   106.852]  
-[   106.852] Current version of pixman: 0.32.6
-[   106.852] 	Before reporting problems, check http://wiki.x.org
+[    23.633] X Protocol Version 11, Revision 0
+[    23.633] Build Operating System: Linux 3.4.104-cyanogenmod armv7l 
+[    23.633] Current Operating System: Linux localhost 3.4.105-cmaalx-15 #25 SMP PREEMPT Wed Apr 8 11:50:43 CDT 2015 armv7l
+[    23.633] Kernel command line: console=tty1 loglevel=3 fbcon=vc:1-6 tegraid=35.1.2.0.0 mem=1942M@2048M memtype=0 vpr=96M@3997M tsec=4M@3993M otf_key=27feb5c8e45435ab83de2500cf04e7c0 commchip_id=0 usb_port_owner_info=2 emc_max_dvfs=0 androidboot.serialno=15C3E10091000000017FD8540 androidboot.commchip_id=0 androidboot.modem=none video=tegrafb no_console_suspend=1 debug_uartport=lsport,3 usbcore.old_scheme_first=1 lp0_vec=2656@0xf96ff000 tegra_fbmem=32778244@0xace23000 core_edp_mv=1250 core_edp_ma=8000 pmuboard=0x801a:0xe534:0x2c:0x80:0xd0 display_panel=0 power_supply=Adapter audio_codec=rt5640 board_info=621:3ea:0:43:3 tegraboot=sdmmc gpt gpt_sector=73727 modem_id=0 androidboot.mode=normal power-config=0x00 pmic_rst_reason=0x00000001 android.kerneltype=recovery asustek.hw_rev=rev_b androidboot.productid=mozart androidboot.hardware=macallan fuse_info=y unlocked=y granted=n 
+[    23.634] Build Date: 06 April 2015  11:53:51PM
+[    23.634]  
+[    23.634] Current version of pixman: 0.32.6
+[    23.634] 	Before reporting problems, check http://wiki.x.org
 	to make sure that you have the latest version.
-[   106.852] Markers: (--) probed, (**) from config file, (==) default setting,
+[    23.634] Markers: (--) probed, (**) from config file, (==) default setting,
 	(++) from command line, (!!) notice, (II) informational,
 	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
-[   106.852] (==) Log file: "/var/log/Xorg.0.log", Time: Wed Aug 12 14:30:44 2015
-[   106.853] (==) Using config file: "/etc/X11/xorg.conf"
-[   106.853] (==) Using config directory: "/etc/X11/xorg.conf.d"
-[   106.853] (==) No Layout section.  Using the first Screen section.
-[   106.853] (==) No screen section available. Using defaults.
-[   106.853] (**) |-->Screen "Default Screen Section" (0)
-[   106.853] (**) |   |-->Monitor "<default monitor>"
-[   106.854] (==) No device specified for screen "Default Screen Section".
+[    23.634] (==) Log file: "/var/log/Xorg.0.log", Time: Fri Aug 14 15:03:37 2015
+[    23.634] (==) Using config file: "/etc/X11/xorg.conf"
+[    23.634] (==) Using config directory: "/etc/X11/xorg.conf.d"
+[    23.635] (==) No Layout section.  Using the first Screen section.
+[    23.635] (==) No screen section available. Using defaults.
+[    23.635] (**) |-->Screen "Default Screen Section" (0)
+[    23.635] (**) |   |-->Monitor "<default monitor>"
+[    23.635] (==) No device specified for screen "Default Screen Section".
 	Using the first device section listed.
-[   106.854] (**) |   |-->Device "Tegra"
-[   106.854] (==) No monitor specified for screen "Default Screen Section".
+[    23.635] (**) |   |-->Device "Tegra"
+[    23.635] (==) No monitor specified for screen "Default Screen Section".
 	Using a default monitor configuration.
-[   106.854] (==) Automatically adding devices
-[   106.854] (==) Automatically enabling devices
-[   106.854] (WW) The directory "/usr/share/fonts/Type1/" does not exist.
-[   106.854] 	Entry deleted from font path.
-[   106.854] (WW) `fonts.dir' not found (or not valid) in "/usr/share/fonts/100dpi/".
-[   106.854] 	Entry deleted from font path.
-[   106.854] 	(Run 'mkfontdir' on "/usr/share/fonts/100dpi/").
-[   106.854] (WW) `fonts.dir' not found (or not valid) in "/usr/share/fonts/75dpi/".
-[   106.854] 	Entry deleted from font path.
-[   106.854] 	(Run 'mkfontdir' on "/usr/share/fonts/75dpi/").
-[   106.854] (==) FontPath set to:
+[    23.635] (==) Automatically adding devices
+[    23.635] (==) Automatically enabling devices
+[    23.635] (WW) The directory "/usr/share/fonts/Type1/" does not exist.
+[    23.635] 	Entry deleted from font path.
+[    23.635] (WW) `fonts.dir' not found (or not valid) in "/usr/share/fonts/100dpi/".
+[    23.635] 	Entry deleted from font path.
+[    23.635] 	(Run 'mkfontdir' on "/usr/share/fonts/100dpi/").
+[    23.636] (WW) `fonts.dir' not found (or not valid) in "/usr/share/fonts/75dpi/".
+[    23.636] 	Entry deleted from font path.
+[    23.636] 	(Run 'mkfontdir' on "/usr/share/fonts/75dpi/").
+[    23.636] (==) FontPath set to:
 	/usr/share/fonts/misc/,
 	/usr/share/fonts/TTF/,
 	/usr/share/fonts/OTF/
-[   106.854] (==) ModulePath set to "/usr/lib/xorg/modules"
-[   106.854] (II) The server relies on udev to provide the list of input devices.
+[    23.636] (==) ModulePath set to "/usr/lib/xorg/modules"
+[    23.636] (II) The server relies on udev to provide the list of input devices.
 	If no devices become available, reconfigure udev or disable AutoAddDevices.
-[   106.854] (II) Loader magic: 0x1a4ce0
-[   106.854] (II) Module ABI versions:
-[   106.855] 	X.Org ANSI C Emulation: 0.4
-[   106.855] 	X.Org Video Driver: 12.1
-[   106.855] 	X.Org XInput driver : 16.0
-[   106.855] 	X.Org Server Extension : 6.0
-[   106.855] (WW) "dri" will not be loaded unless you've specified it to be loaded elsewhere.
-[   106.855] (WW) "dri2" will not be loaded unless you've specified it to be loaded elsewhere.
-[   106.855] (II) "extmod" will be loaded. This was enabled by default and also specified in the config file.
-[   106.855] (II) "dbe" will be loaded by default.
-[   106.855] (II) "glx" will be loaded by default.
-[   106.855] (II) "record" will be loaded by default.
-[   106.855] (II) "dri" will be loaded even though the default is to disable it.
-[   106.855] (II) "dri2" will be loaded even though the default is to disable it.
-[   106.855] (II) LoadModule: "extmod"
-[   106.856] (II) Loading /usr/lib/xorg/modules/extensions/libextmod.so
-[   106.856] (II) Module extmod: vendor="X.Org Foundation"
-[   106.856] 	compiled for 1.12.4, module version = 1.0.0
-[   106.857] 	Module class: X.Org Server Extension
-[   106.857] 	ABI class: X.Org Server Extension, version 6.0
-[   106.857] (II) Loading extension MIT-SCREEN-SAVER
-[   106.858] (II) Loading extension XFree86-VidModeExtension
-[   106.858] (II) Loading extension DPMS
-[   106.858] (II) Loading extension XVideo
-[   106.858] (II) Loading extension XVideo-MotionCompensation
-[   106.858] (II) Loading extension X-Resource
-[   106.858] (II) LoadModule: "dbe"
-[   106.859] (II) Loading /usr/lib/xorg/modules/extensions/libdbe.so
-[   106.859] (II) Module dbe: vendor="X.Org Foundation"
-[   106.859] 	compiled for 1.12.4, module version = 1.0.0
-[   106.859] 	Module class: X.Org Server Extension
-[   106.859] 	ABI class: X.Org Server Extension, version 6.0
-[   106.859] (II) Loading extension DOUBLE-BUFFER
-[   106.859] (II) LoadModule: "glx"
-[   106.859] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
-[   106.860] (II) Module glx: vendor="X.Org Foundation"
-[   106.860] 	compiled for 1.12.4, module version = 1.0.0
-[   106.860] 	ABI class: X.Org Server Extension, version 6.0
-[   106.860] (==) AIGLX enabled
-[   106.860] (II) Loading extension GLX
-[   106.860] (II) LoadModule: "record"
-[   106.860] (II) Loading /usr/lib/xorg/modules/extensions/librecord.so
-[   106.860] (II) Module record: vendor="X.Org Foundation"
-[   106.860] 	compiled for 1.12.4, module version = 1.13.0
-[   106.860] 	Module class: X.Org Server Extension
-[   106.860] 	ABI class: X.Org Server Extension, version 6.0
-[   106.860] (II) Loading extension RECORD
-[   106.860] (II) LoadModule: "tegra"
-[   106.861] (II) Loading /usr/lib/xorg/modules/drivers/tegra_drv.so
-[   106.861] (II) Module tegra: vendor="X.Org Foundation"
-[   106.862] 	compiled for 1.11.99.901, module version = 0.4.0
-[   106.862] 	Module class: X.Org Video Driver
-[   106.862] 	ABI class: X.Org Video Driver, version 12.0
-[   106.862] (II) NVIDIA driver for Tegra
-[   106.862] (++) using VT number 1
+[    23.636] (II) Loader magic: 0x1a4ce0
+[    23.636] (II) Module ABI versions:
+[    23.636] 	X.Org ANSI C Emulation: 0.4
+[    23.636] 	X.Org Video Driver: 12.1
+[    23.636] 	X.Org XInput driver : 16.0
+[    23.636] 	X.Org Server Extension : 6.0
+[    23.636] (WW) "dri" will not be loaded unless you've specified it to be loaded elsewhere.
+[    23.636] (WW) "dri2" will not be loaded unless you've specified it to be loaded elsewhere.
+[    23.636] (II) "extmod" will be loaded. This was enabled by default and also specified in the config file.
+[    23.636] (II) "dbe" will be loaded by default.
+[    23.636] (II) "glx" will be loaded by default.
+[    23.636] (II) "record" will be loaded by default.
+[    23.636] (II) "dri" will be loaded even though the default is to disable it.
+[    23.636] (II) "dri2" will be loaded even though the default is to disable it.
+[    23.636] (II) LoadModule: "extmod"
+[    23.637] (II) Loading /usr/lib/xorg/modules/extensions/libextmod.so
+[    23.637] (II) Module extmod: vendor="X.Org Foundation"
+[    23.637] 	compiled for 1.12.4, module version = 1.0.0
+[    23.637] 	Module class: X.Org Server Extension
+[    23.637] 	ABI class: X.Org Server Extension, version 6.0
+[    23.637] (II) Loading extension MIT-SCREEN-SAVER
+[    23.637] (II) Loading extension XFree86-VidModeExtension
+[    23.637] (II) Loading extension DPMS
+[    23.637] (II) Loading extension XVideo
+[    23.637] (II) Loading extension XVideo-MotionCompensation
+[    23.637] (II) Loading extension X-Resource
+[    23.637] (II) LoadModule: "dbe"
+[    23.637] (II) Loading /usr/lib/xorg/modules/extensions/libdbe.so
+[    23.638] (II) Module dbe: vendor="X.Org Foundation"
+[    23.638] 	compiled for 1.12.4, module version = 1.0.0
+[    23.638] 	Module class: X.Org Server Extension
+[    23.638] 	ABI class: X.Org Server Extension, version 6.0
+[    23.638] (II) Loading extension DOUBLE-BUFFER
+[    23.638] (II) LoadModule: "glx"
+[    23.638] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[    23.638] (II) Module glx: vendor="X.Org Foundation"
+[    23.638] 	compiled for 1.12.4, module version = 1.0.0
+[    23.638] 	ABI class: X.Org Server Extension, version 6.0
+[    23.638] (==) AIGLX enabled
+[    23.638] (II) Loading extension GLX
+[    23.638] (II) LoadModule: "record"
+[    23.639] (II) Loading /usr/lib/xorg/modules/extensions/librecord.so
+[    23.639] (II) Module record: vendor="X.Org Foundation"
+[    23.639] 	compiled for 1.12.4, module version = 1.13.0
+[    23.639] 	Module class: X.Org Server Extension
+[    23.639] 	ABI class: X.Org Server Extension, version 6.0
+[    23.639] (II) Loading extension RECORD
+[    23.639] (II) LoadModule: "tegra"
+[    23.639] (II) Loading /usr/lib/xorg/modules/drivers/tegra_drv.so
+[    23.640] (II) Module tegra: vendor="X.Org Foundation"
+[    23.640] 	compiled for 1.11.99.901, module version = 0.4.0
+[    23.640] 	Module class: X.Org Video Driver
+[    23.640] 	ABI class: X.Org Video Driver, version 12.0
+[    23.640] (II) NVIDIA driver for Tegra
+[    23.640] (++) using VT number 1
 
-[   106.862] (WW) Falling back to old probe method for tegra
-[   106.862] (II) TEGRA(0): GPU is a T30
-[   106.862] (II) TEGRA(0): Creating default Display subsection in Screen section
+[    23.640] (WW) Falling back to old probe method for tegra
+[    23.641] (II) TEGRA(0): GPU is a T30
+[    23.641] (II) TEGRA(0): Creating default Display subsection in Screen section
 	"Default Screen Section" for depth/fbbpp 24/32
-[   106.862] (==) TEGRA(0): Depth 24, (--) framebuffer bpp 32
-[   106.862] (==) TEGRA(0): RGB weight 888
-[   106.862] (==) TEGRA(0): Default visual is TrueColor
-[   106.862] (==) TEGRA(0): Using gamma correction (1.0, 1.0, 1.0)
-[   106.862] (**) TEGRA(0): Option "ARGBHWCursor" "True"
-[   106.863] (II) TEGRA(0): Output DSI-1 using monitor section DSI
-[   106.863] (II) TEGRA(0): Output HDMI-1 has no monitor section
-[   106.863] (WW) TEGRA(0): DSI-1: Error querying display modes: No such device.
-[   106.863] (II) TEGRA(0): EDID for output DSI-1
-[   106.863] (II) TEGRA(0): Printing probed modes for output DSI-1
-[   106.863] (II) TEGRA(0): Modeline "2560x1600"x60.0  268.67  2560 2608 2640 2720  1600 1603 1609 1646 (98.8 kHz eP)
-[   106.863] (II) TEGRA(0): EDID for output HDMI-1
-[   106.863] (II) TEGRA(0): Output DSI-1 connected
-[   106.863] (II) TEGRA(0): Output HDMI-1 disconnected
-[   106.863] (II) TEGRA(0): Using exact sizes for initial modes
-[   106.863] (II) TEGRA(0): Output DSI-1 using initial mode 2560x1600
-[   106.863] (II) TEGRA(0): Using default gamma of (1.0, 1.0, 1.0) unless otherwise stated.
-[   106.863] (--) TEGRA(0): VideoRAM: 32768 kByte
-[   106.863] (--) TEGRA(0): Virtual size is 2560x1600 (pitch 0)
-[   106.863] (**) TEGRA(0):  Driver mode "2560x1600": 268.7 MHz, 98.8 kHz, 60.0 Hz
-[   106.863] (II) TEGRA(0): Modeline "2560x1600"x60.0  268.67  2560 2608 2640 2720  1600 1603 1609 1646 (98.8 kHz eP)
-[   106.863] (==) TEGRA(0): DPI set to (96, 96)
-[   106.863] (II) Loading sub module "fb"
-[   106.863] (II) LoadModule: "fb"
-[   106.863] (II) Loading /usr/lib/xorg/modules/libfb.so
-[   106.864] (II) Module fb: vendor="X.Org Foundation"
-[   106.864] 	compiled for 1.12.4, module version = 1.0.0
-[   106.864] 	ABI class: X.Org ANSI C Emulation, version 0.4
-[   106.864] (II) Loading sub module "ramdac"
-[   106.864] (II) LoadModule: "ramdac"
-[   106.864] (II) Module "ramdac" already built-in
-[   106.864] (--) Depth 24 pixmap format is 32 bpp
-[   106.878] (==) TEGRA(0): Backing store disabled
-[   106.878] (==) TEGRA(0): Silken mouse enabled
-[   106.878] (II) TEGRA(0): RandR 1.2 enabled, ignore the following RandR disabled message.
-[   108.678] (II) Loading extension TEGRA-EGL
-[   108.678] (==) TEGRA(0): DPMS enabled
-[   108.678] (--) RandR disabled
-[   108.678] (II) Initializing built-in extension Generic Event Extension
-[   108.678] (II) Initializing built-in extension SHAPE
-[   108.678] (II) Initializing built-in extension MIT-SHM
-[   108.678] (II) Initializing built-in extension XInputExtension
-[   108.678] (II) Initializing built-in extension XTEST
-[   108.678] (II) Initializing built-in extension BIG-REQUESTS
-[   108.678] (II) Initializing built-in extension SYNC
-[   108.678] (II) Initializing built-in extension XKEYBOARD
-[   108.678] (II) Initializing built-in extension XC-MISC
-[   108.679] (II) Initializing built-in extension SECURITY
-[   108.679] (II) Initializing built-in extension XINERAMA
-[   108.679] (II) Initializing built-in extension XFIXES
-[   108.679] (II) Initializing built-in extension RENDER
-[   108.679] (II) Initializing built-in extension RANDR
-[   108.679] (II) Initializing built-in extension COMPOSITE
-[   108.679] (II) Initializing built-in extension DAMAGE
-[   108.713] (II) AIGLX: Screen 0 is not DRI2 capable
-[   108.713] (II) AIGLX: Screen 0 is not DRI capable
-[   108.755] (II) AIGLX: Loaded and initialized swrast
-[   108.755] (II) GLX: Initialized DRISWRAST GL provider for screen 0
-[   108.756] (II) TEGRA(0): Setting screen physical size to 218 x 136
-[   108.854] (II) config/udev: Adding input device gpio-keys (/dev/input/event5)
-[   108.854] (**) gpio-keys: Applying InputClass "evdev keyboard catchall"
-[   108.854] (II) LoadModule: "evdev"
-[   108.855] (II) Loading /usr/lib/xorg/modules/input/evdev_drv.so
-[   108.856] (II) Module evdev: vendor="X.Org Foundation"
-[   108.856] 	compiled for 1.12.4, module version = 2.9.1
-[   108.856] 	Module class: X.Org XInput Driver
-[   108.856] 	ABI class: X.Org XInput driver, version 16.0
-[   108.856] (II) Using input driver 'evdev' for 'gpio-keys'
-[   108.856] (**) gpio-keys: always reports core events
-[   108.856] (**) evdev: gpio-keys: Device: "/dev/input/event5"
-[   108.856] (--) evdev: gpio-keys: Vendor 0x1 Product 0x1
-[   108.856] (--) evdev: gpio-keys: Found keys
-[   108.856] (II) evdev: gpio-keys: Configuring as keyboard
-[   108.856] (**) Option "config_info" "udev:/sys/devices/platform/gpio-keys.0/input/input5/event5"
-[   108.856] (II) XINPUT: Adding extended input device "gpio-keys" (type: KEYBOARD, id 6)
-[   108.856] (**) Option "xkb_rules" "evdev"
-[   108.856] (**) Option "xkb_model" "pc104"
-[   108.856] (**) Option "xkb_layout" "us"
-[   108.900] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event2)
-[   108.900] (**) Logitech USB Receiver: Applying InputClass "evdev pointer catchall"
-[   108.900] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[   108.900] (**) Logitech USB Receiver: always reports core events
-[   108.900] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event2"
-[   108.900] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[   108.900] (--) evdev: Logitech USB Receiver: Found 20 mouse buttons
-[   108.900] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[   108.900] (--) evdev: Logitech USB Receiver: Found relative axes
-[   108.900] (--) evdev: Logitech USB Receiver: Found x and y relative axes
-[   108.900] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[   108.900] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[   108.900] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[   108.900] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[   108.900] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.0/input/input2/event2"
-[   108.900] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: MOUSE, id 7)
-[   108.900] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[   108.901] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[   108.901] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[   108.901] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[   108.901] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[   108.902] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/mouse1)
-[   108.902] (II) No input driver specified, ignoring this device.
-[   108.902] (II) This device may have been added with another device file.
-[   108.903] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event3)
-[   108.903] (**) Logitech USB Receiver: Applying InputClass "evdev keyboard catchall"
-[   108.903] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[   108.903] (**) Logitech USB Receiver: always reports core events
-[   108.903] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event3"
-[   108.903] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[   108.903] (--) evdev: Logitech USB Receiver: Found 1 mouse buttons
-[   108.903] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[   108.903] (--) evdev: Logitech USB Receiver: Found relative axes
-[   108.903] (II) evdev: Logitech USB Receiver: Forcing relative x/y axes to exist.
-[   108.903] (--) evdev: Logitech USB Receiver: Found absolute axes
-[   108.903] (II) evdev: Logitech USB Receiver: Forcing absolute x/y axes to exist.
-[   108.903] (--) evdev: Logitech USB Receiver: Found keys
-[   108.903] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[   108.903] (II) evdev: Logitech USB Receiver: Configuring as keyboard
-[   108.903] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[   108.904] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[   108.904] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[   108.904] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.1/input/input3/event3"
-[   108.904] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: KEYBOARD, id 8)
-[   108.904] (**) Option "xkb_rules" "evdev"
-[   108.904] (**) Option "xkb_model" "pc104"
-[   108.904] (**) Option "xkb_layout" "us"
-[   108.904] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[   108.904] (WW) evdev: Logitech USB Receiver: ignoring absolute axes.
-[   108.904] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[   108.904] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[   108.904] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[   108.904] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[   108.905] (II) config/udev: Adding input device lid_input (/dev/input/event0)
-[   108.905] (II) No input driver specified, ignoring this device.
-[   108.905] (II) This device may have been added with another device file.
-[   108.906] (II) config/udev: Adding input device raydium_ts (/dev/input/event1)
-[   108.906] (**) raydium_ts: Applying InputClass "evdev touchscreen catchall"
-[   108.906] (**) raydium_ts: Applying InputClass "catched touchscreen"
-[   108.906] (II) LoadModule: "mtev"
-[   108.907] (II) Loading /usr/lib/xorg/modules/input/mtev.so
-[   108.907] (II) Module mtev: vendor="Nokia"
-[   108.907] 	compiled for 1.12.4, module version = 0.1.12
-[   108.907] 	Module class: X.Org XInput Driver
-[   108.907] 	ABI class: X.Org XInput driver, version 16.0
-[   108.907] (II) Using input driver 'mtev' for 'raydium_ts'
-[   108.907] (**) Option "CorePointer" "true"
-[   108.907] (**) raydium_ts: always reports core events
-[   108.907] (**) raydium_ts: always reports core events
-[   108.907] (**) Option "config_info" "udev:/sys/devices/platform/tegra11-spi.0/spi_master/spi0/spi0.0/input/input1/event1"
-[   108.907] (II) XINPUT: Adding extended input device "raydium_ts" (type: TOUCHSCREEN, id 9)
-[   108.907] (II) device control: init
-[   108.907] (**) Option "Device" "/dev/input/event1"
-[   108.907] (II) mtev: caps: mtdata touch_major width_major tracking_id position_x position_y
-[   108.907] (II) mtev: touch major: 0 255
-[   108.907] (II) mtev: width: 0 255
-[   108.908] (II) mtev: tracking_id: 0 32
-[   108.908] (II) mtev: position_x: 0 2559
-[   108.908] (II) mtev: position_y: 0 1599
-[   108.921] (II) pointer_control
-[   108.921] (**) raydium_ts: (accel) keeping acceleration scheme 1
-[   108.921] (II) pointer_property
-[   108.921] (II) pointer_property
-[   108.921] (**) raydium_ts: (accel) acceleration profile 0
-[   108.921] (II) pointer_property
-[   108.921] (II) pointer_property
-[   108.921] (**) raydium_ts: (accel) acceleration factor: 2.000
-[   108.921] (**) raydium_ts: (accel) acceleration threshold: 4
-[   108.921] (II) device control: on
-[   108.921] (II) pointer_property
-[   108.921] (II) pointer_property
-[   108.922] (II) config/udev: Adding input device raydium_ts (/dev/input/mouse0)
-[   108.922] (II) No input driver specified, ignoring this device.
-[   108.922] (II) This device may have been added with another device file.
-[   108.923] (II) config/udev: Adding input device compass (/dev/input/event4)
-[   108.923] (II) No input driver specified, ignoring this device.
-[   108.923] (II) This device may have been added with another device file.
-[   108.924] (II) config/udev: Adding input device asuspec (/dev/input/event6)
-[   108.924] (**) asuspec: Applying InputClass "evdev pointer catchall"
-[   108.924] (**) asuspec: Applying InputClass "evdev keyboard catchall"
-[   108.924] (II) Using input driver 'evdev' for 'asuspec'
-[   108.924] (**) asuspec: always reports core events
-[   108.924] (**) evdev: asuspec: Device: "/dev/input/event6"
-[   108.924] (--) evdev: asuspec: Vendor 0 Product 0
-[   108.925] (--) evdev: asuspec: Found 3 mouse buttons
-[   108.925] (--) evdev: asuspec: Found relative axes
-[   108.925] (--) evdev: asuspec: Found x and y relative axes
-[   108.925] (--) evdev: asuspec: Found keys
-[   108.925] (II) evdev: asuspec: Configuring as mouse
-[   108.925] (II) evdev: asuspec: Configuring as keyboard
-[   108.925] (**) evdev: asuspec: YAxisMapping: buttons 4 and 5
-[   108.925] (**) evdev: asuspec: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[   108.925] (**) Option "config_info" "udev:/sys/devices/virtual/input/input6/event6"
-[   108.925] (II) XINPUT: Adding extended input device "asuspec" (type: KEYBOARD, id 10)
-[   108.925] (**) Option "xkb_rules" "evdev"
-[   108.925] (**) Option "xkb_model" "pc104"
-[   108.925] (**) Option "xkb_layout" "us"
-[   108.925] (II) evdev: asuspec: initialized for relative axes.
-[   108.925] (**) asuspec: (accel) keeping acceleration scheme 1
-[   108.925] (**) asuspec: (accel) acceleration profile 0
-[   108.925] (**) asuspec: (accel) acceleration factor: 2.000
-[   108.925] (**) asuspec: (accel) acceleration threshold: 4
-[   108.926] (II) config/udev: Adding input device asuspec (/dev/input/mouse2)
-[   108.926] (II) No input driver specified, ignoring this device.
-[   108.926] (II) This device may have been added with another device file.
-[   108.927] (II) config/udev: Adding input device elantech_touchscreen (/dev/input/event7)
-[   108.927] (**) elantech_touchscreen: Applying InputClass "catched touchpad"
-[   108.927] (II) LoadModule: "multitouch"
-[   108.927] (II) Loading /usr/lib/xorg/modules/input/multitouch.so
-[   108.927] (II) Module multitouch: vendor="X.Org Foundation"
-[   108.928] 	compiled for 1.12.4, module version = 0.1.0
-[   108.928] 	Module class: X.Org XInput Driver
-[   108.928] 	ABI class: X.Org XInput driver, version 16.0
-[   108.928] (II) Using input driver 'multitouch' for 'elantech_touchscreen'
-[   108.928] (**) elantech_touchscreen: always reports core events
-[   108.928] (**) Option "config_info" "udev:/sys/devices/virtual/input/input7/event7"
-[   108.928] (II) XINPUT: Adding extended input device "elantech_touchscreen" (type: TOUCHPAD, id 11)
-[   108.928] (II) device control: init
-[   108.929] (**) Option "Device" "/dev/input/event7"
-[   108.929] (II) multitouch: devname: elantech_touchscreen
-[   108.929] (II) multitouch: devid: 0 0 0
-[   108.929] (II) multitouch: caps: left right mtdata
-[   108.929] (II) multitouch: 0: min: 0 max: 15
-[   108.929] (II) multitouch: 5: min: 0 max: 1160
-[   108.929] (II) multitouch: 6: min: 0 max: 406
-[   108.938] (II) pointer_control
-[   108.938] (**) elantech_touchscreen: (accel) keeping acceleration scheme 1
-[   108.938] (II) pointer_property
-[   108.938] (II) pointer_property
-[   108.938] (**) elantech_touchscreen: (accel) acceleration profile 0
-[   108.938] (II) pointer_property
-[   108.938] (II) pointer_property
-[   108.938] (**) elantech_touchscreen: (accel) acceleration factor: 2.000
-[   108.938] (**) elantech_touchscreen: (accel) acceleration threshold: 4
-[   108.938] (II) device control: on
-[   108.938] (II) pointer_property
-[   108.938] (II) pointer_property
-[   119.537] (WW) TEGRA(0): DSI-1: Error querying display modes: No such device.
-[  1495.409] (II) config/udev: removing device Logitech USB Receiver
-[  1495.418] (II) evdev: Logitech USB Receiver: Close
-[  1495.419] (II) UnloadModule: "evdev"
-[  1495.436] (II) config/udev: removing device Logitech USB Receiver
-[  1495.438] (II) evdev: Logitech USB Receiver: Close
-[  1495.439] (II) UnloadModule: "evdev"
-[  1497.269] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event2)
-[  1497.269] (**) Logitech USB Receiver: Applying InputClass "evdev pointer catchall"
-[  1497.269] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1497.269] (**) Logitech USB Receiver: always reports core events
-[  1497.269] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event2"
-[  1497.269] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1497.269] (--) evdev: Logitech USB Receiver: Found 20 mouse buttons
-[  1497.269] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1497.269] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1497.269] (--) evdev: Logitech USB Receiver: Found x and y relative axes
-[  1497.269] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1497.269] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1497.269] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1497.270] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1497.270] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.0/input/input8/event2"
-[  1497.270] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: MOUSE, id 7)
-[  1497.270] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1497.271] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1497.271] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1497.271] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1497.271] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[  1497.274] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event3)
-[  1497.274] (**) Logitech USB Receiver: Applying InputClass "evdev keyboard catchall"
-[  1497.274] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1497.275] (**) Logitech USB Receiver: always reports core events
-[  1497.275] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event3"
-[  1497.275] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1497.275] (--) evdev: Logitech USB Receiver: Found 1 mouse buttons
-[  1497.275] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1497.275] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1497.275] (II) evdev: Logitech USB Receiver: Forcing relative x/y axes to exist.
-[  1497.275] (--) evdev: Logitech USB Receiver: Found absolute axes
-[  1497.275] (II) evdev: Logitech USB Receiver: Forcing absolute x/y axes to exist.
-[  1497.276] (--) evdev: Logitech USB Receiver: Found keys
-[  1497.276] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1497.276] (II) evdev: Logitech USB Receiver: Configuring as keyboard
-[  1497.276] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1497.276] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1497.276] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1497.276] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.1/input/input9/event3"
-[  1497.276] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: KEYBOARD, id 8)
-[  1497.277] (**) Option "xkb_rules" "evdev"
-[  1497.277] (**) Option "xkb_model" "pc104"
-[  1497.277] (**) Option "xkb_layout" "us"
-[  1497.278] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1497.278] (WW) evdev: Logitech USB Receiver: ignoring absolute axes.
-[  1497.280] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1497.280] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1497.281] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1497.281] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[  1497.287] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/mouse1)
-[  1497.287] (II) No input driver specified, ignoring this device.
-[  1497.287] (II) This device may have been added with another device file.
-[  1500.793] (II) config/udev: removing device Logitech USB Receiver
-[  1500.799] (II) evdev: Logitech USB Receiver: Close
-[  1500.799] (II) UnloadModule: "evdev"
-[  1500.819] (II) config/udev: removing device Logitech USB Receiver
-[  1500.824] (II) evdev: Logitech USB Receiver: Close
-[  1500.824] (II) UnloadModule: "evdev"
-[  1501.574] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/mouse1)
-[  1501.574] (II) No input driver specified, ignoring this device.
-[  1501.574] (II) This device may have been added with another device file.
-[  1501.579] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event3)
-[  1501.579] (**) Logitech USB Receiver: Applying InputClass "evdev keyboard catchall"
-[  1501.579] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1501.579] (**) Logitech USB Receiver: always reports core events
-[  1501.579] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event3"
-[  1501.579] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1501.579] (--) evdev: Logitech USB Receiver: Found 1 mouse buttons
-[  1501.579] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1501.579] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1501.579] (II) evdev: Logitech USB Receiver: Forcing relative x/y axes to exist.
-[  1501.579] (--) evdev: Logitech USB Receiver: Found absolute axes
-[  1501.579] (II) evdev: Logitech USB Receiver: Forcing absolute x/y axes to exist.
-[  1501.579] (--) evdev: Logitech USB Receiver: Found keys
-[  1501.580] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1501.580] (II) evdev: Logitech USB Receiver: Configuring as keyboard
-[  1501.580] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1501.580] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1501.580] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1501.580] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.1/input/input11/event3"
-[  1501.580] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: KEYBOARD, id 7)
-[  1501.580] (**) Option "xkb_rules" "evdev"
-[  1501.580] (**) Option "xkb_model" "pc104"
-[  1501.580] (**) Option "xkb_layout" "us"
-[  1501.581] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1501.581] (WW) evdev: Logitech USB Receiver: ignoring absolute axes.
-[  1501.582] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1501.582] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1501.582] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1501.582] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[  1501.585] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event2)
-[  1501.585] (**) Logitech USB Receiver: Applying InputClass "evdev pointer catchall"
-[  1501.585] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1501.585] (**) Logitech USB Receiver: always reports core events
-[  1501.585] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event2"
-[  1501.585] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1501.585] (--) evdev: Logitech USB Receiver: Found 20 mouse buttons
-[  1501.585] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1501.585] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1501.585] (--) evdev: Logitech USB Receiver: Found x and y relative axes
-[  1501.590] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1501.590] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1501.590] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1501.590] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1501.591] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.0/input/input10/event2"
-[  1501.591] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: MOUSE, id 8)
-[  1501.591] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1501.591] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1501.591] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1501.591] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1501.591] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[  1539.684] (II) config/udev: removing device Logitech USB Receiver
-[  1539.688] (II) evdev: Logitech USB Receiver: Close
-[  1539.688] (II) UnloadModule: "evdev"
-[  1539.690] (II) config/udev: removing device Logitech USB Receiver
-[  1539.694] (II) evdev: Logitech USB Receiver: Close
-[  1539.694] (II) UnloadModule: "evdev"
-[  1540.533] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/mouse1)
-[  1540.533] (II) No input driver specified, ignoring this device.
-[  1540.533] (II) This device may have been added with another device file.
-[  1540.538] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event3)
-[  1540.538] (**) Logitech USB Receiver: Applying InputClass "evdev keyboard catchall"
-[  1540.538] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1540.538] (**) Logitech USB Receiver: always reports core events
-[  1540.538] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event3"
-[  1540.538] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1540.538] (--) evdev: Logitech USB Receiver: Found 1 mouse buttons
-[  1540.538] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1540.538] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1540.538] (II) evdev: Logitech USB Receiver: Forcing relative x/y axes to exist.
-[  1540.539] (--) evdev: Logitech USB Receiver: Found absolute axes
-[  1540.539] (II) evdev: Logitech USB Receiver: Forcing absolute x/y axes to exist.
-[  1540.539] (--) evdev: Logitech USB Receiver: Found keys
-[  1540.539] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1540.539] (II) evdev: Logitech USB Receiver: Configuring as keyboard
-[  1540.539] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1540.539] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1540.539] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1540.539] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.1/input/input13/event3"
-[  1540.539] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: KEYBOARD, id 7)
-[  1540.539] (**) Option "xkb_rules" "evdev"
-[  1540.539] (**) Option "xkb_model" "pc104"
-[  1540.539] (**) Option "xkb_layout" "us"
-[  1540.539] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1540.540] (WW) evdev: Logitech USB Receiver: ignoring absolute axes.
-[  1540.540] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1540.540] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1540.540] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1540.540] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[  1540.546] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event2)
-[  1540.546] (**) Logitech USB Receiver: Applying InputClass "evdev pointer catchall"
-[  1540.546] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1540.546] (**) Logitech USB Receiver: always reports core events
-[  1540.546] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event2"
-[  1540.546] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1540.546] (--) evdev: Logitech USB Receiver: Found 20 mouse buttons
-[  1540.546] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1540.546] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1540.546] (--) evdev: Logitech USB Receiver: Found x and y relative axes
-[  1540.546] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1540.546] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1540.546] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1540.546] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1540.546] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.0/input/input12/event2"
-[  1540.546] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: MOUSE, id 8)
-[  1540.546] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1540.547] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1540.547] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1540.547] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1540.547] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[  1549.219] (II) config/udev: removing device Logitech USB Receiver
-[  1549.224] (II) evdev: Logitech USB Receiver: Close
-[  1549.224] (II) UnloadModule: "evdev"
-[  1549.264] (II) config/udev: removing device Logitech USB Receiver
-[  1549.277] (II) evdev: Logitech USB Receiver: Close
-[  1549.277] (II) UnloadModule: "evdev"
-[  1550.654] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/mouse1)
-[  1550.654] (II) No input driver specified, ignoring this device.
-[  1550.654] (II) This device may have been added with another device file.
-[  1550.663] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event2)
-[  1550.664] (**) Logitech USB Receiver: Applying InputClass "evdev pointer catchall"
-[  1550.664] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1550.664] (**) Logitech USB Receiver: always reports core events
-[  1550.664] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event2"
-[  1550.664] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1550.664] (--) evdev: Logitech USB Receiver: Found 20 mouse buttons
-[  1550.664] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1550.664] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1550.664] (--) evdev: Logitech USB Receiver: Found x and y relative axes
-[  1550.664] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1550.664] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1550.664] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1550.664] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1550.664] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.0/input/input14/event2"
-[  1550.664] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: MOUSE, id 7)
-[  1550.664] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1550.665] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1550.665] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1550.665] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1550.665] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[  1550.671] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event3)
-[  1550.671] (**) Logitech USB Receiver: Applying InputClass "evdev keyboard catchall"
-[  1550.671] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1550.671] (**) Logitech USB Receiver: always reports core events
-[  1550.671] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event3"
-[  1550.671] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1550.671] (--) evdev: Logitech USB Receiver: Found 1 mouse buttons
-[  1550.671] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1550.671] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1550.671] (II) evdev: Logitech USB Receiver: Forcing relative x/y axes to exist.
-[  1550.671] (--) evdev: Logitech USB Receiver: Found absolute axes
-[  1550.671] (II) evdev: Logitech USB Receiver: Forcing absolute x/y axes to exist.
-[  1550.672] (--) evdev: Logitech USB Receiver: Found keys
-[  1550.672] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1550.672] (II) evdev: Logitech USB Receiver: Configuring as keyboard
-[  1550.672] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1550.672] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1550.672] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1550.672] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.1/input/input15/event3"
-[  1550.672] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: KEYBOARD, id 8)
-[  1550.672] (**) Option "xkb_rules" "evdev"
-[  1550.672] (**) Option "xkb_model" "pc104"
-[  1550.672] (**) Option "xkb_layout" "us"
-[  1550.672] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1550.673] (WW) evdev: Logitech USB Receiver: ignoring absolute axes.
-[  1550.673] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1550.673] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1550.673] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1550.673] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[  1554.616] (II) config/udev: removing device Logitech USB Receiver
-[  1554.622] (II) evdev: Logitech USB Receiver: Close
-[  1554.622] (II) UnloadModule: "evdev"
-[  1554.638] (II) config/udev: removing device Logitech USB Receiver
-[  1554.645] (II) evdev: Logitech USB Receiver: Close
-[  1554.645] (II) UnloadModule: "evdev"
-[  1556.773] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/mouse1)
-[  1556.774] (II) No input driver specified, ignoring this device.
-[  1556.774] (II) This device may have been added with another device file.
-[  1556.785] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event2)
-[  1556.785] (**) Logitech USB Receiver: Applying InputClass "evdev pointer catchall"
-[  1556.785] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1556.785] (**) Logitech USB Receiver: always reports core events
-[  1556.785] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event2"
-[  1556.785] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1556.785] (--) evdev: Logitech USB Receiver: Found 20 mouse buttons
-[  1556.785] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1556.785] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1556.785] (--) evdev: Logitech USB Receiver: Found x and y relative axes
-[  1556.785] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1556.785] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1556.785] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1556.785] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1556.785] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.0/input/input16/event2"
-[  1556.786] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: MOUSE, id 7)
-[  1556.786] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1556.786] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1556.786] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1556.786] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1556.787] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
-[  1556.813] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event3)
-[  1556.813] (**) Logitech USB Receiver: Applying InputClass "evdev keyboard catchall"
-[  1556.813] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
-[  1556.813] (**) Logitech USB Receiver: always reports core events
-[  1556.813] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event3"
-[  1556.813] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
-[  1556.813] (--) evdev: Logitech USB Receiver: Found 1 mouse buttons
-[  1556.813] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
-[  1556.813] (--) evdev: Logitech USB Receiver: Found relative axes
-[  1556.813] (II) evdev: Logitech USB Receiver: Forcing relative x/y axes to exist.
-[  1556.813] (--) evdev: Logitech USB Receiver: Found absolute axes
-[  1556.813] (II) evdev: Logitech USB Receiver: Forcing absolute x/y axes to exist.
-[  1556.813] (--) evdev: Logitech USB Receiver: Found keys
-[  1556.813] (II) evdev: Logitech USB Receiver: Configuring as mouse
-[  1556.813] (II) evdev: Logitech USB Receiver: Configuring as keyboard
-[  1556.813] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
-[  1556.813] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
-[  1556.813] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
-[  1556.814] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.1/input/input17/event3"
-[  1556.814] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: KEYBOARD, id 8)
-[  1556.814] (**) Option "xkb_rules" "evdev"
-[  1556.814] (**) Option "xkb_model" "pc104"
-[  1556.814] (**) Option "xkb_layout" "us"
-[  1556.815] (II) evdev: Logitech USB Receiver: initialized for relative axes.
-[  1556.815] (WW) evdev: Logitech USB Receiver: ignoring absolute axes.
-[  1556.816] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
-[  1556.816] (**) Logitech USB Receiver: (accel) acceleration profile 0
-[  1556.816] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
-[  1556.816] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
+[    23.641] (==) TEGRA(0): Depth 24, (--) framebuffer bpp 32
+[    23.641] (==) TEGRA(0): RGB weight 888
+[    23.641] (==) TEGRA(0): Default visual is TrueColor
+[    23.641] (==) TEGRA(0): Using gamma correction (1.0, 1.0, 1.0)
+[    23.641] (**) TEGRA(0): Option "ARGBHWCursor" "True"
+[    23.641] (II) TEGRA(0): Output DSI-1 using monitor section DSI
+[    23.641] (II) TEGRA(0): Output HDMI-1 has no monitor section
+[    23.642] (WW) TEGRA(0): DSI-1: Error querying display modes: No such device.
+[    23.642] (II) TEGRA(0): EDID for output DSI-1
+[    23.642] (II) TEGRA(0): Printing probed modes for output DSI-1
+[    23.642] (II) TEGRA(0): Modeline "2560x1600"x60.0  268.67  2560 2608 2640 2720  1600 1603 1609 1646 (98.8 kHz eP)
+[    23.642] (II) TEGRA(0): EDID for output HDMI-1
+[    23.642] (II) TEGRA(0): Output DSI-1 connected
+[    23.642] (II) TEGRA(0): Output HDMI-1 disconnected
+[    23.642] (II) TEGRA(0): Using exact sizes for initial modes
+[    23.642] (II) TEGRA(0): Output DSI-1 using initial mode 2560x1600
+[    23.642] (II) TEGRA(0): Using default gamma of (1.0, 1.0, 1.0) unless otherwise stated.
+[    23.642] (--) TEGRA(0): VideoRAM: 32768 kByte
+[    23.642] (--) TEGRA(0): Virtual size is 2560x1600 (pitch 0)
+[    23.642] (**) TEGRA(0):  Driver mode "2560x1600": 268.7 MHz, 98.8 kHz, 60.0 Hz
+[    23.642] (II) TEGRA(0): Modeline "2560x1600"x60.0  268.67  2560 2608 2640 2720  1600 1603 1609 1646 (98.8 kHz eP)
+[    23.642] (==) TEGRA(0): DPI set to (96, 96)
+[    23.642] (II) Loading sub module "fb"
+[    23.642] (II) LoadModule: "fb"
+[    23.642] (II) Loading /usr/lib/xorg/modules/libfb.so
+[    23.643] (II) Module fb: vendor="X.Org Foundation"
+[    23.643] 	compiled for 1.12.4, module version = 1.0.0
+[    23.643] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    23.643] (II) Loading sub module "ramdac"
+[    23.643] (II) LoadModule: "ramdac"
+[    23.643] (II) Module "ramdac" already built-in
+[    23.643] (--) Depth 24 pixmap format is 32 bpp
+[    23.659] (==) TEGRA(0): Backing store disabled
+[    23.659] (==) TEGRA(0): Silken mouse enabled
+[    23.659] (II) TEGRA(0): RandR 1.2 enabled, ignore the following RandR disabled message.
+[    25.455] (II) Loading extension TEGRA-EGL
+[    25.455] (==) TEGRA(0): DPMS enabled
+[    25.456] (--) RandR disabled
+[    25.456] (II) Initializing built-in extension Generic Event Extension
+[    25.456] (II) Initializing built-in extension SHAPE
+[    25.456] (II) Initializing built-in extension MIT-SHM
+[    25.456] (II) Initializing built-in extension XInputExtension
+[    25.456] (II) Initializing built-in extension XTEST
+[    25.456] (II) Initializing built-in extension BIG-REQUESTS
+[    25.456] (II) Initializing built-in extension SYNC
+[    25.456] (II) Initializing built-in extension XKEYBOARD
+[    25.456] (II) Initializing built-in extension XC-MISC
+[    25.456] (II) Initializing built-in extension SECURITY
+[    25.456] (II) Initializing built-in extension XINERAMA
+[    25.456] (II) Initializing built-in extension XFIXES
+[    25.456] (II) Initializing built-in extension RENDER
+[    25.456] (II) Initializing built-in extension RANDR
+[    25.456] (II) Initializing built-in extension COMPOSITE
+[    25.456] (II) Initializing built-in extension DAMAGE
+[    25.484] (II) AIGLX: Screen 0 is not DRI2 capable
+[    25.484] (II) AIGLX: Screen 0 is not DRI capable
+[    25.526] (II) AIGLX: Loaded and initialized swrast
+[    25.526] (II) GLX: Initialized DRISWRAST GL provider for screen 0
+[    25.527] (II) TEGRA(0): Setting screen physical size to 218 x 136
+[    25.627] (II) config/udev: Adding input device gpio-keys (/dev/input/event5)
+[    25.627] (**) gpio-keys: Applying InputClass "evdev keyboard catchall"
+[    25.627] (II) LoadModule: "evdev"
+[    25.628] (II) Loading /usr/lib/xorg/modules/input/evdev_drv.so
+[    25.629] (II) Module evdev: vendor="X.Org Foundation"
+[    25.629] 	compiled for 1.12.4, module version = 2.9.1
+[    25.629] 	Module class: X.Org XInput Driver
+[    25.629] 	ABI class: X.Org XInput driver, version 16.0
+[    25.629] (II) Using input driver 'evdev' for 'gpio-keys'
+[    25.629] (**) gpio-keys: always reports core events
+[    25.629] (**) evdev: gpio-keys: Device: "/dev/input/event5"
+[    25.629] (--) evdev: gpio-keys: Vendor 0x1 Product 0x1
+[    25.629] (--) evdev: gpio-keys: Found keys
+[    25.629] (II) evdev: gpio-keys: Configuring as keyboard
+[    25.629] (**) Option "config_info" "udev:/sys/devices/platform/gpio-keys.0/input/input5/event5"
+[    25.629] (II) XINPUT: Adding extended input device "gpio-keys" (type: KEYBOARD, id 6)
+[    25.629] (**) Option "xkb_rules" "evdev"
+[    25.629] (**) Option "xkb_model" "pc104"
+[    25.629] (**) Option "xkb_layout" "us"
+[    25.671] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event2)
+[    25.671] (**) Logitech USB Receiver: Applying InputClass "evdev pointer catchall"
+[    25.671] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
+[    25.671] (**) Logitech USB Receiver: always reports core events
+[    25.671] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event2"
+[    25.672] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
+[    25.672] (--) evdev: Logitech USB Receiver: Found 20 mouse buttons
+[    25.672] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
+[    25.672] (--) evdev: Logitech USB Receiver: Found relative axes
+[    25.672] (--) evdev: Logitech USB Receiver: Found x and y relative axes
+[    25.672] (II) evdev: Logitech USB Receiver: Configuring as mouse
+[    25.672] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
+[    25.672] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
+[    25.672] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+[    25.672] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.0/input/input2/event2"
+[    25.672] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: MOUSE, id 7)
+[    25.672] (II) evdev: Logitech USB Receiver: initialized for relative axes.
+[    25.672] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
+[    25.672] (**) Logitech USB Receiver: (accel) acceleration profile 0
+[    25.672] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
+[    25.672] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
+[    25.673] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/mouse1)
+[    25.674] (II) No input driver specified, ignoring this device.
+[    25.674] (II) This device may have been added with another device file.
+[    25.675] (II) config/udev: Adding input device Logitech USB Receiver (/dev/input/event3)
+[    25.675] (**) Logitech USB Receiver: Applying InputClass "evdev keyboard catchall"
+[    25.675] (II) Using input driver 'evdev' for 'Logitech USB Receiver'
+[    25.675] (**) Logitech USB Receiver: always reports core events
+[    25.675] (**) evdev: Logitech USB Receiver: Device: "/dev/input/event3"
+[    25.675] (--) evdev: Logitech USB Receiver: Vendor 0x46d Product 0xc52f
+[    25.675] (--) evdev: Logitech USB Receiver: Found 1 mouse buttons
+[    25.675] (--) evdev: Logitech USB Receiver: Found scroll wheel(s)
+[    25.675] (--) evdev: Logitech USB Receiver: Found relative axes
+[    25.675] (II) evdev: Logitech USB Receiver: Forcing relative x/y axes to exist.
+[    25.675] (--) evdev: Logitech USB Receiver: Found absolute axes
+[    25.675] (II) evdev: Logitech USB Receiver: Forcing absolute x/y axes to exist.
+[    25.675] (--) evdev: Logitech USB Receiver: Found keys
+[    25.675] (II) evdev: Logitech USB Receiver: Configuring as mouse
+[    25.675] (II) evdev: Logitech USB Receiver: Configuring as keyboard
+[    25.675] (II) evdev: Logitech USB Receiver: Adding scrollwheel support
+[    25.675] (**) evdev: Logitech USB Receiver: YAxisMapping: buttons 4 and 5
+[    25.675] (**) evdev: Logitech USB Receiver: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+[    25.675] (**) Option "config_info" "udev:/sys/devices/platform/tegra-xhci/usb1/1-2/1-2.2/1-2.2:1.1/input/input3/event3"
+[    25.675] (II) XINPUT: Adding extended input device "Logitech USB Receiver" (type: KEYBOARD, id 8)
+[    25.675] (**) Option "xkb_rules" "evdev"
+[    25.675] (**) Option "xkb_model" "pc104"
+[    25.676] (**) Option "xkb_layout" "us"
+[    25.676] (II) evdev: Logitech USB Receiver: initialized for relative axes.
+[    25.676] (WW) evdev: Logitech USB Receiver: ignoring absolute axes.
+[    25.676] (**) Logitech USB Receiver: (accel) keeping acceleration scheme 1
+[    25.676] (**) Logitech USB Receiver: (accel) acceleration profile 0
+[    25.676] (**) Logitech USB Receiver: (accel) acceleration factor: 2.000
+[    25.676] (**) Logitech USB Receiver: (accel) acceleration threshold: 4
+[    25.677] (II) config/udev: Adding input device lid_input (/dev/input/event0)
+[    25.677] (II) No input driver specified, ignoring this device.
+[    25.677] (II) This device may have been added with another device file.
+[    25.678] (II) config/udev: Adding input device raydium_ts (/dev/input/event1)
+[    25.678] (**) raydium_ts: Applying InputClass "evdev touchscreen catchall"
+[    25.678] (**) raydium_ts: Applying InputClass "catched touchscreen"
+[    25.678] (II) LoadModule: "mtev"
+[    25.679] (II) Loading /usr/lib/xorg/modules/input/mtev.so
+[    25.679] (II) Module mtev: vendor="Nokia"
+[    25.679] 	compiled for 1.12.4, module version = 0.1.12
+[    25.679] 	Module class: X.Org XInput Driver
+[    25.679] 	ABI class: X.Org XInput driver, version 16.0
+[    25.679] (II) Using input driver 'mtev' for 'raydium_ts'
+[    25.679] (**) Option "CorePointer" "true"
+[    25.679] (**) raydium_ts: always reports core events
+[    25.679] (**) raydium_ts: always reports core events
+[    25.679] (**) Option "config_info" "udev:/sys/devices/platform/tegra11-spi.0/spi_master/spi0/spi0.0/input/input1/event1"
+[    25.679] (II) XINPUT: Adding extended input device "raydium_ts" (type: TOUCHSCREEN, id 9)
+[    25.679] (II) device control: init
+[    25.679] (**) Option "Device" "/dev/input/event1"
+[    25.679] (II) mtev: caps: mtdata touch_major width_major tracking_id position_x position_y
+[    25.679] (II) mtev: touch major: 0 255
+[    25.679] (II) mtev: width: 0 255
+[    25.679] (II) mtev: tracking_id: 0 32
+[    25.679] (II) mtev: position_x: 0 2559
+[    25.679] (II) mtev: position_y: 0 1599
+[    25.695] (II) pointer_control
+[    25.695] (**) raydium_ts: (accel) keeping acceleration scheme 1
+[    25.695] (II) pointer_property
+[    25.695] (II) pointer_property
+[    25.695] (**) raydium_ts: (accel) acceleration profile 0
+[    25.695] (II) pointer_property
+[    25.695] (II) pointer_property
+[    25.695] (**) raydium_ts: (accel) acceleration factor: 2.000
+[    25.695] (**) raydium_ts: (accel) acceleration threshold: 4
+[    25.695] (II) device control: on
+[    25.695] (II) pointer_property
+[    25.695] (II) pointer_property
+[    25.696] (II) config/udev: Adding input device raydium_ts (/dev/input/mouse0)
+[    25.696] (II) No input driver specified, ignoring this device.
+[    25.696] (II) This device may have been added with another device file.
+[    25.697] (II) config/udev: Adding input device compass (/dev/input/event4)
+[    25.697] (II) No input driver specified, ignoring this device.
+[    25.697] (II) This device may have been added with another device file.
+[    25.698] (II) config/udev: Adding input device asuspec (/dev/input/event6)
+[    25.698] (**) asuspec: Applying InputClass "evdev pointer catchall"
+[    25.698] (**) asuspec: Applying InputClass "evdev keyboard catchall"
+[    25.698] (II) Using input driver 'evdev' for 'asuspec'
+[    25.698] (**) asuspec: always reports core events
+[    25.698] (**) evdev: asuspec: Device: "/dev/input/event6"
+[    25.698] (--) evdev: asuspec: Vendor 0 Product 0
+[    25.698] (--) evdev: asuspec: Found 3 mouse buttons
+[    25.698] (--) evdev: asuspec: Found relative axes
+[    25.698] (--) evdev: asuspec: Found x and y relative axes
+[    25.698] (--) evdev: asuspec: Found keys
+[    25.698] (II) evdev: asuspec: Configuring as mouse
+[    25.698] (II) evdev: asuspec: Configuring as keyboard
+[    25.699] (**) evdev: asuspec: YAxisMapping: buttons 4 and 5
+[    25.699] (**) evdev: asuspec: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+[    25.699] (**) Option "config_info" "udev:/sys/devices/virtual/input/input6/event6"
+[    25.699] (II) XINPUT: Adding extended input device "asuspec" (type: KEYBOARD, id 10)
+[    25.699] (**) Option "xkb_rules" "evdev"
+[    25.699] (**) Option "xkb_model" "pc104"
+[    25.699] (**) Option "xkb_layout" "us"
+[    25.699] (II) evdev: asuspec: initialized for relative axes.
+[    25.699] (**) asuspec: (accel) keeping acceleration scheme 1
+[    25.699] (**) asuspec: (accel) acceleration profile 0
+[    25.699] (**) asuspec: (accel) acceleration factor: 2.000
+[    25.699] (**) asuspec: (accel) acceleration threshold: 4
+[    25.700] (II) config/udev: Adding input device asuspec (/dev/input/mouse2)
+[    25.700] (II) No input driver specified, ignoring this device.
+[    25.700] (II) This device may have been added with another device file.
+[    25.701] (II) config/udev: Adding input device elantech_touchscreen (/dev/input/event7)
+[    25.701] (**) elantech_touchscreen: Applying InputClass "catched touchpad"
+[    25.701] (II) LoadModule: "multitouch"
+[    25.701] (II) Loading /usr/lib/xorg/modules/input/multitouch.so
+[    25.701] (II) Module multitouch: vendor="X.Org Foundation"
+[    25.701] 	compiled for 1.12.4, module version = 0.1.0
+[    25.701] 	Module class: X.Org XInput Driver
+[    25.701] 	ABI class: X.Org XInput driver, version 16.0
+[    25.701] (II) Using input driver 'multitouch' for 'elantech_touchscreen'
+[    25.701] (**) elantech_touchscreen: always reports core events
+[    25.702] (**) Option "config_info" "udev:/sys/devices/virtual/input/input7/event7"
+[    25.702] (II) XINPUT: Adding extended input device "elantech_touchscreen" (type: TOUCHPAD, id 11)
+[    25.702] (II) device control: init
+[    25.702] (**) Option "Device" "/dev/input/event7"
+[    25.702] (II) multitouch: devname: elantech_touchscreen
+[    25.702] (II) multitouch: devid: 0 0 0
+[    25.702] (II) multitouch: caps: left right mtdata
+[    25.702] (II) multitouch: 0: min: 0 max: 15
+[    25.702] (II) multitouch: 5: min: 0 max: 1160
+[    25.702] (II) multitouch: 6: min: 0 max: 406
+[    25.718] (II) pointer_control
+[    25.718] (**) elantech_touchscreen: (accel) keeping acceleration scheme 1
+[    25.718] (II) pointer_property
+[    25.718] (II) pointer_property
+[    25.718] (**) elantech_touchscreen: (accel) acceleration profile 0
+[    25.718] (II) pointer_property
+[    25.718] (II) pointer_property
+[    25.718] (**) elantech_touchscreen: (accel) acceleration factor: 2.000
+[    25.718] (**) elantech_touchscreen: (accel) acceleration threshold: 4
+[    25.718] (II) device control: on
+[    25.718] (II) pointer_property
+[    25.718] (II) pointer_property
+[    41.629] (WW) TEGRA(0): DSI-1: Error querying display modes: No such device.

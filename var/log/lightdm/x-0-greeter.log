@@ -1,20 +1,20 @@
 ** Message: Starting lightdm-gtk-greeter 2.0.1 (May 26 2015, 01:46:46)
 ** Message: [Configuration] Reading file: /etc/lightdm/lightdm-gtk-greeter.conf
 
-** (lightdm-gtk-greeter:4492): WARNING **: [PIDs] Failed to execute command: upstart
+** (lightdm-gtk-greeter:1808): WARNING **: [PIDs] Failed to execute command: upstart
 
-(lightdm-gtk-greeter:4492): GLib-GObject-WARNING **: The property GtkWidget:margin-left is deprecated and shouldn't be used anymore. It will be removed in a future version.
+(lightdm-gtk-greeter:1808): GLib-GObject-WARNING **: The property GtkWidget:margin-left is deprecated and shouldn't be used anymore. It will be removed in a future version.
 
-(lightdm-gtk-greeter:4492): GLib-GObject-WARNING **: The property GtkWidget:margin-right is deprecated and shouldn't be used anymore. It will be removed in a future version.
+(lightdm-gtk-greeter:1808): GLib-GObject-WARNING **: The property GtkWidget:margin-right is deprecated and shouldn't be used anymore. It will be removed in a future version.
 
-(lightdm-gtk-greeter:4492): GLib-GObject-WARNING **: The property GtkImage:stock is deprecated and shouldn't be used anymore. It will be removed in a future version.
+(lightdm-gtk-greeter:1808): GLib-GObject-WARNING **: The property GtkImage:stock is deprecated and shouldn't be used anymore. It will be removed in a future version.
 
-(lightdm-gtk-greeter:4492): Gtk-WARNING **: Theme file for default has no name
-
-
-(lightdm-gtk-greeter:4492): Gtk-WARNING **: Theme file for default has no directories
+(lightdm-gtk-greeter:1808): Gtk-WARNING **: Theme file for default has no name
 
 
-** (lightdm-gtk-greeter:4492): WARNING **: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+(lightdm-gtk-greeter:1808): Gtk-WARNING **: Theme file for default has no directories
 
-(lightdm-gtk-greeter:4492): GLib-GObject-CRITICAL **: g_object_set_data_full: assertion 'G_IS_OBJECT (object)' failed
+
+** (lightdm-gtk-greeter:1808): WARNING **: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+
+(lightdm-gtk-greeter:1808): GLib-GObject-CRITICAL **: g_object_set_data_full: assertion 'G_IS_OBJECT (object)' failed

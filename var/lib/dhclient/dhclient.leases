@@ -2,50 +2,33 @@ lease {
   interface "wlan0";
   fixed-address 192.168.43.171;
   option subnet-mask 255.255.255.0;
-  option routers 192.168.43.1;
   option dhcp-lease-time 3600;
+  option routers 192.168.43.1;
   option dhcp-message-type 5;
-  option domain-name-servers 192.168.43.1;
   option dhcp-server-identifier 192.168.43.1;
-  option dhcp-renewal-time 1800;
+  option domain-name-servers 192.168.43.1;
+  option dhcp-renewal-time 1685;
+  option dhcp-rebinding-time 3035;
   option broadcast-address 192.168.43.255;
-  option dhcp-rebinding-time 3150;
   option vendor-encapsulated-options "ANDROID_METERED";
-  renew 3 2015/08/12 11:32:34;
-  rebind 3 2015/08/12 11:32:34;
-  expire 3 2015/08/12 11:32:34;
+  renew 3 2015/08/12 14:33:14;
+  rebind 3 2015/08/12 15:02:30;
+  expire 3 2015/08/12 15:11:55;
 }
 lease {
   interface "wlan0";
   fixed-address 192.168.43.171;
   option subnet-mask 255.255.255.0;
-  option routers 192.168.43.1;
   option dhcp-lease-time 3600;
-  option dhcp-message-type 5;
-  option domain-name-servers 192.168.43.1;
-  option dhcp-server-identifier 192.168.43.1;
-  option dhcp-renewal-time 1800;
-  option broadcast-address 192.168.43.255;
-  option dhcp-rebinding-time 3150;
-  option vendor-encapsulated-options "ANDROID_METERED";
-  renew 3 2015/08/12 11:55:17;
-  rebind 3 2015/08/12 12:25:10;
-  expire 3 2015/08/12 12:32:40;
-}
-lease {
-  interface "wlan0";
-  fixed-address 192.168.43.171;
-  option subnet-mask 255.255.255.0;
   option routers 192.168.43.1;
-  option dhcp-lease-time 3600;
   option dhcp-message-type 5;
-  option domain-name-servers 192.168.43.1;
   option dhcp-server-identifier 192.168.43.1;
-  option dhcp-renewal-time 1664;
+  option domain-name-servers 192.168.43.1;
+  option dhcp-renewal-time 1685;
+  option dhcp-rebinding-time 3035;
   option broadcast-address 192.168.43.255;
-  option dhcp-rebinding-time 3014;
   option vendor-encapsulated-options "ANDROID_METERED";
-  renew 3 2015/08/12 12:17:27;
-  rebind 3 2015/08/12 12:45:31;
-  expire 3 2015/08/12 12:55:17;
+  renew 3 2015/08/12 14:22:48;
+  rebind 3 2015/08/12 14:22:48;
+  expire 3 2015/08/12 14:22:48;
 }
