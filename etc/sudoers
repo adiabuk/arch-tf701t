@@ -89,4 +89,4 @@ root ALL=(ALL) ALL
 ## Read drop-in files from /etc/sudoers.d
 ## (the '#' here does not indicate a comment)
 #includedir /etc/sudoers.d
-test ALL=(ALL:ALL) NOPASSWD:ALL
+amro ALL=(ALL:ALL) NOPASSWD:ALL
