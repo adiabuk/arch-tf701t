@@ -88,8 +88,8 @@ state.tegrart5639 {
 	control.1 {
 		iface MIXER
 		name 'Speaker Playback Switch'
-		value.0 true
-		value.1 true
+		value.0 false
+		value.1 false
 		comment {
 			access 'read write'
 			type BOOLEAN
