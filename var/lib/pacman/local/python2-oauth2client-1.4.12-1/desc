@@ -1,0 +1,46 @@
+%NAME%
+python2-oauth2client
+
+%VERSION%
+1.4.12-1
+
+%DESC%
+A client library for OAuth 2.0
+
+%URL%
+https://github.com/google/oauth2client
+
+%ARCH%
+any
+
+%BUILDDATE%
+1436785306
+
+%INSTALLDATE%
+1439631235
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu8@archlinuxarm.org>
+
+%SIZE%
+646144
+
+%REASON%
+1
+
+%LICENSE%
+Apache
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+python2-httplib2
+python2-pyasn1
+python2-pyasn1-modules
+python2-rsa
+python2-six
+
+%OPTDEPENDS%
+python2-gflags: for oauth2client.tools.run function
+

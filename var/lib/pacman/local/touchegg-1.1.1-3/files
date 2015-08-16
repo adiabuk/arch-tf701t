@@ -1,0 +1,8 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/touchegg
+usr/share/
+usr/share/touchegg/
+usr/share/touchegg/touchegg.conf
+
