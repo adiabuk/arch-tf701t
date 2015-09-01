@@ -1,0 +1,44 @@
+%NAME%
+valgrind
+
+%VERSION%
+3.10.1-3
+
+%DESC%
+A tool to help find memory-management problems in programs
+
+%URL%
+http://valgrind.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1439527798
+
+%INSTALLDATE%
+1439848857
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+58524672
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc>=2.22
+glibc<2.23
+perl
+
+%OPTDEPENDS%
+openmpi: MPI support
+

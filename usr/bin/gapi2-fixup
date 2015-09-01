@@ -1,0 +1,2 @@
+#!/bin/sh
+mono /usr/lib/gtk-sharp-2.0/gapi-fixup.exe "$@"

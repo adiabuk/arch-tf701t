@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/bin/mono $MONO_OPTIONS /usr/lib/mono/xbuild/12.0/bin/xbuild.exe "$@"

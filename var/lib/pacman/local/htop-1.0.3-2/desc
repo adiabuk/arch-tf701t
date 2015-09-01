@@ -1,0 +1,40 @@
+%NAME%
+htop
+
+%VERSION%
+1.0.3-2
+
+%DESC%
+Interactive process viewer
+
+%URL%
+http://htop.sourceforge.net/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1403370898
+
+%INSTALLDATE%
+1440866099
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+156672
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+ncurses
+
+%OPTDEPENDS%
+lsof: show files opened by a process
+strace: attach to a running process
+

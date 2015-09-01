@@ -1,0 +1,42 @@
+%NAME%
+git-cola
+
+%VERSION%
+2.3-1
+
+%DESC%
+A powerful GUI for Git
+
+%URL%
+http://git-cola.github.com/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1441123203
+
+%INSTALLDATE%
+1441123213
+
+%PACKAGER%
+Unknown Packager
+
+%SIZE%
+3452928
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+none
+
+%DEPENDS%
+git
+python-pyqt4>=4.4
+icu
+
+%OPTDEPENDS%
+python-pyinotify>=0.7.1: for inotify support
+tk: to use the built-in ssh-askpass handler
+

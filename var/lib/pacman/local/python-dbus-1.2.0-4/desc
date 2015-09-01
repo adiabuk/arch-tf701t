@@ -1,0 +1,45 @@
+%NAME%
+python-dbus
+
+%VERSION%
+1.2.0-4
+
+%DESC%
+Python 3.3 bindings for DBUS
+
+%URL%
+http://www.freedesktop.org/wiki/Software/DBusBindings
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1413828400
+
+%INSTALLDATE%
+1441123148
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu5@archlinuxarm.org>
+
+%SIZE%
+569344
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+LGPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+python-dbus-common
+python
+dbus
+
+%OPTDEPENDS%
+dbus-glib: glib mainloop support
+

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Blackbox Session
+Comment=Use this session to run blackbox as your desktop environment
+Exec=blackbox
+Icon=
+Type=Application
+DesktopNames=Blackbox

@@ -1,0 +1,53 @@
+%NAME%
+python-pyudev
+
+%VERSION%
+0.16.1-3
+
+%DESC%
+A pure Python 3.x binding to libudev
+
+%URL%
+http://pyudev.readthedocs.org/en/latest/index.html
+
+%ARCH%
+any
+
+%BUILDDATE%
+1396125510
+
+%INSTALLDATE%
+1439846833
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+odroid1@archlinuxarm.org>
+
+%SIZE%
+350208
+
+%REASON%
+1
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+sha256
+
+%REPLACES%
+pyudev
+
+%DEPENDS%
+python
+udev
+
+%OPTDEPENDS%
+pyqt: PyQt integration
+python-gobject2: Glib integration
+
+%CONFLICTS%
+pyudev
+
+%PROVIDES%
+pyudev
+

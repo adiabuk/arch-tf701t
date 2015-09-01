@@ -1,0 +1,36 @@
+%NAME%
+python-sphinx_rtd_theme
+
+%VERSION%
+0.1.8-1
+
+%DESC%
+Python Sphinx Read The Docs Theme
+
+%URL%
+https://github.com/snide/sphinx_rtd_theme
+
+%ARCH%
+any
+
+%BUILDDATE%
+1432901758
+
+%INSTALLDATE%
+1441123150
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+931840
+
+%REASON%
+1
+
+%LICENSE%
+MIT
+
+%VALIDATION%
+sha256
+

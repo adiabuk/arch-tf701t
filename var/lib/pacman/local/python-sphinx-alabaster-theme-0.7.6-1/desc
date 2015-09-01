@@ -1,0 +1,36 @@
+%NAME%
+python-sphinx-alabaster-theme
+
+%VERSION%
+0.7.6-1
+
+%DESC%
+Modified Kr Sphinx doc theme
+
+%URL%
+https://github.com/bitprophet/alabaster
+
+%ARCH%
+any
+
+%BUILDDATE%
+1436465281
+
+%INSTALLDATE%
+1441123150
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+101376
+
+%REASON%
+1
+
+%LICENSE%
+BSD
+
+%VALIDATION%
+sha256
+

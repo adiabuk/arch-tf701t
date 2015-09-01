@@ -1,0 +1,36 @@
+%NAME%
+mlocate
+
+%VERSION%
+0.26-5
+
+%DESC%
+Merging locate/updatedb implementation
+
+%URL%
+https://fedorahosted.org/mlocate/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1418855047
+
+%INSTALLDATE%
+1441084523
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu0@archlinuxarm.org>
+
+%SIZE%
+714752
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+

@@ -1,0 +1,45 @@
+%NAME%
+python35
+
+%VERSION%
+3.5.0b2-1
+
+%DESC%
+Next generation of the python high-level scripting language
+
+%URL%
+http://www.python.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1439849437
+
+%INSTALLDATE%
+1439849594
+
+%PACKAGER%
+Unknown Packager
+
+%SIZE%
+110867456
+
+%LICENSE%
+custom
+
+%VALIDATION%
+none
+
+%DEPENDS%
+expat
+bzip2
+gdbm
+openssl
+libffi
+zlib
+
+%OPTDEPENDS%
+tk: for tkinter
+sqlite
+

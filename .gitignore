@@ -2,6 +2,7 @@ host
 lost+found
 storage
 mnt
+dev
 home
 run
 proc
@@ -14,3 +15,8 @@ etc/ca-certificates/*
 dev
 var/log/*
 root
+var/lib/upower/history*
+var/lib/dhclient/dhclient.leases
+etc/wicd/wireless-settings.conf
+etc/resolv.conf
+dev

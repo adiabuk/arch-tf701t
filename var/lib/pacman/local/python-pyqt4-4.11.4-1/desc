@@ -1,0 +1,56 @@
+%NAME%
+python-pyqt4
+
+%VERSION%
+4.11.4-1
+
+%DESC%
+A set of Python 3.x bindings for the Qt toolkit
+
+%URL%
+http://www.riverbankcomputing.co.uk/software/pyqt/intro
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1434206077
+
+%INSTALLDATE%
+1441123149
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu9@archlinuxarm.org>
+
+%SIZE%
+11300864
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%REPLACES%
+pyqt
+
+%DEPENDS%
+qtwebkit
+python-sip
+python-dbus
+pyqt4-common
+
+%OPTDEPENDS%
+phonon-qt4: enable audio and video in PyQt applications
+qscintilla: QScintilla API
+qt-assistant-compat: add PyQt online help in Qt Assistant
+
+%CONFLICTS%
+pyqt
+
+%PROVIDES%
+pyqt=4.11.4
+

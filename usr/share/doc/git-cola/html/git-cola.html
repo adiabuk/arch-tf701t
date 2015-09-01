@@ -1,0 +1,913 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>git-cola(1) &mdash; git-cola 2.3 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="git-cola 2.3 documentation" href="index.html"/>
+        <link rel="next" title="git-dag(1)" href="git-dag.html"/>
+        <link rel="prev" title="Git Cola Documentation" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> git-cola</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">git-cola(1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#synopsis">SYNOPSIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">DESCRIPTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">OPTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sub-commands">SUB-COMMANDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-your-editor">CONFIGURE YOUR EDITOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keyboard-shortcuts">KEYBOARD SHORTCUTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tools">TOOLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status">STATUS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">DIFF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commit-message-editor">COMMIT MESSAGE EDITOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apply-patches">APPLY PATCHES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-window-settings">CUSTOM WINDOW SETTINGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-variables">CONFIGURATION VARIABLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables">ENVIRONMENT VARIABLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#language-settings">LANGUAGE SETTINGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-gui-actions">CUSTOM GUI ACTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-gpg-for-signed-commits">SETTING UP GPG FOR SIGNED COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links">LINKS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git-dag.html">git-dag(1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#synopsis">SYNOPSIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#description">DESCRIPTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#options">OPTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#log-options">Log Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#context-menu-actions">CONTEXT-MENU ACTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#diff-commits">DIFF COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#configuration-variables">CONFIGURATION VARIABLES</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thanks.html">Thanks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html">Latest Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#unreleased-topics">Unreleased Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.3.html">git-cola v2.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.2.1.html">git-cola v2.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.2.html">git-cola v2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.1.2.html">git-cola v2.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.1.1.html">git-cola v2.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.1.0.html">git-cola v2.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.0.8.html">git-cola v2.0.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.0.7.html">git-cola v2.0.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.0.6.html">git-cola v2.0.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.0.5.html">git-cola v2.0.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.0.4.html">git-cola v2.0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.0.3.html">git-cola v2.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.0.2.html">git-cola v2.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.0.1.html">git-cola v2.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.0.0.html">git-cola v2.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.9.4.html">git-cola v1.9.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.9.3.html">git-cola v1.9.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.9.2.html">git-cola v1.9.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.9.1.html">git-cola v1.9.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.9.0.html">git-cola v1.9.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.8.5.html">git-cola v1.8.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.8.4.html">git-cola v1.8.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.8.3.html">git-cola v1.8.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.8.2.html">git-cola v1.8.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.8.1.html">git-cola v1.8.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.8.0.html">git-cola v1.8.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.7.html">git-cola v1.7.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.6.html">git-cola v1.7.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.5.html">git-cola v1.7.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.4.1.html">git-cola v1.7.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.4.html">git-cola v1.7.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.3.html">git-cola v1.7.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.2.html">git-cola v1.7.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.1.1.html">git-cola v1.7.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.1.html">git-cola v1.7.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.7.0.html">git-cola v1.7.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.3.5.html">git-cola v1.4.3.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.3.4.html">git-cola v1.4.3.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.3.3.html">git-cola v1.4.3.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.3.2.html">git-cola v1.4.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.3.1.html">git-cola v1.4.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.3.html">git-cola v1.4.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.2.5.html">git-cola v1.4.2.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.2.4.html">git-cola v1.4.2.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.2.3.html">git-cola v1.4.2.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.2.2.html">git-cola v1.4.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.2.1.html">git-cola v1.4.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.2.html">git-cola v1.4.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.1.2.html">git-cola v1.4.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.1.1.html">git-cola v1.4.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.1.html">git-cola v1.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.0.5.html">git-cola v1.4.0.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.0.4.html">git-cola v1.4.0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.0.3.html">git-cola v1.4.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.0.2.html">git-cola v1.4.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.0.1.html">git-cola v1.4.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.4.0.html">git-cola v1.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.3.9.html">git-cola v1.3.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.3.8.html">git-cola v1.3.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.3.7.html">git-cola v1.3.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v1.3.6.html">git-cola v1.3.6</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">git-cola</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>git-cola(1)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="sources/git-cola.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="git-cola-1">
+<h1>git-cola(1)<a class="headerlink" href="#git-cola-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>SYNOPSIS<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>git cola [options] [sub-command]</p>
+</div>
+<div class="section" id="description">
+<h2>DESCRIPTION<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>git cola is a sleek and powerful Git GUI.</p>
+</div>
+<div class="section" id="options">
+<h2>OPTIONS<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="amend">
+<h3>&#8211;amend<a class="headerlink" href="#amend" title="Permalink to this headline">¶</a></h3>
+<p>Start <cite>git cola</cite> in amend mode.</p>
+</div>
+<div class="section" id="prompt">
+<h3>&#8211;prompt<a class="headerlink" href="#prompt" title="Permalink to this headline">¶</a></h3>
+<p>Prompt for a Git repository.  Defaults to the current directory.</p>
+</div>
+<div class="section" id="r-repo-path">
+<h3>-r, &#8211;repo &lt;path&gt;<a class="headerlink" href="#r-repo-path" title="Permalink to this headline">¶</a></h3>
+<p>Open the Git repository at <cite>&lt;path&gt;</cite>.  Defaults to the current directory.</p>
+</div>
+<div class="section" id="s-status-filter-filter">
+<h3>-s, &#8211;status-filter &lt;filter&gt;<a class="headerlink" href="#s-status-filter-filter" title="Permalink to this headline">¶</a></h3>
+<p>Apply the path filter to the status widget.</p>
+</div>
+<div class="section" id="version">
+<h3>&#8211;version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h3>
+<p>Print the <cite>git cola</cite> version and exit.</p>
+</div>
+<div class="section" id="h-help">
+<h3>-h, &#8211;help<a class="headerlink" href="#h-help" title="Permalink to this headline">¶</a></h3>
+<p>Show usage and optional arguments.</p>
+</div>
+<div class="section" id="help-commands">
+<h3>&#8211;help-commands<a class="headerlink" href="#help-commands" title="Permalink to this headline">¶</a></h3>
+<p>Show available sub-commands.</p>
+</div>
+</div>
+<div class="section" id="sub-commands">
+<h2>SUB-COMMANDS<a class="headerlink" href="#sub-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="am">
+<h3>am<a class="headerlink" href="#am" title="Permalink to this headline">¶</a></h3>
+<p>Apply patches.</p>
+</div>
+<div class="section" id="archive">
+<h3>archive<a class="headerlink" href="#archive" title="Permalink to this headline">¶</a></h3>
+<p>Export tarballs from Git.</p>
+</div>
+<div class="section" id="branch">
+<h3>branch<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h3>
+<p>Create branches.</p>
+</div>
+<div class="section" id="browse">
+<h3>browse<a class="headerlink" href="#browse" title="Permalink to this headline">¶</a></h3>
+<p>Browse tracked files.</p>
+</div>
+<div class="section" id="config">
+<h3>config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h3>
+<p>Configure settings.</p>
+</div>
+<div class="section" id="dag">
+<h3>dag<a class="headerlink" href="#dag" title="Permalink to this headline">¶</a></h3>
+<p>Start the <cite>git dag</cite> Git history browser.</p>
+</div>
+<div class="section" id="diff">
+<h3>diff<a class="headerlink" href="#diff" title="Permalink to this headline">¶</a></h3>
+<p>Diff changed files.</p>
+</div>
+<div class="section" id="fetch">
+<h3>fetch<a class="headerlink" href="#fetch" title="Permalink to this headline">¶</a></h3>
+<p>Fetch history from remote repositories.</p>
+</div>
+<div class="section" id="grep">
+<h3>grep<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h3>
+<p>Use <cite>git grep</cite> to search for content.</p>
+</div>
+<div class="section" id="merge">
+<h3>merge<a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h3>
+<p>Merge branches.</p>
+</div>
+<div class="section" id="pull">
+<h3>pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h3>
+<p>Fetch and merge remote branches.</p>
+</div>
+<div class="section" id="push">
+<h3>push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h3>
+<p>Push branches to remotes.</p>
+</div>
+<div class="section" id="rebase">
+<h3>rebase<a class="headerlink" href="#rebase" title="Permalink to this headline">¶</a></h3>
+<p>Start an interactive rebase.</p>
+</div>
+<div class="section" id="remote">
+<h3>remote<a class="headerlink" href="#remote" title="Permalink to this headline">¶</a></h3>
+<p>Create and edit remotes.</p>
+</div>
+<div class="section" id="search">
+<h3>search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h3>
+<p>Search for commits.</p>
+</div>
+<div class="section" id="stash">
+<h3>stash<a class="headerlink" href="#stash" title="Permalink to this headline">¶</a></h3>
+<p>Stash uncommitted modifications.</p>
+</div>
+<div class="section" id="tag">
+<h3>tag<a class="headerlink" href="#tag" title="Permalink to this headline">¶</a></h3>
+<p>Create tags.</p>
+</div>
+<div class="section" id="id1">
+<h3>version<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Print the <cite>git cola</cite> version.</p>
+</div>
+</div>
+<div class="section" id="configure-your-editor">
+<h2>CONFIGURE YOUR EDITOR<a class="headerlink" href="#configure-your-editor" title="Permalink to this headline">¶</a></h2>
+<p>The editor used by <cite>Ctrl-e</cite> is configured from the Preferences screen.
+The environment variable <cite>$VISUAL</cite> is consulted when no editor has been
+configured.</p>
+<p><em>ProTip</em>: Configuring your editor to <cite>gvim -f -p</cite> will open multiple tabs
+when editing files.  <cite>gvim -f -o</cite> uses splits.</p>
+<p><cite>git cola</cite> is {vim, emacs, textpad, notepad++}-aware.
+When you select a line in the <cite>grep</cite> screen and press any of
+<cite>Enter</cite>, <cite>Ctrl-e</cite>, or the <cite>Edit</cite> button, you are taken to that exact line.</p>
+<p>The editor preference is saved in the <cite>gui.editor</cite> variable using
+<a class="reference external" href="http://git-scm.com/docs/git-config">git config</a>.</p>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h2>KEYBOARD SHORTCUTS<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p><cite>git cola</cite> has many useful keyboard shortcuts.</p>
+<p>You can see the available shortcuts by pressing the <code class="docutils literal"><span class="pre">?</span></code> key,
+choosing <code class="docutils literal"><span class="pre">Help</span> <span class="pre">-&gt;</span> <span class="pre">Keyboard</span> <span class="pre">shortcuts</span></code> from the main menu,
+or by consulting the <a class="reference external" href="https://git-cola.github.io/share/doc/git-cola/hotkeys.html">git cola keyboard shortcuts reference</a>.</p>
+</div>
+<div class="section" id="tools">
+<h2>TOOLS<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>git cola</cite> interface is composed of various cooperating tools.
+Double-clicking a tool opens it in its own subwindow.
+Dragging it around moves and places it within the window.</p>
+<p>Tools can be hidden and rearranged however you like.
+<cite>git cola</cite> carefully remembers your window layout and restores
+it the next time it is launched.</p>
+<p>The <cite>Control-{1, 2, 3, ...}</cite> hotkey gives focus to a specific tool.
+A hidden tool can be re-opened using the <cite>Tools</cite> menu or
+the <cite>Shift+Control-{1, 2, 3, ...}</cite> shortcut keys.</p>
+</div>
+<div class="section" id="status">
+<span id="id2"></span><h2>STATUS<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>Status</cite> tool provides a visual analog to the
+<a class="reference external" href="http://git-scm.com/docs/git-status">git status</a> command.</p>
+<p><cite>Status</cite> displays files that are <cite>modified</cite> relative to the staging area,
+<cite>staged</cite> for the next commit, <cite>unmerged</cite> files from an in-progress merge,
+and files that are <cite>untracked</cite> to git.</p>
+<p>These are the same categories one sees when running
+<a class="reference external" href="http://git-scm.com/docs/git-status">git status</a>
+on the command line.</p>
+<p>You can navigate through the list of files using keyboard arrows as well
+as the ergonomical and vim-like <cite>j</cite> and <cite>k</cite> shortcut keys.</p>
+<p>There are several convenient ways to interact with files in the <cite>Status</cite> tool.</p>
+<p>Selecting a file displays its diff in the <a class="reference internal" href="#id4"><span>DIFF</span></a> viewer.
+Double-clicking a file stages its contents, as does the
+the <cite>Ctrl-s</cite> shortcut key.</p>
+<p><cite>Ctrl-e</cite> opens selected files in the conifgured editor, and
+<cite>Ctrl-d</cite> opens selected files using <a class="reference external" href="http://git-scm.com/docs/git-difftool">git difftool</a></p>
+<p>Additional actions can be performed using the right-click context menu.</p>
+<div class="section" id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
+<p>Clicking the <cite>Staged</cite> folder shows a diffstat for the index.</p>
+<p>Clicking the <cite>Modified</cite> folder shows a diffstat for the worktree.</p>
+<p>Clicking individual files sends diffs to the <cite>Diff Display</cite>.</p>
+<p>Double-clicking individual files adds and removes their content from the index.</p>
+<p>Various actions are available through the right-click context menu.
+Different actions are available depending a file&#8217;s status.</p>
+<div class="section" id="stage-selected">
+<h4>Stage Selected<a class="headerlink" href="#stage-selected" title="Permalink to this headline">¶</a></h4>
+<p>Add to the staging area using <a class="reference external" href="http://git-scm.com/docs/git-add">git add</a>
+Marks unmerged files as resolved.</p>
+</div>
+<div class="section" id="launch-editor">
+<h4>Launch Editor<a class="headerlink" href="#launch-editor" title="Permalink to this headline">¶</a></h4>
+<p>Launches the configured visual text editor</p>
+</div>
+<div class="section" id="launch-difftool">
+<h4>Launch Difftool<a class="headerlink" href="#launch-difftool" title="Permalink to this headline">¶</a></h4>
+<p>Visualize changes using <cite>git difftool</cite>.</p>
+</div>
+<div class="section" id="revert-unstaged-edits">
+<h4>Revert Unstaged Edits<a class="headerlink" href="#revert-unstaged-edits" title="Permalink to this headline">¶</a></h4>
+<p>Reverts unstaged content by checking out selected paths
+from the index/staging area</p>
+</div>
+<div class="section" id="revert-uncommited-edits">
+<h4>Revert Uncommited Edits<a class="headerlink" href="#revert-uncommited-edits" title="Permalink to this headline">¶</a></h4>
+<p>Throws away uncommitted edits</p>
+</div>
+<div class="section" id="unstage-selected">
+<h4>Unstage Selected<a class="headerlink" href="#unstage-selected" title="Permalink to this headline">¶</a></h4>
+<p>Remove from the index/staging area with
+<a class="reference external" href="http://git-scm.com/docs/git-reset">git reset</a></p>
+</div>
+<div class="section" id="launch-merge-tool">
+<h4>Launch Merge Tool<a class="headerlink" href="#launch-merge-tool" title="Permalink to this headline">¶</a></h4>
+<p>Resolve conflicts using <a class="reference external" href="http://git-scm.com/docs/git-mergetool">git mergetool</a>.</p>
+</div>
+<div class="section" id="delete-file-s">
+<h4>Delete File(s)<a class="headerlink" href="#delete-file-s" title="Permalink to this headline">¶</a></h4>
+<p>Delete untracked files from the filesystem.</p>
+</div>
+<div class="section" id="add-to-gitignore">
+<h4>Add to .gitignore<a class="headerlink" href="#add-to-gitignore" title="Permalink to this headline">¶</a></h4>
+<p>Adds untracked files to to the .gitignore file.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<span id="id5"></span><h2>DIFF<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>The diff viewer/editor displays diffs for selected files.
+Additions are shown in green and removals are displayed in light red.
+Extraneous whitespace is shown with a pure-red background.</p>
+<p>Right-clicking in the diff provides access to additional actions
+that use either the cursor location or text selection.</p>
+<div class="section" id="staging-content-for-commit">
+<h3>Staging content for commit<a class="headerlink" href="#staging-content-for-commit" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">&#64;&#64;</span></code> patterns denote a new diff hunk.  Selecting lines of diff
+and using the <cite>Stage Selected Lines</cite> command will stage just the selected
+lines.  Clicking within a diff hunk and selecting <cite>Stage Diff Hunk</cite> stages the
+entire patch diff hunk.</p>
+<p>The corresponding opposite commands can be performed on staged files as well,
+e.g. staged content can be selectively removed from the index when we are
+viewing diffs for staged content.</p>
+</div>
+</div>
+<div class="section" id="commit-message-editor">
+<h2>COMMIT MESSAGE EDITOR<a class="headerlink" href="#commit-message-editor" title="Permalink to this headline">¶</a></h2>
+<p>The commit message editor is a simple text widget
+for entering commit messages.</p>
+<p>You can navigate between the <cite>Subject</cite> and <cite>Extended description...</cite>
+fields using the keyboard arrow keys.</p>
+<p>Pressing enter when inside the <cite>Subject</cite> field jumps down to the
+extended description field.</p>
+<p>The <cite>Options</cite> button menu to the left of the subject field
+provides access to the additional actions.</p>
+<p>The <cite>Ctrl+i</cite> keyboard shortcut adds a standard &#8220;Signed-off-by: &#8221; line,
+and <cite>Ctrl+Enter</cite> creates a new commit using the commit message and
+staged content.</p>
+<div class="section" id="sign-off">
+<h3>Sign Off<a class="headerlink" href="#sign-off" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>Sign Off</cite> button adds a standard:</p>
+<div class="highlight-python"><div class="highlight"><pre>Signed-off-by: A. U. Thor &lt;a.u.thor@example.com&gt;
+</pre></div>
+</div>
+<p>line to the bottom of the commit message.</p>
+<p>Invoking this action is equivalent to passing the <code class="docutils literal"><span class="pre">-s</span></code> option
+to <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a>.</p>
+</div>
+<div class="section" id="commit">
+<h3>Commit<a class="headerlink" href="#commit" title="Permalink to this headline">¶</a></h3>
+<p>The commit button runs
+<a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a>.
+The contents of the commit message editor is provided as the commit message.</p>
+<p>Only staged files are included in the commit &#8211; this is the same behavior
+as running <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code> on the command-line.</p>
+</div>
+<div class="section" id="line-and-column-display">
+<h3>Line and Column Display<a class="headerlink" href="#line-and-column-display" title="Permalink to this headline">¶</a></h3>
+<p>The current line and column number is displayed by the editor.
+E.g. a <code class="docutils literal"><span class="pre">5,0</span></code> display means that the cursor is located at
+line five, column zero.</p>
+<p>The display changes colors when lines get too long.
+Yellow indicates the safe boundary for sending patches to a mailing list
+while keeping space for inline reply markers.</p>
+<p>Orange indicates that the line is starting to run a bit long and should
+break soon.</p>
+<p>Red indicates that the line is running up against the standard
+80-column limit for commit messages.</p>
+<p>Keeping commit messages less than 76-characters wide is encouraged.
+<a class="reference external" href="http://git-scm.com/docs/git-log">git log</a>
+is a great tool but long lines mess up its formatting for everyone else,
+so please be mindful when writing commit messages.</p>
+</div>
+<div class="section" id="amend-last-commit">
+<h3>Amend Last Commit<a class="headerlink" href="#amend-last-commit" title="Permalink to this headline">¶</a></h3>
+<p>Clicking on <cite>Amend Last Commit</cite> makes <cite>git cola</cite> amend the previous commit
+instead of creating a new one.  <cite>git cola</cite> loads the previous commit message
+into the commit message editor when this option is selected.</p>
+<p>The <cite>Status</cite> tool will display all of the changes for the amended commit.</p>
+</div>
+<div class="section" id="create-signed-commit">
+<h3>Create Signed Commit<a class="headerlink" href="#create-signed-commit" title="Permalink to this headline">¶</a></h3>
+<p>Tell <cite>git commit</cite> and <cite>git merge</cite> to sign commits using GPG.</p>
+<p>Using this option is equivalent to passing the <code class="docutils literal"><span class="pre">--gpg-sign</span></code> option to
+<a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a> and
+<a class="reference external" href="http://git-scm.com/docs/git-merge">git merge</a>.</p>
+<p>This option&#8217;s default value can be configured using the <cite>cola.signcommits</cite>
+configuration variable.</p>
+</div>
+</div>
+<div class="section" id="apply-patches">
+<h2>APPLY PATCHES<a class="headerlink" href="#apply-patches" title="Permalink to this headline">¶</a></h2>
+<p>Use the <code class="docutils literal"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Apply</span> <span class="pre">Patches</span></code> menu item to begin applying patches.</p>
+<p>Dragging and dropping patches onto the <cite>git cola</cite> interface
+adds the patches to the list of patches to apply using
+<a class="reference external" href="http://git-scm.com/docs/git-am">git am</a>.</p>
+<p>You can drag either a set of patches or a directory containing patches.
+Patches can be sorted using in the interface and are applied in the
+same order as is listed in the list.</p>
+<p>When a directory is dropped <cite>git cola</cite> walks the directory
+tree in search of patches.  <cite>git cola</cite> sorts the list of
+patches after they have all been found.  This allows you
+to control the order in which patchs are applied by placing
+patchsets into alphanumerically-sorted directories.</p>
+</div>
+<div class="section" id="custom-window-settings">
+<h2>CUSTOM WINDOW SETTINGS<a class="headerlink" href="#custom-window-settings" title="Permalink to this headline">¶</a></h2>
+<p><cite>git cola</cite> remembers modifications to the layout and arrangement
+of tools within the <cite>git cola</cite> interface.  Changes are saved
+and restored at application shutdown/startup.</p>
+<p><cite>git cola</cite> can be configured to not save custom layouts by unsetting
+the <cite>Save Window Settings</cite> option in the <cite>git cola</cite> preferences.</p>
+</div>
+<div class="section" id="configuration-variables">
+<h2>CONFIGURATION VARIABLES<a class="headerlink" href="#configuration-variables" title="Permalink to this headline">¶</a></h2>
+<p>These variables can be set using <cite>git config</cite> or from the settings.</p>
+<div class="section" id="cola-browserdockable">
+<h3>cola.browserdockable<a class="headerlink" href="#cola-browserdockable" title="Permalink to this headline">¶</a></h3>
+<p>Whether to create a dock widget with the <cite>Browser</cite> tool.
+Defaults to <cite>false</cite> to speedup startup time.</p>
+</div>
+<div class="section" id="cola-checkconflicts">
+<h3>cola.checkconflicts<a class="headerlink" href="#cola-checkconflicts" title="Permalink to this headline">¶</a></h3>
+<p>Inspect unmerged files for conflict markers before staging them.
+This feature helps prevent accidental staging of unresolved merge conflicts.
+Defaults to <cite>true</cite>.</p>
+</div>
+<div class="section" id="cola-fileattributes">
+<h3>cola.fileattributes<a class="headerlink" href="#cola-fileattributes" title="Permalink to this headline">¶</a></h3>
+<p>Enables per-file gitattributes encoding support when set to <cite>true</cite>.
+This tells <cite>git cola</cite> to honor the configured encoding when displaying
+and applying diffs.</p>
+</div>
+<div class="section" id="cola-fontdiff">
+<h3>cola.fontdiff<a class="headerlink" href="#cola-fontdiff" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the font to use for <cite>git cola</cite>&#8216;s diff display.</p>
+</div>
+<div class="section" id="cola-inotify">
+<h3>cola.inotify<a class="headerlink" href="#cola-inotify" title="Permalink to this headline">¶</a></h3>
+<p>Set to <cite>false</cite> to disable inotify support.
+Defaults to <cite>true</cite> when the <cite>pyinotify</cite> module is available.</p>
+</div>
+<div class="section" id="cola-refreshonfocus">
+<h3>cola.refreshonfocus<a class="headerlink" href="#cola-refreshonfocus" title="Permalink to this headline">¶</a></h3>
+<p>Set to <cite>true</cite> to automatically refresh when <cite>git cola</cite> gains focus.  Defaults
+to <cite>false</cite> because this can cause a pause whenever switching to <cite>git cola</cite> from
+another application.</p>
+</div>
+<div class="section" id="cola-linebreak">
+<h3>cola.linebreak<a class="headerlink" href="#cola-linebreak" title="Permalink to this headline">¶</a></h3>
+<p>Whether to automatically break long lines while editing commit messages.
+Defaults to <cite>true</cite>.  This setting is configured using the <cite>Preferences</cite>
+dialog, but it can be toggled for one-off usage using the commit message
+editor&#8217;s options sub-menu.</p>
+</div>
+<div class="section" id="cola-dragencoding">
+<h3>cola.dragencoding<a class="headerlink" href="#cola-dragencoding" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> encodes paths dragged from its widgets into <cite>utf-16</cite> when adding
+them to the drag-and-drop mime data (specifically, the <cite>text/x-moz-url</cite> entry).
+<cite>utf-16</cite> is used to make <cite>gnome-terminal</cite> see the right paths, but other
+terminals may expect a different encoding.  If you are using a terminal that
+expects a modern encoding, e.g. <cite>terminator</cite>, then set this value to <cite>utf-8</cite>.</p>
+</div>
+<div class="section" id="cola-readsize">
+<h3>cola.readsize<a class="headerlink" href="#cola-readsize" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> avoids reading large binary untracked files.
+The maximum size to read is controlled by <cite>cola.readsize</cite>
+and defaults to <cite>2048</cite>.</p>
+</div>
+<div class="section" id="cola-savewindowsettings">
+<h3>cola.savewindowsettings<a class="headerlink" href="#cola-savewindowsettings" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> will remember its window settings when set to <cite>true</cite>.
+Window settings and X11 sessions are saved in <cite>$HOME/.config/git-cola</cite>.</p>
+</div>
+<div class="section" id="cola-signcommits">
+<h3>cola.signcommits<a class="headerlink" href="#cola-signcommits" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> will sign commits by default when set <cite>true</cite>. Defaults to <cite>false</cite>.
+See the section below on setting up GPG for more details.</p>
+</div>
+<div class="section" id="cola-tabwidth">
+<h3>cola.tabwidth<a class="headerlink" href="#cola-tabwidth" title="Permalink to this headline">¶</a></h3>
+<p>The number of columns occupied by a tab character.  Defaults to 8.</p>
+</div>
+<div class="section" id="cola-terminal">
+<h3>cola.terminal<a class="headerlink" href="#cola-terminal" title="Permalink to this headline">¶</a></h3>
+<p>The command to use when launching commands within a graphical terminal.</p>
+<p><cite>cola.terminal</cite> defaults to <cite>xterm -e</cite> when unset.
+e.g. when opening a shell, <cite>git cola</cite> will run <cite>xterm -e $SHELL</cite>.</p>
+<p>If either <cite>gnome-terminal</cite>, <cite>xfce4-terminal</cite>, or <cite>konsole</cite> are installed
+then they will be preferred over <cite>xterm</cite> when <cite>cola.terminal</cite> is unset.</p>
+</div>
+<div class="section" id="cola-textwidth">
+<h3>cola.textwidth<a class="headerlink" href="#cola-textwidth" title="Permalink to this headline">¶</a></h3>
+<p>The number of columns used for line wrapping.
+Tabs are counted according to <cite>cola.tabwidth</cite>.</p>
+</div>
+<div class="section" id="cola-color-text">
+<h3>cola.color.text<a class="headerlink" href="#cola-color-text" title="Permalink to this headline">¶</a></h3>
+<p>The default diff text color, in hexadecimal RRGGBB notation.
+Defaults to &#8220;030303&#8221;.</p>
+</div>
+<div class="section" id="cola-color-add">
+<h3>cola.color.add<a class="headerlink" href="#cola-color-add" title="Permalink to this headline">¶</a></h3>
+<p>The default diff &#8220;add&#8221; background color, in hexadecimal RRGGBB notation.
+Defaults to &#8220;d2ffe4&#8221;.</p>
+</div>
+<div class="section" id="cola-color-remove">
+<h3>cola.color.remove<a class="headerlink" href="#cola-color-remove" title="Permalink to this headline">¶</a></h3>
+<p>The default diff &#8220;remove&#8221; background color, in hexadecimal RRGGBB notation.
+Defaults to &#8220;fee0e4&#8221;.</p>
+</div>
+<div class="section" id="cola-color-header">
+<h3>cola.color.header<a class="headerlink" href="#cola-color-header" title="Permalink to this headline">¶</a></h3>
+<p>The default diff header text color, in hexadecimal RRGGBB notation.
+Defaults to &#8220;bbbbbb&#8221;.</p>
+</div>
+<div class="section" id="gui-diffcontext">
+<h3>gui.diffcontext<a class="headerlink" href="#gui-diffcontext" title="Permalink to this headline">¶</a></h3>
+<p>The number of diff context lines to display.</p>
+</div>
+<div class="section" id="gui-displayuntracked">
+<h3>gui.displayuntracked<a class="headerlink" href="#gui-displayuntracked" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> avoids showing untracked files when set to <cite>false</cite>.</p>
+</div>
+<div class="section" id="gui-editor">
+<h3>gui.editor<a class="headerlink" href="#gui-editor" title="Permalink to this headline">¶</a></h3>
+<p>The default text editor to use is defined in <cite>gui.editor</cite>.
+The config variable overrides the VISUAL environment variable.
+e.g. <cite>gvim -f -p</cite>.</p>
+</div>
+<div class="section" id="gui-historybrowser">
+<h3>gui.historybrowser<a class="headerlink" href="#gui-historybrowser" title="Permalink to this headline">¶</a></h3>
+<p>The history browser to use when visualizing history.
+Defaults to <cite>gitk</cite>.</p>
+</div>
+<div class="section" id="diff-tool">
+<h3>diff.tool<a class="headerlink" href="#diff-tool" title="Permalink to this headline">¶</a></h3>
+<p>The default diff tool to use.</p>
+</div>
+<div class="section" id="merge-tool">
+<h3>merge.tool<a class="headerlink" href="#merge-tool" title="Permalink to this headline">¶</a></h3>
+<p>The default merge tool to use.</p>
+</div>
+<div class="section" id="user-email">
+<h3>user.email<a class="headerlink" href="#user-email" title="Permalink to this headline">¶</a></h3>
+<p>Your email address to be recorded in any newly created commits.
+Can be overridden by the &#8216;GIT_AUTHOR_EMAIL&#8217;, &#8216;GIT_COMMITTER_EMAIL&#8217;, and
+&#8216;EMAIL&#8217; environment variables.</p>
+</div>
+<div class="section" id="user-name">
+<h3>user.name<a class="headerlink" href="#user-name" title="Permalink to this headline">¶</a></h3>
+<p>Your full name to be recorded in any newly created commits.
+Can be overridden by the &#8216;GIT_AUTHOR_NAME&#8217; and &#8216;GIT_COMMITTER_NAME&#8217;
+environment variables.</p>
+</div>
+</div>
+<div class="section" id="environment-variables">
+<h2>ENVIRONMENT VARIABLES<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="git-cola-trace">
+<h3>GIT_COLA_TRACE<a class="headerlink" href="#git-cola-trace" title="Permalink to this headline">¶</a></h3>
+<p>When defined, <cite>git cola</cite> logs <cite>git</cite> commands to stdout.
+When set to <cite>full</cite>, <cite>git cola</cite> also logs the exit status and output.
+When set to <cite>trace</cite>, <cite>git cola</cite> logs to the <cite>Console</cite> widget.</p>
+</div>
+<div class="section" id="visual">
+<h3>VISUAL<a class="headerlink" href="#visual" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the default editor to use.
+This is ignored when the <cite>gui.editor</cite> configuration variable is defined.</p>
+</div>
+</div>
+<div class="section" id="language-settings">
+<h2>LANGUAGE SETTINGS<a class="headerlink" href="#language-settings" title="Permalink to this headline">¶</a></h2>
+<p><cite>git cola</cite> automatically detects your language and presents some
+translations when available.  This may not be desired, or you
+may want <cite>git cola</cite> to use a specific language.</p>
+<p>You can make <cite>git cola</cite> use an alternative language by creating a
+<cite>~/.config/git-cola/language</cite> file containing the standard two-letter
+gettext language code, e.g. &#8220;en&#8221;, &#8220;de&#8221;, &#8220;ja&#8221;, &#8220;zh&#8221;, etc.:</p>
+<div class="highlight-python"><div class="highlight"><pre>mkdir -p ~/.config/git-cola &amp;&amp;
+echo en &gt;~/.config/git-cola/language
+</pre></div>
+</div>
+<p>Alternatively you may also use LANGAUGE environmental variable to temporarily
+change <cite>git cola</cite>&#8216;s language just like any other gettext-based program.  For
+example to temporarily change <cite>git cola</cite>&#8216;s language to English:</p>
+<div class="highlight-python"><div class="highlight"><pre>LANGUAGE=en git cola
+</pre></div>
+</div>
+<p>To make <cite>git cola</cite> use the zh_TW translation with zh_HK, zh, and en as a
+fallback.:</p>
+<div class="highlight-python"><div class="highlight"><pre>LANGUAGE=zh_TW:zh_HK:zh:en git cola
+</pre></div>
+</div>
+</div>
+<div class="section" id="custom-gui-actions">
+<h2>CUSTOM GUI ACTIONS<a class="headerlink" href="#custom-gui-actions" title="Permalink to this headline">¶</a></h2>
+<p><cite>git cola</cite> allows you to define custom GUI actions by setting <cite>git config</cite>
+variables.  The &#8220;name&#8221; of the command appears in the &#8220;Actions&#8221; menu.</p>
+<div class="section" id="guitool-name-cmd">
+<h3>guitool.&lt;name&gt;.cmd<a class="headerlink" href="#guitool-name-cmd" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the shell command line to execute when the corresponding item of the
+Tools menu is invoked. This option is mandatory for every tool. The command is
+executed from the root of the working directory, and in the environment it
+receives the name of the tool as GIT_GUITOOL, the name of the currently
+selected file as FILENAME, and the name of the current branch as CUR_BRANCH
+(if the head is detached, CUR_BRANCH is empty).</p>
+</div>
+<div class="section" id="guitool-name-background">
+<h3>guitool.&lt;name&gt;.background<a class="headerlink" href="#guitool-name-background" title="Permalink to this headline">¶</a></h3>
+<p>Run the command in the background (similar to editing and difftool actions).
+This avoids blocking the GUI.  Setting <cite>background</cite> to <cite>true</cite> implies
+<cite>noconsole</cite> and <cite>norescan</cite>.</p>
+</div>
+<div class="section" id="guitool-name-needsfile">
+<h3>guitool.&lt;name&gt;.needsfile<a class="headerlink" href="#guitool-name-needsfile" title="Permalink to this headline">¶</a></h3>
+<p>Run the tool only if a diff is selected in the GUI. It guarantees that
+FILENAME is not empty.</p>
+</div>
+<div class="section" id="guitool-name-noconsole">
+<h3>guitool.&lt;name&gt;.noconsole<a class="headerlink" href="#guitool-name-noconsole" title="Permalink to this headline">¶</a></h3>
+<p>Run the command silently, without creating a window to display its output.</p>
+</div>
+<div class="section" id="guitool-name-norescan">
+<h3>guitool.&lt;name&gt;.norescan<a class="headerlink" href="#guitool-name-norescan" title="Permalink to this headline">¶</a></h3>
+<p>Don’t rescan the working directory for changes after the tool finishes
+execution.</p>
+</div>
+<div class="section" id="guitool-name-confirm">
+<h3>guitool.&lt;name&gt;.confirm<a class="headerlink" href="#guitool-name-confirm" title="Permalink to this headline">¶</a></h3>
+<p>Show a confirmation dialog before actually running the tool.</p>
+</div>
+<div class="section" id="guitool-name-argprompt">
+<h3>guitool.&lt;name&gt;.argprompt<a class="headerlink" href="#guitool-name-argprompt" title="Permalink to this headline">¶</a></h3>
+<p>Request a string argument from the user, and pass it to the tool through the
+ARGS environment variable. Since requesting an argument implies confirmation,
+the confirm option has no effect if this is enabled. If the option is set to
+true, yes, or 1, the dialog uses a built-in generic prompt; otherwise the
+exact value of the variable is used.</p>
+</div>
+<div class="section" id="guitool-name-revprompt">
+<h3>guitool.&lt;name&gt;.revprompt<a class="headerlink" href="#guitool-name-revprompt" title="Permalink to this headline">¶</a></h3>
+<p>Request a single valid revision from the user, and set the REVISION
+environment variable. In other aspects this option is similar to argprompt,
+and can be used together with it.</p>
+</div>
+<div class="section" id="guitool-name-revunmerged">
+<h3>guitool.&lt;name&gt;.revunmerged<a class="headerlink" href="#guitool-name-revunmerged" title="Permalink to this headline">¶</a></h3>
+<p>Show only unmerged branches in the revprompt subdialog. This is useful for
+tools similar to merge or rebase, but not for things like checkout or reset.</p>
+</div>
+<div class="section" id="guitool-name-title">
+<h3>guitool.&lt;name&gt;.title<a class="headerlink" href="#guitool-name-title" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the title to use for the prompt dialog.
+Defaults to the tool name.</p>
+</div>
+<div class="section" id="guitool-name-prompt">
+<h3>guitool.&lt;name&gt;.prompt<a class="headerlink" href="#guitool-name-prompt" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the general prompt string to display at the top of the dialog,
+before subsections for argprompt and revprompt.
+The default value includes the actual command.</p>
+</div>
+<div class="section" id="guitool-name-shortcut">
+<h3>guitool.&lt;name&gt;.shortcut<a class="headerlink" href="#guitool-name-shortcut" title="Permalink to this headline">¶</a></h3>
+<p>Specifies a keyboard shortcut for the custom tool.</p>
+<p>The value must be a valid string understood by the <cite>QAction::setShortcut()</cite> API.
+See <a class="reference external" href="http://qt-project.org/doc/qt-4.8/qkeysequence.html#QKeySequence-2">http://qt-project.org/doc/qt-4.8/qkeysequence.html#QKeySequence-2</a>
+for more details about the supported values.</p>
+<p>Avoid creating shortcuts that conflict with existing built-in <cite>git cola</cite>
+shortcuts.  Creating a conflict will result in no action when the shortcut
+is used.</p>
+</div>
+</div>
+<div class="section" id="setting-up-gpg-for-signed-commits">
+<h2>SETTING UP GPG FOR SIGNED COMMITS<a class="headerlink" href="#setting-up-gpg-for-signed-commits" title="Permalink to this headline">¶</a></h2>
+<p>When creating signed commits <cite>gpg</cite> will attempt to read your password from the
+terminal from which <cite>git cola</cite> was launched.
+The way to make this work smoothly is to use a GPG agent so that you can avoid
+needing to re-enter your password every time you commit.</p>
+<p>This also gets you a graphical passphrase prompt instead of getting prompted
+for your password in the terminal.</p>
+<div class="section" id="install-gpg-agent-and-friends">
+<h3>Install gpg-agent and friends<a class="headerlink" href="#install-gpg-agent-and-friends" title="Permalink to this headline">¶</a></h3>
+<p>On Mac OS X, you may need to <cite>brew install gpg-agent</cite> and install the
+<a class="reference external" href="https://gpgtools.org/macgpg2/">Mac GPG Suite</a>.</p>
+<p>On Linux use your package manager to install gnupg-agent and pinentry-qt4, e.g.:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install gnupg-agent pinentry-qt4
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-gpg-agent-and-a-pin-entry-program">
+<h3>Configure gpg-agent and a pin-entry program<a class="headerlink" href="#configure-gpg-agent-and-a-pin-entry-program" title="Permalink to this headline">¶</a></h3>
+<p>Edit <cite>~/.gnupg/gpg.conf</cite> to include the line,:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">use</span><span class="o">-</span><span class="n">agent</span>
+</pre></div>
+</div>
+<p>Edit <cite>~/.gnupg/gpg-agent.conf</cite> to contain a pinentry-program line pointing to
+the pin-entry program for your platform.</p>
+<p>The following example <cite>gpg-agent.conf</cite> shows how to use pinentry-qt4 on Linux:</p>
+<div class="highlight-python"><div class="highlight"><pre>pinentry-program /usr/bin/pinentry-qt4
+default-cache-ttl 3600
+enable-ssh-support
+use-standard-socket
+</pre></div>
+</div>
+<p>This following example <cite>gpg-agent.conf</cite> shows how to use MacGPG2&#8217;s
+pinentry app on On Mac OS X:</p>
+<div class="highlight-python"><div class="highlight"><pre>pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
+default-cache-ttl 3600
+enable-ssh-support
+use-standard-socket
+</pre></div>
+</div>
+<p>Once this has been setup then you will need to eval the output
+of <cite>gpg-agent &#8211;daemon</cite> in your shell prior to launching git-cola.:</p>
+<div class="highlight-python"><div class="highlight"><pre>eval $(gpg-agent --daemon)
+bin/git-cola
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="links">
+<h2>LINKS<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="git-cola-s-git-repository">
+<h3>Git Cola&#8217;s Git Repository<a class="headerlink" href="#git-cola-s-git-repository" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/">https://github.com/git-cola/git-cola/</a></p>
+</div>
+<div class="section" id="git-cola-homepage">
+<h3>Git Cola Homepage<a class="headerlink" href="#git-cola-homepage" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://git-cola.github.io/">https://git-cola.github.io/</a></p>
+</div>
+<div class="section" id="mailing-list">
+<h3>Mailing List<a class="headerlink" href="#mailing-list" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://groups.google.com/group/git-cola">https://groups.google.com/group/git-cola</a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="git-dag.html" class="btn btn-neutral float-right" title="git-dag(1)">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Git Cola Documentation"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2007-2015, David Aguilar and contributors.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

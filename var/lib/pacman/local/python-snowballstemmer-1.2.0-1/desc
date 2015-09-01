@@ -1,0 +1,36 @@
+%NAME%
+python-snowballstemmer
+
+%VERSION%
+1.2.0-1
+
+%DESC%
+Snowball stemming library collection for Python
+
+%URL%
+https://github.com/shibukawa/snowball_py
+
+%ARCH%
+any
+
+%BUILDDATE%
+1431200774
+
+%INSTALLDATE%
+1441123151
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+1096704
+
+%REASON%
+1
+
+%LICENSE%
+BSD
+
+%VALIDATION%
+sha256
+

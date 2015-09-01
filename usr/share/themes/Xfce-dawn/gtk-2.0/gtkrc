@@ -6,21 +6,22 @@ style "default"
     GtkButton::child_displacement_y              = 1
     GtkButton::default_spacing                   = 8
     GtkButton::focus-padding                     = 0
-    GtkCheckButton::indicator_size               = 12
+    GtkCheckButton::indicator_size               = 40
     GtkMenuBar::internal-padding                 = 4
     GtkMenuBar::shadow_type                      = out
     GtkHandleBox::shadow_type                    = out
     GtkMenuItem::selected_shadow_type            = etched-in
     GtkPaned::handle_full_size                   = 1
-    GtkPaned::handle_size                        = 7
-    GtkRadioButton::indicator_size               = 15
+    GtkPaned::handle_size                        = 70
+    GtkRadioButton::indicator_size               = 40
     GtkRange::slider_width                       = 16
     GtkRange::stepper_size                       = 16
     GtkRange::stepper_spacing                    = 0
     GtkRange::trough_border                      = 0
     GtkScrollbar::has_backward_stepper           = 1
     GtkScrollbar::has_secondary_backward_stepper = 0
-    GtkScrollbar::min_slider_length              = 20
+    GtkScrollbar::min_slider_length              = 30
+    GtkScrollbar::slider-width			 = 40
     GtkToolbar::shadow_type                      = out
     GtkWidget::focus-line-width                  = 1
     GtkWidget::focus_padding                     = 3 
@@ -132,8 +133,8 @@ class "*GtkProgress*"              style "sbstyle"
 
 style "menuitem" = "default"
 {
-    xthickness = 1
-    ythickness = 2
+    xthickness = 2
+    ythickness = 4
 }
 
 widget_class "*MenuItem*"          style "menuitem"
@@ -161,3 +162,5 @@ style "titlebar"
 widget "xfwm"                      style "titlebar"
 class "MetaFrames"                 style "titlebar"
 widget_class "MetaFrames"          style "titlebar"
+
+gtk-icon-sizes = "gtk-menu=240,240"

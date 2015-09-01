@@ -832,6 +832,7 @@ GNU C library functions and macros
 * envz_entry: (libc)Envz Functions.
 * envz_get: (libc)Envz Functions.
 * envz_merge: (libc)Envz Functions.
+* envz_remove: (libc)Envz Functions.
 * envz_strip: (libc)Envz Functions.
 * erand48: (libc)SVID Random.
 * erand48_r: (libc)SVID Random.
@@ -1380,6 +1381,8 @@ GNU C library functions and macros
 * perror: (libc)Error Messages.
 * pipe: (libc)Creating a Pipe.
 * popen: (libc)Pipe to a Subprocess.
+* posix_fallocate: (libc)Storage Allocation.
+* posix_fallocate64: (libc)Storage Allocation.
 * posix_memalign: (libc)Aligned Memory Blocks.
 * pow: (libc)Exponents and Logarithms.
 * pow10: (libc)Exponents and Logarithms.
