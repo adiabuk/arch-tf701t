@@ -1,0 +1,23 @@
+%FILES%
+etc/
+etc/conf.d/
+etc/conf.d/iodined
+usr/
+usr/bin/
+usr/bin/iodine
+usr/bin/iodined
+usr/lib/
+usr/lib/systemd/
+usr/lib/systemd/system/
+usr/lib/systemd/system/iodined.service
+usr/share/
+usr/share/licenses/
+usr/share/licenses/iodine/
+usr/share/licenses/iodine/LICENSE
+usr/share/man/
+usr/share/man/man8/
+usr/share/man/man8/iodine.8.gz
+
+%BACKUP%
+etc/conf.d/iodined	edd92d5b5bccd165ead4d848c12d5e5c
+

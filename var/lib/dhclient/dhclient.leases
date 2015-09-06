@@ -2,18 +2,18 @@ lease {
   interface "wlan0";
   fixed-address 192.168.43.171;
   option subnet-mask 255.255.255.0;
-  option routers 192.168.43.1;
   option dhcp-lease-time 3600;
+  option routers 192.168.43.1;
   option dhcp-message-type 5;
-  option domain-name-servers 192.168.43.1;
   option dhcp-server-identifier 192.168.43.1;
-  option dhcp-renewal-time 1600;
+  option domain-name-servers 192.168.43.1;
+  option dhcp-renewal-time 1680;
+  option dhcp-rebinding-time 3030;
   option broadcast-address 192.168.43.255;
-  option dhcp-rebinding-time 2950;
   option vendor-encapsulated-options "ANDROID_METERED";
-  renew 2 2015/09/01 15:55:21;
-  rebind 2 2015/09/01 15:55:21;
-  expire 2 2015/09/01 15:55:21;
+  renew 0 2015/09/06 15:53:22;
+  rebind 0 2015/09/06 15:53:22;
+  expire 0 2015/09/06 15:53:22;
 }
 lease {
   interface "wlan0";
@@ -28,24 +28,7 @@ lease {
   option broadcast-address 192.168.43.255;
   option dhcp-rebinding-time 3150;
   option vendor-encapsulated-options "ANDROID_METERED";
-  renew 2 2015/09/01 16:18:55;
-  rebind 2 2015/09/01 16:47:57;
-  expire 2 2015/09/01 16:55:27;
-}
-lease {
-  interface "wlan0";
-  fixed-address 192.168.43.171;
-  option subnet-mask 255.255.255.0;
-  option routers 192.168.43.1;
-  option dhcp-lease-time 3600;
-  option dhcp-message-type 5;
-  option domain-name-servers 192.168.43.1;
-  option dhcp-server-identifier 192.168.43.1;
-  option dhcp-renewal-time 1603;
-  option broadcast-address 192.168.43.255;
-  option dhcp-rebinding-time 2953;
-  option vendor-encapsulated-options "ANDROID_METERED";
-  renew 2 2015/09/01 16:42:36;
-  rebind 2 2015/09/01 17:08:08;
-  expire 2 2015/09/01 17:18:55;
+  renew 0 2015/09/06 16:22:35;
+  rebind 0 2015/09/06 16:45:58;
+  expire 0 2015/09/06 16:53:28;
 }

@@ -1,4 +1,4 @@
 logrotate state -- version 2
-"/var/log/wicd/wicd.log" 2015-8-31-18:5:16
+"/var/log/wicd/wicd.log" 2015-9-2-0:0:1
 "/var/log/wtmp" 2015-4-7-0:0:0
 "/var/log/btmp" 2015-9-1-7:53:36

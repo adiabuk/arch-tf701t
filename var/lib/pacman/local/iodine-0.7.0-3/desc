@@ -1,0 +1,37 @@
+%NAME%
+iodine
+
+%VERSION%
+0.7.0-3
+
+%DESC%
+Tunnel IPv4 data through a DNS server
+
+%URL%
+http://code.kryo.se/iodine
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1418619224
+
+%INSTALLDATE%
+1441554891
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu0@archlinuxarm.org>
+
+%SIZE%
+175104
+
+%LICENSE%
+custom:ISC
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+zlib
+net-tools
+
