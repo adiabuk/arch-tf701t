@@ -1,0 +1,21 @@
+[connection]
+id=Best Western
+uuid=31cf65e0-0e50-489e-8015-83d11f27dbe2
+type=wifi
+permissions=user:amro:;
+secondaries=
+
+[wifi]
+mac-address=00:00:00:00:00:00
+mac-address-blacklist=
+mode=infrastructure
+seen-bssids=
+ssid=Best Western
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+dns-search=
+method=auto

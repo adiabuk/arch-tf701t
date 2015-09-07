@@ -1,0 +1,13 @@
+%FILES%
+etc/
+etc/proxychains.conf
+usr/
+usr/bin/
+usr/bin/proxychains
+usr/bin/proxychains4
+usr/lib/
+usr/lib/libproxychains4.so
+
+%BACKUP%
+etc/proxychains.conf	33693dcf5e107dff8df6f71a22e1b0db
+

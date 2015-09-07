@@ -1,0 +1,45 @@
+%NAME%
+links
+
+%VERSION%
+2.10-1
+
+%DESC%
+A text WWW browser, similar to Lynx
+
+%URL%
+http://links.twibright.com/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1437510819
+
+%INSTALLDATE%
+1441563477
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu2@archlinuxarm.org>
+
+%SIZE%
+5172224
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+bzip2
+xz
+gpm
+libevent
+
+%OPTDEPENDS%
+libx11: for using xlinks
+libtiff: for using xlinks
+libpng: for using xlinks
+librsvg: for using xlinks
+

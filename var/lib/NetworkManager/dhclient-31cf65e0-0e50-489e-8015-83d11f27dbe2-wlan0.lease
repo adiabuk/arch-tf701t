@@ -1,0 +1,42 @@
+lease {
+  interface "wlan0";
+  fixed-address 10.11.1.232;
+  option subnet-mask 255.255.255.0;
+  option dhcp-lease-time 3600;
+  option routers 10.11.1.1;
+  option dhcp-message-type 5;
+  option dhcp-server-identifier 10.10.0.1;
+  option domain-name-servers 8.8.8.8,8.8.4.4;
+  option ntp-servers 132.163.4.103,208.184.49.9;
+  renew 0 2015/09/06 18:15:35;
+  rebind 0 2015/09/06 18:40:05;
+  expire 0 2015/09/06 18:47:35;
+}
+lease {
+  interface "wlan0";
+  fixed-address 10.11.1.232;
+  option subnet-mask 255.255.255.0;
+  option routers 10.11.1.1;
+  option dhcp-lease-time 3600;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8,8.8.4.4;
+  option dhcp-server-identifier 10.10.0.1;
+  option ntp-servers 132.163.4.103,208.184.49.9;
+  renew 0 2015/09/06 18:49:56;
+  rebind 0 2015/09/06 19:16:14;
+  expire 0 2015/09/06 19:23:44;
+}
+lease {
+  interface "wlan0";
+  fixed-address 10.11.1.232;
+  option subnet-mask 255.255.255.0;
+  option routers 10.11.1.1;
+  option dhcp-lease-time 3600;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8,8.8.4.4;
+  option dhcp-server-identifier 10.10.0.1;
+  option ntp-servers 132.163.4.103,208.184.49.9;
+  renew 0 2015/09/06 19:18:13;
+  rebind 0 2015/09/06 19:42:26;
+  expire 0 2015/09/06 19:49:56;
+}

@@ -1,0 +1,36 @@
+%NAME%
+dmidecode
+
+%VERSION%
+2.12-2
+
+%DESC%
+Desktop Management Interface table related utilities
+
+%URL%
+http://www.nongnu.org/dmidecode
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1369007590
+
+%INSTALLDATE%
+1441636441
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+157696
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+

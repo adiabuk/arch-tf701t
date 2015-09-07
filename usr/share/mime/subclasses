@@ -2,6 +2,7 @@ image/x-minolta-mrw image/x-dcraw
 application/rss+xml application/xml
 text/x-chdr text/x-csrc
 application/x-cdrdao-toc text/plain
+application/pkix-crl+pem application/x-pem-file
 application/x-ruby application/x-executable
 application/x-ruby text/plain
 application/x-cd-image application/x-raw-disk-image
@@ -64,10 +65,12 @@ text/x-scala text/plain
 image/x-kodak-kdc image/x-dcraw
 image/x-kodak-kdc image/tiff
 audio/x-opus+ogg audio/ogg
+application/pkcs8+pem application/x-pem-file
 image/x-gzeps application/gzip
 application/vnd.oasis.opendocument.text-flat-xml application/xml
 application/x-mobipocket-ebook application/x-palm-database
 message/disposition-notification text/plain
+application/pkcs12+pem application/x-pem-file
 text/x-ldif text/plain
 application/vnd.openxmlformats-officedocument.presentationml.presentation application/zip
 video/x-javafx video/x-flv
@@ -116,12 +119,14 @@ audio/x-minipsf audio/x-psf
 application/vnd.oasis.opendocument.presentation application/zip
 audio/x-flac+ogg audio/ogg
 inode/mount-point inode/directory
+application/pkcs10+pem application/x-pem-file
 audio/ogg application/ogg
 application/mathml+xml application/xml
 audio/x-aifc application/x-iff
 text/x-java text/x-csrc
 audio/x-aiff application/x-iff
 application/xml text/plain
+application/pkcs7-mime+pem application/x-pem-file
 text/x-authors text/plain
 application/msword application/x-ole-storage
 message/rfc822 text/plain
@@ -252,6 +257,7 @@ application/x-mozilla-bookmarks text/html
 text/x-txt2tags text/plain
 application/vnd.sun.xml.draw.template application/zip
 application/x-bzdvi application/x-bzip
+application/pkix-cert+pem application/x-pem-file
 text/x-objcsrc text/x-csrc
 application/x-wais-source text/plain
 application/vnd.oasis.opendocument.graphics-flat-xml application/xml
@@ -265,6 +271,7 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.template applicat
 application/vnd.oasis.opendocument.graphics-template application/zip
 text/x-pascal text/plain
 application/x-php text/plain
+application/x-spkac+base64 text/plain
 text/x-eiffel text/plain
 application/x-mimearchive multipart/related
 application/x-cue text/plain
@@ -291,6 +298,7 @@ application/vnd.google-earth.kml+xml application/xml
 application/vnd.ms-word.document.macroEnabled.12 application/vnd.openxmlformats-officedocument.wordprocessingml.document
 video/x-matroska-3d application/x-matroska
 application/vnd.sun.xml.writer application/zip
+application/x-pem-key application/x-pem-file
 application/x-docbook+xml application/xml
 application/x-profile text/plain
 image/x-kodak-k25 image/x-dcraw
@@ -347,5 +355,6 @@ application/x-bzpostscript application/x-bzip
 image/x-panasonic-raw image/x-dcraw
 application/postscript text/plain
 application/vnd.openxmlformats-officedocument.presentationml.slideshow application/zip
+application/x-pem-file text/plain
 video/3gpp2 video/mp4
 application/rtf text/plain

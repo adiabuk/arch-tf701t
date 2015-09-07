@@ -18,6 +18,7 @@ group=
 key-mgmt=wpa-psk
 pairwise=
 proto=
+psk=tiacp:2K15
 
 [ipv4]
 dns-search=
